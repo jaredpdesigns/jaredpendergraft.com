@@ -1,0 +1,20 @@
+---
+layout: default
+class: resume
+social: assets/img/social/resume-social.jpg
+---
+
+<section class="wrapper">
+  <header class="resume__header">
+    <h1>Résumé</h1>
+    <nav>
+      <a class="btn" href="{{ site.baseurl }}/projects">Portfolio</a>
+      <a class="btn" href="https://dribbble.com/jaredpdesigns" target="_blank">Dribbble</a>
+      <a class="btn" href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, your résumé looks great, let’s talk!">Email</a>
+      <a class="btn" href="https://twitter.com/jaredpdesigns" target="_blank">Twitter</a>
+    </nav>
+  </header>
+  <section class="resume__text">
+    {% capture include %}{% include md/resume.md %}{% endcapture %}{{ include | markdownify }}
+  </section>
+</section>

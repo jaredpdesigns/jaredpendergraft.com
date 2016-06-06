@@ -1,0 +1,29 @@
+- name: These Kids Read
+  description: A blog that tracks the great books my kids and I read together.
+  img: tkr.svg
+  link: http://thesekidsread.com
+  
+- name: Pasta
+  description: Pasta is a tiny <abbr title="Syntactically Awesome Style Sheets">SASS</abbr> file that provides a great starting place for web projects.
+  img: pasta.svg
+  link: http://jaredpdesigns.github.io/pasta/
+  
+- name: Avery
+  description: A mini-site for my daughter to help document her life, “I’m Already an Artist”.
+  img: avery.svg
+  link: http://averymirabelle.com
+  
+- name: Ezra
+  description: A mini-site for my son to help document his life, “Look Daddy, I Big Boy”.
+  img: ezra.svg
+  link: http://ezrapendergraft.com
+
+- name: Links
+  description: An of interesting articles and helpful tools I’ve found around the internet.
+  img: links.svg
+  link: http://links.jaredpendergraft.com
+  
+- name: Internets
+  description: A lovely collection of videos I’ve found on the internet and enjoyed.
+  img: internets.svg
+  link: http://internets.jaredpendergraft.com

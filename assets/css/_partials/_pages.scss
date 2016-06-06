@@ -1,0 +1,232 @@
+.profile {
+  img {
+    border-radius: 50%;
+    height: $space-xl + $space-m;
+    width: $space-xl + $space-m;
+    border: $border-big $color-luma;
+    @include bp(ml) {
+      height: $space-xl*2;
+      width: $space-xl*2;
+    }
+  }
+  > *:not(header), header > * { @include type-legible; }
+  p:first-child, h1, h2 { @include type-center; }
+  header + * { @include oomph; }
+  h1 { color: $color-highlight; }
+  h2 { color: $color-base-ish; }
+}
+
+.project__front {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &:nth-of-type(odd) { @include bp(m) { .project__text { order: -1; } } }
+  + .project__front {
+    @include oomph-big;
+    @include bp(m) { margin-top: 0; }
+  }
+  > * {
+    flex-basis: 100%;
+    @include bp(m) { flex-basis: $grid-1-2; }
+  }
+  .project__img {
+    @include smooth-pop;
+    @include bp(m) { @include spacer-all; }
+    &:hover { transform: translateY(-($space-xs/2)); }
+    img {
+      border-radius: $space-xs;
+      @include shade-big;
+    }
+  }
+  .project__text {
+    @include spacer-all;
+    @include oomph;
+    @include type-center;
+    @include bp(m) {
+      margin-top: 0;
+      @include type-left;
+    }
+    > * { @include type-legible; }
+    p { color: $color-base-ish; }
+  }
+}
+
+.process {
+  background-color: $color-luma;
+  ol { @include type-legible; }
+  li { color: $color-base-ish; }
+  li strong { color: $color-highlight; }
+}
+
+.sides {
+  @include bp(s) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.side {
+  display: flex;
+  flex-wrap: wrap;
+  @include oomph;
+  @include bp(s) { flex-basis: $grid-1-2; }
+  .side__img {
+    flex-basis: 100%;
+    @include smooth-pop;
+    @include type-center;
+    @include spacer-all;
+    &:hover { transform: scale(1.0625); }
+    img {
+      border-radius: $space-xs;
+      min-height: $space-m + $space-s;
+      @include bp(ml) { min-height: $space-xl + $space-s; }
+    }
+  }
+  .side__text {
+    flex-basis: 100%;
+    @include type-center;
+    p {
+      color: $color-base-ish;
+      @include type-legible;
+      @include oomph-small;
+    }
+  }
+}
+
+.project__inner--header {
+  position: relative;
+  @include type-center;
+  color: $color-luma;
+  &:before {
+    content: '';
+    @include fill;
+    background-color: rgba(#000,0.625);
+    backdrop-filter: blur(6px);
+  }
+  .wrapper { position: relative; }
+  .wrapper > * {
+    @include type-legible;
+    &:not(.btn) { text-shadow: 0 0.0625rem 0.125rem rgba(#000,0.25); }
+  }
+  h5 { color: $color-base-mid; }
+}
+
+.project__inner--content {
+  > *:not(blockquote) { @include type-legible; }
+  blockquote {
+    @include oomph-big;
+    @include type-center;
+    + * { @include oomph-big; }
+    p {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+        flex-shrink: 1;
+        padding: $space-s;
+      }
+    }
+    em {
+      @include oomph;
+      display: block;
+      flex-basis: 100%;
+      @include type-legible;
+      color: $color-base-mid;
+    }
+  }
+  h3 { @include type-center; }
+  p + hr { @include oomph-big; }
+}
+
+.snippet {
+  + * { @include oomph-big; }
+  > *:not(header) {
+    @include type-legible;
+  }
+}
+
+.resume__header {
+  @include type-center;
+  nav a {
+    @include oomph;
+  }
+}
+
+.resume__text {
+  @include oomph;
+  > * { @include type-legible; }
+  h3 {
+    @include type-center;
+    color: $color-base-ish;
+  }
+  h4 + * { margin-top: 0; }
+  ul + * { @include oomph-big; }
+  blockquote {
+    position: relative;
+    @include oomph-big;
+    padding: $space-s $space-m;
+    background-color: $color-luma;
+    border-radius: $space-xs;
+    color: $color-base-ish;
+    @include bp(s) { padding: $space-m $space-l; }
+    strong {
+      @include type-sans;
+      @include type-caps;
+      display: block;
+      @include oomph-small;
+      color: $color-highlight;
+    }
+    &:before {
+      @include type(60);
+      line-height: $space-l + $space-s + $space-xs;
+      height: $space-l;
+      width: $space-l;
+      background-color: $color-highlight;
+      color: $color-luma;
+      @include type-center;
+      border-radius: 50%;
+      position: absolute;
+      top: $space-m;
+      left: -($space-m + $space-xs/2);
+      border: $border $color-luma;
+      @include bp(s) { content: "“"; }
+    }
+  }
+}
+
+.styleguide {
+  h2, h3:not(hr + h3), h4, h5 {
+    @include oomph-small;
+    color: $color-base;
+    margin-top: 0;
+  }
+  hr + h3 {
+    @include type-center;
+    color: $color-base-ish;
+  }
+  #colors + hr + ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      @include type-center;
+      margin-top: 0;
+      @include spacer-all;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-basis: 100%;
+      @include bp(s) { flex-basis: $grid-1-4; }
+      @include bp(xl) { flex-basis: $grid-1-6; }
+      span {
+        display: inline-block;
+        min-height: $space-l*2;
+        min-width: $space-l*2;
+        max-width: 100%;
+        border-radius: $space-xs;
+        border: $border-big $color-luma;     
+      }
+      code { @include oomph-small; }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+---
+layout: default
+class: home
+---
+
+<section class="wrapper profile">
+  {% capture include %}{% include md/profile.md %}{% endcapture %}{{ include | markdownify }}
+</section>

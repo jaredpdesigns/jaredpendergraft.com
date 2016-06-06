@@ -1,0 +1,21 @@
+---
+layout: default
+description: A collection of useful/reusable code chunks I refer to often.
+permalink: snippets/
+class: snippets
+social: assets/img/social/snippets-social.jpg
+---
+
+<section class="wrapper">
+  {% for snippet in site.snippets %}
+    <article class="snippet">
+      <header role="break">
+        <hr>
+        <h3><a href="{{ snippet.url }}">{{ snippet.title }}</a></h3>
+        <h5>{{ snippet.categories }}</h5>
+        <hr>
+      </header>
+      {{ snippet.content }}
+    </article>
+  {% endfor %}
+</section>

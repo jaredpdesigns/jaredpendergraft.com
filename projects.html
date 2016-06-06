@@ -1,0 +1,61 @@
+---
+layout: default
+description: A selection of creative projects I've worked on.
+permalink: projects/
+class: projects
+social: assets/img/social/projects-social.jpg
+---
+
+<section class="wrapper wrapper--bleed">
+  <header role="break">
+    <hr>
+    <h3 id="projects">Projects</h3>
+    <hr>
+  </header>
+  {% for project in site.projects %}
+  <article class="project__front">
+    <figure class="project__img">
+      <a href="{{ project.url }}">
+        <img class="lazy" data-src="{{ "/assets/img/projects/" | prepend: site.baseurl }}{{ project.img }}" alt="{{ project.name }} Feature Image">
+      </a>
+    </figure>
+    <figcaption class="project__text">
+      <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+      <p>{{ project.description }}</p>
+      <p><a class="btn" href="{{ project.url }}">View Project</a></p>
+    </figcaption>
+  </article>
+  {% endfor %}
+</section>
+<section class="process">
+  <section class="wrapper">
+    <header role="break">
+      <hr>
+      <h3 id="creative-process">Creative Process</h3>
+      <hr>
+    </header>
+    {% capture include %}{% include md/creative-process.md %}{% endcapture %}{{ include | markdownify }}
+  </section>
+</section>
+<section class="wrapper">
+  <header role="break">
+    <hr>
+    <h3 id="sides">Sides</h3>
+    <hr>
+  </header>
+  <section class="sides">
+    {% for side in site.data.sides %}
+    <article class="side">
+      <figure class="side__img">
+        <a href="{{ side.link }}">
+        <img class="lazy" data-src="{{ "/assets/img/projects/sides/" | prepend: site.baseurl }}{{ side.img }}" alt="{{ side.name }} logo">
+        </a>
+      </figure>
+      <figcaption class="side__text">
+        <h2><a href="{{ side.link }}">{{ side.name }}</a></h2>
+        <p>{{ side.description }}</p>
+      </figcaption>
+    </article>
+    {% endfor %}
+  </section>
+</section>
