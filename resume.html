@@ -1,10 +1,12 @@
 ---
 layout: default
+title: Résumé
+description: My trusty old résumé.
 class: resume
 social: assets/img/social/resume-social.jpg
 ---
 
-<section class="wrapper">
+<article class="wrapper">
   <header class="resume__header">
     <h1>Résumé</h1>
     <nav>
@@ -17,4 +19,4 @@ social: assets/img/social/resume-social.jpg
   <section class="resume__text">
     {% capture include %}{% include md/resume.md %}{% endcapture %}{{ include | markdownify }}
   </section>
-</section>
+</article>

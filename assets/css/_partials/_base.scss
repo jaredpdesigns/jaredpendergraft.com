@@ -112,7 +112,7 @@ body {
   @include type-sans;
   color: $color-base;
   border: $border-huge $color-luma;
-  border-top: none;
+  border-top-width: 0;
   background-color: $color-base-ghost;
 }
 
@@ -369,6 +369,20 @@ header[role="main"] {
   }
 }
 
+footer[role="extra"] {
+  background-color: $color-luma;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 main > *:first-child:before {
   @include bp(m) {
     content: '';
@@ -399,6 +413,30 @@ nav[role="main"] {
   a.social {
     display: inline-flex;
     align-items: center;
+  }
+  svg {
+    height: $space-s + $space-xs;
+    width: $space-s + $space-xs;
+    @include bp(s) {
+      height: $space-m;
+      width: $space-m;
+    }
+  }
+}
+
+nav[role="extra"] {
+  display: flex;
+  align-items: center;
+  margin: 0 $space-xs;
+  a {
+    display: inline-flex;
+    align-items: center;
+    @include type-xs;
+    @include type-caps;
+    color: $color-base-mid;
+    margin: 0 $space-xs;
+    &:hover { color: $color-highlight; }
+    &.active { color: $color-highlight; }
   }
   svg {
     height: $space-s + $space-xs;

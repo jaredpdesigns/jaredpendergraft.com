@@ -1,2 +1,2 @@
-# jpd
-Personal Site
+# Personal Site
+Associated files for my personal site.
