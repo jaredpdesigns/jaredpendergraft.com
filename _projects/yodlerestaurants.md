@@ -48,9 +48,9 @@ The client dashboard was one of the most intricate parts of the project. Two var
 
 The client dashboard is predominantly about reviews, so we made it easy to sort, filter and interact with reviews straight from the overview page. Often managers will try to reach out to customers who left a negative review and find out more information. Customers can continue communicating with managers through email and the whole conversation gets pushed to the dashboard for history.
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-editmail.png" alt="Yodle Restaurants customer dashboard marketing screen"> *Setting up incentive-driven email templates is simple — just select a predefined promotion and h
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-editmail.png" alt="Yodle Restaurants customer dashboard marketing screen"> *Setting up incentive-driven email templates is simple — just select a predefined promotion and configure your message.*
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-widget.png" alt="Yodle Restaurants customer dashboard statistics and widget embed code">
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-widget.png" alt="Yodle Restaurants customer dashboard statistics and widget embed code"> *Take your reviews with you! Easily embed a lovely looking collection of reviews showing your best reviews on your personal site.*
 
 > <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-location.png" alt="Yodle Restaurants customer dashboard location editing"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-users.png" alt="Yodle Restaurants customer dashboard user editing">
 
@@ -63,7 +63,7 @@ The client dashboard is predominantly about reviews, so we made it easy to sort,
 
 The admin dashboard is for getting an overview of all account activity and associated devices. Because Yodle manages every iPad that goes out with device-specific credentials, a representative can deactivate a faulty device or help manage device operators. Another really useful customer service feature of this dashboard is that there is a quick access button to log-in to a customer’s account to help with troubleshooting.
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-admin.png" alt="Yodle Restaurants admin dashboard overview">
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-admin.png" alt="Yodle Restaurants admin dashboard overview"> *All customer data can be managed within a well organized Admin dashboard used by Yodle professionals. Whether tracking devices or helping customer understand what their username might be, the full-featured dashboard brings the tool full circle.*
 
 ***
 

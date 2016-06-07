@@ -96,7 +96,6 @@ $border-huge: $space-xs solid;
 
 @mixin type-xs {
 	@include type($type-xs);
-	@include bp(xs) { @include type($type-xs,1); }
 	@include bp(xl) { @include type($type-s); }
 }
 @mixin type-s {
@@ -154,6 +153,12 @@ $border-huge: $space-xs solid;
   @include bp(s)  { max-width: 87.5%; margin-left: auto; margin-right: auto; }
   @include bp(m)  { max-width: 75%; }
   @include bp(xl) { max-width: 62.5%; }
+}
+
+@mixin type-legible-tight {
+  @include bp(s)  { max-width: 75%; margin-left: auto; margin-right: auto; }
+  @include bp(m)  { max-width: 62.5%; }
+  @include bp(xl) { max-width: 50%; }
 }
 
 @mixin type-ot-numbers-old {

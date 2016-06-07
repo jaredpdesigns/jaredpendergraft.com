@@ -2,7 +2,7 @@
 layout: page
 description: A styleguide, silly.
 class: styleguide
-social: assets/img/social/projects-styleguide.jpg
+social: assets/img/social/styleguide-social.jpg
 ---
 
 ***

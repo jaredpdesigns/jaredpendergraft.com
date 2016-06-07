@@ -1,5 +1,9 @@
 // Typography
 
+.wf-gtpressura-n4-loading { body, .btn, .resume__text blockquote strong { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif } }
+.wf-gtsectra-n4-loading { p, li, .name, .btn:after { font-family: Georgia, Times, 'Times New Roman', serif; } }
+.wf-gtcinetypemono-n4-loading { code { font-family: monospace; } }
+
 @font-face {
   font-family: 'GT Sectra';
   src: url('../fonts/gt-sectra/GT-Sectra-Book.eot');
@@ -182,7 +186,7 @@ code {
   pre & {
     white-space: pre;
     word-wrap: normal;
-    @include type($type-xs,1);
+    @include type(12,1);
   }
 }
 
@@ -358,7 +362,7 @@ header[role="main"] {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  a.name {
+  .name {
     @include type-m;
     @include type-serif;
     @include bp(xs) {
@@ -415,12 +419,8 @@ nav[role="main"] {
     align-items: center;
   }
   svg {
-    height: $space-s + $space-xs;
-    width: $space-s + $space-xs;
-    @include bp(s) {
-      height: $space-m;
-      width: $space-m;
-    }
+    height: $space-m;
+    width: $space-m;
   }
 }
 
