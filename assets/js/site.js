@@ -7,7 +7,9 @@
 
 $(document).ready(function() {
   $('.lazy').unveil(240,function() {
-    $(this).load(function() { $(this).addClass('lazy--loaded'); } );
+    $(this).load(function() {
+      $(this).parent().addClass('loaded');
+    } );
   });
 });
 

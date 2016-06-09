@@ -16,47 +16,78 @@
   h2 { color: $color-base-ish; }
 }
 
-.project__front {
+.project {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   &:nth-of-type(odd) { @include bp(m) { .project__text { order: -1; } } }
-  + .project__front {
+  + .project {
     @include oomph-big;
     @include bp(m) { margin-top: 0; }
   }
   > * {
     flex-basis: 100%;
-    @include bp(m) { flex-basis: $grid-1-2; }
-  }
-  .project__img {
-    @include type-center;
-    @include smooth-pop;
-    @include bp(m) { @include spacer-all; }
-    &:hover { transform: translateY(-($space-xs/2)); }
-    img {
-      border-radius: $space-xs;
-      @include shade-big;
-    }
-  }
-  .project__text {
-    @include spacer-all;
-    @include oomph;
-    @include type-center;
     @include bp(m) {
-      margin-top: 0;
-      @include type-left;
+      flex-basis: $grid-1-2;
+      max-width: $grid-1-2;
     }
-    > * { @include type-legible; }
-    p { color: $color-base-ish; }
   }
 }
 
+.project__img {
+  @include type-center;
+  @include smooth-pop;
+  @include loading;
+  @include bp(m) { @include spacer-all; }
+  &:hover { transform: translateY(-($space-xs/2)); }
+  img {
+    border-radius: $space-xs;
+    @include shade-big;
+  }
+}
+.project__text {
+  @include spacer-all;
+  @include oomph;
+  @include type-center;
+  @include bp(m) {
+    margin-top: 0;
+    @include type-left;
+  }
+  > * { @include type-legible; }
+  p { color: $color-base-ish; }
+}
+
 .process {
-  background-color: $color-luma;
-  ol { @include type-legible; }
-  li { color: $color-base-ish; }
-  li strong { color: $color-highlight; }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @include type-legible;
+  @include spacer-all;
+  + .process { @include oomph; }
+}
+
+.process__img {
+  @include type-center;
+  flex-basis: 100%;
+  @include loading;
+  @include bp(s) { flex-basis: $grid-1-3; }
+  img {
+    min-height: $space-m + $space-s;
+    @include bp(ml) { min-height: $space-xl + $space-s; }
+  }
+}
+
+.process__text {
+  flex-basis: 100%;
+  @include bp(xs) {
+    @include oomph;
+    @include type-center;
+  }
+  @include bp(s) { flex-basis: $grid-2-3; }
+  p {
+    margin-top: 0;
+    color: $color-base-ish;
+  }
 }
 
 .sides {
@@ -71,26 +102,29 @@
   flex-wrap: wrap;
   @include oomph;
   @include bp(s) { flex-basis: $grid-1-2; }
-  .side__img {
-    flex-basis: 100%;
-    @include smooth-pop;
-    @include type-center;
-    @include spacer-all;
-    &:hover { transform: scale(1.0625); }
-    img {
-      border-radius: $space-xs;
-      min-height: $space-m + $space-s;
-      @include bp(ml) { min-height: $space-xl + $space-s; }
-    }
+}
+
+.side__img {
+  flex-basis: 100%;
+  @include smooth-pop;
+  @include type-center;
+  @include spacer-all;
+  @include loading;
+  &:hover { transform: scale(1.0625); }
+  img {
+    border-radius: $space-xs;
+    min-height: $space-m + $space-s;
+    @include bp(ml) { min-height: $space-xl + $space-s; }
   }
-  .side__text {
-    flex-basis: 100%;
-    @include type-center;
-    p {
-      color: $color-base-ish;
-      @include type-legible;
-      @include oomph-small;
-    }
+}
+
+.side__text {
+  flex-basis: 100%;
+  @include type-center;
+  p {
+    color: $color-base-ish;
+    @include type-legible;
+    @include oomph-small;
   }
 }
 
@@ -118,20 +152,15 @@
   blockquote {
     @include oomph-big;
     @include type-center;
+    @include loading;
     + * { @include oomph-big; }
-    p {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      img {
-        flex-shrink: 1;
-        padding: $space-s;
-      }
+    img {
+      padding: $space-s;
+      @include bp(l) { padding: $space-m; }
     }
     em {
-      @include oomph;
+      @include oomph-small;
       display: block;
-      flex-basis: 100%;
       @include type-legible-tight;
       color: $color-base-mid;
     }
@@ -364,4 +393,8 @@
     }
     > * { @include type-legible; }
   }
+}
+
+.general {
+  > * { @include type-legible; }
 }

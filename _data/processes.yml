@@ -1,0 +1,19 @@
+- step: Initial discovery and research
+  description: Figure out what we’re building and what problems we’re trying to solve.
+  img: research.svg
+  
+- step: Style and tone
+  description: Explore visual ideas and establish the voice of the project.
+  img: style.svg
+  
+- step: Present ideas and determine technical constraints
+  description: Finalize approval of visual direction and confirm what was designed can be built.
+  img: present.svg
+
+- step: Finalize information architecture and build
+  description: Confirm our design supports established content models and begin development.
+  img: build.svg
+  
+- step: Test, optimize and iterate
+  description: Perform A/B testing when applicable to confirm assumptions, optimize content for best performance, and determine what can be improved in the next cycle.
+  img: test.svg

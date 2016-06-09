@@ -104,7 +104,7 @@ $border-huge: $space-xs solid;
 }
 @mixin type-m	 {
   @include type($type-m);
-  @include bp(xs) { @include type($type-s); }
+  @include bp(xs) { @include type($type-s,1); }
   @include bp(xl) { @include type($type-ml); }
 }
 @mixin type-ml	 {
@@ -184,7 +184,7 @@ $border-huge: $space-xs solid;
   display: inline-block;
   + * {
     margin-left: $space-s;
-    @include bp(ml) { margin-left: $space-m; }
+    @include bp(l) { margin-left: $space-m; }
   }
 }
 
@@ -227,4 +227,10 @@ $border-huge: $space-xs solid;
 
 @mixin shade-big {
   box-shadow: 0 0.375rem 0.75rem -0.375rem rgba(#000,0.5);
+}
+
+@mixin loading {
+  background-image: url('../img/projects/loading.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }

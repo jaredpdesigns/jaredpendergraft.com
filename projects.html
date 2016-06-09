@@ -7,14 +7,14 @@ class: projects
 social: assets/img/social/projects-social.jpg
 ---
 
-<section class="wrapper wrapper--bleed">
+<section id="projects" class="wrapper wrapper--bleed">
   <header role="break">
     <hr>
-    <h3 id="projects">Projects</h3>
+    <h3>Projects</h3>
     <hr>
   </header>
   {% for project in site.projects %}
-  <article class="project__front">
+  <article class="project">
     <figure class="project__img">
       <a href="{{ project.url }}">
         <img class="lazy" data-src="{{ "/assets/img/projects/" | prepend: site.baseurl }}{{ project.img }}" alt="{{ project.name }} Feature Image">
@@ -28,20 +28,30 @@ social: assets/img/social/projects-social.jpg
   </article>
   {% endfor %}
 </section>
-<section class="process">
+<section id="process" class="color__bg--luma">
   <section class="wrapper">
     <header role="break">
       <hr>
-      <h3 id="creative-process">Creative Process</h3>
+      <h3>Creative Process</h3>
       <hr>
     </header>
-    {% capture include %}{% include md/creative-process.md %}{% endcapture %}{{ include | markdownify }}
+    {% for process in site.data.processes %}
+    <article class="process">
+      <figure class="process__img">
+        <img class="lazy" data-src="{{ "/assets/img/projects/process/" | prepend: site.baseurl }}{{ process.img }}" alt="{{ process.step }} illustration">
+      </figure>
+      <figcaption class="process__text">
+        <h4>{{ process.step }}</h4>
+        <p>{{ process.description }}</p>
+      </figcaption>
+    </article>
+    {% endfor %}
   </section>
 </section>
-<section class="wrapper">
+<section id="sides" class="wrapper">
   <header role="break">
     <hr>
-    <h3 id="sides">Sides</h3>
+    <h3>Sides</h3>
     <hr>
   </header>
   <section class="sides">

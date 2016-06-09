@@ -187,6 +187,9 @@ code {
     white-space: pre;
     word-wrap: normal;
     @include type(12,1);
+    @include bp(xs) {
+      @include type(10,1);
+    }
   }
 }
 
@@ -301,10 +304,12 @@ img.lazy {
   @include smooth;
   opacity: 0;
   transform: translateY(-$space-xs);
-  &--loaded {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+
+.loaded img {
+  background-image: none !important;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 hr {
@@ -452,7 +457,7 @@ nav[role="extra"] {
   max-width: 60em;
 	margin: 0 auto;
 	padding: $space-m;
-	@include bp(ml) {
+	@include bp(l) {
   	  max-width: 75em;
   	  padding-top: $space-l;
   	  padding-bottom: $space-l;
