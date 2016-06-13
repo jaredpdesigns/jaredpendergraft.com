@@ -1,1 +1,254 @@
-var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-5081288-1"]),_gaq.push(["_setDomainName","jaredpendergraft.com"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(),function(t){t.fn.unveil=function(e,n){function o(){var e=c.filter(function(){var e=t(this);if(!e.is(":hidden")){var n=a.scrollTop(),o=n+a.height(),i=e.offset().top,s=i+e.height();return s>=n-r&&o+r>=i}});i=e.trigger("unveil"),c=c.not(i)}var i,a=t(window),r=e||0,s=window.devicePixelRatio>1,u=s?"data-src-retina":"data-src",c=this;return this.one("unveil",function(){var t=this.getAttribute(u);t=t||this.getAttribute("data-src"),t&&(this.setAttribute("src",t),"function"==typeof n&&n.call(this))}),a.on("scroll.unveil resize.unveil lookup.unveil",o),o(),this}}(window.jQuery||window.Zepto),$(document).ready(function(){$(".lazy").unveil(240,function(){$(this).load(function(){$(this).parent().addClass("loaded")})})}),function(t){function e(e,n){switch(e){case"autoLoad":n&&!d.autoLoad?t(l).scroll(o):!n&&d.autoLoad&&t(l).unbind("scroll",o);break;case"insertBefore":n&&(d.appendTo=null);break;case"appendTo":n&&(d.insertBefore=null)}d[e]=n}function n(e){u=c||l.location.href,c=t(d.link,e).attr("href")}function o(){s.offset().top+s.height()<t(document).scrollTop()+t(l).height()&&t.autopager.load()}function i(o){var i=d,u=t("<div/>").append(o.replace(/<script(.|\s)*?\/script>/g,"")),c=u.find(i.content);e("page",i.page+1),n(u),c.length&&(i.insertBefore?c.insertBefore(i.insertBefore):c.appendTo(i.appendTo),i.load.call(c.get(),a(),r()),s=c.filter(":last")),p=!1}function a(){return{page:d.page,url:u}}function r(){return{page:d.page+1,url:c}}var s,u,c,l=this,d={},p=!1,f={autoLoad:!0,page:1,content:".content",link:"a[rel=next]",insertBefore:null,appendTo:null,start:function(){},load:function(){},disabled:!1};t.autopager=function(o){var i=this.autopager;if("string"==typeof o&&t.isFunction(i[o])){var a=Array.prototype.slice.call(arguments,1),r=i[o].apply(i,a);return r===i||void 0===r?this:r}if(o=t.extend({},f,o),i.option(o),s=t(o.content).filter(":last"),s.length&&!o.insertBefore&&!o.appendTo){var u=s.next();u.length?e("insertBefore",u):e("appendTo",s.parent())}return n(),this},t.extend(t.autopager,{option:function(n,o){var i=n;if("string"==typeof n){if(void 0===o)return d[n];i={},i[n]=o}return t.each(i,function(t,n){e(t,n)}),this},enable:function(){return e("disabled",!1),this},disable:function(){return e("disabled",!0),this},destroy:function(){return this.autoLoad(!1),d={},s=u=c=void 0,this},autoLoad:function(t){return this.option("autoLoad",t)},load:function(){return p||!c||d.disabled?void 0:(p=!0,d.start(a(),r()),t.get(c,i),this)}})}(jQuery),$.autopager({link:".next",content:".tumblr-holder"});
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5081288-1']);
+_gaq.push(['_setDomainName', 'jaredpendergraft.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+/**
+ * jQuery Unveil
+ * A very lightweight jQuery plugin to lazy load images
+ * http://luis-almeida.github.com/unveil
+ *
+ * Licensed under the MIT license.
+ * Copyright 2013 Luís Almeida
+ * https://github.com/luis-almeida
+ */
+
+;(function($) {
+
+  $.fn.unveil = function(threshold, callback) {
+
+    var $w = $(window),
+        th = threshold || 0,
+        retina = window.devicePixelRatio > 1,
+        attrib = retina? "data-src-retina" : "data-src",
+        images = this,
+        loaded;
+
+    this.one("unveil", function() {
+      var source = this.getAttribute(attrib);
+      source = source || this.getAttribute("data-src");
+      if (source) {
+        this.setAttribute("src", source);
+        if (typeof callback === "function") callback.call(this);
+      }
+    });
+
+    function unveil() {
+      var inview = images.filter(function() {
+        var $e = $(this);
+        if ($e.is(":hidden")) return;
+
+        var wt = $w.scrollTop(),
+            wb = wt + $w.height(),
+            et = $e.offset().top,
+            eb = et + $e.height();
+
+        return eb >= wt - th && et <= wb + th;
+      });
+
+      loaded = inview.trigger("unveil");
+      images = images.not(loaded);
+    }
+
+    $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+
+    unveil();
+
+    return this;
+
+  };
+
+})(window.jQuery || window.Zepto);
+
+
+$(document).ready(function() {
+  $('.lazy').unveil(240,function() {
+    $(this).load(function() {
+      $(this).parent().addClass('loaded');
+    } );
+  });
+});
+
+/*
+ * jQuery.autopager v1.0.0
+ *
+ * Copyright (c) lagos
+ * Dual licensed under the MIT and GPL licenses.
+ */
+(function($) {
+	var window = this, options = {},
+		content, currentUrl, nextUrl,
+		active = false,
+		defaults = {
+			autoLoad: true,
+			page: 1,
+			content: '.content',
+			link: 'a[rel=next]',
+			insertBefore: null, 
+			appendTo: null, 
+			start: function() {},
+			load: function() {},
+			disabled: false
+		};
+
+	$.autopager = function(_options) {
+		var autopager = this.autopager;
+
+		if (typeof _options === 'string' && $.isFunction(autopager[_options])) {
+			var args = Array.prototype.slice.call(arguments, 1),
+				value = autopager[_options].apply(autopager, args);
+
+			return value === autopager || value === undefined ? this : value;
+		}
+
+		_options = $.extend({}, defaults, _options);
+		autopager.option(_options);
+
+		content = $(_options.content).filter(':last');
+		if (content.length) {
+			if (!_options.insertBefore && !_options.appendTo) {
+				var insertBefore = content.next();
+				if (insertBefore.length) {
+					set('insertBefore', insertBefore);
+				} else {
+					set('appendTo', content.parent());
+				}
+			}
+		}
+
+		setUrl();
+
+		return this;
+	};
+
+	$.extend($.autopager, {
+		option: function(key, value) {
+			var _options = key;
+
+			if (typeof key === "string") {
+				if (value === undefined) {
+					return options[key];
+				}
+				_options = {};
+				_options[key] = value;
+			}
+
+			$.each(_options, function(key, value) {
+				set(key, value);
+			});
+			return this;
+		},
+
+		enable: function() {
+			set('disabled', false);
+			return this;
+		},
+
+		disable: function() {
+			set('disabled', true);
+			return this;
+		},
+
+		destroy: function() {
+			this.autoLoad(false);
+			options = {};
+			content = currentUrl = nextUrl = undefined;
+			return this;
+		},
+
+		autoLoad: function(value) {
+			return this.option('autoLoad', value);
+		},
+
+		load: function() {
+			if (active || !nextUrl || options.disabled) {
+				return;
+			}
+
+			active = true;
+			options.start(currentHash(), nextHash());
+			$.get(nextUrl, insertContent);
+			return this;
+		}
+
+	});
+
+	function set(key, value) {
+		switch (key) {
+			case 'autoLoad':
+				if (value && !options.autoLoad) {
+					$(window).scroll(loadOnScroll);
+				} else if (!value && options.autoLoad) {
+					$(window).unbind('scroll', loadOnScroll);
+				}
+				break;
+			case 'insertBefore':
+				if (value) {
+					options.appendTo = null;
+				}
+				break
+			case 'appendTo':
+				if (value) {
+					options.insertBefore = null;
+				}
+				break
+		}
+		options[key] = value;
+	}
+
+	function setUrl(context) {
+		currentUrl = nextUrl || window.location.href;
+		nextUrl = $(options.link, context).attr('href');
+	}
+
+	function loadOnScroll() {
+		if (content.offset().top + content.height() < $(document).scrollTop() + $(window).height()) {
+			$.autopager.load();
+		}
+	}
+
+	function insertContent(res) {
+		var _options = options,
+			nextPage = $('<div/>').append(res.replace(/<script(.|\s)*?\/script>/g, "")),
+			nextContent = nextPage.find(_options.content); 
+
+		set('page', _options.page + 1);
+		setUrl(nextPage);
+		if (nextContent.length) {
+			if (_options.insertBefore) {
+				nextContent.insertBefore(_options.insertBefore);
+			} else {
+				nextContent.appendTo(_options.appendTo);
+			}
+			_options.load.call(nextContent.get(), currentHash(), nextHash());
+			content = nextContent.filter(':last');
+		}
+		active = false;
+	}
+
+	function currentHash() {
+		return {
+			page: options.page,
+			url: currentUrl
+		};
+	}
+
+	function nextHash() {
+		return {
+			page: options.page + 1,
+			url: nextUrl
+		};
+	}
+})(jQuery);
+
+
+$.autopager({
+  link: '.next',
+  content: '.tumblr-holder'
+});
