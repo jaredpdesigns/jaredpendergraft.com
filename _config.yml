@@ -14,6 +14,9 @@ url: "http://jaredpendergraft.com/" # For Github: "http://jaredpdesigns.github.i
 twitter: "jaredpdesigns"
 email: "hello@jaredpendergraft.com"
 keep_files: [".git"]
+exclude: ["README.md"]
+source: src
+destination: build
 
 collections:
   projects:
@@ -23,6 +26,10 @@ collections:
   snippets:
     output: true
     permalink: /snippets/:categories/:title
+    
+  clients:
+    output: true
+    permalink: /clients/:categories/:title
     
 # Build settings
 markdown: kramdown
