@@ -193,7 +193,7 @@ code {
   }
 }
 
-p code, li code {
+p code {
   padding: 0.125rem 0.25rem;
   background-color: $color-luma;
   border-radius: $space-xs/2;
@@ -310,7 +310,7 @@ img.lazy {
   transform: translateY(-$space-xs);
 }
 
-.loaded img {
+.loaded img, .loaded {
   background-image: none !important;
   opacity: 1;
   transform: translateY(0);
@@ -393,6 +393,22 @@ footer[role="extra"] {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+.day-night {
+  cursor: pointer;
+  display: block;
+  path { @include smooth-pop; }
+  &.is-night {
+    .moon {
+      opacity: 0;
+      transform: translateX(-$space-s);
+    }
+    .sun {
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+    }
   }
 }
 

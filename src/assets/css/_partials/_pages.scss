@@ -37,9 +37,9 @@
 .project__img {
   @include type-center;
   @include smooth-pop;
-  @include loading;
   @include bp(m) { @include spacer-all; }
   &:hover { transform: translateY(-($space-xs/2)); }
+  a { @include loading; }
   img {
     border-radius: $space-xs;
     @include shade-big;
@@ -69,11 +69,14 @@
 .process__img {
   @include type-center;
   flex-basis: 100%;
-  @include loading;
   @include bp(s) { flex-basis: $grid-1-3; }
-  img {
-    min-height: $space-m + $space-s;
-    @include bp(ml) { min-height: $space-xl + $space-s; }
+  svg {
+    width: $space-m + $space-s;
+    height: $space-m + $space-s;
+    @include bp(ml) {
+      width: $space-xl + $space-s;
+      height: $space-xl + $space-s;
+    }
   }
 }
 
@@ -109,8 +112,8 @@
   @include smooth-pop;
   @include type-center;
   @include spacer-all;
-  @include loading;
   &:hover { transform: scale(1.0625); }
+  a { @include loading; }
   img {
     border-radius: $space-xs;
     min-height: $space-m + $space-s;
@@ -152,8 +155,8 @@
   blockquote {
     @include oomph-big;
     @include type-center;
-    @include loading;
     + * { @include oomph-big; }
+    p { @include loading; }
     img {
       padding: $space-s;
       @include bp(l) { padding: $space-m; }
@@ -228,36 +231,37 @@
 .styleguide {
   h2, h3:not(hr + h3), h4, h5 {
     @include oomph-small;
-    color: $color-base;
     margin-top: 0;
   }
   hr + h3 {
     @include type-center;
     color: $color-base-ish;
   }
-  #colors + hr + ul {
+  blockquote p, .color {
     display: flex;
     flex-wrap: wrap;
-    li {
-      @include type-center;
-      margin-top: 0;
-      @include spacer-all;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-basis: 100%;
-      @include bp(s) { flex-basis: $grid-1-4; }
-      @include bp(xl) { flex-basis: $grid-1-6; }
-      span {
-        display: inline-block;
-        min-height: $space-l*2;
-        min-width: $space-l*2;
-        max-width: 100%;
-        border-radius: $space-xs;
-        border: $border-big $color-luma;     
-      }
-      code { @include oomph-small; }
+    align-items: center;
+  }
+  .color {
+    flex-basis: 100%;
+    @include oomph;
+    @include bp(xs) { @include type-center; }
+    @include bp(s) { flex-basis: $grid-1-2; }
+  }
+  [class^="color__bg--"] {
+    height: $space-l;
+    width: $space-l;
+    border-radius: 50%;
+    border: $border $color-luma;   
+    margin-right: $space-m;
+    @include bp(s) {
+      height: $space-l + $space-s;
+      width: $space-l + $space-s;
+    }
+  }
+  .color code {
+    @include bp(xs) {
+      @include oomph-small;
     }
   }
 }

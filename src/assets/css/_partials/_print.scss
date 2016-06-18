@@ -29,7 +29,11 @@
       border-color: #CCC;
       + h3 { color: #666; }
       + h3, + h3 + hr { margin-top: $space-xs; }
-      &:nth-of-type(7), &:nth-of-type(11) { page-break-before: always; }
+      &:nth-of-type(7), &:nth-of-type(11) {
+        page-break-before: always;
+        position: relative;
+        top: 0.125rem;
+      }
     }
     blockquote:before {
       color: #666;

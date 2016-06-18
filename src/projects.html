@@ -38,7 +38,8 @@ social: assets/img/social/projects-social.jpg
     {% for process in site.data.processes %}
     <article class="process">
       <figure class="process__img">
-        <img class="lazy" data-src="{{ "/assets/img/projects/process/" | prepend: site.baseurl }}{{ process.img }}" alt="{{ process.step }} illustration">
+        {% include svg/process/{{ process.img }} %}
+        <!--<img class="lazy" data-src="{{ "/assets/img/projects/process/" | prepend: site.baseurl }}{{ process.img }}" alt="{{ process.step }} illustration">-->
       </figure>
       <figcaption class="process__text">
         <h4>{{ process.step }}</h4>

@@ -73,16 +73,16 @@ $(document).ready(function() {
 
 ***
 
-- <span class="color__bg--base"></span> `.base`
-- <span class="color__bg--base-dark"></span> `.base-dark`
-- <span class="color__bg--base-ish"></span> `.base-ish`
-- <span class="color__bg--base-mid"></span> `.base-mid`
-- <span class="color__bg--base-light"></span> `.base-light`
-- <span class="color__bg--base-ghost"></span> `.base-ghost`
-- <span class="color__bg--highlight"></span> `.highlight`
-- <span class="color__bg--highlight-dark"></span> `.highlight-dark`
-- <span class="color__bg--highlight-ish"></span> `.highlight-ish`
-- <span class="color__bg--highlight-mid"></span> `.highlight-mid`
-- <span class="color__bg--highlight-light"></span> `.highlight-light`
-- <span class="color__bg--highlight-ghost"></span> `.highlight-ghost`
-- <span class="color__bg--luma"></span> `.luma`
+> <span class="color"><span class="color__bg--base"></span> `.base`</span>
+<span class="color"><span class="color__bg--base-dark"></span> `.base-dark`</span>
+<span class="color"><span class="color__bg--base-ish"></span> `.base-ish`</span>
+<span class="color"><span class="color__bg--base-mid"></span> `.base-mid`</span>
+<span class="color"><span class="color__bg--base-light"></span> `.base-light`</span>
+<span class="color"><span class="color__bg--base-ghost"></span> `.base-ghost`</span>
+<span class="color"><span class="color__bg--highlight"></span> `.highlight`</span>
+<span class="color"><span class="color__bg--highlight-dark"></span> `.highlight-dark`</span>
+<span class="color"><span class="color__bg--highlight-ish"></span> `.highlight-ish`</span>
+<span class="color"><span class="color__bg--highlight-mid"></span> `.highlight-mid`</span>
+<span class="color"><span class="color__bg--highlight-light"></span> `.highlight-light`</span>
+<span class="color"><span class="color__bg--highlight-ghost"></span> `.highlight-ghost`</span>
+<span class="color"><span class="color__bg--luma"></span> `.luma`</span>
