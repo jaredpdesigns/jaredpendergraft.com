@@ -39,4 +39,4 @@ Friendly illustrations peppered throughout the site strengthen the core message 
 
 > <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-about.png" alt="mbloom about page"> *The about page focused on educating users a bit more about the history of mbloom and how they invest.*
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-portfolio.png" alt="mbloom portfolio page mobile"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-team.png" alt="mbloom team page mobile"> *The portfolio and team pages needed to be easy to glance over to find appropriate information for users.*
+> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-portfolio.png" alt="mbloom portfolio page mobile"></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-team.png" alt="mbloom team page mobile"></span> *The portfolio and team pages needed to be easy to glance over to find appropriate information for users.*

@@ -47,4 +47,4 @@ While viewing individual products, we drop some of the contrast to focus on deta
 
 > <img class="lazy" alt="Huŏ Ceramics product page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-product.png"> *Large pictures were used to emphasize detail and ambiance.*
 
-> <img class="lazy" alt="Huŏ Ceramics collection page mobile" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-collection.png"><img class="lazy" alt="Huŏ Ceramics about page mobile" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-about.png"> *Legibility was a strong consideration and we focused on making mobile work flawlessly.*
+> <span class="phone"><img class="lazy" alt="Huŏ Ceramics collection page mobile" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-collection.png"></span><span class="phone"><img class="lazy" alt="Huŏ Ceramics about page mobile" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-about.png"></span> *Legibility was a strong consideration and we focused on making mobile work flawlessly.*

@@ -9,10 +9,10 @@ $type-xs:   14;
 $type-s:    16;
 $type-m:    18;
 $type-ml:   20;
-$type-l:    22;
-$type-xl:   24;
-$type-xxl:  27;
-$type-xxxl: 32;
+$type-l:    24;
+$type-xl:   27;
+$type-xxl:  32;
+$type-xxxl: 36;
 $type-baseline: 24;
 
 $type-sans:  'GT Pressura', sans-serif;
@@ -100,6 +100,7 @@ $border-huge: $space-xs solid;
 }
 @mixin type-s {
 	@include type($type-s);
+	@include bp(xs) { @include type($type-xs,0.75); }
 	@include bp(xl) { @include type($type-m); }
 }
 @mixin type-m	 {
@@ -119,7 +120,7 @@ $border-huge: $space-xs solid;
 }
 @mixin type-xl {
 	@include type($type-xl);
-	@include bp(xs) { @include type($type-l,1.25); }
+	@include bp(xs) { @include type($type-l,1); }
 	@include bp(xl) { @include type($type-xxl); }
 }
 @mixin type-xxl {
@@ -184,7 +185,7 @@ $border-huge: $space-xs solid;
   display: inline-block;
   + * {
     margin-left: $space-s;
-    @include bp(l) { margin-left: $space-m; }
+    @include bp(s) { margin-left: $space-m; }
   }
 }
 

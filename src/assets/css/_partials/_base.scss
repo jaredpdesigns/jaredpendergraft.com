@@ -310,7 +310,7 @@ img.lazy {
   transform: translateY(-$space-xs);
 }
 
-.loaded img, .loaded {
+.loaded img, .loaded, .project__inner--content * {
   background-image: none !important;
   opacity: 1;
   transform: translateY(0);

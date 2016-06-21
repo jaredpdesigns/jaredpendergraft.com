@@ -71,8 +71,8 @@
   flex-basis: 100%;
   @include bp(s) { flex-basis: $grid-1-3; }
   svg {
-    width: $space-m + $space-s;
-    height: $space-m + $space-s;
+    width: $space-xl;
+    height: $space-xl;
     @include bp(ml) {
       width: $space-xl + $space-s;
       height: $space-xl + $space-s;
@@ -160,6 +160,12 @@
     img {
       padding: $space-s;
       @include bp(l) { padding: $space-m; }
+    }
+    .phone {
+      max-width: $grid-3-4;
+      display: inline-block;
+      margin: 0 auto;
+      @include bp(s) { max-width: $grid-1-2; }
     }
     em {
       @include oomph-small;

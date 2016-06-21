@@ -52,7 +52,7 @@ The client dashboard is predominantly about reviews, so we made it easy to sort,
 
 > <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-widget.png" alt="Yodle Restaurants customer dashboard statistics and widget embed code"> *Take your reviews with you! Easily embed a lovely looking collection of reviews showing your best reviews on your personal site.*
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-location.png" alt="Yodle Restaurants customer dashboard location editing"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-users.png" alt="Yodle Restaurants customer dashboard user editing">
+> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-location.png" alt="Yodle Restaurants customer dashboard location editing"></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-users.png" alt="Yodle Restaurants customer dashboard user editing"></span>
 
 
 ***  
