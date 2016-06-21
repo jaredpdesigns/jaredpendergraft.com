@@ -13,7 +13,7 @@ baseurl: "" # For Github: "/jpd"
 url: "http://jaredpendergraft.com/" # For Github: "http://jaredpdesigns.github.io/jpd/"
 twitter: "jaredpdesigns"
 email: "hello@jaredpendergraft.com"
-keep_files: [".git, CNAME"]
+keep_files: [.git, "CNAME"]
 exclude: ["README.md"]
 source: src
 destination: build
