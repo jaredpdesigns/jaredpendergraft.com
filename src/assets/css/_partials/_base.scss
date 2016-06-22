@@ -331,12 +331,13 @@ button, input[type="submit"], .btn {
   @include type-bold;
   @include inline;
   @include smooth;
-  padding: $space-xs $space-s;
+  padding: 0 $space-xs;
   border-radius: $space-xs;
   border: $border $color-highlight-mid;
   background-color: $color-luma;
   color: $color-highlight;
   transform: translate3d(0,0,0);
+  @include bp(s) { padding: 0 $space-s; }
   @include bp(ml) { padding: $space-xs/2 $space-s; }
   &:after {
     content: '→';
@@ -347,7 +348,20 @@ button, input[type="submit"], .btn {
     @include smooth-pop;
   }
   &:hover { border-color: $color-highlight-ish; }
+  &:hover:before { transform: translateX(-$space-xs/2); }
   &:hover:after { transform: translateX($space-xs/2); }
+}
+
+.btn-left {
+  &:before {
+    content: '←';
+    @include type-serif;
+    margin-right: $space-xs;
+    font-weight: bold;
+    display: inline-block;
+    @include smooth-pop;
+  }
+  &:after { content: none; }
 }
 
 .btn--secondary {

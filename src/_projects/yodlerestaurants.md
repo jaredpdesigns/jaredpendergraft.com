@@ -6,6 +6,7 @@ role:
 - Front-End Development
 url-out: http://www.yodlerestaurants.com
 img: yodlerestaurants/yodlerestaurants-feature.jpg
+logo: yodlerestaurants/yodlerestaurants-logo.svg
 layout: project
 class: projects
 social: assets/img/projects/yodlerestaurants/yodlerestaurants-social.jpg

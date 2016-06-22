@@ -131,6 +131,12 @@
   }
 }
 
+.project__inner {
+  padding-bottom: 3.125rem;
+  @include bp(s) { padding-bottom: 3.875rem; }
+  @include bp(xl) { padding-bottom: 4.25rem; }
+}
+
 .project__inner--header {
   position: relative;
   @include type-center;
@@ -176,6 +182,20 @@
   }
   h3 { @include type-center; }
   p + hr { @include oomph-big; }
+}
+
+.project__inner--footer {
+  position: fixed;
+  width: 100%;
+  background-color: $color-luma;
+  bottom: 0;
+  z-index: 1000;
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 .snippet {

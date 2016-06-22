@@ -4,6 +4,7 @@ description: An application concept for tracking books, movies and music you enj
 role:
 - Visual Design
 img: mdia/mdia-feature.jpg
+logo: mdia/mdia-logo.svg
 layout: project
 class: projects
 social: assets/img/projects/mdia/mdia-social.jpg

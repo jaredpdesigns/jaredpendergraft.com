@@ -6,6 +6,7 @@ role:
 - Front-End Development
 url-out: http://www.mbloomhawaii.com
 img: mbloom/mbloom-feature.jpg
+logo: mbloom/mbloom-logo.svg
 layout: project
 class: projects
 social: assets/img/projects/mbloom/mbloom-social.jpg

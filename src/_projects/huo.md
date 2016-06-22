@@ -6,6 +6,7 @@ role:
 - Front-End Development
 url-out: http://www.huoceramics.com
 img: huo/huo-feature.jpg
+logo: huo/huo-logo.svg
 layout: project
 class: projects
 social: assets/img/projects/huo/huo-social.jpg

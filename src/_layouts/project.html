@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article>
+<article class="project__inner">
   <header class="biggie project__inner--header" style="background-image: url('{{ site.baseurl }}/assets/img/projects/{{ page.img }}')">
     <section class="wrapper">
       <h1>{{ page.title }}</h1>
@@ -14,4 +14,14 @@ layout: default
   <section class="project__inner--content wrapper">
     {{ content }}
   </section>
+  <footer class="project__inner--footer">
+    <nav role="projects" class="wrapper wrapper--short">
+      {% if page.previous.url %}
+        <a class="btn btn-left" href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="btn" href="{{ page.next.url }}">{{ page.next.title }}</a>
+      {% endif %}
+    </nav>
+  </footer>
 </article>
