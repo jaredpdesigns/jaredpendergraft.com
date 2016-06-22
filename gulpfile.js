@@ -26,5 +26,5 @@ gulp.task('js-compress', function() {
   .pipe(gulp.dest('build/assets/js'))
 });
 
-// Compress
-gulp.task('compress', ['html-compress', 'css-compress', 'js-compress']);
+// Default Task
+gulp.task('default',['html-compress', 'css-compress', 'js-compress']);

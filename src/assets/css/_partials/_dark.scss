@@ -4,7 +4,7 @@
     color: $color-luma;
     border-color: $color-base;
   }
-  header[role="main"], footer[role="extra"], #process, p code, pre {
+  header[role="main"], footer[role="extra"], .project__inner--footer, #process, p code, pre {
     background-color: $color-base;
   }
   nav[role="main"] a, nav[role="extra"] a {
