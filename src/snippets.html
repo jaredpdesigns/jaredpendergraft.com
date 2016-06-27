@@ -12,7 +12,7 @@ social: assets/img/social/snippets-social.jpg
     <article class="snippet">
       <header role="break">
         <hr>
-        <h3><a href="{{ snippet.url }}">{{ snippet.title }}</a></h3>
+        <h3><a href="{{ snippet.url | prepend: site.baseurl }}">{{ snippet.title }}</a></h3>
         <h5>{{ snippet.categories }}</h5>
         <hr>
       </header>

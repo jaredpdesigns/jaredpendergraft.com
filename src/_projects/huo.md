@@ -4,7 +4,6 @@ description: An identity and website for award-winning Chinese artist Zhou Xiaop
 role:
 - Art Direction
 - Front-End Development
-url-out: http://www.huoceramics.com
 img: huo/huo-feature.jpg
 logo: huo/huo-logo.svg
 layout: project
