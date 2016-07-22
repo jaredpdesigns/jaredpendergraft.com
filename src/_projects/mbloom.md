@@ -4,7 +4,6 @@ description: An identity and website for Hawaii’s first early-stage technology
 role:
 - Art Direction
 - Front-End Development
-url-out: http://www.mbloomhawaii.com
 img: mbloom/mbloom-feature.jpg
 logo: mbloom/mbloom-logo.svg
 layout: project

@@ -4,7 +4,6 @@ description: An iPad application, dashboards and marketing site for capturing an
 role:
 - Visual Design
 - Front-End Development
-url-out: http://www.yodlerestaurants.com
 img: yodlerestaurants/yodlerestaurants-feature.jpg
 logo: yodlerestaurants/yodlerestaurants-logo.svg
 layout: project

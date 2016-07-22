@@ -1,6 +1,6 @@
 @media print {
-  html { border: none; font-size: 62.5%; }
-  body { margin: 0 auto; background: none !important; }
+  html { font-size: 62.5%; border: none !important; }
+  body { margin: 0 auto; background: none !important; border: none !important; }
   * { color: black !important; }
   header[role="main"]{
     position: relative;
