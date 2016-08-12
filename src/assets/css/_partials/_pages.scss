@@ -123,7 +123,7 @@
 
 .side__text {
   flex-basis: 100%;
-  @include type-center;
+  h2 { @include type-center; }
   p {
     color: $color-base-ish;
     @include type-legible;

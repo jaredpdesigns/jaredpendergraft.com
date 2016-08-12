@@ -280,13 +280,13 @@ ul li {
 a {
   @include smooth;
   &:hover { color: $color-highlight; }
-  p & {
+  p &, li & {
     border-bottom: $border $color-highlight-mid;
     &:hover { border-color: $color-highlight-ish; }
   }
 }
 
-p a[href*="http"]:after {
+p a[href*="http"]:after, li a[href*="http"]:after {
   content: "\2197";
   margin-left: $space-xs/2;
   color: $color-highlight;
