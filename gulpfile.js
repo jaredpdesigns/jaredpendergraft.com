@@ -7,23 +7,23 @@ var gulp = require('gulp'),
     
 // Minify HTML
 gulp.task('html-compress', function() {
-  return gulp.src('build/**/*.html')
+  return gulp.src('docs/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
 });
 
 // Make CSS Teeny-Tiny
 gulp.task('css-compress', function() {
-  return gulp.src('build/assets/css/**/*')
+  return gulp.src('docs/assets/css/**/*')
   .pipe(cssmin())
-  .pipe(gulp.dest('build/assets/css'));
+  .pipe(gulp.dest('docs/assets/css'));
 });
 
 // Compress that JS
 gulp.task('js-compress', function() {
-  return gulp.src('build/assets/js/**/*.js')
+  return gulp.src('docs/assets/js/**/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('build/assets/js'))
+  .pipe(gulp.dest('docs/assets/js'))
 });
 
 // Default Task
