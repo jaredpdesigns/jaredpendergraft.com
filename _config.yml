@@ -42,10 +42,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-jekyll-press:
-  exclude: [".html", ".css"]
-
 gems:
 - jekyll-autoprefixer
-- jekyll-press
 - jekyll-sitemap

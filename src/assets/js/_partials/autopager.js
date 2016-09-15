@@ -1,9 +1,3 @@
-/*
- * jQuery.autopager v1.0.0
- *
- * Copyright (c) lagos
- * Dual licensed under the MIT and GPL licenses.
- */
 (function($) {
 	var window = this, options = {},
 		content, currentUrl, nextUrl,
