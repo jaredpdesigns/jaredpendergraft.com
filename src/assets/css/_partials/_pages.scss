@@ -167,12 +167,6 @@
       padding: $space-s;
       @include bp(l) { padding: $space-m; }
     }
-    .phone {
-      max-width: $grid-3-4;
-      display: inline-block;
-      margin: 0 auto;
-      @include bp(s) { max-width: $grid-1-2; }
-    }
     em {
       @include oomph-small;
       display: block;
@@ -180,7 +174,11 @@
       color: $color-base-mid;
     }
   }
-  h3 { @include type-center; }
+  h3 {
+    @include oomph-small;
+    @include type-center;
+    + hr { @include oomph-small; }
+  }
   p + hr { @include oomph-big; }
 }
 

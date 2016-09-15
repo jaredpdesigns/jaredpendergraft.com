@@ -7,7 +7,7 @@ img: kipa/kipa-feature.jpg
 logo: kipa/kipa-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/kipa/kipa-social.jpg
+social: assets/img/projects/kipa/kipa-feature.jpg
 ---
 
 In Maui, a lot of tourists visit the island to take in surfing, hiking and other outdoor activities, often booking tours through resorts or other ‘pay a little, go with a lot of people’ experiences. We saw the potential to change that — hire a local expert and see what the locals see — leaving the island with a one-of-a-kind experience worth sharing with friends.
@@ -16,10 +16,8 @@ Kipa offers a platform for local tour guides to post their services and get hire
 
 Kipa is still under development but the long-term goals for the platform are to make the service available all over the world, expanding past outdoor activities to more personal experiences like booking a local in Portland to take you to the city’s best coffee and book shops.
 
-> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-landing.png" alt="Kipa app location selection"></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-filters.png" alt="Kipa app instructor selection"></span> *Finding a fun activity had to be dead simple, just enter the location and when you arrive and you’ll immediately find lots of great options ordered by price range.*
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-1.png" alt="Kipa app landing, trip filters, and trip detail screens"> *Finding a fun activity had to be dead simple, just enter the location and when you arrive and you’ll immediately find lots of great options ordered by price range. Once you find an activity that interests you — easily book your trip.*
 
-> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-trip.png" alt="Kipa app instructor detail page"></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-book-1.png" alt="Kipa app checkout process part 1"></span> *Booking a trip with special instructions is super easy, making the process as user-focused as possible was very important.*
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-2.png" alt="Kipa app booking process screens"> *Booking a trip with special instructions is super easy, making the process as user-focused as possible was very important. Book a lot of trips? Save your credit card information for later. You can also easily share details of your trip with friends or add to your calendar of choice.*
 
-> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-book-2.png" alt="Kipa app checkout process part 2" ></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-hooray.png" alt="Kipa app checkout success"></span> *Book a lot of trips? Save your credit card information for later. You can also easily share details of your trip with friends or add to your calendar of choice.*
-
-> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-messages.png" alt="Kipa app instructor communication overview" ></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-profile.png" alt="Kipa app settings screen"></span> *After you book a trip all communication with your trip provider is done in-app, making conversations feel natural and fluid.*
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/kipa/kipa-3.png" alt="Kipa app instructor communication overview" > *After you book a trip all communication with your trip provider is done in-app, making conversations feel natural and fluid. Also, easily edit account details via your profile.*

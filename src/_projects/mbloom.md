@@ -8,7 +8,7 @@ img: mbloom/mbloom-feature.jpg
 logo: mbloom/mbloom-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/mbloom/mbloom-social.jpg
+social: assets/img/projects/mbloom/mbloom-feature.jpg
 ---
 
 mbloom is Hawaii’s first early-stage technology fund focused on investing in teams working to improve the world with revolutionary technologies. Our task was to establish a professional website and mature the brand.
@@ -37,6 +37,4 @@ Friendly illustrations peppered throughout the site strengthen the core message 
 
 > <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-home.png" alt="mbloom home page"> *The goal of the home page was to let users know exactly who mbloom was and what they stood for. Keeping pertinent contact information as clear calls to action relayed the idea that there are people behind the fund who want to help.*
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-about.png" alt="mbloom about page"> *The about page focused on educating users a bit more about the history of mbloom and how they invest.*
-
-> <span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-portfolio.png" alt="mbloom portfolio page mobile"></span><span class="phone"><img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-team.png" alt="mbloom team page mobile"></span> *The portfolio and team pages needed to be easy to glance over to find appropriate information for users.*
+> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-overview.png" alt="mbloom children pages"> *The about page focused on educating users a bit more about the history of mbloom and how they invest. The portfolio and team pages needed to be easy to glance over to find appropriate information for users.*

@@ -8,7 +8,7 @@ img: huo/huo-feature.jpg
 logo: huo/huo-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/huo/huo-social.jpg
+social: assets/img/projects/huo/huo-feature.jpg
 ---
 
 Huŏ Ceramics was a small-scale project with a lot of personality. We were given the opportunity to create an identity  and website for renowned Chinese artist Zhou Xiaoping — an honored and awarded Chinese traditional crafts master whose singular pieces are collected and revered world-wide.
@@ -43,8 +43,8 @@ The website focuses on showcasing the pieces with bold images set in high contra
 
 While viewing individual products, we drop some of the contrast to focus on details and allow customers to get a sense of the craftsmanship that goes into every piece.
 
-> <img class="lazy" alt="Huŏ Ceramics home page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-home.png"> *The homepage was designed to be mysterious and engaging — encouraging users to take a closer look.*
+> <img class="lazy" alt="Huŏ Ceramics home page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-home.png"> <img class="lazy" alt="Huŏ Ceramics home page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-home-2.png"> *The homepage was designed to be mysterious and engaging — encouraging users to take a closer look.*
 
-> <img class="lazy" alt="Huŏ Ceramics product page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-product.png"> *Large pictures were used to emphasize detail and ambiance.*
+> <img class="lazy" alt="Huŏ Ceramics product page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-product.png"> *Large pictures were used to emphasize detail and ambiance. Legibility was a strong consideration and we focused on making mobile work flawlessly.*
 
-> <span class="phone"><img class="lazy" alt="Huŏ Ceramics collection page mobile" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-collection.png"></span><span class="phone"><img class="lazy" alt="Huŏ Ceramics about page mobile" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-about.png"></span> *Legibility was a strong consideration and we focused on making mobile work flawlessly.*
+> <img class="lazy" alt="Huŏ Ceramics about page" data-src="{{ site.baseurl }}/assets/img/projects/huo/huo-about.png"> *Prior to the website being available, little was known about the artist — we used this to our advantage to create an atmosphere of mystery.*
