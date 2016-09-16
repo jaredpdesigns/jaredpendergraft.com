@@ -214,8 +214,10 @@
   @include oomph;
   > * { @include type-legible; }
   h3 {
+    @include oomph-small;
     @include type-center;
     color: $color-base-ish;
+    + hr { @include oomph-small; }
   }
   h4 + * { margin-top: 0; }
   ul + * { @include oomph-big; }
