@@ -3,7 +3,7 @@ title: Jared Pendergraft
 description: The personal website of Jared Pendergraft
 keywords: jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui
 baseurl: ""
-url: "http://jaredpendergraft.com"
+url: "http://jaredpendergraft.com/"
 twitter: "jaredpdesigns"
 email: "hello@jaredpendergraft.com"
 keep_files: [.git, "CNAME"]
