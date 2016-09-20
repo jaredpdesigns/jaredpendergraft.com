@@ -5,7 +5,8 @@ role:
 - UI/UX Design
 - Front-End Development
 img: huo/huo-feature.jpg
-logo: huo/huo-logo.svg
+img-inner: huo/huo-feature-inner.png
+color: '#000'
 layout: project
 class: projects
 social: assets/img/projects/huo/huo-social.jpg

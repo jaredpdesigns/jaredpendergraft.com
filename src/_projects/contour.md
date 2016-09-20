@@ -5,6 +5,8 @@ role:
 - UI/UX Design
 - Front-End Development
 img: contour/contour-feature.jpg
+img-inner: contour/contour-feature-inner.png
+color: '#222'
 layout: project
 class: projects
 social: assets/img/projects/contour/contour-social.jpg

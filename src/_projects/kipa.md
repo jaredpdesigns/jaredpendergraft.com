@@ -4,7 +4,8 @@ description: 'An application concept for booking local tour guides to take you o
 role:
 - UI/UX Design
 img: kipa/kipa-feature.jpg
-logo: kipa/kipa-logo.svg
+img-inner: kipa/kipa-feature-inner.png
+color: '#8D44AD'
 layout: project
 class: projects
 social: assets/img/projects/kipa/kipa-social.jpg

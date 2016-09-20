@@ -4,7 +4,8 @@ description: 'An application concept for tracking books, movies and music you en
 role:
 - UI/UX Design
 img: mdia/mdia-feature.jpg
-logo: mdia/mdia-logo.svg
+img-inner: mdia/mdia-feature-inner.png
+color: '#FF5B5E'
 layout: project
 class: projects
 social: assets/img/projects/mdia/mdia-social.jpg

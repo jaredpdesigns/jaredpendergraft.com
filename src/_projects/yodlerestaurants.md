@@ -5,7 +5,8 @@ role:
 - UI/UX Design
 - Front-End Development
 img: yodlerestaurants/yodlerestaurants-feature.jpg
-logo: yodlerestaurants/yodlerestaurants-logo.svg
+img-inner: yodlerestaurants/yodlerestaurants-feature-inner.png
+color: '#1897D8' 
 layout: project
 class: projects
 social: assets/img/projects/yodlerestaurants/yodlerestaurants-social.jpg

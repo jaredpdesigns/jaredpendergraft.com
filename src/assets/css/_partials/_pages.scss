@@ -137,6 +137,19 @@
   @include bp(xl) { padding-bottom: 4.25rem; }
 }
 
+.project__inner--header-big {
+  @include type-center;
+  color: $color-luma;
+  position: relative;
+  &:before {
+    content: '';
+    @include fill;
+    background: linear-gradient(rgba($color-luma,0), rgba($color-luma,0.25));
+  }
+  hr { border-color: rgba($color-luma,0.5); }
+  h1, h5, p { @include type-legible; }
+}
+
 .project__inner--header {
   position: relative;
   @include type-center;

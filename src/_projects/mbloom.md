@@ -5,7 +5,8 @@ role:
 - UI/UX Design
 - Front-End Development
 img: mbloom/mbloom-feature.jpg
-logo: mbloom/mbloom-logo.svg
+img-inner: mbloom/mbloom-feature-inner.png
+color: '#5AAAAD'
 layout: project
 class: projects
 social: assets/img/projects/mbloom/mbloom-social.jpg
