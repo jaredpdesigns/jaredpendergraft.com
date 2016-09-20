@@ -8,7 +8,7 @@ img: mbloom/mbloom-feature.jpg
 logo: mbloom/mbloom-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/mbloom/mbloom-feature.jpg
+social: assets/img/projects/mbloom/mbloom-social.jpg
 ---
 
 mbloom is Hawaii’s first early-stage technology fund focused on investing in teams working to improve the world with revolutionary technologies. Our task was to establish a professional website and mature the brand.

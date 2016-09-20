@@ -7,7 +7,7 @@ img: kipa/kipa-feature.jpg
 logo: kipa/kipa-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/kipa/kipa-feature.jpg
+social: assets/img/projects/kipa/kipa-social.jpg
 ---
 
 In Maui, a lot of tourists visit the island to take in surfing, hiking and other outdoor activities, often booking tours through resorts or other ‘pay a little, go with a lot of people’ experiences. We saw the potential to change that — hire a local expert and see what the locals see — leaving the island with a one-of-a-kind experience worth sharing with friends.

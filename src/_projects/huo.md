@@ -8,7 +8,7 @@ img: huo/huo-feature.jpg
 logo: huo/huo-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/huo/huo-feature.jpg
+social: assets/img/projects/huo/huo-social.jpg
 ---
 
 Huŏ Ceramics was a small-scale project with a lot of personality. We were given the opportunity to create an identity  and website for renowned Chinese artist Zhou Xiaoping — an honored and awarded Chinese traditional crafts master whose singular pieces are collected and revered world-wide.

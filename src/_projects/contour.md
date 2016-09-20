@@ -7,7 +7,7 @@ role:
 img: contour/contour-feature.jpg
 layout: project
 class: projects
-social: assets/img/projects/contour/contour-feature.jpg
+social: assets/img/projects/contour/contour-social.jpg
 ---
 
 Designing and assisting in the development of the Contour application has been a very rewarding experience. It’s provided me several opportunities to learn and grow as a designer while building an application that affects the world positively.

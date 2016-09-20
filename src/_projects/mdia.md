@@ -7,7 +7,7 @@ img: mdia/mdia-feature.jpg
 logo: mdia/mdia-logo.svg
 layout: project
 class: projects
-social: assets/img/projects/mdia/mdia-feature.jpg
+social: assets/img/projects/mdia/mdia-social.jpg
 ---
 
 The idea for mdia came when I wanted a single hub for all the media things I was consuming. I love sharing recommendations with friends about what albums I’ve recently listened to or great films I’d seen, but with all the disparate services we use, it’s hard to centralize that information.
