@@ -1,8 +1,8 @@
 ---
 title: Huŏ Ceramics
-description: An identity and website for award-winning Chinese artist Zhou Xiaoping.
+description: 'An identity and website for award-winning Chinese artist Zhou Xiaoping.'
 role:
-- Art Direction
+- UI/UX Design
 - Front-End Development
 img: huo/huo-feature.jpg
 logo: huo/huo-logo.svg

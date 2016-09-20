@@ -1,8 +1,8 @@
 ---
 title: Yodle Restaurants
-description: An iPad application, dashboards and marketing site for capturing and managing engaging restaurant reviews.
+description: 'An iPad application, dashboards and marketing site for capturing and managing engaging restaurant reviews.'
 role:
-- Visual Design
+- UI/UX Design
 - Front-End Development
 img: yodlerestaurants/yodlerestaurants-feature.jpg
 logo: yodlerestaurants/yodlerestaurants-logo.svg
@@ -11,7 +11,7 @@ class: projects
 social: assets/img/projects/yodlerestaurants/yodlerestaurants-social.jpg
 ---
 
-Yodle Restaurants has been one of the most comprehensive projects I’ve worked on. It was a great experience designing and developing a project from start to finish. I learned a lot along the way and the product continues to be successful.
+Designing and developing Yodle Restaurants was a great experience and provided an opportunity to touch every part of a project from start to finish. I learned a lot along the way and the product continues to be successful.
 
 The project started with an iPad application for capturing restaurant reviews and was eventually developed into a client dashboard for review monitoring, configuring the reviews website widget, and promotion distribution. The final piece created was the marketing website, used to drive sign-ups as well as give users a sense of the caliber of the product before using it.
 

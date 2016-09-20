@@ -1,8 +1,8 @@
 ---
 title: mdia
-description: An application concept for tracking books, movies and music you enjoy.
+description: 'An application concept for tracking books, movies and music you enjoy.'
 role:
-- Visual Design
+- UI/UX Design
 img: mdia/mdia-feature.jpg
 logo: mdia/mdia-logo.svg
 layout: project

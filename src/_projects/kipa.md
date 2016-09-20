@@ -1,8 +1,8 @@
 ---
 title: Kipa
-description: An application concept for booking local tour guides to take you on exciting adventures.
+description: 'An application concept for booking local tour guides to take you on exciting adventures.'
 role:
-- Visual Design
+- UI/UX Design
 img: kipa/kipa-feature.jpg
 logo: kipa/kipa-logo.svg
 layout: project

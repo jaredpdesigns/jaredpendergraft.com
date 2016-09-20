@@ -1,8 +1,8 @@
 ---
 title: mbloom
-description: An identity and website for Hawaii’s first early-stage technology fund.
+description: 'An identity and website for Hawaii’s first early-stage technology fund.'
 role:
-- Art Direction
+- UI/UX Design
 - Front-End Development
 img: mbloom/mbloom-feature.jpg
 logo: mbloom/mbloom-logo.svg

@@ -213,8 +213,8 @@ pre {
 
 .highlight {
   .m, .mi, .n, .nf, .nv, .nd, .s1, .o + .nt { color: $color-highlight; }
-  .k, .kd, .o, .nb, .nt, .err, .nx { color: $color-base-ish; }
-  .p { color: $color-base-mid; }
+  .k, .kd, .o, .nb, .nt, .err, .nx, .o + .m, .p + .nf { color: $color-base-ish; }
+  .p  { color: $color-base-mid; }
 }
 
 // List Items
