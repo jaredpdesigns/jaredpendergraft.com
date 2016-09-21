@@ -6,7 +6,7 @@ role:
 - Front-End Development
 img: contour/contour-feature.jpg
 img-inner: contour/contour-feature-inner.png
-color: '#222'
+color: '#1978d4'
 layout: project
 class: projects
 social: assets/img/projects/contour/contour-social.jpg
@@ -89,7 +89,7 @@ The application is structured in sets of ‘panels’, each panel includes multi
 
 Once we began creating components used throughout the app, designing different views became a lot easier. We knew what list-views, detail-views and expandable-tree-views looked liked, so adjusting the data sources to fit the overall UI felt a lot less complicated — restrictions were good.
 
-> <img class="lazy" alt="Contour app panel overview" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-panel-overview.png"> *Overview of how a single hazard responds to different device sizes. Being mobile-first helped a lot in terms of prioritizing UI structuring.*
+> <img class="lazy" alt="Contour app panel overview" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-panel-overview.png"> *It was important to have access to as much of the panel and map at the same time as possible — the panels split vertically on smaller screens to allow users to interact with the underlying map.*
 
 The coolest part of the application is the complexity of layer-types offered by our service. You can render a visualization of all historic earthquakes on top of information about population density and tide conditions with a few checkboxes.
 
