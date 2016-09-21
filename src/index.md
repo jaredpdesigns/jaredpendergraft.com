@@ -1,3 +1,8 @@
+---
+layout: page
+class: home
+---
+
 ![My lovely face]({{ site.baseurl }}/assets/img/profile-small.jpg)
 
 # Hello.

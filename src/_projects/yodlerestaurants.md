@@ -40,7 +40,7 @@ The core focus of the application is to capture reviews with as few screens as p
 
 The secondary screens are focused on administrative interactions — specifically logging into the appropriate restaurant (many restaurants have multiple locations they can track using a single login). The other specific task the app does is allows staff to track promotions.
 
-Typically, customers receive promotional emails offering discounts. The app doesn’t tie into <abbr title="Point of Sales">POS</abbr> systems, so having a way to track which promotions have actually been activated and pushing those results to the dashboard was crucial.
+Typically, customers receive promotional emails offering discounts. The app doesn’t tie into POS systems, so having a way to track which promotions have actually been activated and pushing those results to the dashboard was crucial.
 
 > <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/yodlerestaurants/yodlerestaurants-ipad-settings-coupons.png" alt="Yodle Restaurants iPad app settings and coupon redemption screens">
 

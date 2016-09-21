@@ -1,14 +1,9 @@
 ---
 layout: default
-title: Résumé
-description: My trusty old résumé.
-class: resume
-social: assets/img/social/resume-social.jpg
 ---
-
 <article class="wrapper">
   <header class="resume__header">
-    <h1>Résumé</h1>
+    <h1>{{ page.title }}</h1>
     <nav>
       <a class="btn" href="{{ site.baseurl }}/projects">Portfolio</a>
       <a class="btn" href="https://dribbble.com/jaredpdesigns" target="_blank">Dribbble</a>
@@ -17,6 +12,6 @@ social: assets/img/social/resume-social.jpg
     </nav>
   </header>
   <section class="resume__text">
-    {% capture include %}{% include md/resume.md %}{% endcapture %}{{ include | markdownify }}
+    {{ content }}
   </section>
 </article>

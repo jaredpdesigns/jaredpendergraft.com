@@ -1,5 +1,5 @@
-.profile {
-  img {
+.home main > article {
+  p:first-child img {
     border-radius: 50%;
     height: $space-xl + $space-l;
     width: $space-xl + $space-l;
@@ -14,6 +14,15 @@
   header + * { @include oomph; }
   h1 { color: $color-highlight; }
   h2 { color: $color-base-ish; }
+}
+
+.project__front--holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__front {
+  padding: 0 $space-s;
 }
 
 .project {

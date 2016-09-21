@@ -1,3 +1,11 @@
+---
+layout: resume
+title: Résumé
+description: My trusty old résumé.
+class: resume
+social: assets/img/social/resume-social.jpg
+---
+
 I love developing identities, improving branding systems and creating fantastic web things. Whether starting from scratch or improving usability, I’m passionate about making projects clean and functional.
 
 ***
@@ -5,6 +13,7 @@ I love developing identities, improving branding systems and creating fantastic 
 ### Capabilities
 
 ***
+
 - I’m a thorough thinker who approaches design challenges holistically — I build solutions from beginning to end with extensibility and modularity in mind.
 - I care deeply about how something works as much as its outward appearance — I love to tinker and am always looking to improve, optimize and scale my ideas.
 - I’m a lifelong learner who’s always looking to reposition my opinions to reflect new information and become a well-informed, kinder human.
@@ -28,8 +37,8 @@ I love developing identities, improving branding systems and creating fantastic 
 ***
 
 - Content Management (Gulp/Grunt, Wordpress)
-- <abbr title="Cascading Style Sheets">CSS</abbr>/<abbr title="Hyper Text Markup Language">HTML</abbr>/<abbr title="JavaScript">JS</abbr> (<abbr title="Syntactically Awesome Style Sheets">SASS</abbr>, jQuery)
-- <abbr title="User Interface">UI</abbr>/<abbr title="User Experience">UX</abbr> (Adobe Suite, Prototyping, Sketch)
+- CSS/HTML/JS (SASS, jQuery)
+- UI/UX (Adobe Suite, Prototyping, Sketch)
 - Version Control (Git, Subversion)
 
 ***
@@ -40,7 +49,7 @@ I love developing identities, improving branding systems and creating fantastic 
 
 #### Pacific University
 *Bachelor of Arts in Graphic Design & Video Production*  
-2007 • Forest Grove, <abbr title="Oregon">OR</abbr>
+2007 • Forest Grove, OR
 
 ***
 
@@ -50,15 +59,15 @@ I love developing identities, improving branding systems and creating fantastic 
 
 #### Kontur Labs
 *Creative Director and Front-End Developer*  
-2013–Present • Maui, <abbr title="Hawaii">HI</abbr>
+2013–Present • Maui, HI
 
 - Management and oversight of all creative projects including websites and iOS/Android applications.
-- Collaborates on <abbr title="User Interface">UI</abbr>/<abbr title="User Experience">UX</abbr>, finalizes design and builds out production-level <abbr title="Cascading Style Sheets">CSS</abbr>/<abbr title="Hyper Text Markup Language">HTML</abbr>.
-- Consults on large-scale <abbr title="Software as a Service">SaaS</abbr> projects, offering semantic <abbr title="Cascading Style Sheets">CSS</abbr>/<abbr title="Hyper Text Markup Language">HTML</abbr> recommendations.
+- Collaborates on UI/UX, finalizes design and builds out production-level CSS/HTML.
+- Consults on large-scale SaaS projects, offering semantic CSS/HTML recommendations.
 
 #### Kaiser Permanente
 *Graphic Designer*  
-2009–2013 • Portland, <abbr title="Oregon">OR</abbr>
+2009–2013 • Portland, OR
 
 - Created and maintained collateral for Kaiser Permanente on a national level and while designing within Kaiser Permanente’s brand guidelines.
 - Artwork imposition for offset press, plate ordering and press-checks, as well as providing final approval before artwork was printed.
@@ -66,7 +75,7 @@ I love developing identities, improving branding systems and creating fantastic 
 
 #### Education Northwest
 *Graphic Designer*  
-2007–2009 • Portland, <abbr title="Oregon">OR</abbr>
+2007–2009 • Portland, OR
 
 - Designed and prepared educational materials for education coordinators who implemented government-sponsored education plans across the country.
 - Established a process for materials development and enforced brand and identity guidelines for all pieces.
@@ -79,6 +88,6 @@ I love developing identities, improving branding systems and creating fantastic 
 
 ***
 
-> I’m a designer and illustrator that has had the pleasure of working with Jared closely on digital web design and <abbr title="User Interface">UI</abbr>/<abbr title="User Experience">UX</abbr> projects for the last year. We have a running joke in the office that Jared is a unicorn. Its mildly true though. Jared is a quick thinker and thoughtful communicator that consistently presents clever solutions. His skill set is impressive and seemingly limitless as he is adept at the intuitive, aesthetic, and functional dimensions of what makes a great digital experience. It’s a delight working with someone that blends a love for technology and clean, effective design. I learn something new with every project we work together and I have fun along the way. Jared has a great sense of humor and is a respectable family man. I’ve considered myself very lucky to work with such a bright, professional individual and would highly recommend the opportunity to collaborate with him. **Bristol Dunlap**
+> I’m a designer and illustrator that has had the pleasure of working with Jared closely on digital web design and UI/UX projects for the last year. We have a running joke in the office that Jared is a unicorn. Its mildly true though. Jared is a quick thinker and thoughtful communicator that consistently presents clever solutions. His skill set is impressive and seemingly limitless as he is adept at the intuitive, aesthetic, and functional dimensions of what makes a great digital experience. It’s a delight working with someone that blends a love for technology and clean, effective design. I learn something new with every project we work together and I have fun along the way. Jared has a great sense of humor and is a respectable family man. I’ve considered myself very lucky to work with such a bright, professional individual and would highly recommend the opportunity to collaborate with him. **Bristol Dunlap**
 
 > Jared is one of the few rare individuals I’ve encountered who embodies the creative abilities of an artist and the solution-oriented capabilities of software programmer. This combination makes him uniquely suited to tasks that require both a design mindset as well as a developer one — something that usually requires two people. The fact that he enjoys both the art and the programming is an even bigger plus. Jared approaches his projects with an innate ability to apply design thinking while being mindful of usability concerns, which results in a very elegant product. He is very diligent and thorough in his work. The more time he is given, the better the results will be. In addition, Jared is a genuinely nice person and a great pleasure to work with. He would be a major asset in any organization. I recommend him highly in any position that can utilize his talents and abilities to their full potential. **Peter Liu**
