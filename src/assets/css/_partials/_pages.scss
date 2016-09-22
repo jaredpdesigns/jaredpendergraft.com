@@ -149,6 +149,7 @@
   }
   hr { border-color: rgba($color-luma,0.5); }
   h1, h5, p { @include type-legible; }
+  img { padding: 0 $space-m; }
 }
 
 .project__inner--content {

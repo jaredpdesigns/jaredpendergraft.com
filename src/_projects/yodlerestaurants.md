@@ -6,7 +6,7 @@ role:
 - Front-End Development
 img: yodlerestaurants/yodlerestaurants-feature.jpg
 img-inner: yodlerestaurants/yodlerestaurants-feature-inner.png
-color: '#1897D8' 
+color: '#005A8C' 
 layout: project
 class: projects
 social: assets/img/projects/yodlerestaurants/yodlerestaurants-social.jpg
