@@ -5,4 +5,10 @@
   <span class="kd">var</span> <span class="nx">Height</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">height</span><span class="p">();</span>  
   <span class="nx">$</span><span class="p">(</span><span class="s1">'.full-height'</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span><span class="s1">'min-height'</span><span class="p">:</span> <span class="nx">Height</span> <span class="p">});</span>
 <span class="p">});</span>
+</code></pre></div> <h4 id="update">Update</h4> <p>This can more easily be achieved using <code class="highlighter-rouge">vh</code> (viewport height) units in CSS for browsers that support it.</p> <div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.full-height</span> <span class="p">{</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div> <p>Another neat thing about this is you can totally adapt for fixed-position headers (providing you know that size).</p> <div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.full-height</span> <span class="p">{</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100vh</span> <span class="n">-</span> <span class="m">3.75rem</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div> <footer class="type__align--center"> <hr> <a class="btn" href="/snippets">See More Snippets</a> </footer> </article> </main> </body> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script type="text/javascript" src="/assets/js/site.js"></script> </html>

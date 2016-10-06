@@ -16,3 +16,21 @@ $(window).resize(function() {
   $('.full-height').css({'min-height': Height });
 });
 ```
+
+#### Update
+
+This can more easily be achieved using `vh` (viewport height) units in CSS for browsers that support it.
+
+```css
+.full-height {
+  min-height: 100vh;
+}
+```
+
+Another neat thing about this is you can totally adapt for fixed-position headers (providing you know that size).
+
+```css
+.full-height {
+  min-height: calc(100vh - 3.75rem);
+}
+```
