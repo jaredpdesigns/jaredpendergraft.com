@@ -1,168 +1,276 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="1312px" height="328px" viewBox="0 0 1312 328" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="316" height="328" rx="16"></rect>
-        <rect id="path-3" x="0" y="0" width="316" height="328" rx="16"></rect>
-        <rect id="path-5" x="0" y="0" width="316" height="328" rx="16"></rect>
-        <rect id="path-7" x="0" y="0" width="316" height="328" rx="16"></rect>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard">
-            <g id="Group-6">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
-                <rect id="path-3" fill="#331A10" mask="url(#mask-2)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-3" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-4" fill="#331A10" mask="url(#mask-2)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-4" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-5" fill="#331A10" mask="url(#mask-2)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-5" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-2)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-6" fill="#331A10" mask="url(#mask-2)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-6" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-2)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-7" fill="#331A10" mask="url(#mask-2)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-7" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-2)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-8" fill="#331A10" mask="url(#mask-2)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-8" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-2)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-9" fill="#331A10" mask="url(#mask-2)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-9" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-2)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-10" fill="#331A10" mask="url(#mask-2)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-10" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-2)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-35" fill="#D46A43" mask="url(#mask-2)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-35" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-36" fill="#D46A43" mask="url(#mask-2)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-36" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-37" fill="#D46A43" mask="url(#mask-2)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-37" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-2)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-38" fill="#D46A43" mask="url(#mask-2)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-38" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-2)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-39" fill="#D46A43" mask="url(#mask-2)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-39" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-2)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-40" fill="#D46A43" mask="url(#mask-2)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-40" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-2)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-41" fill="#D46A43" mask="url(#mask-2)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-41" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-2)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-42" fill="#D46A43" mask="url(#mask-2)" x="237" y="246" width="79" height="82"></rect>
-                <rect id="path-42" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-2)" x="237" y="246" width="79" height="82"></rect>
-            </g>
-            <g id="Group-2" transform="translate(332.000000, 0.000000)">
-                <mask id="mask-4" fill="white">
-                    <use xlink:href="#path-3"></use>
-                </mask>
-                <use id="Mask" fill="#FFFFFF" xlink:href="#path-3"></use>
-                <rect id="path-11" fill="#172617" mask="url(#mask-4)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-11" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-4)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-12" fill="#172617" mask="url(#mask-4)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-12" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-4)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-13" fill="#172617" mask="url(#mask-4)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-13" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-4)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-14" fill="#172617" mask="url(#mask-4)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-14" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-4)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-15" fill="#172617" mask="url(#mask-4)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-15" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-4)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-16" fill="#172617" mask="url(#mask-4)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-16" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-4)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-17" fill="#172617" mask="url(#mask-4)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-17" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-4)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-18" fill="#172617" mask="url(#mask-4)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-18" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-4)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-43" fill="#5D995D" mask="url(#mask-4)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-43" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-4)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-44" fill="#5D995D" mask="url(#mask-4)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-44" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-4)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-45" fill="#5D995D" mask="url(#mask-4)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-45" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-4)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-46" fill="#5D995D" mask="url(#mask-4)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-46" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-4)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-47" fill="#5D995D" mask="url(#mask-4)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-47" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-4)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-48" fill="#5D995D" mask="url(#mask-4)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-48" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-4)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-49" fill="#5D995D" mask="url(#mask-4)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-49" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-4)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-50" fill="#5D995D" mask="url(#mask-4)" x="237" y="246" width="79" height="82"></rect>
-                <rect id="path-50" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-4)" x="237" y="246" width="79" height="82"></rect>
-            </g>
-            <g id="Group-4" transform="translate(664.000000, 0.000000)">
-                <mask id="mask-6" fill="white">
-                    <use xlink:href="#path-5"></use>
-                </mask>
-                <use id="Mask" fill="#FFFFFF" xlink:href="#path-5"></use>
-                <rect id="path-19" fill="#331316" mask="url(#mask-6)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-19" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-6)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-20" fill="#331316" mask="url(#mask-6)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-20" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-6)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-21" fill="#331316" mask="url(#mask-6)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-21" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-6)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-22" fill="#331316" mask="url(#mask-6)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-22" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-6)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-23" fill="#331316" mask="url(#mask-6)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-23" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-6)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-24" fill="#331316" mask="url(#mask-6)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-24" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-6)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-25" fill="#331316" mask="url(#mask-6)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-25" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-6)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-26" fill="#331316" mask="url(#mask-6)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-26" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-6)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-51" fill="#D24D57" mask="url(#mask-6)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-51" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-6)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-52" fill="#D24D57" mask="url(#mask-6)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-52" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-6)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-53" fill="#D24D57" mask="url(#mask-6)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-53" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-6)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-54" fill="#D24D57" mask="url(#mask-6)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-54" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-6)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-55" fill="#D24D57" mask="url(#mask-6)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-55" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-6)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-56" fill="#D24D57" mask="url(#mask-6)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-56" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-6)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-57" fill="#D24D57" mask="url(#mask-6)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-57" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-6)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-58" fill="#D24D57" mask="url(#mask-6)" x="237" y="246" width="79" height="82"></rect>
-                <rect id="path-58" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-6)" x="237" y="246" width="79" height="82"></rect>
-            </g>
-            <g id="Group-5" transform="translate(996.000000, 0.000000)">
-                <mask id="mask-8" fill="white">
-                    <use xlink:href="#path-7"></use>
-                </mask>
-                <use id="Mask" fill="#FFFFFF" xlink:href="#path-7"></use>
-                <rect id="path-27" fill="#061D33" mask="url(#mask-8)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-27" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-8)" x="0" y="0" width="79" height="82"></rect>
-                <rect id="path-28" fill="#061D33" mask="url(#mask-8)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-28" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-8)" x="0" y="82" width="79" height="82"></rect>
-                <rect id="path-29" fill="#061D33" mask="url(#mask-8)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-29" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-8)" x="79" y="0" width="79" height="82"></rect>
-                <rect id="path-30" fill="#061D33" mask="url(#mask-8)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-30" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-8)" x="79" y="82" width="79" height="82"></rect>
-                <rect id="path-31" fill="#061D33" mask="url(#mask-8)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-31" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-8)" x="158" y="0" width="79" height="82"></rect>
-                <rect id="path-32" fill="#061D33" mask="url(#mask-8)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-32" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-8)" x="158" y="82" width="79" height="82"></rect>
-                <rect id="path-33" fill="#061D33" mask="url(#mask-8)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-33" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-8)" x="237" y="0" width="79" height="82"></rect>
-                <rect id="path-34" fill="#061D33" mask="url(#mask-8)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-34" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-8)" x="237" y="82" width="79" height="82"></rect>
-                <rect id="path-59" fill="#1E90FF" mask="url(#mask-8)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-59" fill-opacity="0" fill="#FFFFFF" mask="url(#mask-8)" x="0" y="164" width="79" height="82"></rect>
-                <rect id="path-60" fill="#1E90FF" mask="url(#mask-8)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-60" fill-opacity="0.62" fill="#FFFFFF" mask="url(#mask-8)" x="0" y="246" width="79" height="82"></rect>
-                <rect id="path-61" fill="#1E90FF" mask="url(#mask-8)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-61" fill-opacity="0.25" fill="#FFFFFF" mask="url(#mask-8)" x="79" y="164" width="79" height="82"></rect>
-                <rect id="path-62" fill="#1E90FF" mask="url(#mask-8)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-62" fill-opacity="0.75" fill="#FFFFFF" mask="url(#mask-8)" x="79" y="246" width="79" height="82"></rect>
-                <rect id="path-63" fill="#1E90FF" mask="url(#mask-8)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-63" fill-opacity="0.38" fill="#FFFFFF" mask="url(#mask-8)" x="158" y="164" width="79" height="82"></rect>
-                <rect id="path-64" fill="#1E90FF" mask="url(#mask-8)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-64" fill-opacity="0.88" fill="#FFFFFF" mask="url(#mask-8)" x="158" y="246" width="79" height="82"></rect>
-                <rect id="path-65" fill="#1E90FF" mask="url(#mask-8)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-65" fill-opacity="0.5" fill="#FFFFFF" mask="url(#mask-8)" x="237" y="164" width="79" height="82"></rect>
-                <rect id="path-66" fill="#1E90FF" mask="url(#mask-8)" x="237" y="246" width="79" height="82"></rect>
-                <rect id="path-66" fill-opacity="0.95" fill="#FFFFFF" mask="url(#mask-8)" x="237" y="246" width="79" height="82"></rect>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1312" height="256" viewBox="0 0 1312 256" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="a" width="76" height="64"/>
+    <rect id="b" width="76" height="64" x="76"/>
+    <rect id="c" width="76" height="64" x="152"/>
+    <rect id="d" width="76" height="64" x="228"/>
+    <rect id="e" width="76" height="64" y="64"/>
+    <rect id="f" width="76" height="64" x="76" y="64"/>
+    <rect id="g" width="76" height="64" x="152" y="64"/>
+    <rect id="h" width="76" height="64" x="228" y="64"/>
+    <rect id="i" width="76" height="64"/>
+    <rect id="j" width="76" height="64" x="76"/>
+    <rect id="k" width="76" height="64" x="152"/>
+    <rect id="l" width="76" height="64" x="228"/>
+    <rect id="m" width="76" height="64" y="64"/>
+    <rect id="n" width="76" height="64" x="76" y="64"/>
+    <rect id="o" width="76" height="64" x="152" y="64"/>
+    <rect id="p" width="76" height="64" x="228" y="64"/>
+    <rect id="q" width="76" height="64"/>
+    <rect id="r" width="76" height="64" x="76"/>
+    <rect id="s" width="76" height="64" x="152"/>
+    <rect id="t" width="76" height="64" x="228"/>
+    <rect id="u" width="76" height="64" y="64"/>
+    <rect id="v" width="76" height="64" x="76" y="64"/>
+    <rect id="w" width="76" height="64" x="152" y="64"/>
+    <rect id="x" width="76" height="64" x="228" y="64"/>
+    <rect id="y" width="76" height="64"/>
+    <rect id="z" width="76" height="64" x="76"/>
+    <rect id="A" width="76" height="64" x="152"/>
+    <rect id="B" width="76" height="64" x="228"/>
+    <rect id="C" width="76" height="64" y="64"/>
+    <rect id="D" width="76" height="64" x="76" y="64"/>
+    <rect id="E" width="76" height="64" x="152" y="64"/>
+    <rect id="F" width="76" height="64" x="228" y="64"/>
+    <rect id="G" width="76" height="64"/>
+    <rect id="H" width="76" height="64" x="76"/>
+    <rect id="I" width="76" height="64" x="152"/>
+    <rect id="J" width="76" height="64" x="228"/>
+    <rect id="K" width="76" height="64" y="64"/>
+    <rect id="L" width="76" height="64" x="76" y="64"/>
+    <rect id="M" width="76" height="64" x="152" y="64"/>
+    <rect id="N" width="76" height="64" x="228" y="64"/>
+    <rect id="O" width="76" height="64"/>
+    <rect id="P" width="76" height="64" x="76"/>
+    <rect id="Q" width="76" height="64" x="152"/>
+    <rect id="R" width="76" height="64" x="228"/>
+    <rect id="S" width="76" height="64" y="64"/>
+    <rect id="T" width="76" height="64" x="76" y="64"/>
+    <rect id="U" width="76" height="64" x="152" y="64"/>
+    <rect id="V" width="76" height="64" x="228" y="64"/>
+    <rect id="W" width="76" height="64"/>
+    <rect id="X" width="76" height="64" x="76"/>
+    <rect id="Y" width="76" height="64" x="152"/>
+    <rect id="Z" width="76" height="64" x="228"/>
+    <rect id="aa" width="76" height="64" y="64"/>
+    <rect id="ab" width="76" height="64" x="76" y="64"/>
+    <rect id="ac" width="76" height="64" x="152" y="64"/>
+    <rect id="ad" width="76" height="64" x="228" y="64"/>
+    <rect id="ae" width="76" height="64"/>
+    <rect id="af" width="76" height="64" x="76"/>
+    <rect id="ag" width="76" height="64" x="152"/>
+    <rect id="ah" width="76" height="64" x="228"/>
+    <rect id="ai" width="76" height="64" y="64"/>
+    <rect id="aj" width="76" height="64" x="76" y="64"/>
+    <rect id="ak" width="76" height="64" x="152" y="64"/>
+    <rect id="al" width="76" height="64" x="228" y="64"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <use fill="#331A10" xlink:href="#a"/>
+    <use fill="#FFFFFF" fill-opacity="0" xlink:href="#a"/>
+    <use fill="#331A10" xlink:href="#b"/>
+    <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#b"/>
+    <use fill="#331A10" xlink:href="#c"/>
+    <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#c"/>
+    <use fill="#331A10" xlink:href="#d"/>
+    <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#d"/>
+    <g>
+      <use fill="#331A10" xlink:href="#e"/>
+      <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#e"/>
     </g>
+    <g>
+      <use fill="#331A10" xlink:href="#f"/>
+      <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#f"/>
+    </g>
+    <g>
+      <use fill="#331A10" xlink:href="#g"/>
+      <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#g"/>
+    </g>
+    <g>
+      <use fill="#331A10" xlink:href="#h"/>
+      <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#h"/>
+    </g>
+    <g transform="translate(0 128)">
+      <use fill="#D46A43" xlink:href="#i"/>
+      <use fill="#FFFFFF" fill-opacity="0" xlink:href="#i"/>
+      <use fill="#D46A43" xlink:href="#j"/>
+      <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#j"/>
+      <use fill="#D46A43" xlink:href="#k"/>
+      <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#k"/>
+      <use fill="#D46A43" xlink:href="#l"/>
+      <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#l"/>
+      <g>
+        <use fill="#D46A43" xlink:href="#m"/>
+        <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#m"/>
+      </g>
+      <g>
+        <use fill="#D46A43" xlink:href="#n"/>
+        <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#n"/>
+      </g>
+      <g>
+        <use fill="#D46A43" xlink:href="#o"/>
+        <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#o"/>
+      </g>
+      <g>
+        <use fill="#D46A43" xlink:href="#p"/>
+        <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#p"/>
+      </g>
+    </g>
+    <g transform="translate(336)">
+      <use fill="#172618" xlink:href="#q"/>
+      <use fill="#FFFFFF" fill-opacity="0" xlink:href="#q"/>
+      <use fill="#172618" xlink:href="#r"/>
+      <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#r"/>
+      <use fill="#172618" xlink:href="#s"/>
+      <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#s"/>
+      <use fill="#172618" xlink:href="#t"/>
+      <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#t"/>
+      <g>
+        <use fill="#172618" xlink:href="#u"/>
+        <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#u"/>
+      </g>
+      <g>
+        <use fill="#172618" xlink:href="#v"/>
+        <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#v"/>
+      </g>
+      <g>
+        <use fill="#172618" xlink:href="#w"/>
+        <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#w"/>
+      </g>
+      <g>
+        <use fill="#172618" xlink:href="#x"/>
+        <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#x"/>
+      </g>
+      <g transform="translate(0 128)">
+        <use fill="#5F985F" xlink:href="#y"/>
+        <use fill="#FFFFFF" fill-opacity="0" xlink:href="#y"/>
+        <use fill="#5F985F" xlink:href="#z"/>
+        <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#z"/>
+        <use fill="#5F985F" xlink:href="#A"/>
+        <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#A"/>
+        <use fill="#5F985F" xlink:href="#B"/>
+        <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#B"/>
+        <g>
+          <use fill="#5F985F" xlink:href="#C"/>
+          <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#C"/>
+        </g>
+        <g>
+          <use fill="#5F985F" xlink:href="#D"/>
+          <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#D"/>
+        </g>
+        <g>
+          <use fill="#5F985F" xlink:href="#E"/>
+          <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#E"/>
+        </g>
+        <g>
+          <use fill="#5F985F" xlink:href="#F"/>
+          <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#F"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(672)">
+      <use fill="#321316" xlink:href="#G"/>
+      <use fill="#FFFFFF" fill-opacity="0" xlink:href="#G"/>
+      <use fill="#321316" xlink:href="#H"/>
+      <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#H"/>
+      <use fill="#321316" xlink:href="#I"/>
+      <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#I"/>
+      <use fill="#321316" xlink:href="#J"/>
+      <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#J"/>
+      <g>
+        <use fill="#321316" xlink:href="#K"/>
+        <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#K"/>
+      </g>
+      <g>
+        <use fill="#321316" xlink:href="#L"/>
+        <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#L"/>
+      </g>
+      <g>
+        <use fill="#321316" xlink:href="#M"/>
+        <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#M"/>
+      </g>
+      <g>
+        <use fill="#321316" xlink:href="#N"/>
+        <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#N"/>
+      </g>
+      <g transform="translate(0 128)">
+        <use fill="#D04E59" xlink:href="#O"/>
+        <use fill="#FFFFFF" fill-opacity="0" xlink:href="#O"/>
+        <use fill="#D04E59" xlink:href="#P"/>
+        <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#P"/>
+        <use fill="#D04E59" xlink:href="#Q"/>
+        <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#Q"/>
+        <use fill="#D04E59" xlink:href="#R"/>
+        <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#R"/>
+        <g>
+          <use fill="#D04E59" xlink:href="#S"/>
+          <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#S"/>
+        </g>
+        <g>
+          <use fill="#D04E59" xlink:href="#T"/>
+          <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#T"/>
+        </g>
+        <g>
+          <use fill="#D04E59" xlink:href="#U"/>
+          <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#U"/>
+        </g>
+        <g>
+          <use fill="#D04E59" xlink:href="#V"/>
+          <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#V"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(1008)">
+      <use fill="#071D32" xlink:href="#W"/>
+      <use fill="#FFFFFF" fill-opacity="0" xlink:href="#W"/>
+      <use fill="#071D32" xlink:href="#X"/>
+      <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#X"/>
+      <use fill="#071D32" xlink:href="#Y"/>
+      <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#Y"/>
+      <use fill="#071D32" xlink:href="#Z"/>
+      <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#Z"/>
+      <g>
+        <use fill="#071D32" xlink:href="#aa"/>
+        <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#aa"/>
+      </g>
+      <g>
+        <use fill="#071D32" xlink:href="#ab"/>
+        <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#ab"/>
+      </g>
+      <g>
+        <use fill="#071D32" xlink:href="#ac"/>
+        <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#ac"/>
+      </g>
+      <g>
+        <use fill="#071D32" xlink:href="#ad"/>
+        <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#ad"/>
+      </g>
+      <g transform="translate(0 128)">
+        <use fill="#2993FC" xlink:href="#ae"/>
+        <use fill="#FFFFFF" fill-opacity="0" xlink:href="#ae"/>
+        <use fill="#2993FC" xlink:href="#af"/>
+        <use fill="#FFFFFF" fill-opacity=".25" xlink:href="#af"/>
+        <use fill="#2993FC" xlink:href="#ag"/>
+        <use fill="#FFFFFF" fill-opacity=".38" xlink:href="#ag"/>
+        <use fill="#2993FC" xlink:href="#ah"/>
+        <use fill="#FFFFFF" fill-opacity=".5" xlink:href="#ah"/>
+        <g>
+          <use fill="#2993FC" xlink:href="#ai"/>
+          <use fill="#FFFFFF" fill-opacity=".62" xlink:href="#ai"/>
+        </g>
+        <g>
+          <use fill="#2993FC" xlink:href="#aj"/>
+          <use fill="#FFFFFF" fill-opacity=".75" xlink:href="#aj"/>
+        </g>
+        <g>
+          <use fill="#2993FC" xlink:href="#ak"/>
+          <use fill="#FFFFFF" fill-opacity=".88" xlink:href="#ak"/>
+        </g>
+        <g>
+          <use fill="#2993FC" xlink:href="#al"/>
+          <use fill="#FFFFFF" fill-opacity=".95" xlink:href="#al"/>
+        </g>
+      </g>
+    </g>
+  </g>
 </svg>

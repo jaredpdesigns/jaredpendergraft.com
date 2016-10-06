@@ -17,13 +17,3 @@
   description: A mini-site for my son to help document his life, “Look Daddy, I Big Boy”.
   img: ezra.svg
   link: http://ezrapendergraft.com
-
-- name: Links
-  description: An of interesting articles and helpful tools I’ve found around the internet.
-  img: links.svg
-  link: http://links.jaredpendergraft.com
-  
-- name: Internets
-  description: A lovely collection of videos I’ve found on the internet and enjoyed.
-  img: internets.svg
-  link: http://internets.jaredpendergraft.com
