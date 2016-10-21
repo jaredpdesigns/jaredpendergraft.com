@@ -36,9 +36,9 @@ I love developing identities, improving branding systems and creating fantastic 
 
 ***
 
-- Content Management (Gulp/Grunt, Wordpress)
-- CSS/HTML/JS (SASS, jQuery)
-- UI/UX (Adobe Suite, Prototyping, Sketch)
+- Content Management (Grunt, Gulp, Jekyll, Shopify, Wordpress)
+- CSS/HTML/JS (LESS, SASS, jQuery)
+- UI/UX (Adobe Suite, Prototyping, Sketch, User Research)
 - Version Control (Git, Subversion)
 
 ***
