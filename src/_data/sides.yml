@@ -4,7 +4,7 @@
   link: http://thesekidsread.com
   
 - name: Pasta
-  description: Pasta is a tiny <abbr title="Syntactically Awesome Style Sheets">SASS</abbr> file that provides a great starting place for web projects.
+  description: Pasta is a tiny SASS file that provides a great starting place for web projects. It combines a handy reset and light styling for common web elements, yummy.
   img: pasta.svg
   link: http://jaredpdesigns.github.io/pasta/
   
