@@ -5,6 +5,16 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-5081288-1', 'auto');
 ga('send', 'pageview');
 
+/**
+ * jQuery Unveil
+ * A very lightweight jQuery plugin to lazy load images
+ * http://luis-almeida.github.com/unveil
+ *
+ * Licensed under the MIT license.
+ * Copyright 2013 Luís Almeida
+ * https://github.com/luis-almeida
+ */
+
 ;(function($) {
 
   $.fn.unveil = function(threshold, callback) {
@@ -52,10 +62,21 @@ ga('send', 'pageview');
 
 })(window.jQuery || window.Zepto);
 
+
 $(document).ready(function() {
   $('.lazy').unveil(240,function() {
     $(this).load(function() {
       $(this).parent().addClass('loaded');
     } );
   });
+});
+
+/*!
+ * jQuery stayInWebApp Plugin
+ * version: 0.4 (2012-06-19)
+ */
+(function($){$.extend({stayInWebApp:function(b){"standalone"in window.navigator&&window.navigator.standalone&&(b||(b="a"),$("body").delegate(b,"click",function(b){if($(this).attr("target")==void 0||$(this).attr("target")==""||$(this).attr("target")=="_self"){var c=$(this).attr("href");if(!c.match(/^http(s?)/g))b.preventDefault(),self.location=c}}))}})})(jQuery);
+
+$(function() {
+  $.stayInWebApp();
 });
