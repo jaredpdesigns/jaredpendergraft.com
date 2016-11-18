@@ -1,9 +1,547 @@
 ---
 ---
 
-@import "reset";
-@import "variables";
-@import "base";
-@import "pages";
-@import "print";
-@import "bugs";
+$color-highlight: #66bb90;
+$type-sans: 'GT Pressura', sans-serif;
+$type-serif: 'GT Sectra', sans-serif;
+$type-mono: 'GT Cinetype Mono', sans-serif;
+
+@import "start";
+
+
+// Typography
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('../fonts/gt-sectra/GT-Sectra-Book.eot');
+  src: url('../fonts/gt-sectra/GT-Sectra-Book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-sectra/GT-Sectra-Book.woff') format('woff'),
+       url('../fonts/gt-sectra/GT-Sectra-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('../fonts/gt-sectra/GT-Sectra-Book-Italic.eot');
+  src: url('../fonts/gt-sectra/GT-Sectra-Book-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-sectra/GT-Sectra-Book-Italic.woff') format('woff'),
+       url('../fonts/gt-sectra/GT-Sectra-Book-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('../fonts/gt-sectra/GT-Sectra-Bold.eot');
+  src: url('../fonts/gt-sectra/GT-Sectra-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-sectra/GT-Sectra-Bold.woff') format('woff'),
+       url('../fonts/gt-sectra/GT-Sectra-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.eot');
+  src: url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.woff') format('woff'),
+       url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url('../fonts/gt-pressura/GT-Pressura-Light.eot');
+  src: url('../fonts/gt-pressura/GT-Pressura-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-pressura/GT-Pressura-Light.woff') format('woff'),
+       url('../fonts/gt-pressura/GT-Pressura-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url('../fonts/gt-pressura/GT-Pressura-Bold.eot');
+  src: url('../fonts/gt-pressura/GT-Pressura-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-pressura/GT-Pressura-Bold.woff') format('woff'),
+       url('../fonts/gt-pressura/GT-Pressura-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Cinetype Mono';
+  src: url('../fonts/gt-cinetype/GT-Cinetype-Mono.eot');
+  src: url('../fonts/gt-cinetype/GT-Cinetype-Mono.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gt-cinetype/GT-Cinetype-Mono.woff') format('woff'),
+       url('../fonts/gt-cinetype/GT-Cinetype-Mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 { font-weight: 300; }
+
+h2, h5 { font-weight: normal; }
+
+h4, h5 { @include type-caps; }
+
+hr {
+  max-width: $space-xl;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: $color-highlight-38;
+  + h3 {
+    @include type-center;
+    @include margin(xs);
+    + hr, + * + hr { @include margin(xs); }
+    + h5 { margin-top: 0; }
+  }
+  + h1 {
+    @include margin(xs);
+    @include type-center;
+    + h5, + hr, + * + hr { @include margin(xs); }
+  }
+}
+
+// Text colors
+
+a:not(.btn):hover, h1, .process h4, .resume__text h4, .resume__text blockquote strong, .invoice .total { color: $color-highlight; }
+
+li { color: $color-base-75; }
+
+header[role="main"], h2, .project__text p, .resume__text h4 + p, .resume__text blockquote, .invoice p strong { color: $color-base-62; }
+
+h3, h4, .client h5 { color: $color-base-50; }
+
+nav[role="main"] a, h5, .project__inner--img p { color: $color-base-38; }
+
+// Global stuff
+
+* + {
+  h2, figure { @include margin(xl); }
+  p, ul, ol, h1, hr, h4, h5, pre, .highlighter-rouge, blockquote { @include margin(m); }
+  li { @include margin(s); }
+  li ol { margin-top: 0; }
+}
+
+html {
+  background-color: $color-base-2;
+}
+
+header[role="main"] {
+  background-color: $color-tint;
+  border-bottom: $border-s $color-base-12;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include bp(xsl) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .name {
+    @include type-serif;
+    @include type-m;
+  }
+}
+
+nav[role="main"] {
+  @include inline;
+  @include bp(xs) { @include margin(xs); }
+  a {
+    @include type-caps;
+    @include type-xs;
+    + * { @include margin(s,l); }
+  }
+  svg {
+    height: $space-m;
+    width: $space-m;
+  }
+}
+
+.wrapper {
+  @include padding(m);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(640);
+  @include bp(s) { max-width: rem(960); }
+  @include bp(ml) {
+    @include padding(l);
+    @include padding(xl,t);
+    @include padding(xl,b);
+  }
+  @include bp(xl) { max-width: rem(1280); }
+  &--short {
+    @include padding(xs,t);
+    @include padding(xs,b);
+  }
+  &--bleed {
+    max-width: 100%;
+    @include bp(ml) { max-width: 87.5%; }
+    @include bp(xl) { max-width: 75%; }
+    @include bp(xxl) { max-width: 62.5%; }
+  }
+}
+
+.lazy {
+  @include smooth;
+  opacity: 0;
+  transform: translateY($space-s);
+  .loaded & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Page specific
+
+
+.home main article {
+  * { @include type-legible; }
+  h1, h2, p:first-child { @include type-center; }
+  p:first-child img {
+    border-radius: 50%;
+    height: rem(96);
+    width: rem(96);
+    border: $border-s $color-tint;
+    @include bp(ml) {
+      height: rem(128);
+      width: rem(128);
+    }
+  }
+}
+
+.project {
+  @include margin(m);
+  @include bp(s) {
+    @include margin(l);
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    a {
+      @include smooth-pop;
+      display: block;
+      overflow: hidden;
+      border-radius: $space-xs;
+      box-shadow: 0 rem(16) rem(32) rem(-16) rgba($color-shade,0.5);
+      &:hover {
+        transform: translateY(-$space-xxs);
+        box-shadow: 0 rem(32) rem(64) rem(-32) rgba($color-shade,0.25);
+      }
+    }
+    @include bp(s) {
+      width: $grid-1-2;
+    }
+  }
+  &__text {
+    @include bp(s) {
+      @include padding(m);
+      width: $grid-1-2;
+    }
+    h1, p { @include type-legible; }
+  }
+}
+
+.project:nth-of-type(odd) .project__img {
+  @include bp(s) { order: 2; }
+}
+
+.process, .side {
+  @include margin(m);
+  @include type-legible;
+  @include bp(s) {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    @include type-center;
+    @include bp(s) { width: $grid-1-3; }
+    svg, img {
+      height: rem(64);
+      width: rem(64);
+      @include bp(ml) {
+        height: rem(96);
+        width: rem(96);
+      }
+    }
+    svg {
+      color: $color-base-50;
+      .highlight { fill: $color-highlight-25; }
+    }
+  }
+  &__text {
+    @include bp(s) {
+      @include padding(m);
+      width: $grid-2-3;
+    }
+    h4 + p { @include margin(s); }
+  }
+}
+
+.side {
+  img {
+    @include smooth-pop;
+    border-radius: $space-xs;
+    &:hover { transform: scale(1.0625); }
+  }
+}
+
+.project__inner {
+  &--header {
+    @include padding(m,l);
+    @include padding(m,r);
+    @include type-center;
+    position: relative;
+    &:before {
+      @include fill;
+      content: '';
+      background-image: linear-gradient(to bottom, rgba($color-tint,0), rgba($color-tint,0.375));
+    }
+    .wrapper, img { position: relative; }
+    h1, p, h5 { color: $color-tint; }
+    hr {
+      border-color: rgba($color-tint,0.25);
+    }
+  }
+  &--content {
+    > p, pre, figure, h2 { @include type-legible; }
+    padding-bottom: $space-xl;
+    @include bp(m) { padding-bottom: $space-xxl; }
+  }
+  &--img {
+    @include type-center;
+    figcaption { @include margin(l); }
+    p {
+      @include type-center;
+      @include type-sans;
+    }
+    img {
+      @include bp(l) {
+        max-width: 125%;
+        margin-left: -12.5%;
+        margin-right: -12.5%;
+      }
+      @include bp(xl) { max-width: 100%; }
+    }
+    &.oversized {
+      max-width: 100%;
+      img {
+        @include bp(l) {
+          max-width: 150%;
+          margin-left: -25%;
+          margin-right: -25%;
+        }
+      }
+    }
+  }
+  &--footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-tint;
+    border-top: $border-s $color-base-12;
+  }
+}
+
+nav[role="projects"] {
+  @include bp(s) {
+    display: flex;
+    justify-content: space-around;
+  }
+  a { margin: 0; }
+}
+
+.snippet {
+  > * { @include type-legible; }
+  + * { @include margin(l); }
+  header[role="break"] h3 { margin-bottom: 0; }
+  > footer { @include margin(l); }
+}
+
+.resume__header nav {
+  @include margin(m);
+  a {
+    + * { @include margin(xs); }
+    @include bp(s) { margin-top: 0; }
+  }
+}
+
+.resume__text {
+  @include margin(m);
+  > p, ul, blockquote, h4 { @include type-legible; }
+  h4 + p { @include margin(s); }
+  blockquote {
+    @include padding(m);
+    background-color: $color-tint;
+    border: $border-s $color-base-12;
+    position: relative;
+    border-radius: $space-xs;
+    @include bp(m) {
+      @include padding(l,l);
+    }
+    &:before {
+      @include type(48);
+      @include margin(s,b);
+      content: '“';
+      background-color: $color-highlight;
+      color: $color-tint;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: $space-l;
+      height: $space-l;
+      border-radius: 50%;
+      padding-top: $space-s;
+      @include bp(m) {
+        position: absolute;
+        top: $space-m;
+        left: 0;
+        transform: translateX(-50%);
+      }
+    }
+    strong {
+      @include type-bold;
+      @include type-caps;
+      @include margin(s);
+      @include type-sans;
+      display: block;
+    }
+  }
+}
+
+.client {
+  @include margin(l);
+  @include padding(m,t);
+  border-top: $border-s $color-base-12;
+  p + h5 { @include margin(xs); }
+}
+
+.invoice article, .consulting article {
+  > *:not(hr) { @include type-legible; }
+  > h1, > h5 { @include type-center; }
+  .total {
+    @include type-l;
+    @include type-bold;
+  }
+  #consultants-signature, #clients-signature {
+    + p {
+      @include margin(xl);
+      border-top: $border-s $color-base-50;
+      color: $color-base-50;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0;
+        top: rem(-48);
+        height: rem(60);
+      }
+    }
+  }
+}
+
+.styleguide {
+  h1, h2, h3:not(hr + h3), h4, h5 {
+    @include margin(s);
+    @include type-left;
+    color: $color-base;
+  }
+  blockquote p {
+    display: flex;
+    flex-wrap: wrap;
+    .color {
+      @include margin(m);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-basis: $grid-1-2;
+      flex-grow: 1;
+      @include bp(s) { flex-basis: $grid-1-3; }
+      @include bp(xl) { flex-basis: $grid-1-4; }
+      span {
+        display: block;
+        width: $space-xl;
+        height: $space-xl;
+        border: $border-s $color-base-12;
+        border-radius: $space-xs;
+      }
+    }
+  }
+}
+
+.error main {
+  @include type-center;
+  background-size: cover;
+  background-position: center center;
+  @include bp(s) {
+    height: calc(100vh - 53px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1, p {
+    color: $color-tint;
+    text-shadow: 0 0.0625rem 0.125rem rgba(#000,0.25);
+  }
+  hr { border-color: rgba($color-tint,0.25); }
+}
+
+.missing main { background-image: url('http://i.giphy.com/P7PmvHY6kzAqY.gif'); }
+.forbidden main { background-image: url('http://i.giphy.com/3o85xyklT2t8VVjxxC.gif'); }
+
+
+@media print {
+  html {
+    font-size: 62.5%;
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    margin: 0 auto;
+    background: none !important;
+  }
+  .wrapper {
+    max-width: 100% !important;
+  }
+  * { color: black !important; }
+  header[role="main"]{
+    border-bottom: 1px solid #CCC;
+    .wrapper {
+      display: block;
+      text-align: center;
+      padding-top: 0;
+    }
+    .name:after {
+      @include type-sans;
+      @include margin(xl,l);
+      content: 'jaredpendergraft.com • jaredpdesigns@gmail.com • 503-474-7437';
+    }
+    nav[role="main"] { display: none; }
+  }
+  hr {
+    border-width: 1px;
+    border-color: #CCC;
+  }
+  p a { color: black; border-bottom: 1px solid #666; }
+  h3, ol li:before, .price { color: #666 !important; }
+  ul li:before, .resume__text blockquote:before { color: #CCC; }
+  hr + h3, hr + h3 + hr { margin-top: $space-xs !important; }
+  .consulting article h4 + p { margin-top: $space-xl !important; }
+  h2 { margin-top: $space-m !important; }
+  li { margin-top: $space-s !important; }
+  .resume__text h4 + p { margin-top: 0 !important; }
+  .resume main > article { padding-top: $space-m; }
+  .resume__header { display: none; }
+  .resume__text, .invoice article, .consulting article {
+    > *:not(hr):not(h3) {
+      max-width: 87.5% !important;
+    }
+    blockquote { border: 1px solid #CCC; }
+  }
+  #resume__text hr:nth-of-type(7), #consultants-signature { page-break-before: always !important; }
+}

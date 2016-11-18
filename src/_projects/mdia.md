@@ -17,6 +17,14 @@ The core feature of mdia would be an integration with <abbr title="Application P
 
 Because our data is important to us, another core feature of the app is a monthly overview and breakdown of content you consumed — imagine a “Year In Review” of all the films, music and books you’ve read — I’d love to see this data!
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mdia/mdia-1.png" alt="mdia app activity feed and item detail screens"> *The core value of the home feed is the ability to easily link to something you’ve consumed recently without going through a secondary site. Most users are familiar with an album or film they’d recently seen but easily sharing it can be an arduous task.*
+{% include project__img.html
+img__path = "mdia/mdia-1.png"
+img__alt = "mdia app activity feed and item detail screens"
+img__description = "The core value of the home feed is the ability to easily link to something you’ve consumed recently without going through a secondary site. Most users are familiar with an album or film they’d recently seen but easily sharing it can be an arduous task."
+%}
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mdia/mdia-2.png" alt="mdia app stats overview and detail screens"> *Data is great, especially when it automatically aggregates for you! Over time mdia would make it is for users to share stats of how many albums they listened to in a month or a year or which application they use the most  for consumption.*
+{% include project__img.html
+img__path = "mdia/mdia-2.png"
+img__alt = "mdia app stats overview and detail screens"
+img__description = "Data is great, especially when it automatically aggregates for you! Over time mdia would make it is for users to share stats of how many albums they listened to in a month or a year or which application they use the most  for consumption."
+%}

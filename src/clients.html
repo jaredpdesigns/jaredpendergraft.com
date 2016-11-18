@@ -5,16 +5,14 @@ permalink: clients/
 class: clients
 ---
 
-<section class="wrapper">
-  <header role="break">
-    <hr>
-    <h3>Clients</h3>
-    <hr>
-  </header>
-  {% for client in site.clients %}
-    <article class="client">
-      <p><a href="{{ client.url | prepend: site.baseurl }}">{{ client.title }} - {{ client.categories }}</a></p>
-      <h5>{{ client.client-name }}</h5>
-    </article>
-  {% endfor %}
-</section>
+<header role="break">
+  <hr>
+  <h3>Clients</h3>
+  <hr>
+</header>
+{% for client in site.clients %}
+  <article class="client">
+    <p><a href="{{ client.url | prepend: site.baseurl }}">{{ client.title }} - {{ client.categories }}</a></p>
+    <h5>{{ client.client-name }}</h5>
+  </article>
+{% endfor %}

@@ -16,7 +16,11 @@ consultant: Jared Pendergraft
 hourly: 150
 ---
 
+***
+
 # Consulting Agreement
+
+***
 
 This consulting agreement is effective as of {{ page.start-month }} {{ page.start-day }}, {{ page.start-year }} between the following parties:
 
@@ -30,7 +34,7 @@ This consulting agreement is effective as of {{ page.start-month }} {{ page.star
 127 Ho’owaiwai Loop #2006  
 Wailuku, HI 96793
 
-### The parties agree as follows
+## The parties agree as follows
 
 1. **Services.** {{ page.consultant }} will provide services (the “Services”) to {{ page.client-name }} as specified in *Schedule A.* All design and development efforts will be done remotely unless otherwise stated.
 2. **Expenses.** {{ page.client-name }} will reimburse {{ page.consultant }} for expenses incurred in providing the Services, but only if those expenses have been approved in advance and in writing.
@@ -74,19 +78,19 @@ In witness whereof, the Parties hereto have executed this Consulting Agreement a
 
 ***
 
-## Schedule A
+### Schedule A
 
 ***
 
-### Description of Services  
+## Description of Services  
 
 - Visual mock-up describing a flow correction for “choosing a theme”.
 
-### Fees
+## Fees
 
 - A deposit of $100 will be made to {{ page.consultant }} before work begins.
 
-### Timeline
+## Timeline
 
 - **Project Start Date:** {{ page.start-month }} {{ page.start-day }}, {{ page.start-year }}
 - **Project Deliverable Date:** {{ page.end-month }} {{ page.end-day }}, {{ page.end-year }}

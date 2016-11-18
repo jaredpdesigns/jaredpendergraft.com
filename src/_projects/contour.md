@@ -22,11 +22,7 @@ My contributions to the project included UI/UX design, front-end optimizations f
 
 As a UX designer, the best part about the application was the quantity of active users we could easily tap into for feedback about features. With regular builds, we knew when things weren’t working and needed refinement.
 
-***
-
-### Icon System
-
-***
+## Icon System
 
 In the beginning of the project we had a large quantity of icons used throughout the application that were pulled together via multiple icon sets and suffered from several inconsistencies. In mid-2016 I was put in charge of unifying our icon system, which was a lot of fun, I’d created small icon sets before for various projects, but with 150+ icons it was a completely different experience.
 
@@ -34,15 +30,19 @@ Around the same time based on performance requests we converted our icon system 
 
 From a design perspective, when I reviewed the system, one thing I cared a lot about was making the icons feel warm and human. We opted for the iOS outlined variation of most forms. When I re-drew all the icons I added a lot of roundness and made the edges as soft as possible. I also increased the stroke-width and reduced as many complicated forms as possible to instill clarity  of purpose for each icon.
 
-> <img class="lazy" alt="Contour app icon system, default set" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-icons-default.svg"> *The default icon set is used throughout the application at multiple sizes including sizes as small as 10px — clarity of form was key.*
+{% include project__img.html
+img__path = "contour/contour-icons-default.svg"
+img__alt = "Contour app icon system, default set"
+img__description = "The default icon set is used throughout the application at multiple sizes including sizes as small as 10px—clarity of form was key."
+%}
 
-> <img class="lazy" alt="Contour app icon system, multi-colored set" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-icons-multi.svg"> *In addition to the default set, we also use a ‘multi-colored’ variation which includes two paths overlaid on top of each other with the bottom-most path having opacity applied to it, creating a nice tonal variation.*
+{% include project__img.html
+img__path = "contour/contour-icons-multi.svg"
+img__alt = "Contour app icon system, multi-colored set"
+img__description = "In addition to the default set, we also use a ‘multi-colored’ variation which includes two paths overlaid on top of each other with the bottom-most path having opacity applied to it, creating a nice tonal variation."
+%}
 
-***
-
-### Themes
-
-***
+## Themes
 
 Around the same time the icon system was refined, I was also tasked with creating multiple themes for the application. This entailed doing an extensive audit of our CSS to find 30+(!) variations of gray used plus multiple blues uninformed by any standard logic.
 
@@ -71,34 +71,62 @@ $color-highlight-12: tint($color-highlight,88%);
 $color-highlight-5:  tint($color-highlight,95%);
 ```
 
-> <img class="lazy" alt="Contour app color palette, Night theme" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-palette-night.svg"> *Our default theme called ‘Night’.*
+{% include project__img.html
+img__path = "contour/contour-palette-night.svg"
+img__alt = "Contour app color palette, Night theme"
+img__description = "Our default theme called ‘Night’."
+%}
 
 Creating additional themes was easy. I used a tool called [Color Safe](http://colorsafe.co/), which allows you to find complimentary colors based on WCAG Standards for contrast. Using `#222222` as a starting point I’d choose a lovely highlight color as my `$color-highlight`, use HSL blending to find a dark variation of this color for `$color-base` and rock-n-roll we’d have a new palette.
 
-> <img class="lazy" alt="Contour app color palettes" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-palette-others.svg"> *Other theme palettes used throughout the application.*
+{% include project__img.html
+img__path = "contour/contour-palette-others.svg"
+img__alt = "Contour app color palettes"
+img__description = "Other theme palettes used throughout the application."
+%}
 
-> <img class="lazy" alt="Contour app color palette comparison" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-palettes-overview.png"> *Comparison of how themes work throughout the application.*
+{% include project__img.html
+img__path = "contour/contour-palettes-overview.png"
+img__alt = "Contour app color palette comparison"
+img__description = "Comparison of how themes work throughout the application."
+img__oversized = true
+%}
 
-***
-
-### Application
-
-***
+## Application
 
 The application is structured in sets of ‘panels’, each panel includes multiple views and depths — users drill into different depths to view specific details about an item. Each panel is essentially a mini-application into itself — which makes it really easy to restructure the experience of the application by including or removing certain panels.
 
 Once we began creating components used throughout the app, designing different views became a lot easier. We knew what list-views, detail-views and expandable-tree-views looked liked, so adjusting the data sources to fit the overall UI felt a lot less complicated — restrictions were good.
 
-> <img class="lazy" alt="Contour app panel overview" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-panel-overview.png"> *It was important to have access to as much of the panel and map at the same time as possible — the panels split vertically on smaller screens to allow users to interact with the underlying map.*
+{% include project__img.html
+img__path = "contour/contour-panel-overview.png"
+img__alt = "Contour app panel overview"
+img__description = "It was important to have access to as much of the panel and map at the same time as possible—the panels split vertically on smaller screens to allow users to interact with the underlying map."
+img__oversized = true
+%}
 
 The coolest part of the application is the complexity of layer-types offered by our service. You can render a visualization of all historic earthquakes on top of information about population density and tide conditions with a few checkboxes.
 
-> <img class="lazy" alt="Contour app stylized layers" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-layers.png"> *Layers can easily be toggled on or off creating complex layers of data visualization.*
+{% include project__img.html
+img__path = "contour/contour-layers.png"
+img__alt = "Contour app stylized layers"
+img__description = "Layers can easily be toggled on or off creating complex layers of data visualization."
+img__oversized = true
+%}
 
 Additional services the application offers is the ability to see all tweets within a specific geographic area with additional filters for specific keywords. When users of the app are trying to monitor events as they are happening Twitter can provide invaluable insight.
 
-> <img class="lazy" alt="Contour app twitter feed" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-twitter.png"> *With a built-in filterable Twitter feed, it’s easy to see reports from the ground as events happen. You can even filter by post type.*
+{% include project__img.html
+img__path = "contour/contour-twitter.png"
+img__alt = "Contour app twitter feed"
+img__description = "With a built-in filterable Twitter feed, it’s easy to see reports from the ground as events happen. You can even filter by post type."
+%}
 
 Using a secondary proprietary service our company has engineered, the application can tap into live-feeds of thousands of traffic cameras throughout the world. The biggest plus of this feature is being able to see live examples of storms or other natural disasters happening, allowing service members to reroute traffic or provide updates on hazardous road conditions.
 
-> <img class="lazy" alt="Contour app traffic cameras" data-src="{{ site.baseurl }}/assets/img/projects/contour/contour-cams.png"> *Need eyes on the ground? Tap into thousands of traffic cameras around the world, providing real-time insight into road conditions and more.*
+{% include project__img.html
+img__path = "contour/contour-cams.png"
+img__alt = "Contour app traffic cameras"
+img__description = "Need eyes on the ground? Tap into thousands of traffic cameras around the world, providing real-time insight into road conditions and more."
+img__oversized = true
+%}

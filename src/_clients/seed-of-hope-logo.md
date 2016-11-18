@@ -30,11 +30,11 @@ hourly: 75
 
 {{ page.consultant }} was hired to design a logo for Seeds of Hope.
 
-### Payment History
+## Payment History
 - On {{ page.start-month }} {{ page.start-day }}, {{ page.start-year }}, {{ page.consultant }} and {{ page.client-name }} agreed on a total of $500 for the project.
 - On {{ page.end-month }} {{ page.end-day }}, {{ page.end-year }}, {{ page.consultant }} invoiced {{ page.client-name }} for the project and delivered logo assets.
 
-### Final Invoice Amount
+## Final Invoice Amount
 
 <span class="total">$500.00</span>
 

@@ -5,9 +5,7 @@ class: home
 
 ![My lovely face]({{ site.baseurl }}/assets/img/profile-small.jpg)
 
-# Hello.
-
-## My name is Jared, it’s nice to meet you.
+# Hello. My name is Jared, it’s nice to meet you.
 
 I love developing identities, improving branding systems and creating fantastic web things. Whether starting from scratch or improving usability, I’m passionate about making projects clean and functional. Let’s create something great together.
 

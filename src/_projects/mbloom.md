@@ -20,22 +20,32 @@ We expanded the color palette to include two primary colors and introduced [Goth
 
 Friendly illustrations peppered throughout the site strengthen the core message of inclusion and help round out the new brand positioning very well.
 
-***
+## Branding
 
-### Branding
+{% include project__img.html
+img__path = "mbloom/mbloom-logo.svg"
+img__alt = "mbloom logo"
+img__description = "Primary logo."
+%}
 
-***
+{% include project__img.html
+img__path = "mbloom/mbloom-illustrations.svg"
+img__alt = "mbloom illustrations"
+img__description = "Brand illustrations used throughout the site and secondary branded materials."
+%}
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-logo.svg" alt="mbloom logo"> *Primary logo.*
+## Website
 
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-illustrations.svg" alt="mbloom illustrations"> *Brand illustrations used throughout the site and secondary branded materials.*
+{% include project__img.html
+img__path = "mbloom/mbloom-home.png"
+img__alt = "mbloom home page"
+img__description = "The goal of the home page was to let users know exactly who mbloom was and what they stood for. Keeping pertinent contact information as clear calls to action relayed the idea that there are people behind the fund who want to help."
+img__oversized = true
+%}
 
-***
-
-### Website
-
-***
-
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-home.png" alt="mbloom home page"> *The goal of the home page was to let users know exactly who mbloom was and what they stood for. Keeping pertinent contact information as clear calls to action relayed the idea that there are people behind the fund who want to help.*
-
-> <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/mbloom/mbloom-overview.png" alt="mbloom children pages"> *The about page focused on educating users a bit more about the history of mbloom and how they invest. The portfolio and team pages needed to be easy to glance over to find appropriate information for users.*
+{% include project__img.html
+img__path = "mbloom/mbloom-overview.png"
+img__alt = "mbloom children pages"
+img__description = "The about page focused on educating users a bit more about the history of mbloom and how they invest. The portfolio and team pages needed to be easy to glance over to find appropriate information for users."
+img__oversized = true
+%}

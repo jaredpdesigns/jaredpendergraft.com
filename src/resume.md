@@ -3,7 +3,7 @@ layout: resume
 title: Résumé
 description: My trusty old résumé.
 class: resume
-social: assets/img/social/resume-social.jpg
+social: assets/img/social/social-resume.jpg
 ---
 
 I love developing identities, improving branding systems and creating fantastic web things. Whether starting from scratch or improving usability, I’m passionate about making projects clean and functional.

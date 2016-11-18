@@ -30,11 +30,11 @@ hourly: 150
 
 {{ page.consultant }} was hired to finesse the design of a bike racing jersey for *Nice Bike*. Final deliverable includes a print-ready Illustrator document.
 
-### Payment History
+## Payment History
 - On {{ page.start-month }} {{ page.start-day }}, {{ page.start-year }}, {{ page.consultant }} and {{ page.client-name }} had a phone discussion about the project and agreed on ${{ page.hourly }} per hour as a billable rate.
 - On {{ page.end-month }} {{ page.end-day }}, {{ page.end-year }}, {{ page.consultant }} emailed project deliverables and capped billed hours at 4.5 hours.
 
-### Final Invoice Amount
+## Final Invoice Amount
 
 <span class="total">$675.00</span>
 

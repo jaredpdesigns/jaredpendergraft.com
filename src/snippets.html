@@ -4,13 +4,13 @@ title: Snippets
 description: A collection of useful/reusable code chunks I refer to often.
 permalink: snippets/
 class: snippets
-social: assets/img/social/snippets-social.jpg
+social: assets/img/social/social-snippets.jpg
 ---
 
 <section class="wrapper">
   {% for snippet in site.snippets %}
     <article class="snippet">
-      <header role="break">
+      <header class="type__align--center">
         <hr>
         <h3><a href="{{ snippet.url | prepend: site.baseurl }}">{{ snippet.title }}</a></h3>
         <h5>{{ snippet.categories }}</h5>

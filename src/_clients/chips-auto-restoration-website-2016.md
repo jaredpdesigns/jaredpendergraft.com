@@ -30,11 +30,11 @@ hourly: 150
 
 {{ page.consultant }} was hired to redesign and code a website for *Chip’s Auto Restoration*. Final deliverable included an elegant, responsive website.
 
-### Payment History
+## Payment History
 - On {{ page.start-month }} {{ page.start-day }}, {{ page.start-year }}, {{ page.consultant }} and {{ page.client-name }} had a phone discussion about the project and agreed on a total of $1,500 for services.
 - On {{ page.end-month }} {{ page.end-day }}, {{ page.end-year }}, {{ page.consultant }} invoiced {{ page.client-name }} for the project and delivered website assets.
 
-### Final Invoice Amount
+## Final Invoice Amount
 
 <span class="total">$1,500.00</span>
 

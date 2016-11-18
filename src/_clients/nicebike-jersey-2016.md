@@ -30,11 +30,11 @@ hourly: 150
 
 {{ page.consultant }} was hired to create the 2016 design of a bike racing jersey for *Nice Bike*. Final deliverable included a print-ready Illustrator document for each vendor.
 
-### Payment History
+## Payment History
 - On {{ page.start-month }} {{ page.start-day }}, {{ page.start-year }}, {{ page.consultant }} and {{ page.client-name }}  had an email discussion about the project finessing details
 - On {{ page.end-month }} {{ page.end-day }}, {{ page.end-year }}, {{ page.consultant }} invoiced {{ page.client-name }} for 6 hours, agreeing to send final deliverables when templates arrived from vendors.
 
-### Final Invoice Amount
+## Final Invoice Amount
 
 <span class="total">$900.00</span>
 

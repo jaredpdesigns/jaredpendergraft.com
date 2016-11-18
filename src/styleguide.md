@@ -2,7 +2,7 @@
 layout: page
 description: A styleguide, silly.
 class: styleguide
-social: assets/img/social/styleguide-social.jpg
+social: assets/img/social/social-styleguide.jpg
 ---
 
 ***
@@ -11,17 +11,29 @@ social: assets/img/social/styleguide-social.jpg
 
 ***
 
-# h1 tag
+`<hl>`
 
-## h2 tag
+# Headline 1
 
-### h3 tag
+`<h2>`
 
-#### h4 tag
+## Headline 2
 
-##### h5 tag
+`<h3>`
 
-p tag - Aenean lacinia *bibendum nulla sed consectetur*. **Nullam I’d dolor I’d nibh ultricies** vehicula ut I’d elit. [An inline link](#), <abbr>HTML</abbr> & <abbr>CSS</abbr> Ligatures anyone? official flourishing figurines. Dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.
+### Headline 3
+
+`<h4>`
+
+#### Headline 4
+
+`<h5>`
+
+##### Headline 5
+
+`<p>`
+
+Aenean lacinia *bibendum nulla sed consectetur*. **Nullam I’d dolor I’d nibh ultricies** vehicula ut I’d elit. [An inline link](#), <abbr>HTML</abbr> & <abbr>CSS</abbr> Ligatures anyone? official flourishing figurines. Dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.
 
 ***
 
@@ -73,16 +85,22 @@ $(document).ready(function() {
 
 ***
 
-> <span class="color"><span class="color__bg--base"></span> `.base`</span>
-<span class="color"><span class="color__bg--base-dark"></span> `.base-dark`</span>
-<span class="color"><span class="color__bg--base-ish"></span> `.base-ish`</span>
-<span class="color"><span class="color__bg--base-mid"></span> `.base-mid`</span>
-<span class="color"><span class="color__bg--base-light"></span> `.base-light`</span>
-<span class="color"><span class="color__bg--base-ghost"></span> `.base-ghost`</span>
-<span class="color"><span class="color__bg--highlight"></span> `.highlight`</span>
-<span class="color"><span class="color__bg--highlight-dark"></span> `.highlight-dark`</span>
-<span class="color"><span class="color__bg--highlight-ish"></span> `.highlight-ish`</span>
-<span class="color"><span class="color__bg--highlight-mid"></span> `.highlight-mid`</span>
-<span class="color"><span class="color__bg--highlight-light"></span> `.highlight-light`</span>
-<span class="color"><span class="color__bg--highlight-ghost"></span> `.highlight-ghost`</span>
-<span class="color"><span class="color__bg--luma"></span> `.luma`</span>
+> <span class="color"><span class="color__bg--base"></span> `.color__bg--base`</span>
+<span class="color"><span class="color__bg--base-dark"></span> `.color__bg--base-dark`</span>
+<span class="color"><span class="color__bg--base-75"></span> `.color__bg--base-75`</span>
+<span class="color"><span class="color__bg--base-62"></span> `.color__bg--base-62`</span>
+<span class="color"><span class="color__bg--base-50"></span> `.color__bg--base-50`</span>
+<span class="color"><span class="color__bg--base-38"></span> `.color__bg--base-38`</span>
+<span class="color"><span class="color__bg--base-25"></span> `.color__bg--base-25`</span>
+<span class="color"><span class="color__bg--base-12"></span> `.color__bg--base-12`</span>
+<span class="color"><span class="color__bg--base-5"></span> `.color__bg--base-5`</span>
+
+> <span class="color"><span class="color__bg--highlight"></span> `.color__bg--highlight`</span>
+<span class="color"><span class="color__bg--highlight-dark"></span> `.color__bg--highlight-dark`</span>
+<span class="color"><span class="color__bg--highlight-75"></span> `.color__bg--highlight-75`</span>
+<span class="color"><span class="color__bg--highlight-62"></span> `.color__bg--highlight-62`</span>
+<span class="color"><span class="color__bg--highlight-50"></span> `.color__bg--highlight-50`</span>
+<span class="color"><span class="color__bg--highlight-38"></span> `.color__bg--highlight-38`</span>
+<span class="color"><span class="color__bg--highlight-25"></span> `.color__bg--highlight-25`</span>
+<span class="color"><span class="color__bg--highlight-12"></span> `.color__bg--highlight-12`</span>
+<span class="color"><span class="color__bg--highlight-5"></span> `.color__bg--highlight-5`</span>

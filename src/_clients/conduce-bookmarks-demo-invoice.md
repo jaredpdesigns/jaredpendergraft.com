@@ -31,11 +31,11 @@ hourly: 75
 {{ page.consultant }} was contracted to create a visual demonstration of the bookmarks feature of the Conduce application. The overall goal was to show thought process and abilities to deliver tangible ideas and push the Conduce application forward.
 
 
-### Payment History
+## Payment History
 - On October 10th, {{ page.consultant }} sent {{ page.client-name }} a consulting agreement which specified he would submit a total hours worked report at the end of the project at a rate of ${{ page.hourly }} per hour.
 - On {{ page.end-month }} {{ page.end-day }}, {{ page.end-year }}, {{ page.consultant }} emailed an invoice to {{ page.client-name }} for a total of **12 hours** worked.
 
-### Final Invoice Amount
+## Final Invoice Amount
 
 <span class="total">$900.00</span>
 

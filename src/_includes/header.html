@@ -8,7 +8,7 @@
   <meta name="keywords" content="{% if page.tags %}{{ page.tags }},{{ site.keywords }}{% else %}{{ site.keywords }}{% endif %}">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
   <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-  <link rel="mask-icon" href="{{ "/assets/img/website_icon.svg" | prepend: site.baseurl }}" color="#8CADA2">
+  <link rel="mask-icon" href="{{ "/assets/img/website_icon.svg" | prepend: site.baseurl }}" color="#66bb90">
   <meta property="og:site_name" content="{{ site.title }}"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
@@ -20,24 +20,10 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:domain" content="{{ site.url }}">
   <meta name="twitter:image:src" content="{% if page.social %}{{ page.social | prepend: site.url }}{% else %}{{ "assets/img/social/social.jpg" | prepend: site.url }}{% endif %}">
-  <script>
-    WebFontConfig = {
-    	custom: { families: ['GT Pressura', 'GT Sectra', 'GT Cinetype Mono'],
-    	urls: [ '{{ "/assets/css/style.css" | prepend: site.baseurl }}' ] }
-    };
-    (function() {
-    	var wf = document.createElement('script');
-    	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    	wf.type = 'text/javascript';
-    	wf.async = 'true';
-    	var s = document.getElementsByTagName('script')[0];
-    	s.parentNode.insertBefore(wf, s);
-    })();
-  </script>
 </head>
 <body {% if page.class %}class="{{ page.class }}"{% endif %}>
 <header role="main">
-  <section class="wrapper wrapper--short">
+  <section class="wrapper wrapper--short wrapper--bleed">
     <a class="name" href="{{ site.baseurl }}/">Jared Pendergraft</a>
     <nav role="main">
       <a href="{{ site.baseurl }}/projects" {% if page.class == 'projects' %}class="active"{% endif %}>Projects</a>
