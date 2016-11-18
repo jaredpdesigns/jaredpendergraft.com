@@ -120,7 +120,10 @@ nav[role="main"] a, h5, .project__inner--img p { color: $color-base-38; }
 // Global stuff
 
 * + {
-  h2, figure { @include margin(xl); }
+  h2, figure {
+    @include margin(xl);
+    @include bp(xs) { @include margin(l); }
+  }
   p, ul, ol, h1, hr, h4, h5, pre, .highlighter-rouge, blockquote { @include margin(m); }
   li { @include margin(s); }
   li ol { margin-top: 0; }
@@ -166,7 +169,7 @@ nav[role="main"] {
   @include padding(m);
   margin-left: auto;
   margin-right: auto;
-  max-width: rem(640);
+  max-width: rem(608);
   @include bp(s) { max-width: rem(960); }
   @include bp(ml) {
     @include padding(l);
@@ -179,7 +182,7 @@ nav[role="main"] {
     @include padding(xs,b);
   }
   &--bleed {
-    max-width: 100%;
+    @include bp(s) { max-width: 100%; }
     @include bp(ml) { max-width: 87.5%; }
     @include bp(xl) { max-width: 75%; }
     @include bp(xxl) { max-width: 62.5%; }
@@ -238,11 +241,13 @@ nav[role="main"] {
     }
   }
   &__text {
+    @include bp(xs) { @include margin(s); }
     @include bp(s) {
       @include padding(m);
       width: $grid-1-2;
     }
     h1, p { @include type-legible; }
+    h1 + p { @include bp(xs) { @include margin(xs); } }
   }
 }
 
@@ -274,11 +279,13 @@ nav[role="main"] {
     }
   }
   &__text {
+    @include bp(xs) { @include margin(s); }
     @include bp(s) {
       @include padding(m);
       width: $grid-2-3;
     }
     h4 + p { @include margin(s); }
+    h1 + p { @include bp(xs) { @include margin(xs); } }
   }
 }
 
@@ -296,6 +303,7 @@ nav[role="main"] {
     @include padding(m,r);
     @include type-center;
     position: relative;
+    overflow: hidden;
     &:before {
       @include fill;
       content: '';
@@ -314,7 +322,10 @@ nav[role="main"] {
   }
   &--img {
     @include type-center;
-    figcaption { @include margin(l); }
+    figcaption {
+      @include margin(l);
+      @include bp(xs) { @include margin(s); }
+    }
     p {
       @include type-center;
       @include type-sans;
@@ -349,10 +360,9 @@ nav[role="main"] {
 }
 
 nav[role="projects"] {
-  @include bp(s) {
-    display: flex;
-    justify-content: space-around;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   a { margin: 0; }
 }
 
@@ -365,6 +375,7 @@ nav[role="projects"] {
 
 .resume__header nav {
   @include margin(m);
+  @include bp(xs) { @include margin(xs); }
   a {
     + * { @include margin(xs); }
     @include bp(s) { margin-top: 0; }
@@ -374,7 +385,10 @@ nav[role="projects"] {
 .resume__text {
   @include margin(m);
   > p, ul, blockquote, h4 { @include type-legible; }
-  h4 + p { @include margin(s); }
+  h4 + p {
+    @include margin(s);
+    @include bp(xs) { @include margin(xs); }
+  }
   blockquote {
     @include padding(m);
     background-color: $color-tint;
@@ -478,12 +492,11 @@ nav[role="projects"] {
   @include type-center;
   background-size: cover;
   background-position: center center;
-  @include bp(s) {
-    height: calc(100vh - 53px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  background-repeat: no-repeat;
+  height: calc(100vh - 53px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   h1, p {
     color: $color-tint;
     text-shadow: 0 0.0625rem 0.125rem rgba(#000,0.25);

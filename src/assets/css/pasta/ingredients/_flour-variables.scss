@@ -127,7 +127,7 @@ $border-l: $space-xs solid !default;
 }
 @mixin type-xl {
 	@include type($type-xl,$type-bl-l);
-	@include bp(xs) { @include type($type-l,$type-bl-l); }
+	@include bp(xs) { @include type($type-l); }
 	@include bp(xl) { @include type($type-xxl,$type-bl-xl); }
 }
 
