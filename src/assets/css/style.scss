@@ -436,7 +436,7 @@ nav[role="projects"] {
 }
 
 .invoice article, .consulting article {
-  > *:not(hr) { @include type-legible; }
+  > *:not(hr):not(h1):not(h5) { @include type-legible; }
   > h1, > h5 { @include type-center; }
   .total {
     @include type-l;
@@ -509,29 +509,34 @@ nav[role="projects"] {
 
 
 @media print {
+  @page { margin: 0.5in; }
   html {
     font-size: 62.5%;
-    width: 100%;
-  }
-  body {
-    width: 100%;
+    max-width: 8.5in;
     margin: 0 auto;
+  }
+  * {
+    color: black !important;
     background: none !important;
   }
   .wrapper {
     max-width: 100% !important;
+    padding: $space-s !important;
   }
-  * { color: black !important; }
   header[role="main"]{
     border-bottom: 1px solid #CCC;
+    position: relative;
     .wrapper {
-      display: block;
-      text-align: center;
-      padding-top: 0;
+      padding: 0 !important;
+      padding-bottom: $space-xs;
     }
     .name:after {
       @include type-sans;
-      @include margin(xl,l);
+      @include type-s;
+      position: absolute;
+      color: #666;
+      top: 25%;
+      right: 0;
       content: 'jaredpendergraft.com • jaredpdesigns@gmail.com • 503-474-7437';
     }
     nav[role="main"] { display: none; }
@@ -540,21 +545,24 @@ nav[role="projects"] {
     border-width: 1px;
     border-color: #CCC;
   }
-  p a { color: black; border-bottom: 1px solid #666; }
-  h3, ol li:before, .price { color: #666 !important; }
-  ul li:before, .resume__text blockquote:before { color: #CCC; }
+  p a { color: black; border-bottom: 1px solid #666 !important; }
+  h1, h2, h3, h4, ol li:before, .price, strong { color: #666 !important; }
+  ul li:before, .resume__text blockquote:before { color: #CCC !important; }
   hr + h3, hr + h3 + hr { margin-top: $space-xs !important; }
   .consulting article h4 + p { margin-top: $space-xl !important; }
   h2 { margin-top: $space-m !important; }
   li { margin-top: $space-s !important; }
-  .resume__text h4 + p { margin-top: 0 !important; }
-  .resume main > article { padding-top: $space-m; }
+  .resume__text h4 + p, .resume__text li { margin-top: 0 !important; }
+  .resume main > article { padding-top: $space-s; }
   .resume__header { display: none; }
+  .resume__text { padding-top: 0; }
   .resume__text, .invoice article, .consulting article {
-    > *:not(hr):not(h3) {
-      max-width: 87.5% !important;
-    }
     blockquote { border: 1px solid #CCC; }
   }
-  #resume__text hr:nth-of-type(7), #consultants-signature { page-break-before: always !important; }
+  .invoice article, .consulting article { padding-top: $space-xl !important; }
+  .resume__text blockquote {
+    max-width: 75%;
+    p { padding-right: $space-m; }
+  }
+  .resume__text hr:nth-of-type(7), .consulting article hr:nth-of-type(3) { page-break-before: always !important; }
 }
