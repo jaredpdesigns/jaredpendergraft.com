@@ -16,13 +16,13 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
   <meta property="og:url" content="{{ site.url }}"/>
-  <meta property="og:image" content="{% if page.social %}{{ page.social | prepend: site.url }}{% else %}{{ "assets/img/social/social.jpg" | prepend: site.url }}{% endif %}"/>
+  <meta property="og:image" content="{% if page.social %}{{ page.social | prepend: site.url }}{% else %}{{ "/assets/img/social/social.jpg" | prepend: site.url }}{% endif %}"/>
   <meta name="twitter:card" content="photo">
   <meta name="twitter:creator" content="@{{ site.twitter }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:domain" content="{{ site.url }}">
-  <meta name="twitter:image:src" content="{% if page.social %}{{ page.social | prepend: site.url }}{% else %}{{ "assets/img/social/social.jpg" | prepend: site.url }}{% endif %}">
+  <meta name="twitter:image:src" content="{% if page.social %}{{ page.social | prepend: site.url }}{% else %}{{ "/assets/img/social/social.jpg" | prepend: site.url }}{% endif %}">
 </head>
 <body {% if page.class %}class="{{ page.class }}"{% endif %}>
 <header role="main">
