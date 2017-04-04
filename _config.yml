@@ -6,7 +6,7 @@ baseurl: ''
 url: 'http://jaredpendergraft.com'
 twitter: 'jaredpdesigns'
 email: 'hello@jaredpendergraft.com'
-keep_files: [.git, 'CNAME']
+keep_files: [.git, 'CNAME', 'robots.txt']
 exclude: ['README.md']
 source: src
 destination: docs
