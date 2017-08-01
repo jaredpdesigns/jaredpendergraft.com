@@ -37,7 +37,7 @@ I love developing identities, improving branding systems and creating fantastic 
 ***
 
 - Content Management (Grunt, Gulp, Jekyll, Shopify, Wordpress)
-- CSS/HTML/JS (LESS, SASS, jQuery)
+- CSS/HTML/JS (LESS, SASS, jQuery, React)
 - UI/UX (Adobe Suite, Prototyping, Sketch, User Research)
 - Version Control (Git, Subversion)
 
@@ -57,13 +57,21 @@ I love developing identities, improving branding systems and creating fantastic 
 
 ***
 
-#### Kontur Labs
-*Creative Director and Front-End Developer*  
-2013–Present • Maui, HI
+#### OTTO Health
+*Designer & Front-End Developer*  
+2017 • Remote
 
-- Management and oversight of all creative projects including websites and iOS/Android applications.
-- Collaborates on UI/UX, finalizes design and builds out production-level CSS/HTML.
-- Consults on large-scale SaaS projects, offering semantic CSS/HTML recommendations.
+- Developed a robust design system to support complete application redesign.
+- Improved application UI/UX focusing on consistency between views and a holistic user experience.
+- Collaborated with a team of developers on all aspects of the front-end of the application including development of React components and views as well as the CSS of the application.
+
+#### Kontur Labs
+*Creative Director & Front-End Developer*  
+2013–2016 • Maui, HI
+
+- Managed and oversaw all creative projects including websites and iOS/Android applications.
+- Collaborated on UI/UX, finalized designs and buildt out production-level CSS/HTML.
+- Consulted on large-scale SaaS projects, offering semantic CSS/HTML recommendations.
 
 #### Kaiser Permanente
 *Graphic Designer*  

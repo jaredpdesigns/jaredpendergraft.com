@@ -156,7 +156,7 @@ nav[role="main"] {
   @include bp(xs) { @include margin(xs); }
   a {
     @include type-caps;
-    @include type-xs;
+    @include type-s;
     + * { @include margin(s,l); }
   }
   svg {
@@ -192,11 +192,7 @@ nav[role="main"] {
 .lazy {
   @include smooth;
   opacity: 0;
-  transform: translateY($space-s);
-  .loaded & {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .loaded & { opacity: 1; }
 }
 
 // Page specific
@@ -228,8 +224,6 @@ nav[role="main"] {
     a {
       @include smooth-pop;
       display: block;
-      overflow: hidden;
-      border-radius: $space-xs;
       box-shadow: 0 rem(16) rem(32) rem(-16) rgba($color-shade,0.5);
       &:hover {
         transform: translateY(-$space-xxs);
@@ -247,7 +241,10 @@ nav[role="main"] {
       width: $grid-1-2;
     }
     h1, p { @include type-legible; }
-    h1 + p { @include bp(xs) { @include margin(xs); } }
+    h1 + p {
+      @include margin(xs,t);
+      @include bp(xs) { @include margin(xs); }
+    }
   }
 }
 
@@ -284,8 +281,14 @@ nav[role="main"] {
       @include padding(m);
       width: $grid-2-3;
     }
-    h4 + p { @include margin(s); }
-    h1 + p { @include bp(xs) { @include margin(xs); } }
+    h4 + p {
+      @include margin(s);
+      @include margin(xs,t);
+    }
+    h1 + p {
+      @include margin(xs,t);
+      @include bp(xs) { @include margin(xs); }
+    }
   }
 }
 
@@ -385,10 +388,7 @@ nav[role="projects"] {
 .resume__text {
   @include margin(m);
   > p, ul, blockquote, h4 { @include type-legible; }
-  h4 + p {
-    @include margin(s);
-    @include bp(xs) { @include margin(xs); }
-  }
+  h4 + p { margin-top: 0; }
   blockquote {
     @include padding(m);
     background-color: $color-tint;

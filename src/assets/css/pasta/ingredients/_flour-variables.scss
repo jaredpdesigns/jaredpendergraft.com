@@ -103,32 +103,26 @@ $border-l: $space-xs solid !default;
 @mixin type-xs {
 	@include type($type-xs,$type-bl-s);
 	@include bp(xs) { @include type($type-xxs,$type-bl-s); }
-	@include bp(xl) { @include type($type-s); }
 }
 @mixin type-s {
 	@include type($type-s);
 	@include bp(xs) { @include type($type-xs,$type-bl-s); }
-	@include bp(xl) { @include type($type-m); }
 }
 @mixin type-m	 {
   @include type($type-m, $type-bl-l);
   @include bp(xs) { @include type($type-s); }
-  @include bp(xl) { @include type($type-ml,$type-bl-l); }
 }
 @mixin type-ml	 {
   @include type($type-ml);
   @include bp(xs) { @include type($type-m); }
-  @include bp(xl) { @include type($type-l,$type-bl-l); }
 }
 @mixin type-l {
 	@include type($type-l,$type-bl-l);
 	@include bp(xs) { @include type($type-ml); }
-	@include bp(xl) { @include type($type-xl,$type-bl-l); }
 }
 @mixin type-xl {
 	@include type($type-xl,$type-bl-l);
 	@include bp(xs) { @include type($type-l); }
-	@include bp(xl) { @include type($type-xxl,$type-bl-xl); }
 }
 
 // A slew of helper mixins also scoped to individual classes for non-SASS in the '_eggs-base.scss' file.
@@ -181,103 +175,78 @@ $border-l: $space-xs solid !default;
 @mixin padding($size, $side: all) {
 	@if $size == xs and $side == all {
   	  padding: $space-xs;
-  	  @include bp(xl) { padding: $space-s; }
   }
   @else if $size == s and $side == all {
   	  padding: $space-s;
-  	  @include bp(xl) { padding: $space-m; }
   }
   @else if $size == m and $side == all {
   	  padding: $space-m;
-  	  @include bp(xl) { padding: $space-l; }
   }
   @else if $size == l and $side == all {
   	  padding: $space-l;
-  	  @include bp(xl) { padding: $space-xl; }
   }
   @else if $size == xl and $side == all {
   	  padding: $space-xl;
-  	  @include bp(xl) { padding: $space-xxl; }
   }
 	@else if $size == xs and $side == t {
   	  padding-top: $space-xs;
-  	  @include bp(xl) { padding-top: $space-s; }
   }
   @else if $size == s and $side == t {
   	  padding-top: $space-s;
-  	  @include bp(xl) { padding-top: $space-m; }
   }
   @else if $size == m and $side == t {
   	  padding-top: $space-m;
-  	  @include bp(xl) { padding-top: $space-l; }
   }
   @else if $size == l and $side == t {
   	  padding-top: $space-l;
-  	  @include bp(xl) { padding-top: $space-xl; }
   }
   @else if $size == xl and $side == t {
   	  padding-top: $space-xl;
-  	  @include bp(xl) { padding-top: $space-xxl; }
   }
   @else if $size == xs and $side == b {
   	  padding-bottom: $space-xs;
-  	  @include bp(xl) { padding-bottom: $space-s; }
   }
   @else if $size == s and $side == b {
   	  padding-bottom: $space-s;
-  	  @include bp(xl) { padding-bottom: $space-m; }
   }
   @else if $size == m and $side == b {
   	  padding-bottom: $space-m;
-  	  @include bp(xl) { padding-bottom: $space-l; }
   }
   @else if $size == l and $side == b {
   	  padding-bottom: $space-l;
-  	  @include bp(xl) { padding-bottom: $space-xl; }
   }
   @else if $size == xl and $side == b {
   	  padding-bottom: $space-xl;
-  	  @include bp(xl) { padding-bottom: $space-xxl; }
   }
   @else if $size == xs and $side == l {
   	  padding-left: $space-xs;
-  	  @include bp(xl) { padding-left: $space-s; }
   }
   @else if $size == s and $side == l {
   	  padding-left: $space-s;
-  	  @include bp(xl) { padding-left: $space-m; }
   }
   @else if $size == m and $side == l {
   	  padding-left: $space-m;
-  	  @include bp(xl) { padding-left: $space-l; }
   }
   @else if $size == l and $side == l {
   	  padding-left: $space-l;
-  	  @include bp(xl) { padding-left: $space-xl; }
   }
   @else if $size == xl and $side == l {
   	  padding-left: $space-xl;
-  	  @include bp(xl) { padding-left: $space-xxl; }
   }
   @else if $size == xs and $side == r {
   	  padding-right: $space-xs;
-  	  @include bp(xl) { padding-right: $space-s; }
   }
   @else if $size == s and $side == r {
   	  padding-right: $space-s;
-  	  @include bp(xl) { padding-right: $space-m; }
   }
   @else if $size == m and $side == r {
   	  padding-right: $space-m;
-  	  @include bp(xl) { padding-right: $space-l; }
   }
   @else if $size == l and $side == r {
   	  padding-right: $space-l;
-  	  @include bp(xl) { padding-right: $space-xl; }
   }
   @else if $size == xl and $side == r {
   	  padding-right: $space-xl;
-  	  @include bp(xl) { padding-right: $space-xxl; }
   }
 }
 
@@ -286,83 +255,63 @@ $border-l: $space-xs solid !default;
 @mixin margin($size, $side: t) {
 	@if $size == xs and $side == t {
   	  margin-top: $space-xs;
-  	  @include bp(xl) { margin-top: $space-s; }
   }
   @else if $size == s and $side == t {
   	  margin-top: $space-s;
-  	  @include bp(xl) { margin-top: $space-m; }
   }
   @else if $size == m and $side == t {
   	  margin-top: $space-m;
-  	  @include bp(xl) { margin-top: $space-l; }
   }
   @else if $size == l and $side == t {
   	  margin-top: $space-l;
-  	  @include bp(xl) { margin-top: $space-xl; }
   }
   @else if $size == xl and $side == t {
   	  margin-top: $space-xl;
-  	  @include bp(xl) { margin-top: $space-xxl; }
   }
   @else if $size == xs and $side == b {
   	  margin-bottom: $space-xs;
-  	  @include bp(xl) { margin-bottom: $space-s; }
   }
   @else if $size == s and $side == b {
   	  margin-bottom: $space-s;
-  	  @include bp(xl) { margin-bottom: $space-m; }
   }
   @else if $size == m and $side == b {
   	  margin-bottom: $space-m;
-  	  @include bp(xl) { margin-bottom: $space-l; }
   }
   @else if $size == l and $side == b {
   	  margin-bottom: $space-l;
-  	  @include bp(xl) { margin-bottom: $space-xl; }
   }
   @else if $size == xl and $side == b {
   	  margin-bottom: $space-xl;
-  	  @include bp(xl) { margin-bottom: $space-xxl; }
   }
   @else if $size == xs and $side == l {
   	  margin-left: $space-xs;
-  	  @include bp(xl) { margin-left: $space-s; }
   }
   @else if $size == s and $side == l {
   	  margin-left: $space-s;
-  	  @include bp(xl) { margin-left: $space-m; }
   }
   @else if $size == m and $side == l {
   	  margin-left: $space-m;
-  	  @include bp(xl) { margin-left: $space-l; }
   }
   @else if $size == l and $side == l {
   	  margin-left: $space-l;
-  	  @include bp(xl) { margin-left: $space-xl; }
   }
   @else if $size == xl and $side == l {
   	  margin-left: $space-xl;
-  	  @include bp(xl) { margin-left: $space-xxl; }
   }
   @else if $size == xs and $side == r {
   	  margin-right: $space-xs;
-  	  @include bp(xl) { margin-right: $space-s; }
   }
   @else if $size == s and $side == r {
   	  margin-right: $space-s;
-  	  @include bp(xl) { margin-right: $space-m; }
   }
   @else if $size == m and $side == r {
   	  margin-right: $space-m;
-  	  @include bp(xl) { margin-right: $space-l; }
   }
   @else if $size == l and $side == r {
   	  margin-right: $space-l;
-  	  @include bp(xl) { margin-right: $space-xl; }
   }
   @else if $size == xl and $side == r {
   	  margin-right: $space-xl;
-  	  @include bp(xl) { margin-right: $space-xxl; }
   }
 }
 
