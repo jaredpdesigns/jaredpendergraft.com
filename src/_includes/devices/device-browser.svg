@@ -1,0 +1,66 @@
+<svg class="device--tablet" role="img" {% if include.alt %}aria-label="{{ include.alt}}" {% endif %}xmlns="http://www.w3.org/2000/svg" width="1440" height="956" viewBox="0 0 1440 956" onload="browser-svgHeight(evt)" xmlns:xlink="http://www.w3.org/1999/xlink">
+  {% if include.alt %}<title>{{ include.alt}}</title>{% endif %}
+  <script type="text/javascript">
+  <![CDATA[
+  function browser-maskSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}({{ include.height }} + 24){% else %}924{% endif %};
+    target.setAttribute("height",height);
+  }
+  function browser-borderSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}({{ include.height }}-1){% else %}923{% endif %};
+    target.setAttribute("height",height);
+  }
+  function browser-imageSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}{{ include.height }}{% else %}900{% endif %};
+    target.setAttribute("height",height);
+  }
+  function browser-shadowSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}({{ include.height }} + 24){% else %}924{% endif %};
+    var width = 1408;
+    target.setAttribute("height",height);
+    target.setAttribute("width",width);
+  }
+  function browser-svgHeight(evt) {
+    var target = evt.target;
+    var barHeight = 24;
+    var browserHeight = {% if include.height %}{{ include.height }}{% else %}900{% endif %};
+    var shadowHeight = 32;
+    var calculatedHeight = barHeight + browserHeight + shadowHeight;
+    var svgHeight = "0 0 1440 " + (barHeight + browserHeight + shadowHeight);
+    target.setAttribute("height",calculatedHeight);
+    target.setAttribute("viewBox",svgHeight);
+  }
+  ]]>
+  </script>
+  <defs>
+    <rect id="browser-shadow-shape" width="1408" height="924" x="16" rx="8" onload="browser-shadowSize(evt)"/>
+    <filter id="browser-shadow-effect" width="106%" height="109.1%" x="-3%" y="-3.2%" filterUnits="objectBoundingBox">
+      <feOffset dy="12" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g id="browser-shadow">
+      <use fill="#000" filter="url(#browser-shadow-effect)" xlink:href="#browser-shadow-shape"/>
+      <use fill="#FFF" fill-opacity="0" xlink:href="#browser-shadow-shape"/>
+    </g>
+    <mask id="browser-mask" fill="#fff">
+      <rect width="1440" height="924" rx="8" onload="browser-maskSize(evt)"/>
+    </mask>
+    <rect fill="#fff" width="1440" height="maskHeight" mask="url(#browser-mask)"/>
+    <image xlink:href="{{ site.baseurl }}/assets/img/projects/{{ include.url }}" x="0" y="24" height="900" width="1440" mask="url(#browser-mask)" onload="browser-imageSize(evt)"/>
+    <g class="color__type--base-5">
+      <rect width="1439" height="923" x=".5" y=".5" stroke="currentColor" rx="8" onload="browser-borderSize(evt)"/>
+      <path fill="currentColor" d="M0 0h1440v24H0z" mask="url(#browser-mask)"/>
+    </g>
+    <g class="color__type--base-12">
+      <path fill="currentColor" d="M6 12c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6zm20 0c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6zm20 0c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z" transform="translate(8 6)" mask="url(#browser-mask)"/>
+    </g>
+  </g>
+</svg>

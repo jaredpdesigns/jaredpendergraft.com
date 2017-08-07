@@ -13,7 +13,7 @@ social: assets/img/social/social-projects.jpg
     <h3>Projects</h3>
     <hr>
   </header>
-  {% for project in site.projects %}
+  {% for project in site.projects reversed %}
   <article class="project">
     <figure class="project__img">
       <a href="{{ project.url | prepend: site.baseurl }}">

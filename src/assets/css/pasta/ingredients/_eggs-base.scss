@@ -16,7 +16,7 @@ h3, h4 { @include type-ml; }
 
 p, li {
   @include type-m;
-  @include type-serif;
+  @include type-sans-alt;
 }
 
 h5 { @include type-s; }
@@ -71,7 +71,7 @@ pre {
 
 .type__style--sans { @include type-sans; }
 
-.type__style--serif { @include type-serif; }
+.type__style--serif { @include type-sans-alt; }
 
 .type__style--mono { @include type-mono; }
 
@@ -147,13 +147,6 @@ p a:not(.btn) {
   &:hover { color: $color-highlight-75; }
 }
 
-p a[href*="http"]:after, li a[href*="http"]:after {
-  content: "\2197";
-  display: inline-block;
-  color: $color-highlight;
-  margin-left: rem(4);
-}
-
 // Colors
 
 .color__bg--base      { background-color: $color-base; }
@@ -221,7 +214,6 @@ p a[href*="http"]:after, li a[href*="http"]:after {
   border-radius: $space-xs;
   color: $color-highlight;
   &:after {
-    @include type-serif;
     @include margin(xs,l);
     @include smooth-pop;
     content: '→';

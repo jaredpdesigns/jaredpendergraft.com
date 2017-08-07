@@ -17,7 +17,7 @@ $type-bl-l: 36 !default;
 $type-bl-xl: 48 !default;
 
 $type-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
-$type-serif: "Georgia", "Times", "Times New Roman", serif !default;
+$type-sans-alt: "Georgia", "Times", "Times New Roman", serif !default;
 $type-mono: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", "Courier", monospace !default;
 
 $color-tint: white !default;
@@ -101,7 +101,7 @@ $border-l: $space-xs solid !default;
 // All type mixins provide built-in responsive sizing using the values defined in 'Variables' — the idea is that a user can have type scale up or down depending on device sizes, making reading more enjoyable.
 
 @mixin type-xs {
-	@include type($type-xs,$type-bl-s);
+	@include type($type-xs);
 	@include bp(xs) { @include type($type-xxs,$type-bl-s); }
 }
 @mixin type-s {
@@ -113,7 +113,7 @@ $border-l: $space-xs solid !default;
   @include bp(xs) { @include type($type-s); }
 }
 @mixin type-ml	 {
-  @include type($type-ml);
+  @include type($type-ml, $type-bl-l);
   @include bp(xs) { @include type($type-m); }
 }
 @mixin type-l {
@@ -129,7 +129,7 @@ $border-l: $space-xs solid !default;
 
 @mixin type-sans { font-family: $type-sans; }
 
-@mixin type-serif { font-family: $type-serif; }
+@mixin type-sans-alt { font-family: $type-sans-alt; }
 
 @mixin type-mono { font-family: $type-mono; }
 
@@ -139,7 +139,6 @@ $border-l: $space-xs solid !default;
 
 @mixin type-caps {
   text-transform: uppercase;
-  letter-spacing: 0.0625rem;
 }
 
 @mixin type-left { text-align: left; }

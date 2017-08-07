@@ -2,90 +2,21 @@
 ---
 
 $color-highlight: #66bb90;
-$type-sans: 'GT Pressura', sans-serif;
-$type-serif: 'GT Sectra', sans-serif;
-$type-mono: 'GT Cinetype Mono', sans-serif;
+$type-sans: 'basic-sans', sans-serif;
+$type-sans-alt: 'source-sans-pro', sans-serif;
+$type-mono: 'source-code-pro', monospace;
 
 @import "start";
 
-
-// Typography
-
-@font-face {
-  font-family: 'GT Sectra';
-  src: url('../fonts/gt-sectra/GT-Sectra-Book.eot');
-  src: url('../fonts/gt-sectra/GT-Sectra-Book.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-sectra/GT-Sectra-Book.woff') format('woff'),
-       url('../fonts/gt-sectra/GT-Sectra-Book.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GT Sectra';
-  src: url('../fonts/gt-sectra/GT-Sectra-Book-Italic.eot');
-  src: url('../fonts/gt-sectra/GT-Sectra-Book-Italic.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-sectra/GT-Sectra-Book-Italic.woff') format('woff'),
-       url('../fonts/gt-sectra/GT-Sectra-Book-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'GT Sectra';
-  src: url('../fonts/gt-sectra/GT-Sectra-Bold.eot');
-  src: url('../fonts/gt-sectra/GT-Sectra-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-sectra/GT-Sectra-Bold.woff') format('woff'),
-       url('../fonts/gt-sectra/GT-Sectra-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GT Sectra';
-  src: url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.eot');
-  src: url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.woff') format('woff'),
-       url('../fonts/gt-sectra/GT-Sectra-Bold-Italic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'GT Pressura';
-  src: url('../fonts/gt-pressura/GT-Pressura-Light.eot');
-  src: url('../fonts/gt-pressura/GT-Pressura-Light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-pressura/GT-Pressura-Light.woff') format('woff'),
-       url('../fonts/gt-pressura/GT-Pressura-Light.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GT Pressura';
-  src: url('../fonts/gt-pressura/GT-Pressura-Bold.eot');
-  src: url('../fonts/gt-pressura/GT-Pressura-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-pressura/GT-Pressura-Bold.woff') format('woff'),
-       url('../fonts/gt-pressura/GT-Pressura-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GT Cinetype Mono';
-  src: url('../fonts/gt-cinetype/GT-Cinetype-Mono.eot');
-  src: url('../fonts/gt-cinetype/GT-Cinetype-Mono.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/gt-cinetype/GT-Cinetype-Mono.woff') format('woff'),
-       url('../fonts/gt-cinetype/GT-Cinetype-Mono.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-h1 { font-weight: 300; }
-
 h2, h5 { font-weight: normal; }
 
+h1, h3, h4 { font-weight: 600; }
+
 h4, h5 { @include type-caps; }
+
+p {
+  @include bp(l) { @include type-ml; }
+}
 
 hr {
   max-width: $space-xl;
@@ -107,13 +38,13 @@ hr {
 
 // Text colors
 
-a:not(.btn):hover, h1, .process h4, .resume__text h4, .resume__text blockquote strong, .invoice .total { color: $color-highlight; }
+a:not(.btn):hover, .process h4, .resume__text h4, .resume__text blockquote strong, .invoice .total { color: $color-highlight; }
 
 li { color: $color-base-75; }
 
-header[role="main"], h2, .project__text p, .resume__text h4 + p, .resume__text blockquote, .invoice p strong { color: $color-base-62; }
+header[role="main"], h2, .resume__text h4 + p, .resume__text blockquote, .invoice p strong { color: $color-base-62; }
 
-h3, h4, .client h5 { color: $color-base-50; }
+h1, h3, h4, .client h5 { color: $color-base-50; }
 
 nav[role="main"] a, h5, .project__inner--img p { color: $color-base-38; }
 
@@ -145,19 +76,15 @@ header[role="main"] {
       justify-content: space-between;
     }
   }
-  .name {
-    @include type-serif;
-    @include type-m;
-  }
+  .name { @include type-m; }
 }
 
 nav[role="main"] {
   @include inline;
   @include bp(xs) { @include margin(xs); }
   a {
-    @include type-caps;
     @include type-s;
-    + * { @include margin(s,l); }
+    + * { @include margin(m,l); }
   }
   svg {
     height: $space-m;
@@ -315,13 +242,51 @@ nav[role="main"] {
     .wrapper, img { position: relative; }
     h1, p, h5 { color: $color-tint; }
     hr {
-      border-color: rgba($color-tint,0.25);
+      border-color: rgba($color-tint,0.5);
     }
   }
   &--content {
-    > p, pre, figure, h2 { @include type-legible; }
+    > p, pre, h2, blockquote { @include type-legible; }
     padding-bottom: $space-xl;
     @include bp(m) { padding-bottom: $space-xxl; }
+  }
+  .device {
+    @include margin(l, t);
+    svg {
+      @include margin(s,l);
+      @include margin(s,r);
+      max-height: 100%;
+      width: auto;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &--oversized {
+      max-width: 100%;
+      @include bp(l) {
+        max-width: 150%;
+        margin-left: -25%;
+        margin-right: -25%;
+      }
+    }
+    + blockquote {
+      @include margin(m,t);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        @include type-m;
+        @include type-sans;
+        color: $color-base-50;
+      }
+    }
+    &--phone {
+      max-height: rem(640) !important;
+    }
+    &--tablet {
+      max-height: rem(960) !important;
+    }
   }
   &--img {
     @include type-center;
@@ -391,6 +356,7 @@ nav[role="projects"] {
   h4 + p { margin-top: 0; }
   blockquote {
     @include padding(m);
+    @include type-sans-alt;
     background-color: $color-tint;
     border: $border-s $color-base-12;
     position: relative;
@@ -410,7 +376,7 @@ nav[role="projects"] {
       width: $space-l;
       height: $space-l;
       border-radius: 50%;
-      padding-top: $space-s;
+      padding-top: 1.25rem;
       @include bp(m) {
         position: absolute;
         top: $space-m;

@@ -10,7 +10,7 @@ layout: default
       <h5>{{ page.role | join: ' & ' }}</h5>
       {% if page.url-out %}<a class="btn" target="_blank" href="{{ page.url-out }}">Visit Site</a>{% endif %}
     </section>
-    <img class="lazy" alt="{{ page.title }} Feature Image" data-src="{{ site.baseurl }}/assets/img/projects/{{ page.img-inner }}">
+    <img alt="{{ page.title }} Feature Image" src="{{ site.baseurl }}/assets/img/projects/{{ page.img-inner }}">
   </header>
   <section class="project__inner--content wrapper">
     {{ content }}

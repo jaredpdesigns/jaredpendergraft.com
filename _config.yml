@@ -14,7 +14,7 @@ destination: docs
 collections:
   projects:
     output: true
-    permalink: /projects/:path
+    permalink: /projects/:title
     
   snippets:
     output: true

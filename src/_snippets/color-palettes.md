@@ -36,7 +36,7 @@ $color-luma-light-o: rgba($color-luma,0.25);
 $color-luma-ghost-o: rgba($color-luma,0.10);
 ```
 
-I also like to throw an opacity scale for white values since that’s the best way to actually vary the tone of white — especially on dark backgrounds.
+I also like to throw an opacity scale for white values since that’s the best way to actually vary the tone of white—especially on dark backgrounds.
 
 #### In Use
 

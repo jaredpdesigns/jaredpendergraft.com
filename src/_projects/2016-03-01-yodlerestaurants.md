@@ -9,7 +9,7 @@ img-inner: yodlerestaurants/yodlerestaurants-feature-inner.png
 color: '#005A8C' 
 layout: project
 class: projects
-social: assets/img/projects/yodlerestaurants/yodlerestaurants-social.jpg
+social: /assets/img/projects/yodlerestaurants/yodlerestaurants-social.jpg
 ---
 
 Designing and developing Yodle Restaurants was a great experience and provided an opportunity to touch every part of a project from start to finish. I learned a lot along the way and the product continues to be successful.
@@ -43,7 +43,7 @@ img__description = null
 img__oversized = true
 %}
 
-The secondary screens are focused on administrative interactions — specifically logging into the appropriate restaurant (many restaurants have multiple locations they can track using a single login). The other specific task the app does is allows staff to track promotions.
+The secondary screens are focused on administrative interactions—specifically logging into the appropriate restaurant (many restaurants have multiple locations they can track using a single login). The other specific task the app does is allows staff to track promotions.
 
 Typically, customers receive promotional emails offering discounts. The app doesn’t tie into POS systems, so having a way to track which promotions have actually been activated and pushing those results to the dashboard was crucial.
 
@@ -56,7 +56,7 @@ img__oversized = true
 
 ## Client Dashboard
 
-The client dashboard was one of the most intricate parts of the project. Two variations of the dashboard were created — one for restaurant managers (the ‘blue’ dashboard) to interact with reviews — and a second variation (the ‘gray’ dashboard) used by Yodle to manage individual restaurant accounts. They are visually similar but serve very different purposes.
+The client dashboard was one of the most intricate parts of the project. Two variations of the dashboard were created—one for restaurant managers (the ‘blue’ dashboard) to interact with reviews—and a second variation (the ‘gray’ dashboard) used by Yodle to manage individual restaurant accounts. They are visually similar but serve very different purposes.
 
 {% include project__img.html
 img__path = "yodlerestaurants/yodlerestaurants-reviews.png"

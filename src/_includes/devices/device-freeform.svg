@@ -1,0 +1,39 @@
+<svg role="img" {% if include.alt %}aria-label="{{ include.alt}}" {% endif %}xmlns="http://www.w3.org/2000/svg" width="{% if include.width %}{{ include.width }}{% else %}320{% endif %}" height="{% if include.height %}{{ include.height }}{% else %}352{% endif %}" viewBox="0 0 320 352" onload="{{ include.uid }}freeformSvgSize(evt)" xmlns:xlink="http://www.w3.org/1999/xlink">
+  {% if include.alt %}<title>{{ include.alt}}</title>{% endif %}
+  <script type="text/javascript">
+  <![CDATA[
+  function {{ include.uid }}freeformSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}{{ include.height }}{% else %}320{% endif %};
+    var width = {% if include.width %}{{ include.width }}{% else %}320{% endif %};
+    target.setAttribute("height",height);
+    target.setAttribute("width",width);
+  }
+  function {{ include.uid }}freeformShadowSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}{{ include.height }}{% else %}320{% endif %};
+    var width = {% if include.width %}({{ include.width }} - 32){% else %}288{% endif %};
+    target.setAttribute("height",height);
+    target.setAttribute("width",width);
+  }
+  function {{ include.uid }}freeformSvgSize(evt) {
+    var target = evt.target;
+    var height = {% if include.height %}{{ include.height }}{% else %}320{% endif %};
+    var width = {% if include.width %}{{ include.width }}{% else %}320{% endif %};
+    var shadowHeight = 32;
+    var calculatedHeight = height + shadowHeight;
+    var svgSize = "0 0" + (" " + width) + (" " + calculatedHeight);
+    target.setAttribute("height",calculatedHeight);
+    target.setAttribute("width",width);
+    target.setAttribute("viewBox",svgSize);
+  }
+  ]]>
+  </script>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="{{ include.uid }}-freeform-mask" fill="#fff">
+      <rect width="{% if include.width %}{{ include.width }}{% else %}320{% endif %}" height="{% if include.height %}{{ include.height }}{% else %}320{% endif %}" rx="8" onload="{{ include.uid }}freeformSize(evt)"/>
+    </mask>
+    <rect fill="#fff" width="{% if include.width %}{{ include.width }}{% else %}320{% endif %}" height="{% if include.height %}{{ include.height }}{% else %}320{% endif %}" mask="url(#{{ include.uid }}-freeform-mask)" onload="{{ include.uid }}freeformSize(evt)"/>
+    <image xlink:href="{{ site.baseurl }}/assets/img/projects/{{ include.url }}" height="{% if include.height %}{{ include.height }}{% else %}320{% endif %}" width="{% if include.width %}{{ include.width }}{% else %}320{% endif %}" mask="url(#{{ include.uid }}-freeform-mask)" onload="{{ include.uid }}freeformSize(evt)"/>
+  </g>
+</svg>

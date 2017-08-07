@@ -38,7 +38,7 @@ Wailuku, HI 96793
 
 1. **Services.** {{ page.consultant }} will provide services (the “Services”) to {{ page.client-name }} as specified in *Schedule A.* All design and development efforts will be done remotely unless otherwise stated.
 2. **Expenses.** {{ page.client-name }} will reimburse {{ page.consultant }} for expenses incurred in providing the Services, but only if those expenses have been approved in advance and in writing.
-3. **Payment.** Unless otherwise specified in *Schedule A*, {{ page.consultant }} will invoice {{ page.client-name }} upon completion of Services and for expenses. {{ page.client-name }} will pay the invoices within 7 days of receipt (the “Due Date”) if {{ page.consultant }} performed the Services as required. {{ page.client-name }} agrees to pay {{ page.consultant }} ${{ page.hourly }} per hour for additional services not outlined in *Schedule A* — additional tasks will not be undertaken without the explicit written approval of {{ page.client-name }}.
+3. **Payment.** Unless otherwise specified in *Schedule A*, {{ page.consultant }} will invoice {{ page.client-name }} upon completion of Services and for expenses. {{ page.client-name }} will pay the invoices within 7 days of receipt (the “Due Date”) if {{ page.consultant }} performed the Services as required. {{ page.client-name }} agrees to pay {{ page.consultant }} ${{ page.hourly }} per hour for additional services not outlined in *Schedule A*—additional tasks will not be undertaken without the explicit written approval of {{ page.client-name }}.
 4. **Interest.** {{ page.client-name }} will pay {{ page.consultant }} simple interest on all overdue payments at a rate of 5% per month. Interest is calculated from the date payment was due until the date payment, including accumulated interest, is made in full.
 5. **Term.** This Agreement will be in effect until the Services are completed, unless ended earlier as specified in *section 6*.
 6. **Termination by Consultant.** {{ page.consultant }} may end this Agreement if:
@@ -63,7 +63,7 @@ Wailuku, HI 96793
 11. **Consultant’s Obligations.**
 	1. {{ page.consultant }} will perform the Services in a competent and professional manner. {{ page.consultant }} represents that he has the skills and qualifications necessary to perform the Services.
 	2. {{ page.consultant }} will comply with all applicable laws.
-12. **Entire Agreement.** This Agreement contains the whole agreement between {{ page.client-name }} and {{ page.consultant }}, and there are no warranties, representations, terms, conditions or collateral agreements — express, implied or statutory — other than as expressly set out in this Agreement.
+12. **Entire Agreement.** This Agreement contains the whole agreement between {{ page.client-name }} and {{ page.consultant }}, and there are no warranties, representations, terms, conditions or collateral agreements—express, implied or statutory—other than as expressly set out in this Agreement.
 
 In witness whereof, the Parties hereto have executed this Consulting Agreement as of the date first written above.
 
