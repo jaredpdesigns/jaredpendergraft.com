@@ -29,7 +29,20 @@
   }
   ]]>
   </script>
+  <defs>
+    <rect id="{{ include.uid }}-freeform-shadow-shape" width="288" height="320" x="16" rx="8" onload="{{ include.uid }}freeformShadowSize(evt)"/>
+    <filter id="{{ include.uid }}-freeform-shadow-effect" width="109.7%" height="108.8%" x="-4.9%" y="-3.1%" filterUnits="objectBoundingBox">
+      <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.125 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
   <g fill="none" fill-rule="evenodd">
+    <g id="{{ include.uid }}-freeform-shadow">
+      <use fill="#000" filter="url(#{{ include.uid }}-freeform-shadow-effect)" xlink:href="#{{ include.uid }}-freeform-shadow-shape"/>
+      <use fill="#FFF" fill-opacity="0" xlink:href="#{{ include.uid }}-freeform-shadow-shape"/>
+    </g>
     <mask id="{{ include.uid }}-freeform-mask" fill="#fff">
       <rect width="{% if include.width %}{{ include.width }}{% else %}320{% endif %}" height="{% if include.height %}{{ include.height }}{% else %}320{% endif %}" rx="8" onload="{{ include.uid }}freeformSize(evt)"/>
     </mask>
