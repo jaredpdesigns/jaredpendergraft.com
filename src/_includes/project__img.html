@@ -1,9 +1,8 @@
 <figure class="project__inner--img {% if include.img__oversized == true %}oversized{% endif %}">
   <img class="lazy" data-src="{{ site.baseurl }}/assets/img/projects/{{ include.img__path }}" alt="{{ include.img__alt }}">
-  {% if include.img__description %}
-  <figcaption>
-    <p>{{ include.img__description }}</p>
-    <hr>
-  </figcaption>
-  {% endif %}
 </figure>
+{% if include.img__description %}
+<blockquote>
+  <p>{{ include.img__description }}</p>
+</blockquote>
+{% endif %}

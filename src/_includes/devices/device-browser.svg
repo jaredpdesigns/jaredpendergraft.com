@@ -1,30 +1,30 @@
-<svg class="device--tablet" role="img" {% if include.alt %}aria-label="{{ include.alt}}" {% endif %}xmlns="http://www.w3.org/2000/svg" width="1440" height="956" viewBox="0 0 1440 956" onload="{{ include.uid }}-browser-svgHeight(evt)" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="device--tablet" role="img" {% if include.alt %}aria-label="{{ include.alt}}" {% endif %}xmlns="http://www.w3.org/2000/svg" width="1440" height="956" viewBox="0 0 1440 956" onload="{{ include.uid }}BrowserSvgHeight(evt)" xmlns:xlink="http://www.w3.org/1999/xlink">
   {% if include.alt %}<title>{{ include.alt}}</title>{% endif %}
   <script type="text/javascript">
   <![CDATA[
-  function {{ include.uid }}-{{ include.uid }}-browser-maskSize(evt) {
+  function {{ include.uid }}BrowserMaskSize(evt) {
     var target = evt.target;
     var height = {% if include.height %}({{ include.height }} + 24){% else %}924{% endif %};
     target.setAttribute("height",height);
   }
-  function {{ include.uid }}-browser-borderSize(evt) {
+  function {{ include.uid }}BrowserBorderSize(evt) {
     var target = evt.target;
     var height = {% if include.height %}({{ include.height }}-1){% else %}923{% endif %};
     target.setAttribute("height",height);
   }
-  function {{ include.uid }}-browser-imageSize(evt) {
+  function {{ include.uid }}BrowserImageSize(evt) {
     var target = evt.target;
     var height = {% if include.height %}{{ include.height }}{% else %}900{% endif %};
     target.setAttribute("height",height);
   }
-  function {{ include.uid }}-browser-shadowSize(evt) {
+  function {{ include.uid }}BrowserShadowSize(evt) {
     var target = evt.target;
     var height = {% if include.height %}({{ include.height }} + 24){% else %}924{% endif %};
     var width = 1408;
     target.setAttribute("height",height);
     target.setAttribute("width",width);
   }
-  function {{ include.uid }}-browser-svgHeight(evt) {
+  function {{ include.uid }}BrowserSvgHeight(evt) {
     var target = evt.target;
     var barHeight = 24;
     var browserHeight = {% if include.height %}{{ include.height }}{% else %}900{% endif %};
@@ -37,7 +37,7 @@
   ]]>
   </script>
   <defs>
-    <rect id="{{ include.uid }}-browser-shadow-shape" width="1408" height="924" x="16" rx="8"/>
+    <rect id="{{ include.uid }}-browser-shadow-shape" width="1408" height="924" x="16" rx="8" onload="{{ include.uid }}BrowserShadowSize(evt)"/>
     <filter id="{{ include.uid }}-browser-shadow-effect" width="104%" height="106.1%" x="-2%" y="-2.2%" filterUnits="objectBoundingBox">
       <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
@@ -51,12 +51,12 @@
       <use fill="#FFF" fill-opacity="0" xlink:href="#{{ include.uid }}-browser-shadow-shape"/>
     </g>
     <mask id="{{ include.uid }}-browser-mask" fill="#fff">
-      <rect width="1440" height="924" rx="8" onload="{{ include.uid }}-browser-maskSize(evt)"/>
+      <rect width="1440" height="924" rx="8" onload="{{ include.uid }}BrowserMaskSize(evt)"/>
     </mask>
-    <rect fill="#fff" width="1440" height="maskHeight" mask="url(#{{ include.uid }}-browser-mask)"/>
-    <image xlink:href="{{ site.baseurl }}/assets/img/projects/{{ include.url }}" x="0" y="24" height="900" width="1440" mask="url(#{{ include.uid }}-browser-mask)" onload="{{ include.uid }}-browser-imageSize(evt)"/>
+    <rect fill="#fff" width="1440" height="900" mask="url(#{{ include.uid }}-browser-mask)"/>
+    <image xlink:href="{{ site.baseurl }}/assets/img/projects/{{ include.url }}" x="0" y="24" height="900" width="1440" mask="url(#{{ include.uid }}-browser-mask)" onload="{{ include.uid }}BrowserImageSize(evt)"/>
     <g class="color__type--base-5">
-      <rect width="1439" height="923" x=".5" y=".5" stroke="currentColor" rx="8" onload="{{ include.uid }}-browser-borderSize(evt)"/>
+      <rect width="1439" height="923" x=".5" y=".5" stroke="currentColor" rx="8" onload="{{ include.uid }}BrowserBorderSize(evt)"/>
       <path fill="currentColor" d="M0 0h1440v24H0z" mask="url(#{{ include.uid }}-browser-mask)"/>
     </g>
     <g class="color__type--base-12">

@@ -20,17 +20,29 @@ The project started with an iPad application for capturing restaurant reviews an
 
 We needed the identity of Yodle Restaurants to feel branded under the Yodle umbrella, but stand out as it's own entity. By keeping with the same primary blue and adding our new friend "Hans the Yodeler", we arrived at a unique treatment that works really well as a brand mark and standalone app icon.
 
-{% include project__img.html
-img__path = "yodlerestaurants/yodlerestaurants-logo.svg"
-img__alt = "Yodle Restaurants logo"
-img__description = "Primary logo."
+<section class="device">
+{% include devices/device-freeform.svg
+alt='Yodle Restaurants logo'
+height='266'
+url='yodlerestaurants/yodlerestaurants-logo.svg'
+uid='yodleLogo'
+width='784'
 %}
+</section>
 
-{% include project__img.html
-img__path = "yodlerestaurants/yodlerestaurants-app-icon.svg"
-img__alt = "Yodle Restaurants app icon"
-img__description = "App icon."
+> Primary logo.
+
+<section class="device">
+{% include devices/device-freeform.svg
+alt='Yodle Restaurants iOS app icon'
+height='160'
+url='yodlerestaurants/yodlerestaurants-app-icon.svg'
+uid='yodleAppIcon'
+width='160'
 %}
+</section>
+
+> iOS app icon.
  
 ## iPad Application 
 

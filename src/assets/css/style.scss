@@ -14,7 +14,7 @@ h1, h3, h4 { font-weight: 600; }
 
 h4, h5 { @include type-caps; }
 
-p {
+p, li {
   @include bp(l) { @include type-ml; }
 }
 
@@ -246,7 +246,7 @@ nav[role="main"] {
     }
   }
   &--content {
-    > p, pre, h2, blockquote { @include type-legible; }
+    > p, pre, h2, blockquote, .project__inner--img figcaption p { @include type-legible; }
     padding-bottom: $space-xl;
     @include bp(m) { padding-bottom: $space-xxl; }
   }
@@ -288,16 +288,22 @@ nav[role="main"] {
       max-height: rem(960) !important;
     }
   }
+  .device, .project__inner--img {
+    + blockquote {
+      @include margin(m,t);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        @include type-m;
+        @include type-sans;
+        color: $color-base-50;
+      }
+    }
+  }
   &--img {
+    @include margin(l,b);
     @include type-center;
-    figcaption {
-      @include margin(l);
-      @include bp(xs) { @include margin(s); }
-    }
-    p {
-      @include type-center;
-      @include type-sans;
-    }
     img {
       @include bp(l) {
         max-width: 125%;
@@ -528,7 +534,10 @@ nav[role="projects"] {
   .invoice article, .consulting article { padding-top: $space-xl !important; }
   .resume__text blockquote {
     max-width: 75%;
-    p { padding-right: $space-m; }
+    p {
+      @include type-m;
+      padding-right: $space-m;
+    }
   }
   .resume__text hr:nth-of-type(7), .consulting article hr:nth-of-type(3) { page-break-before: always !important; }
 }
