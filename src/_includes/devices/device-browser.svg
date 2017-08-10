@@ -1,4 +1,4 @@
-<svg class="device--tablet" role="img" {% if include.alt %}aria-label="{{ include.alt}}" {% endif %}xmlns="http://www.w3.org/2000/svg" width="1440" height="956" viewBox="0 0 1440 956" onload="{{ include.uid }}BrowserSvgHeight(evt)" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg role="img" {% if include.alt %}aria-label="{{ include.alt}}" {% endif %}xmlns="http://www.w3.org/2000/svg" width="1440" height="956" viewBox="0 0 1440 956" onload="{{ include.uid }}BrowserSvgHeight(evt)" xmlns:xlink="http://www.w3.org/1999/xlink">
   {% if include.alt %}<title>{{ include.alt}}</title>{% endif %}
   <script type="text/javascript">
   <![CDATA[
