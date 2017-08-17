@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<figure class="shapey">
+  {% include svg/shapey.svg %}
+  {% include svg/shapey.svg %}
+</figure>
+<article class="home__wrapper wrapper">
+  <header class="home__wrapper--header">
+    <img class="lazy" data-src="{{ site.baseurl }}/assets/img/profile-small.jpg" alt="My lovely face" />
+    <h1>Hello. It’s nice to meet you.</h1>
+  </header>
+  <section class="home__wrapper--bio">
+    {{ content }}
+  </section>
+  <section class="home__wrapper--featured">
+    <header>
+      <hr>
+      <h3>Featured project</h3>
+      <hr>
+    </header>
+    {% for project in site.projects %}
+    {% if project.featured %}
+    <article class="project">
+      <figure class="project__img">
+        <a href="{{ project.url | prepend: site.baseurl }}">
+          <img class="lazy" data-src="{{ "/assets/img/projects/" | prepend: site.baseurl }}{{ project.img }}" alt="{{ project.name }} Feature Image">
+        </a>
+      </figure>
+      <figcaption class="project__text">
+        <h2><a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a></h2>
+        <p>{{ project.description }}</p>
+        <p><a class="btn" href="{{ project.url | prepend: site.baseurl }}">View Project</a></p>
+      </figcaption>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </section>
+  <section class="home__wrapper--contact">
+    <header>
+      <hr>
+      <h3>Say hello</h3>
+      <hr>
+    </header>
+    <p>I’m always looking for creative opportunities—if you'd like to work together send me an <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?">email</a>, follow me on <a href="https://twitter.com/jaredpdesigns" target="_blank">Twitter</a> or check-out my latest tinkering on <a href="https://dribbble.com/jaredpdesigns" target="_blank">Dribbble</a>.
+  </section>
+</article>

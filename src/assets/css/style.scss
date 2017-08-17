@@ -71,6 +71,10 @@ header[role="main"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include bp(xs) {
+      @include padding(s,l);
+      @include padding(s,r);
+    }
     @include bp(xsl) {
       flex-direction: row;
       justify-content: space-between;
@@ -84,11 +88,23 @@ nav[role="main"] {
   @include bp(xs) { @include margin(xs); }
   a {
     @include type-s;
-    + * { @include margin(m,l); }
+    + * {
+      @include margin(s,l);
+      @include bp(m) { @include margin(m,l); }
+    }
+    &.active {
+      color: $color-base-62;
+      border-bottom: 0.0625rem solid currentColor;
+      &:hover { color: $color-highlight; }
+    }
   }
   svg {
-    height: $space-m;
-    width: $space-m;
+    height: rem(16);
+    width: rem(16);
+    @include bp(s) {
+      height: rem(18);
+      width: rem(18);
+    }
   }
 }
 
@@ -124,19 +140,77 @@ nav[role="main"] {
 
 // Page specific
 
+.shapey svg {
+  position: fixed;
+  height: 110vh;
+  width: 110vw;
+  &:first-child {
+    color: $color-highlight-12;
+    left: -25%;
+    top: -25%;
+    transform: rotate(-15deg);
+    z-index: -1;
+  }
+  &:last-child {
+    color: white;
+    right: -25%;
+    bottom: -25%;
+    transform: rotate(15deg);
+    z-index: -2;
+  }
+}
 
-.home main article {
-  * { @include type-legible; }
-  h1, h2, p:first-child { @include type-center; }
-  p:first-child img {
-    border-radius: 50%;
-    height: rem(96);
-    width: rem(96);
-    border: $border-s $color-tint;
-    @include bp(ml) {
-      height: rem(128);
-      width: rem(128);
+.home__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  @include bp(s) { min-height: calc(100% - 3.25rem); }
+  &--header {
+    display: flex;
+    align-items: center;
+    max-width: rem(640);
+    width: 100%;
+    h1 {
+      color: $color-highlight;
+      margin: 0;
     }
+    img {
+      @include margin(m,r);
+      border-radius: 50%;
+      height: rem(96);
+      width: rem(96);
+      border: $border-s $color-tint;
+      transition-property: opacity;
+      @include bp(ml) {
+        height: rem(128);
+        width: rem(128);
+      }
+    }
+  }
+  &--bio {
+    @include margin(m,t);
+    p { max-width: rem(640); }
+  }
+  &--featured {
+    header {
+      @include margin(l,t);
+      @include bp(s) { @include margin(xl,t); }
+    }
+    .project__text {
+      order: 2;
+      > * {
+        @include type-legible;
+        + * { @include margin(s,t); }
+      }
+    }
+  }
+  &--contact {
+    header {
+      @include margin(l,t);
+      @include bp(s) { @include margin(xl,t); }
+    }
+    p { max-width: rem(640); }
   }
 }
 
@@ -152,6 +226,8 @@ nav[role="main"] {
       @include smooth-pop;
       display: block;
       box-shadow: 0 rem(16) rem(32) rem(-16) rgba($color-shade,0.5);
+      overflow: hidden;
+      border-radius: 0.5rem;
       &:hover {
         transform: translateY(-$space-xxs);
         box-shadow: 0 rem(32) rem(64) rem(-32) rgba($color-shade,0.25);
@@ -198,7 +274,7 @@ nav[role="main"] {
       }
     }
     svg {
-      color: $color-base-50;
+      color: $color-base-62;
       .highlight { fill: $color-highlight-25; }
     }
   }
