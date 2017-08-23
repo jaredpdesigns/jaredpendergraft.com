@@ -6,7 +6,9 @@ class: resume
 social: assets/img/social/social-resume.jpg
 ---
 
-I love developing identities, improving branding systems and creating fantastic web things. Whether starting from scratch or improving usability, I’m passionate about making projects clean and functional.
+I’m a multi-disciplinary designer focusing on the intersection of design and development. I enjoy building out designs to fully-functional front-end code—bridging the gap between design and development seamlessly.
+
+I’m looking for a creative position that offers challenges, collaboration and mentorship, with an ability to work on projects that impact the world positively.
 
 ***
 
