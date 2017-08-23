@@ -126,7 +126,6 @@ ul li {
     @include type-l;
     content: '•';
     position: absolute;
-    top: rem(-2);
     left: -$space-m;
     color: $color-highlight;
   }

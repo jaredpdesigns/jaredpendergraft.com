@@ -594,7 +594,10 @@ nav[role="projects"] {
   }
   p a { color: black; border-bottom: 1px solid #666 !important; }
   h1, h2, h3, h4, ol li:before, .price, strong { color: #666 !important; }
-  ul li:before { color: #CCC !important; }
+  ul li:before {
+    color: #CCC !important;
+    top: rem(2);
+  }
   hr + h3, hr + h3 + hr { margin-top: $space-xs !important; }
   .consulting article h4 + p { margin-top: $space-xl !important; }
   h2 { margin-top: $space-m !important; }
