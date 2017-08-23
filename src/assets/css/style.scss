@@ -38,11 +38,11 @@ hr {
 
 // Text colors
 
-a:not(.btn):hover, .process h4, .resume__text h4, .resume__text blockquote strong, .invoice .total { color: $color-highlight; }
+a:not(.btn):hover, .process h4, .resume__text h4, .invoice .total { color: $color-highlight; }
 
 li { color: $color-base-75; }
 
-header[role="main"], h2, .resume__text h4 + p, .resume__text blockquote, .invoice p strong { color: $color-base-62; }
+header[role="main"], h2, .resume__text h4 + p, .invoice p strong { color: $color-base-62; }
 
 h1, h3, h4, .client h5 { color: $color-base-50; }
 
@@ -442,44 +442,35 @@ nav[role="projects"] {
 
 .resume__text {
   @include margin(m);
-  > p, ul, blockquote, h4 { @include type-legible; }
+  > p, ul, h4 { @include type-legible; }
   h4 + p { margin-top: 0; }
+}
+
+.reference {
+  @include margin(l);
+  background-color: white;
+  border: 0.0625rem solid $color-base-12;
+  border-radius: rem(8);
+  box-shadow: 0 rem(16) rem(32) rem(-16) rgba($color-shade,0.5);
+  overflow: hidden;
   blockquote {
     @include padding(m);
-    @include type-sans-alt;
-    background-color: $color-tint;
-    border: $border-s $color-base-12;
-    position: relative;
-    border-radius: $space-xs;
-    @include bp(m) {
-      @include padding(l,l);
-    }
-    &:before {
-      @include type(48);
-      @include margin(s,b);
-      content: '“';
-      background-color: $color-highlight;
-      color: $color-tint;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: $space-l;
-      height: $space-l;
+  }
+  footer {
+    @include padding(s);
+    @include padding(m,l);
+    @include padding(m,r);
+    background-color: $color-base-5;
+    border-top: 0.0625rem solid $color-base-12;
+    display: flex;
+    align-items: center;
+    img {
+      @include margin(s,r);
       border-radius: 50%;
-      padding-top: 1.25rem;
-      @include bp(m) {
-        position: absolute;
-        top: $space-m;
-        left: 0;
-        transform: translateX(-50%);
-      }
     }
-    strong {
-      @include type-bold;
-      @include type-caps;
-      @include margin(s);
-      @include type-sans;
-      display: block;
+    p {
+      color: $color-base-75;
+      margin-top: 0;
     }
   }
 }
@@ -603,7 +594,7 @@ nav[role="projects"] {
   }
   p a { color: black; border-bottom: 1px solid #666 !important; }
   h1, h2, h3, h4, ol li:before, .price, strong { color: #666 !important; }
-  ul li:before, .resume__text blockquote:before { color: #CCC !important; }
+  ul li:before { color: #CCC !important; }
   hr + h3, hr + h3 + hr { margin-top: $space-xs !important; }
   .consulting article h4 + p { margin-top: $space-xl !important; }
   h2 { margin-top: $space-m !important; }
@@ -612,16 +603,19 @@ nav[role="projects"] {
   .resume main > article { padding-top: $space-s; }
   .resume__header { display: none; }
   .resume__text { padding-top: 0; }
-  .resume__text, .invoice article, .consulting article {
+  .invoice article, .consulting article {
     blockquote { border: 1px solid #CCC; }
   }
-  .invoice article, .consulting article { padding-top: $space-xl !important; }
-  .resume__text blockquote {
-    max-width: 75%;
+  .reference {
+    border: 1px solid #CCC;
+    box-shadow: none;
+    img { display: none; }
     p {
-      @include type-m;
-      padding-right: $space-m;
+      padding-left: rem(24);
+      padding-right: rem(24);
     }
+    footer { border-top: 1px solid #CCC; }
   }
-  .resume__text hr:nth-of-type(7), .consulting article hr:nth-of-type(3) { page-break-before: always !important; }
+  .invoice article, .consulting article { padding-top: $space-xl !important; }
+  .resume__text hr:nth-of-type(7), .consulting article hr:nth-of-type(3), .reference:nth-of-type(3) { page-break-before: always !important; }
 }

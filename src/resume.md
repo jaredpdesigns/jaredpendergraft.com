@@ -67,7 +67,7 @@ I love developing identities, improving branding systems and creating fantastic 
 
 #### Kontur Labs
 *Creative Director & Front-End Developer*  
-2013–2016 • Maui, HI
+2013–2017 • Maui, HI
 
 - Managed and oversaw all creative projects including websites and iOS/Android applications.
 - Collaborated on UI/UX, finalized designs and buildt out production-level CSS/HTML.
@@ -96,6 +96,20 @@ I love developing identities, improving branding systems and creating fantastic 
 
 ***
 
-> I’m a designer and illustrator that has had the pleasure of working with Jared closely on digital web design and UI/UX projects for the last year. We have a running joke in the office that Jared is a unicorn. Its mildly true though. Jared is a quick thinker and thoughtful communicator that consistently presents clever solutions. His skill set is impressive and seemingly limitless as he is adept at the intuitive, aesthetic, and functional dimensions of what makes a great digital experience. It’s a delight working with someone that blends a love for technology and clean, effective design. I learn something new with every project we work together and I have fun along the way. Jared has a great sense of humor and is a respectable family man. I’ve considered myself very lucky to work with such a bright, professional individual and would highly recommend the opportunity to collaborate with him. **Bristol Dunlap**
+{% include reference.html
+recommendation="Jared is an exceptional worker and person. I felt very lucky to have the chance to work with him while at Kontur Labs. He is honest, knowledgable and delivers quality results. Everything he does is done with integrity as he cares about the work he puts out into the world. He has a great sense of humor and is a great team player. Our office called him the unicorn as he is the unique combination of designer and coder.; I would highly recommend Jared to anyone looking for an art director, designer or developer."
+img="https://scontent-lax3-1.cdninstagram.com/t51.2885-19/s64x64/19227131_269238970212018_1237228701855252480_a.jpg"
+name="Bristol Dunlap"
+%}
 
-> Jared is one of the few rare individuals I’ve encountered who embodies the creative abilities of an artist and the solution-oriented capabilities of software programmer. This combination makes him uniquely suited to tasks that require both a design mindset as well as a developer one—something that usually requires two people. The fact that he enjoys both the art and the programming is an even bigger plus. Jared approaches his projects with an innate ability to apply design thinking while being mindful of usability concerns, which results in a very elegant product. He is very diligent and thorough in his work. The more time he is given, the better the results will be. In addition, Jared is a genuinely nice person and a great pleasure to work with. He would be a major asset in any organization. I recommend him highly in any position that can utilize his talents and abilities to their full potential. **Peter Liu**
+{% include reference.html
+recommendation="I hired Jared to design the Playbill for our big summer show, <em>The Hunchback of Notre Dame</em>, in addition to a variety of advertisements, both print and digital, and other marketing material. Jared did a superb job and delivered all the materials well ahead of his deadlines. He made it all look easy.; Prior to this, Jared and I were co-workers at Kontur Labs for two years, where he demonstrated the same level of professionalism, talent and expertise. He is one of the few designers I’ve met who also understands programming and the world of code.; I continue to collaborate with Jared as projects come up. I recommend him highly for any endeavor that requires a talented and well trained designer."
+img='https://scontent-lax3-1.cdninstagram.com/t51.2885-19/s64x64/11312397_1470181583281600_256382947_a.jpg'
+name='Peter Liu'
+%}
+
+{% include reference.html
+recommendation="As a designer at Kontur Labs, and also as a contract designer for hire, Jared demonstrated a consistent ability to design creative and purpose driven experiences. Initially, he was hired as a visual designer but we soon discovered he is actually a hybrid of UX, visual design and front end dev.; When working within the constraints of an agency contract, there isn’t often budget for usability testing and extensive customer discovery. Jared was able compensate by leveraging best practices and low budget user testing to make sure his designs were accomplishing the desired goals.; His ability to “design with code” allowed us to pick up considerable speed in the “design to HTML” creation phases of our projects. We were able to remove hours spent wire framing and working with a visual designer and go right form IA, content curation/gathering and sketches into HTML and CSS.; This resulted in a boost in profitability of our agency contracts. Furthermore, he would test his HTML/CSS for browser compatibility before handing off to engineering. This allowed us to spend less time on quality assurance.; Jared is also a change agent. He is constantly expanding his skill sets and encouraged us to use new tools and explore new ways of working together that were more collaborative—not just as a team but with our clients. He is a pleasure to work with and I highly recommend him as an addition to any agency or product team."
+img="https://scontent-lax3-1.cdninstagram.com/t51.2885-19/s64x64/20986915_769312549941149_7100974481081892864_a.jpg"
+name="Alexis Wogan"
+%}
