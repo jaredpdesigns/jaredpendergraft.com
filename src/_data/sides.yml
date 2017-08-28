@@ -1,12 +1,17 @@
-- name: These Kids Read
-  description: A blog that tracks the great books my kids and I read together.
-  img: tkr.svg
-  link: http://thesekidsread.com
+- name: SVG Minimal Devices
+  description: A small React app that generates minimal device frames around images. 
+  img: devices.svg
+  link: https://codepen.io/jaredpdesigns/full/EvRGpM/
   
 - name: Pasta
   description: Pasta is a tiny SASS file that provides a great starting place for web projects. It combines a handy reset and light styling for common web elements, yummy.
   img: pasta.svg
   link: http://jaredpdesigns.github.io/pasta/
+
+- name: These Kids Read
+  description: A blog that tracks the great books my kids and I read together.
+  img: tkr.svg
+  link: http://thesekidsread.com
   
 - name: Avery
   description: A mini-site for my daughter to help document her life, “I’m Already an Artist”.

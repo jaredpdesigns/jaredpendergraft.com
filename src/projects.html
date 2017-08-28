@@ -59,7 +59,7 @@ social: assets/img/social/social-projects.jpg
     {% for side in site.data.sides %}
     <article class="side">
       <figure class="side__img">
-        <a href="{{ side.link }}">
+        <a href="{{ side.link }}" target="_blank">
         <img class="lazy" data-src="{{ "/assets/img/projects/sides/" | prepend: site.baseurl }}{{ side.img }}" alt="{{ side.name }} logo">
         </a>
       </figure>
