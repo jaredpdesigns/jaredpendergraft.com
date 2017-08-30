@@ -1,7 +1,6 @@
 ---
 ---
 
-{% include_relative _partials/typekit.js %}
 {% include_relative _partials/ga.js %}
 {% include_relative _partials/unveil.js %}
 
