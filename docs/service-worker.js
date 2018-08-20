@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.3dc92769e5b8ba94af08fb5a2a9b4372.js"
+  "/precache-manifest.96b694b2d728c2df271189a27e10c66d.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "these-kids-read"});
+workbox.core.setCacheNameDetails({prefix: "jared-pendergraft"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
