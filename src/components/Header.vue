@@ -1,0 +1,120 @@
+<template>
+  <header role="header">
+    <h3><router-link to="/" exactActiveClass="currentPage">Jared Pendergraft</router-link></h3>
+    <nav role="navigation">
+      <ul>
+        <li><router-link to="/" exactActiveClass="currentPage">About</router-link></li>
+        <li><router-link to="/projects" activeClass="currentParent" exactActiveClass="currentPage">Projects</router-link></li>
+        <li><router-link to="/hire" exactActiveClass="currentPage">Hire Me</router-link></li>
+      </ul>
+    </nav>
+    <nav role="social">
+      <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?">
+        <Icon name="email" :size="20"/>
+      </a>
+      <a href="https://twitter.com/jaredpdesigns" target="_blank">
+        <Icon name="twitter" :size="20"/>
+      </a>
+      <a href="https://dribbble.com/jaredpdesigns" target="_blank">
+        <Icon name="dribbble" :size="20"/>
+      </a>
+      <a @click="updateTheme">
+        <Icon v-if="dark" name="sun" :size="20"/>
+        <Icon v-else name="moon" :size="20"/>
+      </a>
+    </nav>
+  </header>
+</template>
+<script>
+import Icon from '@/components/Icon.vue'
+export default {
+  name: 'Header',
+  components: { Icon },
+  computed: {
+    dark() { return this.$store.state.dark }
+  },
+  methods: {
+    updateTheme() {
+      let root = document.getElementsByTagName('html')[0]
+      if(this.dark) {
+        root.classList.remove('themeDark')
+        this.$store.dispatch('updateTheme',false)
+      }
+      else {
+        root.classList.add('themeDark')
+        this.$store.dispatch('updateTheme',true)
+      }
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+@import '../assets/css/variables';
+header[role="header"] {
+  align-items: center;
+  background-color: var(--contrast);
+  color: var(--base-50);
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  padding: rem(8) rem(32);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  @include breakpoint(xs-only) {
+    flex-wrap: wrap;
+    height: rem(80);
+    justify-content: center;
+    padding: rem(8) rem(24);
+  }
+  @include breakpoint(l) {
+    height: rem(64);
+    padding: rem(16) rem(32);
+  }
+  a {
+    @include smooth;
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus { color: var(--highlight); }
+  }
+  nav {
+    @include breakpoint(xs-only) {
+      text-align: center;
+      width: 100%;
+    }
+    .currentParent, .currentPage { color: var(--highlight); }
+  }
+}
+
+nav[role="navigation"] ul {
+  align-items: center;
+  display: inline-flex;
+  li + li { margin-left: 1rem; }
+}
+
+nav[role="social"] {
+  @include breakpoint(xs-only) {
+    align-items: center;
+    background-color: var(--contrast);
+    bottom: 0;
+    display: flex;
+    height: rem(64);
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+  }
+}
+
+nav[role="social"] a {
+  color: var(--base-38);
+  + * {
+    margin-left: 1rem;
+    @include breakpoint(xs) { margin-left: 2rem; }
+  }
+  &:after { content: none; }
+  &:hover, &:focus { border-color: transparent; }
+}
+</style>

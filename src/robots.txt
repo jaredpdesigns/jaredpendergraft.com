@@ -1,5 +1,0 @@
-___
-___
-Sitemap: http://jaredpendergraft.com/sitemap.xml
-User-agent: *
-Disallow: /clients/
