@@ -26,6 +26,7 @@ export default {
   background-color: var(--contrast);
   box-shadow: 0 rem(4) rem(8) rem(-4) rgba(black,0.25);
   border-radius: rem(8);
+  color: var(--base-50);
   display: inline-flex;
   font-size: rem(16);
   height: rem(40);

@@ -1,5 +1,5 @@
 <template>
-  <section :class="$options.name">
+  <main :class="$options.name">
     <Head
       title="Projects | Jared Pendergraft"
       description="A selection of creative projects I’ve worked on."
@@ -37,7 +37,7 @@
         </a>
       </figure>
     </article>
-  </section>
+  </main>
 </template>
 <script>
 import Button from '@/components/Button.vue'
@@ -53,9 +53,13 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/css/variables';
 .Projects {
+  flex-direction: column;
   header { text-align: center; }
 }
-.Projects__holder, .Sides { padding: 0 rem(8); }
+.Projects__holder {
+  padding-left: rem(8);
+  padding-right: rem(8);
+}
 .Project {
   @include box;
   overflow: hidden;

@@ -55,18 +55,9 @@ html {
   @include breakpoint(l) { padding-top: rem(64); }
 }
 
-main {
-  box-shadow: inset rem(16) 0 0 0 var(--contrast), inset rem(-16)0 0 0 var(--contrast), inset 0 rem(-16) 0 0 var(--contrast);
-  display: flex;
-  min-height: calc(100vh - 4.25em);
-  justify-content: center;
-  padding: rem(16) rem(24);
-  @include breakpoint(xs-only) { padding-bottom: rem(72); }
-}
-
 ::selection {
   background-color: var(--highlight);
-  color: var(--contrast);
+  color: white;
 }
 
 h1, h2, h3, h4, .btn {
@@ -223,6 +214,15 @@ img {
 svg {
   max-width: 100%;
   height: auto;
+}
+
+main {
+  box-shadow: inset rem(16) 0 0 0 var(--contrast), inset rem(-16)0 0 0 var(--contrast), inset 0 rem(-16) 0 0 var(--contrast);
+  display: flex;
+  min-height: calc(100vh - 4.25em);
+  justify-content: center;
+  padding: rem(16) rem(24);
+  @include breakpoint(xs-only) { padding-bottom: rem(72); }
 }
 
 article {

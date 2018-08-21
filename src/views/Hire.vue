@@ -70,7 +70,8 @@ export default {
 .Hire {
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
   > header {
     margin: 0 auto;
     max-width: rem(960);
@@ -86,7 +87,7 @@ export default {
 .Process {
   @include box;
   max-width: 100%;
-  @include breakpoint(s) { padding: rem(24); }
+  padding: rem(16);
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
