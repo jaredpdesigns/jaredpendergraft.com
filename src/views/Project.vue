@@ -3,7 +3,7 @@
     <Head v-for="project in projectFiltered" :key="project.slug"
       :title="project.name + ' | A Project by Jared Pendergraft'"
       :description="project.description"
-      :image="'http://jaredpendergraft.com/assets/img/projects/' + project.slug + '-social.jpg'"
+      :image="'http://jaredpendergraft.com/img/projects/' + project.slug + '-social.jpg'"
       :url="'jaredpendergraft.com/projects/' + project.slug"
     />
     <header v-for="project in projectFiltered" :key="project.name" :class="$options.name + '__header'" :style="'background-color: '+ project.color + ';'">
