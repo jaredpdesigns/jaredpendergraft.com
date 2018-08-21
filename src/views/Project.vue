@@ -12,7 +12,7 @@
         <p>{{ project.description }}</p>
       </section>
       <section :class="$options.name + '__header--img'">
-        <img :src="'/img/projects/' + project.slug + '/' + project.img + '.png'"/>
+        <img :alt="project.name + 'featured image'" :src="'/img/projects/' + project.slug + '/' + project.img + '.png'"/>
       </section>
     </header>
     <component :is="projectContent" :class="$options.name + '__content'"/>

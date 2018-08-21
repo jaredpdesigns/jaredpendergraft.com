@@ -26,7 +26,7 @@
         <hr/>
       </header>
       <figure v-for="side in sides" :key="side.name" class="Side">
-        <a :href="side.url" target="_blank">
+        <a :href="side.url" target="_blank" rel="noopener" :title="side.name">
           <span class="Side__img">
             <img :src="'/img/projects/sides/' + side.img + '.svg'"/>
           </span>
