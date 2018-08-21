@@ -40,7 +40,7 @@ export default {
     position: relative;
     text-align: center;
     text-shadow: 0 rem(1) rem(2) rgba(black,0.25);
-    h1 { color: white ; }
+    h1, a { color: inherit ; }
     * + * { margin-top: rem(24); }
   }
 }

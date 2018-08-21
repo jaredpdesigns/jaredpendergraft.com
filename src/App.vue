@@ -15,25 +15,24 @@ export default {
 @import url("https://use.typekit.net/zkw5aru.css");
 
 :root {
-  --hue: 150;
+  --hue: 158;
   --base: hsl(var(--hue),12%,25%);
   --base-50: hsl(var(--hue),4%,50%);
   --base-38: hsl(var(--hue),4%,62%);
   --base-12: hsl(var(--hue),4%,88%);
   --bg: hsl(var(--hue),4%,98%);
   --contrast: white;
-  --highlight: hsl(var(--hue),38%,58%);
-  --highlight-50: hsl(var(--hue),38%,88%);
+  --highlight: hsl(var(--hue),32%,38%);
+  --highlight-50: hsl(var(--hue),32%,75%);
 }
 
 :root.themeDark {
-  --hue: 224;
   --base: hsl(var(--hue),4%,75%);
   --base-38: hsl(var(--hue),4%,38%);
   --base-12: hsl(var(--hue),4%,12%);
-  --bg: hsl(var(--hue),12%,12%);
-  --contrast: hsl(var(--hue),12%,8%);
-  --highlight-50: hsl(var(--hue),24%,24%);
+  --bg: hsl(var(--hue),4%,12%);
+  --contrast: hsl(var(--hue),12%,4%);
+  --highlight-50: hsl(var(--hue),32%,24%);
 }
 
 *, *:before, *:after {
@@ -191,6 +190,13 @@ a {
   transition: 0.375s ease-in;
   transition-property: color, border-color;
   &:focus { outline: none; }
+  p & {
+    border-color: var(--highlight-50);
+    &:focus, &:hover {
+      border-color: var(--base-50);
+      color: var(--base);
+    }
+  }
 }
 
 a:hover, a:focus, nav .currentPage, nav .currentParent {

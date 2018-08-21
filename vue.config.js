@@ -3,8 +3,8 @@ module.exports = {
   outputDir: 'docs',
   pwa: {
     name: 'Jared',
-    themeColor: '#6BBD94',
-    msTileColor: '#6BBD94',
+    themeColor: '#428069',
+    msTileColor: '#428069',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black translucent'
   }

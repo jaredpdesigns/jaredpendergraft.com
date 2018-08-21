@@ -1,21 +1,21 @@
 <template>
-  <header role="header">
+  <header class="header" role="heading">
     <h3><router-link to="/" exactActiveClass="currentPage">Jared Pendergraft</router-link></h3>
-    <nav role="navigation">
+    <nav class="mainNav" role="navigation">
       <ul>
         <li><router-link to="/" exactActiveClass="currentPage">About</router-link></li>
         <li><router-link to="/projects" activeClass="currentParent" exactActiveClass="currentPage">Projects</router-link></li>
         <li><router-link to="/hire" exactActiveClass="currentPage">Hire Me</router-link></li>
       </ul>
     </nav>
-    <nav role="social">
-      <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?">
+    <nav class="socialNav" role="navigation">
+      <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?" title="Send me an email" >
         <Icon name="email" :size="20"/>
       </a>
-      <a href="https://twitter.com/jaredpdesigns" target="_blank">
+      <a href="https://twitter.com/jaredpdesigns" title="Follow me on Twitter" target="_blank" rel="noopener">
         <Icon name="twitter" :size="20"/>
       </a>
-      <a href="https://dribbble.com/jaredpdesigns" target="_blank">
+      <a href="https://dribbble.com/jaredpdesigns" title="Follow me on Dribbble" target="_blank" rel="noopener">
         <Icon name="dribbble" :size="20"/>
       </a>
       <a @click="updateTheme">
@@ -50,10 +50,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../assets/css/variables';
-header[role="header"] {
+.header {
   align-items: center;
   background-color: var(--contrast);
-  color: var(--base-50);
+  color: var(--base);
   display: flex;
   height: 3rem;
   justify-content: space-between;
@@ -72,6 +72,7 @@ header[role="header"] {
     height: rem(64);
     padding: rem(16) rem(32);
   }
+  h3 { color: inherit; }
   a {
     @include smooth;
     color: inherit;
@@ -87,13 +88,13 @@ header[role="header"] {
   }
 }
 
-nav[role="navigation"] ul {
+.mainNav ul {
   align-items: center;
   display: inline-flex;
   li + li { margin-left: 1rem; }
 }
 
-nav[role="social"] {
+.socialNav {
   @include breakpoint(xs-only) {
     align-items: center;
     background-color: var(--contrast);
@@ -106,15 +107,14 @@ nav[role="social"] {
     right: 0;
     z-index: 100;
   }
-}
-
-nav[role="social"] a {
-  color: var(--base-38);
-  + * {
-    margin-left: 1rem;
-    @include breakpoint(xs) { margin-left: 2rem; }
+  a {
+    color: var(--base-38);
+    + * {
+      margin-left: 1rem;
+      @include breakpoint(xs) { margin-left: 2rem; }
+    }
+    &:after { content: none; }
+    &:hover, &:focus { border-color: transparent; }
   }
-  &:after { content: none; }
-  &:hover, &:focus { border-color: transparent; }
 }
 </style>
