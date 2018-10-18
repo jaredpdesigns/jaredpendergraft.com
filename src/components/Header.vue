@@ -26,30 +26,31 @@
   </header>
 </template>
 <script>
-import Icon from '@/components/Icon.vue'
+import Icon from "@/components/Icon.vue";
 export default {
-  name: 'Header',
+  name: "Header",
   components: { Icon },
   computed: {
-    dark() { return this.$store.state.dark }
+    dark() {
+      return this.$store.state.dark;
+    }
   },
   methods: {
     updateTheme() {
-      let root = document.getElementsByTagName('html')[0]
-      if(this.dark) {
-        root.classList.remove('themeDark')
-        this.$store.dispatch('updateTheme',false)
-      }
-      else {
-        root.classList.add('themeDark')
-        this.$store.dispatch('updateTheme',true)
+      let root = document.getElementsByTagName("html")[0];
+      if (this.dark) {
+        root.classList.remove("themeDark");
+        this.$store.dispatch("updateTheme", false);
+      } else {
+        root.classList.add("themeDark");
+        this.$store.dispatch("updateTheme", true);
       }
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .header {
   align-items: center;
   background-color: var(--contrast);
@@ -72,26 +73,37 @@ export default {
     height: rem(64);
     padding: rem(16) rem(32);
   }
-  h3 { color: inherit; }
+  h3 {
+    color: inherit;
+    font-weight: 600;
+  }
   a {
     @include smooth;
     color: inherit;
     text-decoration: none;
-    &:hover, &:focus { color: var(--highlight); }
+    &:hover,
+    &:focus {
+      color: var(--highlight);
+    }
   }
   nav {
     @include breakpoint(xs-only) {
       text-align: center;
       width: 100%;
     }
-    .currentParent, .currentPage { color: var(--highlight); }
+    .currentParent,
+    .currentPage {
+      color: var(--highlight);
+    }
   }
 }
 
 .mainNav ul {
   align-items: center;
   display: inline-flex;
-  li + li { margin-left: 1rem; }
+  li + li {
+    margin-left: 1rem;
+  }
 }
 
 .socialNav {
@@ -111,10 +123,17 @@ export default {
     color: var(--base-38);
     + * {
       margin-left: 1rem;
-      @include breakpoint(xs) { margin-left: 2rem; }
+      @include breakpoint(xs) {
+        margin-left: 2rem;
+      }
     }
-    &:after { content: none; }
-    &:hover, &:focus { border-color: transparent; }
+    &:after {
+      content: none;
+    }
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
   }
 }
 </style>

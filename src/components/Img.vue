@@ -5,11 +5,11 @@
 </template>
 <script>
 export default {
-  name: 'Img',
+  name: "Img",
   props: {
     alt: { default: null },
     description: { default: null },
-    img: { default: 'http://via.placeholder.com/1024x1024' }
+    img: { default: "http://via.placeholder.com/1024x1024" }
   }
-}
+};
 </script>

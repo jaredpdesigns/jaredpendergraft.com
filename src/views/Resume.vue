@@ -99,28 +99,39 @@
 </main>
 </template>
 <script>
-import Recommendation from '@/components/Recommendation.vue'
+import Recommendation from "@/components/Recommendation.vue";
 export default {
-  name: 'Resume',
+  name: "Resume",
   components: { Recommendation }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Resume {
   padding: rem(24);
   header {
     padding: 0;
     text-align: center;
-    h1 { color: var(--highlight); }
+    h1 {
+      color: var(--highlight);
+    }
   }
   &__content {
     @include legible;
     margin-top: rem(32);
-    h2, h3 { margin-top: rem(48), }
-    h4 + * { margin-top: 0; }
-    > hr { margin-top: rem(8); }
-    > * + * { margin-top: rem(24); }
+    h2,
+    h3 {
+      margin-top: rem(48);
+    }
+    h4 + * {
+      margin-top: 0;
+    }
+    > hr {
+      margin-top: rem(8);
+    }
+    > * + * {
+      margin-top: rem(24);
+    }
   }
 }
 </style>

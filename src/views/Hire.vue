@@ -28,45 +28,50 @@
   </main>
 </template>
 <script>
-import Process from '@/components/Process.vue'
+import Process from "@/components/Process.vue";
 export default {
-  name: 'Hire',
+  name: "Hire",
   components: { Process },
-  data () {
+  data() {
     return {
       processes: {
         one: {
           label: "Initial Discovery & Research",
-          description: "Figure out what we’re building and what problems we’re trying to solve.",
+          description:
+            "Figure out what we’re building and what problems we’re trying to solve.",
           img: "Research"
         },
         two: {
           label: "Style & Tone",
-          description: "Explore visual ideas and establish the voice of the project.",
+          description:
+            "Explore visual ideas and establish the voice of the project.",
           img: "Style"
         },
         three: {
           label: "Present Ideas & Determine Constraints",
-          description: "Finalize approval of visual direction and confirm what was designed can be built.",
+          description:
+            "Finalize approval of visual direction and confirm what was designed can be built.",
           img: "Present"
         },
         four: {
           label: "Finalize Architecture & Build",
-          description: "Confirm our design supports established content models and begin development.",
+          description:
+            "Confirm our design supports established content models and begin development.",
           img: "Build"
         },
         five: {
           label: "Test, Optimize & Iterate",
-          description: "Perform A/B testing when applicable to confirm assumptions, optimize content for best performance, and determine what can be improved in the next cycle.",
+          description:
+            "Perform A/B testing when applicable to confirm assumptions, optimize content for best performance, and determine what can be improved in the next cycle.",
           img: "Iterate"
         }
       }
-    }
+    };
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Hire {
   flex-direction: column;
   justify-content: flex-start;
@@ -81,7 +86,9 @@ export default {
       padding: rem(16) 0;
       text-align: center;
     }
-    * + * { margin-top: rem(24); }
+    * + * {
+      margin-top: rem(24);
+    }
   }
 }
 .Process {
@@ -115,7 +122,9 @@ export default {
     figure {
       padding-bottom: rem(24);
       text-align: center;
-      svg { margin: 0 auto; }
+      svg {
+        margin: 0 auto;
+      }
     }
     h4 {
       color: var(--highlight);

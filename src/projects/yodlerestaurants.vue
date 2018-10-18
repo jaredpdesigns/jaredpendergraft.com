@@ -97,11 +97,11 @@
 </article>
 </template>
 <script>
-import Browser from '@/components/DeviceBrowser.vue'
-import Freeform from '@/components/DeviceFreeform.vue'
-import Phone from '@/components/DevicePhone.vue'
-import Tablet from '@/components/DeviceTablet.vue'
+import Browser from "@/components/DeviceBrowser.vue";
+import Freeform from "@/components/DeviceFreeform.vue";
+import Phone from "@/components/DevicePhone.vue";
+import Tablet from "@/components/DeviceTablet.vue";
 export default {
   components: { Browser, Freeform, Phone, Tablet }
-}
+};
 </script>

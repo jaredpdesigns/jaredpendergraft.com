@@ -4,32 +4,65 @@
 }
 
 @mixin breakpoint($point) {
-	@if      $point == xs      { @media (min-width: rem(16)) and (max-width: rem(736)) { @content; } }
-  @else if $point == xs-only { @media (min-width: rem(16)) and (max-width: rem(414)) { @content; } }
-	@else if $point == xsl     { @media (min-width: rem(464)) { @content; } }
-	@else if $point == s       { @media (min-width: rem(752)) { @content; } }
-	@else if $point == m       { @media (min-width: rem(1008)) { @content; } }
-	@else if $point == l       { @media (min-width: rem(1264)) { @content; } }
-	@else if $point == ml      { @media (min-width: rem(1424)) { @content; } }
-	@else if $point == xl      { @media (min-width: rem(1584)) { @content; } }
-	@else if $point == xxl     { @media (min-width: rem(1616)) { @content; } }
+  @if $point == xs {
+    @media (min-width: rem(16)) and (max-width: rem(736)) {
+      @content;
+    }
+  } @else if $point == xs-only {
+    @media (min-width: rem(16)) and (max-width: rem(414)) {
+      @content;
+    }
+  } @else if $point == xsl {
+    @media (min-width: rem(464)) {
+      @content;
+    }
+  } @else if $point == s {
+    @media (min-width: rem(752)) {
+      @content;
+    }
+  } @else if $point == m {
+    @media (min-width: rem(1008)) {
+      @content;
+    }
+  } @else if $point == l {
+    @media (min-width: rem(1264)) {
+      @content;
+    }
+  } @else if $point == ml {
+    @media (min-width: rem(1424)) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: rem(1584)) {
+      @content;
+    }
+  } @else if $point == xxl {
+    @media (min-width: rem(1616)) {
+      @content;
+    }
+  }
 }
 
 @mixin box {
   background-color: var(--contrast);
   border-radius: rem(8);
-  box-shadow: 0 rem(8) rem(16) rem(-8) rgba(0,0,0,0.25), 0 rem(32) rem(64) rem(-32) rgba(0,0,0,0.25);
+  box-shadow: 0 rem(8) rem(16) rem(-8) rgba(0, 0, 0, 0.25),
+    0 rem(32) rem(64) rem(-32) rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 
 @mixin legible {
   margin-left: auto;
   margin-right: auto;
-  @include breakpoint(m) { max-width: 75%; }
-  @include breakpoint(l) { max-width: 62.5%; }
+  @include breakpoint(m) {
+    max-width: 75%;
+  }
+  @include breakpoint(l) {
+    max-width: 62.5%;
+  }
 }
 
 @mixin smooth {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   transition: all 0.375s ease-in;
 }

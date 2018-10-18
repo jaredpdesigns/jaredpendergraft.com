@@ -68,27 +68,22 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-weight: 600;
   font-size: rem(28);
   line-height: rem(32);
 }
 
 h2 {
-  font-family: "source-sans-pro", sans-serif;
   font-size: rem(22);
-  font-weight: normal;
   line-height: rem(32);
 }
 
 h3 {
   font-size: rem(20);
-  font-weight: normal;
   line-height: rem(32);
 }
 
 h4 {
   font-size: rem(16);
-  font-weight: 600;
   letter-spacing: rem(1);
   line-height: rem(24);
   text-transform: uppercase;

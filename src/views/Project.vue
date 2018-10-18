@@ -19,22 +19,30 @@
   </main>
 </template>
 <script>
-import {_} from 'vue-underscore'
+import { _ } from "vue-underscore";
 export default {
-  name: 'Project',
+  name: "Project",
   computed: {
-    project() { return this.$route.params.slug },
-    projects() { return this.$store.state.projects },
-    projectContent() { return () => import(`@/projects/${this.project}.vue`) },
+    project() {
+      return this.$route.params.slug;
+    },
+    projects() {
+      return this.$store.state.projects;
+    },
+    projectContent() {
+      return () => import(`@/projects/${this.project}.vue`);
+    },
     projectFiltered() {
-      const projectSlug = this.project
-      return this.projects.filter( project => { return project.slug === projectSlug } )
+      const projectSlug = this.project;
+      return this.projects.filter(project => {
+        return project.slug === projectSlug;
+      });
     }
   }
-}
+};
 </script>
 <style lang="scss">
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Project {
   align-items: center;
   flex-direction: column;
@@ -47,9 +55,13 @@ export default {
     position: relative;
     width: 100%;
     &:before {
-      background-image: linear-gradient(to bottom, rgba(white,0.125), rgba(white,0));
+      background-image: linear-gradient(
+        to bottom,
+        rgba(white, 0.125),
+        rgba(white, 0)
+      );
       bottom: 0;
-      content: '';
+      content: "";
       left: 0;
       right: 0;
       position: absolute;
@@ -58,39 +70,65 @@ export default {
     .themeDark & {
       opacity: 0.5;
       transition: opacity 0.375s ease-in;
-      &:hover { opacity: 1; }
+      &:hover {
+        opacity: 1;
+      }
     }
     &--text {
       padding: rem(24);
       text-align: center;
-      @include breakpoint(m) { padding: rem(32); }
-      > h1, p { color: var(--contrast); }
+      @include breakpoint(m) {
+        padding: rem(32);
+      }
+      > h1,
+      p {
+        color: var(--contrast);
+      }
       > p {
         @include legible;
         text-align: left;
-        @include breakpoint(m) { text-align: center; }
+        @include breakpoint(m) {
+          text-align: center;
+        }
       }
-      > * + * { margin-top: rem(24); }
+      > * + * {
+        margin-top: rem(24);
+      }
     }
     &--img {
       padding-left: rem(16);
       padding-right: rem(16);
       text-align: center;
-      img { transform: translateY(rem(6)); }
+      img {
+        transform: translateY(rem(6));
+      }
     }
   }
   &__content {
     padding: rem(24);
-    @include breakpoint(l) { padding: rem(48) rem(24); }
-    > * + * { margin-top: rem(24); }
-    > * + h2 { margin-top: rem(48); }
-    h2, > p, pre, blockquote { @include legible; }
+    @include breakpoint(l) {
+      padding: rem(48) rem(24);
+    }
+    > * + * {
+      margin-top: rem(24);
+    }
+    > * + h2 {
+      margin-top: rem(48);
+    }
+    h2,
+    > p,
+    pre,
+    blockquote {
+      @include legible;
+    }
     blockquote {
       background-color: var(--contrast);
       border-left: rem(4) solid var(--highlight-50);
       color: var(--base-50);
       padding: rem(8) rem(16);
-      p { text-align: left; }
+      p {
+        text-align: left;
+      }
     }
     figure {
       text-align: center;
@@ -104,16 +142,26 @@ export default {
         }
         > * {
           margin: rem(8);
-          @include breakpoint(xsl) { margin: 0 rem(16); }
+          @include breakpoint(xsl) {
+            margin: 0 rem(16);
+          }
         }
       }
-      .devicePhone { @include breakpoint(xsl) { max-width: rem(378); } }
-      .deviceTablet { max-width: rem(800); }
+      .devicePhone {
+        @include breakpoint(xsl) {
+          max-width: rem(378);
+        }
+      }
+      .deviceTablet {
+        max-width: rem(800);
+      }
       svg image {
         .themeDark & {
           opacity: 0.5;
           transition: opacity 0.375s ease-in;
-          &:hover { opacity: 1; }
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }

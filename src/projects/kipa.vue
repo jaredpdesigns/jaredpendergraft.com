@@ -29,8 +29,8 @@
 </article>
 </template>
 <script>
-import Phone from '@/components/DevicePhone.vue'
+import Phone from "@/components/DevicePhone.vue";
 export default {
   components: { Phone }
-}
+};
 </script>

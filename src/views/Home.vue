@@ -22,11 +22,11 @@
 </template>
 <script>
 export default {
-  name: 'Profile'
-}
+  name: "Profile"
+};
 </script>
 <style lang="scss">
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Profile {
   @include box;
   align-items: stretch;
@@ -35,28 +35,39 @@ export default {
   flex-wrap: wrap;
   margin: 0 auto;
   overflow: hidden;
-  @include breakpoint(m) { flex-wrap: nowrap; }
-  &__img, &__text {
+  @include breakpoint(m) {
+    flex-wrap: nowrap;
+  }
+  &__img,
+  &__text {
     flex-grow: 1;
     flex-shrink: 1;
     padding: rem(24);
-    @include breakpoint(m) { flex-basis: 50%; }
+    @include breakpoint(m) {
+      flex-basis: 50%;
+    }
   }
   &__img {
     background-color: var(--base-50);
-    background-image: url('../assets/img/profile-big.jpg');
+    background-image: url("../assets/img/profile-big.jpg");
     background-position: 50% 25%;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 38vh;
     padding-bottom: 0;
     text-align: center;
-    @include breakpoint(l) { min-height: 50vh; }
-    img { visibility: hidden; }
+    @include breakpoint(l) {
+      min-height: 50vh;
+    }
+    img {
+      visibility: hidden;
+    }
     .themeDark & {
       opacity: 0.5;
       transition: opacity 0.375s ease-in;
-      &:hover { opacity: 1; }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   &__text {
@@ -66,8 +77,12 @@ export default {
       justify-content: center;
       padding: rem(32);
     }
-    h1 { color: var(--highlight); }
-    > * + * { margin-top: rem(16)}
+    h1 {
+      color: var(--highlight);
+    }
+    > * + * {
+      margin-top: rem(16);
+    }
   }
 }
 </style>

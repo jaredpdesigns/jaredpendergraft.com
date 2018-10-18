@@ -1,3 +1,5 @@
 export const mutations = {
-  updateTheme(state, value) { state.dark = value }
-}
+  updateTheme(state, value) {
+    state.dark = value;
+  }
+};

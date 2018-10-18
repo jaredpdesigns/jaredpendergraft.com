@@ -40,21 +40,27 @@
   </main>
 </template>
 <script>
-import Button from '@/components/Button.vue'
+import Button from "@/components/Button.vue";
 export default {
-  name: 'Projects',
+  name: "Projects",
   components: { Button },
   computed: {
-    projects() { return this.$store.state.projects },
-    sides() { return this.$store.state.sides }
+    projects() {
+      return this.$store.state.projects;
+    },
+    sides() {
+      return this.$store.state.sides;
+    }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Projects {
   flex-direction: column;
-  header { text-align: center; }
+  header {
+    text-align: center;
+  }
 }
 .Projects__holder {
   padding-left: rem(8);
@@ -65,9 +71,13 @@ export default {
   overflow: hidden;
   position: relative;
   &:before {
-    background-image: linear-gradient(to bottom, rgba(white,0.125), rgba(white,0));
+    background-image: linear-gradient(
+      to bottom,
+      rgba(white, 0.125),
+      rgba(white, 0)
+    );
     bottom: 0;
-    content: '';
+    content: "";
     left: 0;
     right: 0;
     position: absolute;
@@ -76,20 +86,33 @@ export default {
   .themeDark & {
     opacity: 0.5;
     transition: opacity 0.375s ease-in;
-    &:hover { opacity: 1; }
+    &:hover {
+      opacity: 1;
+    }
   }
-  + * { margin-top: rem(48); }
+  + * {
+    margin-top: rem(48);
+  }
   &__text {
     padding: rem(24);
     text-align: center;
-    @include breakpoint(m) { padding: rem(32); }
-    > h1, p { color: var(--contrast); }
+    @include breakpoint(m) {
+      padding: rem(32);
+    }
+    > h1,
+    p {
+      color: var(--contrast);
+    }
     > p {
       @include legible;
       text-align: left;
-      @include breakpoint(m) { text-align: center; }
+      @include breakpoint(m) {
+        text-align: center;
+      }
     }
-    > * + * { margin-top: rem(24); }
+    > * + * {
+      margin-top: rem(24);
+    }
   }
   &__img {
     display: block;
@@ -99,7 +122,9 @@ export default {
       padding-left: rem(24);
       padding-right: rem(24);
     }
-    img { transform: translateY(rem(6)); }
+    img {
+      transform: translateY(rem(6));
+    }
   }
 }
 .Sides {
@@ -108,7 +133,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
-  header { width: 100%; }
+  header {
+    width: 100%;
+  }
 }
 .Side {
   flex-grow: 1;
@@ -122,7 +149,8 @@ export default {
     flex-basis: 30%;
     max-width: 33.333333333%;
   }
-  &__img, &__text {
+  &__img,
+  &__text {
     padding: rem(16);
   }
   &__img {
@@ -140,12 +168,23 @@ export default {
     display: flex;
     flex-direction: column;
     transition-property: transform;
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       border-color: transparent;
       transform: translateY(rem(-4));
     }
   }
-  h3 { text-align: center; }
-  p { color: var(--base); }
+  h3 {
+    text-align: center;
+  }
+  p {
+    color: var(--base);
+    @include breakpoint(s) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 75%;
+      text-align: center;
+    }
+  }
 }
 </style>

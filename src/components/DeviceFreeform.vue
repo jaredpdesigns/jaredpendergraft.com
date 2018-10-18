@@ -12,12 +12,12 @@
 </template>
 <script>
 export default {
-  name: 'Freeform',
+  name: "Freeform",
   props: {
     alt: { default: null },
     height: { default: 320, type: Number },
-    img: { default: 'http://via.placeholder.com/320x320' },
+    img: { default: "http://via.placeholder.com/320x320" },
     width: { default: 320, type: Number }
   }
-}
+};
 </script>

@@ -13,10 +13,10 @@
 </template>
 <script>
 export default {
-  name: 'Phone',
+  name: "Phone",
   props: {
     alt: { default: null },
-    img: { default: 'http://via.placeholder.com/375x667' }
+    img: { default: "http://via.placeholder.com/375x667" }
   }
-}
+};
 </script>

@@ -13,13 +13,13 @@
 </template>
 <script>
 export default {
-  name: 'Error'
-}
+  name: "Error"
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Error {
-  background-image: url('https://i.giphy.com/media/de5bARu0SsXiU/giphy.webp');
+  background-image: url("https://i.giphy.com/media/de5bARu0SsXiU/giphy.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +27,7 @@ export default {
   &:before {
     background-color: black;
     bottom: rem(16);
-    content: '';
+    content: "";
     left: rem(16);
     opacity: 0.5;
     position: absolute;
@@ -39,9 +39,14 @@ export default {
     color: white;
     position: relative;
     text-align: center;
-    text-shadow: 0 rem(1) rem(2) rgba(black,0.25);
-    h1, a { color: inherit ; }
-    * + * { margin-top: rem(24); }
+    text-shadow: 0 rem(1) rem(2) rgba(black, 0.25);
+    h1,
+    a {
+      color: inherit;
+    }
+    * + * {
+      margin-top: rem(24);
+    }
   }
 }
 </style>

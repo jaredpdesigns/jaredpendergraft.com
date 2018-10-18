@@ -1,3 +1,5 @@
 export const actions = {
-  updateTheme ({commit}, value) { commit('updateTheme', value) }
-}
+  updateTheme({ commit }, value) {
+    commit("updateTheme", value);
+  }
+};

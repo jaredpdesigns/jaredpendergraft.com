@@ -10,21 +10,23 @@
 </template>
 <script>
 export default {
-  name: 'Recommendation',
+  name: "Recommendation",
   props: {
     person: { default: null },
     img: { default: null }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .Recommendation {
   @include box;
   &__text {
     padding: rem(24);
     position: relative;
-    @include breakpoint(m) { padding-left: rem(56); }
+    @include breakpoint(m) {
+      padding-left: rem(56);
+    }
     &:before {
       color: var(--highlight-50);
       font-family: "basic-sans", sans-serif;
@@ -32,16 +34,22 @@ export default {
       left: rem(16);
       position: absolute;
       top: rem(12);
-      @include breakpoint(m) { content: '“'; }
+      @include breakpoint(m) {
+        content: "“";
+      }
     }
-    > * + * { margin-top: rem(24); }
+    > * + * {
+      margin-top: rem(24);
+    }
   }
   &__footer {
     align-items: center;
     background-color: var(--highlight);
     display: flex;
     padding: rem(8) rem(24);
-    h4 { color: var(--contrast); }
+    h4 {
+      color: var(--contrast);
+    }
   }
 }
 </style>

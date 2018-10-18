@@ -13,10 +13,10 @@
 </template>
 <script>
 export default {
-  name: 'Browser',
+  name: "Browser",
   props: {
     alt: { default: null },
-    img: { default: 'http://via.placeholder.com/1440x900' }
+    img: { default: "http://via.placeholder.com/1440x900" }
   }
-}
+};
 </script>

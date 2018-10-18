@@ -90,12 +90,12 @@ $color-highlight-5:  tint($color-highlight,95%);</code></pre>
 </article>
 </template>
 <script>
-import Browser from '@/components/DeviceBrowser.vue'
-import Freeform from '@/components/DeviceFreeform.vue'
-import Img from '@/components/Img.vue'
-import Phone from '@/components/DevicePhone.vue'
-import Tablet from '@/components/DeviceTablet.vue'
+import Browser from "@/components/DeviceBrowser.vue";
+import Freeform from "@/components/DeviceFreeform.vue";
+import Img from "@/components/Img.vue";
+import Phone from "@/components/DevicePhone.vue";
+import Tablet from "@/components/DeviceTablet.vue";
 export default {
   components: { Browser, Freeform, Img, Phone, Tablet }
-}
+};
 </script>
