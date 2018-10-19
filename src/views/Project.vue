@@ -149,10 +149,12 @@ export default {
       .devicePhone {
         @include breakpoint(xsl) {
           max-width: rem(378);
+          width: 100%;
         }
       }
       .deviceTablet {
         max-width: rem(800);
+        width: 100%;
       }
       svg image {
         .themeDark & {
