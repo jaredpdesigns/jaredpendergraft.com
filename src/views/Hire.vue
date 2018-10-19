@@ -71,7 +71,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
 .Hire {
   flex-direction: column;
   justify-content: flex-start;

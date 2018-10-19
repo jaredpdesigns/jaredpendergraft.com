@@ -42,7 +42,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../assets/css/variables";
 .Project {
   align-items: center;
   flex-direction: column;

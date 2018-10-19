@@ -50,7 +50,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
 .header {
   align-items: center;
   background-color: var(--contrast);

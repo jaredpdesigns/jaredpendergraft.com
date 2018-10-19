@@ -26,7 +26,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../assets/css/variables";
 .Profile {
   @include box;
   align-items: stretch;

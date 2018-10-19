@@ -11,7 +11,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import 'assets/css/variables';
 @import url("https://use.typekit.net/zkw5aru.css");
 
 :root {

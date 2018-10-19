@@ -17,7 +17,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
 .Error {
   background-image: url("https://i.giphy.com/media/de5bARu0SsXiU/giphy.webp");
   background-position: center;
