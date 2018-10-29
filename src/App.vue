@@ -5,36 +5,54 @@
   </div>
 </template>
 <script>
-import Header from '@/components/Header.vue'
+import Header from "@/components/Header.vue";
 export default {
-  components: { Header }
-}
+  components: { Header },
+  methods: {
+    switchDark() {
+      let root = document.getElementsByTagName("html")[0];
+      root.classList.add("themeDark");
+      this.$store.dispatch("updateTheme", true);
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      let hours = new Date().getHours();
+      if (hours >= 18 && hours <= 6) {
+        // Turn on Dark mode if it's between 6pm & 6am
+        this.switchDark();
+      }
+    });
+  }
+};
 </script>
 <style lang="scss">
 @import url("https://use.typekit.net/zkw5aru.css");
 
 :root {
   --hue: 158;
-  --base: hsl(var(--hue),12%,25%);
-  --base-50: hsl(var(--hue),4%,50%);
-  --base-38: hsl(var(--hue),4%,62%);
-  --base-12: hsl(var(--hue),4%,88%);
-  --bg: hsl(var(--hue),4%,98%);
+  --base: hsl(var(--hue), 12%, 25%);
+  --base-50: hsl(var(--hue), 4%, 50%);
+  --base-38: hsl(var(--hue), 4%, 62%);
+  --base-12: hsl(var(--hue), 4%, 88%);
+  --bg: hsl(var(--hue), 4%, 98%);
   --contrast: white;
-  --highlight: hsl(var(--hue),32%,38%);
-  --highlight-50: hsl(var(--hue),32%,75%);
+  --highlight: hsl(var(--hue), 32%, 38%);
+  --highlight-50: hsl(var(--hue), 32%, 75%);
 }
 
 :root.themeDark {
-  --base: hsl(var(--hue),4%,75%);
-  --base-38: hsl(var(--hue),4%,38%);
-  --base-12: hsl(var(--hue),4%,12%);
-  --bg: hsl(var(--hue),4%,12%);
-  --contrast: hsl(var(--hue),12%,4%);
-  --highlight-50: hsl(var(--hue),32%,24%);
+  --base: hsl(var(--hue), 4%, 75%);
+  --base-38: hsl(var(--hue), 4%, 38%);
+  --base-12: hsl(var(--hue), 4%, 12%);
+  --bg: hsl(var(--hue), 4%, 12%);
+  --contrast: hsl(var(--hue), 12%, 4%);
+  --highlight-50: hsl(var(--hue), 32%, 24%);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -49,8 +67,12 @@ html {
   padding-top: rem(48);
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  @include breakpoint(xs-only){ padding-top: rem(80); }
-  @include breakpoint(l) { padding-top: rem(64); }
+  @include breakpoint(xs-only) {
+    padding-top: rem(80);
+  }
+  @include breakpoint(l) {
+    padding-top: rem(64);
+  }
 }
 
 ::selection {
@@ -58,11 +80,18 @@ html {
   color: white;
 }
 
-h1, h2, h3, h4, .btn {
+h1,
+h2,
+h3,
+h4,
+.btn {
   font-family: "basic-sans", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--base-50);
 }
 
@@ -88,7 +117,8 @@ h4 {
   text-transform: uppercase;
 }
 
-p, li {
+p,
+li {
   font-size: rem(18);
   line-height: rem(32);
 }
@@ -105,7 +135,8 @@ small {
   line-height: rem(24);
 }
 
-ul, ol {
+ul,
+ol {
   li {
     list-style: none;
     position: relative;
@@ -120,35 +151,45 @@ ol {
   counter-reset: custom-counter;
   li {
     padding-left: rem(40);
-    @include breakpoint(m) { padding-left: 0; }
+    @include breakpoint(m) {
+      padding-left: 0;
+    }
     &:before {
-      content: counter(custom-counter)'.';
+      content: counter(custom-counter) ".";
       counter-increment: custom-counter;
       display: inline-block;
       left: 0;
       position: absolute;
       text-align: right;
       width: rem(24);
-      @include breakpoint(m) { left: rem(-32); }
+      @include breakpoint(m) {
+        left: rem(-32);
+      }
     }
   }
 }
 
 ul li {
   padding-left: rem(16);
-  @include breakpoint(m) { padding-left: 0; }
+  @include breakpoint(m) {
+    padding-left: 0;
+  }
   &:before {
-    content: '•';
+    content: "•";
     display: inline-block;
     left: 0;
     position: absolute;
-    @include breakpoint(m) { left: rem(-16); }
+    @include breakpoint(m) {
+      left: rem(-16);
+    }
   }
 }
 
 nav li {
   padding: 0;
-  &:before { content: none; }
+  &:before {
+    content: none;
+  }
 }
 
 pre {
@@ -163,8 +204,12 @@ pre {
       font-size: rem(14);
     }
   }
-  .hljs-variable { color: var(--highlight); }
-  .hljs-number { color: var(--base-38); }
+  .hljs-variable {
+    color: var(--highlight);
+  }
+  .hljs-number {
+    color: var(--base-38);
+  }
 }
 code {
   color: var(--base-50);
@@ -183,17 +228,23 @@ a {
   text-decoration: none;
   transition: 0.375s ease-in;
   transition-property: color, border-color;
-  &:focus { outline: none; }
+  &:focus {
+    outline: none;
+  }
   p & {
     border-color: var(--highlight-50);
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       border-color: var(--base-50);
       color: var(--base);
     }
   }
 }
 
-a:hover, a:focus, nav .currentPage, nav .currentParent {
+a:hover,
+a:focus,
+nav .currentPage,
+nav .currentParent {
   border-color: var(--highlight-50);
 }
 
@@ -217,12 +268,15 @@ svg {
 }
 
 main {
-  box-shadow: inset rem(16) 0 0 0 var(--contrast), inset rem(-16)0 0 0 var(--contrast), inset 0 rem(-16) 0 0 var(--contrast);
+  box-shadow: inset rem(16) 0 0 0 var(--contrast),
+    inset rem(-16) 0 0 0 var(--contrast), inset 0 rem(-16) 0 0 var(--contrast);
   display: flex;
   min-height: calc(100vh - 4.25em);
   justify-content: center;
   padding: rem(16) rem(24);
-  @include breakpoint(xs-only) { padding-bottom: rem(72); }
+  @include breakpoint(xs-only) {
+    padding-bottom: rem(72);
+  }
 }
 
 article {
@@ -230,10 +284,14 @@ article {
   margin-right: auto;
   max-width: rem(960);
   width: 100%;
-  @include breakpoint(l) { max-width: rem(1280); }
+  @include breakpoint(l) {
+    max-width: rem(1280);
+  }
   > header {
     padding: rem(16) rem(24);
-    @include breakpoint(l) { padding: rem(32); }
+    @include breakpoint(l) {
+      padding: rem(32);
+    }
   }
 }
 </style>
