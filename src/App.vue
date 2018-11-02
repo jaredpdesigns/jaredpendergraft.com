@@ -17,9 +17,10 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      let hours = new Date().getHours();
-      if (hours >= 18 && hours <= 6) {
-        // Turn on Dark mode if it's between 6pm & 6am
+      let today = new Date();
+      let tomorrow = new Date(today);
+      tomorrow.setDate(today.getDate() + 1);
+      if (today.getHours() >= 18 && tomorrow.getHours() <= 6) {
         this.switchDark();
       }
     });
