@@ -18,9 +18,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       let today = new Date();
-      let tomorrow = new Date(today);
-      tomorrow.setDate(today.getDate() + 1);
-      if (today.getHours() >= 18 && tomorrow.getHours() <= 6) {
+      if (today.getHours() >= 18 || today.getHours() <= 6) {
         this.switchDark();
       }
     });
