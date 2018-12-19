@@ -18,7 +18,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       let today = new Date();
-      if (today.getHours() >= 18 || today.getHours() <= 6) {
+      if (today.getHours() >= 18 || today.getHours() <= 6 || window.matchMedia("(prefers-color-scheme: dark)").matches) {
         this.switchDark();
       }
     });
@@ -38,14 +38,6 @@ export default {
   --contrast: white;
   --highlight: hsl(var(--hue), 32%, 38%);
   --highlight-50: hsl(var(--hue), 32%, 75%);
-  @media (prefers-color-scheme: dark) {
-    --base: hsl(var(--hue), 4%, 75%);
-    --base-38: hsl(var(--hue), 4%, 38%);
-    --base-12: hsl(var(--hue), 4%, 12%);
-    --bg: hsl(var(--hue), 4%, 12%);
-    --contrast: hsl(var(--hue), 12%, 4%);
-    --highlight-50: hsl(var(--hue), 32%, 24%);
-  }
 }
 
 :root.themeDark {
