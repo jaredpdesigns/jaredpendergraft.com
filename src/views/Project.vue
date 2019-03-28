@@ -1,18 +1,28 @@
 <template>
   <main :class="$options.name">
-    <Head v-for="project in projectFiltered" :key="project.slug"
+    <Head
+      v-for="project in projectFiltered"
+      :key="project.slug"
       :title="project.name + ' | A Project by Jared Pendergraft'"
       :description="project.description"
       :image="'https://jaredpendergraft.com/img/projects/' + project.slug + '-social.jpg'"
       :url="'jaredpendergraft.com/projects/' + project.slug"
     />
-    <header v-for="project in projectFiltered" :key="project.name" :class="$options.name + '__header'" :style="'background-color: '+ project.color + ';'">
+    <header
+      v-for="project in projectFiltered"
+      :key="project.name"
+      :class="$options.name + '__header'"
+      :style="'background-color: '+ project.color + ';'"
+    >
       <section :class="$options.name + '__header--text'">
         <h1>{{ project.name }}</h1>
         <p>{{ project.description }}</p>
       </section>
       <section :class="$options.name + '__header--img'">
-        <img :alt="project.name + 'featured image'" :src="'/img/projects/' + project.slug + '/' + project.img + '.png'"/>
+        <img
+          :alt="project.name + 'featured image'"
+          :src="'/img/projects/' + project.slug + '/' + project.img + '.png'"
+        >
       </section>
     </header>
     <component :is="projectContent" :class="$options.name + '__content'"/>
@@ -65,13 +75,6 @@ export default {
       right: 0;
       position: absolute;
       top: 0;
-    }
-    .themeDark & {
-      opacity: 0.5;
-      transition: opacity 0.375s ease-in;
-      &:hover {
-        opacity: 1;
-      }
     }
     &--text {
       padding: rem(24);
@@ -155,15 +158,6 @@ export default {
       .deviceTablet {
         max-width: rem(800);
         width: 100%;
-      }
-      svg image {
-        .themeDark & {
-          opacity: 0.5;
-          transition: opacity 0.375s ease-in;
-          &:hover {
-            opacity: 1;
-          }
-        }
       }
     }
   }

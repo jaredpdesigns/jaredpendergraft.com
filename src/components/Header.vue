@@ -1,25 +1,50 @@
 <template>
   <header class="header" role="heading">
-    <h3><router-link to="/" exactActiveClass="currentPage">Jared Pendergraft</router-link></h3>
+    <h3>
+      <router-link to="/" exactActiveClass="currentPage">Jared Pendergraft</router-link>
+    </h3>
     <nav class="mainNav" role="navigation">
       <ul>
-        <li><router-link to="/" exactActiveClass="currentPage">About</router-link></li>
-        <li><router-link to="/projects" activeClass="currentParent" exactActiveClass="currentPage">Projects</router-link></li>
-        <li><router-link to="/hire" exactActiveClass="currentPage">Hire Me</router-link></li>
+        <li>
+          <router-link to="/" exactActiveClass="currentPage">About</router-link>
+        </li>
+        <li>
+          <router-link
+            to="/projects"
+            activeClass="currentParent"
+            exactActiveClass="currentPage"
+          >Projects</router-link>
+        </li>
+        <li>
+          <router-link to="/hire" exactActiveClass="currentPage">Hire Me</router-link>
+        </li>
       </ul>
     </nav>
     <nav class="socialNav" role="navigation">
-      <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?" title="Send me an email" >
+      <a
+        href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?"
+        title="Send me an email"
+      >
         <Icon name="email" :size="20"/>
       </a>
-      <a href="https://twitter.com/jaredpdesigns" title="Follow me on Twitter" target="_blank" rel="noopener">
+      <a
+        href="https://twitter.com/jaredpdesigns"
+        title="Follow me on Twitter"
+        target="_blank"
+        rel="noopener"
+      >
         <Icon name="twitter" :size="20"/>
       </a>
-      <a href="https://dribbble.com/jaredpdesigns" title="Follow me on Dribbble" target="_blank" rel="noopener">
+      <a
+        href="https://dribbble.com/jaredpdesigns"
+        title="Follow me on Dribbble"
+        target="_blank"
+        rel="noopener"
+      >
         <Icon name="dribbble" :size="20"/>
       </a>
       <a @click="updateTheme">
-        <Icon v-if="dark" name="sun" :size="20"/>
+        <Icon v-if="theme === 'dark'" name="sun" :size="20"/>
         <Icon v-else name="moon" :size="20"/>
       </a>
     </nav>
@@ -31,19 +56,18 @@ export default {
   name: "Header",
   components: { Icon },
   computed: {
-    dark() {
-      return this.$store.state.dark;
+    theme() {
+      return this.$store.state.theme;
     }
   },
   methods: {
     updateTheme() {
       let root = document.getElementsByTagName("html")[0];
-      if (this.dark) {
-        root.classList.remove("themeDark");
-        this.$store.dispatch("updateTheme", false);
+      root.setAttribute("data-theme", this.theme);
+      if (this.theme === "dark") {
+        this.$store.dispatch("updateTheme", "light");
       } else {
-        root.classList.add("themeDark");
-        this.$store.dispatch("updateTheme", true);
+        this.$store.dispatch("updateTheme", "dark");
       }
     }
   }

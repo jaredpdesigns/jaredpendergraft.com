@@ -6,8 +6,15 @@
     />
     <article>
       <h1>The page you’re looking for is unavailable.</h1>
-      <p>Return <router-link to="/">home</router-link> or check out my <router-link to="/projects">projects</router-link>.</p>
-      <p>Interested in working together? Read more about <router-link to="/hire#process">my creative process</router-link>.</p>
+      <p>
+        Return
+        <router-link to="/">home</router-link>or check out my
+        <router-link to="/projects">projects</router-link>.
+      </p>
+      <p>
+        Interested in working together? Read more about
+        <router-link to="/hire#process">my creative process</router-link>.
+      </p>
     </article>
   </main>
 </template>

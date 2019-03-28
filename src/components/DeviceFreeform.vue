@@ -1,12 +1,31 @@
 <template>
-  <svg class="deviceFreeform"role="img" :aria-label="alt" xmlns="http://www.w3.org/2000/svg" :width="width" :height="height" :viewBox="'0 0 ' + width + ' ' + height" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg
+    class="deviceFreeform"
+    role="img"
+    :aria-label="alt"
+    xmlns="http://www.w3.org/2000/svg"
+    :width="width"
+    :height="height"
+    :viewBox="'0 0 ' + width + ' ' + height"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
     <title>{{ alt }}</title>
     <g fill="none" fill-rule="evenodd">
       <mask :id="this._uid + '-freeform-mask'" fill="white">
-        <rect :width="width" :height="height" rx="8"/>
+        <rect :width="width" :height="height" rx="8"></rect>
       </mask>
-      <rect fill="var(--contrast)" :width="width" :height="height" :mask="'url(#'+ this._uid + '-freeform-mask)'"/>
-      <image :xlink:href="'/img/projects/' + img" :width="width" :height="height" :mask="'url(#'+ this._uid + '-freeform-mask)'"/>
+      <rect
+        fill="var(--contrast)"
+        :width="width"
+        :height="height"
+        :mask="'url(#'+ this._uid + '-freeform-mask)'"
+      ></rect>
+      <image
+        :xlink:href="'/img/projects/' + img"
+        :width="width"
+        :height="height"
+        :mask="'url(#'+ this._uid + '-freeform-mask)'"
+      ></image>
     </g>
   </svg>
 </template>

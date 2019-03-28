@@ -1,6 +1,6 @@
 <template>
   <figure>
-    <img :src="'/img/projects/' + img" :alt="alt"/>
+    <img :src="'/img/projects/' + img" :alt="alt">
   </figure>
 </template>
 <script>

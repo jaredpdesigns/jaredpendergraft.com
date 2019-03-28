@@ -7,28 +7,38 @@
     <article :class="$options.name + '__holder'">
       <header>
         <h4>Featured Projects</h4>
-        <hr/>
+        <hr>
       </header>
-      <figure v-for="project in projects" :key="project.name" class="Project" :style="'background-color:' + project.color">
+      <figure
+        v-for="project in projects"
+        :key="project.name"
+        class="Project"
+        :style="'background-color:' + project.color"
+      >
         <figcaption class="Project__text">
           <h1>{{ project.name }}</h1>
           <p>{{ project.description }}</p>
-          <Button label="Project Details" :link="'/projects/' + project.slug" :arrow="true" :projectName="project.name" />
+          <Button
+            label="Project Details"
+            :link="'/projects/' + project.slug"
+            :arrow="true"
+            :projectName="project.name"
+          />
         </figcaption>
         <span class="Project__img">
-          <img :src="'/img/projects/' + project.slug + '/' + project.img + '.png'"/>
+          <img :src="'/img/projects/' + project.slug + '/' + project.img + '.png'">
         </span>
       </figure>
     </article>
     <article class="Sides">
       <header>
         <h4>Side Projects</h4>
-        <hr/>
+        <hr>
       </header>
       <figure v-for="side in sides" :key="side.name" class="Side">
         <a :href="side.url" target="_blank" rel="noopener" :title="side.name">
           <span class="Side__img">
-            <img :src="'/img/projects/sides/' + side.img + '.svg'"/>
+            <img :src="'/img/projects/sides/' + side.img + '.svg'">
           </span>
           <figcaption class="Side__text">
             <h3>{{ side.name }}</h3>
@@ -82,13 +92,6 @@ export default {
     position: absolute;
     top: 0;
   }
-  .themeDark & {
-    opacity: 0.5;
-    transition: opacity 0.375s ease-in;
-    &:hover {
-      opacity: 1;
-    }
-  }
   + * {
     margin-top: rem(48);
   }
@@ -140,13 +143,11 @@ export default {
   flex-grow: 1;
   padding: rem(8);
   padding-top: rem(16);
-  @include breakpoint(s) {
-    flex-basis: 45%;
-    max-width: 50%;
+  @include breakpoint(xsl) {
+    flex-basis: 50%;
   }
-  @include breakpoint(l) {
-    flex-basis: 30%;
-    max-width: 33.333333333%;
+  @include breakpoint(m) {
+    flex-basis: 25%;
   }
   &__img,
   &__text {
@@ -177,12 +178,11 @@ export default {
     text-align: center;
   }
   p {
-    color: var(--base);
+    text-align: center;
     @include breakpoint(s) {
       margin-left: auto;
       margin-right: auto;
       max-width: 75%;
-      text-align: center;
     }
   }
 }

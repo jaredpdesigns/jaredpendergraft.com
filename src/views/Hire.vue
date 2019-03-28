@@ -1,13 +1,18 @@
 <template>
   <main :class="$options.name">
-    <Head
-      title="Hire Me | Jared Pendergraft"
-      description="Let’s create something great together!"
-    />
+    <Head title="Hire Me | Jared Pendergraft" description="Let’s create something great together!"/>
     <header>
       <h1>Let’s create something great together!</h1>
-      <p>I’m not currently looking for any full-time work but feel free to view my <router-link to="resume">résumé</router-link> to get a little more information about my background.</p>
-      <p>I’m always interested in creative freelance opportunities—if you'd like to work together send me an <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?">email</a>.</p>
+      <p>
+        I’m not currently looking for any full-time work but feel free to view my
+        <router-link to="resume">résumé</router-link>to get a little more information about my background.
+      </p>
+      <p>
+        I’m always interested in creative freelance opportunities—if you'd like to work together send me an
+        <a
+          href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?"
+        >email</a>.
+      </p>
     </header>
     <article id="process" class="Process">
       <section class="Process__wrapper">

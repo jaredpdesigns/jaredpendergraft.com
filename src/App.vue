@@ -8,18 +8,17 @@
 import Header from "@/components/Header.vue";
 export default {
   components: { Header },
-  methods: {
-    switchDark() {
-      let root = document.getElementsByTagName("html")[0];
-      root.classList.add("themeDark");
-      this.$store.dispatch("updateTheme", true);
-    }
-  },
   mounted() {
     this.$nextTick(() => {
       let today = new Date();
-      if (today.getHours() >= 18 || today.getHours() <= 6 || window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        this.switchDark();
+      if (
+        today.getHours() >= 18 ||
+        today.getHours() <= 6 ||
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        let root = document.getElementsByTagName("html")[0];
+        root.setAttribute("data-theme", "dark");
+        this.$store.dispatch("updateTheme", "dark");
       }
     });
   }
@@ -40,7 +39,7 @@ export default {
   --highlight-50: hsl(var(--hue), 32%, 75%);
 }
 
-:root.themeDark {
+:root[data-theme="dark"] {
   --base: hsl(var(--hue), 4%, 75%);
   --base-38: hsl(var(--hue), 4%, 38%);
   --base-12: hsl(var(--hue), 4%, 12%);

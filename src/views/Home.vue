@@ -1,24 +1,35 @@
 <template>
-<main>
-  <Head
-    title="About | Jared Pendergraft"
-    description="The personal website of Jared Pendergraft"
-    keywords="jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui"
-    image="http://jaredpendergraft.com/img/social.jpg"
-    url="jaredpendergraft.com"
-  />
-  <article :class="$options.name">
-    <figure :class="$options.name + '__img'">
-      <img src="../assets/img/profile.jpg"/>
-    </figure>
-    <figcaption :class="$options.name + '__text'">
-      <h1>Hello, it’s nice to meet you.</h1>
-      <p>I’m a multi-disciplinary designer focusing on the <em>intersection of design and development</em>. I care deeply about how something works as much as its outward appearance and am always looking to <em>improve, optimize and scale my ideas</em>.</p>
-      <p>I approach design challenges holistically, building solutions from beginning to end with <em>extensibility and modularity</em> in mind. I enjoy building out designs to fully-functional front-end code—bridging the gap between design and development seamlessly.</p>
-      <p>View <router-link to="/projects">projects</router-link> I’ve worked on or learn more about my <router-link to="/hire#process">creative process</router-link>.</p>
-    </figcaption>
-  </article>
-</main>
+  <main>
+    <Head
+      title="About | Jared Pendergraft"
+      description="The personal website of Jared Pendergraft"
+      keywords="jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui"
+      image="http://jaredpendergraft.com/img/social.jpg"
+      url="jaredpendergraft.com"
+    />
+    <article :class="$options.name">
+      <figure :class="$options.name + '__img'">
+        <img src="../assets/img/profile.jpg">
+      </figure>
+      <figcaption :class="$options.name + '__text'">
+        <h1>Hello, it’s nice to meet you.</h1>
+        <p>
+          I’m a multi-disciplinary designer focusing on the
+          <em>intersection of design and development</em>. I care deeply about how something works as much as its outward appearance and am always looking to
+          <em>improve, optimize and scale my ideas</em>.
+        </p>
+        <p>
+          I approach design challenges holistically, building solutions from beginning to end with
+          <em>extensibility and modularity</em> in mind. I enjoy building out designs to fully-functional front-end code—bridging the gap between design and development seamlessly.
+        </p>
+        <p>
+          View
+          <router-link to="/projects">projects</router-link>I’ve worked on or learn more about my
+          <router-link to="/hire#process">creative process</router-link>.
+        </p>
+      </figcaption>
+    </article>
+  </main>
 </template>
 <script>
 export default {
@@ -60,13 +71,6 @@ export default {
     }
     img {
       visibility: hidden;
-    }
-    .themeDark & {
-      opacity: 0.5;
-      transition: opacity 0.375s ease-in;
-      &:hover {
-        opacity: 1;
-      }
     }
   }
   &__text {
