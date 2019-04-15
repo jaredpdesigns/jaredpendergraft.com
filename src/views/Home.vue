@@ -24,7 +24,7 @@
         </p>
         <p>
           View
-          <router-link to="/projects">projects</router-link>I’ve worked on or learn more about my
+          <router-link to="/projects">projects</router-link> I’ve worked on or learn more about my
           <router-link to="/hire#process">creative process</router-link>.
         </p>
       </figcaption>
