@@ -9,18 +9,11 @@ import Header from "@/components/Header.vue";
 export default {
   components: { Header },
   mounted() {
-    this.$nextTick(() => {
-      let today = new Date();
-      if (
-        today.getHours() >= 18 ||
-        today.getHours() <= 6 ||
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        let root = document.getElementsByTagName("html")[0];
-        root.setAttribute("data-theme", "dark");
-        this.$store.dispatch("updateTheme", "dark");
-      }
-    });
+    if (window.matchMedia("(prefers-color-scheme: dark)")) {
+      let root = document.getElementsByTagName("html")[0];
+      root.setAttribute("data-theme", "dark");
+      this.$store.dispatch("updateTheme", "dark");
+    }
   }
 };
 </script>
