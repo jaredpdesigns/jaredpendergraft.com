@@ -17,35 +17,39 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .Recommendation {
-  @include box;
+  background-color: var(--contrast);
+  border: rem(1) solid var(--base-ghost);
+  border-radius: rem(8);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 0 !important;
   &__text {
-    padding: rem(24);
+    padding: rem(16);
     position: relative;
     @include breakpoint(m) {
-      padding-left: rem(56);
+      padding-left: rem(64);
     }
     &:before {
-      color: var(--highlight-50);
-      font-family: "basic-sans", sans-serif;
+      color: var(--highlight);
       font-size: rem(64);
       left: rem(16);
       position: absolute;
-      top: rem(12);
+      top: rem(4);
       @include breakpoint(m) {
         content: "“";
       }
     }
     > * + * {
-      margin-top: rem(24);
+      margin-top: rem(16);
     }
   }
   &__footer {
     align-items: center;
     background-color: var(--highlight);
     display: flex;
-    padding: rem(8) rem(24);
+    padding: rem(16) rem(32);
     h4 {
       color: var(--contrast);
     }

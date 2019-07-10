@@ -7,20 +7,25 @@
     <article :class="$options.name">
       <header>
         <h1>Résumé</h1>
+        <hr />
       </header>
       <section :class="$options.name + '__content'">
         <p>I’m a multi-disciplinary designer focusing on the intersection of design and development. I enjoy building out designs to fully-functional front-end code—bridging the gap between design and development seamlessly.</p>
         <p>I’m looking for a creative position that offers challenges, collaboration and mentorship, with an ability to work on projects that impact the world positively.</p>
-        <h3>Capabilities</h3>
-        <hr>
+        <section :class="$options.name + '__content--separator'">
+          <h3>Capabilities</h3>
+          <hr />
+        </section>
         <ul>
           <li>I’m a thorough thinker who approaches design challenges holistically—I build solutions from beginning to end with extensibility and modularity in mind.</li>
           <li>I care deeply about how something works as much as its outward appearance—I love to tinker and am always looking to improve, optimize and scale my ideas.</li>
           <li>I’m a lifelong learner who’s always looking to reposition my opinions to reflect new information and become a well-informed, kinder human.</li>
           <li>When I work with others it’s about listening and sharing in the creation of new ideas—the things we make together are always better when we collaborate.</li>
         </ul>
-        <h3>Philosophies</h3>
-        <hr>
+        <section :class="$options.name + '__content--separator'">
+          <h3>Philosophies</h3>
+          <hr />
+        </section>
         <ul>
           <li>
             <strong>Responsive Web Design</strong>—screens are everywhere, web things should scale and squish and transform to meet the challenges of modern day devices.
@@ -35,27 +40,33 @@
             <strong>Project Management</strong>—every project consists of many moving parts, each piece must be overseen and nurtured to contribute to a successful whole.
           </li>
         </ul>
-        <h3>Technologies</h3>
-        <hr>
+        <section :class="$options.name + '__content--separator'">
+          <h3>Technologies</h3>
+          <hr />
+        </section>
         <ul>
           <li>Content Management (Jekyll, Shopify, Wordpress)</li>
           <li>CSS/HTML/JS (LESS, SASS, jQuery, React, Vue)</li>
           <li>UI/UX (Adobe Suite, Prototyping, Sketch, User Research)</li>
           <li>Version Control (Git, Subversion)</li>
         </ul>
-        <h3>Education</h3>
-        <hr>
+        <section :class="$options.name + '__content--separator'">
+          <h3>Education</h3>
+          <hr />
+        </section>
         <h4>Pacific University</h4>
         <p>
           <em>Bachelor of Arts in Graphic Design & Video Production</em>
-          <br>2007 • Forest Grove, OR
+          <br />2007 • Forest Grove, OR
         </p>
-        <h3>Experience</h3>
-        <hr>
+        <section :class="$options.name + '__content--separator'">
+          <h3>Experience</h3>
+          <hr />
+        </section>
         <h4>Education Advanced</h4>
         <p>
           <em>Director of UI/UX</em>
-          <br>Currently • Remote
+          <br />Currently • Remote
         </p>
         <ul>
           <li>Directs the user-experience and user-interface of multiple applications within the company.</li>
@@ -66,7 +77,7 @@
         <h4>OTTO Health</h4>
         <p>
           <em>Designer & Front-End Developer</em>
-          <br>2017 • Remote
+          <br />2017 • Remote
         </p>
         <ul>
           <li>Developed a robust design system to support complete application redesign.</li>
@@ -76,7 +87,7 @@
         <h4>Kontur Labs</h4>
         <p>
           <em>Creative Director & Front-End Developer</em>
-          <br>2013–2017 • Maui, HI
+          <br />2013–2017 • Maui, HI
         </p>
         <ul>
           <li>Managed and oversaw all creative projects including websites and iOS/Android applications.</li>
@@ -86,7 +97,7 @@
         <h4>Kaiser Permanente</h4>
         <p>
           <em>Graphic Designer</em>
-          <br>2009–2013 • Portland, OR
+          <br />2009–2013 • Portland, OR
         </p>
         <ul>
           <li>Created and maintained collateral for Kaiser Permanente on a national level and while designing within Kaiser Permanente’s brand guidelines.</li>
@@ -96,15 +107,17 @@
         <h4>Education Northwest</h4>
         <p>
           <em>Graphic Designer</em>
-          <br>2007–2009 • Portland, OR
+          <br />2007–2009 • Portland, OR
         </p>
         <ul>
           <li>Designed and prepared educational materials for education coordinators who implemented government-sponsored education plans across the country.</li>
           <li>Established a process for materials development and enforced brand and identity guidelines for all pieces.</li>
           <li>Managed the completion of all creative projects and worked with outside vendors to produce final materials.</li>
         </ul>
-        <h3>Recommendations</h3>
-        <hr>
+        <section :class="$options.name + '__content--separator'">
+          <h3>Recommendations</h3>
+          <hr />
+        </section>
         <Recommendation
           person="Bristol Dunlap"
           img="https://media.licdn.com/dms/image/C5103AQHvNGydkkuRyQ/profile-displayphoto-shrink_200_200/0?e=1533772800&v=beta&t=7cqwEWeP4f63CYGTaFxycLgRWDBbQJlsEvmxnij6yAg"
@@ -143,31 +156,45 @@ export default {
   components: { Recommendation }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .Resume {
-  padding: rem(24);
-  header {
-    padding: 0;
+  padding: rem(16);
+  h1 {
+    color: var(--highlight);
+  }
+  h3 {
+    color: var(--base-mid);
+  }
+  > header {
+    padding-top: rem(16);
+  }
+  > header,
+  &__content--separator {
     text-align: center;
-    h1 {
-      color: var(--highlight);
-    }
   }
   &__content {
-    @include legible;
-    margin-top: rem(32);
-    h2,
-    h3 {
-      margin-top: rem(48);
+    padding-top: rem(16);
+    > * {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: rem(640);
+      padding-left: rem(16);
+      padding-right: rem(16);
+      @include breakpoint(xl) {
+        max-width: rem(960);
+      }
+      + * {
+        margin-top: rem(16);
+      }
     }
-    h4 + * {
-      margin-top: 0;
+    > h4 {
+      margin-top: rem(32);
     }
-    > hr {
-      margin-top: rem(8);
-    }
-    > * + * {
-      margin-top: rem(24);
+    &--separator {
+      margin-top: rem(32);
+      + h4 {
+        margin-top: rem(16);
+      }
     }
   }
 }

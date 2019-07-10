@@ -1,42 +1,58 @@
 export const projects = [
   {
-    name: "OTTO",
+    name: "Nice Bike",
+    description:
+      "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",
+    img: "/img/projects/nicebike/nicebike-main.png",
+    slug: "nicebike",
+    color: "#47D230"
+  },
+  {
+    name: "OTTO Health",
     description:
       "Video consultation application for connecting providers to patients, practice administration and scheduling.",
-    img: "otto-feature-inner",
+    img: "/img/projects/otto/otto-main.png",
     slug: "otto",
     color: "#FFA07A"
   },
   {
-    name: "Contour",
+    name: "Avery Mirabelle",
     description:
-      "Geo-visualization application for government agencies to predict and prevent global natural disasters.",
-    img: "contour-feature-inner",
-    slug: "contour",
-    color: "#1978d4"
+      "Time capsule of videos from my daughter’s life so far.",
+    img: "/img/projects/averymirabelle/averymirabelle-main.png",
+    external: "https://averymirabelle.com",
+    color: "#FE95AC"
   },
   {
-    name: "Kipa",
+    name: "Avery’s Amazing Art",
     description:
-      "An application concept for booking local tour guides to take you on exciting adventures.",
-    img: "kipa-feature-inner",
-    slug: "kipa",
-    color: "#8D44AD"
+      "Showcase of a variety of art that Avery creates using many different mediums.",
+    img: "/img/projects/averysamazingart/averysamazingart-main.png",
+    external: "https://averysamazingart.com",
+    color: "#BC47FF"
   },
   {
-    name: "Yodle Restaurants",
+    name: "Ezra Oliver",
     description:
-      "An iPad application, dashboards and marketing site for capturing and managing engaging restaurant reviews.",
-    img: "yodlerestaurants-feature-inner",
-    slug: "yodlerestaurants",
-    color: "#005A8C"
+      "Time capsule of videos from my son’s life so far.",
+    img: "/img/projects/ezraoliver/ezraoliver-main.png",
+    external: "https://ezrapendergraft.com",
+    color: "#008BD6"
   },
   {
-    name: "mdia",
+    name: "These Kids Read",
     description:
-      "An application concept for tracking books, movies and music you enjoy.",
-    img: "mdia-feature-inner",
-    slug: "mdia",
-    color: "#FF5B5E"
-  }
+      "A collection of great books our family reads together.",
+    img: "/img/projects/thesekidsread/thesekidsread-main.png",
+    external: "https://thesekidsread.com",
+    color: "#00A396"
+  },
+  {
+    name: "These Kids Math",
+    description:
+      "A fun, interactive way for kids to learn math.",
+    img: "/img/projects/thesekidsmath/thesekidsmath-main.png",
+    external: "https://thesekidsmath.netlify.com",
+    color: "#1F5AFF"
+  },
 ];

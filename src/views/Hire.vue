@@ -1,11 +1,12 @@
 <template>
   <main :class="$options.name">
-    <Head title="Hire Me | Jared Pendergraft" description="Let’s create something great together!"/>
+    <Head title="Hire Me | Jared Pendergraft" description="Let’s create something great together!" />
     <header>
       <h1>Let’s create something great together!</h1>
+      <hr/>
       <p>
         I’m not currently looking for any full-time work but feel free to view my
-        <router-link to="resume">résumé</router-link> to get a little more information about my background.
+        <router-link to="/hire/resume">résumé</router-link> to get a little more information about my background.
       </p>
       <p>
         I’m always interested in creative freelance opportunities—if you'd like to work together send me an
@@ -14,14 +15,20 @@
         >email</a>.
       </p>
     </header>
-    <article id="process" class="Process">
-      <section class="Process__wrapper">
-        <header>
-          <h2>My Creative Process</h2>
-        </header>
-        <section v-for="process in processes" :key="process.label" class="Process__item">
+    <article id="process">
+      <header>
+        <h2>My Creative Process</h2>
+        <hr/>
+        <p>While each project requires different approaches to problem-solving, here are a few examples of common ways I approach design challenges:</p>
+      </header>
+      <section :class="$options.name + '__process'">
+        <section
+          v-for="process in processes"
+          :key="process.label"
+          :class="$options.name + '__process--item'"
+        >
           <figure>
-            <Process :name="process.img" :size="64"/>
+            <Process :name="process.img" :size="64" />
           </figure>
           <figcaption>
             <h4>{{ process.label }}</h4>
@@ -75,64 +82,57 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .Hire {
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 0;
-  padding-right: 0;
-  > header {
-    margin: 0 auto;
-    max-width: rem(960);
-    padding: rem(32);
-    h1 {
-      color: var(--highlight);
-      padding: rem(16) 0;
-      text-align: center;
-    }
-    * + * {
-      margin-top: rem(24);
-    }
-  }
-}
-.Process {
-  @include box;
-  max-width: 100%;
   padding: rem(16);
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: rem(1280);
-    > header {
-      padding: rem(24);
-      text-align: center;
-      width: 100%;
-    }
+  h1 {
+    color: var(--highlight);
   }
-  &__item {
-    flex: 1 1 100%;
-    padding: 1.5rem;
-    @include breakpoint(s) {
-      flex: 1 1 45%;
-      max-width: 50%;
-    }
-    @include breakpoint(l) {
-      flex: 1 1 32%;
-      max-width: calc(100% / 3);
-    }
-    figure {
-      padding-bottom: rem(24);
-      text-align: center;
-      svg {
-        margin: 0 auto;
+  h2, h4 {
+    color: var(--base-mid);
+  }
+  header {
+    padding-top: rem(16);
+    text-align: center;
+    > * {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: rem(640);
+      padding-left: rem(16);
+      padding-right: rem(16);
+      @include breakpoint(xl) {
+        max-width: rem(960);
+      }
+      + * {
+        margin-top: rem(16);
       }
     }
-    h4 {
-      color: var(--highlight);
-      margin-bottom: rem(8);
+    > p {
+      text-align: left;
+    }
+  }
+  article > header {
+    margin: rem(32) 0;
+  }
+  &__process {
+    align-items: start;
+    display: grid;
+    grid-gap: rem(32);
+    grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+    margin: rem(16) auto;
+    max-width: rem(1280);
+    &--item {
+      background-color: var(--contrast);
+      border: rem(1) solid var(--base-ghost);
+      border-radius: rem(8);
+      box-shadow: var(--shadow);
+      padding: rem(16);
+      * + * {
+        margin-top: rem(16);
+      }
+      figure {
+        text-align: center;
+      }
     }
   }
 }

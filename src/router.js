@@ -42,7 +42,7 @@ export default new Router({
       component: Project
     },
     {
-      path: "/resume/",
+      path: "/hire/resume/",
       name: "Résumé",
       component: Resume
     },

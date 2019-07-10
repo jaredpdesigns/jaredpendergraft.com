@@ -8,11 +8,14 @@
       url="jaredpendergraft.com"
     />
     <article :class="$options.name">
+      <header>
+        <h1>Hello, it’s nice to meet you.</h1>
+        <hr />
+      </header>
       <figure :class="$options.name + '__img'">
-        <img src="../assets/img/profile.jpg">
+        <img src="../assets/img/profile-big.jpg" />
       </figure>
       <figcaption :class="$options.name + '__text'">
-        <h1>Hello, it’s nice to meet you.</h1>
         <p>
           I’m a multi-disciplinary designer focusing on the
           <em>intersection of design and development</em>. I care deeply about how something works as much as its outward appearance and am always looking to
@@ -38,50 +41,51 @@ export default {
 </script>
 <style lang="scss">
 .Profile {
-  @include box;
-  align-items: stretch;
-  align-self: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  overflow: hidden;
-  @include breakpoint(m) {
-    flex-wrap: nowrap;
+  align-items: start;
+  display: grid;
+  grid-gap: rem(32);
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(480)) minmax(auto, rem(480))
+    minmax(0, 1fr) minmax(0, 1fr);
+  padding: rem(16);
+  @include breakpoint(xl) {
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(640)) minmax(
+        auto,
+        rem(640)
+      )
+      minmax(0, 1fr) minmax(0, 1fr);
+    grid-gap: rem(64);
   }
-  &__img,
-  &__text {
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: rem(24);
-    @include breakpoint(m) {
-      flex-basis: 50%;
-    }
-  }
-  &__img {
-    background-color: var(--base-50);
-    background-image: url("../assets/img/profile-big.jpg");
-    background-position: 50% 25%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 38vh;
-    padding-bottom: 0;
+  > header {
+    grid-column: 3 / span 2;
+    padding-top: rem(16);
     text-align: center;
-    @include breakpoint(l) {
-      min-height: 50vh;
-    }
-    img {
-      visibility: hidden;
-    }
-  }
-  &__text {
-    @include breakpoint(m) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: rem(32);
-    }
     h1 {
       color: var(--highlight);
+    }
+  }
+  > figure {
+    border-radius: rem(8);
+    box-shadow: var(--shadow);
+    justify-self: end;
+    grid-column: 1 / span 6;
+    overflow: hidden;
+    @include breakpoint(xsl) {
+      grid-column: 1 / span 3;
+    }
+    img {
+      vertical-align: middle;
+      @include breakpoint(m) {
+        max-height: 75vh;
+      }
+    }
+  }
+  > figcaption {
+    align-self: center;
+    grid-column: 2 / span 4;
+    @include breakpoint(xsl) {
+      grid-column: 4 / span 1;
     }
     > * + * {
       margin-top: rem(16);

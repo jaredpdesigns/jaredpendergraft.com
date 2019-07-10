@@ -1,5 +1,5 @@
 <template>
-  <main :class="$options.name">
+  <main :class="$options.name" :style="'--project:' + this.projectColor">
     <Head
       v-for="project in projectFiltered"
       :key="project.slug"
@@ -12,24 +12,18 @@
       v-for="project in projectFiltered"
       :key="project.name"
       :class="$options.name + '__header'"
-      :style="'background-color: '+ project.color + ';'"
     >
+      <section :class="$options.name + '__header--img'" :style="projectImg"></section>
       <section :class="$options.name + '__header--text'">
-        <h1>{{ project.name }}</h1>
+        <h1 :style="'color: '+ project.color">{{ project.name }}</h1>
+        <hr />
         <p>{{ project.description }}</p>
       </section>
-      <section :class="$options.name + '__header--img'">
-        <img
-          :alt="project.name + 'featured image'"
-          :src="'/img/projects/' + project.slug + '/' + project.img + '.png'"
-        >
-      </section>
     </header>
-    <component :is="projectContent" :class="$options.name + '__content'"/>
+    <component :is="projectContent" :class="$options.name + '__content'" />
   </main>
 </template>
 <script>
-import { _ } from "vue-underscore";
 export default {
   name: "Project",
   computed: {
@@ -39,6 +33,9 @@ export default {
     projects() {
       return this.$store.state.projects;
     },
+    projectColor() {
+      return this.projectFiltered.map(project => project.color);
+    },
     projectContent() {
       return () => import(`@/projects/${this.project}.vue`);
     },
@@ -47,117 +44,142 @@ export default {
       return this.projects.filter(project => {
         return project.slug === projectSlug;
       });
+    },
+    projectImg() {
+      const img = this.projectFiltered.map(project => project.img);
+      return {
+        backgroundImage: "url(" + img + ")"
+      };
     }
   }
 };
 </script>
 <style lang="scss">
 .Project {
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: rem(16);
-  padding-right: rem(16);
-  padding-top: 0;
   &__header {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    &:before {
-      background-image: linear-gradient(
-        to bottom,
-        rgba(white, 0.125),
-        rgba(white, 0)
-      );
-      bottom: 0;
-      content: "";
-      left: 0;
-      right: 0;
-      position: absolute;
-      top: 0;
+    display: grid;
+    grid-gap: rem(32);
+    padding: rem(16);
+    @media (orientation: landscape) {
+      grid-template-columns:
+        minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(360)) minmax(
+          auto,
+          rem(360)
+        )
+        minmax(0, 1fr) minmax(0, 1fr);
+      height: calc(100vh - 4rem);
     }
-    &--text {
-      padding: rem(24);
-      text-align: center;
-      @include breakpoint(m) {
-        padding: rem(32);
-      }
-      > h1,
-      p {
-        color: var(--contrast);
-      }
-      > p {
-        @include legible;
-        text-align: left;
-        @include breakpoint(m) {
-          text-align: center;
-        }
-      }
-      > * + * {
-        margin-top: rem(24);
-      }
+    @include breakpoint(xl) {
+      grid-template-columns:
+        minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(480)) minmax(
+          auto,
+          rem(480)
+        )
+        minmax(0, 1fr) minmax(0, 1fr);
+      grid-gap: rem(64);
     }
     &--img {
-      padding-left: rem(16);
-      padding-right: rem(16);
-      text-align: center;
-      img {
-        transform: translateY(rem(6));
+      background-color: var(--project);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: rem(8);
+      box-shadow: var(--shadow);
+      grid-column: 1 / span 6;
+      min-height: 38vh;
+      overflow: hidden;
+      @include breakpoint(s) {
+        min-height: 50vh;
+      }
+      @media (orientation: landscape) {
+        grid-column: 1 / span 3;
+      }
+    }
+    &--text {
+      align-self: center;
+      grid-column: 2 / span 4;
+      @include breakpoint(xsl) {
+        grid-column: 4 / span 1;
+      }
+      > * + * {
+        margin-top: rem(16);
+      }
+      a {
+        align-items: center;
+        color: var(--base-mid);
+        display: inline-flex;
+        svg {
+          margin-left: rem(8);
+        }
       }
     }
   }
   &__content {
-    padding: rem(24);
-    @include breakpoint(l) {
-      padding: rem(48) rem(24);
-    }
-    > * + * {
-      margin-top: rem(24);
-    }
-    > * + h2 {
-      margin-top: rem(48);
-    }
-    h2,
-    > p,
-    pre,
-    blockquote {
-      @include legible;
-    }
-    blockquote {
-      background-color: var(--contrast);
-      border-left: rem(4) solid var(--highlight-50);
-      color: var(--base-50);
-      padding: rem(8) rem(16);
-      p {
-        text-align: left;
+    padding: rem(32) rem(16);
+    > *,
+    figcaption p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: rem(640);
+      @include breakpoint(xl) {
+        max-width: rem(960);
+      }
+      + * {
+        margin-top: rem(32);
       }
     }
     figure {
+      align-items: center;
+      background-color: var(--project);
+      border: rem(1) solid var(--base-ghost);
+      border-radius: rem(8);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: auto;
+      overflow: hidden;
+      padding-top: rem(16);
       text-align: center;
-      &.multi {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        @include breakpoint(xsl) {
-          flex-wrap: nowrap;
-        }
-        > * {
-          margin: rem(8);
-          @include breakpoint(xsl) {
-            margin: 0 rem(16);
-          }
+      &.full {
+        max-width: 100%;
+      }
+      svg {
+        margin: rem(16);
+        @include breakpoint(m) {
+          margin-left: rem(32);
+          margin-right: rem(32);
         }
       }
-      .devicePhone {
-        @include breakpoint(xsl) {
-          max-width: rem(378);
-          width: 100%;
-        }
-      }
-      .deviceTablet {
-        max-width: rem(800);
+      figcaption {
+        background-color: var(--contrast);
+        color: var(--base-mid);
+        margin-top: rem(16);
+        padding: rem(16);
         width: 100%;
+      }
+      .Phone {
+        @include breakpoint(xsl) {
+          max-width: rem(300);
+        }
+        @include breakpoint(l) {
+          max-width: rem(378);
+        }
+      }
+      .Tablet--portrait {
+        max-width: 75%;
+        @include breakpoint(m) {
+          max-width: 100%;
+        }
+      }
+    }
+    &--separator {
+      margin-top: rem(64);
+      text-align: center;
+      h2 {
+        color: var(--base-mid);
+      }
+      hr {
+        margin-top: rem(16);
       }
     }
   }

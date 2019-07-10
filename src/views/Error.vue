@@ -6,9 +6,10 @@
     />
     <article>
       <h1>The page you’re looking for is unavailable.</h1>
+      <hr />
       <p>
         Return
-        <router-link to="/">home</router-link>or check out my
+        <router-link to="/">home</router-link> or check out my
         <router-link to="/projects">projects</router-link>.
       </p>
       <p>
@@ -23,29 +24,37 @@ export default {
   name: "Error"
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .Error {
   background-image: url("https://i.giphy.com/media/de5bARu0SsXiU/giphy.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
   position: relative;
   &:before {
     background-color: black;
-    bottom: rem(16);
+    bottom: 0;
     content: "";
-    left: rem(16);
+    left: 0;
     opacity: 0.5;
     position: absolute;
-    right: rem(16);
+    right: 0;
     top: 0;
   }
   article {
-    align-self: center;
+    align-items: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 7.5rem);
+    justify-content: center;
     position: relative;
     text-align: center;
     text-shadow: 0 rem(1) rem(2) rgba(black, 0.25);
+    @include breakpoint(xsl) {
+      height: calc(100vh - 4rem);
+    }
     h1,
     a {
       color: inherit;

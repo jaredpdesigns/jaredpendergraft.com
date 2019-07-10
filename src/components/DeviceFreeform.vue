@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="deviceFreeform"
+    :class="$options.name"
     role="img"
     :aria-label="alt"
     xmlns="http://www.w3.org/2000/svg"
@@ -12,20 +12,20 @@
     <title>{{ alt }}</title>
     <g fill="none" fill-rule="evenodd">
       <mask :id="this._uid + '-freeform-mask'" fill="white">
-        <rect :width="width" :height="height" rx="8"></rect>
+        <rect :width="width" :height="height" rx="8" />
       </mask>
       <rect
-        fill="var(--contrast)"
+        fill="white"
         :width="width"
         :height="height"
         :mask="'url(#'+ this._uid + '-freeform-mask)'"
-      ></rect>
+      />
       <image
-        :xlink:href="'/img/projects/' + img"
+        :xlink:href="img"
         :width="width"
         :height="height"
         :mask="'url(#'+ this._uid + '-freeform-mask)'"
-      ></image>
+      />
     </g>
   </svg>
 </template>

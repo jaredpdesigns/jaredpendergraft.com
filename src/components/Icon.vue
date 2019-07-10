@@ -1,6 +1,6 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 16 16">
-    <path v-for="icon in filtered" :key="icon.name" fill="currentColor" :d="icon.path"></path>
+    <path v-for="icon in filtered" :key="icon.name" fill="currentColor" :d="icon.path" />
   </svg>
 </template>
 <script>
@@ -20,12 +20,12 @@ export default {
         {
           name: "arrow-left",
           path:
-            "M3.414 7H15a1 1 0 0 1 0 2H3.414l3.293 3.293a1 1 0 0 1-1.414 1.414l-5-5a1 1 0 0 1 0-1.414l5-5a1 1 0 0 1 1.414 1.414L3.414 7z"
+            "M3.083 7h11.919a1 1 0 1 1 0 2H3.082l2.7 3.375a1 1 0 1 1-1.561 1.25L.233 8.64a.982.982 0 0 1-.089-1.155c.03-.05.065-.098.103-.142L4.22 2.375a1 1 0 0 1 1.562 1.25L3.083 7z"
         },
         {
           name: "arrow-right",
           path:
-            "M12.586 7L9.293 3.707a1 1 0 1 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 1 1-1.414-1.414L12.586 9H1a1 1 0 1 1 0-2h11.586z"
+            "M12.92 7l-2.7-3.375a1 1 0 1 1 1.56-1.25l3.975 4.968a1.019 1.019 0 0 1 .2.357.982.982 0 0 1-.187.94l-3.987 4.985a1 1 0 1 1-1.562-1.25L12.92 9H1a1 1 0 1 1 0-2h11.92z"
         },
         {
           name: "dribbble",
@@ -36,6 +36,11 @@ export default {
           name: "email",
           path:
             "M15.141 2.357L8 6.821.859 2.357A1.99 1.99 0 0 1 2 2h12c.424 0 .818.132 1.141.357zM16 4.18V12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4.18l7.47 4.668a1 1 0 0 0 1.06 0L16 4.179z"
+        },
+        {
+          name: "external",
+          path:
+            "M15 0a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V3.414L1.707 15.707a1 1 0 1 1-1.414-1.414L12.586 2H8a1 1 0 1 1 0-2h7z"
         },
         {
           name: "moon",

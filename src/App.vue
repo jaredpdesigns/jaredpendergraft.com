@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
-    <router-view/>
+    <Header />
+    <router-view />
   </div>
 </template>
 <script>
@@ -21,24 +21,20 @@ export default {
 @import url("https://use.typekit.net/zkw5aru.css");
 
 :root {
-  --hue: 158;
-  --base: hsl(var(--hue), 12%, 25%);
-  --base-50: hsl(var(--hue), 4%, 50%);
-  --base-38: hsl(var(--hue), 4%, 62%);
-  --base-12: hsl(var(--hue), 4%, 88%);
-  --bg: hsl(var(--hue), 4%, 98%);
+  --base: hsl(158, 4%, 16%);
+  --base-mid: hsl(158, 4%, 32%);
+  --base-ghost: hsl(158, 4%, 90%);
+  --highlight: hsl(158, 32%, 38%);
   --contrast: white;
-  --highlight: hsl(var(--hue), 32%, 38%);
-  --highlight-50: hsl(var(--hue), 32%, 75%);
+  --shadow: #{0 rem(16) rem(32) rem(-16) rgba(0, 0, 0, 0.25)};
 }
 
 :root[data-theme="dark"] {
-  --base: hsl(var(--hue), 4%, 75%);
-  --base-38: hsl(var(--hue), 4%, 38%);
-  --base-12: hsl(var(--hue), 4%, 12%);
-  --bg: hsl(var(--hue), 4%, 12%);
-  --contrast: hsl(var(--hue), 12%, 4%);
-  --highlight-50: hsl(var(--hue), 32%, 24%);
+  --base: hsl(158, 4%, 100%);
+  --base-mid: hsla(158, 4%, 100%, 0.5);
+  --base-ghost: hsla(158, 4%, 100%, 0.10);
+  --contrast: hsl(158, 4%, 8%);
+  --shadow: #{0 rem(16) rem(32) rem(-16) black};
 }
 
 *,
@@ -51,74 +47,62 @@ export default {
 }
 
 html {
-  background-color: var(--bg);
+  background-color: var(--contrast);
   color: var(--base);
-  font-family: "source-sans-pro", sans-serif;
+  font-family: source-sans-pro, sans-serif;
   height: 100%;
-  padding-top: rem(48);
+  padding-top: rem(120);
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  @include breakpoint(xs-only) {
-    padding-top: rem(80);
-  }
-  @include breakpoint(l) {
+  @include breakpoint(xsl) {
     padding-top: rem(64);
   }
 }
 
 ::selection {
   background-color: var(--highlight);
-  color: white;
+  color: var(--contrast);
 }
 
 h1,
 h2,
 h3,
-h4,
-.btn {
-  font-family: "basic-sans", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: var(--base-50);
+.Recommendation__text:before {
+  font-family: nazare, sans-serif;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: rem(28);
-  line-height: rem(32);
+  font-size: rem(32);
+  line-height: rem(40);
 }
 
 h2 {
-  font-size: rem(22);
+  font-size: rem(24);
   line-height: rem(32);
 }
 
 h3 {
-  font-size: rem(20);
+  font-size: rem(22);
   line-height: rem(32);
 }
 
-h4 {
-  font-size: rem(16);
+h4, .Projects__item--text p a {
+  font-size: rem(18);
+  font-weight: 600;
   letter-spacing: rem(1);
   line-height: rem(24);
   text-transform: uppercase;
 }
 
-p,
-li {
-  font-size: rem(18);
+p, li {
+  font-size: rem(20);
   line-height: rem(32);
 }
 
-p {
-  @include breakpoint(xl) {
-    font-size: rem(20);
-    line-height: rem(40);
-  }
+nav a {
+  font-size: rem(18);
+  line-height: rem(32);
 }
 
 small {
@@ -131,6 +115,9 @@ ol {
   li {
     list-style: none;
     position: relative;
+    + li {
+      margin-top: rem(16);
+    }
   }
   li:before {
     color: var(--highlight);
@@ -176,15 +163,8 @@ ul li {
   }
 }
 
-nav li {
-  padding: 0;
-  &:before {
-    content: none;
-  }
-}
-
 pre {
-  background-color: var(--contrast);
+  background-color: var(--base-ghost);
   overflow: hidden;
   overflow-x: auto;
   padding: rem(24);
@@ -203,7 +183,7 @@ pre {
   }
 }
 code {
-  color: var(--base-50);
+  color: var(--base-mid);
   font-family: "source-code-pro", monospace;
   p > & {
     background-color: var(--contrast);
@@ -211,10 +191,12 @@ code {
   }
 }
 
-a {
+a,
+button {
+  background: none;
   border: none;
   border-bottom: rem(2) solid transparent;
-  color: var(--highlight);
+  color: inherit;
   cursor: pointer;
   text-decoration: none;
   transition: 0.375s ease-in;
@@ -222,28 +204,23 @@ a {
   &:focus {
     outline: none;
   }
-  p & {
-    border-color: var(--highlight-50);
-    &:focus,
-    &:hover {
-      border-color: var(--base-50);
-      color: var(--base);
-    }
+}
+
+p a {
+  border-bottom: rem(1) solid var(--highlight);
+  &:focus,
+  &:hover {
+    color: var(--highlight);
   }
 }
 
-a:hover,
-a:focus,
-nav .currentPage,
-nav .currentParent {
-  border-color: var(--highlight-50);
-}
-
 hr {
-  background-color: var(--highlight-50);
+  background-color: var(--base-ghost);
   border-radius: rem(2);
   display: inline-block;
   height: rem(4);
+  margin-left: auto;
+  margin-right: auto;
   width: rem(64);
 }
 
@@ -256,33 +233,5 @@ img {
 svg {
   max-width: 100%;
   height: auto;
-}
-
-main {
-  box-shadow: inset rem(16) 0 0 0 var(--contrast),
-    inset rem(-16) 0 0 0 var(--contrast), inset 0 rem(-16) 0 0 var(--contrast);
-  display: flex;
-  min-height: calc(100vh - 4.25em);
-  justify-content: center;
-  padding: rem(16) rem(24);
-  @include breakpoint(xs-only) {
-    padding-bottom: rem(72);
-  }
-}
-
-article {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: rem(960);
-  width: 100%;
-  @include breakpoint(l) {
-    max-width: rem(1280);
-  }
-  > header {
-    padding: rem(16) rem(24);
-    @include breakpoint(l) {
-      padding: rem(32);
-    }
-  }
 }
 </style>

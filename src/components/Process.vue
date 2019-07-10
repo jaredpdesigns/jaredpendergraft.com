@@ -1,9 +1,9 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 64 64">
     <g v-for="process in filtered" :key="process.name">
-      <path fill="var(--contrast)" :d="process.white"></path>
-      <path fill="var(--base)" :d="process.black"></path>
-      <path fill="var(--highlight)" :d="process.green"></path>
+      <path fill="var(--contrast)" :d="process.white" />
+      <path fill="var(--base)" :d="process.black" />
+      <path fill="var(--highlight)" :d="process.green" />
     </g>
   </svg>
 </template>
