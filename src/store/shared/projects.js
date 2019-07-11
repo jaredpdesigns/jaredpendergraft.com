@@ -53,6 +53,6 @@ export const projects = [
       "A fun, interactive way for kids to learn math.",
     img: "/img/projects/thesekidsmath/thesekidsmath-main.png",
     external: "https://thesekidsmath.netlify.com",
-    color: "#1F5AFF"
+    color: "#0A0014"
   },
 ];

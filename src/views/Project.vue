@@ -5,7 +5,7 @@
       :key="project.slug"
       :title="project.name + ' | A Project by Jared Pendergraft'"
       :description="project.description"
-      :image="'https://jaredpendergraft.com/img/projects/' + project.slug + '-social.jpg'"
+      :image="'https://jaredpendergraft.com/img/projects/' + project.slug + '/' + project.slug + '-social.jpg'"
       :url="'jaredpendergraft.com/projects/' + project.slug"
     />
     <header
@@ -15,17 +15,20 @@
     >
       <section :class="$options.name + '__header--img'" :style="projectImg"></section>
       <section :class="$options.name + '__header--text'">
-        <h1 :style="'color: '+ project.color">{{ project.name }}</h1>
+        <h1>{{ project.name }}</h1>
         <hr />
         <p>{{ project.description }}</p>
       </section>
+      <router-link :class="$options.name + '__header--skip'" to="#content" title="Skip to project content"><Icon name="arrow-right" :size="14"/></router-link>
     </header>
-    <component :is="projectContent" :class="$options.name + '__content'" />
+    <component id="content" :is="projectContent" :class="$options.name + '__content'" />
   </main>
 </template>
 <script>
+import Icon from "@/components/Icon";
 export default {
   name: "Project",
+  components: { Icon },
   computed: {
     project() {
       return this.$route.params.slug;
@@ -56,10 +59,14 @@ export default {
 </script>
 <style lang="scss">
 .Project {
+  padding-bottom: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(16);
   &__header {
     display: grid;
     grid-gap: rem(32);
     padding: rem(16);
+    position: relative;
     @media (orientation: landscape) {
       grid-template-columns:
         minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(360)) minmax(
@@ -103,6 +110,9 @@ export default {
       > * + * {
         margin-top: rem(16);
       }
+      h1 {
+        color: var(--highlight);
+      }
       a {
         align-items: center;
         color: var(--base-mid);
@@ -110,6 +120,41 @@ export default {
         svg {
           margin-left: rem(8);
         }
+      }
+    }
+    @keyframes float {
+      from { transform: translate(-50%,0); }
+      to { transform: translate(-50%,rem(8)); }
+    }
+    &--skip {
+      @include smooth;
+      align-items: center;
+      animation: float 0.5s ease-in infinite;
+      animation-direction: alternate-reverse;
+      animation-fill-mode: both;
+      background-color: var(--contrast);
+      border: rem(1) solid var(--base-ghost);
+      border-radius: 50%;
+      bottom: rem(32);
+      box-shadow: var(--shadow);
+      color: var(--base-mid);
+      display: none;
+      height: rem(40);
+      justify-content: center;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: rem(40);
+      z-index: 10;
+      @media (orientation: landscape) {
+        display: inline-flex;
+      }
+      &:focus, &:hover {
+        animation-play-state: paused;
+        color: var(--highlight);
+      }
+      svg {
+        transform: rotate(90deg);
       }
     }
   }
@@ -136,18 +181,28 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      max-width: auto;
       overflow: hidden;
       padding-top: rem(16);
       text-align: center;
       &.full {
         max-width: 100%;
       }
+      .multi {
+        align-items: center;
+        display: inline-flex;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include breakpoint(xsl) {
+          flex-wrap: nowrap;
+        }
+      }
       svg {
+        flex-shrink: 1;
         margin: rem(16);
-        @include breakpoint(m) {
-          margin-left: rem(32);
-          margin-right: rem(32);
+        max-width: 100%;
+        + svg {
+          margin-left: 0;
         }
       }
       figcaption {
@@ -159,10 +214,10 @@ export default {
       }
       .Phone {
         @include breakpoint(xsl) {
-          max-width: rem(300);
+          max-width: calc(100vw / 3.75);
         }
         @include breakpoint(l) {
-          max-width: rem(378);
+          max-width: rem(383);
         }
       }
       .Tablet--portrait {

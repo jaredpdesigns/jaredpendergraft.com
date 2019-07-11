@@ -1,26 +1,13 @@
 <template>
   <article>
-    <figure>
-      <Freeform/>
-    </figure>
-    <figure class="full">
-      <Tablet />
-      <Tablet orientation="landscape" />
-    </figure>
-    <figure class="full">
-      <Phone />
-    </figure>
-    <figure class="full">
-      <Browser />
-    </figure>
+    <p>Some really great content is coming soon!</p>
   </article>
 </template>
 <script>
 import Browser from "@/components/DeviceBrowser";
 import Freeform from "@/components/DeviceFreeform";
 import Phone from "@/components/DevicePhone";
-import Tablet from "@/components/DeviceTablet";
 export default {
-  components: { Browser, Freeform, Phone, Tablet }
+  components: { Browser, Freeform, Phone }
 };
 </script>

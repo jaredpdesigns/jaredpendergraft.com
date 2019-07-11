@@ -10,18 +10,19 @@
         :style="projectStyles(project.color, project.img)"
       ></figure>
       <figcaption :class="$options.name + '__item--text'">
-        <h1 :style="'color:' + project.color">
-          <a v-if="project.external" :href="project.external" target="_blank">
-            {{ project.name }}
-          </a>
-          <router-link v-else :to="'/projects/' + project.slug">
-            {{ project.name }}
-          </router-link>
+        <h1>
+          <a
+            v-if="project.external"
+            :href="project.external"
+            target="_blank"
+            rel="noopener"
+          >{{ project.name }}</a>
+          <router-link v-else :to="'/projects/' + project.slug">{{ project.name }}</router-link>
         </h1>
         <hr />
         <p>{{ project.description }}</p>
         <p>
-          <a v-if="project.external" :href="project.external" target="_blank">
+          <a v-if="project.external" :href="project.external" target="_blank" rel="noopener">
             View project
             <Icon :size="14" name="external" />
           </a>
@@ -56,6 +57,9 @@ export default {
 </script>
 <style lang="scss">
 .Projects {
+  padding-bottom: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(16);
   &__item {
     display: grid;
     grid-gap: rem(32);
@@ -101,13 +105,18 @@ export default {
       > * + * {
         margin-top: rem(16);
       }
-      a, a svg {
+      h1 {
+        color: var(--highlight);
+      }
+      a,
+      a svg {
         @include smooth;
       }
       h1 a {
         display: block;
         transform-origin: left;
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           transform: scale(1.0625);
         }
       }
@@ -115,7 +124,8 @@ export default {
         align-items: center;
         color: var(--base-mid);
         display: inline-flex;
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           color: var(--highlight);
           svg {
             transform: translateX(rem(2));

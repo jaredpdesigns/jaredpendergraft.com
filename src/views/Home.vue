@@ -13,7 +13,7 @@
         <hr />
       </header>
       <figure :class="$options.name + '__img'">
-        <img src="../assets/img/profile-big.jpg" />
+        <img src="../assets/img/profile-big.jpg" alt="My smiling face, greeting you." />
       </figure>
       <figcaption :class="$options.name + '__text'">
         <p>

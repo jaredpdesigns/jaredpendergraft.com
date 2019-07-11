@@ -11,11 +11,11 @@
   >
     <title>{{ alt }}</title>
     <g fill="none" fill-rule="evenodd">
-      <mask :id="'screenTablet' + orientation" fill="#fff">
+      <mask :id="'browser-mask' + this._uid + orientation" fill="#fff">
         <rect :height="orientation === 'portrait' ? 1024:768" :width="orientation === 'portrait' ? 768:1024" x="32" y="32" rx="16" />
       </mask>
       <rect :width="orientation === 'portrait' ? 832:1088" :height="orientation === 'portrait' ? 1088:832" fill="var(--contrast)" rx="32" />
-      <image :xlink:href="img" :height="orientation === 'portrait' ? 1024:768" :width="orientation === 'portrait' ? 768:1024" x="32" y="32" :mask="'url(#screenTablet' + orientation + ')'" />
+      <image :xlink:href="img" :height="orientation === 'portrait' ? 1024:768" :width="orientation === 'portrait' ? 768:1024" x="32" y="32" :mask="'url(#phone-mask' + this._uid + orientation + ')'" />
     </g>
   </svg>
 </template>

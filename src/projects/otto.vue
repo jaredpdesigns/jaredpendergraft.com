@@ -11,12 +11,18 @@
       <a
         href="https://fonts.google.com/specimen/Source+Sans+Pro"
         target="_blank"
+        rel="noopener"
       >Source Sans Pro</a> and
-      <a href="https://fonts.google.com/specimen/Nunito" target="_blank">Nunito</a>—a lovely rounded sans-serif that added a nice disposition to the brand.
+      <a href="https://fonts.google.com/specimen/Nunito" target="_blank" rel="noopener">Nunito</a>—a lovely rounded sans-serif that added a nice disposition to the brand.
     </p>
     <p>The re-working of the logotype focused on the geometry of the letterforms and added roundness to the edges—which disappear nicely at small sizes. The iOS app icon keeps things simple transforming the ‘O’ in OTTO into a container for a secondary brand element—a smooth gradient blend of the two primary highlight colors.</p>
     <figure>
-      <Freeform alt="OTTO logotypes" img="/img/projects/otto/otto-logo.svg" :height="136" :width="784" />
+      <Freeform
+        alt="OTTO logotypes"
+        img="/img/projects/otto/otto-logo.svg"
+        :height="136"
+        :width="784"
+      />
       <figcaption>
         <p>
           <em>Primary and secondary logotypes.</em>
@@ -24,7 +30,12 @@
       </figcaption>
     </figure>
     <figure>
-      <Freeform alt="OTTO iOS app icon" img="/img/projects/otto/otto-app-icon.svg" :height="160" :width="160" />
+      <Freeform
+        alt="OTTO iOS app icon"
+        img="/img/projects/otto/otto-app-icon.svg"
+        :height="160"
+        :width="160"
+      />
       <figcaption>
         <p>
           <em>iOS app icon introducing a gradient treatment of the two primary highlight brand colors.</em>
@@ -33,7 +44,12 @@
     </figure>
     <p>Color became a priority in the application to help differentiate key action-based UI elements. I came up with a broad palette to handle multiple scenarios and to offer good differentiation of information on elements like calendars. Additionally, the two colors associated with the original brand—orange and purple—were updated to feel consistent with other color additions.</p>
     <figure>
-      <Freeform alt="OTTO color palette" img="/img/projects/otto/otto-colors.svg" :height="440" :width="960" />
+      <Freeform
+        alt="OTTO color palette"
+        img="/img/projects/otto/otto-colors.svg"
+        :height="440"
+        :width="960"
+      />
       <figcaption>
         <p>
           <em>While a majority of the interface in the application is white and gray, color plays a big role with action-based UI elements. It was important for any secondary colors to feel as warm and natural as the selection of typefaces.</em>
@@ -45,8 +61,13 @@
       <hr />
     </section>
     <p>One of my favorite aspects of UI design is coming up with branded icon sets. For OTTO’s set I focused on bold shapes with the borrowed roundness of the logotype. All icons were designed at a base size of 32px making scaling to relative sizes easy within the application.</p>
-    <figure>
-      <Freeform alt="OTTO app icon system" img="/img/projects/otto/otto-icons.svg" :height="250" :width="960" />
+    <figure class="full">
+      <Freeform
+        alt="OTTO app icon system"
+        img="/img/projects/otto/otto-icons.svg"
+        :height="334"
+        :width="1280"
+      />
       <figcaption>
         <p>
           <em>OTTO’s icon system borrows from the softness of the logotype and general clarity of form—even at small sizes.</em>
@@ -61,9 +82,11 @@
     <p>A majority of the users would be engaging with the application via an iOS application so it made a lot of sense to focus on mobile-first user patterns when redesigning the application. I borrowed a lot of aspects from the iOS vernacular. Elements were scaled to be easy for aging users to use and the contrast ratio of UI elements and typography within the application were considered accordingly.</p>
     <p>The most common tasks within the application include finding new providers, making appointments, conducting consultations and scheduling providers and patients. A large majority of the application involves interacting with various form elements to query results—it was paramount that we saved users as much time as possible. A good example of the type of patterns designed include smart inputs that narrow search results when users start typing, segmented controllers instead of radio buttons and selects, as well as contextual navigation to present secondary options for various elements.</p>
     <figure class="full">
-      <Phone alt="Find a provider 1" img="/img/projects/otto/otto-find-provider-1.jpg" />
-      <Phone alt="Find a provider 2" img="/img/projects/otto/otto-find-provider-2.jpg" />
-      <Phone alt="Find a provider 3" img="/img/projects/otto/otto-find-provider-3.jpg" />
+      <section class="multi">
+        <Phone alt="Find a provider 1" img="/img/projects/otto/otto-find-provider-1.jpg" />
+        <Phone alt="Find a provider 2" img="/img/projects/otto/otto-find-provider-2.jpg" />
+        <Phone alt="Find a provider 3" img="/img/projects/otto/otto-find-provider-3.jpg" />
+      </section>
       <figcaption>
         <p>
           <em>For first-time users we reduced a lot of the friction of finding a new provider by helping narrow the search query and showing providers who are available soonest with the next available appointment.</em>
@@ -71,7 +94,10 @@
       </figcaption>
     </figure>
     <figure class="full">
-      <Browser alt="Find a provider - Care Team" img="/img/projects/otto/otto-find-provider-care-team.jpg" />
+      <Browser
+        alt="Find a provider - Care Team"
+        img="/img/projects/otto/otto-find-provider-care-team.jpg"
+      />
       <figcaption>
         <p>
           <em>For users who like seeing the same providers consistently, we grouped saved providers into a Care Team—enabling a broader amount of appointment availability.</em>
@@ -79,9 +105,11 @@
       </figcaption>
     </figure>
     <figure class="full">
-      <Phone alt="Provider profile" img="/img/projects/otto/otto-provider-profile.jpg" />
-      <Phone alt="Upcoming appointments" img="/img/projects/otto/otto-appointments-upcoming.jpg" />
-      <Phone alt="Cancel appointment" img="/img/projects/otto/otto-cancel-appointment.jpg" />
+      <section class="multi">
+        <Phone alt="Provider profile" img="/img/projects/otto/otto-provider-profile.jpg" />
+        <Phone alt="Upcoming appointments" img="/img/projects/otto/otto-appointments-upcoming.jpg" />
+        <Phone alt="Cancel appointment" img="/img/projects/otto/otto-cancel-appointment.jpg" />
+      </section>
       <figcaption>
         <p>
           <em>If users want to learn more about providers they can view their profiles. Additionally it’s easy to view upcoming appointments and reschedule or cancel an appointment.</em>
@@ -105,9 +133,11 @@
       </figcaption>
     </figure>
     <figure class="full">
-      <Phone alt="Schedule add" img="/img/projects/otto/otto-schedule-add.jpg" />
-      <Phone alt="Schedule edit" img="/img/projects/otto/otto-schedule-edit.jpg" />
-      <Phone alt="Schedule new patients" img="/img/projects/otto/otto-new-patient.jpg" />
+      <section class="multi">
+        <Phone alt="Schedule add" img="/img/projects/otto/otto-schedule-add.jpg" />
+        <Phone alt="Schedule edit" img="/img/projects/otto/otto-schedule-edit.jpg" />
+        <Phone alt="Schedule new patients" img="/img/projects/otto/otto-new-patient.jpg" />
+      </section>
       <figcaption>
         <p>
           <em>Practice administrators can add or edit provider availability as well as schedule new patients.</em>

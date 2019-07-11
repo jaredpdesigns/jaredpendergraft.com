@@ -1,5 +1,5 @@
 <template>
-  <header :class="$options.name" role="heading">
+  <header :class="$options.name">
     <h3>
       <router-link to="/" exactActiveClass="currentPage">Jared Pendergraft</router-link>
     </h3>
@@ -35,7 +35,7 @@
       >
         <Icon name="dribbble" :size="20" />
       </a>
-      <button @click="updateTheme">
+      <button @click="updateTheme" aria-label="Switch site theme">
         <Icon v-if="theme === 'dark'" name="sun" :size="20" />
         <Icon v-else name="moon" :size="20" />
       </button>
