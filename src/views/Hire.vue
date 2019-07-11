@@ -133,6 +133,9 @@ export default {
       figure {
         text-align: center;
       }
+      figcaption {
+        padding: rem(16);
+      }
     }
   }
 }

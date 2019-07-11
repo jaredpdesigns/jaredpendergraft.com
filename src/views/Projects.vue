@@ -74,6 +74,12 @@ export default {
       height: calc(100vh - 4rem);
     }
     @include breakpoint(xl) {
+      grid-template-columns:
+        minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(560)) minmax(
+          auto,
+          rem(560)
+        )
+        minmax(0, 1fr) minmax(0, 1fr);
       grid-gap: rem(64);
     }
     + .Projects__item {

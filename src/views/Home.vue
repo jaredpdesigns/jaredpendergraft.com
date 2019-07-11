@@ -50,9 +50,9 @@ export default {
   padding: rem(16);
   @include breakpoint(xl) {
     grid-template-columns:
-      minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(640)) minmax(
+      minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(560)) minmax(
         auto,
-        rem(640)
+        rem(560)
       )
       minmax(0, 1fr) minmax(0, 1fr);
     grid-gap: rem(64);
