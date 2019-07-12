@@ -17,7 +17,7 @@
       <figcaption :class="$options.name + '__item--text'">
         <h1>
           <a
-            v-if="project.external"
+            v-if="!project.slug && project.external"
             :href="project.external"
             target="_blank"
             rel="noopener"
@@ -27,7 +27,12 @@
         <hr />
         <p>{{ project.description }}</p>
         <p>
-          <a v-if="project.external" :href="project.external" target="_blank" rel="noopener">
+          <a
+            v-if="!project.slug && project.external"
+            :href="project.external"
+            target="_blank"
+            rel="noopener"
+          >
             View project
             <Icon :size="14" name="external" />
           </a>

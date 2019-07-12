@@ -1,12 +1,13 @@
 export const projects = [
-  {
-    name: "Nice Bike",
-    description:
-      "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",
-    img: "https://images.ctfassets.net/cuehicrlqnvu/1XL25vWgTmEEXqFVsCXclL/7be73eaf3e6f69dbd65d654c4a428738/nicebike-main.png",
-    slug: "nicebike",
-    color: "#47D230"
-  },
+  // {
+  //   name: "Nice Bike",
+  //   description:
+  //     "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",
+  //   img: "https://images.ctfassets.net/cuehicrlqnvu/1XL25vWgTmEEXqFVsCXclL/7be73eaf3e6f69dbd65d654c4a428738/nicebike-main.png",
+  //   slug: "nicebike",
+  //   external: "https://ridenicebike.com",
+  //   color: "#47D230"
+  // },
   {
     name: "OTTO Health",
     description:

@@ -26,8 +26,20 @@
         <h1>{{ project.name }}</h1>
         <hr />
         <p>{{ project.description }}</p>
+        <p v-if="project.external">
+          <a :href="project.external" target="_blank" rel="noopener">
+            Visit site
+            <Icon :size="14" name="external" />
+          </a>
+        </p>
       </figcaption>
-      <router-link :class="$options.name + '__header--skip'" to="#content" title="Skip to project content"><Icon name="arrow-right" :size="14"/></router-link>
+      <router-link
+        :class="$options.name + '__header--skip'"
+        to="#content"
+        title="Skip to project content"
+      >
+        <Icon name="arrow-right" :size="14" />
+      </router-link>
     </header>
     <component id="content" :is="projectContent" :class="$options.name + '__content'" />
   </main>
@@ -125,8 +137,12 @@ export default {
       }
     }
     @keyframes float {
-      from { transform: translate(-50%,0); }
-      to { transform: translate(-50%,rem(8)); }
+      from {
+        transform: translate(-50%, 0);
+      }
+      to {
+        transform: translate(-50%, rem(8));
+      }
     }
     &--skip {
       @include smooth;
@@ -151,7 +167,8 @@ export default {
       @media (orientation: landscape) {
         display: inline-flex;
       }
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         animation-play-state: paused;
         color: var(--highlight);
       }

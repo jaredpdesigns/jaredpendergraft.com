@@ -33,7 +33,7 @@
         </p>
         <p>
           View
-          <router-link to="/projects">projects</router-link>I’ve worked on or learn more about my
+          <router-link to="/projects">projects</router-link>&nbsp;I’ve worked on or learn more about my
           <router-link to="/hire#process">creative process</router-link>.
         </p>
       </figcaption>
@@ -61,8 +61,10 @@ export default {
     minmax(0, 1fr);
   padding: rem(16);
   @include breakpoint(xl) {
-    grid-template-columns: minmax(0, 1fr) minmax(auto, rem(560)) minmax(auto, rem(560)) minmax(0, 1fr);
-    grid-gap: rem(64);
+    grid-template-columns:
+      minmax(0, 1fr) minmax(auto, rem(560)) minmax(auto, rem(560))
+      minmax(0, 1fr);
+    column-gap: rem(64);
   }
   > header {
     grid-column: 1 / span 4;
