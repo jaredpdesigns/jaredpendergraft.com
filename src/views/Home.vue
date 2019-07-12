@@ -60,6 +60,7 @@ export default {
     minmax(0, 1fr) minmax(auto, rem(480)) minmax(auto, rem(480))
     minmax(0, 1fr);
   padding: rem(16);
+  padding-bottom: rem(32);
   @include breakpoint(xl) {
     grid-template-columns:
       minmax(0, 1fr) minmax(auto, rem(560)) minmax(auto, rem(560))

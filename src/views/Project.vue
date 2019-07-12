@@ -221,7 +221,9 @@ export default {
         margin: rem(16);
         max-width: 100%;
         + svg {
-          margin-left: 0;
+          @include breakpoint(xsl) {
+            margin-left: 0;
+          }          
         }
       }
       figcaption {
