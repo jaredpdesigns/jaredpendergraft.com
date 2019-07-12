@@ -7,14 +7,7 @@
 <script>
 import Header from "@/components/Header.vue";
 export default {
-  components: { Header },
-  mounted() {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      let root = document.getElementsByTagName("html")[0];
-      root.setAttribute("data-theme", "dark");
-      this.$store.dispatch("updateTheme", "dark");
-    }
-  }
+  components: { Header }
 };
 </script>
 <style lang="scss">

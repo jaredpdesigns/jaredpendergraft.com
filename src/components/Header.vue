@@ -55,12 +55,20 @@ export default {
   methods: {
     updateTheme() {
       let root = document.getElementsByTagName("html")[0];
-      root.setAttribute("data-theme", this.theme);
       if (this.theme === "dark") {
         this.$store.dispatch("updateTheme", "light");
+        root.setAttribute("data-theme", "light");
       } else {
         this.$store.dispatch("updateTheme", "dark");
+        root.setAttribute("data-theme", "dark");
       }
+    }
+  },
+  mounted() {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      let root = document.getElementsByTagName("html")[0];
+      root.setAttribute("data-theme", "dark");
+      this.$store.dispatch("updateTheme", "dark");
     }
   }
 };
@@ -69,6 +77,7 @@ export default {
 .Header {
   align-items: center;
   background-color: var(--contrast);
+  border-bottom: rem(1) solid var(--base-ghost);
   color: var(--base-mid);
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +104,8 @@ export default {
     &:focus,
     &:hover {
       color: var(--highlight);
+    }
+    &:hover {
       transform: scale(1.0625);
     }
   }
@@ -104,11 +115,18 @@ export default {
       align-items: center;
       display: inline-flex;
       height: rem(32);
+      justify-content: center;
+      width: 100%;
+      @include breakpoint(xsl) {
+        width: auto;
+      }
       > * {
         transform-origin: center;
         &:focus,
         &:hover {
           color: var(--highlight);
+        }
+        &:hover {
           transform: scale(1.0625);
         }
       }
@@ -137,7 +155,8 @@ export default {
         display: inline-flex;
         justify-content: center;
         opacity: 0.5;
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           opacity: 1;
         }
       }

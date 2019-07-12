@@ -18,7 +18,7 @@
           <source :srcset="img + '?h=960'" media="(min-width: 1280px)" />
           <source :srcset="img + '?h=720'" media="(min-width: 1024px)" />
           <source :srcset="img + '?h=560'" media="(min-width: 600px)" />
-          <img :src="img + '?w=375'" alt="My smiling face, greeting you" />
+          <img :src="img + '?w=480'" alt="My smiling face, greeting you" />
         </picture>
       </figure>
       <figcaption :class="$options.name + '__text'">
@@ -33,7 +33,7 @@
         </p>
         <p>
           View
-          <router-link to="/projects">projects</router-link> I’ve worked on or learn more about my
+          <router-link to="/projects">projects</router-link>I’ve worked on or learn more about my
           <router-link to="/hire#process">creative process</router-link>.
         </p>
       </figcaption>
@@ -45,7 +45,8 @@ export default {
   name: "Profile",
   data() {
     return {
-      img: 'https://images.ctfassets.net/cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg'
+      img:
+        "https://images.ctfassets.net/cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg"
     };
   }
 };
@@ -56,22 +57,20 @@ export default {
   display: grid;
   grid-gap: rem(32);
   grid-template-columns:
-    minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(480)) minmax(auto, rem(480))
-    minmax(0, 1fr) minmax(0, 1fr);
+    minmax(0, 1fr) minmax(auto, rem(480)) minmax(auto, rem(480))
+    minmax(0, 1fr);
   padding: rem(16);
   @include breakpoint(xl) {
-    grid-template-columns:
-      minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(560)) minmax(
-        auto,
-        rem(560)
-      )
-      minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(auto, rem(560)) minmax(auto, rem(560)) minmax(0, 1fr);
     grid-gap: rem(64);
   }
   > header {
-    grid-column: 3 / span 2;
+    grid-column: 1 / span 4;
     padding-top: rem(16);
     text-align: center;
+    @include breakpoint(xsl) {
+      grid-column: 2 / span 2;
+    }
     h1 {
       color: var(--highlight);
     }
@@ -80,10 +79,10 @@ export default {
     border-radius: rem(8);
     box-shadow: var(--shadow);
     justify-self: end;
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 4;
     overflow: hidden;
     @include breakpoint(xsl) {
-      grid-column: 1 / span 3;
+      grid-column: 1 / span 2;
     }
     img {
       max-width: 100%;
@@ -95,9 +94,9 @@ export default {
   }
   > figcaption {
     align-self: center;
-    grid-column: 2 / span 4;
+    grid-column: 2 / span 2;
     @include breakpoint(xsl) {
-      grid-column: 4 / span 1;
+      grid-column: 3 / span 1;
     }
     > * + * {
       margin-top: rem(16);

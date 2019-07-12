@@ -5,10 +5,7 @@
       description="A selection of creative projects I’ve worked on."
     />
     <article v-for="project in projects" :key="project.name" :class="$options.name + '__item'">
-      <figure
-        :class="$options.name + '__item--img'"
-        :style="projectStyles(project.color)"
-      >
+      <figure :class="$options.name + '__item--img'" :style="projectStyles(project.color)">
         <picture>
           <source :srcset="project.img + '?h=1280'" media="(min-width: 1600px)" />
           <source :srcset="project.img + '?h=960'" media="(min-width: 1280px)" />
@@ -73,20 +70,14 @@ export default {
     padding: rem(16);
     @media (orientation: landscape) {
       grid-template-columns:
-        minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(360)) minmax(
-          auto,
-          rem(360)
-        )
-        minmax(0, 1fr) minmax(0, 1fr);
+        minmax(0, 1fr) minmax(auto, rem(360)) minmax(auto, rem(360))
+        minmax(0, 1fr);
       height: calc(100vh - 4rem);
     }
     @include breakpoint(xl) {
       grid-template-columns:
-        minmax(0, 1fr) minmax(0, 1fr) minmax(auto, rem(560)) minmax(
-          auto,
-          rem(560)
-        )
-        minmax(0, 1fr) minmax(0, 1fr);
+        minmax(0, 1fr) minmax(auto, rem(560)) minmax(auto, rem(560))
+        minmax(0, 1fr);
       grid-gap: rem(64);
     }
     + .Projects__item {
@@ -99,7 +90,7 @@ export default {
       background-size: cover;
       border-radius: rem(8);
       box-shadow: var(--shadow);
-      grid-column: 1 / span 6;
+      grid-column: 1 / span 4;
       min-height: 38vh;
       overflow: hidden;
       position: relative;
@@ -107,7 +98,7 @@ export default {
         min-height: 50vh;
       }
       @media (orientation: landscape) {
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
       }
       picture img {
         height: 100%;
@@ -117,9 +108,9 @@ export default {
     }
     &--text {
       align-self: center;
-      grid-column: 2 / span 4;
+      grid-column: 1 / span 3;
       @include breakpoint(xsl) {
-        grid-column: 4 / span 1;
+        grid-column: 3 / span 1;
       }
       > * + * {
         margin-top: rem(16);
