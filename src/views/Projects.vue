@@ -7,8 +7,16 @@
     <article v-for="project in projects" :key="project.name" :class="$options.name + '__item'">
       <figure
         :class="$options.name + '__item--img'"
-        :style="projectStyles(project.color, project.img)"
-      ></figure>
+        :style="projectStyles(project.color)"
+      >
+        <picture>
+          <source :srcset="project.img + '?h=1280'" media="(min-width: 1600px)" />
+          <source :srcset="project.img + '?h=960'" media="(min-width: 1280px)" />
+          <source :srcset="project.img + '?h=720'" media="(min-width: 1024px)" />
+          <source :srcset="project.img + '?h=560'" media="(min-width: 600px)" />
+          <img :src="project.img + '?h=320'" :alt="project.name" />
+        </picture>
+      </figure>
       <figcaption :class="$options.name + '__item--text'">
         <h1>
           <a
@@ -46,10 +54,9 @@ export default {
     }
   },
   methods: {
-    projectStyles(color, img) {
+    projectStyles(color) {
       return {
-        backgroundColor: color,
-        backgroundImage: "url(" + img + ")"
+        backgroundColor: color
       };
     }
   }
@@ -95,11 +102,17 @@ export default {
       grid-column: 1 / span 6;
       min-height: 38vh;
       overflow: hidden;
+      position: relative;
       @include breakpoint(s) {
         min-height: 50vh;
       }
       @media (orientation: landscape) {
         grid-column: 1 / span 3;
+      }
+      picture img {
+        height: 100%;
+        max-width: auto;
+        position: absolute;
       }
     }
     &--text {

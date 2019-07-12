@@ -32,7 +32,7 @@ export default {
 :root[data-theme="dark"] {
   --base: hsl(158, 4%, 100%);
   --base-mid: hsla(158, 4%, 100%, 0.5);
-  --base-ghost: hsla(158, 4%, 100%, 0.10);
+  --base-ghost: hsla(158, 4%, 100%, 0.1);
   --contrast: hsl(158, 4%, 8%);
   --shadow: #{0 rem(16) rem(32) rem(-16) black};
 }
@@ -87,7 +87,8 @@ h3 {
   line-height: rem(32);
 }
 
-h4, .Projects__item--text p a {
+h4,
+.Projects__item--text p a {
   font-size: rem(18);
   font-weight: 600;
   letter-spacing: rem(1);
@@ -95,7 +96,8 @@ h4, .Projects__item--text p a {
   text-transform: uppercase;
 }
 
-p, li {
+p,
+li {
   font-size: rem(20);
   line-height: rem(32);
 }
@@ -226,8 +228,10 @@ hr {
 
 img {
   -ms-interpolation-mode: bicubic;
-  max-width: 100%;
   height: auto;
+  figure > & {
+    max-width: 100%;
+  }
 }
 
 svg {

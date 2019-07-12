@@ -13,12 +13,20 @@
       :key="project.name"
       :class="$options.name + '__header'"
     >
-      <section :class="$options.name + '__header--img'" :style="projectImg"></section>
-      <section :class="$options.name + '__header--text'">
+      <figure :class="$options.name + '__header--img'">
+        <picture>
+          <source :srcset="project.img + '?h=1280'" media="(min-width: 1600px)" />
+          <source :srcset="project.img + '?h=960'" media="(min-width: 1280px)" />
+          <source :srcset="project.img + '?h=720'" media="(min-width: 1024px)" />
+          <source :srcset="project.img + '?h=560'" media="(min-width: 600px)" />
+          <img :src="project.img + '?h=320'" :alt="project.name" />
+        </picture>
+      </figure>
+      <figcaption :class="$options.name + '__header--text'">
         <h1>{{ project.name }}</h1>
         <hr />
         <p>{{ project.description }}</p>
-      </section>
+      </figcaption>
       <router-link :class="$options.name + '__header--skip'" to="#content" title="Skip to project content"><Icon name="arrow-right" :size="14"/></router-link>
     </header>
     <component id="content" :is="projectContent" :class="$options.name + '__content'" />
@@ -47,12 +55,6 @@ export default {
       return this.projects.filter(project => {
         return project.slug === projectSlug;
       });
-    },
-    projectImg() {
-      const img = this.projectFiltered.map(project => project.img);
-      return {
-        backgroundImage: "url(" + img + ")"
-      };
     }
   }
 };
@@ -94,11 +96,17 @@ export default {
       grid-column: 1 / span 6;
       min-height: 38vh;
       overflow: hidden;
+      position: relative;
       @include breakpoint(s) {
         min-height: 50vh;
       }
       @media (orientation: landscape) {
         grid-column: 1 / span 3;
+      }
+      picture img {
+        height: 100%;
+        max-width: auto;
+        position: absolute;
       }
     }
     &--text {

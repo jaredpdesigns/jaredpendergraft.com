@@ -13,7 +13,13 @@
         <hr />
       </header>
       <figure :class="$options.name + '__img'">
-        <img src="../assets/img/profile-big.jpg" alt="My smiling face, greeting you." />
+        <picture>
+          <source :srcset="img + '?h=1280'" media="(min-width: 1600px)" />
+          <source :srcset="img + '?h=960'" media="(min-width: 1280px)" />
+          <source :srcset="img + '?h=720'" media="(min-width: 1024px)" />
+          <source :srcset="img + '?h=560'" media="(min-width: 600px)" />
+          <img :src="img + '?w=375'" alt="My smiling face, greeting you" />
+        </picture>
       </figure>
       <figcaption :class="$options.name + '__text'">
         <p>
@@ -36,7 +42,12 @@
 </template>
 <script>
 export default {
-  name: "Profile"
+  name: "Profile",
+  data() {
+    return {
+      img: 'https://images.ctfassets.net/cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg'
+    };
+  }
 };
 </script>
 <style lang="scss">
@@ -75,6 +86,7 @@ export default {
       grid-column: 1 / span 3;
     }
     img {
+      max-width: 100%;
       vertical-align: middle;
       @include breakpoint(m) {
         max-height: 75vh;
