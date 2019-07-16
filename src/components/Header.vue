@@ -105,9 +105,6 @@ export default {
     &:hover {
       color: var(--highlight);
     }
-    &:hover {
-      transform: scale(1.0625);
-    }
   }
   &__nav {
     &--main,
@@ -125,9 +122,6 @@ export default {
         &:focus,
         &:hover {
           color: var(--highlight);
-        }
-        &:hover {
-          transform: scale(1.0625);
         }
       }
     }

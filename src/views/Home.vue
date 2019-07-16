@@ -88,8 +88,11 @@ export default {
       grid-column: 1 / span 2;
     }
     img {
+      @include smooth;
+      animation: zoom 0.5s ease-in;
       max-width: 100%;
       vertical-align: middle;
+      transform-origin: center;
       @include breakpoint(m) {
         max-height: 75vh;
       }

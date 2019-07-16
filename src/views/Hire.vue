@@ -122,13 +122,18 @@ export default {
     margin: rem(16) auto;
     max-width: rem(1280);
     &--item {
+      @include smooth;
       background-color: var(--contrast);
       border: rem(1) solid var(--base-ghost);
       border-radius: rem(8);
       box-shadow: var(--shadow);
       padding: rem(16);
+      transform-origin: center;
       * + * {
         margin-top: rem(16);
+      }
+      &:hover {
+        animation: zoom 0.5s ease-in;
       }
       figure {
         text-align: center;

@@ -109,10 +109,21 @@ export default {
       @media (orientation: landscape) {
         grid-column: 1 / span 2;
       }
+      @keyframes zoom {
+        0%, 100% {
+          transform: scale(1) translate3d(0,0,0);
+        }
+        50% {
+          transform: scale(1.0125) translate3d(0,0,0);
+        }
+      }
       picture img {
+        @include smooth;
+        animation: zoom 0.5s ease-in;
         height: 100%;
         max-width: auto;
         position: absolute;
+        transform-origin: center;
       }
     }
     &--text {
@@ -220,10 +231,12 @@ export default {
         flex-shrink: 1;
         margin: rem(16);
         max-width: 100%;
-        + svg {
-          @include breakpoint(xsl) {
-            margin-left: 0;
-          }          
+        .multi & {
+          + svg {
+            @include breakpoint(xsl) {
+              margin-left: 0;
+            }
+          }
         }
       }
       figcaption {
