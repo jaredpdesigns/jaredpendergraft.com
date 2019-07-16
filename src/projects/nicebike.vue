@@ -54,7 +54,7 @@
       <h2>Built to grow</h2>
       <hr />
     </section>
-    <p>One of the primary concerns about a new site was the ability to easily make changes without having tinker with any code. I fell in love with Contentful as a headless-CMS. With the flexibility of defining your own content-models I was able to easily structure each type of content to be just the fields we care about in an easy-to-use flow. From shop hours in the footer to build specs for a bike, making a change to the site is a snap and with a simple page refresh all the content is up-to-date.</p>
+    <p>One of the primary concerns about a new site was the ability to easily make changes without having tinker with any code. I fell in love with <a href="https://www.contentful.com" target="_blank" rel="noopener">Contentful</a> as a headless-CMS. With the flexibility of defining your own content-models I was able to easily structure each type of content to be just the fields we care about in an easy-to-use flow. From shop hours in the footer to build specs for a bike, making a change to the site is a snap and with a simple page refresh all the content is up-to-date.</p>
     <p>Behind the scenes the site is built as a progressive web application (PWA) powered by Vue which makes caching offline content a breeze and each page loads incredibly quickly.</p>
     <figure class="full">
       <section class="multi">
