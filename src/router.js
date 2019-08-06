@@ -1,55 +1,64 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import Error from "./views/Error.vue";
-import Projects from "./views/Projects.vue";
-import Project from "./views/Project.vue";
-import Resume from "./views/Resume.vue";
-import Hire from "./views/Hire.vue";
 
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
-  scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        selector: to.hash,
-        offset: { x: 0, y: 64 }
-      };
-    } else {
-      return { x: 0, y: 0 };
-    }
-  },
-  routes: [
-    {
-      path: "*",
-      component: Error
-    },
-    {
-      path: "/",
-      name: "Home",
-      component: Home
-    },
-    {
-      path: "/projects/",
-      name: "Projects",
-      component: Projects
-    },
-    {
-      path: "/projects/:slug",
-      name: "Project",
-      component: Project
-    },
-    {
-      path: "/hire/resume/",
-      name: "Résumé",
-      component: Resume
-    },
-    {
-      path: "/hire/",
-      name: "Hire",
-      component: Hire
-    }
-  ]
+	mode: "history",
+	scrollBehavior(to, from, savedPosition) {
+		if (to.hash) {
+			return {
+				selector: to.hash,
+				offset: { x: 0, y: 64 }
+			};
+		} else {
+			return { x: 0, y: 0 };
+		}
+	},
+	routes: [
+		{
+			path: "*",
+			component: () => import("./views/Error")
+		},
+		{
+			path: "/",
+			name: "Home",
+			component: () => import("./views/Home")
+		},
+		{
+			path: "/projects/",
+			name: "Projects",
+			component: () => import("./views/Projects")
+		},
+		{
+			path: "/projects/:slug",
+			name: "Project",
+			component: () => import("./views/Project")
+		},
+		{
+			path: "/hire/resume/",
+			name: "Résumé",
+			component: () => import("./views/Resume")
+		},
+		{
+			path: "/hire/",
+			name: "Hire",
+			component: () => import("./views/Hire")
+		},
+		{
+			path: "/clients",
+			name: "Clients",
+			component: () => import("./views/Clients")
+		},
+		{
+			path: "/clients/agreement/:slug",
+			name: "Agreement",
+			component: () => import("./views/Agreement")
+		},
+		{
+			path: "/clients/invoice/:slug",
+			name: "Invoice",
+			component: () => import("./views/Invoice")
+		}
+	]
 });

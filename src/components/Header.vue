@@ -88,6 +88,12 @@ export default {
   top: 0;
   width: 100%;
   z-index: 100;
+  @media print {
+    position: static;
+    &:after {
+      content: "jaredpendergraft.com • jaredpdesigns@gmail.com • 503-474-7437"
+    }
+  }
   @include breakpoint(xsl) {
     height: rem(64);
     justify-content: space-between;
@@ -114,6 +120,9 @@ export default {
       height: rem(32);
       justify-content: center;
       width: 100%;
+      @media print {
+        display: none;
+      }
       @include breakpoint(xsl) {
         width: auto;
       }

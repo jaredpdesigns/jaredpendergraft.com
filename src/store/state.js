@@ -1,5 +1,7 @@
+import { clients } from "./shared/clients";
 import { projects } from "./shared/projects";
 export const state = {
-  projects: projects,
-  theme: 'light'
+	clients: clients,
+	projects: projects,
+	theme: "light"
 };

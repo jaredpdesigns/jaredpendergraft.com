@@ -50,6 +50,9 @@ html {
   @include breakpoint(xsl) {
     padding-top: rem(64);
   }
+  @media print {
+    padding-top: 0;
+  }
 }
 
 ::selection {
@@ -65,7 +68,8 @@ h3,
   font-weight: 600;
 }
 
-h1 {
+h1,
+.total {
   font-size: rem(32);
   line-height: rem(40);
 }
@@ -90,7 +94,8 @@ h4,
 }
 
 p,
-li {
+li,
+.Header:after {
   font-size: rem(20);
   line-height: rem(32);
 }
@@ -137,6 +142,18 @@ ol {
       width: rem(24);
       @include breakpoint(m) {
         left: rem(-32);
+      }
+    }
+    ol {
+      padding-left: rem(24);
+      li:before {
+        content: counter(custom-counter, lower-alpha) ".";
+      }
+      ol {
+        padding-left: rem(24);
+        li:before {
+          content: counter(custom-counter, lower-roman) ".";
+        }
       }
     }
   }
@@ -217,6 +234,9 @@ hr {
   margin-left: auto;
   margin-right: auto;
   width: rem(64);
+  @media print {
+    border-bottom: rem(4) solid var(--base-ghost);
+  }
 }
 
 img {
