@@ -1,5 +1,12 @@
 <template>
   <main :class="$options.name">
+    <Head
+      v-for="agreement in agreements"
+      :key="agreement.slug"
+      :title="agreement.title + ' | ' + agreement.client.client + ' | Agreement | Jared Pendergraft'"
+      :description="'Agreement to work on: ' + agreement.title"
+      :url="'jaredpendergraft.com/clients/agreement/' + agreement.slug"
+    />
     <article v-for="agreement in agreements" :key="agreement.title">
       <header>
         <h1>Consulting Agreement</h1>

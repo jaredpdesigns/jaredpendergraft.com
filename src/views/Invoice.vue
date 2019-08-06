@@ -1,5 +1,12 @@
 <template>
   <main :class="$options.name">
+    <Head
+      v-for="invoice in invoices"
+      :key="invoice.slug"
+      :title="invoice.title + ' | ' + invoice.client.client + ' | Invoice | Jared Pendergraft'"
+      :description="'Invoice for working on: ' + invoice.title"
+      :url="'jaredpendergraft.com/clients/invoice/' + invoice.slug"
+    />
     <article v-for="invoice in invoices" :key="invoice.title">
       <header>
         <h1>{{ invoice.title }}</h1>
@@ -15,6 +22,7 @@
       </p>
       <hr />
       <section :class="$options.name + '__content'" v-html="invoice.description"></section>
+      <hr/>
       <h4>Final invoice amount</h4>
       <p class="total">${{ total(invoice.total) }}</p>
       <hr />
