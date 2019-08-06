@@ -251,4 +251,13 @@ svg {
   max-width: 100%;
   height: auto;
 }
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.0125) translate3d(0, 0, 0);
+  }
+}
 </style>

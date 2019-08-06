@@ -1,49 +1,49 @@
 @function rem($size) {
-  $size-rem: $size/16;
-  @return #{$size-rem}rem;
+	$size-rem: $size/16;
+	@return #{$size-rem}rem;
 }
 
 @mixin breakpoint($point) {
-  @if $point == xs {
-    @media (min-width: rem(16)) and (max-width: rem(736)) {
-      @content;
-    }
-  } @else if $point == xs-only {
-    @media (min-width: rem(16)) and (max-width: rem(414)) {
-      @content;
-    }
-  } @else if $point == xsl {
-    @media (min-width: rem(464)) {
-      @content;
-    }
-  } @else if $point == s {
-    @media (min-width: rem(752)) {
-      @content;
-    }
-  } @else if $point == m {
-    @media (min-width: rem(1008)) {
-      @content;
-    }
-  } @else if $point == l {
-    @media (min-width: rem(1264)) {
-      @content;
-    }
-  } @else if $point == ml {
-    @media (min-width: rem(1424)) {
-      @content;
-    }
-  } @else if $point == xl {
-    @media (min-width: rem(1584)) {
-      @content;
-    }
-  } @else if $point == xxl {
-    @media (min-width: rem(1616)) {
-      @content;
-    }
-  }
+	@if $point == xs {
+		@media (min-width: rem(16)) and (max-width: rem(736)) {
+			@content;
+		}
+	} @else if $point == xs-only {
+		@media (min-width: rem(16)) and (max-width: rem(414)) {
+			@content;
+		}
+	} @else if $point == xsl {
+		@media (min-width: rem(464)) {
+			@content;
+		}
+	} @else if $point == s {
+		@media (min-width: rem(752)) {
+			@content;
+		}
+	} @else if $point == m {
+		@media (min-width: rem(1008)) {
+			@content;
+		}
+	} @else if $point == l {
+		@media (min-width: rem(1264)) {
+			@content;
+		}
+	} @else if $point == ml {
+		@media (min-width: rem(1424)) {
+			@content;
+		}
+	} @else if $point == xl {
+		@media (min-width: rem(1584)) {
+			@content;
+		}
+	} @else if $point == xxl {
+		@media (min-width: rem(1616)) {
+			@content;
+		}
+	}
 }
 
 @mixin smooth {
-  transform: translate3d(0, 0, 0);
-  transition: all 0.375s ease-in;
+	transform: translate3d(0, 0, 0);
+	transition: all 0.375s ease-in;
 }

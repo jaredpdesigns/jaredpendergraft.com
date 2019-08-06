@@ -109,14 +109,6 @@ export default {
       @media (orientation: landscape) {
         grid-column: 1 / span 2;
       }
-      @keyframes zoom {
-        0%, 100% {
-          transform: scale(1) translate3d(0,0,0);
-        }
-        50% {
-          transform: scale(1.0125) translate3d(0,0,0);
-        }
-      }
       picture img {
         @include smooth;
         animation: zoom 0.5s ease-in;
