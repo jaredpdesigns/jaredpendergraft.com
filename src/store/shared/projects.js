@@ -56,7 +56,7 @@ export const projects = [
 		description: "A fun, interactive way for kids to learn math.",
 		img:
 			"https://images.ctfassets.net/cuehicrlqnvu/5CynDfKx52ZOXjwZpuHxZQ/be4d5038d72caaaa3a37f80e0ec2e82b/thesekidsmath-main.png",
-		external: "https://thesekidsmath.netlify.com",
+		external: "https://thesekidsmath.jaredpendergraft.com",
 		color: "#0A0014"
 	}
 ];
