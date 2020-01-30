@@ -61,6 +61,7 @@ h1,
 h2,
 h3 {
   font-family: var(--typeFamily__secondary);
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 h4,
 h5 {
@@ -87,6 +88,8 @@ h4,
 p,
 li {
   font-size: var(--typeSize__m);
+  font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum", "frac";
+  font-variant-ligatures: common-ligatures contextual;
   line-height: var(--typeLineheight__l);
 }
 

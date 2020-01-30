@@ -30,7 +30,7 @@
         <p>{{ project.description }}</p>
         <p v-if="project.external">
           <a :href="project.external" target="_blank" rel="noopener">
-            Visit site
+            Visit Live Site
             <Icon :size="14" name="external" />
           </a>
         </p>
@@ -107,6 +107,10 @@ export default {
     &--text {
       @include breakpoint(xsl) {
         padding: var(--size__xl);
+      }
+      a {
+        font-family: var(--typeFamily__tertiary);
+        font-weight: 600;
       }
     }
   }

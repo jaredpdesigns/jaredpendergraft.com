@@ -6,16 +6,12 @@
     />
     <article v-for="project in $store.state.projects" :key="project.name">
       <router-link
+        v-if="project.slug"
         :class="[$options.name + '__item', 'legible radius--s']"
         :style="{ backgroundColor: project.color }"
         activeClass
         exactActiveClass
-        to
-        :target="project.slug ? false : '_blank'"
-        :rel="project.slug ? false : 'noopener'"
-        @click.native="
-          resolveURL(project.slug ? project.slug : project.external)
-        "
+        :to="'/projects/' + project.slug"
       >
         <section
           :class="[
@@ -23,9 +19,9 @@
             'oomph__v--m padding__all--l'
           ]"
         >
-          <h2>
+          <h1>
             {{ project.name }}
-          </h2>
+          </h1>
           <hr />
           <p class="margin__top--l">{{ project.description }}</p>
         </section>
@@ -44,24 +40,47 @@
           </picture>
         </figure>
       </router-link>
+      <a
+        v-else
+        :class="[$options.name + '__item', 'legible radius--s']"
+        :style="{ backgroundColor: project.color }"
+        activeClass
+        exactActiveClass
+        target="_blank"
+        rel="noopener"
+        :href="project.external"
+        ><section
+          :class="[
+            $options.name + '__item--text',
+            'oomph__v--m padding__all--l'
+          ]"
+        >
+          <h1>
+            {{ project.name }}
+          </h1>
+          <hr />
+          <p class="margin__top--l">{{ project.description }}</p>
+        </section>
+        <figure
+          :class="[
+            $options.name + '__item--img',
+            'padding__left--s padding__right--s'
+          ]"
+        >
+          <picture>
+            <source
+              :srcset="project.img + '?f=left&fit=fill&h=480&w=640'"
+              media="(min-width: 600px)"
+            />
+            <img :src="project.img + '?w=320'" :alt="project.name" />
+          </picture></figure
+      ></a>
     </article>
   </main>
 </template>
 <script>
-import Icon from "@/components/Icon";
 export default {
-  name: "Projects",
-  components: { Icon },
-  methods: {
-    resolveURL(URL) {
-      if (URL.includes("http")) {
-        this.$router.push("/projects");
-        window.open(URL, "_blank");
-      } else {
-        this.$router.push("/projects/" + URL);
-      }
-    }
-  }
+  name: "Projects"
 };
 </script>
 <style lang="scss">
