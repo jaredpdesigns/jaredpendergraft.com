@@ -32,7 +32,7 @@ export const projects = [
 			"Showcase of a variety of art that Avery creates using many different mediums.",
 		img:
 			"https://images.ctfassets.net/cuehicrlqnvu/3liflNuKZypl93TpsAOoE2/aa1ad725bdc55f05c1cc902abd8c1034/averysamazingart-main.png",
-		external: "https://averysamazingart.com",
+		external: "https://art.averymirabelle.com",
 		color: "#BC47FF"
 	},
 	{
@@ -48,7 +48,7 @@ export const projects = [
 		description: "A collection of great books our family reads together.",
 		img:
 			"https://images.ctfassets.net/cuehicrlqnvu/5sk33EJhhRDTNsXpGxlR1s/060d8c801920924022beaece068d422c/thesekidsread-main.png",
-		external: "https://thesekidsread.com",
+		external: "https://thesekidsread.jaredpendergraft.com",
 		color: "#00A396"
 	},
 	{

@@ -1,11 +1,17 @@
 <template>
-  <main :class="$options.name" :style="'--project:' + this.projectColor">
+  <main :class="$options.name" :style="{ '--color__project': projectColor }">
     <Head
       v-for="project in projectFiltered"
       :key="project.slug"
       :title="project.name + ' | A Project by Jared Pendergraft'"
       :description="project.description"
-      :image="'https://jaredpendergraft.com/img/projects/' + project.slug + '/' + project.slug + '-social.jpg'"
+      :image="
+        'https://jaredpendergraft.com/img/projects/' +
+          project.slug +
+          '/' +
+          project.slug +
+          '-social.jpg'
+      "
       :url="'jaredpendergraft.com/projects/' + project.slug"
     />
     <header
@@ -13,16 +19,12 @@
       :key="project.name"
       :class="$options.name + '__header'"
     >
-      <figure :class="$options.name + '__header--img'">
-        <picture>
-          <source :srcset="project.img + '?h=1280'" media="(min-width: 1600px)" />
-          <source :srcset="project.img + '?h=960'" media="(min-width: 1280px)" />
-          <source :srcset="project.img + '?h=720'" media="(min-width: 1024px)" />
-          <source :srcset="project.img + '?h=560'" media="(min-width: 600px)" />
-          <img :src="project.img + '?h=320'" :alt="project.name" />
-        </picture>
-      </figure>
-      <figcaption :class="$options.name + '__header--text'">
+      <section
+        :class="[
+          $options.name + '__header--text',
+          'legible oomph__v--m padding__all--m type__align--center'
+        ]"
+      >
         <h1>{{ project.name }}</h1>
         <hr />
         <p>{{ project.description }}</p>
@@ -32,16 +34,39 @@
             <Icon :size="14" name="external" />
           </a>
         </p>
-      </figcaption>
-      <router-link
-        :class="$options.name + '__header--skip'"
-        to="#content"
-        title="Skip to project content"
+      </section>
+      <figure
+        :class="[
+          $options.name + '__header--img',
+          'padding__left--m padding__right--m padding__top--m type__align--center'
+        ]"
       >
-        <Icon name="arrow-right" :size="14" />
-      </router-link>
+        <picture>
+          <source
+            :srcset="project.img + '?w=1440'"
+            media="(min-width: 1600px)"
+          />
+          <source
+            :srcset="project.img + '?h=960'"
+            media="(min-width: 1280px)"
+          />
+          <source
+            :srcset="project.img + '?h=720'"
+            media="(min-width: 1024px)"
+          />
+          <source :srcset="project.img + '?h=560'" media="(min-width: 600px)" />
+          <img :src="project.img + '?h=320'" :alt="project.name" />
+        </picture>
+      </figure>
     </header>
-    <component id="content" :is="projectContent" :class="$options.name + '__content'" />
+    <component
+      id="content"
+      :is="projectContent"
+      :class="[
+        $options.name + '__content',
+        'oomph__v--l padding__bottom--l padding__top--l'
+      ]"
+    />
   </main>
 </template>
 <script>
@@ -53,9 +78,6 @@ export default {
     project() {
       return this.$route.params.slug;
     },
-    projects() {
-      return this.$store.state.projects;
-    },
     projectColor() {
       return this.projectFiltered.map(project => project.color);
     },
@@ -64,203 +86,91 @@ export default {
     },
     projectFiltered() {
       const projectSlug = this.project;
-      return this.projects.filter(project => {
+      return this.$store.state.projects.filter(project => {
         return project.slug === projectSlug;
       });
     }
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .Project {
-  padding-bottom: rem(16);
-  padding-left: rem(16);
-  padding-right: rem(16);
+  padding: 0;
   &__header {
-    display: grid;
-    grid-gap: rem(32);
-    padding: rem(16);
-    position: relative;
-    @media (orientation: landscape) {
-      grid-template-columns:
-        minmax(0, 1fr) minmax(auto, rem(360)) minmax(auto, rem(360))
-        minmax(0, 1fr);
-      height: calc(100vh - 4rem);
-    }
-    @include breakpoint(xl) {
-      grid-template-columns:
-        minmax(0, 1fr) minmax(auto, rem(560)) minmax(auto, rem(560))
-        minmax(0, 1fr);
-      grid-gap: rem(64);
-    }
+    background-color: var(--color__project);
     &--img {
-      background-color: var(--project);
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: rem(8);
-      box-shadow: var(--shadow);
-      grid-column: 1 / span 4;
-      min-height: 38vh;
-      overflow: hidden;
-      position: relative;
-      @include breakpoint(s) {
-        min-height: 50vh;
-      }
-      @media (orientation: landscape) {
-        grid-column: 1 / span 2;
-      }
       picture img {
-        @include smooth;
-        animation: zoom 0.5s ease-in;
-        height: 100%;
-        max-width: auto;
-        position: absolute;
-        transform-origin: center;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     &--text {
-      align-self: center;
-      grid-column: 1 / span 4;
       @include breakpoint(xsl) {
-        grid-column: 3 / span 1;
-      }
-      > * + * {
-        margin-top: rem(16);
-      }
-      h1 {
-        color: var(--highlight);
-      }
-      a {
-        align-items: center;
-        color: var(--base-mid);
-        display: inline-flex;
-        svg {
-          margin-left: rem(8);
-        }
-      }
-    }
-    @keyframes float {
-      from {
-        transform: translate(-50%, 0);
-      }
-      to {
-        transform: translate(-50%, rem(8));
-      }
-    }
-    &--skip {
-      @include smooth;
-      align-items: center;
-      animation: float 0.5s ease-in infinite;
-      animation-direction: alternate-reverse;
-      animation-fill-mode: both;
-      background-color: var(--contrast);
-      border: rem(1) solid var(--base-ghost);
-      border-radius: 50%;
-      bottom: rem(32);
-      box-shadow: var(--shadow);
-      color: var(--base-mid);
-      display: none;
-      height: rem(40);
-      justify-content: center;
-      left: 50%;
-      position: absolute;
-      transform: translateX(-50%);
-      width: rem(40);
-      z-index: 10;
-      @media (orientation: landscape) {
-        display: inline-flex;
-      }
-      &:focus,
-      &:hover {
-        animation-play-state: paused;
-        color: var(--highlight);
-      }
-      svg {
-        transform: rotate(90deg);
+        padding: var(--size__xl);
       }
     }
   }
   &__content {
-    padding: rem(32) rem(16);
-    > *,
-    figcaption p {
+    @include breakpoint(l) {
+      padding: var(--size__xl) 0;
+    }
+    ::v-deep h2 {
+      color: var(--color__base-mid);
+    }
+    ::v-deep p,
+    ::v-deep .Project__content--separator {
       margin-left: auto;
       margin-right: auto;
-      max-width: rem(640);
-      @include breakpoint(xl) {
-        max-width: rem(960);
-      }
-      + * {
-        margin-top: rem(32);
+      max-width: 75ch;
+      padding-left: var(--size__l);
+      padding-right: var(--size__l);
+      @media print {
+        max-width: 100%;
       }
     }
-    figure {
-      align-items: center;
-      background-color: var(--project);
-      border: rem(1) solid var(--base-ghost);
-      border-radius: rem(8);
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      overflow: hidden;
-      padding-top: rem(16);
+    ::v-deep .Project__content--separator {
+      padding-top: var(--size__l);
       text-align: center;
-      &.full {
-        max-width: 100%;
+      hr {
+        margin-top: var(--size__m);
       }
-      .multi {
-        align-items: center;
-        display: inline-flex;
-        flex: 1 1 auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        @include breakpoint(xsl) {
-          flex-wrap: nowrap;
-        }
-      }
+    }
+    ::v-deep figure {
+      background-color: var(--color__project);
+      margin-top: var(--size__xl);
+      padding: var(--size__l);
+      text-align: center;
       svg {
-        flex-shrink: 1;
-        margin: rem(16);
-        max-width: 100%;
-        .multi & {
-          + svg {
-            @include breakpoint(xsl) {
-              margin-left: 0;
-            }
-          }
-        }
+        margin-left: auto;
+        margin-right: auto;
       }
       figcaption {
-        background-color: var(--contrast);
-        color: var(--base-mid);
-        margin-top: rem(16);
-        padding: rem(16);
-        width: 100%;
-      }
-      .Phone {
-        @include breakpoint(xsl) {
-          max-width: calc(100vw / 3.75);
-        }
-        @include breakpoint(l) {
-          max-width: rem(383);
+        padding-bottom: var(--size__l);
+        padding-top: var(--size__xl);
+        p {
+          color: white;
+          font-family: var(--typeFamily__secondary);
+          font-size: rem(20);
+          font-style: italic;
+          padding: 0;
         }
       }
-      .Tablet--portrait {
-        max-width: 75%;
-        @include breakpoint(m) {
-          max-width: 100%;
-        }
+      + figure {
+        margin-top: 0;
+        padding-top: 0;
       }
     }
-    &--separator {
-      margin-top: rem(64);
-      text-align: center;
-      h2 {
-        color: var(--base-mid);
+    ::v-deep .full {
+      svg + svg {
+        margin-top: var(--size__l);
       }
-      hr {
-        margin-top: rem(16);
+    }
+    ::v-deep .multi {
+      align-items: center;
+      display: grid;
+      grid-gap: var(--size__l);
+      @include breakpoint(xsl) {
+        grid-template-columns: repeat(auto-fit, minmax(rem(160), 1fr));
       }
     }
   }

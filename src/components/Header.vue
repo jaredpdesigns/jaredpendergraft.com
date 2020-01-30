@@ -1,18 +1,44 @@
 <template>
-  <header :class="$options.name">
+  <header
+    :class="[
+      $options.name,
+      'border__bottom color__bg--contrast color__border--base-ghost color__type--base-mid padding__bottom--s padding__left--l padding__right--l padding__top--s'
+    ]"
+  >
     <h3>
-      <router-link to="/" exactActiveClass="currentPage">Jared Pendergraft</router-link>
+      <router-link to="/" activeClass exactActiveClass
+        >Jared Pendergraft</router-link
+      >
     </h3>
-    <nav :class="$options.name + '__nav--main'" role="navigation">
-      <router-link to="/" exactActiveClass="currentPage">About</router-link>
+    <nav
+      :class="[$options.name + '__nav--main', 'oomph__h--l']"
+      role="navigation"
+    >
+      <router-link
+        to="/"
+        exactActiveClass="active"
+        class="border__bottom color__border--contrast padding__bottom--s padding__top--s"
+        >About</router-link
+      >
       <router-link
         to="/projects"
-        activeClass="currentParent"
-        exactActiveClass="currentPage"
-      >Projects</router-link>
-      <router-link to="/hire" activeClass="currentParent" exactActiveClass="currentPage">Hire Me</router-link>
+        activeClass="active"
+        exactActiveClass="active"
+        class="border__bottom color__border--contrast padding__bottom--s padding__top--s"
+        >Projects</router-link
+      >
+      <router-link
+        to="/hire"
+        activeClass="active"
+        exactActiveClass="active"
+        class="border__bottom color__border--contrast padding__bottom--s padding__top--s"
+        >Hire Me</router-link
+      >
     </nav>
-    <nav :class="$options.name + '__nav--social'" role="navigation">
+    <nav
+      :class="[$options.name + '__nav--social', 'margin__top--xs oomph__h--l']"
+      role="navigation"
+    >
       <a
         href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?"
         title="Send me an email"
@@ -35,10 +61,6 @@
       >
         <Icon name="dribbble" :size="20" />
       </a>
-      <button @click="updateTheme" aria-label="Switch site theme">
-        <Icon v-if="theme === 'dark'" name="sun" :size="20" />
-        <Icon v-else name="moon" :size="20" />
-      </button>
     </nav>
   </header>
 </template>
@@ -46,70 +68,39 @@
 import Icon from "@/components/Icon.vue";
 export default {
   name: "Header",
-  components: { Icon },
-  computed: {
-    theme() {
-      return this.$store.state.theme;
-    }
-  },
-  methods: {
-    updateTheme() {
-      let root = document.getElementsByTagName("html")[0];
-      if (this.theme === "dark") {
-        this.$store.dispatch("updateTheme", "light");
-        root.setAttribute("data-theme", "light");
-      } else {
-        this.$store.dispatch("updateTheme", "dark");
-        root.setAttribute("data-theme", "dark");
-      }
-    }
-  },
-  mounted() {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      let root = document.getElementsByTagName("html")[0];
-      root.setAttribute("data-theme", "dark");
-      this.$store.dispatch("updateTheme", "dark");
-    }
-  }
+  components: { Icon }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .Header {
   align-items: center;
-  background-color: var(--contrast);
-  border-bottom: rem(1) solid var(--base-ghost);
-  color: var(--base-mid);
   display: flex;
   flex-wrap: wrap;
-  height: rem(120);
+  height: calc(var(--size__xl) * 2);
   justify-content: center;
-  padding: rem(8) rem(32);
   position: fixed;
-  top: 0;
+  top: env(safe-area-inset-top);
   width: 100%;
   z-index: 100;
   @media print {
+    border-color: #ccc;
     position: static;
+    * {
+      color: black;
+    }
     &:after {
-      content: "jaredpendergraft.com • jaredpdesigns@gmail.com • 503-474-7437"
+      color: black;
+      content: "jaredpendergraft.com • jaredpdesigns@gmail.com • 503-474-7437";
     }
   }
   @include breakpoint(xsl) {
-    height: rem(64);
+    height: var(--size__xl);
     justify-content: space-between;
   }
-  @include breakpoint(l) {
-    padding: rem(16) rem(32);
-  }
   a {
-    @include smooth;
-  }
-  h3 a {
-    display: inline-block;
-    transform-origin: left;
     &:focus,
     &:hover {
-      color: var(--highlight);
+      color: var(--color__base);
     }
   }
   &__nav {
@@ -117,7 +108,7 @@ export default {
     &--social {
       align-items: center;
       display: inline-flex;
-      height: rem(32);
+      height: var(--size__l);
       justify-content: center;
       width: 100%;
       @media print {
@@ -126,34 +117,19 @@ export default {
       @include breakpoint(xsl) {
         width: auto;
       }
-      > * {
-        transform-origin: center;
-        &:focus,
-        &:hover {
-          color: var(--highlight);
-        }
-      }
     }
     &--main {
       > * {
+        font-family: var(--typeFamily__tertiary);
         font-weight: 600;
-        margin: 0 rem(8);
-        @include breakpoint(s) {
-          margin: 0 rem(16);
+        &.active {
+          border-color: var(--color__base-mid);
+          color: var(--color__base);
         }
-      }
-      .currentParent,
-      .currentPage {
-        border-bottom: rem(1) solid var(--highlight);
       }
     }
     &--social {
-      margin-top: rem(8);
-      @include breakpoint(xsl) {
-        margin-top: 0;
-      }
       > * {
-        @include smooth;
         align-items: center;
         display: inline-flex;
         justify-content: center;
@@ -162,9 +138,6 @@ export default {
         &:hover {
           opacity: 1;
         }
-      }
-      > * + * {
-        margin-left: rem(16);
       }
     }
   }

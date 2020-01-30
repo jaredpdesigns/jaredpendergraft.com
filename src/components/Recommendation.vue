@@ -1,10 +1,20 @@
 <template>
-  <blockquote :class="$options.name">
-    <section :class="$options.name + '__text'">
-      <slot/>
+  <blockquote
+    :class="[
+      $options.name,
+      'border__all color__bg--contrast color__border--base-ghost radius--s'
+    ]"
+  >
+    <section :class="[$options.name + '__text', 'oomph__v--m padding__all--m']">
+      <slot />
     </section>
-    <footer :class="$options.name + '__footer'">
-      <h4>—&thinsp;{{ person }}</h4>
+    <footer
+      :class="[
+        $options.name + '__footer',
+        'color__bg--brand padding__bottom--m padding__left--l padding__right--l padding__top--m'
+      ]"
+    >
+      <h4 class="color__type--contrast">—&thinsp;{{ person }}</h4>
     </footer>
   </blockquote>
 </template>
@@ -17,41 +27,41 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .Recommendation {
-  background-color: var(--contrast);
-  border: rem(1) solid var(--base-ghost);
-  border-radius: rem(8);
   box-shadow: var(--shadow);
   overflow: hidden;
   padding: 0 !important;
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color__contrast-extra);
+    border-color: var(--color__contrast-extra);
+  }
   &__text {
-    padding: rem(16);
     position: relative;
-    @include breakpoint(m) {
-      padding-left: rem(64);
+    @include breakpoint(xsl) {
+      padding-left: var(--size__xl);
     }
     &:before {
-      color: var(--highlight);
-      font-size: rem(64);
-      left: rem(16);
+      color: var(--color__brand);
+      font-size: var(--size__xl);
+      left: var(--size__m);
       position: absolute;
-      top: rem(4);
-      @include breakpoint(m) {
+      top: var(--size__xs);
+      @include breakpoint(xsl) {
         content: "“";
       }
     }
-    > * + * {
-      margin-top: rem(16);
+    p {
+      font-family: var(--typeFamily__secondary);
     }
   }
   &__footer {
     align-items: center;
-    background-color: var(--highlight);
     display: flex;
-    padding: rem(16) rem(32);
     h4 {
-      color: var(--contrast);
+      @media (prefers-color-scheme: dark) {
+        color: var(--color__contrast-extra);
+      }
     }
   }
 }

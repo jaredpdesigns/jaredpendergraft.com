@@ -18,13 +18,13 @@
         fill="white"
         :width="width"
         :height="height"
-        :mask="'url(#'+ this._uid + '-freeform-mask)'"
+        :mask="'url(#' + this._uid + '-freeform-mask)'"
       />
       <image
         :xlink:href="img"
         :width="width"
         :height="height"
-        :mask="'url(#'+ this._uid + '-freeform-mask)'"
+        :mask="'url(#' + this._uid + '-freeform-mask)'"
       />
     </g>
   </svg>

@@ -1,0 +1,196 @@
+@import url("https://use.typekit.net/zkw5aru.css");
+
+:root {
+  @each $key, $value in $colors {
+    --color__#{$key}: #{$value};
+  }
+  @each $key, $value in $sizes {
+    --size__#{$key}: #{$value};
+  }
+  --shadow: #{0 var(--size__m) var(--size__l) rem(-16) rgba(0, 0, 0, 0.25)};
+  --typeFamily__primary: "lft-etica-mono", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  --typeFamily__secondary: "arlette", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  --typeFamily__tertiary: "lft-etica", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  @each $key, $value in $type__lineheights {
+    --typeLineheight__#{$key}: #{$value};
+  }
+  @each $key, $value in $type__sizes {
+    --typeSize__#{$key}: #{$value};
+  }
+  @media (prefers-color-scheme: dark) {
+    @each $key, $value in $colors-dark {
+      --color__#{$key}: #{$value};
+    }
+    --shadow: #{0 var(--size__m) var(--size__l) rem(-16) black};
+  }
+}
+
+html {
+  background-color: var(--color__contrast);
+  color: var(--color__base);
+  font-family: var(--typeFamily__primary);
+  font-size: 100%;
+  padding-top: calc(var(--size__xl) * 2);
+  @include breakpoint(xsl) {
+    padding-top: var(--size__xl);
+  }
+  @media print {
+    padding-top: 0;
+  }
+}
+
+::selection {
+  background-color: var(--color__brand);
+  color: white;
+}
+
+main {
+  padding: var(--size__l);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--typeFamily__secondary);
+}
+h4,
+h5 {
+  font-family: var(--typeFamily__tertiary);
+  font-weight: 600;
+}
+h1 {
+  font-size: var(--typeSize__xxl);
+  line-height: var(--typeLineheight__xl);
+}
+h2 {
+  font-size: var(--typeSize__xl);
+  line-height: var(--typeLineheight__l);
+}
+h3 {
+  font-size: var(--typeSize__l);
+  line-height: var(--typeLineheight__l);
+}
+h5 {
+  font-size: var(--typeSize__s);
+  line-height: var(--typeLineheight__m);
+}
+h4,
+p,
+li {
+  font-size: var(--typeSize__m);
+  line-height: var(--typeLineheight__l);
+}
+
+ul,
+ol {
+  li {
+    list-style: none;
+    position: relative;
+    + li {
+      margin-top: var(--size__m);
+    }
+  }
+  li:before {
+    color: var(--color__brand);
+    display: inline-block;
+  }
+}
+
+ol {
+  counter-reset: custom-counter;
+  li {
+    padding-left: calc(var(--size__l) + var(--size__s));
+    @include breakpoint(m) {
+      padding-left: 0;
+    }
+    &:before {
+      content: counter(custom-counter) ".";
+      counter-increment: custom-counter;
+      display: inline-block;
+      left: 0;
+      position: absolute;
+      text-align: right;
+      width: calc(var(--size__m) + var(--size__s));
+      @include breakpoint(m) {
+        left: rem(-32);
+      }
+    }
+    ol {
+      margin-top: var(--size__m);
+      padding-left: calc(var(--size__l) + var(--size__s));
+      li:before {
+        content: counter(custom-counter, lower-alpha) ".";
+        @include breakpoint(m) {
+          left: rem(-40);
+        }
+      }
+      ol {
+        padding-left: var(--size__xl);
+        li:before {
+          content: counter(custom-counter, lower-roman) ".";
+          @include breakpoint(m) {
+            left: rem(-64);
+          }
+        }
+      }
+    }
+  }
+}
+
+ul li {
+  padding-left: calc(var(--size__m) + var(--size__s));
+  @include breakpoint(m) {
+    padding-left: 0;
+  }
+  &:before {
+    content: "•";
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    @include breakpoint(m) {
+      left: rem(-32);
+    }
+  }
+}
+
+a,
+button {
+  @include smooth;
+}
+
+p a {
+  border-bottom: rem(1) solid var(--color__brand);
+}
+
+hr {
+  background-color: var(--color__base-ghost);
+  border-radius: calc(var(--size__xs) / 2);
+  display: inline-block;
+  height: var(--size__xs);
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--size__xl);
+  @media print {
+    border-bottom: rem(4) solid;
+  }
+}
+
+blockquote {
+  border: rem(1) solid var(--color__base-ghost);
+  border-left-color: var(--color__brand);
+  border-left-width: var(--size__xs);
+  border-radius: var(--size__xs);
+  color: var(--color__base-mid);
+  padding-bottom: var(--size__m);
+  padding-left: var(--size__l);
+  padding-top: var(--size__m);
+}

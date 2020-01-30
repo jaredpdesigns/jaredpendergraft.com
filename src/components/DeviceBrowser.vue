@@ -14,14 +14,27 @@
       <mask :id="'browser-mask' + this._uid" fill="white">
         <rect width="1440" height="924" x="2" rx="8" />
       </mask>
-      <rect width="1444" height="926" fill="var(--contrast)" rx="8" />
-      <rect fill="var(--contrast)" width="1440" height="924" x="2" :mask="'url(#browser-mask' + this._uid + ')'" />
+      <rect width="1444" height="926" fill="var(--color__contrast)" rx="8" />
+      <rect
+        fill="var(--color__contrast)"
+        width="1440"
+        height="924"
+        x="2"
+        :mask="'url(#browser-mask' + this._uid + ')'"
+      />
       <path
-        fill="var(--base-ghost)"
+        fill="var(--color__base-ghost)"
         d="M6 12c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6zm20 0c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6zm20 0c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"
         transform="translate(8 6)"
       />
-      <image :xlink:href="img" x="0" y="24" height="900" width="1440" :mask="'url(#browser-mask' + this._uid + ')'" />
+      <image
+        :xlink:href="img"
+        x="0"
+        y="24"
+        height="900"
+        width="1440"
+        :mask="'url(#browser-mask' + this._uid + ')'"
+      />
     </g>
   </svg>
 </template>
@@ -34,3 +47,10 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.Browser {
+  @media (prefers-color-scheme: dark) {
+    --color__contrast: var(--color__contrast-extra);
+  }
+}
+</style>

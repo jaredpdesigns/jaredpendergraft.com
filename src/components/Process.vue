@@ -1,9 +1,15 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 64 64">
+  <svg
+    :class="$options.name"
+    xmlns="http://www.w3.org/2000/svg"
+    :width="size"
+    :height="size"
+    viewBox="0 0 64 64"
+  >
     <g v-for="process in filtered" :key="process.name">
-      <path fill="var(--contrast)" :d="process.white" />
-      <path fill="var(--base)" :d="process.black" />
-      <path fill="var(--highlight)" :d="process.green" />
+      <path fill="var(--color__secondary)" :d="process.white" />
+      <path fill="var(--color__contrast)" :d="process.black" />
+      <path fill="var(--color__brand)" :d="process.green" />
     </g>
   </svg>
 </template>
@@ -73,3 +79,10 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.Process {
+  @media (prefers-color-scheme: dark) {
+    --color__contrast: var(--color__contrast-extra);
+  }
+}
+</style>

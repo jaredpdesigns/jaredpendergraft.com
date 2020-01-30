@@ -122,6 +122,7 @@ export const clients = [
 			year: 2019
 		},
 		hourly: 150,
+		total: 5000,
 		type: "agreement"
 	},
 	{

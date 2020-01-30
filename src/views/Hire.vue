@@ -1,39 +1,58 @@
 <template>
   <main :class="$options.name">
-    <Head title="Hire Me | Jared Pendergraft" description="Let’s create something great together!" />
-    <header>
-      <h1>Let’s create something great together!</h1>
-      <hr/>
-      <p>
-        I’m not currently looking for any full-time work but feel free to view my
-        <router-link to="/hire/resume">résumé</router-link> to get a little more information about my background.
-      </p>
-      <p>
-        I’m always interested in creative freelance opportunities—if you'd like to work together send me an
-        <a
-          href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?"
-        >email</a>.
-      </p>
-    </header>
-    <article id="process">
-      <header>
-        <h2>My Creative Process</h2>
-        <hr/>
-        <p>While each project requires different approaches to problem-solving, here are a few examples of common ways I approach design challenges:</p>
+    <Head
+      title="Hire Me | Jared Pendergraft"
+      description="Let’s create something great together!"
+    />
+    <article class="oomph__v--l">
+      <header class="oomph__v--m padding__all--l type__align--center">
+        <h1 class="color__type--brand">
+          Let’s create something great together!
+        </h1>
+        <hr />
+        <p class="legible margin__top--l type__align--left">
+          I’m not currently looking for any full-time work but feel free to view
+          my
+          <router-link to="/hire/resume">résumé</router-link> to get a little
+          more information about my background.
+        </p>
+        <p class="legible margin__top--l type__align--left">
+          I’m always interested in creative freelance opportunities—if you'd
+          like to work together send me an
+          <a
+            href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?"
+            >email</a
+          >.
+        </p>
       </header>
-      <section :class="$options.name + '__process'">
-        <section
-          v-for="process in processes"
-          :key="process.label"
-          :class="$options.name + '__process--item'"
-        >
-          <figure>
-            <Process :name="process.img" :size="64" />
-          </figure>
-          <figcaption>
-            <h4>{{ process.label }}</h4>
-            <p>{{ process.description }}</p>
-          </figcaption>
+      <section id="process" class="oomph__v--l">
+        <section class="oomph__v--m padding__all--l type__align--center">
+          <h2 class="color__type--base-mid">My Creative Process</h2>
+          <hr />
+          <p class="legible margin__top--l type__align--left">
+            While each project requires different approaches to problem-solving,
+            here are a few examples of common ways I approach design challenges:
+          </p>
+        </section>
+        <section :class="$options.name + '__process'">
+          <section
+            v-for="process in processes"
+            :key="process.label"
+            :class="[
+              $options.name + '__process--item',
+              'border__all color__bg--contrast color__border--base-ghost radius--s'
+            ]"
+          >
+            <figure
+              class="border__bottom color__border--base-ghost padding__all--m type__align--center"
+            >
+              <Process :name="process.img" :size="64" />
+            </figure>
+            <figcaption class="oomph__v--m padding__all--m type__align--center">
+              <h3 class="color__type--base-mid">{{ process.label }}</h3>
+              <p>{{ process.description }}</p>
+            </figcaption>
+          </section>
         </section>
       </section>
     </article>
@@ -82,64 +101,30 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .Hire {
-  padding: rem(16);
-  h1 {
-    color: var(--highlight);
-  }
-  h2, h4 {
-    color: var(--base-mid);
-  }
-  header {
-    padding-top: rem(16);
-    text-align: center;
-    > * {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: rem(640);
-      padding-left: rem(16);
-      padding-right: rem(16);
-      @include breakpoint(xl) {
-        max-width: rem(960);
-      }
-      + * {
-        margin-top: rem(16);
-      }
-    }
-    > p {
-      text-align: left;
-    }
-  }
-  article > header {
-    margin: rem(32) 0;
-  }
   &__process {
+    --max: #{rem(480)};
     align-items: start;
     display: grid;
-    grid-gap: rem(32);
+    grid-gap: var(--size__l);
     grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
-    margin: rem(16) auto;
-    max-width: rem(1280);
+    @include breakpoint(l) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+    }
+    @include breakpoint(xl) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(var(--max) * 3.5);
+    }
     &--item {
-      @include smooth;
-      background-color: var(--contrast);
-      border: rem(1) solid var(--base-ghost);
-      border-radius: rem(8);
       box-shadow: var(--shadow);
-      padding: rem(16);
-      transform-origin: center;
-      * + * {
-        margin-top: rem(16);
-      }
-      &:hover {
-        animation: zoom 0.5s ease-in;
-      }
-      figure {
-        text-align: center;
-      }
-      figcaption {
-        padding: rem(16);
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--max);
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--color__contrast-extra);
+        border-color: var(--color__contrast-extra);
       }
     }
   }
