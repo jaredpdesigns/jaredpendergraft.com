@@ -160,17 +160,20 @@ ul li {
   &:before {
     content: "•";
     display: inline-block;
-    font-family: var(--typeFamily__secondary);
-    font-size: var(--typeSize__s);
     left: 0;
     position: absolute;
-    @supports (font-feature-settings: "ss01") {
-      content: "c";
-      font-feature-settings: "ss01";
-    }
     @include breakpoint(m) {
       left: rem(-32);
     }
+  }
+}
+
+@supports (font-feature-settings: "ss01") {
+  ul li:before {
+    content: "c";
+    font-family: var(--typeFamily__secondary);
+    font-feature-settings: "ss01";
+    font-size: var(--typeSize__s);
   }
 }
 
