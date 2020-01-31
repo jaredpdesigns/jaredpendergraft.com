@@ -165,6 +165,12 @@ ul li {
     @include breakpoint(m) {
       left: rem(-32);
     }
+    @supports (font-feature-settings: "ss01") {
+      content: "c";
+      font-family: var(--typeFamily__secondary);
+      font-feature-settings: "ss01";
+      font-size: var(--typeSize__s);
+    }
   }
 }
 

@@ -18,26 +18,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   max-width: 75ch;
-  @media print {
-    max-width: 100%;
-  }
-}
-
-.Invoice,
-.Agreement,
-.Resume {
-  *,
-  *:before,
-  *:after {
-    @media print {
-      border-color: #ccc !important;
-      color: black !important;
-    }
-  }
-  #signatures,
-  #scheduleA {
-    page-break-before: always;
-  }
 }
 
 .Projects__item--text,
@@ -48,6 +28,29 @@ export default {
   }
   hr {
     background-color: rgba(white, 0.25);
+  }
+}
+
+@media print {
+  .Invoice,
+  .Agreement,
+  .Resume {
+    * {
+      border-color: #ccc !important;
+      color: black !important;
+      &:before {
+        color: #666;
+      }
+    }
+  }
+  .Resume aside {
+    max-width: 100%;
+  }
+  #signatures,
+  #scheduleA,
+  .Resume article section:nth-of-type(3),
+  .Resume article h4:nth-of-type(3) {
+    page-break-before: always;
   }
 }
 </style>

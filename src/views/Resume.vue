@@ -202,7 +202,9 @@
           outside vendors to produce final materials.
         </li>
       </ul>
-      <section class="margin__top--xl oomph__v--m type__align--center">
+    </article>
+    <aside class="legible margin__top--xl oomph__v--l">
+      <section class="oomph__v--m type__align--center">
         <h3 class="color__type--base-mid">Recommendations</h3>
         <hr />
       </section>
@@ -284,7 +286,7 @@
           him as an addition to any agency or product team.
         </p>
       </Recommendation>
-    </article>
+    </aside>
   </main>
 </template>
 <script>
@@ -296,6 +298,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Resume {
+  ul {
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      @supports (font-feature-settings: "ss03") {
+        li:before {
+          content: "a";
+          font-feature-settings: "ss03";
+        }
+      }
+    }
+  }
   &__recommendations {
     align-items: start;
     display: grid;

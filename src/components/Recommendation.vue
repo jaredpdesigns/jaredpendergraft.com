@@ -61,6 +61,9 @@ export default {
   &__footer {
     align-items: center;
     display: flex;
+    @media print {
+      border-top: rem(1) solid;
+    }
     h4 {
       @media (prefers-color-scheme: dark) {
         color: var(--color__contrast-extra);
