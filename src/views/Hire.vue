@@ -48,7 +48,9 @@
             >
               <Process :name="process.img" :size="64" />
             </figure>
-            <figcaption class="oomph__v--m padding__all--m type__align--center">
+            <figcaption
+              class="oomph__v--m padding__bottom--l padding__left--m padding__right--m padding__top--l type__align--center"
+            >
               <h3 class="color__type--base-mid">{{ process.label }}</h3>
               <p>{{ process.description }}</p>
             </figcaption>
