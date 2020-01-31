@@ -298,11 +298,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Resume {
-  ul {
-    &:nth-of-type(1),
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      @supports (font-feature-settings: "ss03") {
+  @supports (font-feature-settings: "ss03") {
+    ul {
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
         li:before {
           content: "a";
           font-feature-settings: "ss03";
