@@ -36,10 +36,13 @@ export default {
     background-color: var(--color__contrast-extra);
     border-color: var(--color__contrast-extra);
   }
+  @media print {
+    box-shadow: none;
+  }
   &__text {
     position: relative;
     @include breakpoint(xsl) {
-      padding-left: var(--size__xl);
+      padding-left: calc(var(--size__l) + var(--size__m) + var(--size__s));
     }
     &:before {
       color: var(--color__brand);

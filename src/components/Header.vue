@@ -120,7 +120,6 @@ export default {
     }
     &--main {
       > * {
-        font-family: var(--typeFamily__tertiary);
         font-weight: 600;
         &.active {
           border-color: var(--color__base-mid);

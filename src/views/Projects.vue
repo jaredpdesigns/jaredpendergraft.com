@@ -33,8 +33,8 @@
         >
           <picture>
             <source
-              :srcset="project.img + '?f=left&fit=fill&h=480&w=640'"
-              media="(min-width: 600px)"
+              :srcset="project.img + '?f=left&fit=fill&h=640&w=640'"
+              media="(min-width: 36rem)"
             />
             <img :src="project.img + '?w=320'" :alt="project.name" />
           </picture>
@@ -69,8 +69,8 @@
         >
           <picture>
             <source
-              :srcset="project.img + '?f=left&fit=fill&h=480&w=640'"
-              media="(min-width: 600px)"
+              :srcset="project.img + '?f=left&fit=fill&h=640&w=640'"
+              media="(min-width: 36rem)"
             />
             <img :src="project.img + '?w=320'" :alt="project.name" />
           </picture></figure
@@ -112,7 +112,7 @@ export default {
     &--img {
       align-self: center;
       @include breakpoint(xsl) {
-        padding: var(--size__s) 0;
+        padding: 0;
       }
     }
     &--text {

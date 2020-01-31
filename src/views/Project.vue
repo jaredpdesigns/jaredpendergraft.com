@@ -44,17 +44,11 @@
         <picture>
           <source
             :srcset="project.img + '?w=1440'"
-            media="(min-width: 1600px)"
+            media="(min-width: 100rem)"
           />
-          <source
-            :srcset="project.img + '?h=960'"
-            media="(min-width: 1280px)"
-          />
-          <source
-            :srcset="project.img + '?h=720'"
-            media="(min-width: 1024px)"
-          />
-          <source :srcset="project.img + '?h=560'" media="(min-width: 600px)" />
+          <source :srcset="project.img + '?h=960'" media="(min-width: 80rem)" />
+          <source :srcset="project.img + '?h=720'" media="(min-width: 63rem)" />
+          <source :srcset="project.img + '?h=560'" media="(min-width: 36rem)" />
           <img :src="project.img + '?h=320'" :alt="project.name" />
         </picture>
       </figure>
@@ -109,7 +103,6 @@ export default {
         padding: var(--size__xl);
       }
       a {
-        font-family: var(--typeFamily__tertiary);
         font-weight: 600;
       }
     }
@@ -153,9 +146,7 @@ export default {
         padding-top: var(--size__xl);
         p {
           color: white;
-          font-family: var(--typeFamily__secondary);
-          font-size: rem(20);
-          font-style: italic;
+          font-family: var(--typeFamily__tertiary);
           padding: 0;
         }
       }

@@ -24,8 +24,11 @@ export default {
 }
 
 .Invoice,
-.Agreement {
-  * {
+.Agreement,
+.Resume {
+  *,
+  *:before,
+  *:after {
     @media print {
       border-color: #ccc !important;
       color: black !important;

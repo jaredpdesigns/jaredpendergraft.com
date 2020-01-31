@@ -62,7 +62,6 @@ export default {
       transform: scale(1.005);
     }
     footer {
-      font-family: var(--typeFamily__tertiary);
       font-weight: 600;
       text-transform: uppercase;
     }

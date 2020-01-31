@@ -7,7 +7,7 @@
       image="http://jaredpendergraft.com/img/social.jpg"
       url="jaredpendergraft.com"
     />
-    <article class="oomph__v--l">
+    <article>
       <header class="oomph__v--m padding__all--l type__align--center">
         <h1 class="color__type--brand">Hello, it’s nice to meet you.</h1>
         <hr />

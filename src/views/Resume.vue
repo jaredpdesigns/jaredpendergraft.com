@@ -98,7 +98,7 @@
       </section>
       <h4>Education Advanced, Inc.</h4>
       <p class="margin__top--s">
-        <em>Director of UI/UX</em>
+        <em>Lead UI/UX Developer</em>
         <br />Currently • Remote
       </p>
       <ul>
@@ -117,6 +117,10 @@
         <li>
           Collaborates with Creative Director on multiple brand elements and
           creative projects.
+        </li>
+        <li>
+          Contributes to front-end development efforts for multiple applications
+          within the company.
         </li>
       </ul>
       <h4>OTTO Health</h4>
