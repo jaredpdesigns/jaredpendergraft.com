@@ -298,7 +298,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Resume {
-  @supports (font-feature-settings: "ss03") {
+  @supports (font-feature-settings: "kern") {
     ul {
       &:nth-of-type(1),
       &:nth-of-type(2),
