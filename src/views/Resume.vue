@@ -298,14 +298,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Resume {
-  @supports (font-feature-settings: "kern") {
-    ul {
-      &:nth-of-type(1),
-      &:nth-of-type(2),
-      &:nth-of-type(3) {
-        li:before {
-          content: "a";
-          font-feature-settings: "ss03";
+  ul {
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      li:before {
+        content: "a";
+        font-feature-settings: "ss03";
+        @supports not (font-feature-settings: "kern") {
+          content: "c";
+          font-size: var(--typeSize__m);
         }
       }
     }

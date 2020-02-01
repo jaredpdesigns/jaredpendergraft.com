@@ -158,8 +158,11 @@ ul li {
     padding-left: 0;
   }
   &:before {
-    content: "•";
+    content: "c";
     display: inline-block;
+    font-family: var(--typeFamily__secondary);
+    font-feature-settings: "ss01";
+    font-size: var(--typeSize__s);
     left: 0;
     position: absolute;
     @include breakpoint(m) {
@@ -168,12 +171,10 @@ ul li {
   }
 }
 
-@supports (font-feature-settings: "kern") {
+@supports not (font-feature-settings: "ss01") {
   ul li:before {
     content: "c";
-    font-family: var(--typeFamily__secondary);
-    font-feature-settings: "ss01";
-    font-size: var(--typeSize__s);
+    font-size: var(--typeSize__m);
   }
 }
 
