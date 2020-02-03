@@ -16,10 +16,6 @@
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     sans-serif;
-  --typeFamily__tertiary: "lft-etica-mono", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
   @each $key, $value in $type__lineheights {
     --typeLineheight__#{$key}: #{$value};
   }

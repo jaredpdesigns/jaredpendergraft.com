@@ -210,7 +210,6 @@ export default {
         padding-top: var(--size__xl);
         p {
           color: var(--color__project-contrast);
-          font-family: var(--typeFamily__tertiary);
           padding: 0;
         }
       }

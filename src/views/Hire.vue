@@ -5,8 +5,8 @@
       description="Let’s create something great together!"
     />
     <article class="oomph__v--l">
-      <header class="oomph__v--m padding__all--l type__align--center">
-        <h1 class="color__type--brand">
+      <header class="oomph__v--m type__align--center">
+        <h1 class="color__type--brand padding__all--l">
           Let’s create something great together!
         </h1>
         <hr />
@@ -26,7 +26,7 @@
         </p>
       </header>
       <section id="process" class="oomph__v--l">
-        <section class="oomph__v--m padding__all--l type__align--center">
+        <section class="oomph__v--m padding__bottom--l padding__top--l type__align--center">
           <h2 class="color__type--base-mid">My Creative Process</h2>
           <hr />
           <p class="legible margin__top--l type__align--left">
