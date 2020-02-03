@@ -20,17 +20,6 @@ export default {
   max-width: 75ch;
 }
 
-.Projects__item--text,
-.Project__header {
-  color: white;
-  p a {
-    border-color: rgba(white, 0.25);
-  }
-  hr {
-    background-color: rgba(white, 0.25);
-  }
-}
-
 @media print {
   .Invoice,
   .Agreement,

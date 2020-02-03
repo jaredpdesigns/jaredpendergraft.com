@@ -1,5 +1,12 @@
 <template>
-  <main :class="$options.name" :style="{ '--color__project': projectColor }">
+  <main
+    :class="$options.name"
+    :style="{
+      '--color__project': projectColor,
+      '--color__project-contrast':
+        contrast.ratio > 4 ? '#FFF' : darkenColor(projectColor, -0.7)
+    }"
+  >
     <Head
       v-for="project in projectFiltered"
       :key="project.slug"
@@ -28,12 +35,22 @@
         <h1>{{ project.name }}</h1>
         <hr />
         <p>{{ project.description }}</p>
-        <p v-if="project.external">
-          <a :href="project.external" target="_blank" rel="noopener">
+
+        <a
+          v-if="project.external"
+          :class="[
+            $options.name + '__header--text-badge',
+            'oomph__h--s padding__bottom--xs padding__left--m padding__right--m padding__top--xs radius--m'
+          ]"
+          :href="project.external"
+          target="_blank"
+          rel="noopener"
+        >
+          <h5>
             Visit Live Site
-            <Icon :size="14" name="external" />
-          </a>
-        </p>
+          </h5>
+          <Icon :size="12" name="external" />
+        </a>
       </section>
       <figure
         :class="[
@@ -73,7 +90,7 @@ export default {
       return this.$route.params.slug;
     },
     projectColor() {
-      return this.projectFiltered.map(project => project.color);
+      return this.projectFiltered.map(project => project.color).toString();
     },
     projectContent() {
       return () => import(`@/projects/${this.project}.vue`);
@@ -84,6 +101,45 @@ export default {
         return project.slug === projectSlug;
       });
     }
+  },
+  data() {
+    return {
+      contrast: {}
+    };
+  },
+  methods: {
+    darkenColor(hex, lum) {
+      hex = String(hex).replace(/[^0-9a-f]/gi, "");
+      if (hex.length < 6) {
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+      }
+      lum = lum || 0;
+      var rgb = "#",
+        c,
+        i;
+      for (i = 0; i < 3; i++) {
+        c = parseInt(hex.substr(i * 2, 2), 16);
+        c = Math.round(Math.min(Math.max(0, c + c * lum), 255)).toString(16);
+        rgb += ("00" + c).substr(c.length);
+      }
+      return rgb;
+    },
+    getContrast(hex) {
+      fetch(
+        "https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=" +
+          hex.replace("#", "") +
+          "&api"
+      )
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          this.contrast = data;
+        });
+    }
+  },
+  mounted() {
+    this.getContrast(this.projectColor);
   }
 };
 </script>
@@ -99,11 +155,19 @@ export default {
       }
     }
     &--text {
+      color: var(--color__project-contrast);
       @include breakpoint(xsl) {
         padding: var(--size__xl);
       }
-      a {
-        font-weight: 600;
+      &-badge {
+        align-items: center;
+        background-color: var(--color__project-contrast);
+        display: inline-flex;
+        color: var(--color__project);
+      }
+      hr {
+        background-color: var(--color__project-contrast);
+        opacity: 0.25;
       }
     }
   }
@@ -145,7 +209,7 @@ export default {
         padding-bottom: var(--size__l);
         padding-top: var(--size__xl);
         p {
-          color: white;
+          color: var(--color__project-contrast);
           font-family: var(--typeFamily__tertiary);
           padding: 0;
         }
