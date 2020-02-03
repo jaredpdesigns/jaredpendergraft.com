@@ -2,12 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Profile from "./views/Profile";
 import Projects from "./views/Projects";
-import Project from "./views/Project";
 import Hire from "./views/Hire";
-import Resume from "./views/Resume";
-import Clients from "./views/Clients";
-import Agreement from "./views/Agreement";
-import Invoice from "./views/Invoice";
 
 Vue.use(Router);
 
@@ -41,7 +36,7 @@ export default new Router({
     {
       path: "/projects/:slug",
       name: "Project",
-      component: Project
+      component: () => import("./views/Project")
     },
     {
       path: "/hire/",
@@ -51,22 +46,22 @@ export default new Router({
     {
       path: "/hire/resume/",
       name: "Résumé",
-      component: Resume
+      component: () => import("./views/Resume")
     },
     {
       path: "/clients",
       name: "Clients",
-      component: Clients
+      component: () => import("./views/Clients")
     },
     {
       path: "/clients/agreement/:slug",
       name: "Agreement",
-      component: Agreement
+      component: () => import("./views/Agreement")
     },
     {
       path: "/clients/invoice/:slug",
       name: "Invoice",
-      component: Invoice
+      component: () => import("./views/Invoice")
     }
   ]
 });
