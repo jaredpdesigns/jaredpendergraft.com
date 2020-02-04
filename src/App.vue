@@ -17,7 +17,10 @@ export default {
 .legible {
   margin-left: auto;
   margin-right: auto;
-  max-width: 75ch;
+  max-width: 60ch;
+  @include breakpoint(m) {
+    max-width: 75ch;
+  }
 }
 
 @media print {

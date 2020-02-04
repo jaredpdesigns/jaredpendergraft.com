@@ -111,7 +111,7 @@ ol {
   counter-reset: custom-counter;
   li {
     padding-left: calc(var(--size__l) + var(--size__s));
-    @include breakpoint(m) {
+    @include breakpoint(xsl) {
       padding-left: 0;
     }
     &:before {
@@ -122,7 +122,7 @@ ol {
       position: absolute;
       text-align: right;
       width: calc(var(--size__m) + var(--size__s));
-      @include breakpoint(m) {
+      @include breakpoint(xsl) {
         left: rem(-32);
       }
     }
@@ -131,7 +131,7 @@ ol {
       padding-left: calc(var(--size__l) + var(--size__s));
       li:before {
         content: counter(custom-counter, lower-alpha) ".";
-        @include breakpoint(m) {
+        @include breakpoint(xsl) {
           left: rem(-40);
         }
       }
@@ -139,7 +139,7 @@ ol {
         padding-left: var(--size__l);
         li:before {
           content: counter(custom-counter, lower-roman) ".";
-          @include breakpoint(m) {
+          @include breakpoint(xsl) {
             left: rem(-40);
           }
         }
@@ -150,7 +150,7 @@ ol {
 
 ul li {
   padding-left: calc(var(--size__m) + var(--size__s));
-  @include breakpoint(m) {
+  @include breakpoint(xsl) {
     padding-left: 0;
   }
   &:before {
@@ -161,7 +161,7 @@ ul li {
     font-size: var(--typeSize__s);
     left: 0;
     position: absolute;
-    @include breakpoint(m) {
+    @include breakpoint(xsl) {
       left: rem(-32);
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <router-link
     v-if="slug"
-    :class="[$options.name, 'legible radius--s']"
+    :class="[$options.name, 'radius--s']"
     activeClass
     exactActiveClass
     :to="'/projects/' + slug"
@@ -40,7 +40,7 @@
   </router-link>
   <a
     v-else
-    :class="[$options.name, 'legible radius--s']"
+    :class="[$options.name, 'radius--s']"
     activeClass
     exactActiveClass
     target="_blank"
@@ -130,6 +130,9 @@ export default {
   background-color: var(--color__project);
   box-shadow: var(--shadow);
   display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(768);
   @include breakpoint(xsl) {
     grid-template-columns: 1fr 1fr;
   }

@@ -51,21 +51,21 @@
       </section>
       <ul>
         <li>
-          <strong>Responsive Web Design:</strong> screens are everywhere, web
+          <strong>Responsive Web Design:</strong>&ensp;screens are everywhere, web
           things should scale and squish and transform to meet the challenges of
           modern day devices.
         </li>
         <li>
-          <strong>User Experience:</strong> screens must be intuitive and a joy
+          <strong>User Experience:</strong>&ensp;screens must be intuitive and a joy
           to use, the interfaces and experiences should reflect this above all
           else.
         </li>
         <li>
-          <strong>Branding & Identity:</strong> brands are built around how they
+          <strong>Branding & Identity:</strong>&ensp;brands are built around how they
           look, how they speak, and how they make you feel—hopefully all three.
         </li>
         <li>
-          <strong>Project Management:</strong> every project consists of many
+          <strong>Project Management:</strong>&ensp;every project consists of many
           moving parts, each piece must be overseen and nurtured to contribute
           to a successful whole.
         </li>
@@ -75,13 +75,13 @@
         <hr />
       </section>
       <ul>
-        <li><strong>Content Management:</strong> Jekyll, Shopify, Wordpress</li>
-        <li><strong>CSS/HTML/JS:</strong> LESS, SASS, jQuery, React, Vue</li>
+        <li><strong>Content Management:</strong>&ensp;Jekyll, Shopify, Wordpress</li>
+        <li><strong>CSS/HTML/JS:</strong>&ensp;LESS, SASS, jQuery, React, Vue</li>
         <li>
-          <strong>UI/UX:</strong> Adobe Suite, Prototyping, Sketch, User
+          <strong>UI/UX:</strong>&ensp;Adobe Suite, Prototyping, Sketch, User
           Research
         </li>
-        <li><strong>Version Control</strong> Git, Subversion</li>
+        <li><strong>Version Control:</strong>&ensp;Git, Subversion</li>
       </ul>
       <section class="margin__top--xl oomph__v--m type__align--center">
         <h3 class="color__type--base-mid">Education</h3>
