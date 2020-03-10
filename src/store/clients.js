@@ -1,5 +1,30 @@
 export const clients = [
 	{
+		title: "Dura Mater 2020 Collateral",
+		description:
+			"<p>Jared Pendergraft was hired to update the collateral for the 2020 Dura Mater charity ride. Including designs for a logo treatment, poster, t-shirt, jersey and socks.</p>",
+		slug: "nice-bike-dura-mater-2020-collateral",
+		client: {
+			name: "Nice Bike",
+			street: "2439 S Broadway, Warehouse 1",
+			city: "Denver",
+			state: "CO",
+			zip: 80210
+		},
+		start: {
+			month: "February",
+			day: 8,
+			year: 2020
+		},
+		end: {
+			month: "March",
+			day: 10,
+			year: 2020
+		},
+		total: 225,
+		type: "invoice"
+	},
+	{
 		title: "Dura Mater 2019 Socks",
 		description:
 			"<p>Design for a pair of socks to match the other Dura Mater collateral for the 2019 event.</p>",
