@@ -124,6 +124,9 @@ export default {
         &.active {
           border-color: var(--color__base-mid);
           color: var(--color__base);
+          &:focus {
+            color: var(--color__brand);
+          }
         }
       }
     }

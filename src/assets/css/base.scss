@@ -181,6 +181,10 @@ button {
 
 p a {
   border-bottom: rem(1) solid var(--color__brand);
+  &:focus {
+    background-color: var(--color__brand);
+    color: white;
+  }
 }
 
 hr {
