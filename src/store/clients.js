@@ -6,7 +6,7 @@ export const clients = [
 		slug: "nice-bike-dura-mater-2020-collateral",
 		client: {
 			name: "Nice Bike",
-			street: "2439 S Broadway, Warehouse 1",
+			street: "1875 S Broadway",
 			city: "Denver",
 			state: "CO",
 			zip: 80210

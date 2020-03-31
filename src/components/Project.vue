@@ -65,6 +65,10 @@
     >
       <picture>
         <source
+          :srcset="img + '?f=left&fit=fill&h=640&w=640&fm=webp'"
+          media="(min-width: 36rem)"
+        />
+        <source
           :srcset="img + '?f=left&fit=fill&h=640&w=640'"
           media="(min-width: 36rem)"
         />

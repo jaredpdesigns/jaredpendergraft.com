@@ -58,7 +58,7 @@
       />
       <figcaption>
         <p>
-          Primary and secondary logotypes.
+          <em> Primary and secondary logotypes.</em>
         </p>
       </figcaption>
     </figure>
@@ -71,8 +71,10 @@
       />
       <figcaption>
         <p>
-          iOS app icon introducing a gradient treatment of the two primary
-          highlight brand colors.
+          <em>
+            iOS app icon introducing a gradient treatment of the two primary
+            highlight brand colors.</em
+          >
         </p>
       </figcaption>
     </figure>
@@ -93,10 +95,12 @@
       />
       <figcaption>
         <p>
-          While a majority of the interface in the application is white and
-          gray, color plays a big role with action-based UI elements. It was
-          important for any secondary colors to feel as warm and natural as the
-          selection of typefaces.
+          <em>
+            While a majority of the interface in the application is white and
+            gray, color plays a big role with action-based UI elements. It was
+            important for any secondary colors to feel as warm and natural as
+            the selection of typefaces.</em
+          >
         </p>
       </figcaption>
     </figure>
@@ -119,8 +123,10 @@
       />
       <figcaption>
         <p>
-          OTTO’s icon system borrows from the softness of the logotype and
-          general clarity of form—even at small sizes.
+          <em>
+            OTTO’s icon system borrows from the softness of the logotype and
+            general clarity of form—even at small sizes.</em
+          >
         </p>
       </figcaption>
     </figure>
@@ -159,35 +165,40 @@
       <section class="multi">
         <Phone
           alt="Find a provider 1"
-          img="/img/projects/otto/otto-find-provider-1.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/1vxZk9K8oR8nrg8vHHTyb9/07eceb8d4079394d9f55aba8e800f838/otto-find-provider-1.jpg"
         />
         <Phone
           alt="Find a provider 2"
-          img="/img/projects/otto/otto-find-provider-2.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/1r7MAt8oTR3qhZFpmISrI7/4cf86fd58b3c200cf76c1491eacf8f83/otto-find-provider-2.jpg"
         />
         <Phone
           alt="Find a provider 3"
-          img="/img/projects/otto/otto-find-provider-3.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/10RrFIra0boM2cUlKTunpx/257e976faf3fac87110aa89cad33c0df/otto-find-provider-3.jpg"
         />
       </section>
       <figcaption>
         <p>
-          For first-time users we reduced a lot of the friction of finding a new
-          provider by helping narrow the search query and showing providers who
-          are available soonest with the next available appointment.
+          <em>
+            For first-time users we reduced a lot of the friction of finding a
+            new provider by helping narrow the search query and showing
+            providers who are available soonest with the next available
+            appointment.</em
+          >
         </p>
       </figcaption>
     </figure>
     <figure class="full">
       <Browser
         alt="Find a provider - Care Team"
-        img="/img/projects/otto/otto-find-provider-care-team.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/2wqVe9jEUjOoVpNXHURIKd/b70008bc8ab67b1b265a05518e110153/otto-find-provider-care-team.jpg"
       />
       <figcaption>
         <p>
-          For users who like seeing the same providers consistently, we grouped
-          saved providers into a Care Team—enabling a broader amount of
-          appointment availability.
+          <em>
+            For users who like seeing the same providers consistently, we
+            grouped saved providers into a Care Team—enabling a broader amount
+            of appointment availability.</em
+          >
         </p>
       </figcaption>
     </figure>
@@ -195,50 +206,57 @@
       <section class="multi">
         <Phone
           alt="Provider profile"
-          img="/img/projects/otto/otto-provider-profile.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/121LiTky8iZwaTHVTSjuCP/f61439ba4d1c49d3fcec9a5f2bf21d7e/otto-provider-profile.jpg"
         />
         <Phone
           alt="Upcoming appointments"
-          img="/img/projects/otto/otto-appointments-upcoming.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/2Y47rz9ZqGec2WC8EBrelU/c4f43369e88c525554458338c0416922/otto-appointments-upcoming.jpg"
         />
         <Phone
           alt="Cancel appointment"
-          img="/img/projects/otto/otto-cancel-appointment.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/7zYan2TpsjhfEyTlkcPNFp/683e76e71419cdb08604fb3c3fcc5db8/otto-cancel-appointment.jpg"
         />
       </section>
       <figcaption>
         <p>
-          If users want to learn more about providers they can view their
-          profiles. Additionally it’s easy to view upcoming appointments and
-          reschedule or cancel an appointment.
+          <em>
+            If users want to learn more about providers they can view their
+            profiles. Additionally it’s easy to view upcoming appointments and
+            reschedule or cancel an appointment.</em
+          >
         </p>
       </figcaption>
     </figure>
     <figure class="full">
       <Browser
         alt="Provider consultation"
-        img="/img/projects/otto/otto-consultation-provider.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/1BFQMzavofsnYhOUfOARx3/7708a3a17f6bbb7c97c06a18a56c6506/otto-consultation-provider.jpg"
       />
       <figcaption>
         <p>
-          The core of the application is the one-to-one connection providers and
-          patients make through video consultations. On the provider end of the
-          call information about patients as well as an ability to take notes
-          during the consultation are available. Notes integrate with external
-          EMR systems making OTTO versatile within existing healthcare
-          environments.
+          <em>
+            The core of the application is the one-to-one connection providers
+            and patients make through video consultations. On the provider end
+            of the call information about patients as well as an ability to take
+            notes during the consultation are available. Notes integrate with
+            external EMR systems making OTTO versatile within existing
+            healthcare environments.</em
+          >
         </p>
       </figcaption>
     </figure>
     <figure class="full">
       <Browser
         alt="Practice scheduling"
-        img="/img/projects/otto/otto-schedule-practice.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/7enaMbrbK3QtUXe0ApGv9Q/98263aa914a102887611d2ed465a45ed/otto-schedule-practice.jpg"
       />
       <figcaption>
         <p>
-          For busy practices scheduling multiple providers for consultations is
-          easy. Having an overview of the upcoming week is very helpful.
+          <em
+            >For busy practices scheduling multiple providers for consultations
+            is easy. Having an overview of the upcoming week is very
+            helpful.</em
+          >
         </p>
       </figcaption>
     </figure>
@@ -246,21 +264,23 @@
       <section class="multi">
         <Phone
           alt="Schedule add"
-          img="/img/projects/otto/otto-schedule-add.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/5DZDLXVukPWlYUlzK3ug08/b0a1c57096d0a09f9d8ec4e559525ae4/otto-schedule-add.jpg"
         />
         <Phone
           alt="Schedule edit"
-          img="/img/projects/otto/otto-schedule-edit.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/7HO0YHFSaoZKknYe9hAFGE/fc6d4a71e0485528b236bc358497ff5f/otto-schedule-edit.jpg"
         />
         <Phone
           alt="Schedule new patients"
-          img="/img/projects/otto/otto-new-patient.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/4g0HtrQQwgTCzAP6h4T1BF/e35bff52e145ca6e9b343b310d28fc77/otto-new-patient.jpg"
         />
       </section>
       <figcaption>
         <p>
-          Practice administrators can add or edit provider availability as well
-          as schedule new patients.
+          <em>
+            Practice administrators can add or edit provider availability as
+            well as schedule new patients.</em
+          >
         </p>
       </figcaption>
     </figure>

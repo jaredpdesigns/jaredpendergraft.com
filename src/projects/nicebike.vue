@@ -11,12 +11,14 @@
     <figure class="full">
       <Browser
         alt="Landing page"
-        img="/img/projects/nicebike/nicebike-home-browser.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/6FjyhCiCdRAMnkc8c2jh7D/e9fd399c44aefb3c871bd2a1040d4878/nicebike-home-browser.jpg"
       />
       <figcaption>
         <p>
-          First impression are important—solution was a giant hero image of a
-          featured bike in all its glory.
+          <em>
+            First impression are important—solution was a giant hero image of a
+            featured bike in all its glory.
+          </em>
         </p>
       </figcaption>
     </figure>
@@ -38,20 +40,22 @@
     <figure class="full">
       <Browser
         alt="Build specs - overview"
-        img="/img/projects/nicebike/nicebike-specs-1-browser.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/3062G0sboZFVn0wvboDra/746527ac47cb8ab2336ace4caf753af6/nicebike-specs-1-browser.jpg"
       />
       <Browser
         alt="Build specs - detailed"
-        img="/img/projects/nicebike/nicebike-specs-2-browser.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/67F0S4PYrzCEJoJhov6OE8/996f4ede471c310bcb4294bef31863c4/nicebike-specs-2-browser.jpg"
       />
       <Browser
         alt="Builds search narrowing results"
-        img="/img/projects/nicebike/nicebike-builds-search-browser.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/30ardx9jmG9rZNM9Fvxfb1/09420da5c9c188b6fe213c473f080406/nicebike-builds-search-browser.jpg"
       />
       <figcaption>
         <p>
-          Focusing on the specs of each bike help customers truly appreciate
-          what goes into each custom build.
+          <em>
+            Focusing on the specs of each bike help customers truly appreciate
+            what goes into each custom build.</em
+          >
         </p>
       </figcaption>
     </figure>
@@ -67,11 +71,11 @@
     <figure class="full">
       <Browser
         alt="Build specs - overview"
-        img="/img/projects/nicebike/nicebike-about-browser.jpg"
+        img="https://images.ctfassets.net/cuehicrlqnvu/7BsCiSEv82k4YVWtjW7ixq/8c4764db2b6c27683d37b012649661fe/nicebike-about-browser.jpg"
       />
       <figcaption>
         <p>
-          Nice Bike is a shop for dog lovers and bike lovers alike.
+          <em> Nice Bike is a shop for dog lovers and bike lovers alike.</em>
         </p>
       </figcaption>
     </figure>
@@ -100,19 +104,24 @@
       <section class="multi">
         <Phone
           alt="Home mobile view"
-          img="/img/projects/nicebike/nicebike-home-phone.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/5b4e5mcaCp6aavTPmtEHP2/9a596201a7b7aac7faa39f0838bf958d/nicebike-home-phone.jpg"
         />
         <Phone
           alt="News article mobile view"
-          img="/img/projects/nicebike/nicebike-news-phone.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/1lRMGvbLJQzYXUbX7sWbXf/430821f05da1a8dd1c290bca8487d624/nicebike-news-phone.jpg"
         />
         <Phone
           alt="Contact map mobile view"
-          img="/img/projects/nicebike/nicebike-contact-phone.jpg"
+          img="https://images.ctfassets.net/cuehicrlqnvu/1loB2YeoeV5mRdy1idNQ77/ad41e52ea4af73d0f0a215cc20e9b13f/nicebike-contact-phone.jpg"
         />
       </section>
       <figcaption>
-        <p>A selection of pages highlighting the mobile design of the site.</p>
+        <p>
+          <em
+            >A selection of pages highlighting the mobile design of the
+            site.</em
+          >
+        </p>
       </figcaption>
     </figure>
   </article>

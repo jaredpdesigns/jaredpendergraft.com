@@ -21,8 +21,16 @@
         <figure :class="$options.name + '__img--wrap'">
           <picture>
             <source
+              :srcset="img + '?f=face&fit=fill&h=960&w=960&fm=webp'"
+              media="(min-width: 99rem)"
+            />
+            <source
               :srcset="img + '?f=face&fit=fill&h=960&w=960'"
               media="(min-width: 99rem)"
+            />
+            <source
+              :srcset="img + '?f=face&fit=fill&h=960&w=640&fm=webp'"
+              media="(orientation: landscape), (min-width: 63rem)"
             />
             <source
               :srcset="img + '?f=face&fit=fill&h=960&w=640'"

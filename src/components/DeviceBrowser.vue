@@ -28,7 +28,7 @@
         transform="translate(8 6)"
       />
       <image
-        :xlink:href="img"
+        :xlink:href="imgDetected"
         x="0"
         y="24"
         height="900"
@@ -41,6 +41,19 @@
 <script>
 export default {
   name: "Browser",
+  computed: {
+    imgDetected() {
+      let image = this.img;
+      let isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      if (isChrome) {
+        return image + '?w=1440&fm=webp';
+      } else {
+        return image + '?w=1440';
+      }
+    }
+  },
   props: {
     alt: { default: null },
     img: { default: "http://via.placeholder.com/1440x900" }

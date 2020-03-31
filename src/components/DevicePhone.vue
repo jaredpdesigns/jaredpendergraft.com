@@ -16,7 +16,7 @@
       </mask>
       <rect width="383" height="820" fill="var(--color__contrast)" rx="32" />
       <image
-        :xlink:href="img"
+        :xlink:href="imgDetected"
         x="4"
         y="4"
         height="812"
@@ -33,6 +33,19 @@
 <script>
 export default {
   name: "Phone",
+  computed: {
+    imgDetected() {
+      let image = this.img;
+      let isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      if (isChrome) {
+        return image + '?w=750&fm=webp';
+      } else {
+        return image + '?w=750';
+      }
+    }
+  },
   props: {
     alt: { default: null },
     img: { default: "http://via.placeholder.com/375x812" }
