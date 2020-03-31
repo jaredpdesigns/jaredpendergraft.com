@@ -22,8 +22,7 @@
 export default {
   name: "Recommendation",
   props: {
-    person: { default: null },
-    img: { default: null }
+    person: { default: null }
   }
 };
 </script>

@@ -51,23 +51,24 @@
       </section>
       <ul>
         <li>
-          <strong>Responsive Web Design:</strong>&ensp;screens are everywhere, web
-          things should scale and squish and transform to meet the challenges of
-          modern day devices.
+          <strong>Responsive Web Design:</strong>&ensp;screens are everywhere,
+          web things should scale and squish and transform to meet the
+          challenges of modern day devices.
         </li>
         <li>
-          <strong>User Experience:</strong>&ensp;screens must be intuitive and a joy
-          to use, the interfaces and experiences should reflect this above all
-          else.
+          <strong>User Experience:</strong>&ensp;screens must be intuitive and a
+          joy to use, the interfaces and experiences should reflect this above
+          all else.
         </li>
         <li>
-          <strong>Branding & Identity:</strong>&ensp;brands are built around how they
-          look, how they speak, and how they make you feel—hopefully all three.
+          <strong>Branding & Identity:</strong>&ensp;brands are built around how
+          they look, how they speak, and how they make you feel—hopefully all
+          three.
         </li>
         <li>
-          <strong>Project Management:</strong>&ensp;every project consists of many
-          moving parts, each piece must be overseen and nurtured to contribute
-          to a successful whole.
+          <strong>Project Management:</strong>&ensp;every project consists of
+          many moving parts, each piece must be overseen and nurtured to
+          contribute to a successful whole.
         </li>
       </ul>
       <section class="margin__top--xl oomph__v--m type__align--center">
@@ -75,8 +76,12 @@
         <hr />
       </section>
       <ul>
-        <li><strong>Content Management:</strong>&ensp;Jekyll, Shopify, Wordpress</li>
-        <li><strong>CSS/HTML/JS:</strong>&ensp;LESS, SASS, jQuery, React, Vue</li>
+        <li>
+          <strong>Content Management:</strong>&ensp;Jekyll, Shopify, Wordpress
+        </li>
+        <li>
+          <strong>CSS/HTML/JS:</strong>&ensp;LESS, SASS, jQuery, React, Vue
+        </li>
         <li>
           <strong>UI/UX:</strong>&ensp;Adobe Suite, Prototyping, Sketch, User
           Research
@@ -208,10 +213,7 @@
         <h3 class="color__type--base-mid">Recommendations</h3>
         <hr />
       </section>
-      <Recommendation
-        person="Bristol Dunlap"
-        img="https://media.licdn.com/dms/image/C5103AQHvNGydkkuRyQ/profile-displayphoto-shrink_200_200/0?e=1533772800&v=beta&t=7cqwEWeP4f63CYGTaFxycLgRWDBbQJlsEvmxnij6yAg"
-      >
+      <Recommendation person="Bristol Dunlap">
         <p>
           Jared is an exceptional worker and person. I felt very lucky to have
           the chance to work with him while at Kontur Labs. He is honest,
@@ -226,10 +228,7 @@
           designer or developer.
         </p>
       </Recommendation>
-      <Recommendation
-        person="Peter Liu"
-        img="https://scontent-lax3-1.cdninstagram.com/vp/6990fba5f6d7bcc3e2c3dba9de0039c7/5BB873BA/t51.2885-19/11312397_1470181583281600_256382947_a.jpg"
-      >
+      <Recommendation person="Peter Liu">
         <p>
           I hired Jared to design the Playbill for our big summer show,
           <em>The Hunchback of Notre Dame</em>, in addition to a variety of
@@ -247,10 +246,7 @@
           designer.
         </p>
       </Recommendation>
-      <Recommendation
-        person="Alexis Wogan"
-        img="https://pbs.twimg.com/profile_images/492237457274834944/oT5Ider1_400x400.png"
-      >
+      <Recommendation person="Alexis Wogan">
         <p>
           As a designer at Kontur Labs, and also as a contract designer for
           hire, Jared demonstrated a consistent ability to design creative and
