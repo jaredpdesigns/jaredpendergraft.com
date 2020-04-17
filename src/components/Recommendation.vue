@@ -2,7 +2,7 @@
   <blockquote
     :class="[
       $options.name,
-      'border__all color__bg--contrast color__border--base-ghost radius--s'
+      'border__all color__bg--contrast color__border--base-ghost radius--s',
     ]"
   >
     <section :class="[$options.name + '__text', 'oomph__v--m padding__all--m']">
@@ -11,7 +11,7 @@
     <footer
       :class="[
         $options.name + '__footer',
-        'color__bg--brand padding__bottom--m padding__left--l padding__right--l padding__top--m'
+        'color__bg--brand padding__bottom--m padding__left--l padding__right--l padding__top--m',
       ]"
     >
       <h4 class="color__type--contrast">—&thinsp;{{ person }}</h4>
@@ -22,8 +22,8 @@
 export default {
   name: "Recommendation",
   props: {
-    person: { default: null }
-  }
+    person: { default: null },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -31,10 +31,6 @@ export default {
   box-shadow: var(--shadow);
   overflow: hidden;
   padding: 0 !important;
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--color__contrast-extra);
-    border-color: var(--color__contrast-extra);
-  }
   @media print {
     box-shadow: none;
   }
@@ -62,11 +58,6 @@ export default {
     display: flex;
     @media print {
       border-top: rem(1) solid;
-    }
-    h4 {
-      @media (prefers-color-scheme: dark) {
-        color: var(--color__contrast-extra);
-      }
     }
   }
 }

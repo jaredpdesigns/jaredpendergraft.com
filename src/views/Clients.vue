@@ -3,8 +3,11 @@
     <Head
       title="Clients | Jared Pendergraft"
       description="Portal for hosting client files, agreements and invoices"
+      url="https://jaredpendergraft.com/clients"
     />
-    <article class="oomph__v--l">
+    <article
+      class="oomph__v--xl padding__bottom--xl padding__left--l padding__right--l padding__top--xl"
+    >
       <header class="oomph__v--m type__align--center">
         <h1 class="color__type--brand">Clients</h1>
         <hr />
@@ -16,7 +19,7 @@
           :key="client.slug"
           :class="[
             $options.name + '__item',
-            'border__all color__bg--contrast color__border--base-ghost radius--s type__align--center'
+            'border__all color__bg--contrast color__border--base-ghost radius--s type__align--center',
           ]"
         >
           <header
@@ -37,7 +40,7 @@
 </template>
 <script>
 export default {
-  name: "Clients"
+  name: "Clients",
 };
 </script>
 <style lang="scss" scoped>
@@ -53,13 +56,12 @@ export default {
   }
   &__item {
     box-shadow: var(--shadow);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color__contrast-extra);
-      border-color: var(--color__contrast-extra);
-    }
     &:focus,
     &:hover {
-      transform: scale(1.005);
+      box-shadow: none;
+    }
+    &:focus {
+      border-color: var(--color__brand);
     }
     footer {
       font-weight: 600;

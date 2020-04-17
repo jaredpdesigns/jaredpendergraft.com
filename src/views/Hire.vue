@@ -3,10 +3,13 @@
     <Head
       title="Hire Me | Jared Pendergraft"
       description="Let’s create something great together!"
+      url="https://jaredpendergraft.com/hire"
     />
-    <article class="oomph__v--l">
-      <header class="oomph__v--m type__align--center">
-        <h1 class="color__type--brand padding__all--l">
+    <article>
+      <header
+        class="oomph__v--m padding__bottom--xl padding__left--l padding__right--l padding__top--xl type__align--center"
+      >
+        <h1 class="color__type--brand">
           Let’s create something great together!
         </h1>
         <hr />
@@ -25,22 +28,24 @@
           >.
         </p>
       </header>
-      <section id="process" class="oomph__v--l">
-        <section class="oomph__v--m padding__bottom--l padding__top--l type__align--center">
-          <h2 class="color__type--base-mid">My Creative Process</h2>
-          <hr />
+      <section
+        id="process"
+        class="color__bg--tertiary oomph__v--xl padding__bottom--xl padding__left--l padding__right--l padding__top--xl"
+      >
+        <header class="oomph__v--m type__align--center">
+          <h2 class="color__type--secondary">My Creative Process</h2>
           <p class="legible margin__top--l type__align--left">
             While each project requires different approaches to problem-solving,
             here are a few examples of common ways I approach design challenges:
           </p>
-        </section>
+        </header>
         <section :class="$options.name + '__process'">
           <section
             v-for="process in processes"
             :key="process.label"
             :class="[
               $options.name + '__process--item',
-              'border__all color__bg--contrast color__border--base-ghost radius--s'
+              'color__bg--contrast radius--s',
             ]"
           >
             <figure
@@ -49,7 +54,7 @@
               <Process :name="process.img" :size="64" />
             </figure>
             <figcaption
-              class="oomph__v--m padding__bottom--l padding__left--m padding__right--m padding__top--l type__align--center"
+              class="oomph__v--m padding__bottom--l padding__left--m padding__right--m padding__top--l"
             >
               <h3 class="color__type--base-mid">{{ process.label }}</h3>
               <p>{{ process.description }}</p>
@@ -72,35 +77,35 @@ export default {
           label: "Initial Discovery & Research",
           description:
             "Figure out what we’re building and what problems we’re trying to solve.",
-          img: "Research"
+          img: "Research",
         },
         two: {
           label: "Style & Tone",
           description:
             "Explore visual ideas and establish the voice of the project.",
-          img: "Style"
+          img: "Style",
         },
         three: {
           label: "Present Ideas & Determine Constraints",
           description:
             "Finalize approval of visual direction and confirm what was designed can be built.",
-          img: "Present"
+          img: "Present",
         },
         four: {
           label: "Finalize Architecture & Build",
           description:
             "Confirm our design supports established content models and begin development.",
-          img: "Build"
+          img: "Build",
         },
         five: {
           label: "Test, Optimize & Iterate",
           description:
             "Perform A/B testing when applicable to confirm assumptions, optimize content for best performance, and determine what can be improved in the next cycle.",
-          img: "Iterate"
-        }
-      }
+          img: "Iterate",
+        },
+      },
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -120,14 +125,9 @@ export default {
       max-width: calc(var(--max) * 3.5);
     }
     &--item {
-      box-shadow: var(--shadow);
       margin-left: auto;
       margin-right: auto;
       max-width: var(--max);
-      @media (prefers-color-scheme: dark) {
-        background-color: var(--color__contrast-extra);
-        border-color: var(--color__contrast-extra);
-      }
     }
   }
 }

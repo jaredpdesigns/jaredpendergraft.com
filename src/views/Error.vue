@@ -3,6 +3,7 @@
     <Head
       title="Uh-oh | Jared Pendergraft"
       description="The page you’re looking for is unavailable."
+      url="https://jaredpendergraft.com/error"
     />
     <article>
       <h1>The page you’re looking for is unavailable.</h1>

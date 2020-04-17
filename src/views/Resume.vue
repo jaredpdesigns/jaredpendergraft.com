@@ -2,10 +2,13 @@
   <main :class="$options.name">
     <Head
       title="Résumé | Jared Pendergraft"
-      description="The personal website of Jared Pendergraft"
+      description="Hey! It’s my résumé!"
+      url="https://jaredpendergraft.com/hire/resume"
     />
-    <article class="legible oomph__v--l">
-      <header class="oomph__v--m padding__all--l type__align--center">
+    <article class="legible oomph__v--l padding__left--l padding__right--l">
+      <header
+        class="oomph__v--m padding__bottom--l padding__top--xl type__align--center"
+      >
         <h1 class="color__type--brand">Résumé</h1>
         <hr />
       </header>
@@ -208,12 +211,14 @@
         </li>
       </ul>
     </article>
-    <aside class="legible margin__top--xl oomph__v--l">
-      <section class="oomph__v--m type__align--center">
-        <h3 class="color__type--base-mid">Recommendations</h3>
-        <hr />
-      </section>
-      <Recommendation person="Bristol Dunlap">
+    <aside
+      id="recommendations"
+      class="color__bg--tertiary margin__top--xl oomph__v--l padding__bottom--xl padding__left--l padding__right--l padding__top--xl"
+    >
+      <h2 class="color__type--secondary type__align--center">
+        Recommendations
+      </h2>
+      <Recommendation class="legible" person="Bristol Dunlap">
         <p>
           Jared is an exceptional worker and person. I felt very lucky to have
           the chance to work with him while at Kontur Labs. He is honest,
@@ -228,7 +233,7 @@
           designer or developer.
         </p>
       </Recommendation>
-      <Recommendation person="Peter Liu">
+      <Recommendation class="legible" person="Peter Liu">
         <p>
           I hired Jared to design the Playbill for our big summer show,
           <em>The Hunchback of Notre Dame</em>, in addition to a variety of
@@ -246,7 +251,7 @@
           designer.
         </p>
       </Recommendation>
-      <Recommendation person="Alexis Wogan">
+      <Recommendation class="legible" zperson="Alexis Wogan">
         <p>
           As a designer at Kontur Labs, and also as a contract designer for
           hire, Jared demonstrated a consistent ability to design creative and
@@ -289,7 +294,7 @@
 import Recommendation from "@/components/Recommendation.vue";
 export default {
   name: "Resume",
-  components: { Recommendation }
+  components: { Recommendation },
 };
 </script>
 <style lang="scss" scoped>
@@ -306,18 +311,6 @@ export default {
           font-size: var(--typeSize__m);
         }
       }
-    }
-  }
-  &__recommendations {
-    align-items: start;
-    display: grid;
-    grid-gap: var(--size__l);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 75ch;
-    @include breakpoint(l) {
-      grid-template-columns: repeat(auto-fit, minmax(rem(480), 1fr));
-      max-width: 100%;
     }
   }
 }

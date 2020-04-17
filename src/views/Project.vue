@@ -4,7 +4,7 @@
     :style="{
       '--color__project': projectColor,
       '--color__project-contrast':
-        contrast.ratio > 4 ? '#FFF' : darkenColor(projectColor, -0.7)
+        contrast.ratio > 4 ? '#FFF' : darkenColor(projectColor, -0.7),
     }"
   >
     <Head
@@ -19,43 +19,21 @@
           project.slug +
           '-social.jpg'
       "
-      :url="'jaredpendergraft.com/projects/' + project.slug"
+      :url="'https://jaredpendergraft.com/projects/' + project.slug"
     />
     <header
       v-for="project in projectFiltered"
       :key="project.name"
-      :class="$options.name + '__header'"
+      :class="[
+        $options.name + '__header',
+        'border__bottom color__border--base-light',
+      ]"
+      :style="{ backgroundColor: 'var(--color__project)' }"
     >
-      <section
-        :class="[
-          $options.name + '__header--text',
-          'legible oomph__v--m padding__all--m type__align--center'
-        ]"
-      >
-        <h1>{{ project.name }}</h1>
-        <hr />
-        <p>{{ project.description }}</p>
-
-        <a
-          v-if="project.external"
-          :class="[
-            $options.name + '__header--text-badge',
-            'oomph__h--s padding__bottom--xs padding__left--m padding__right--m padding__top--xs radius--m'
-          ]"
-          :href="project.external"
-          target="_blank"
-          rel="noopener"
-        >
-          <h5>
-            Visit Live Site
-          </h5>
-          <Icon :size="12" name="external" />
-        </a>
-      </section>
       <figure
         :class="[
           $options.name + '__header--img',
-          'padding__left--m padding__right--m padding__top--m type__align--center'
+          'padding__all--l type__align--center',
         ]"
       >
         <picture>
@@ -85,13 +63,33 @@
           <img :src="project.img + '?h=320'" :alt="project.name" />
         </picture>
       </figure>
+      <section
+        :class="[$options.name + '__header--text', 'color__bg--contrast']"
+      >
+        <section
+          class="oomph__v--l padding__bottom--xl padding__left--l padding__right--l padding__top--xl"
+        >
+          <h1>{{ project.name }}</h1>
+          <p>{{ project.description }}</p>
+          <a
+            v-if="project.external"
+            class="color__bg--base color__type--contrast padding__left--m padding__right--m type__size--s-l"
+            :href="project.external"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit Site
+            <Icon class="margin__left--s" :size="12" name="external" />
+          </a>
+        </section>
+      </section>
     </header>
     <component
       id="content"
       :is="projectContent"
       :class="[
         $options.name + '__content',
-        'oomph__v--l padding__bottom--l padding__top--l'
+        'oomph__v--l padding__bottom--xl padding__top--xl',
       ]"
     />
   </main>
@@ -106,21 +104,21 @@ export default {
       return this.$route.params.slug;
     },
     projectColor() {
-      return this.projectFiltered.map(project => project.color).toString();
+      return this.projectFiltered.map((project) => project.color).toString();
     },
     projectContent() {
       return () => import(`@/projects/${this.project}.vue`);
     },
     projectFiltered() {
       const projectSlug = this.project;
-      return this.$store.state.projects.filter(project => {
+      return this.$store.state.projects.filter((project) => {
         return project.slug === projectSlug;
       });
-    }
+    },
   },
   data() {
     return {
-      contrast: {}
+      contrast: {},
     };
   },
   methods: {
@@ -146,51 +144,48 @@ export default {
           hex.replace("#", "") +
           "&api"
       )
-        .then(response => {
+        .then((response) => {
           return response.json();
         })
-        .then(data => {
+        .then((data) => {
           this.contrast = data;
         });
-    }
+    },
   },
   mounted() {
     this.getContrast(this.projectColor);
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
 .Project {
-  padding: 0;
   &__header {
-    background-color: var(--color__project);
     &--img {
-      picture img {
-        margin-left: auto;
-        margin-right: auto;
+      @include breakpoint(l) {
+        padding-bottom: var(--size__xl);
+        padding-top: var(--size__xl);
       }
     }
     &--text {
-      color: var(--color__project-contrast);
-      @include breakpoint(xsl) {
-        padding: var(--size__xl);
+      > section {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: rem(960);
       }
-      &-badge {
-        align-items: center;
-        background-color: var(--color__project-contrast);
-        display: inline-flex;
-        color: var(--color__project);
-      }
-      hr {
-        background-color: var(--color__project-contrast);
-        opacity: 0.25;
+    }
+    a {
+      align-items: center;
+      border-radius: calc(var(--size__xs) + var(--size__s) + var(--size__m));
+      display: inline-flex;
+      font-weight: 600;
+      height: calc(var(--size__m) + var(--size__l));
+      &:focus,
+      &:hover {
+        background-color: var(--color__brand);
       }
     }
   }
   &__content {
-    @include breakpoint(l) {
-      padding: var(--size__xl) 0;
-    }
     ::v-deep h2 {
       color: var(--color__base-mid);
     }
@@ -198,7 +193,7 @@ export default {
     ::v-deep .Project__content--separator {
       margin-left: auto;
       margin-right: auto;
-      max-width: 75ch;
+      max-width: rem(960);
       padding-left: var(--size__l);
       padding-right: var(--size__l);
       @media print {
@@ -215,17 +210,27 @@ export default {
     ::v-deep figure {
       background-color: var(--color__project);
       margin-top: var(--size__xl);
-      padding: var(--size__l);
+      padding-bottom: var(--size__l);
       text-align: center;
+      > section {
+        padding: var(--size__l);
+        + section {
+          padding-top: 0;
+        }
+      }
       svg {
         margin-left: auto;
         margin-right: auto;
       }
       figcaption {
-        padding-bottom: var(--size__l);
-        padding-top: var(--size__xl);
+        background-color: var(--color__contrast);
+        border-radius: var(--size__m);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: rem(960);
+        padding: var(--size__m) var(--size__l);
         p {
-          color: var(--color__project-contrast);
+          color: var(--color__base-mid);
           padding: 0;
         }
       }

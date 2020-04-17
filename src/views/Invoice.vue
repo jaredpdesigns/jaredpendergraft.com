@@ -1,11 +1,16 @@
 <template>
-  <main :class="$options.name">
+  <main
+    :class="[
+      $options.name,
+      'padding__bottom--xl padding__left--l padding__right--l padding__top--xl',
+    ]"
+  >
     <Head
       v-for="invoice in invoices"
       :key="invoice.slug"
       :title="invoice.title + ' • ' + invoice.client.name + ' | Invoice'"
       :description="'Invoice for working on: ' + invoice.title"
-      :url="'jaredpendergraft.com/clients/invoice/' + invoice.slug"
+      :url="'https://jaredpendergraft.com/clients/invoice/' + invoice.slug"
     />
     <article
       v-for="invoice in invoices"
@@ -14,10 +19,10 @@
     >
       <header class="oomph__v--m padding__all--m type__align--center">
         <h1 class="color__type--brand">{{ invoice.title }}</h1>
-        <p class="legible margin__top--s">
+        <hr />
+        <p class="legible">
           {{ invoice.end.month }} {{ invoice.end.day }}, {{ invoice.end.year }}
         </p>
-        <hr />
       </header>
       <section :class="[$options.name + '__content', 'oomph__v--l']">
         <section
@@ -81,16 +86,16 @@ export default {
   computed: {
     invoices() {
       const invoiceSlug = this.invoice;
-      return this.$store.state.clients.filter(client => {
+      return this.$store.state.clients.filter((client) => {
         return client.slug === this.$route.params.slug;
       });
-    }
+    },
   },
   methods: {
     total(value) {
       let total = value.toFixed(2);
       return total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-  }
+    },
+  },
 };
 </script>

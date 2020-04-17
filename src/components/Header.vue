@@ -2,7 +2,7 @@
   <header
     :class="[
       $options.name,
-      'border__bottom color__bg--contrast color__border--base-ghost color__type--base-mid padding__bottom--s padding__left--l padding__right--l padding__top--s'
+      'border__bottom color__bg--contrast color__border--base-ghost color__type--base-mid padding__bottom--s padding__left--l padding__right--l padding__top--s',
     ]"
   >
     <h3>
@@ -17,21 +17,24 @@
       <router-link
         to="/"
         exactActiveClass="active"
-        class="border__bottom color__border--contrast padding__bottom--s padding__top--s"
+        class="padding__bottom--s padding__top--s"
         >About</router-link
       >
       <router-link
         to="/projects"
         activeClass="active"
         exactActiveClass="active"
-        class="border__bottom color__border--contrast padding__bottom--s padding__top--s"
+        class="padding__bottom--s padding__top--s"
         >Projects</router-link
       >
       <router-link
         to="/hire"
         activeClass="active"
         exactActiveClass="active"
-        class="border__bottom color__border--contrast padding__bottom--s padding__top--s"
+        :class="[
+          $route.path.includes('clients') ? 'active' : '',
+          'padding__bottom--s padding__top--s',
+        ]"
         >Hire Me</router-link
       >
     </nav>
@@ -61,6 +64,9 @@
       >
         <Icon name="dribbble" :size="20" />
       </a>
+      <button title="Toggle website theme" @click="changeTheme">
+        <Icon name="contrast" :size="20" />
+      </button>
     </nav>
   </header>
 </template>
@@ -68,7 +74,21 @@
 import Icon from "@/components/Icon.vue";
 export default {
   name: "Header",
-  components: { Icon }
+  components: { Icon },
+  methods: {
+    changeTheme() {
+      if (this.$store.state.theme === "dark") {
+        this.$store.dispatch("setTheme", "light");
+      } else {
+        this.$store.dispatch("setTheme", "dark");
+      }
+    },
+  },
+  mounted() {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      this.$store.dispatch("setTheme", "dark");
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -97,12 +117,6 @@ export default {
     height: var(--size__xl);
     justify-content: space-between;
   }
-  a {
-    &:focus,
-    &:hover {
-      color: var(--color__base);
-    }
-  }
   &__nav {
     &--main,
     &--social {
@@ -121,9 +135,23 @@ export default {
     &--main {
       > * {
         font-weight: 600;
-        &.active {
-          border-color: var(--color__base-mid);
+        position: relative;
+        &:focus,
+        &:hover {
           color: var(--color__base);
+        }
+        &.active {
+          color: var(--color__base);
+          &:after {
+            background-color: var(--color__brand);
+            border-radius: calc(var(--size__xs) / 4);
+            bottom: 0;
+            content: "";
+            height: calc(var(--size__xs) / 2);
+            left: 0;
+            position: absolute;
+            width: 100%;
+          }
           &:focus {
             color: var(--color__brand);
           }
@@ -134,11 +162,11 @@ export default {
       > * {
         align-items: center;
         display: inline-flex;
+        flex: 0 0 rem(20);
         justify-content: center;
-        opacity: 0.5;
         &:focus,
         &:hover {
-          opacity: 1;
+          color: var(--color__brand);
         }
       }
     }

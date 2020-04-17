@@ -22,7 +22,7 @@
   @each $key, $value in $type__sizes {
     --typeSize__#{$key}: #{$value};
   }
-  @media (prefers-color-scheme: dark) {
+  &[theme="dark"] {
     @each $key, $value in $colors-dark {
       --color__#{$key}: #{$value};
     }
@@ -49,12 +49,7 @@ html {
   color: white;
 }
 
-main {
-  padding: var(--size__l);
-}
-
 h1,
-h2,
 h3 {
   font-family: var(--typeFamily__secondary);
   font-feature-settings: "kern", "liga", "clig", "calt";
@@ -69,7 +64,7 @@ h1 {
 }
 h2 {
   font-size: var(--typeSize__xl);
-  line-height: var(--typeLineheight__l);
+  line-height: var(--typeLineheight__xl);
 }
 h3 {
   font-size: var(--typeSize__l);
@@ -86,12 +81,10 @@ li {
   font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum", "frac";
   font-variant-ligatures: common-ligatures contextual;
   line-height: var(--typeLineheight__l);
-  @include breakpoint(xl) {
-    font-size: rem(20);
-    line-height: var(--typeLineheight__xl);
-  }
 }
-
+p {
+  line-height: var(--typeLineheight__xl);
+}
 ul,
 ol {
   li {
@@ -182,18 +175,15 @@ button {
 p a {
   border-bottom: rem(1) solid var(--color__brand);
   &:focus {
-    background-color: var(--color__brand);
-    color: white;
+    background-color: var(--color__tertiary);
   }
 }
 
 hr {
-  background-color: var(--color__base-ghost);
+  background-color: var(--color__base-light);
   border-radius: calc(var(--size__xs) / 2);
   display: inline-block;
   height: var(--size__xs);
-  margin-left: auto;
-  margin-right: auto;
   width: var(--size__xl);
   @media print {
     border-bottom: rem(4) solid;

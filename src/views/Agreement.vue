@@ -1,23 +1,23 @@
 <template>
-  <main :class="$options.name">
+  <main
+    :class="[
+      $options.name,
+      'padding__bottom--xl padding__left--l padding__right--l padding__top--xl',
+    ]"
+  >
     <Head
       v-for="agreement in agreements"
       :key="agreement.slug"
-      :title="
-        agreement.title +
-          ' • ' +
-          agreement.client.name +
-          ' | Agreement'
-      "
+      :title="agreement.title + ' • ' + agreement.client.name + ' | Agreement'"
       :description="'Agreement to work on: ' + agreement.title"
-      :url="'jaredpendergraft.com/clients/agreement/' + agreement.slug"
+      :url="'https://jaredpendergraft.com/clients/agreement/' + agreement.slug"
     />
     <article
       v-for="agreement in agreements"
       :key="agreement.title"
       class="legible oomph__v--l"
     >
-      <header class="oomph__v--m padding__all--m type__align--center">
+      <header class="padding__bottom--m oomph__v--m type__align--center">
         <h1 class="color__type--brand">Consulting Agreement</h1>
         <hr />
       </header>
@@ -332,25 +332,25 @@ export default {
   name: "Agreement",
   computed: {
     agreements() {
-      return this.$store.state.clients.filter(client => {
+      return this.$store.state.clients.filter((client) => {
         return client.slug === this.$route.params.slug;
       });
-    }
+    },
   },
   data() {
     return {
-      consultant: "Jared Pendergraft"
+      consultant: "Jared Pendergraft",
     };
   },
   methods: {
     total(value) {
       let total = value.toFixed(2);
       return total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
+    },
   },
   props: {
-    hourly: { default: 75 }
-  }
+    hourly: { default: 75 },
+  },
 };
 </script>
 <style lang="scss" scoped>
