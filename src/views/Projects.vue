@@ -99,7 +99,7 @@
             >
               <picture>
                 <source
-                  :srcset="project.img + '?w=640&fm=web['"
+                  :srcset="project.img + '?w=640&fm=webp'"
                   media="(min-width: 36rem)"
                   type="image/webp"
                 />
