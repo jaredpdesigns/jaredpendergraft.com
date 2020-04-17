@@ -15,18 +15,22 @@
           <source
             :srcset="img + '?f=face&fit=fill&w=640&fm=webp'"
             media="(min-width: 63rem)"
+            type="image/webp"
           />
           <source
             :srcset="img + '?f=face&fit=fill&w=640'"
             media="(min-width: 63rem)"
+            type="image/jpeg"
           />
           <source
             :srcset="img + '?f=face&fit=fill&h=360&w=480&fm=webp'"
             media="(min-width: 47rem)"
+            type="image/webp"
           />
           <source
             :srcset="img + '?f=face&fit=fill&h=360&w=480'"
             media="(min-width: 47rem)"
+            type="image/jpeg"
           />
           <img
             :src="img + '?f=face&fit=fill&h=240&w=360'"

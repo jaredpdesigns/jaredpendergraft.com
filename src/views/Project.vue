@@ -40,26 +40,43 @@
           <source
             :srcset="project.img + '?w=1440&fm=webp'"
             media="(min-width: 100rem)"
+            type="image/webp"
           />
           <source
             :srcset="project.img + '?w=1440'"
             media="(min-width: 100rem)"
+            type="image/png"
           />
           <source
             :srcset="project.img + '?h=960&fm=webp'"
             media="(min-width: 80rem)"
+            type="image/webp"
           />
-          <source :srcset="project.img + '?h=960'" media="(min-width: 80rem)" />
+          <source
+            :srcset="project.img + '?h=960'"
+            media="(min-width: 80rem)"
+            type="image/png"
+          />
           <source
             :srcset="project.img + '?h=720&fm=webp'"
             media="(min-width: 63rem)"
+            type="image/webp"
           />
-          <source :srcset="project.img + '?h=720'" media="(min-width: 63rem)" />
+          <source
+            :srcset="project.img + '?h=720'"
+            media="(min-width: 63rem)"
+            type="image/png"
+          />
           <source
             :srcset="project.img + '?h=560&fm=webp'"
             media="(min-width: 36rem)"
+            type="image/webp"
           />
-          <source :srcset="project.img + '?h=560'" media="(min-width: 36rem)" />
+          <source
+            :srcset="project.img + '?h=560'"
+            media="(min-width: 36rem)"
+            type="image/png"
+          />
           <img :src="project.img + '?h=320'" :alt="project.name" />
         </picture>
       </figure>
@@ -211,9 +228,11 @@ export default {
       background-color: var(--color__project);
       margin-top: var(--size__xl);
       padding-bottom: var(--size__l);
+      padding-left: var(--size__m);
+      padding-right: var(--size__m);
       text-align: center;
       > section {
-        padding: var(--size__l);
+        padding: var(--size__l) 0;
         + section {
           padding-top: 0;
         }
@@ -224,7 +243,7 @@ export default {
       }
       figcaption {
         background-color: var(--color__contrast);
-        border-radius: var(--size__m);
+        border-radius: var(--size__s);
         margin-left: auto;
         margin-right: auto;
         max-width: rem(960);

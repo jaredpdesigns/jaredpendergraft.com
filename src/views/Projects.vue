@@ -36,18 +36,22 @@
               <source
                 :srcset="project.img + '?f=left&fit=fill&h=1280&w=1280&fm=webp'"
                 media="(min-width: 89rem)"
+                type="image/webp"
               />
               <source
                 :srcset="project.img + '?f=left&fit=fill&h=1280&w=1280'"
                 media="(min-width: 89rem)"
+                type="image/png"
               />
               <source
                 :srcset="project.img + '?f=left&fit=fill&h=960&w=960&fm=webp'"
                 media="(min-width: 36rem)"
+                type="image/webp"
               />
               <source
                 :srcset="project.img + '?f=left&fit=fill&h=960&w=960'"
                 media="(min-width: 36rem)"
+                type="image/png"
               />
               <img
                 :src="project.img + '?w=320'"
@@ -95,8 +99,14 @@
             >
               <picture>
                 <source
+                  :srcset="project.img + '?w=640&fm=web['"
+                  media="(min-width: 36rem)"
+                  type="image/webp"
+                />
+                <source
                   :srcset="project.img + '?w=640'"
                   media="(min-width: 36rem)"
+                  type="image/png"
                 />
                 <img
                   :src="project.img + '?w=320'"
@@ -198,6 +208,7 @@ export default {
           @include smooth;
           align-items: center;
           border-radius: calc(var(--size__s) + var(--size__m));
+          box-shadow: var(--shadow);
           display: inline-flex;
           height: calc(var(--size__s) + var(--size__l));
           justify-content: center;
