@@ -251,7 +251,7 @@
           designer.
         </p>
       </Recommendation>
-      <Recommendation class="legible" zperson="Alexis Wogan">
+      <Recommendation class="legible" person="Alexis Wogan">
         <p>
           As a designer at Kontur Labs, and also as a contract designer for
           hire, Jared demonstrated a consistent ability to design creative and
@@ -299,6 +299,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Resume {
+  #recommendations {
+    scroll-margin: var(--size__xl);
+  }
   ul {
     &:nth-of-type(1),
     &:nth-of-type(2),

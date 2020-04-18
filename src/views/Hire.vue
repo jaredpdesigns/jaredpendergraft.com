@@ -110,6 +110,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Hire {
+  #process {
+    scroll-margin: var(--size__xl);
+  }
   &__process {
     --max: #{rem(480)};
     align-items: start;
