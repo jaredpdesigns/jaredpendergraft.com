@@ -1,5 +1,30 @@
 export const clients = [
 	{
+		title: "Dura Mater 2020 Virtual Collateral",
+		description:
+			"<p>Jared Pendergraft was hired to update the collateral for the 2020 Virtual Dura Mater charity ride. Including designs for a logo treatment, t-shirt, and social media assets.</p>",
+		slug: "nice-bike-dura-mater-2020-virtual-collateral",
+		client: {
+			name: "Nice Bike",
+			street: "1875 S Broadway",
+			city: "Denver",
+			state: "CO",
+			zip: 80210
+		},
+		start: {
+			month: "June",
+			day: 17,
+			year: 2020
+		},
+		end: {
+			month: "June",
+			day: 21,
+			year: 2020
+		},
+		total: 150,
+		type: "invoice"
+	},
+	{
 		title: "Dura Mater 2020 Collateral",
 		description:
 			"<p>Jared Pendergraft was hired to update the collateral for the 2020 Dura Mater charity ride. Including designs for a logo treatment, poster, t-shirt, jersey and socks.</p>",

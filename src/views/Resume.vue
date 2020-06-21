@@ -23,7 +23,10 @@
         collaboration and mentorship, with an ability to work on projects that
         impact the world positively.
       </p>
-      <section class="margin__top--xl oomph__v--m type__align--center">
+      <section
+        id="capabilities"
+        class="margin__top--xl oomph__v--m type__align--center"
+      >
         <h3 class="color__type--base-mid">Capabilities</h3>
         <hr />
       </section>
@@ -48,7 +51,10 @@
           when we collaborate.
         </li>
       </ul>
-      <section class="margin__top--xl oomph__v--m type__align--center">
+      <section
+        id="philosophies"
+        class="margin__top--xl oomph__v--m type__align--center"
+      >
         <h3 class="color__type--base-mid">Philosophies</h3>
         <hr />
       </section>
@@ -74,7 +80,10 @@
           contribute to a successful whole.
         </li>
       </ul>
-      <section class="margin__top--xl oomph__v--m type__align--center">
+      <section
+        id="technologies"
+        class="margin__top--xl oomph__v--m type__align--center"
+      >
         <h3 class="color__type--base-mid">Technologies</h3>
         <hr />
       </section>
@@ -91,7 +100,10 @@
         </li>
         <li><strong>Version Control:</strong>&ensp;Git, Subversion</li>
       </ul>
-      <section class="margin__top--xl oomph__v--m type__align--center">
+      <section
+        id="education"
+        class="margin__top--xl oomph__v--m type__align--center"
+      >
         <h3 class="color__type--base-mid">Education</h3>
         <hr />
       </section>
@@ -100,7 +112,10 @@
         <em>Bachelor of Arts in Graphic Design & Video Production</em>
         <br />2007 • Forest Grove, OR
       </p>
-      <section class="margin__top--xl oomph__v--m type__align--center">
+      <section
+        id="experience"
+        class="margin__top--xl oomph__v--m type__align--center"
+      >
         <h3 class="color__type--base-mid">Experience</h3>
         <hr />
       </section>

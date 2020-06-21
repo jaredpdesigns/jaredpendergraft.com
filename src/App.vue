@@ -7,7 +7,7 @@
 <script>
 import Header from "@/components/Header.vue";
 export default {
-  components: { Header }
+  components: { Header },
 };
 </script>
 <style lang="scss">
@@ -18,8 +18,12 @@ export default {
   margin-left: auto;
   margin-right: auto;
   max-width: 60ch;
+  width: 100%;
   @include breakpoint(m) {
     max-width: 75ch;
+  }
+  @media print {
+    max-width: 7in;
   }
 }
 
@@ -31,17 +35,29 @@ export default {
       border-color: #ccc !important;
       color: black !important;
       &:before {
-        color: #666;
+        color: #666 !important;
       }
     }
   }
-  .Resume aside {
-    max-width: 100%;
+  .Resume article {
+    padding-top: var(--size__l);
+    > header {
+      display: none;
+    }
+    > section {
+      margin-top: var(--size__m);
+      hr {
+        margin-top: 0 !important;
+      }
+    }
+    > * + * {
+      margin-top: var(--size__s) !important;
+    }
   }
   #signatures,
   #scheduleA,
-  .Resume article section:nth-of-type(3),
-  .Resume article h4:nth-of-type(3) {
+  #technologies,
+  .Resume .Recommendation:nth-of-type(3) {
     page-break-before: always;
   }
 }
