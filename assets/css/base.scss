@@ -1,0 +1,217 @@
+@import "variables";
+:root {
+  @each $key, $value in $colors {
+    --color__#{$key}: #{$value};
+  }
+  @each $key, $value in $sizes {
+    --size__#{$key}: #{$value};
+  }
+  @each $key, $value in $type__families {
+    --typeFamily__#{$key}: #{$value};
+  }
+  @each $key, $value in $type__lineheights {
+    --typeLineheight__#{$key}: #{$value};
+  }
+  @each $key, $value in $type__sizes {
+    --typeSize__#{$key}: #{$value};
+  }
+  @each $key, $value in $widths {
+    --width__#{$key}: #{$value};
+  }
+  --header: calc(var(--size__xxxl) * 2);
+  @include breakpoint(xsl) {
+    --header: var(--size__xxxl);
+  }
+}
+
+:root[data-theme="dark"] {
+  @each $key, $value in $colors-dark {
+    --color__#{$key}: #{$value};
+  }
+}
+
+html {
+  background-color: var(--color__contrast);
+  color: var(--color__base);
+  height: -webkit-fill-available;
+  font-family: var(--typeFamily__body);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color__base--mid);
+  font-family: var(--typeFamily__display);
+}
+
+h1 {
+  font-size: var(--typeSize__xxl);
+  line-height: var(--typeLineheight__xl);
+}
+
+h2 {
+  font-size: var(--typeSize__xl);
+  font-weight: 500;
+  line-height: var(--typeLineheight__l);
+}
+
+h3 {
+  font-size: var(--typeSize__l);
+  font-weight: 500;
+  line-height: var(--typeLineheight__l);
+}
+
+p,
+li {
+  font-size: var(--typeSize__ml);
+  line-height: var(--typeLineheight__l);
+}
+
+h4 {
+  font-size: var(--typeSize__m);
+  font-weight: 500;
+  line-height: var(--typeLineheight__m);
+}
+
+h5 {
+  font-size: var(--typeSize__xs);
+  font-weight: 500;
+  letter-spacing: var(--size__xxs);
+  line-height: var(--typeLineheight__s);
+  text-transform: uppercase;
+}
+
+ul,
+ol {
+  li {
+    list-style: none;
+    position: relative;
+    + li {
+      margin-top: var(--size__m);
+    }
+  }
+  li:before {
+    color: var(--color__base--mid);
+    display: inline-block;
+  }
+}
+
+ol {
+  counter-reset: custom-counter;
+  li {
+    padding-left: var(--size__l);
+    &:before {
+      content: counter(custom-counter) ".";
+      counter-increment: custom-counter;
+      display: inline-block;
+      font-size: var(--typeSize__m);
+      font-weight: 600;
+      left: 0;
+      position: absolute;
+      text-align: right;
+      width: calc(var(--size__m) + var(--size__s));
+      @include breakpoint(xsl) {
+        left: calc(var(--size__m) * -1);
+      }
+    }
+    ol {
+      margin-left: var(--size__l);
+      margin-top: var(--size__m);
+      li {
+        padding-left: 0;
+        &:before {
+          content: counter(custom-counter, lower-alpha) ".";
+          @include breakpoint(xsl) {
+            left: calc(var(--size__xl) * -1);
+          }
+        }
+      }
+      ol {
+        li:before {
+          content: counter(custom-counter, lower-roman) ".";
+          @include breakpoint(xsl) {
+            left: calc(var(--size__xl) * -1);
+          }
+        }
+      }
+    }
+  }
+}
+
+ul li {
+  padding-left: calc(var(--size__m) + var(--size__s));
+  @include breakpoint(xsl) {
+    padding-left: 0;
+  }
+  &:before {
+    content: "•";
+    color: var(--color__brand);
+    display: inline-block;
+    font-size: var(--typeSize__l);
+    font-weight: 600;
+    left: 0;
+    position: absolute;
+    top: calc(var(--size__xxs) * -2);
+    @include breakpoint(xsl) {
+      left: calc(var(--size__l) * -1);
+    }
+  }
+}
+
+a {
+  p &,
+  li & {
+    @include smooth;
+    border-bottom: rem(1) solid var(--color__brand);
+    &:focus,
+    &:hover {
+      color: var(--color__brand);
+    }
+    &:focus {
+      background-color: var(--color__tertiary);
+    }
+  }
+}
+
+hr {
+  background-color: var(--color__base--light);
+  border-radius: rem(2);
+  display: inline-block;
+  height: var(--size__xs);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--size__m) !important;
+  max-width: var(--size__xxxl);
+  vertical-align: middle;
+  width: 100%;
+  h1 + & {
+    margin-top: var(--size__l) !important;
+  }
+}
+
+blockquote {
+  border-left: var(--size__xs) solid var(--color__base--light);
+}
+
+::selection {
+  background-color: var(--color__brand);
+  color: white;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.shadow {
+  box-shadow: 0 calc(var(--size__xs) / 2) var(--size__xs) -0.125rem rgba(0, 0, 0, 0.25),
+    0 var(--size__s) var(--size__m) -0.5rem rgba(0, 0, 0, 0.25);
+}
