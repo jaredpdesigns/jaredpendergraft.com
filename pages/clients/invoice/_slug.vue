@@ -35,7 +35,7 @@
           class="border__bottom color__border--base--light padding__bottom--l"
           v-html="invoice.description"
         ></section>
-        <h3>Final invoice amount</h3>
+        <h2>Final Invoice Amount</h2>
         <p class="color__type--base margin__top--s type__size--xl-l">
           ${{ total(invoice.total) }}
         </p>
@@ -125,9 +125,8 @@ export default {
   &__content {
     section > p,
     footer > p,
-    h3 + p,
-    h3,
-    h4,
+    h2 + p,
+    h2,
     blockquote {
       padding-left: var(--size__m);
       padding-right: var(--size__m);
@@ -141,6 +140,47 @@ export default {
       }
       @include breakpoint(l) {
         max-width: 50%;
+      }
+    }
+  }
+  @media print {
+    padding-top: var(--size__l) !important;
+    * {
+      border-color: rgba(black, 0.25);
+      color: black;
+    }
+    * + * {
+      margin-top: var(--size__m) !important;
+    }
+    &__content {
+
+    }
+    &__content > section {
+      padding-bottom: var(--size__m) !important;
+    }
+    section > p,
+    footer > p,
+    h2 + p,
+    h2,
+    blockquote {
+      padding-left: var(--size__m);
+      padding-right: var(--size__m);
+      max-width: 100%;
+    }
+    p {
+      font-size: var(--typeSize__s) !important;
+      line-height: var(--typeLineheight__m) !important;
+    }
+    h2 + p {
+      margin-top: 0;
+    }
+    hr {
+      display: none;
+    }
+    h2 {
+      font-size: var(--typeSize__m);
+      + p {
+        margin-top: 0 !important;
       }
     }
   }

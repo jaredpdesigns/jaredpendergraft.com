@@ -322,6 +322,7 @@ export const clients = [
       day: 14,
       year: 2018,
     },
+    total: 3000,
     type: "agreement",
   },
   {

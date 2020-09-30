@@ -106,6 +106,7 @@ export default {
     &:after {
       color: black;
       content: "jaredpendergraft.com • jaredpdesigns@gmail.com • 503-474-7437";
+      margin-top: var(--size__xs);
     }
   }
   @include breakpoint(xsl) {

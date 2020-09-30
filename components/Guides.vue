@@ -27,6 +27,9 @@ export default {
   top: 0;
   width: calc(100% - 2rem);
   z-index: 0;
+  @media print {
+    display: none;
+  }
   @include breakpoint(xsl) {
     left: var(--size__l);
     right: var(--size_l);

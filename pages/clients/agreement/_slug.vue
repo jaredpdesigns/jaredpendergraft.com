@@ -416,5 +416,45 @@ export default {
       margin-top: rem(-24);
     }
   }
+  @media print {
+    padding-top: var(--size__l) !important;
+    * {
+      border-color: rgba(black, 0.25);
+      color: black;
+    }
+    &__wrap {
+      > * + * {
+        margin-top: var(--size__m) !important;
+      }
+    }
+    p,
+    ol,
+    ul,
+    h3,
+    h4,
+    blockquote,
+    footer > p,
+    section > p {
+      padding-left: var(--size__m);
+      padding-right: var(--size__m);
+      max-width: 100%;
+    }
+    h4, p, li {
+      font-size: var(--typeSize__s) !important;
+      line-height: var(--typeLineheight__m) !important;
+    }
+    hr {
+      display: none;
+    }
+    h1 {
+      font-size: var(--typeSize__xl);
+    }
+    h2, h3 {
+      font-size: var(--typeSize__m);
+    }
+    #scheduleA {
+      page-break-before: always;
+    }
+  }
 }
 </style>
