@@ -78,9 +78,6 @@ export default {
       }
     },
   },
-  mounted() {
-    this.setTheme();
-  },
 };
 </script>
 <style lang="scss">
@@ -118,7 +115,10 @@ export default {
     padding-right: var(--size__l);
   }
   > a {
+    display: inline-flex;
     font-weight: 500;
+    position: relative;
+    top: calc(var(--size__xs) * -1);
     &:focus,
     &:hover {
       transform: scale(1.0125);

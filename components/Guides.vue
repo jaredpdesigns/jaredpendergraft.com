@@ -47,8 +47,8 @@ export default {
   &__guide {
     background: linear-gradient(
       180deg,
-      var(--color__base--ghost),
-      var(--color__base--ghost) 50%,
+      var(--color__secondary),
+      var(--color__secondary) 50%,
       transparent 0,
       transparent
     );
@@ -56,7 +56,7 @@ export default {
     width: var(--size__xxs);
     &:first-of-type,
     &:last-of-type {
-      background: var(--color__base--light);
+      background: var(--color__secondary);
     }
     &:last-of-type {
       height: 100%;

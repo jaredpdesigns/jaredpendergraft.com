@@ -1,8 +1,8 @@
 <template>
   <div>
     <LazyHeader />
-    <DetailWrap v-if="$route.path.includes('/projects/')" />
-    <ResumeWrap v-else-if="$route.name === 'hire-resume'" />
+    <LazyDetailWrap v-if="$route.path.includes('/projects/')" />
+    <LazyResumeWrap v-else-if="$route.name === 'hire-resume'" />
     <Nuxt v-else />
     <LazyGuides />
   </div>
@@ -31,6 +31,28 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    setInitialTheme() {
+      let root = document.getElementsByTagName("html")[0];
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        root.setAttribute("data-theme", "dark");
+        this.$store.dispatch("setTheme", "dark");
+      } else {
+        root.setAttribute("data-theme", "light");
+        this.$store.dispatch("setTheme", "light");
+      }
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.setInitialTheme();
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          this.setInitialTheme();
+        });
+    });
   },
 };
 </script>

@@ -11,8 +11,8 @@ $colors: (
   base--light: hsl(218, 12%, 88%),
   base--ghost: hsl(218, 12%, 92%),
   brand: hsl(158, 32%, 38%),
-  tertiary: hsl(48, 12%, 96%),
   contrast: #ffffff,
+  secondary: hsl(48, 12%, 96%),
 );
 
 $colors-dark: (
@@ -20,8 +20,8 @@ $colors-dark: (
   base--mid: hsl(218, 12%, 64%),
   base--light: hsl(218, 12%, 32%),
   base--ghost: hsl(218, 12%, 24%),
-  tertiary: hsl(218, 12%, 4%),
   contrast: hsl(218, 12%, 16%),
+  secondary: hsl(218, 12%, 12%),
 );
 
 $directions: (bottom, left, right, top);
@@ -67,7 +67,7 @@ $type__families: (
   display: (
     "obviously-narrow",
     sans-serif,
-  )
+  ),
 );
 
 $widths: (

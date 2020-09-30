@@ -6,7 +6,9 @@
         'padding__bottom--l padding__left--m padding__right--m width__xxl',
       ]"
     >
-      <figure :class="$options.name + '__img'">
+      <figure
+        :class="[$options.name + '__img', 'padding__left--m padding__right--m']"
+      >
         <picture>
           <source
             :srcset="img + '?f=face&fit=fill&w=640&fm=webp'"
@@ -33,9 +35,11 @@
             loading="lazy"
             :src="img + '?f=face&fit=fill&h=240&w=360'"
             alt="My smiling face, greeting you"
+            height="240"
+            width="360"
           />
         </picture>
-        <svg height="0" width="0">
+        <svg height="0" width="0" :style="{ position: 'absolute' }">
           <defs>
             <clipPath id="blobby" clipPathUnits="objectBoundingBox">
               <path
@@ -118,9 +122,8 @@ export default {
 <style lang="scss">
 .Profile {
   &__wrap {
-    align-items: center;
     display: grid;
-    justify-content: center;
+    place-items: center;
     @include breakpoint(xsl) {
       padding-left: var(--size__l);
       padding-right: var(--size__l);
@@ -131,6 +134,10 @@ export default {
   }
   &__img {
     justify-self: center;
+    @include breakpoint(xsl) {
+      padding-left: var(--size__l);
+      padding-right: var(--size__l);
+    }
     img {
       clip-path: url("#blobby");
     }
@@ -138,6 +145,14 @@ export default {
   &__content {
     @include breakpoint(xsl) {
       padding: var(--size__l);
+    }
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 12ch;
+      @include breakpoint(l) {
+        max-width: 100%;
+      }
     }
     p {
       text-align: left;

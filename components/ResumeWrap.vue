@@ -11,7 +11,7 @@
         id="reccommendations"
         :class="[
           $options.name + '__reccomendations',
-          'color__bg--tertiary oomph__v--l padding__bottom--xxxl padding__top--xxxl',
+          'color__bg--secondary oomph__v--l padding__bottom--xxxl padding__top--xxxl',
         ]"
       >
         <header class="oomph__v--l padding__left--m padding__right--m">

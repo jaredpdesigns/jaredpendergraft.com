@@ -13,7 +13,7 @@
       v-if="caption"
       :class="[
         $options.name + '__caption',
-        'color__bg--tertiary  color__type--base--mid padding__all--m radius--m',
+        'color__bg--secondary  color__type--base--mid padding__all--m radius--m',
       ]"
     >
       <p class="type__align--left type__size--m-l">

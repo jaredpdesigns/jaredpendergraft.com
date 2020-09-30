@@ -27,7 +27,7 @@
       </header>
       <section
         id="process"
-        class="color__bg--tertiary oomph__v--l padding__bottom--xxxl padding__top--xxxl"
+        class="color__bg--secondary oomph__v--l padding__bottom--xxxl padding__top--xxxl"
       >
         <header
           class="oomph__v--l padding__left--m padding__right--m type__align--center width__xxl"
@@ -50,11 +50,11 @@
             <section class="padding__all--m">
               <Process :name="process.img" :size="48" />
             </section>
-            <figcaption class="oomph__v--s padding__all--m">
+            <figcaption class="oomph__v--m padding__all--m">
               <h3>
                 {{ process.label }}
               </h3>
-              <p>
+              <p class="type__size--m-m">
                 {{ process.description }}
               </p>
             </figcaption>

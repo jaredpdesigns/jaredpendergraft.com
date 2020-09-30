@@ -1,9 +1,7 @@
 <template>
   <main :class="$options.name">
     <article class="oomph__v--l padding__bottom--xxl width__xxl">
-      <header
-        class="oomph__v--l padding__bottom--l padding__top--l type__align--center"
-      >
+      <header class="oomph__v--l padding__all--l type__align--center">
         <h1 class="color__type--base--mid">Featured Projects</h1>
         <hr />
       </header>
@@ -21,7 +19,7 @@
           :to="'/projects/' + project.slug"
           :class="[
             $options.name + '__item',
-            'color__bg--tertiary radius--s shadow',
+            'color__bg--secondary radius--s shadow',
           ]"
         >
           <figure
@@ -96,7 +94,7 @@
           target="_blank"
           :class="[
             $options.name + '__item',
-            'color__bg--tertiary radius--s shadow',
+            'color__bg--secondary radius--s shadow',
           ]"
         >
           <figure
@@ -116,7 +114,7 @@
                 :src="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=480&frm=jpg'
+                    : project.img) + '?f=left&w=480'
                 "
                 :alt="project.name + ' featured image'"
                 height="289"
@@ -179,10 +177,10 @@ export default {
         > * {
           margin-left: auto;
           margin-right: auto;
-          max-width: calc(var(--width__ml) - var(--size__l));
+          max-width: calc(100% - var(--size__l));
         }
       }
-      @include breakpoint(l) {
+      @include breakpoint(m) {
         grid-template-columns: 1fr 1fr;
         padding-left: var(--size__xxl);
         padding-right: var(--size__xxl);
@@ -207,7 +205,7 @@ export default {
       @include breakpoint(s) {
         grid-template-columns: 1fr 1fr;
       }
-      @include breakpoint(l) {
+      @include breakpoint(m) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
       @include breakpoint(xl) {

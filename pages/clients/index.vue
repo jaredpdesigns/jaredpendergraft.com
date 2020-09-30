@@ -20,7 +20,7 @@
           <section
             :class="[
               $options.name + '__item--wrap',
-              'color__bg--tertiary radius--s type__align--center shadow',
+              'color__bg--secondary radius--s type__align--center shadow',
             ]"
           >
             <header
