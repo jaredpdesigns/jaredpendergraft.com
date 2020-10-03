@@ -1,5 +1,17 @@
 export const projects = [
   {
+    name: "Hypothesis",
+    description:
+      "Pattern library for the popular web-annotation tool that lets you annotate the web, with anyone, anywhere.",
+    img:
+      "https://images.ctfassets.net/cuehicrlqnvu/qX6yRnD48X16Gf2qcFuKW/e69e79b7d131ed0b9d1e375d31ecffbc/hypothesis-feature-light.jpg",
+    imgDark:
+      "https://images.ctfassets.net/cuehicrlqnvu/6hkkEu62iXrFr9Emfq9IWI/74a8117cad0d57490758e13ced3390bc/hypothesis-feature-dark.jpg",
+    slug: "hypothesis",
+    color: "#c2002d",
+    external: "https://web.hypothes.is/",
+  },
+  {
     name: "Nice Bike",
     description:
       "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",

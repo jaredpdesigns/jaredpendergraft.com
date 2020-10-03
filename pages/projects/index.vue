@@ -23,7 +23,7 @@
           ]"
         >
           <figure
-            class="padding__left--s padding__right--s padding__top--s"
+            class="padding__all--s"
             :style="{ backgroundColor: project.color }"
           >
             <picture>
@@ -31,7 +31,24 @@
                 :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=960&fm=webp'
+                    : project.img) + '?w=1280&fm=webp'
+                "
+                media="(min-width: 63rem)"
+                type="image/webp"
+              />
+              <source
+                :srcset="
+                  ($store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img) + '?w=1280'
+                "
+                media="(min-width: 63rem)"
+              />
+              <source
+                :srcset="
+                  ($store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img) + '?w=960&fm=webp'
                 "
                 media="(min-width: 47rem)"
                 type="image/webp"
@@ -40,7 +57,7 @@
                 :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=960'
+                    : project.img) + '?w=960'
                 "
                 media="(min-width: 47rem)"
               />
@@ -48,7 +65,7 @@
                 :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=480&fm=webp'
+                    : project.img) + '?w=480&fm=webp'
                 "
                 type="image/webp"
               />
@@ -57,12 +74,12 @@
                 :src="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=480'
+                    : project.img) + '?w=480'
                 "
                 :alt="project.name + ' featured image'"
                 height="289"
                 width="480"
-                class="radius__tl--s radius__tr--s"
+                class="radius--s"
               />
             </picture>
           </figure>
@@ -98,7 +115,7 @@
           ]"
         >
           <figure
-            class="padding__left--s padding__right--s padding__top--s"
+            class="padding__all--s"
             :style="{ backgroundColor: project.color }"
           >
             <picture>
@@ -106,7 +123,24 @@
                 :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=480&fm=webp'
+                    : project.img) + '?w=960&fm=webp'
+                "
+                media="(min-width: 63rem)"
+                type="image/webp"
+              />
+              <source
+                :srcset="
+                  ($store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img) + '?w=960'
+                "
+                media="(min-width: 63rem)"
+              />
+              <source
+                :srcset="
+                  ($store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img) + '?w=480&fm=webp'
                 "
                 type="image/webp"
               />
@@ -114,12 +148,12 @@
                 :src="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?f=left&w=480'
+                    : project.img) + '?w=480'
                 "
                 :alt="project.name + ' featured image'"
                 height="289"
                 width="480"
-                class="radius__tl--s radius__tr--s"
+                class="radius--s"
               />
             </picture>
             <span class="color__bg--contrast color__type--base--mid radius--m">
@@ -186,6 +220,18 @@ export default {
         padding-right: var(--size__xxl);
         > * {
           max-width: 100%;
+          &:first-child {
+            flex-direction: row;
+            grid-column: 1 /-1;
+            > * {
+              flex-basis: 50%;
+              &:last-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              }
+            }
+          }
         }
       }
       @include breakpoint(xl) {
@@ -216,7 +262,8 @@ export default {
   }
   &__item {
     @include smooth;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     &:focus,
     &:hover {
@@ -224,9 +271,15 @@ export default {
       figure span {
         transform: translate(calc(var(--size__xs) * -1), var(--size__xs));
       }
+      section span svg {
+        transform: translate(var(--size__xs), var(--size__xs));
+      }
     }
     figure {
       position: relative;
+      @include breakpoint(l) {
+        padding: var(--size__m);
+      }
       span {
         @include smooth;
         align-items: center;
@@ -240,14 +293,22 @@ export default {
       }
       img {
         width: 100%;
+        @include breakpoint(l) {
+          border-radius: var(--size__m);
+        }
       }
     }
     section {
+      @include breakpoint(l) {
+        padding-left: var(--size__l);
+        padding-right: var(--size__l);
+      }
       span {
         align-items: center;
         display: flex;
         justify-content: space-between;
         svg {
+          @include smooth;
           opacity: 0.5;
           transform: translateY(var(--size__xs));
         }
