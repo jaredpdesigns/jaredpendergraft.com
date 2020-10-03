@@ -153,7 +153,7 @@ export default {
       align-items: stretch;
       grid-template-columns: 1fr 1fr;
       justify-content: center;
-      min-height: calc(100vh - var(--header));
+      //min-height: calc(100vh - var(--header));
     }
     &--content {
       align-items: center;
@@ -183,6 +183,7 @@ export default {
       order: -1;
       @media (orientation: landscape) {
         order: unset;
+        padding: var(--size__l);
       }
       img {
         width: 100%;

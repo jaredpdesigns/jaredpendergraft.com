@@ -245,11 +245,9 @@ export default {
       grid-gap: var(--size__m);
       @include breakpoint(xsl) {
         grid-gap: var(--size__l);
+        grid-template-columns: 1fr 1fr;
         padding-left: var(--size__xxl);
         padding-right: var(--size__xxl);
-      }
-      @include breakpoint(s) {
-        grid-template-columns: 1fr 1fr;
       }
       @include breakpoint(m) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
