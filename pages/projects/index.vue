@@ -290,6 +290,7 @@ export default {
         width: var(--size__l);
       }
       img {
+        aspect-ratio: attr(width) / attr(height);
         width: 100%;
         @include breakpoint(l) {
           border-radius: var(--size__m);

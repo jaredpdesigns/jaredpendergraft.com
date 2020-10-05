@@ -11,32 +11,34 @@
       >
         <picture>
           <source
-            :srcset="img + '?f=face&fit=fill&w=640&fm=webp'"
+            :srcset="img + '?f=face&fit=fill&h=1280&w=960&fm=webp'"
+            media="(min-width: 99rem)"
+            type="image/webp"
+          />
+          <source
+            :srcset="img + '?f=face&fit=fill&h=1280&w=960'"
+            media="(min-width: 99rem)"
+          />
+          <source
+            :srcset="img + '?f=face&fit=fill&h=640&w=480&fm=webp'"
             media="(min-width: 63rem)"
             type="image/webp"
           />
           <source
-            :srcset="img + '?f=face&fit=fill&w=640'"
+            :srcset="img + '?f=face&fit=fill&h=640&w=480'"
             media="(min-width: 63rem)"
-            type="image/jpeg"
           />
           <source
             :srcset="img + '?f=face&fit=fill&h=360&w=480&fm=webp'"
-            media="(min-width: 47rem)"
             type="image/webp"
-          />
-          <source
-            :srcset="img + '?f=face&fit=fill&h=360&w=480'"
-            media="(min-width: 47rem)"
-            type="image/jpeg"
           />
           <img
             class="width__m"
             loading="lazy"
-            :src="img + '?f=face&fit=fill&h=240&w=360'"
+            :src="img + '?f=face&fit=fill&h=360&w=480'"
             alt="My smiling face, greeting you"
-            height="240"
-            width="360"
+            height="360"
+            width="480"
           />
         </picture>
         <svg height="0" width="0" :style="{ position: 'absolute' }">
@@ -139,7 +141,11 @@ export default {
       padding-right: var(--size__l);
     }
     img {
+      aspect-ratio: attr(width) / attr(height);
       clip-path: url("#blobby");
+      @include breakpoint(m) {
+        aspect-ratio: attr(height) / attr(width);
+      }
     }
   }
   &__content {
