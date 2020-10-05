@@ -9,9 +9,7 @@
         'color__bg--brand padding__bottom--m padding__left--l padding__right--l padding__top--m',
       ]"
     >
-      <p class="color__type--contrast type__family--display type__size--ml-l">
-        <strong>—&thinsp;{{ person }}</strong>
-      </p>
+      <h3 class="color__type--contrast">—&thinsp;{{ person }}</h3>
     </footer>
   </blockquote>
 </template>
@@ -37,23 +35,27 @@ export default {
     @include breakpoint(xsl) {
       padding-left: calc(var(--size__l) + var(--size__s));
     }
-    &:before {
+    &:before,
+    > *:last-child:after {
       color: var(--color__brand);
+      font-family: var(--typeFamily__display);
       font-size: var(--typeSize__xxl);
+      font-weight: 500;
+      opacity: 0.5;
+    }
+    &:before {
       left: var(--size__m);
       position: absolute;
-      top: var(--size__xs);
+      top: 0;
       @include breakpoint(xsl) {
         content: "“";
       }
     }
     > *:last-child:after {
-      color: var(--color__brand);
       content: "”";
-      font-size: var(--typeSize__xxl);
-      line-height: var(--typeLineheight__s);
+      line-height: 0;
       position: relative;
-      top: var(--size__xs);
+      top: var(--size__s);
     }
   }
   &__footer {
@@ -61,6 +63,10 @@ export default {
     display: flex;
     @media print {
       border-top: rem(1) solid;
+    }
+    h3 {
+      position: relative;
+      top: calc(var(--size__xs) * -1);
     }
   }
 }

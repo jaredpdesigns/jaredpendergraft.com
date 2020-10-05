@@ -163,8 +163,8 @@
           <section
             class="oomph__v--m padding__all--m radius__bl--s radius__br--s"
           >
-            <h3>{{ project.name }}</h3>
-            <p class="type__size--m-m">{{ project.description }}</p>
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.description }}</p>
           </section></a
         >
       </section>
@@ -249,7 +249,7 @@ export default {
         padding-left: var(--size__xxl);
         padding-right: var(--size__xxl);
       }
-      @include breakpoint(m) {
+      @include breakpoint(l) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
       @include breakpoint(xl) {

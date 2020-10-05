@@ -112,11 +112,13 @@ ol {
       content: counter(custom-counter) ".";
       counter-increment: custom-counter;
       display: inline-block;
+      font-family: var(--typeFamily__display);
       font-size: var(--typeSize__m);
-      font-weight: 600;
+      font-weight: 500;
       left: 0;
       position: absolute;
       text-align: right;
+      top: calc(var(--size__xxs) * -1);
       width: calc(var(--size__m) + var(--size__s));
       @include breakpoint(xsl) {
         left: calc(var(--size__m) * -1);
@@ -153,13 +155,14 @@ ul li {
   }
   &:before {
     content: "•";
-    color: var(--color__brand);
+    color: var(--color__base--mid);
     display: inline-block;
+    font-family: var(--typeFamily__display);
     font-size: var(--typeSize__l);
-    font-weight: 600;
+    font-weight: 500;
     left: 0;
     position: absolute;
-    top: calc(var(--size__xxs) * -2);
+    top: calc(var(--size__xxs) * -5);
     @include breakpoint(xsl) {
       left: calc(var(--size__l) * -1);
     }

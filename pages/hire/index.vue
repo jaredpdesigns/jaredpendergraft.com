@@ -54,7 +54,7 @@
               <h3>
                 {{ process.label }}
               </h3>
-              <p class="type__size--m-m">
+              <p>
                 {{ process.description }}
               </p>
             </figcaption>
