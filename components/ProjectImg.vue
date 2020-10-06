@@ -2,6 +2,7 @@
   <section :class="[$options.name, 'padding__all--m']">
     <picture>
       <source
+        sizes="(min-width: 99rem) 960px, (min-width: 63rem) 640px, 320px"
         :srcset="
           ($store.state.theme === 'dark'
             ? imgDark
@@ -9,22 +10,21 @@
           $store.state.theme === 'dark' ? imgDark : img + '?w=640&fm=png 640w',
           $store.state.theme === 'dark'
             ? imgDark
-            : img + '?w=1280&fm=png 1280w')
+            : img + '?w=960&fm=png 960w')
         "
         type="image/webp"
       />
       <img
         loading="lazy"
+        sizes="(min-width: 99rem) 960px, (min-width: 63rem) 640px, 320px"
         :src="$store.state.theme === 'dark' ? imgDark : img + '?&w=320&fm=png'"
         :srcset="
           ($store.state.theme === 'dark' ? imgDark : img + '?w=640&fm=png 640w',
           $store.state.theme === 'dark'
             ? imgDark
-            : img + '?w=1280&fm=png 1280w')
+            : img + '?w=960&fm=png 960w')
         "
         :alt="title"
-        height="320"
-        width="320"
       />
     </picture>
   </section>

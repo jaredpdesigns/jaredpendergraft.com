@@ -41,6 +41,7 @@
         >
           <picture>
             <source
+              sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, 480px"
               :srcset="
                 ($store.state.theme === 'dark'
                   ? project.imgDark
@@ -56,6 +57,7 @@
             />
             <img
               loading="lazy"
+              sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, 480px"
               :src="
                 $store.state.theme === 'dark'
                   ? project.imgDark
