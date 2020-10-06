@@ -3,31 +3,24 @@
     <picture>
       <source
         :srcset="
+          ($store.state.theme === 'dark'
+            ? imgDark
+            : img + '?&w=320&fm=webp 320w',
+          $store.state.theme === 'dark' ? imgDark : img + '?w=640&fm=png 640w',
           $store.state.theme === 'dark'
             ? imgDark
-            : img + '?h=1280&w=1280&fm=webp'
-        "
-        media="(min-width: 47rem)"
-        type="image/webp"
-      />
-      <source
-        :srcset="
-          $store.state.theme === 'dark'
-            ? imgDark
-            : img + '?h=1280&w=1280&fm=png'
-        "
-        media="(min-width: 47rem)"
-      />
-      <source
-        :srcset="
-          $store.state.theme === 'dark' ? imgDark : img + '?h=640&w=640&fm=webp'
+            : img + '?w=1280&fm=png 1280w')
         "
         type="image/webp"
       />
       <img
         loading="lazy"
-        :src="
-          $store.state.theme === 'dark' ? imgDark : img + '?h=640&w=640&fm=png'
+        :src="$store.state.theme === 'dark' ? imgDark : img + '?&w=320&fm=png'"
+        :srcset="
+          ($store.state.theme === 'dark' ? imgDark : img + '?w=640&fm=png 640w',
+          $store.state.theme === 'dark'
+            ? imgDark
+            : img + '?w=1280&fm=png 1280w')
         "
         :alt="title"
         height="320"

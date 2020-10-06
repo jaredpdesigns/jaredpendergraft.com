@@ -11,34 +11,41 @@
       >
         <picture>
           <source
-            :srcset="img + '?f=face&fit=fill&h=1280&w=960&fm=webp'"
-            media="(min-width: 99rem)"
+            media="(min-width: 63em)"
+            :srcset="
+              (img + '?f=face&fit=fill&h=320&w=240&fm=webp 240w',
+              img + '?f=face&fit=fill&h=640&w=480&fm=webp 480w',
+              img + '?f=face&fit=fill&h=1280&w=960&fm=webp 960w')
+            "
             type="image/webp"
           />
           <source
-            :srcset="img + '?f=face&fit=fill&h=1280&w=960'"
-            media="(min-width: 99rem)"
+            media="(min-width: 63em)"
+            :srcset="
+              (img + '?f=face&fit=fill&h=320&w=240 240w',
+              img + '?f=face&fit=fill&h=640&w=480 480w',
+              img + '?f=face&fit=fill&h=1280&w=960 960w')
+            "
           />
           <source
-            :srcset="img + '?f=face&fit=fill&h=640&w=480&fm=webp'"
-            media="(min-width: 63rem)"
-            type="image/webp"
-          />
-          <source
-            :srcset="img + '?f=face&fit=fill&h=640&w=480'"
-            media="(min-width: 63rem)"
-          />
-          <source
-            :srcset="img + '?f=face&fit=fill&h=360&w=480&fm=webp'"
+            sizes="(min-width: 47em) 640px, (min-width: 29em) 320px, 240px"
+            :srcset="
+              (img + '?f=face&fit=fill&h=240&w=320&fm=webp 240w',
+              img + '?f=face&fit=fill&h=240&w=320&fm=webp 320w',
+              img + '?f=face&fit=fill&h=480&w=640&fm=webp 640w')
+            "
             type="image/webp"
           />
           <img
             class="width__m"
             loading="lazy"
-            :src="img + '?f=face&fit=fill&h=360&w=480'"
+            sizes="(min-width: 47em) 640px, (min-width: 29em) 320px, 240px"
+            :src="img + '?f=face&fit=fill&h=180&w=240'"
+            :srcset="
+              (img + '?f=face&fit=fill&h=240&w=320 320w',
+              img + '?f=face&fit=fill&h=480&w=640 640w')
+            "
             alt="My smiling face, greeting you"
-            height="360"
-            width="480"
           />
         </picture>
         <svg height="0" width="0" :style="{ position: 'absolute' }">
@@ -141,11 +148,7 @@ export default {
       padding-right: var(--size__l);
     }
     img {
-      aspect-ratio: attr(width) / attr(height);
       clip-path: url("#blobby");
-      @include breakpoint(m) {
-        aspect-ratio: attr(height) / attr(width);
-      }
     }
   }
   &__content {

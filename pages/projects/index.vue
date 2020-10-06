@@ -31,54 +31,32 @@
                 :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=1280&fm=webp'
-                "
-                media="(min-width: 63rem)"
-                type="image/webp"
-              />
-              <source
-                :srcset="
-                  ($store.state.theme === 'dark'
+                    : project.img + '?w=480w&fm=webp 480w',
+                  $store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=1280'
-                "
-                media="(min-width: 63rem)"
-              />
-              <source
-                :srcset="
-                  ($store.state.theme === 'dark'
+                    : project.img + '?w=960&fm=webp 960w',
+                  $store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=960&fm=webp'
-                "
-                media="(min-width: 47rem)"
-                type="image/webp"
-              />
-              <source
-                :srcset="
-                  ($store.state.theme === 'dark'
-                    ? project.imgDark
-                    : project.img) + '?w=960'
-                "
-                media="(min-width: 47rem)"
-              />
-              <source
-                :srcset="
-                  ($store.state.theme === 'dark'
-                    ? project.imgDark
-                    : project.img) + '?w=480&fm=webp'
+                    : project.img + '?w=1280&fm=webp 1280w')
                 "
                 type="image/webp"
               />
               <img
                 loading="lazy"
                 :src="
+                  $store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=480'
+                "
+                :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=480'
+                    : project.img + '?w=960 960w',
+                  $store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=1280 1280w')
                 "
                 :alt="project.name + ' featured image'"
-                height="289"
-                width="480"
                 class="radius--s"
               />
             </picture>
@@ -123,36 +101,26 @@
                 :srcset="
                   ($store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=960&fm=webp'
-                "
-                media="(min-width: 63rem)"
-                type="image/webp"
-              />
-              <source
-                :srcset="
-                  ($store.state.theme === 'dark'
+                    : project.img + '?w=480w&fm=webp 480w',
+                  $store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=960'
-                "
-                media="(min-width: 63rem)"
-              />
-              <source
-                :srcset="
-                  ($store.state.theme === 'dark'
-                    ? project.imgDark
-                    : project.img) + '?w=480&fm=webp'
+                    : project.img + '?w=960&fm=webp 960w')
                 "
                 type="image/webp"
               />
               <img
+                loading="lazy"
                 :src="
-                  ($store.state.theme === 'dark'
+                  $store.state.theme === 'dark'
                     ? project.imgDark
-                    : project.img) + '?w=480'
+                    : project.img + '?w=480'
+                "
+                :srcset="
+                  $store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=960 960w'
                 "
                 :alt="project.name + ' featured image'"
-                height="289"
-                width="480"
                 class="radius--s"
               />
             </picture>
@@ -290,7 +258,6 @@ export default {
         width: var(--size__l);
       }
       img {
-        aspect-ratio: attr(width) / attr(height);
         width: 100%;
         @include breakpoint(l) {
           border-radius: var(--size__m);
