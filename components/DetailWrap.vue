@@ -41,35 +41,33 @@
         >
           <picture>
             <source
-              sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, 480px"
               :srcset="
                 ($store.state.theme === 'dark'
-                  ? project.imgDark
-                  : project.img + '?w=480w&fm=webp 480w',
+                  ? project.imgDark + '?w=480w&fm=webp 1x'
+                  : project.img + '?w=480w&fm=webp 1x',
                 $store.state.theme === 'dark'
-                  ? project.imgDark
-                  : project.img + '?w=960&fm=webp 960w',
+                  ? project.imgDark + '?w=960&fm=webp 2x'
+                  : project.img + '?w=960&fm=webp 2x',
                 $store.state.theme === 'dark'
-                  ? project.imgDark
-                  : project.img + '?w=1280&fm=webp 1280w')
+                  ? project.imgDark + '?w=1280&fm=webp 3x'
+                  : project.img + '?w=1280&fm=webp 3x')
               "
               type="image/webp"
             />
             <img
               loading="lazy"
-              sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, 480px"
               :src="
                 $store.state.theme === 'dark'
-                  ? project.imgDark
+                  ? project.imgDark + '?w=480'
                   : project.img + '?w=480'
               "
               :srcset="
                 ($store.state.theme === 'dark'
-                  ? project.imgDark
-                  : project.img + '?w=960 960w',
+                  ? project.imgDark + '?w=960 2x'
+                  : project.img + '?w=960 2x',
                 $store.state.theme === 'dark'
-                  ? project.imgDark
-                  : project.img + '?w=1280 1280w')
+                  ? project.imgDark + '?w=1280 3x'
+                  : project.img + '?w=1280 3x')
               "
               :alt="project.name + ' featured image'"
               class="radius--s"
@@ -126,9 +124,6 @@ export default {
   padding-top: var(--header) !important;
   &__callout {
     display: grid;
-    @media (orientation: portrait) {
-      min-height: calc(50vh - var(--header));
-    }
     @media (orientation: landscape) {
       align-items: stretch;
       grid-template-columns: 1fr 1fr;
@@ -158,7 +153,7 @@ export default {
     }
     &--img {
       align-items: center;
-      display: flex;
+      display: grid;
       order: -1;
       @media (orientation: landscape) {
         order: unset;

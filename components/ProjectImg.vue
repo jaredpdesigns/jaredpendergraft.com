@@ -2,27 +2,33 @@
   <section :class="[$options.name, 'padding__all--m']">
     <picture>
       <source
-        sizes="(min-width: 99rem) 960px, (min-width: 63rem) 640px, 320px"
         :srcset="
           ($store.state.theme === 'dark'
-            ? imgDark
-            : img + '?&w=320&fm=webp 320w',
-          $store.state.theme === 'dark' ? imgDark : img + '?w=640&fm=png 640w',
+            ? imgDark + '?&w=320&fm=webp 1x'
+            : img + '?&w=320&fm=webp 1x',
           $store.state.theme === 'dark'
-            ? imgDark
-            : img + '?w=960&fm=png 960w')
+            ? imgDark + '?w=640&fm=webp 2x'
+            : img + '?w=640&fm=webp 2x',
+          $store.state.theme === 'dark'
+            ? imgDark + '?w=960&fm=webp 3x'
+            : img + '?w=960&fm=webp 3x')
         "
         type="image/webp"
       />
       <img
         loading="lazy"
-        sizes="(min-width: 99rem) 960px, (min-width: 63rem) 640px, 320px"
-        :src="$store.state.theme === 'dark' ? imgDark : img + '?&w=320&fm=png'"
-        :srcset="
-          ($store.state.theme === 'dark' ? imgDark : img + '?w=640&fm=png 640w',
+        :src="
           $store.state.theme === 'dark'
-            ? imgDark
-            : img + '?w=960&fm=png 960w')
+            ? imgDark + '?&w=320&fm=png'
+            : img + '?&w=320&fm=png'
+        "
+        :srcset="
+          ($store.state.theme === 'dark'
+            ? imgDark + '?w=640&fm=png 2x'
+            : img + '?w=640&fm=png 2x',
+          $store.state.theme === 'dark'
+            ? imgDark + '?w=960&fm=png 3x'
+            : img + '?w=960&fm=png 3x')
         "
         :alt="title"
       />
