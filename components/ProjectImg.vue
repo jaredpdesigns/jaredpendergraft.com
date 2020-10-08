@@ -2,33 +2,33 @@
   <section :class="[$options.name, 'padding__all--m']">
     <picture>
       <source
+        sizes="(min-width: 63rem) 1280px, (min-width: 29rem) 640px, 320px"
         :srcset="
           ($store.state.theme === 'dark'
-            ? imgDark + '?&w=320&fm=webp 1x'
-            : img + '?&w=320&fm=webp 1x',
+            ? imgDark
+            : img + '?&w=640&fm=webp 640w',
           $store.state.theme === 'dark'
-            ? imgDark + '?w=640&fm=webp 2x'
-            : img + '?w=640&fm=webp 2x',
-          $store.state.theme === 'dark'
-            ? imgDark + '?w=960&fm=webp 3x'
-            : img + '?w=960&fm=webp 3x')
+            ? imgDark
+            : img + '?&w=1280&fm=webp 1280w')
         "
         type="image/webp"
+      />
+      <source
+        sizes="(min-width: 63rem) 1280px, (min-width: 29rem) 640px, 320px"
+        :srcset="
+          ($store.state.theme === 'dark'
+            ? imgDark
+            : img + '?&w=640&fm=png 640w',
+          $store.state.theme === 'dark'
+            ? imgDark
+            : img + '?&w=1280&fm=png 1280w')
+        "
+        type="image/png"
       />
       <img
         loading="lazy"
         :src="
-          $store.state.theme === 'dark'
-            ? imgDark + '?&w=320&fm=png'
-            : img + '?&w=320&fm=png'
-        "
-        :srcset="
-          ($store.state.theme === 'dark'
-            ? imgDark + '?w=640&fm=png 2x'
-            : img + '?w=640&fm=png 2x',
-          $store.state.theme === 'dark'
-            ? imgDark + '?w=960&fm=png 3x'
-            : img + '?w=960&fm=png 3x')
+          ($store.state.theme === 'dark' ? imgDark : img) + '?&w=320&fm=png'
         "
         :alt="title"
       />
@@ -51,7 +51,6 @@ export default {
     padding: var(--size__l);
   }
   img {
-    aspect-ratio: attr(width) / attr(height);
     width: 100%;
   }
 }

@@ -41,33 +41,40 @@
         >
           <picture>
             <source
+              sizes="(min-width: 99rem) 1280px, (min-width: 47rem) 960px, (min-width: 29rem) 480px, 240px"
               :srcset="
                 ($store.state.theme === 'dark'
-                  ? project.imgDark + '?w=480w&fm=webp 1x'
-                  : project.img + '?w=480w&fm=webp 1x',
+                  ? project.imgDark
+                  : project.img + '?w=480&fm=webp 480w',
                 $store.state.theme === 'dark'
-                  ? project.imgDark + '?w=960&fm=webp 2x'
-                  : project.img + '?w=960&fm=webp 2x',
+                  ? project.imgDark
+                  : project.img + '?w=960&fm=webp  960w',
                 $store.state.theme === 'dark'
-                  ? project.imgDark + '?w=1280&fm=webp 3x'
-                  : project.img + '?w=1280&fm=webp 3x')
+                  ? project.imgDark
+                  : project.img + '?w=1280&fm=webp 1280w')
               "
               type="image/webp"
+            />
+            <source
+              sizes="(min-width: 99rem) 1280px, (min-width: 47rem) 960px, (min-width: 29rem) 480px, 240px"
+              :srcset="
+                ($store.state.theme === 'dark'
+                  ? project.imgDark
+                  : project.img + '?w=480 480w',
+                $store.state.theme === 'dark'
+                  ? project.imgDark
+                  : project.img + '?w=960 960w',
+                $store.state.theme === 'dark'
+                  ? project.imgDark
+                  : project.img + '?w=1280 1280w')
+              "
             />
             <img
               loading="lazy"
               :src="
                 $store.state.theme === 'dark'
-                  ? project.imgDark + '?w=480'
-                  : project.img + '?w=480'
-              "
-              :srcset="
-                ($store.state.theme === 'dark'
-                  ? project.imgDark + '?w=960 2x'
-                  : project.img + '?w=960 2x',
-                $store.state.theme === 'dark'
-                  ? project.imgDark + '?w=1280 3x'
-                  : project.img + '?w=1280 3x')
+                  ? project.imgDark
+                  : project.img + '?w=240'
               "
               :alt="project.name + ' featured image'"
               class="radius--s"

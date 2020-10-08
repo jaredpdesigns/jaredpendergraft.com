@@ -12,39 +12,40 @@
         <picture>
           <source
             media="(min-width: 63em)"
+            sizes="(min-width: 63em) 960px, 640px"
             :srcset="
-              (img + '?f=face&fit=fill&h=320&w=240&fm=webp 240w',
-              img + '?f=face&fit=fill&h=640&w=480&fm=webp 480w',
+              (img + '?f=face&fit=fill&h=854&w=640&fm=webp 640w',
               img + '?f=face&fit=fill&h=1280&w=960&fm=webp 960w')
             "
             type="image/webp"
           />
           <source
             media="(min-width: 63em)"
+            sizes="(min-width: 63em) 960px, 640px"
             :srcset="
-              (img + '?f=face&fit=fill&h=320&w=240 240w',
-              img + '?f=face&fit=fill&h=640&w=480 480w',
+              (img + '?f=face&fit=fill&h=854&w=640 640w',
               img + '?f=face&fit=fill&h=1280&w=960 960w')
             "
           />
           <source
-            sizes="(min-width: 47em) 640px, (min-width: 29em) 320px, 240px"
+            sizes="(min-width: 47rem) 640px, (min-width: 29rem) 320px, 240px"
             :srcset="
-              (img + '?f=face&fit=fill&h=240&w=320&fm=webp 240w',
-              img + '?f=face&fit=fill&h=240&w=320&fm=webp 320w',
-              img + '?f=face&fit=fill&h=480&w=640&fm=webp 640w')
+              (img + '?f=face&fit=fill&h=240&w=320&fm=webp  320w',
+              img + '?f=face&fit=fill&h=480&w=640&fm=webp  640w')
             "
             type="image/webp"
           />
-          <img
-            class="width__m"
-            loading="lazy"
-            sizes="(min-width: 47em) 640px, (min-width: 29em) 320px, 240px"
-            :src="img + '?f=face&fit=fill&h=180&w=240'"
+          <source
+            sizes="(min-width: 47rem) 640px, (min-width: 29rem) 320px, 240px"
             :srcset="
               (img + '?f=face&fit=fill&h=240&w=320 320w',
               img + '?f=face&fit=fill&h=480&w=640 640w')
             "
+          />
+          <img
+            class="width__m"
+            loading="lazy"
+            :src="img + '?f=face&fit=fill&h=180&w=240'"
             alt="My smiling face, greeting you"
           />
         </picture>
@@ -159,9 +160,6 @@ export default {
       margin-left: auto;
       margin-right: auto;
       max-width: 12ch;
-      @include breakpoint(l) {
-        max-width: 100%;
-      }
     }
     p {
       text-align: left;

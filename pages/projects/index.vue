@@ -28,34 +28,40 @@
           >
             <picture>
               <source
-                sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, 480px"
+                sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, (min-width: 29rem) 640px, 320px"
                 :srcset="
                   ($store.state.theme === 'dark'
-                    ? project.imgDark + '?w=480w&fm=webp 1x'
-                    : project.img + '?w=480w&fm=webp 1x',
+                    ? project.imgDark
+                    : project.img + '?w=640&fm=webp 640w',
                   $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=960&fm=webp 2x'
-                    : project.img + '?w=960&fm=webp 2x',
+                    ? project.imgDark
+                    : project.img + '?w=960&fm=webp 960w',
                   $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=1280&fm=webp 3x'
-                    : project.img + '?w=1280&fm=webp 3x')
+                    ? project.imgDark
+                    : project.img + '?w=1280&fm=webp 1280w')
                 "
                 type="image/webp"
+              />
+              <source
+                sizes="(min-width: 99rem) 1280px, (min-width: 63rem) 960px, (min-width: 29rem) 640px, 320px"
+                :srcset="
+                  ($store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=640 640w',
+                  $store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=960 960w',
+                  $store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=1280 1280w')
+                "
               />
               <img
                 loading="lazy"
                 :src="
-                  $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=480'
-                    : project.img + '?w=480'
-                "
-                :srcset="
                   ($store.state.theme === 'dark'
-                    ? project.imgDark + '?w=960 2x'
-                    : project.img + '?w=960 2x',
-                  $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=1280 3x'
-                    : project.img + '?w=1280 3x')
+                    ? project.imgDark
+                    : project.img) + '?w=320'
                 "
                 :alt="project.name + ' featured image'"
                 class="radius--s"
@@ -99,27 +105,28 @@
           >
             <picture>
               <source
+                sizes="(min-width: 29rem) 640px, 320px"
                 :srcset="
-                  ($store.state.theme === 'dark'
-                    ? project.imgDark + '?w=480w&fm=webp 1x'
-                    : project.img + '?w=480w&fm=webp 1x',
                   $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=960&fm=webp 2x'
-                    : project.img + '?w=960&fm=webp 2x')
+                    ? project.imgDark
+                    : project.img + '?w=640&fm=webp 640w'
                 "
                 type="image/webp"
+              />
+              <source
+                sizes="(min-width: 29rem) 640px, 320px"
+                :srcset="
+                  $store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img + '?w=640 640w'
+                "
               />
               <img
                 loading="lazy"
                 :src="
-                  $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=480'
-                    : project.img + '?w=480'
-                "
-                :srcset="
-                  $store.state.theme === 'dark'
-                    ? project.imgDark + '?w=960 2x'
-                    : project.img + '?w=960 2x'
+                  ($store.state.theme === 'dark'
+                    ? project.imgDark
+                    : project.img) + '?w=320'
                 "
                 :alt="project.name + ' featured image'"
                 class="radius--s"
