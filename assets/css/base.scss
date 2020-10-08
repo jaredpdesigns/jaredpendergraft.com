@@ -116,12 +116,16 @@ ol {
       font-size: var(--typeSize__m);
       font-weight: 500;
       left: 0;
+      opacity: 0.5;
       position: absolute;
       text-align: right;
       top: calc(var(--size__xxs) * -1);
       width: calc(var(--size__m) + var(--size__s));
       @include breakpoint(xsl) {
         left: calc(var(--size__m) * -1);
+      }
+      [data-theme="dark"] & {
+        opacity: 1;
       }
     }
     ol {
@@ -161,10 +165,14 @@ ul li {
     font-size: var(--typeSize__l);
     font-weight: 500;
     left: 0;
+    opacity: 0.5;
     position: absolute;
     top: calc(var(--size__xxs) * -5);
     @include breakpoint(xsl) {
       left: calc(var(--size__l) * -1);
+    }
+    [data-theme="dark"] & {
+      opacity: 1;
     }
   }
 }

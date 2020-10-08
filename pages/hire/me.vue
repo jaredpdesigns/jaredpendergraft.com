@@ -43,7 +43,7 @@ I’m looking for a creative position that offers challenges, collaboration and 
 
 ### Education Advanced, Inc.
 
-*Lead UI/UX Developer*\
+*Director of UI/UX Development*\
 Currently • Remote
 
 - Directs the user-experience and user-interface of multiple applications within the company.

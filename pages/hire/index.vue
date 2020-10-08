@@ -13,7 +13,7 @@
         <p class="type__align--left">
           I’m not currently looking for any full-time work but feel free to view
           my
-          <nuxt-link to="/hire/resume">résumé</nuxt-link> to get a little more
+          <nuxt-link to="/hire/me">résumé</nuxt-link> to get a little more
           information about my background.
         </p>
         <p class="type__align--left">

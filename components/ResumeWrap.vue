@@ -1,10 +1,10 @@
 <template>
   <main :class="$options.name">
-    <article class="oomph__v--l type__align--center width__xxl">
+    <article class="oomph__v--l type__align--center">
       <Nuxt
         :class="[
           $options.name + '__content',
-          'oomph__v--l padding__left--m padding__right--m',
+          'oomph__v--l padding__left--m padding__right--m width__xxl',
         ]"
       />
       <section
@@ -21,10 +21,10 @@
         <section
           :class="[
             $options.name + '__reccomendations--wrap',
-            'padding__left--m padding__right--m padding__top--l',
+            'padding__left--m padding__right--m padding__top--l width__xxl',
           ]"
         >
-          <Recommendation person="Bristol Dunlap">
+          <Recommendation class="width__l" person="Bristol Dunlap">
             <p>
               Jared is an exceptional worker and person. I felt very lucky to
               have the chance to work with him while at Kontur Labs. He is
@@ -39,7 +39,7 @@
               director, designer or developer.
             </p>
           </Recommendation>
-          <Recommendation person="Peter Liu">
+          <Recommendation class="width__l" person="Peter Liu">
             <p>
               I hired Jared to design the Playbill for our big summer show,
               <em>The Hunchback of Notre Dame</em>, in addition to a variety of

@@ -273,7 +273,7 @@ export default {
       }
     }
     section {
-      @include breakpoint(l) {
+      @include breakpoint(xl) {
         padding-left: var(--size__l);
         padding-right: var(--size__l);
       }
