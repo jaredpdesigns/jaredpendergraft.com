@@ -64,7 +64,7 @@
                     : project.img) + '?w=320'
                 "
                 :alt="project.name + ' featured image'"
-                class="radius--s"
+                class="radius--xs"
               />
             </picture>
           </figure>
@@ -129,7 +129,7 @@
                     : project.img) + '?w=320'
                 "
                 :alt="project.name + ' featured image'"
-                class="radius--s"
+                class="radius--xs"
               />
             </picture>
             <span class="color__bg--contrast color__type--base--mid radius--m">
@@ -214,6 +214,11 @@ export default {
         padding-left: var(--size__m);
         padding-right: var(--size__m);
       }
+      .Projects__item img {
+        @include breakpoint(xsl) {
+          border-radius: var(--size__s);
+        }
+      }
     }
     &--passion {
       align-items: start;
@@ -267,9 +272,6 @@ export default {
       }
       img {
         width: 100%;
-        @include breakpoint(l) {
-          border-radius: var(--size__m);
-        }
       }
     }
     section {
