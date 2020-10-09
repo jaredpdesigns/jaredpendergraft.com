@@ -58,9 +58,9 @@ export const projects = [
     name: "These Kids Read",
     description: "A collection of great books our family reads together.",
     img:
-      "https://images.ctfassets.net/cuehicrlqnvu/3fnKVQLBiDSfM0drKGK1gv/25d43db94df9c3bc407d3139acc22735/tkr-feature-light.png",
+      "https://images.ctfassets.net/cuehicrlqnvu/3fnKVQLBiDSfM0drKGK1gv/a14ad966128f902063fa998c3e3730a9/tkr-feature-light.png",
     imgDark:
-      "https://images.ctfassets.net/cuehicrlqnvu/72EGY2qairooMZu8OaUOSN/0c131d63b67c36b07a207bcdbfab4ad1/tkr-feature-dark.png",
+      "https://images.ctfassets.net/cuehicrlqnvu/72EGY2qairooMZu8OaUOSN/2d8713200d294ef57afc62a7608c3214/tkr-feature-dark.png",
     external: "https://thesekidsread.jaredpendergraft.com",
     color: "#00A396",
   },
