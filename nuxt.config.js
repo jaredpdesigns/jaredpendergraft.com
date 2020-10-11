@@ -206,7 +206,6 @@ export default {
   sitemap: {
     hostname: "https://jaredpendergraft.com",
     gzip: true,
-    routes: dynamicClients,
-    dynamicProjects,
+    routes: dynamicProjects,
   },
 };
