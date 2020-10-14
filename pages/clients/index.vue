@@ -15,26 +15,22 @@
           :to="'/clients/' + client.type + '/' + client.slug"
           v-for="client in $store.state.clients"
           :key="client.slug"
-          :class="$options.name + '__item'"
+          :class="[
+            $options.name + '__item',
+            'color__bg--secondary radius--s shadow type__align--center',
+          ]"
         >
-          <section
-            :class="[
-              $options.name + '__item--wrap',
-              'color__bg--secondary radius--s type__align--center shadow',
-            ]"
+          <header
+            class="border__bottom color__border--base--light oomph__v--s padding__bottom--m padding__left--s padding__right--s padding__top--m"
           >
-            <header
-              class="border__bottom color__border--base--light oomph__v--s padding__bottom--m padding__left--s padding__right--s padding__top--m"
-            >
-              <h3>{{ client.title }}</h3>
-              <p>{{ client.client.name }}</p>
-            </header>
-            <footer class="padding__all--s">
-              <span class="color__type--base--mid type__size--s-m">{{
-                client.type
-              }}</span>
-            </footer>
-          </section>
+            <h3>{{ client.title }}</h3>
+            <p>{{ client.client.name }}</p>
+          </header>
+          <footer class="padding__all--s">
+            <span class="color__type--base--mid type__size--s-m">{{
+              client.type
+            }}</span>
+          </footer>
         </nuxt-link>
       </section>
     </article>
@@ -79,6 +75,10 @@ export default {
       padding-left: var(--size__xxl);
       padding-right: var(--size__xxl);
     }
+    @include breakpoint(xl) {
+      padding-left: var(--size__l);
+      padding-right: var(--size__l);
+    }
   }
   &__item {
     @include smooth;
@@ -86,6 +86,9 @@ export default {
     &:focus,
     &:hover {
       transform: scale(1.0125);
+    }
+    &:focus-visible {
+      box-shadow: 0 0 0 var(--size__xs) var(--color__base--light);
     }
     span {
       font-weight: 600;

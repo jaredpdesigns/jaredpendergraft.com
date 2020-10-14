@@ -65,8 +65,9 @@ a {
     outline: none;
   }
   &:focus-visible {
-    border-radius: var(--size__s);
-    box-shadow: 0 0 0 var(--size__xs) var(--color__base--light);
+    background-color: var(--color__secondary);
+    border-radius: var(--size__xs);
+    box-shadow: 0 0 0 var(--size__xs) var(--color__secondary);
   }
 }
 
@@ -97,9 +98,7 @@ textarea {
     outline: 0;
   }
   &:focus-visible {
-    &:focus-visible {
-      box-shadow: 0 0 0 var(--size__xs) var(--color__base--light);
-    }
+    box-shadow: 0 0 0 var(--size__xs) var(--color__secondary);
   }
 }
 
@@ -140,10 +139,6 @@ textarea {
   max-width: 100%;
   outline: none;
   width: 100%;
-  &:focus-visible {
-    border-radius: var(--size__s);
-    box-shadow: 0 0 0 var(--size__xs) var(--color__base--light);
-  }
 }
 
 label {
@@ -156,7 +151,7 @@ select {
   outline: 0;
   width: 100%;
   &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xs) var(--color__base--light);
+    box-shadow: 0 0 0 var(--size__xs) var(--color__secondary);
   }
 }
 
@@ -208,6 +203,11 @@ button[type="submit"] {
   background-color: transparent;
   cursor: pointer;
   width: auto;
+  &:focus-visible {
+    background-color: var(--color__secondary);
+    border-radius: var(--size__xs);
+    box-shadow: 0 0 0 var(--size__xs) var(--color__secondary);
+  }
 }
 
 input[type="search"] {

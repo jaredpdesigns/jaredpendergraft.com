@@ -14,10 +14,10 @@
           'color__bg--secondary oomph__v--l padding__bottom--xxxl padding__top--xxxl',
         ]"
       >
-        <header class="oomph__v--l padding__left--m padding__right--m">
+        <section class="oomph__v--l padding__left--m padding__right--m">
           <h2>Reccommendations</h2>
           <hr />
-        </header>
+        </section>
         <section
           :class="[
             $options.name + '__reccomendations--wrap',
