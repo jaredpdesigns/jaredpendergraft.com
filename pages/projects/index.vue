@@ -254,6 +254,9 @@ export default {
         transform: translate(var(--size__xs), var(--size__xs));
       }
     }
+    &:focus-visible {
+      box-shadow: 0 0 0 var(--size__xs) var(--color__base--light);
+    }
     figure {
       position: relative;
       @include breakpoint(l) {
