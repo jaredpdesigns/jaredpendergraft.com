@@ -319,18 +319,6 @@
 <script>
 export default {
   name: "Agreement",
-  computed: {
-    social() {
-      return {
-        title: this.agreement.title + " • Jared Pendergraft",
-        description:
-          "Client agreement form for " + this.agreement.title + "project",
-        image: this.$store.state.domain + "img/social.jpg",
-        slug:
-          this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
-      };
-    },
-  },
   data() {
     return {
       agreement: this.$store.state.clients.filter(
@@ -341,39 +329,39 @@ export default {
   },
   head() {
     return {
-      title: this.social.title,
+      title: this.agreement.title + " • Jared Pendergraft",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.social.description,
+          content: "Client agreement form for " + this.agreement.title + "project",
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.social.description,
+          content: "Client agreement form for " + this.agreement.title + "project",
         },
         {
           hid: "og:title",
           property: "og:title",
-          content: this.social.title,
+          content: this.agreement.title + " • Jared Pendergraft",
         },
         {
           hid: "og:image",
           property: "og:image",
-          content: this.social.image,
+          content: this.$store.state.domain + "img/social.jpg",
         },
         {
           hid: "og:url",
           property: "og:url",
-          content: this.social.slug,
+          content: this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
         },
       ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href: this.social.slug,
+          href: this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
         },
       ],
     };

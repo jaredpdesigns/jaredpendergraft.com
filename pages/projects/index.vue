@@ -16,7 +16,7 @@
             (item) => item.slug
           )"
           :key="index"
-          :to="'/projects/' + project.slug"
+          :to="'/projects/' + project.slug + '/'"
           :class="[
             $options.name + '__item',
             'color__bg--secondary radius--s shadow',

@@ -12,7 +12,7 @@
         ]"
       >
         <nuxt-link
-          :to="'/clients/' + client.type + '/' + client.slug"
+          :to="'/clients/' + client.type + '/' + client.slug + '/'"
           v-for="client in $store.state.clients"
           :key="client.slug"
           :class="[

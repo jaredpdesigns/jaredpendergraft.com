@@ -77,16 +77,6 @@
 <script>
 export default {
   name: "Invoice",
-  computed: {
-    social() {
-      return {
-        title: this.invoice.title + " • Jared Pendergraft",
-        description: "Client invoice for " + this.invoice.title,
-        image: this.$store.state.domain + "img/social.jpg",
-        slug: this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
-      };
-    },
-  },
   data() {
     return {
       invoice: this.$store.state.clients.filter(
@@ -96,39 +86,41 @@ export default {
   },
   head() {
     return {
-      title: this.social.title,
+      title: this.invoice.title + " • Jared Pendergraft",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.social.description,
+          content: "Client invoice for " + this.invoice.title,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.social.description,
+          content: "Client invoice for " + this.invoice.title,
         },
         {
           hid: "og:title",
           property: "og:title",
-          content: this.social.title,
+          content: this.invoice.title + " • Jared Pendergraft",
         },
         {
           hid: "og:image",
           property: "og:image",
-          content: this.social.image,
+          content: this.$store.state.domain + "img/social.jpg",
         },
         {
           hid: "og:url",
           property: "og:url",
-          content: this.social.slug,
+          content:
+            this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
         },
       ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href: this.social.slug,
+          href:
+            this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
         },
       ],
     };

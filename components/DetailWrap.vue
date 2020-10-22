@@ -94,58 +94,50 @@
 <script>
 export default {
   name: "DetailWrap",
-  computed: {
-    social() {
-      return {
-        title: this.project.name + " • Jared Pendergraft",
-        description: this.project.description,
-        image: this.project.img + "?w=1200&h=630&fit=fill&f=face",
-        slug: this.$store.state.domain + "projects/" + this.project.slug + "/",
-      };
-    },
-  },
   data() {
     return {
       project: this.$store.state.projects.filter(
-        (item) => item.slug === this.$route.path.replace("/projects/", "")
+        (item) => item.slug === this.$route.path.split("/").filter(Boolean)[1]
       )[0],
     };
   },
   head() {
     return {
-      title: this.social.title,
+      title: this.project.name + " • Jared Pendergraft",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.social.description,
+          content: this.project.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.social.description,
+          content: this.project.description,
         },
         {
           hid: "og:title",
           property: "og:title",
-          content: this.social.title,
+          content: this.project.name + " • Jared Pendergraft",
         },
         {
           hid: "og:image",
           property: "og:image",
-          content: this.social.image,
+          content: this.project.img + "?w=1200&h=630&fit=fill&f=face",
         },
         {
           hid: "og:url",
           property: "og:url",
-          content: this.social.slug,
+          content:
+            this.$store.state.domain + "projects/" + this.project.slug + "/",
         },
       ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href: this.social.slug,
+          href:
+            this.$store.state.domain + "projects/" + this.project.slug + "/",
         },
       ],
     };
