@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 
 export const state = () => ({
   clients: clients,
-  domain: "https://jaredpendergraft.com",
+  domain: "https://jaredpendergraft.com/",
   projects: projects,
   theme: "light",
 });

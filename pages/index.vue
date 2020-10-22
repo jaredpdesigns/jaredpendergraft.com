@@ -88,9 +88,9 @@
         </p>
         <p>
           View
-          <nuxt-link to="/projects">projects</nuxt-link>&nbsp;I’ve worked on or
+          <nuxt-link to="/projects/">projects</nuxt-link>&nbsp;I’ve worked on or
           learn more about my
-          <nuxt-link to="/hire#process">creative process</nuxt-link>.
+          <nuxt-link to="/hire/#process">creative process</nuxt-link>.
         </p>
       </section>
     </article>
@@ -103,26 +103,49 @@ export default {
     return {
       img:
         "https://images.ctfassets.net/cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg",
+      social: {
+        title: "Jared Pendergraft",
+        description: "The personal website of Jared Pendergraft",
+        image: this.$store.state.domain + "img/social.jpg",
+        slug: this.$store.state.domain,
+      },
     };
   },
   head() {
     return {
-      title: "Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "The personal website of Jared Pendergraft",
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "The personal website of Jared Pendergraft",
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: "The personal website of Jared Pendergraft",
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };

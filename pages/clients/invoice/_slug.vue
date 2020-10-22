@@ -77,6 +77,16 @@
 <script>
 export default {
   name: "Invoice",
+  computed: {
+    social() {
+      return {
+        title: this.invoice.title + " • Jared Pendergraft",
+        description: "Client invoice for " + this.invoice.title,
+        image: this.$store.state.domain + "img/social.jpg",
+        slug: this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
+      };
+    },
+  },
   data() {
     return {
       invoice: this.$store.state.clients.filter(
@@ -86,22 +96,39 @@ export default {
   },
   head() {
     return {
-      title: this.invoice.title + " • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "Client invoice for " + this.invoice.title,
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "Client invoice for " + this.invoice.title,
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: "Client invoice for " + this.invoice.title,
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };
@@ -153,7 +180,6 @@ export default {
       margin-top: var(--size__m) !important;
     }
     &__content {
-
     }
     &__content > section {
       padding-bottom: var(--size__m) !important;

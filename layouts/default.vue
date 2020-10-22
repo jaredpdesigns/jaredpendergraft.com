@@ -1,7 +1,7 @@
 <template>
   <div>
     <LazyHeader />
-    <LazyDetailWrap v-if="$route.path.includes('/projects/')" />
+    <LazyDetailWrap v-if="$route.name.includes('projects-')" />
     <LazyResumeWrap v-else-if="$route.name === 'hire-me'" />
     <Nuxt v-else />
     <LazyGuides />

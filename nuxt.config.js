@@ -33,24 +33,44 @@ export default {
           "jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui",
       },
       {
-        hid: "og:site_name",
-        property: "og:site_name",
-        content: "Jared Pendergraft",
-      },
-      {
         hid: "og:description",
         property: "og:description",
         content: "The personal website of Jared Pendergraft",
       },
       {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://jaredpendergraft.com/img/social.jpg",
+      },
+      {
+        hid: "og:image:width",
+        property: "og:image:width",
+        content: "1200",
+      },
+      {
+        hid: "og:image:height",
+        property: "og:image:height",
+        content: "630",
+      },
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "Jared Pendergraft",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Jared Pendergraft",
+      },
+      {
+        hid: "og:type",
+        property: "og:type",
+        content: "website",
+      },
+      {
         hid: "og:url",
         property: "og:url",
         content: "https://jaredpendergraft.com/",
-      },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "/img/social.jpg",
       },
       {
         hid: "twitter:card",
@@ -61,26 +81,6 @@ export default {
         hid: "twitter:creator",
         name: "twitter:creator",
         content: "jaredpdesigns",
-      },
-      {
-        hid: "twitter:title",
-        name: "twitter:title",
-        content: "Jared Pendergraft",
-      },
-      {
-        hid: "twitter:description",
-        property: "twitter:description",
-        content: "The personal website of Jared Pendergraft",
-      },
-      {
-        hid: "twitter:url",
-        property: "twitter:url",
-        content: "https://jaredpendergraft.com/",
-      },
-      {
-        hid: "twitter:image:src",
-        property: "twitter:image:src",
-        content: "/img/social.jpg",
       },
       {
         name: "theme-color",
@@ -115,7 +115,7 @@ export default {
       {
         hid: "canonical",
         rel: "canonical",
-        href: "https://jaredpendergraft.com",
+        href: "https://jaredpendergraft.com/",
       },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico" },

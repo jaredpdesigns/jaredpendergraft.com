@@ -94,6 +94,16 @@
 <script>
 export default {
   name: "DetailWrap",
+  computed: {
+    social() {
+      return {
+        title: this.project.name + " • Jared Pendergraft",
+        description: this.project.description,
+        image: this.project.img + "?w=1200&h=630&fit=fill&f=face",
+        slug: this.$store.state.domain + "projects/" + this.project.slug + "/",
+      };
+    },
+  },
   data() {
     return {
       project: this.$store.state.projects.filter(
@@ -103,22 +113,39 @@ export default {
   },
   head() {
     return {
-      title: this.project.name + " • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.project.description,
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.project.description,
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: this.project.description,
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };

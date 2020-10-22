@@ -13,7 +13,7 @@
         <p class="type__align--left">
           I’m not currently looking for any full-time work but feel free to view
           my
-          <nuxt-link to="/hire/me">résumé</nuxt-link> to get a little more
+          <nuxt-link to="/hire/me/">résumé</nuxt-link> to get a little more
           information about my background.
         </p>
         <p class="type__align--left">
@@ -101,26 +101,49 @@ export default {
           img: "Iterate",
         },
       },
+      social: {
+        title: "Hire Me • Jared Pendergraft",
+        description: "Let’s create something great together",
+        image: this.$store.state.domain + "img/social-hire.jpg",
+        slug: this.$store.state.domain + "hire/",
+      },
     };
   },
   head() {
     return {
-      title: "Hire Me • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "Let’s create something great together",
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "Let’s create something great together",
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: "Let’s create something great together",
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };

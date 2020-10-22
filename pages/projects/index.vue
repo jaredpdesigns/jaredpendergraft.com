@@ -150,24 +150,51 @@
 <script>
 export default {
   name: "Projects",
+  data() {
+    return {
+      social: {
+        title: "Featured Projects • Jared Pendergraft",
+        description: "A selection of creative projects I’ve worked on",
+        image: this.$store.state.domain + "img/social-projects.jpg",
+        slug: this.$store.state.domain + "projects/",
+      },
+    };
+  },
   head() {
     return {
-      title: "Projects • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "A selection of creative projects I’ve worked on",
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "A selection of creative projects I’ve worked on",
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: "A selection of creative projects I’ve worked on",
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };

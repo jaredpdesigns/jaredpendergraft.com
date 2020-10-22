@@ -17,14 +17,14 @@
         >About</nuxt-link
       >
       <nuxt-link
-        to="/projects"
+        to="/projects/"
         activeClass="active"
         exactActiveClass="active"
         class="type__size--m-l"
         >Projects</nuxt-link
       >
       <nuxt-link
-        to="/hire"
+        to="/hire/"
         activeClass="active"
         exactActiveClass="active"
         :class="[

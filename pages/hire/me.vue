@@ -91,24 +91,51 @@ Currently • Remote
 <script>
 export default {
   name: "Résumé",
+  data() {
+    return {
+      social: {
+        title: "Résumé • Jared Pendergraft",
+        description: "The résumé of Jared Pendergraft",
+        image: this.$store.state.domain + "img/social-resume.jpg",
+        slug: this.$store.state.domain + "hire/me/",
+      },
+    };
+  },
   head() {
     return {
-      title: "Résumé • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "The résumé of Jared Pendergraft",
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "The résumé of Jared Pendergraft",
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: "The résumé of Jared Pendergraft",
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };

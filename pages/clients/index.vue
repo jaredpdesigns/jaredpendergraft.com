@@ -39,24 +39,51 @@
 <script>
 export default {
   name: "Clients",
+  data() {
+    return {
+      social: {
+        title: "Clients • Jared Pendergraft",
+        description: "Portal for hosting client files, agreements and invoices",
+        image: this.$store.state.domain + "img/social-clients.jpg",
+        slug: this.$store.state.domain + "clients/",
+      },
+    };
+  },
   head() {
     return {
-      title: "Clients • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "Portal for hosting client files, agreements and invoices",
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "Portal for hosting client files, agreements and invoices",
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content: "Portal for hosting client files, agreements and invoices",
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };

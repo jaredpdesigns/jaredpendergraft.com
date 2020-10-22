@@ -319,6 +319,18 @@
 <script>
 export default {
   name: "Agreement",
+  computed: {
+    social() {
+      return {
+        title: this.agreement.title + " • Jared Pendergraft",
+        description:
+          "Client agreement form for " + this.agreement.title + "project",
+        image: this.$store.state.domain + "img/social.jpg",
+        slug:
+          this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
+      };
+    },
+  },
   data() {
     return {
       agreement: this.$store.state.clients.filter(
@@ -329,25 +341,39 @@ export default {
   },
   head() {
     return {
-      title: this.agreement.title + " • Jared Pendergraft",
+      title: this.social.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content:
-            "Client agreement form for " + this.agreement.title + "project",
+          content: this.social.description,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content:
-            "Client agreement form for " + this.agreement.title + "project",
+          content: this.social.description,
         },
         {
-          hid: "twitter:description",
-          property: "twitter:description",
-          content:
-            "Client agreement form for " + this.agreement.title + "project",
+          hid: "og:title",
+          property: "og:title",
+          content: this.social.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.social.image,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.social.slug,
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: this.social.slug,
         },
       ],
     };
@@ -439,7 +465,9 @@ export default {
       padding-right: var(--size__m);
       max-width: 100%;
     }
-    h4, p, li {
+    h4,
+    p,
+    li {
       font-size: var(--typeSize__s) !important;
       line-height: var(--typeLineheight__m) !important;
     }
@@ -449,7 +477,8 @@ export default {
     h1 {
       font-size: var(--typeSize__xl);
     }
-    h2, h3 {
+    h2,
+    h3 {
       font-size: var(--typeSize__m);
     }
     #scheduleA {
