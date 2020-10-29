@@ -116,16 +116,17 @@ a {
 }
 
 code {
+  display: inline-block;
   font-family: var(--typeFamily__mono);
   font-size: var(--typeSize__s);
   p & {
     background-color: var(--color__secondary);
     border: var(--size__xxs) solid var(--color__base--ghost);
     border-radius: var(--size__xs);
+    line-height: var(--typeLineheight__m);
     padding: var(--size__xs) var(--size__s);
   }
   pre & {
-    color: var(--color__base--mid);
     white-space: pre-wrap;
   }
 }
