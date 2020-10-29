@@ -180,6 +180,7 @@ export default {
     "@/assets/css/reset.scss",
     "@/assets/css/helpers.scss",
     "@/assets/css/base.scss",
+    "@/assets/css/project.scss",
   ],
   styleResources: {
     scss: ["@/assets/css/variables.scss"],

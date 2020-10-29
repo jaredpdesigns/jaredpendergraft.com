@@ -166,6 +166,9 @@ export default {
             position: absolute;
             width: 100%;
           }
+          &:hover {
+            color: var(--color__brand);
+          }
           &:focus {
             color: var(--color__brand);
           }

@@ -61,13 +61,14 @@ $type__lineheights: (
 
 $type__families: (
   body: (
-    "degular-text",
     sans-serif,
   ),
   display: (
-    "obviously",
     sans-serif,
-  )
+  ),
+  mono: (
+    monospace,
+  ),
 );
 
 $widths: (

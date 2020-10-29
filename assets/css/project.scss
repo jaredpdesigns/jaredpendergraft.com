@@ -1,0 +1,37 @@
+@import "variables";
+
+:root {
+  --typeFamily__body: degular-text, sans-serif;
+  --typeFamily__display: obviously, sans-serif;
+  --typeFamily__mono: dico-mono, monospace;
+  --typeFamily__script: dico-mono-script, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color__base--mid);
+}
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+hr {
+  h1 + & {
+    margin-top: var(--size__l) !important;
+  }
+}
+
+blockquote {
+  border-left: var(--size__xs) solid var(--color__brand);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}

@@ -148,6 +148,11 @@ export default {
     h3 + p {
       margin-top: var(--size__m) !important;
     }
+    p em {
+      border-bottom: var(--size__xxs) solid var(--color__base--light);
+      font-family: var(--typeFamily__script);
+      font-size: var(--typeSize__m);
+    }
   }
   &__reccomendations--wrap {
     display: grid;

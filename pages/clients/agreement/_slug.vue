@@ -334,12 +334,14 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Client agreement form for " + this.agreement.title + "project",
+          content:
+            "Client agreement form for " + this.agreement.title + "project",
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: "Client agreement form for " + this.agreement.title + "project",
+          content:
+            "Client agreement form for " + this.agreement.title + "project",
         },
         {
           hid: "og:title",
@@ -354,14 +356,20 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          content: this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
+          content:
+            this.$store.state.domain +
+            "clients/agreement/" +
+            this.agreement.slug,
         },
       ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href: this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
+          href:
+            this.$store.state.domain +
+            "clients/agreement/" +
+            this.agreement.slug,
         },
       ],
     };
@@ -418,6 +426,11 @@ export default {
     h2 {
       padding-left: var(--size__m);
       padding-right: var(--size__m);
+    }
+    footer > p em {
+      border-bottom: var(--size__xxs) solid var(--color__base--light);
+      font-family: var(--typeFamily__script);
+      font-size: var(--typeSize__m);
     }
   }
   .signature {

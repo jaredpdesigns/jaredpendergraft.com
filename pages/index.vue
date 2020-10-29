@@ -69,20 +69,14 @@
         <hr />
         <p>
           I’m a multi-disciplinary designer focusing on the
-          <em class="border__bottom color__border--base--light"
-            >intersection of design and development</em
-          >. I care deeply about how something works as much as its outward
-          appearance and am always looking to
-          <em class="border__bottom color__border--base--light"
-            >improve, optimize and scale my ideas</em
-          >.
+          <em>intersection of design and development</em>. I care deeply about
+          how something works as much as its outward appearance and am always
+          looking to <em>improve, optimize and scale my ideas</em>.
         </p>
         <p>
           I approach design challenges holistically, building solutions from
           beginning to end with
-          <em class="border__bottom color__border--base--light"
-            >extensibility and modularity</em
-          >
+          <em>extensibility and modularity</em>
           in mind. I enjoy building out designs to fully-functional front-end
           code—bridging the gap between design and development seamlessly.
         </p>
@@ -195,7 +189,9 @@ export default {
         max-width: 65ch;
       }
       em {
-        border-style: dashed;
+        border-bottom: var(--size__xxs) solid var(--color__base--light);
+        font-family: var(--typeFamily__script);
+        font-size: var(--typeSize__m);
       }
     }
   }

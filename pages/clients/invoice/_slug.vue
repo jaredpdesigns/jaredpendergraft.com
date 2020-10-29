@@ -161,6 +161,11 @@ export default {
         max-width: 50%;
       }
     }
+    footer > p em {
+      border-bottom: var(--size__xxs) solid var(--color__base--light);
+      font-family: var(--typeFamily__script);
+      font-size: var(--typeSize__m);
+    }
   }
   @media print {
     padding-top: var(--size__l) !important;
