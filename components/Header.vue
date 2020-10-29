@@ -9,7 +9,7 @@
       to="/"
       activeClass
       exactActiveClass
-      class="type__family--display type__size--ml-l"
+      class="padding__top--s type__family--display type__size--ml-l"
       >Jared Pendergraft</nuxt-link
     >
     <nav :class="$options.name + '__nav--main'">
@@ -186,7 +186,7 @@ export default {
         }
         + * {
           margin-left: var(--size__m);
-          @include breakpoint(xsl) {
+          @include breakpoint(m) {
             margin-left: var(--size__l);
           }
         }
@@ -202,6 +202,9 @@ export default {
         left: 0;
         position: fixed;
         right: 0;
+        > * + * {
+          margin-left: var(--size__m);
+        }
       }
       > * {
         align-items: center;

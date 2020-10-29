@@ -118,16 +118,17 @@ a {
 code {
   display: inline-block;
   font-family: var(--typeFamily__mono);
-  font-size: var(--typeSize__s);
   p & {
     background-color: var(--color__secondary);
     border: var(--size__xxs) solid var(--color__base--ghost);
     border-radius: var(--size__xs);
+    font-size: var(--typeSize__s);
     line-height: var(--typeLineheight__m);
     padding: var(--size__xs) var(--size__s);
   }
   pre & {
-    white-space: pre-wrap;
+    font-size: var(--typeSize__xs);
+    white-space: pre;
   }
 }
 
@@ -135,8 +136,8 @@ pre {
   background-color: var(--color__secondary);
   border: var(--size__xxs) solid var(--color__base--ghost);
   border-radius: var(--size__s);
-  overflow-x: auto;
   overflow: hidden;
+  overflow-x: auto;
   padding: var(--size__s) var(--size__m);
   word-wrap: normal;
 }
