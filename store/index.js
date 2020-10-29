@@ -1,10 +1,12 @@
 import { clients } from "../data/clients";
 import { projects } from "../data/projects";
+import { snippets } from "../data/snippets";
 
 export const state = () => ({
   clients: clients,
   domain: "https://jaredpendergraft.com/",
   projects: projects,
+  snippets: snippets,
   theme: "light",
 });
 

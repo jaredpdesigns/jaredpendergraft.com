@@ -12,7 +12,7 @@
       class="type__family--display type__size--ml-l"
       >Jared Pendergraft</nuxt-link
     >
-    <nav :class="[$options.name + '__nav--main', 'oomph__h--l']">
+    <nav :class="$options.name + '__nav--main'">
       <nuxt-link to="/" exactActiveClass="active" class="type__size--m-l"
         >About</nuxt-link
       >
@@ -32,6 +32,13 @@
           'type__size--m-l',
         ]"
         >Hire Me</nuxt-link
+      >
+      <nuxt-link
+        to="/snippets/"
+        activeClass="active"
+        exactActiveClass="active"
+        class="type__size--m-l"
+        >Snippets</nuxt-link
       >
     </nav>
     <nav :class="$options.name + '__nav--social'">
@@ -126,6 +133,9 @@ export default {
   }
   + main {
     padding-top: calc(var(--header) + var(--size__m));
+    @media (max-width: 47rem) {
+      padding-bottom: var(--size__xxxl);
+    }
     @include breakpoint(xsl) {
       padding-top: calc(var(--header) + var(--size__l));
     }
@@ -138,6 +148,7 @@ export default {
     &--social {
       align-items: center;
       display: inline-flex;
+      flex-wrap: wrap;
       justify-content: center;
       @media print {
         display: none;
@@ -173,10 +184,25 @@ export default {
             color: var(--color__brand);
           }
         }
+        + * {
+          margin-left: var(--size__m);
+          @include breakpoint(xsl) {
+            margin-left: var(--size__l);
+          }
+        }
       }
     }
     &--social {
       min-width: calc(var(--size__xl) * 4);
+      @media (max-width: 47rem) {
+        background-color: var(--color__contrast);
+        border-top: var(--size__xxs) solid var(--color__base--light);
+        bottom: 0;
+        height: var(--size__xxxl);
+        left: 0;
+        position: fixed;
+        right: 0;
+      }
       > * {
         align-items: center;
         display: inline-flex;
