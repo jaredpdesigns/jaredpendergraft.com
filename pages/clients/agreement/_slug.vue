@@ -390,8 +390,6 @@ export default {
       padding-left: var(--size__l);
     }
     > p,
-    > ol,
-    ul,
     h3,
     h4,
     footer > p,
@@ -413,6 +411,11 @@ export default {
     }
     ul,
     > ol {
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - var(--size__l));
+      width: 100%;
       @include breakpoint(xsl) {
         max-width: calc(60% + var(--size__xxl));
       }

@@ -111,8 +111,7 @@ export default {
       padding-right: var(--size__l);
     }
     p,
-    h3,
-    ul {
+    h3 {
       padding-left: var(--size__m);
       padding-right: var(--size__m);
       text-align: left;
@@ -129,6 +128,11 @@ export default {
       }
     }
     ul {
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - var(--size__l));
+      width: 100%;
       @include breakpoint(xsl) {
         max-width: calc(60% + var(--size__xxl));
       }

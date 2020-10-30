@@ -161,6 +161,20 @@ export default {
         max-width: 50%;
       }
     }
+    ul,
+    ol {
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - var(--size__l));
+      width: 100%;
+      @include breakpoint(xsl) {
+        max-width: calc(60% + var(--size__xxl));
+      }
+      @include breakpoint(l) {
+        max-width: 50%;
+      }
+    }
     footer > p em {
       border-bottom: var(--size__xxs) solid var(--color__base--light);
       font-family: var(--typeFamily__script);
