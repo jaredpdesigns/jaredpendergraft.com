@@ -87,6 +87,9 @@
     font-family: $value;
   }
 }
+  .type__family--script {
+    font-family: var(--typeFamily__script);
+  }
 
 .type__align {
   &--center {

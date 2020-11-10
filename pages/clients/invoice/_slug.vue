@@ -190,8 +190,6 @@ export default {
     * + * {
       margin-top: var(--size__m) !important;
     }
-    &__content {
-    }
     &__content > section {
       padding-bottom: var(--size__m) !important;
     }
@@ -208,6 +206,9 @@ export default {
       font-size: var(--typeSize__s) !important;
       line-height: var(--typeLineheight__m) !important;
     }
+    footer > p em {
+      font-size: var(--typeSize__xs) !important;
+    }
     h2 + p {
       margin-top: 0;
     }
@@ -219,6 +220,9 @@ export default {
       + p {
         margin-top: 0 !important;
       }
+    }
+    li::marker {
+      color: rgba(black, 0.5);
     }
   }
 }

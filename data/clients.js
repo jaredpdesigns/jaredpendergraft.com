@@ -1,5 +1,30 @@
 export const clients = [
   {
+    title: "Wrappily Video Embed",
+    description:
+      "<p>Jared Pendergraft was hired to enable video embeds within the Shopify theme for Wrappily.</p>",
+    slug: "wrappily-video-embed",
+    client: {
+      name: "Sara Smith",
+      street: "P.O. Box 27",
+      city: "Kula",
+      state: "HI",
+      zip: 96790,
+    },
+    start: {
+      month: "November",
+      day: 9,
+      year: 2020,
+    },
+    end: {
+      month: "November",
+      day: 9,
+      year: 2020,
+    },
+    total: 75,
+    type: "invoice",
+  },
+  {
     title: "Dura Mater 2020 Virtual Collateral",
     description:
       "<p>Jared Pendergraft was hired to update the collateral for the 2020 Virtual Dura Mater charity ride. Including designs for a logo treatment, t-shirt, and social media assets.</p>",

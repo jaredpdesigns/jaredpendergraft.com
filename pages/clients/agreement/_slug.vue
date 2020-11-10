@@ -475,6 +475,9 @@ export default {
       font-size: var(--typeSize__s) !important;
       line-height: var(--typeLineheight__m) !important;
     }
+    footer > p em {
+      font-size: var(--typeSize__xs) !important;
+    }
     hr {
       display: none;
     }
@@ -484,6 +487,9 @@ export default {
     h2,
     h3 {
       font-size: var(--typeSize__m);
+    }
+    li::marker {
+      color: rgba(black, 0.5);
     }
     #scheduleA {
       page-break-before: always;

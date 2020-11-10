@@ -41,7 +41,7 @@ export default {
         title: "Snippets • Jared Pendergraft",
         description: "Helpful chunks of code",
         image: this.$store.state.domain + "img/social.jpg",
-        slug: this.$store.state.domain,
+        slug: this.$store.state.domain + 'snippets',
       },
     };
   },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LazyHeader />
+    <LazyHeader v-if="$route.name !== 'todo'" />
     <LazyDetailWrap v-if="$route.name.includes('projects-')" />
     <LazyResumeWrap v-else-if="$route.name === 'hire-me'" />
     <Nuxt v-else />
