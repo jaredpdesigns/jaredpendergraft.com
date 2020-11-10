@@ -41,7 +41,7 @@ export default {
         title: "Snippets • Jared Pendergraft",
         description: "Helpful chunks of code",
         image: this.$store.state.domain + "img/social.jpg",
-        slug: this.$store.state.domain + 'snippets',
+        slug: this.$store.state.domain + "snippets",
       },
     };
   },
@@ -114,51 +114,6 @@ export default {
         padding: var(--size__m);
         > * + * {
           margin-top: var(--size__l);
-        }
-      }
-      code {
-        .hljs-comment {
-          color: var(--color__base--mid);
-          font-family: var(--typeFamily__script);
-        }
-        .hljs-attribute,
-        .hljs-doctag,
-        .hljs-keyword,
-        .hljs-meta-keyword,
-        .hljs-name,
-        .hljs-section,
-        .hljs-selector-tag,
-        .hljs-strong,
-        .hljs-title {
-          font-weight: bold;
-        }
-        .hljs-deletion,
-        .hljs-number,
-        .hljs-quote,
-        .hljs-selector-class,
-        .hljs-selector-id,
-        .hljs-string,
-        .hljs-template-tag,
-        .hljs-type {
-          color: var(--color__base--mid);
-        }
-        .hljs-addition,
-        .hljs-built_in,
-        .hljs-bullet,
-        .hljs-code,
-        .hljs-link,
-        .hljs-literal,
-        .hljs-meta,
-        .hljs-meta-string,
-        .hljs-regexp,
-        .hljs-section,
-        .hljs-selector-attr,
-        .hljs-selector-pseudo,
-        .hljs-symbol,
-        .hljs-template-variable,
-        .hljs-title,
-        .hljs-variable {
-          color: var(--color__base--mid);
         }
       }
     }

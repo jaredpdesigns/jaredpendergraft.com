@@ -202,6 +202,13 @@ export default {
       padding-right: var(--size__m);
       max-width: 100%;
     }
+    h1 {
+      font-size: var(--typeSize__l) !important;
+      line-height: var(--typeLineheight__l) !important;
+    }
+    h3 {
+      font-size: var(--typeSize__m) !important;
+    }
     p {
       font-size: var(--typeSize__s) !important;
       line-height: var(--typeLineheight__m) !important;

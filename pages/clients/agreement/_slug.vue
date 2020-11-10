@@ -469,6 +469,15 @@ export default {
       padding-right: var(--size__m);
       max-width: 100%;
     }
+    h1 {
+      font-size: var(--typeSize__l) !important;
+    }
+    h2 {
+      font-size: var(--typeSize__ml) !important;
+    }
+    h3 {
+      font-size: var(--typeSize__m) !important;
+    }
     h4,
     p,
     li {
