@@ -1,29 +1,43 @@
 <template>
-  <main :class="$options.name">
-    <article class="oomph__v--l padding__all--m width__xxl">
-      <header
-        :class="[
-          $options.name + '__header',
-          'border__bottom color__bg--contrast color__border--base--light oomph__h--m padding__left--m padding__right--m',
-        ]"
+  <main :class="$options.name" @keyup.esc="clearAddNew">
+    <header v-if="addNew" :class="$options.name + '__header'">
+      <section
+        class="border__top color__bg--contrast color__border--base--light padding__bottom--m padding__left--m padding__right--m padding__top--xl shadow width__ml"
       >
+        <button @click="clearAddNew">
+          <Icon
+            class="color__type--base--semi radius--s"
+            name="cancel"
+            :size="14"
+          />
+        </button>
         <input
-          aria-label="Add new ToDo"
+          aria-label="Add new"
           type="text"
-          placeholder="…  "
+          placeholder="Something great…"
           v-model="newItem"
-          class="padding__left--m padding__right--m type__size--m-l"
+          class="padding__left--m padding__right--m"
+          ref="newItemInput"
           @change="newToDo"
         />
         <button
           @click="newToDo"
-          class="padding__left--m padding__right--m type__size--m-l"
+          class="padding__left--m padding__right--m type__size--ml-l"
         >
-          <Icon class="margin__right--s" name="add" :size="14" />Add New
+          <Icon
+            class="color__type--base--semi margin__right--s"
+            name="check"
+            :size="14"
+          />Done
         </button>
-      </header>
+      </section>
+    </header>
+    <article class="oomph__v--l width__xxl">
       <section
-        :class="$options.name + '__lists'"
+        :class="[
+          $options.name + '__lists',
+          'padding__left--m padding__right--m',
+        ]"
         v-if="active.length || done.length"
       >
         <section>
@@ -40,16 +54,16 @@
             ]"
           >
             <section
-              :id="todo"
+              :id="index"
               :class="[
                 $options.name + '__item',
-                'border__bottom color__border--base--light padding__all--m',
+                'border__bottom color__border--base--light padding__all--s',
               ]"
               v-for="(todo, index) in active"
-              :key="todo"
+              :key="index"
               draggable
               @dragstart="onDragStart"
-              @drop="onDrop"
+              @drop="onDrop($event, active)"
               @dragover.prevent
               @dragenter.prevent
             >
@@ -67,16 +81,21 @@
                   {{ todo }}
                 </p>
                 <button
-                  class="type__size--m-l"
+                  class="color__type--base--semi type__size--m-l"
                   @click="active = active.filter((item) => item !== todo)"
                 >
-                  <Icon name="minus" :size="14" />
+                  <Icon name="cancel" :size="14" />
                 </button>
+                <Icon
+                  class="color__type--base--semi margin__left--s"
+                  name="drag"
+                  :size="16"
+                />
               </label>
             </section>
           </section>
         </section>
-        <section class="color__bg--contrast radius--s">
+        <section>
           <p
             class="color__type--base--mid type__align--center type__family--display"
           >
@@ -92,9 +111,9 @@
             <section
               :class="[
                 $options.name + '__item',
-                'border__bottom color__border--base--light padding__all--m',
+                'border__bottom color__border--base--light padding__all--s',
               ]"
-              v-for="(todo, index) in done"
+              v-for="todo in done"
               :key="todo"
             >
               <input
@@ -111,26 +130,15 @@
                   {{ todo }}
                 </p>
                 <button
-                  class="type__size--m-l"
+                  class="color__type--base--semi type__size--m-l"
                   @click="done = done.filter((item) => item !== todo)"
                 >
-                  <Icon name="minus" :size="14" />
+                  <Icon name="cancel" :size="14" />
                 </button>
               </label>
             </section>
           </section>
         </section>
-        <footer
-          class="border__top color__bg--contrast color__border--base--light type__align--center"
-        >
-          <button
-            v-if="active.length || done.length"
-            @click="clearAll"
-            class="padding__left--m padding__right--m type__size--m-l"
-          >
-            <Icon class="margin__right--s" name="minus" :size="14" />Clear All
-          </button>
-        </footer>
       </section>
       <p
         v-else
@@ -139,6 +147,34 @@
         Woo-hoo, no ToDos to be done!
       </p>
     </article>
+    <footer
+      :class="[
+        $options.name + '__footer',
+        'border__top color__bg--contrast color__border--base--light type__align--center',
+      ]"
+    >
+      <button
+        class="padding__left--m padding__right--m type__size--ml-l"
+        @click="addNewItem"
+      >
+        <Icon
+          class="color__type--base--semi margin__right--s"
+          name="add"
+          :size="14"
+        />Add New
+      </button>
+      <button
+        v-if="active.length || done.length"
+        @click="clearAll"
+        class="padding__left--m padding__right--m type__size--ml-l"
+      >
+        <Icon
+          class="color__type--base--semi margin__right--s"
+          name="minus"
+          :size="14"
+        />Clear All
+      </button>
+    </footer>
   </main>
 </template>
 <script>
@@ -147,6 +183,7 @@ export default {
   data() {
     return {
       active: [],
+      addNew: false,
       checked: [],
       done: [],
       newItem: "",
@@ -198,6 +235,16 @@ export default {
     };
   },
   methods: {
+    addNewItem() {
+      this.addNew = true;
+      setTimeout(() => {
+        this.$refs.newItemInput.focus();
+      });
+    },
+    clearAddNew() {
+      this.addNew = false;
+      this.newItem = "";
+    },
     clearAll() {
       this.active = [];
       this.done = [];
@@ -224,17 +271,20 @@ export default {
     newToDo() {
       if (this.newItem) {
         this.active.push(this.newItem);
-        this.newItem = "";
+        this.clearAddNew();
       }
     },
     onDragStart(event) {
       event.dataTransfer.setData("text/plain", event.target.id);
     },
-    onDrop(event) {
-      const id = this.active.indexOf(event.dataTransfer.getData("text"));
-      const before = [];
-      const after = this.active.slice(id);
-      console.log(after);
+    onDrop(event, arr) {
+      const from = event.dataTransfer.getData("text");
+      const to = event.target.id;
+      const item = arr.splice(from, 1);
+      arr.splice(to, 0, item[0]);
+    },
+    test() {
+      alert("Testing!");
     },
   },
   mounted() {
@@ -257,9 +307,8 @@ export default {
 </script>
 <style lang="scss">
 .ToDo {
-  --fixedHeight: calc(var(--size__xxxl) + var(--size__l));
   article {
-    padding-top: var(--fixedHeight);
+    padding-bottom: calc(var(--size__xxxl) + var(--size__l));
     @include breakpoint(xsl) {
       padding-left: var(--size__l);
       padding-right: var(--size__l);
@@ -281,25 +330,46 @@ export default {
     }
   }
   &__header {
-    align-items: center;
+    align-items: flex-end;
+    background-color: rgba(white, 0.125);
+    backdrop-filter: blur(8px);
     display: flex;
-    height: var(--fixedHeight);
+    height: calc(100% - var(--size__xxxl));
     left: 0;
     position: fixed;
-    right: 0;
     top: 0;
-    @include breakpoint(xsl) {
-      padding-left: var(--size__l);
-      padding-right: var(--size__l);
+    width: 100%;
+    z-index: 100;
+    [data-theme="dark"] & {
+      background-color: hsla(218, 12%, 16%, 0.125);
     }
-    > * {
-      height: var(--size__xxl);
+    @include breakpoint(xsl) {
+      align-items: center;
+      height: 100%;
+    }
+    > section {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      @include breakpoint(xsl) {
+        border: var(--size__xxs) solid var(--color__base--light);
+        border-radius: var(--size__s);
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-right: 0;
+      }
     }
     input[type="text"] {
       @include smooth;
-      background-color: transparent;
+      background-color: var(--color__contrast);
       border: var(--size__xxs) solid var(--color__base--light);
       border-radius: var(--size__s);
+      height: var(--size__xxl);
+      flex-grow: 1;
+      font-size: var(--typeSize__ml);
+      line-height: var(--typeLineheight__l);
       &::placeholder {
         color: var(--color__base--semi);
       }
@@ -308,21 +378,44 @@ export default {
         border-color: var(--color__base--semi);
       }
     }
+    button {
+      &:first-child {
+        align-items: center;
+        display: inline-flex;
+        height: var(--size__xl);
+        left: 0;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: var(--size__xl);
+      }
+      &:last-child {
+        flex-shrink: 0;
+        margin-top: var(--size__m);
+        @include breakpoint(xsl) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  &__footer {
+    bottom: var(--size__xxxl);
+    align-items: center;
+    display: flex;
+    height: var(--size__xxxl);
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    @include breakpoint(xsl) {
+      bottom: 0;
+    }
   }
   &__lists {
     display: grid;
+    grid-gap: var(--size__l);
     @media (orientation: landscape) {
       grid-template-columns: 1fr 1fr;
-    }
-    footer {
-      bottom: 0;
-      align-items: center;
-      display: flex;
-      height: var(--size__xxxl);
-      justify-content: center;
-      left: 0;
-      position: fixed;
-      right: 0;
     }
   }
   &__item {
@@ -344,24 +437,20 @@ export default {
       opacity: 0;
       &:checked + label {
         span {
-          background-color: var(--color__brand);
-          border-color: var(--color__brand);
-          color: white;
+          background-color: var(--color__base--light);
+          border-color: var(--color__base--light);
+          color: var(--color__base--mid);
         }
         p {
           opacity: 0.5;
           text-decoration: line-through;
         }
       }
-      &:disabled + label span {
-        border-color: var(--color__base--light);
-      }
-      &:disabled + label span,
       &:focus + label span {
         background-color: var(--color__contrast);
       }
       &:focus:checked + label span {
-        background-color: var(--color__brand);
+        background-color: var(--color__base--semi);
         box-shadow: 0 0 0 var(--size__xs) var(--color__base--ghost);
       }
     }
@@ -380,7 +469,7 @@ export default {
         justify-content: center;
         position: absolute;
         left: var(--size__m);
-        top: calc(var(--size__m) + var(--size__xs));
+        top: calc(var(--size__s) + var(--size__xs));
         width: var(--size__l);
       }
       p {
