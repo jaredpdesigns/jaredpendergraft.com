@@ -31,6 +31,8 @@
           ($store.state.theme === 'dark' ? imgDark : img) + '?&w=320&fm=png'
         "
         :alt="title"
+        height="320"
+        width="320"
       />
     </picture>
   </section>

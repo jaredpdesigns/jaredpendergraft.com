@@ -2,15 +2,8 @@
   <main :class="$options.name" @keyup.esc="clearAddNew">
     <header v-if="addNew" :class="$options.name + '__header'">
       <section
-        class="border__top color__bg--contrast color__border--base--light padding__bottom--m padding__left--m padding__right--m padding__top--xl shadow width__ml"
+        class="border__top color__bg--contrast color__border--base--light padding__all--m width__ml"
       >
-        <button @click="clearAddNew">
-          <Icon
-            class="color__type--base--semi radius--s"
-            name="cancel"
-            :size="14"
-          />
-        </button>
         <input
           aria-label="Add new"
           type="text"
@@ -20,15 +13,12 @@
           ref="newItemInput"
           @change="newToDo"
         />
-        <button
-          @click="newToDo"
-          class="padding__left--m padding__right--m type__size--ml-l"
-        >
+        <button @click="clearAddNew">
           <Icon
-            class="color__type--base--semi margin__right--s"
-            name="check"
+            class="color__type--base--semi radius--s"
+            name="cancel"
             :size="14"
-          />Done
+          />
         </button>
       </section>
     </header>
@@ -77,7 +67,7 @@
               />
               <label :for="todo">
                 <span></span>
-                <p class="padding__left--m padding__right--m">
+                <p class="padding__left--m padding__right--m type__size--m-m">
                   {{ todo }}
                 </p>
                 <button
@@ -87,6 +77,7 @@
                   <Icon name="cancel" :size="14" />
                 </button>
                 <Icon
+                  v-if="draggable"
                   class="color__type--base--semi margin__left--s"
                   name="drag"
                   :size="16"
@@ -126,7 +117,7 @@
               />
               <label :for="todo">
                 <span><Icon name="check" :size="14"/></span>
-                <p class="padding__left--m padding__right--m">
+                <p class="padding__left--m padding__right--m type__size--m-m">
                   {{ todo }}
                 </p>
                 <button
@@ -154,7 +145,7 @@
       ]"
     >
       <button
-        class="padding__left--m padding__right--m type__size--ml-l"
+        class="padding__left--m padding__right--m type__size--m-m"
         @click="addNewItem"
       >
         <Icon
@@ -166,13 +157,23 @@
       <button
         v-if="active.length || done.length"
         @click="clearAll"
-        class="padding__left--m padding__right--m type__size--ml-l"
+        class="padding__left--m padding__right--m type__size--m-m"
       >
         <Icon
           class="color__type--base--semi margin__right--s"
           name="minus"
           :size="14"
         />Clear All
+      </button>
+      <button
+        @click="setTheme"
+        class="padding__left--m padding__right--m type__size--m-m"
+      >
+        <Icon
+          class="color__type--base--semi margin__right--s"
+          name="contrast"
+          :size="14"
+        />Theme
       </button>
     </footer>
   </main>
@@ -186,6 +187,7 @@ export default {
       addNew: false,
       checked: [],
       done: [],
+      draggable: false,
       newItem: "",
       social: {
         title: "ToDo • Jared Pendergraft",
@@ -283,14 +285,24 @@ export default {
       const item = arr.splice(from, 1);
       arr.splice(to, 0, item[0]);
     },
-    test() {
-      alert("Testing!");
+    setTheme() {
+      let root = document.getElementsByTagName("html")[0];
+      if (root.getAttribute("data-theme") === "dark") {
+        root.setAttribute("data-theme", "light");
+        this.$store.dispatch("setTheme", "light");
+      } else {
+        root.setAttribute("data-theme", "dark");
+        this.$store.dispatch("setTheme", "dark");
+      }
     },
   },
   mounted() {
     this.active = JSON.parse(localStorage.getItem("active")) || [];
     this.checked = JSON.parse(localStorage.getItem("checked")) || [];
     this.done = JSON.parse(localStorage.getItem("done")) || [];
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      this.draggable = true;
+    }
   },
   watch: {
     active(newValue, oldValue) {
@@ -309,6 +321,7 @@ export default {
 .ToDo {
   article {
     padding-bottom: calc(var(--size__xxxl) + var(--size__l));
+    padding-top: var(--size__l);
     @include breakpoint(xsl) {
       padding-left: var(--size__l);
       padding-right: var(--size__l);
@@ -350,11 +363,11 @@ export default {
     > section {
       align-items: center;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       position: relative;
       @include breakpoint(xsl) {
-        border: var(--size__xxs) solid var(--color__base--light);
+        border: none;
+        box-shadow: 0 0 var(--size__l) rgba(black, 0.25);
         border-radius: var(--size__s);
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -368,7 +381,7 @@ export default {
       border-radius: var(--size__s);
       height: var(--size__xxl);
       flex-grow: 1;
-      font-size: var(--typeSize__ml);
+      font-size: var(--typeSize__m);
       line-height: var(--typeLineheight__l);
       &::placeholder {
         color: var(--color__base--semi);
@@ -377,29 +390,20 @@ export default {
       &:hover {
         border-color: var(--color__base--semi);
       }
+      &:focus-visible {
+        box-shadow: none;
+      }
     }
     button {
-      &:first-child {
-        align-items: center;
-        display: inline-flex;
-        height: var(--size__xl);
-        left: 0;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        width: var(--size__xl);
-      }
-      &:last-child {
-        flex-shrink: 0;
-        margin-top: var(--size__m);
-        @include breakpoint(xsl) {
-          margin-top: 0;
-        }
-      }
+      align-items: center;
+      display: inline-flex;
+      height: var(--size__xl);
+      justify-content: center;
+      width: var(--size__xl);
     }
   }
   &__footer {
-    bottom: var(--size__xxxl);
+    bottom: 0;
     align-items: center;
     display: flex;
     height: var(--size__xxxl);
@@ -432,7 +436,10 @@ export default {
       border-bottom: none;
     }
     input[type="checkbox"] {
+      flex-shrink: 0;
       height: var(--size__l);
+      margin-left: var(--size__s);
+      margin-top: var(--size__xs);
       width: var(--size__l);
       opacity: 0;
       &:checked + label {

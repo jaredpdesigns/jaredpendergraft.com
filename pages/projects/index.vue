@@ -65,6 +65,8 @@
                 "
                 :alt="project.name + ' featured image'"
                 class="radius--xs"
+                height="200"
+                width="320"
               />
             </picture>
           </figure>
@@ -130,6 +132,8 @@
                 "
                 :alt="project.name + ' featured image'"
                 class="radius--xs"
+                height="200"
+                width="320"
               />
             </picture>
             <span class="color__bg--contrast color__type--base--mid radius--m">

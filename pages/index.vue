@@ -47,6 +47,8 @@
             loading="lazy"
             :src="img + '?f=face&fit=fill&h=180&w=240'"
             alt="My smiling face, greeting you"
+            height="180"
+            width="180"
           />
         </picture>
         <svg height="0" width="0" :style="{ position: 'absolute' }">

@@ -78,6 +78,8 @@
               "
               :alt="project.name + ' featured image'"
               class="radius--s"
+              height="150"
+              width="240"
             />
           </picture>
         </figure>

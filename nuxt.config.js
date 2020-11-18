@@ -12,6 +12,9 @@ let dynamicProjects = () => {
 };
 
 export default {
+  server: {
+    host: "0.0.0.0",
+  },
   target: "static",
   head: {
     htmlAttrs: {
@@ -137,7 +140,6 @@ export default {
         rel: "preload",
         href: "https://use.typekit.net/vkr4fst.css",
         as: "style",
-        crossorigin: "anonymous",
       },
       {
         rel: "stylesheet",
@@ -148,12 +150,6 @@ export default {
         href: "https://www.google-analytics.com",
       },
       {
-        rel: "preload",
-        href: "https://www.googletagmanager.com/gtag/js?id=UA-57033104-3",
-        as: "script",
-        crossorigin: "anonymous",
-      },
-      {
         rel: "preconnect",
         href: "https://www.google.com",
       },
@@ -161,7 +157,6 @@ export default {
         rel: "preload",
         href: "/js/google-analytics.js",
         as: "script",
-        crossorigin: "anonymous",
       },
     ],
     script: [
