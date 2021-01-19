@@ -1,5 +1,30 @@
 export const clients = [
   {
+    title: "Wrappily Theme Update",
+    description:
+      "<p>Jared Pendergraft was hired to update and make corrections to the Shopify theme for Wrappily.</p>",
+    slug: "wrappily-theme-update",
+    client: {
+      name: "Sara Smith",
+      street: "P.O. Box 27",
+      city: "Kula",
+      state: "HI",
+      zip: 96790,
+    },
+    start: {
+      month: "November",
+      day: 20,
+      year: 2020,
+    },
+    end: {
+      month: "November",
+      day: 21,
+      year: 2020,
+    },
+    total: 262.5,
+    type: "invoice",
+  },
+  {
     title: "Wrappily Video Embed",
     description:
       "<p>Jared Pendergraft was hired to enable video embeds within the Shopify theme for Wrappily.</p>",
