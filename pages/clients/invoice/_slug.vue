@@ -9,19 +9,12 @@
       <header class="oomph__v--m type__align--center width__xxl">
         <h1>{{ invoice.title }}</h1>
         <hr />
-        <p>
-          {{ invoice.end.month }} {{ invoice.end.day }}, {{ invoice.end.year }}
-        </p>
+        <p>{{ invoice.end.month }} {{ invoice.end.day }}, {{ invoice.end.year }}</p>
       </header>
       <section
-        :class="[
-          $options.name + '__content',
-          'margin__top--l oomph__v--l width__xxl',
-        ]"
+        :class="[$options.name + '__content', 'margin__top--l oomph__v--l width__xxl']"
       >
-        <section
-          class="border__bottom color__border--base--light padding__bottom--l"
-        >
+        <section class="border__bottom color__border--base--light padding__bottom--l">
           <p>
             <strong>{{ invoice.client.name }}</strong>
             <br v-if="invoice.client.street" />
@@ -43,9 +36,7 @@
           class="border__top color__border--base--light oomph__v--l padding__top--l"
         >
           <p>
-            <strong
-              >Please send invoice payment to the following address:</strong
-            >
+            <strong>Please send invoice payment to the following address:</strong>
           </p>
           <blockquote>
             <p>
@@ -56,8 +47,7 @@
             </p>
           </blockquote>
           <p>
-            Alternatively, payments can be made directly via debit card by
-            visiting:
+            Alternatively, payments can be made directly via debit card by visiting:
             <a
               href="https://cash.me/$jaredpdesigns"
               title="Pay Jared Pendergraft"
@@ -111,16 +101,14 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          content:
-            this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
+          content: this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
         },
       ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href:
-            this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
+          href: this.$store.state.domain + "clients/invoice/" + this.invoice.slug,
         },
       ],
     };
@@ -139,6 +127,11 @@ export default {
     @include breakpoint(xsl) {
       padding-left: var(--size__l);
       padding-right: var(--size__l);
+    }
+    @media print {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 6in;
     }
   }
   &__content {
@@ -183,10 +176,6 @@ export default {
   }
   @media print {
     padding-top: var(--size__l) !important;
-    * {
-      border-color: rgba(black, 0.25);
-      color: black;
-    }
     * + * {
       margin-top: var(--size__m) !important;
     }

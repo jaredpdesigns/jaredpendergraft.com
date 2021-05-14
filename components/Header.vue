@@ -27,10 +27,7 @@
         to="/hire/"
         activeClass="active"
         exactActiveClass="active"
-        :class="[
-          $route.path.includes('clients') ? 'active' : '',
-          'type__size--m-l',
-        ]"
+        :class="[$route.path.includes('clients') ? 'active' : '', 'type__size--m-l']"
         >Hire Me</nuxt-link
       >
       <nuxt-link
@@ -103,9 +100,14 @@ export default {
   z-index: 100;
   @media print {
     border-color: #ccc;
+    padding-left: var(--size__xxl);
+    padding-right: var(--size__xxl);
     position: static;
     * {
       color: black;
+    }
+    > a {
+      font-size: var(--typeSize__s) !important;
     }
     &:after {
       color: black;

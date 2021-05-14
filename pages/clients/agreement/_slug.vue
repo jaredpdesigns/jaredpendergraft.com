@@ -42,41 +42,38 @@
         <li>
           <strong>Services.</strong>
           {{ consultant }} will provide services (the “Services”) to
-          {{ agreement.client.name }} as specified in <em>Schedule A.</em> All
-          design and development efforts will be done remotely unless otherwise
-          stated.
+          {{ agreement.client.name }} as specified in <em>Schedule A.</em> All design and
+          development efforts will be done remotely unless otherwise stated.
         </li>
         <li>
           <strong>Expenses.</strong>
-          {{ agreement.client.name }} will reimburse {{ consultant }} for
-          expenses incurred in providing the Services, but only if those
-          expenses have been approved in advance and in writing.
+          {{ agreement.client.name }} will reimburse {{ consultant }} for expenses
+          incurred in providing the Services, but only if those expenses have been
+          approved in advance and in writing.
         </li>
         <li>
           <strong>Payment.</strong> Unless otherwise specified in
           <em>Schedule A</em>
-          , {{ consultant }} will invoice {{ agreement.client.name }} upon
-          completion of Services and for expenses.
-          {{ agreement.client.name }} will pay the invoice within 7 days of
-          receipt (the “Due Date”) if {{ consultant }} performed the Services as
-          required. {{ agreement.client.name }} agrees to pay
-          {{ consultant }} ${{ agreement.hourly }} per hour for additional
-          services not outlined in
+          , {{ consultant }} will invoice {{ agreement.client.name }} upon completion of
+          Services and for expenses. {{ agreement.client.name }} will pay the invoice
+          within 7 days of receipt (the “Due Date”) if {{ consultant }} performed the
+          Services as required. {{ agreement.client.name }} agrees to pay
+          {{ consultant }} ${{ agreement.hourly }} per hour for additional services not
+          outlined in
           <em>Schedule A</em>
-          —additional tasks will not be undertaken without the explicit written
-          approval of {{ agreement.client.name }}.
+          —additional tasks will not be undertaken without the explicit written approval
+          of {{ agreement.client.name }}.
         </li>
         <li>
           <strong>Interest.</strong>
-          {{ agreement.client.name }} will pay {{ consultant }} simple interest
-          on all overdue payments at a rate of 5% per month. Interest is
-          calculated from the date payment was due until the date payment,
-          including accumulated interest, is made in full.
+          {{ agreement.client.name }} will pay {{ consultant }} simple interest on all
+          overdue payments at a rate of 5% per month. Interest is calculated from the date
+          payment was due until the date payment, including accumulated interest, is made
+          in full.
         </li>
         <li>
-          <strong>Term.</strong> This Agreement will be in effect until the
-          Services are completed, unless ended earlier as specified in
-          <em>section 6</em>.
+          <strong>Term.</strong> This Agreement will be in effect until the Services are
+          completed, unless ended earlier as specified in <em>section 6</em>.
         </li>
         <li>
           <strong>Termination by Consultant.</strong>
@@ -87,25 +84,23 @@
               {{ consultant }} within 7 days after the Due Date, or
             </li>
             <li>
-              {{ agreement.client.name }} breaches any other fundamental
-              obligation in this Agreement and does not remedy the breach within
-              5 days after receiving written notice of the breach from
-              {{ consultant }}.
+              {{ agreement.client.name }} breaches any other fundamental obligation in
+              this Agreement and does not remedy the breach within 5 days after receiving
+              written notice of the breach from {{ consultant }}.
             </li>
             <li>
-              {{ agreement.client.name }} does not respond to the correspondence
-              from {{ consultant }} within 5 days.
+              {{ agreement.client.name }} does not respond to the correspondence from
+              {{ consultant }} within 5 days.
             </li>
           </ol>
         </li>
         <li>
-          <strong>Effect of Termination.</strong> When this Agreement ends for
-          any reason:
+          <strong>Effect of Termination.</strong> When this Agreement ends for any reason:
           <ol>
             <li>
-              {{ agreement.client.name }} will immediately pay
-              {{ consultant }} all outstanding expenses and Fees for Services
-              performed as required, up to the date of termination;
+              {{ agreement.client.name }} will immediately pay {{ consultant }} all
+              outstanding expenses and Fees for Services performed as required, up to the
+              date of termination;
             </li>
             <li>
               sections
@@ -117,116 +112,109 @@
           <strong>Confidentiality.</strong>
           <ol>
             <li>
-              “Confidential Information” means all information (whether in oral,
-              written or electronic form) relating to the business, technology,
-              personnel, marketing, customers, finances, products or services of
-              {{ agreement.client.name }}, and includes confidential information
-              received by {{ agreement.client.name }} from third parties, but
-              excludes any information that:
+              “Confidential Information” means all information (whether in oral, written
+              or electronic form) relating to the business, technology, personnel,
+              marketing, customers, finances, products or services of
+              {{ agreement.client.name }}, and includes confidential information received
+              by {{ agreement.client.name }} from third parties, but excludes any
+              information that:
               <ol>
                 <li>
-                  was lawfully in the possession of {{ consultant }} before
-                  receiving it from {{ agreement.client.name }};
+                  was lawfully in the possession of {{ consultant }} before receiving it
+                  from {{ agreement.client.name }};
                 </li>
                 <li>
-                  is provided in good faith to {{ consultant }} by a third party
-                  without breaching any rights of {{ agreement.client.name }} or
-                  any other party;
+                  is provided in good faith to {{ consultant }} by a third party without
+                  breaching any rights of {{ agreement.client.name }} or any other party;
                 </li>
                 <li>
-                  is or becomes generally available to, or accessible by, the
-                  public through no fault of {{ consultant }}; or
+                  is or becomes generally available to, or accessible by, the public
+                  through no fault of {{ consultant }}; or
                 </li>
                 <li>
-                  is independently developed by {{ consultant }} without use of
-                  the disclosed Confidential Information.
+                  is independently developed by {{ consultant }} without use of the
+                  disclosed Confidential Information.
                 </li>
               </ol>
             </li>
             <li>
-              {{ consultant }} may use {{ agreement.client.name }}’s
-              Confidential Information only for the purpose of performing the
-              Services and only to the extent required for that purpose.
-              {{ consultant }} must not use {{ agreement.client.name }}’s
-              Confidential Information for any other purpose without the
-              explicit written approval of {{ agreement.client.name }}.
+              {{ consultant }} may use {{ agreement.client.name }}’s Confidential
+              Information only for the purpose of performing the Services and only to the
+              extent required for that purpose. {{ consultant }} must not use
+              {{ agreement.client.name }}’s Confidential Information for any other purpose
+              without the explicit written approval of {{ agreement.client.name }}.
             </li>
             <li>
-              {{ consultant }} will keep {{ agreement.client.name }}’s
-              Confidential Information confidential, and will also cause its
-              directors, officers, employees and agents to keep
-              {{ agreement.client.name }}’s Confidential Information
-              confidential. {{ consultant }} will take all necessary steps
-              (including those steps that {{ consultant }} takes to protect its
-              own information that it regards as confidential) to maintain the
-              confidentiality of {{ agreement.client.name }}’s Confidential
-              Information.
+              {{ consultant }} will keep {{ agreement.client.name }}’s Confidential
+              Information confidential, and will also cause its directors, officers,
+              employees and agents to keep {{ agreement.client.name }}’s Confidential
+              Information confidential. {{ consultant }} will take all necessary steps
+              (including those steps that {{ consultant }} takes to protect its own
+              information that it regards as confidential) to maintain the confidentiality
+              of {{ agreement.client.name }}’s Confidential Information.
             </li>
             <li>
-              {{ consultant }} will not disclose the Confidential Information to
-              any third party, nor the fact that he has obtained the
-              Confidential Information, without the explicit written approval of
-              {{ agreement.client.name }}.
+              {{ consultant }} will not disclose the Confidential Information to any third
+              party, nor the fact that he has obtained the Confidential Information,
+              without the explicit written approval of {{ agreement.client.name }}.
             </li>
             <li>
-              If {{ consultant }} receives notice indicating that it may or will
-              be legally required to disclose any of
-              {{ agreement.client.name }}’s Confidential Information, it will
-              notify {{ agreement.client.name }} promptly in writing so that
-              {{ agreement.client.name }} may seek a protective order or other
-              appropriate remedy, or waive compliance with this Agreement. If a
-              protective order or other remedy is not obtained for whatever
-              reason, or if {{ agreement.client.name }} waives compliance with
-              this Agreement, ￼{{ consultant }} will disclose no more than that
-              portion of the Confidential Information required to be disclosed.
+              If {{ consultant }} receives notice indicating that it may or will be
+              legally required to disclose any of {{ agreement.client.name }}’s
+              Confidential Information, it will notify
+              {{ agreement.client.name }} promptly in writing so that
+              {{ agreement.client.name }} may seek a protective order or other appropriate
+              remedy, or waive compliance with this Agreement. If a protective order or
+              other remedy is not obtained for whatever reason, or if
+              {{ agreement.client.name }} waives compliance with this Agreement, ￼{{
+                consultant
+              }}
+              will disclose no more than that portion of the Confidential Information
+              required to be disclosed.
             </li>
           </ol>
         </li>
         <li>
           <strong>Intellectual Property.</strong>
-          {{ consultant }} agrees that {{ agreement.client.name }} will have
-          exclusive ownership in all work product (the “Work Product”) that
-          {{ consultant }} produces under this Agreement, after all invoices
-          have been paid in-full, including {{ consultant }}’s copyright
-          interest in the Work Product, except for the materials (the
-          “Consultant’s Materials”) specified in
+          {{ consultant }} agrees that {{ agreement.client.name }} will have exclusive
+          ownership in all work product (the “Work Product”) that
+          {{ consultant }} produces under this Agreement, after all invoices have been
+          paid in-full, including {{ consultant }}’s copyright interest in the Work
+          Product, except for the materials (the “Consultant’s Materials”) specified in
           <em>Schedule A.</em>
-          All rights to work product will remain with {{ consultant }} until all
-          invoices are paid in full. {{ consultant }} retains the right to
-          display images of the Work Product and its branding on their
-          portfolio. All Work Product must be original work by
-          {{ consultant }} and must not infringe the rights (including
-          intellectual property rights) of any third party.
-          {{ consultant }} hereby grants {{ agreement.client.name }} a
-          perpetual, non-exclusive license to make copies and to modify
-          {{ consultant }}’s Materials, without any additional payments, to the
-          extent that {{ consultant }}’s Materials are incorporated in the Work
+          All rights to work product will remain with {{ consultant }} until all invoices
+          are paid in full. {{ consultant }} retains the right to display images of the
+          Work Product and its branding on their portfolio. All Work Product must be
+          original work by {{ consultant }} and must not infringe the rights (including
+          intellectual property rights) of any third party. {{ consultant }} hereby grants
+          {{ agreement.client.name }} a perpetual, non-exclusive license to make copies
+          and to modify {{ consultant }}’s Materials, without any additional payments, to
+          the extent that {{ consultant }}’s Materials are incorporated in the Work
           Product or are reasonably necessary to use the Work Product.
         </li>
         <li>
           <strong>Assignment and Moral Rights.</strong>
-          {{ consultant }} hereby assigns to {{ agreement.client.name }} all
-          rights, title and interest {{ consultant }} may now or in the future
-          have in and to the Work Product. {{ consultant }} waives
-          {{ consultant }}’s moral rights to any and all copyrights subsisting
-          in the Work Product. If required by {{ agreement.client.name }},
-          {{ consultant }} also agrees to sign, and to cause {{ consultant }} to
-          sign, any applications or other documents
-          {{ agreement.client.name }} may reasonably request: [a] to obtain or
-          maintain patent, copyright, industrial design, trade-mark or other
-          similar protection for the Work Product, [b] to transfer ownership of
-          the Work Product to {{ agreement.client.name }}, and [c] to assist
-          {{ agreement.client.name }} in any proceeding necessary to protect and
-          preserve the Work Product. {{ agreement.client.name }} will pay for
-          all expenses associated with preparing and filing such documents.
+          {{ consultant }} hereby assigns to {{ agreement.client.name }} all rights, title
+          and interest {{ consultant }} may now or in the future have in and to the Work
+          Product. {{ consultant }} waives {{ consultant }}’s moral rights to any and all
+          copyrights subsisting in the Work Product. If required by
+          {{ agreement.client.name }}, {{ consultant }} also agrees to sign, and to cause
+          {{ consultant }} to sign, any applications or other documents
+          {{ agreement.client.name }} may reasonably request: [a] to obtain or maintain
+          patent, copyright, industrial design, trade-mark or other similar protection for
+          the Work Product, [b] to transfer ownership of the Work Product to
+          {{ agreement.client.name }}, and [c] to assist {{ agreement.client.name }} in
+          any proceeding necessary to protect and preserve the Work Product.
+          {{ agreement.client.name }} will pay for all expenses associated with preparing
+          and filing such documents.
         </li>
         <li>
           <strong>Consultant’s Obligations.</strong>
           <ol>
             <li>
-              {{ consultant }} will perform the Services in a competent and
-              professional manner. {{ consultant }} represents that he has the
-              skills and qualifications necessary to perform the Services.
+              {{ consultant }} will perform the Services in a competent and professional
+              manner. {{ consultant }} represents that he has the skills and
+              qualifications necessary to perform the Services.
             </li>
             <li>{{ consultant }} will comply with all applicable laws.</li>
           </ol>
@@ -234,15 +222,14 @@
         <li>
           <strong>Entire Agreement.</strong>
           This Agreement contains the whole agreement between
-          {{ agreement.client.name }} and {{ consultant }}, and there are no
-          warranties, representations, terms, conditions or collateral
-          agreements—express, implied or statutory—other than as expressly set
-          out in this Agreement.
+          {{ agreement.client.name }} and {{ consultant }}, and there are no warranties,
+          representations, terms, conditions or collateral agreements—express, implied or
+          statutory—other than as expressly set out in this Agreement.
         </li>
       </ol>
       <p>
-        In witness whereof, the Parties hereto have executed this Consulting
-        Agreement as of the date first written above.
+        In witness whereof, the Parties hereto have executed this Consulting Agreement as
+        of the date first written above.
       </p>
       <section id="signatures" class="oomph__v--m type__align--center">
         <h2>Signatures</h2>
@@ -266,9 +253,7 @@
         {{ consultant }}
       </p>
       <h4>Client’s Signature</h4>
-      <p
-        class="border__top color__border--base--light margin__top--xl padding__top--m"
-      >
+      <p class="border__top color__border--base--light margin__top--xl padding__top--m">
         {{ agreement.client.name }}
       </p>
       <section id="scheduleA" class="oomph__v--m type__align--center">
@@ -280,13 +265,11 @@
       <p>
         <em
           >Please note there is a 25% deposit of
-          <strong>${{ total(agreement.total * 0.25) }}</strong> required to
-          begin this engagement.</em
+          <strong>${{ total(agreement.total * 0.25) }}</strong> required to begin this
+          engagement.</em
         >
       </p>
-      <footer
-        class="border__top color__border--base--light oomph__v--l padding__top--l"
-      >
+      <footer class="border__top color__border--base--light oomph__v--l padding__top--l">
         <p>
           <strong>Send deposits to the following address:</strong>
         </p>
@@ -299,8 +282,7 @@
           </p>
         </blockquote>
         <p>
-          Alternatively, deposits can be made directly via debit card by
-          visiting:
+          Alternatively, deposits can be made directly via debit card by visiting:
           <a
             href="https://cash.me/$jaredpdesigns"
             title="Pay Jared Pendergraft"
@@ -334,14 +316,12 @@ export default {
         {
           hid: "description",
           name: "description",
-          content:
-            "Client agreement form for " + this.agreement.title + "project",
+          content: "Client agreement form for " + this.agreement.title + "project",
         },
         {
           hid: "og:description",
           property: "og:description",
-          content:
-            "Client agreement form for " + this.agreement.title + "project",
+          content: "Client agreement form for " + this.agreement.title + "project",
         },
         {
           hid: "og:title",
@@ -356,20 +336,14 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          content:
-            this.$store.state.domain +
-            "clients/agreement/" +
-            this.agreement.slug,
+          content: this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
         },
       ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href:
-            this.$store.state.domain +
-            "clients/agreement/" +
-            this.agreement.slug,
+          href: this.$store.state.domain + "clients/agreement/" + this.agreement.slug,
         },
       ],
     };
@@ -388,6 +362,11 @@ export default {
     @include breakpoint(xsl) {
       padding-left: var(--size__l);
       padding-left: var(--size__l);
+    }
+    @media print {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 6in;
     }
     > p,
     h3,
@@ -448,10 +427,6 @@ export default {
   }
   @media print {
     padding-top: var(--size__l) !important;
-    * {
-      border-color: rgba(black, 0.25);
-      color: black;
-    }
     &__wrap {
       > * + * {
         margin-top: var(--size__m) !important;
