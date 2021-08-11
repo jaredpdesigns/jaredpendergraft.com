@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui">
+    <meta name="author" content="Jared Pendergraft">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ img }}">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:site_name" content="Jared Pendergraft">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaredpendergraft.com{{ slug }}">
+    <meta name="twitter:card" content="photo">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" alternate>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
+    <link rel="preconnect" href="https://use.typekit.net"/>
+    <link
+      rel="preload"
+      href="https://use.typekit.net/vkr4fst.css"
+      as="style"
+/>
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/vkr4fst.css"
+/>
+    <script async defer src="{{ '/js/scripts.js' | url }}"/>
+  </head>
+  <body>
+    <header>
+      <section>
+        <a href="/">
+          <strong>Jared Pendergraft</strong>
+        </a>
+        <nav>
+          <a href="/" {% if page.url === '/' %} aria-current="page"{% endif %}>About</a>
+          <a href="/projects/" {% if page.url.includes('projects') %} aria-current="page"{% endif %}>Projects</a>
+          <a href="/hire/" {% if page.url.includes('hire') or page.url.includes('clients') %} aria-current="page"{% endif %}>Hire Me</a>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <article class="{{ class }}">
+        {{ content | safe }}
+      </article>
+    </main>
+    <footer>
+      <section>
+        <p>© {% Year %} Jared Pendergraft</p>
+        <nav>
+          <a href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?" title="Send me an email">
+            {% Icon 'email' %}
+          </a>
+          <a href="https://twitter.com/jaredpdesigns" title="Follow me on Twitter" target="_blank" rel="noopener">
+            {% Icon 'twitter' %}
+          </a>
+          <a href="https://dribbble.com/jaredpdesigns" title="Follow me on Dribbble" target="_blank" rel="noopener">
+            {% Icon 'dribbble' %}
+          </a>
+          <button onclick="setTheme()" title="Toggle website theme">
+            {% Icon 'contrast' %}
+          </button>
+        </nav>
+      </section>
+    </footer>
+  </body>
+</html>

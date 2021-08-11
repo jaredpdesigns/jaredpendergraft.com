@@ -1,21 +1,15 @@
 {
   "name": "jpd",
-  "version": "3.0.0",
-  "private": true,
+  "version": "4.0.0",
+  "description": "The personal website of Jared Pendergraft",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "build": "eleventy",
+    "serve": "eleventy --serve"
   },
+  "author": "Jared Pendergraft <jaredpdesigns@gmail.com>",
+  "license": "ISC",
   "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.10",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "fs": "^0.0.1-security",
-    "node-sass": "^4.14.1",
-    "nuxt": "^2.14.0",
-    "sass-loader": "^10.0.2"
-  },
-  "devDependencies": {}
+    "@11ty/eleventy": "^0.12.1",
+    "sass": "^1.29.0"
+  }
 }
