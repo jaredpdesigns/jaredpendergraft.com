@@ -1,3 +1,4 @@
+const htmlmin = require("html-minifier");
 const sass = require("sass");
 const fs = require("fs-extra");
 
@@ -81,6 +82,20 @@ module.exports = (eleventyConfig) => {
         });
       },
     },
+  });
+
+  // HTML minification
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   return {

@@ -1,2 +1,3 @@
+Sitemap: https://jaredpendergraft.com/sitemap.xml
 User-agent: *
 Disallow: /clients/
