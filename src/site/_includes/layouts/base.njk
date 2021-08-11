@@ -33,16 +33,16 @@
   </head>
   <body>
     <header>
-      <section>
+      <nav>
         <a href="/">
           <strong>Jared Pendergraft</strong>
         </a>
-        <nav>
+        <section>
           <a href="/" {% if page.url === '/' %} aria-current="page"{% endif %}>About</a>
           <a href="/projects/" {% if page.url.includes('projects') %} aria-current="page"{% endif %}>Projects</a>
           <a href="/hire/" {% if page.url.includes('hire') or page.url.includes('clients') %} aria-current="page"{% endif %}>Hire Me</a>
-        </nav>
-      </section>
+        </section>
+      </nav>
     </header>
     <main>
       <article class="{{ class }}">

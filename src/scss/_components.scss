@@ -121,12 +121,13 @@
     > figure {
       aspect-ratio: 16 / 9;
       border-top: var(--size__xxs) solid var(--color__highlight--light);
-      background-color: var(--color__contrast--extra);
+      background-color: var(--color__contrast);
       @media (min-width: 29rem) {
         border-left: var(--size__xxs) solid var(--color__highlight--light);
         border-top: none;
       }
       [data-theme="dark"] & {
+        background-color: var(--color__contrast--extra);
         picture:first-child {
           display: none;
         }

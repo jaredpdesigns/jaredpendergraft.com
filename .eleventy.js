@@ -1,6 +1,7 @@
 const htmlmin = require("html-minifier");
 const sass = require("sass");
 const fs = require("fs-extra");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Markdown Support
 const markdown = require("markdown-it")({
@@ -22,6 +23,7 @@ const ProjectHeader = require(`./${componentsDir}/project_header.js`);
 const Recommendation = require(`./${componentsDir}/recommendation.js`);
 
 module.exports = (eleventyConfig) => {
+  // Shortcodes
   eleventyConfig.addShortcode("Year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addShortcode("Markdown", (content) =>
     markdown.render(content)
@@ -35,29 +37,32 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("ProjectDetailCaption", ProjectDetailCaption);
   eleventyConfig.addShortcode("ProjectHeader", ProjectHeader);
   eleventyConfig.addShortcode("Recommendation", Recommendation);
-
   eleventyConfig.addPairedShortcode("Gallery", Gallery);
   eleventyConfig.addPairedShortcode("Grid", Grid);
 
+  // Plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Build stuff
   eleventyConfig.addPassthroughCopy({
     "src/static": "/",
   });
   eleventyConfig.addWatchTarget("src/scss/");
   eleventyConfig.addWatchTarget("src/site/_includes/components/");
 
+  // Filters
   eleventyConfig.addFilter("featured", (arr) => {
     return arr.filter((item) => {
       return item.featured;
     });
   });
-
   eleventyConfig.addFilter("filteredProject", (arr, name) => {
     return arr.filter((item) => {
       return item.name === name;
     })[0];
   });
 
-  // Compile Sass before a build
+  // Compile SCSS before a build
   eleventyConfig.on("beforeBuild", () => {
     let result = sass.renderSync({
       file: "src/scss/style.scss",
@@ -94,7 +99,6 @@ module.exports = (eleventyConfig) => {
       });
       return minified;
     }
-
     return content;
   });
 

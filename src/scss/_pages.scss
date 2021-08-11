@@ -38,11 +38,14 @@
     }
   }
   figcaption {
-    background-color: var(--color__contrast--extra);
+    background-color: var(--color__contrast);
     border-top: var(--size__xxs) solid var(--color__highlight--light);
     border-bottom-left-radius: var(--size__m);
     border-bottom-right-radius: var(--size__m);
     position: relative;
+    [data-theme="dark"] & {
+      background-color: var(--color__contrast--extra);
+    }
     p {
       color: var(--color__base);
     }
@@ -51,7 +54,10 @@
 
 .profile .gallery__item {
   figcaption {
-    padding: var(--size__m) var(--size__l);
+    padding-bottom: var(--size__m);
+    padding-left: var(--size__l);
+    padding-right: var(--size__l);
+    padding-top: var(--size__s);
     > * + * {
       margin-top: var(--size__m);
     }
@@ -83,8 +89,9 @@
 
 .detail {
   .grid__item {
-    background-color: var(--color__contrast--extra);
+    background-color: var(--color__contrast);
     [data-theme="dark"] & {
+      background-color: var(--color__contrast--extra);
       picture:first-child {
         display: none;
       }
@@ -169,12 +176,15 @@
 .clients {
   .grid__item {
     > section {
-      background-color: var(--color__contrast--extra);
+      background-color: var(--color__contrast);
       border-top-left-radius: var(--size__m);
       border-top-right-radius: var(--size__m);
       overflow: hidden;
       padding: var(--size__l);
       text-align: center;
+      [data-theme="dark"] & {
+        background-color: var(--color__contrast--extra);
+      }
       > * + * {
         margin-top: var(--size__m);
       }
@@ -232,5 +242,17 @@
     font-size: var(--type__size--xl);
     line-height: clamp(2rem, var(--type__size--target), 2.5rem);
     margin-top: var(--size__m);
+  }
+}
+
+.type {
+  > * + * {
+    margin-top: var(--size__l);
+  }
+  > * + hr {
+    margin-top: var(--size__xxxl);
+  }
+  h1, h2 {
+    color: var(--color__base);
   }
 }
