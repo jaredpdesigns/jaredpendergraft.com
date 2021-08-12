@@ -1,5 +1,5 @@
 :root {
-  --color__base--hue: 218, 12%, 24%;
+  --color__base--hue: 218, 24%, 24%;
   --color__base: hsl(var(--color__base--hue));
   --color__base--ish: hsla(var(--color__base--hue), 0.75);
   --color__base--mid: hsla(var(--color__base--hue), 0.625);
@@ -7,7 +7,7 @@
   --color__base--light: hsla(var(--color__base--hue), 0.125);
   --color__base--ghost: hsla(var(--color__base--hue), 0.0625);
   --color__contrast: hsl(218, 100%, 100%);
-  --color__contrast--extra: hsl(218, 12%, 8%);
+  --color__contrast--extra: hsl(218, 48%, 12%);
   --color__highlight--hue: 158, 32%, 38%;
   --color__highlight: hsl(var(--color__highlight--hue));
   --color__highlight--mid: hsla(var(--color__highlight--hue), 0.5);
@@ -36,7 +36,8 @@
   --type__size--target: 2vw;
   &[data-theme="dark"] {
     --color__base--hue: 218, 100%, 100%;
-    --color__contrast: hsl(218, 12%, 12%);
+    --color__contrast: hsl(218, 16%, 12%);
+    --color__contrast--extra: hsl(218, 32%, 8%);
   }
 }
 
@@ -312,61 +313,66 @@ code {
     display: block;
     max-width: 100%;
     overflow-x: scroll;
-    padding: 0;
+    padding: var(--size__m);
     white-space: pre;
   }
 }
 
 pre {
+  --color__green: hsl(158, 64%, 50%);
+  --color__purple: hsl(260, 64%, 75%);
+  --color__pink: hsl(338, 90%, 64%);
+  --color__yellow: hsl(54, 90%, 75%);
+  --color__blue: hsl(190, 64%, 75%);
+  --color__orange: hsl(32, 90%, 64%);
   background-color: var(--color__contrast--extra);
+  border: var(--size__xxs) solid var(--color__base--light);
   border-radius: var(--size__s);
   color: white;
-  padding: var(--size__m);
-  // Syntax highlighting
   .token.comment,
   .token.prolog,
   .token.doctype,
   .token.cdata,
-  .token.punctuation,
-  .token.keyword,
+  .token.namespace {
+    opacity: 0.75;
+  }
   .token.property,
   .token.tag,
   .token.constant,
   .token.symbol,
-  .token.deleted,
-  .token.keyword {
-    opacity: 0.75;
+  .token.deleted {
+    color: var(--color__pink);
+  }
+  .token.boolean,
+  .token.number {
+    color: var(--color__purple);
   }
   .token.selector,
   .token.attr-name,
   .token.string,
   .token.char,
   .token.builtin,
-  .token.inserted,
-  .token.boolean,
-  .token.number,
+  .token.inserted {
+    color: var(--color__green);
+  }
   .token.atrule,
   .token.attr-value,
   .token.function,
-  .token.class-name,
-  .token.regex,
-  .token.important,
-  .token.variable {
-    color: var(--color__highlight);
+  .token.class-name {
+    color: var(--color__yellow);
   }
-  .token.operator,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .style .token.string {
-    color: inherit;
+  .token.keyword {
+    color: var(--color__blue);
+  }
+  .token.regex,
+  .token.important {
+    color: var(--color__orange);
   }
   .token.important,
   .token.bold {
     font-weight: bold;
   }
-  .token.italic,
-  .token.comment {
+  .token.italic {
     font-style: italic;
   }
 }

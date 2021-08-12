@@ -63,6 +63,7 @@ Let us investigate foxes and their habits to dive a little deeper, shall we? Fox
 ***
 
 `pre`
+
 ``` scss
 // Variables
 $colors: (
@@ -78,7 +79,7 @@ $colors: (
 // Class Compilers
 @each $colorName, $colorValue in $colors {
   .color__bg--#{$colorName} {
-    background-color: var(--color__#{$colorName});
+    background-color: var(--color__#{$colorName}) !important;
   }
   .color__border--#{$colorName} {
     border-color: var(--color__#{$colorName});
@@ -87,6 +88,28 @@ $colors: (
     color: var(--color__#{$colorName});
   }
 }
+```
+
+``` javascript
+const arr = [
+  { title: "Cool Video", description: "Really really cool video" },
+  {
+    title: "Regular Video",
+    description:
+      "Really really regular, standard video without anything interesting"
+  }
+];
+
+const searchTerm = "cool";
+
+function findInObject() {
+  return arr.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+}
+console.log(findInObject());
+
+// [{title: "Cool Video", description: "Really really cool video"}]
 ```
 
 ***
