@@ -105,10 +105,10 @@
     background-color: var(--color__contrast);
     [data-theme="dark"] & {
       background-color: var(--color__contrast--extra);
-      picture:first-child {
+      img:first-child {
         display: none;
       }
-      picture:nth-of-type(2) {
+      img:nth-of-type(2) {
         display: block !important;
       }
     }
