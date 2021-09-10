@@ -1,5 +1,5 @@
 .profile {
-  > figure {
+  figure {
     clip-path: url(#blobby);
     @media (min-width: 29rem) {
       inline-size: 20rem;
@@ -101,6 +101,7 @@
 }
 
 .detail {
+  padding-top: var(--size__m);
   .grid__item {
     background-color: var(--color__contrast);
     [data-theme="dark"] & {
@@ -130,28 +131,34 @@
 }
 
 .cv {
-  > h3 + * {
+  article > h3 + * {
     color: var(--color__base--ish);
     margin-top: var(--size__s);
   }
   #recommendations {
     grid-column: 1/-1;
+    .grid {
+      align-items: start;
+    }
     .grid__item {
       .grid__item--wrap {
         padding: var(--size__l);
-        p:first-child:before,
-        p:last-child:after {
-          color: var(--color__highlight--semi);
-          font-size: var(--type__size--xxl);
-          font-weight: 600;
-          line-height: 1rem;
-        }
-        p:first-child:before {
-          content: "”";
-          margin-left: calc(var(--size__s) * -1);
-        }
-        p:last-child:after {
-          content: "”";
+        p {
+          font-size: var(--type__size--s);
+          &:first-child:before,
+          &:last-child:after {
+            color: var(--color__highlight--semi);
+            font-size: var(--type__size--xl);
+            font-weight: 600;
+            line-height: 0.75rem;
+          }
+          &:first-child:before {
+            content: "”";
+            margin-left: calc(var(--size__s) * -1);
+          }
+          &:last-child:after {
+            content: "”";
+          }
         }
         > * + * {
           margin-top: var(--size__m);
@@ -160,8 +167,9 @@
       footer {
         border-top: var(--size__xxs) solid var(--color__highlight--light);
         padding: var(--size__m) var(--size__l);
-        h4 {
+        p {
           color: var(--color__base--ish);
+          font-size: var(--type__size--s);
           &:before {
             content: "— ";
             color: var(--color__base--semi);
@@ -259,10 +267,10 @@
 }
 
 .type {
-  > * + * {
+  article > * + * {
     margin-top: var(--size__l);
   }
-  > * + hr {
+  article > * + hr {
     margin-top: var(--size__xxxl);
   }
   h1,

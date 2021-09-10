@@ -5,7 +5,7 @@ module.exports = function (item) {
     ${item.comment}
   </section>
   <footer>
-    <h4>${item.author}</h4>
+    <p><strong>${item.author}</strong></p>
   </footer>
 </blockquote>
 `;

@@ -60,7 +60,6 @@
       .grid__item:nth-of-type(7),
       .grid__item:nth-of-type(11) {
         aspect-ratio: auto;
-        height: 100%;
         grid-row: span 2;
       }
     }
@@ -155,9 +154,13 @@
   border: var(--size__xxs) solid var(--color__highlight--light);
   border-radius: var(--size__s);
   margin-top: 0;
-  padding: var(--size__m);
+  padding: var(--size__s) var(--size__m);
   text-align: center;
   p {
     color: var(--color__base--ish);
+    display: inline-block;
+    font-size: var(--type__size--s);
+    margin: 0 auto;
+    text-align: left;
   }
 }

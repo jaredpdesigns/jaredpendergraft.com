@@ -63,7 +63,7 @@ Lightning fast searching on the primary builds page allows users to narrow their
 
 ---
 
-## Built to grow
+## Built to Grow
 
 One of the primary concerns about a new site was the ability to easily make changes without having tinker with any code. I fell in love with [Contentful](https://www.contentful.com/) as a headless-CMS. With the flexibility of defining your own content-models I was able to easily structure each type of content to be just the fields we care about in an easy-to-use flow. From shop hours in the footer to build specs for a bike, making a change to the site is a snap and with a simple page refresh all the content is up-to-date.
 
