@@ -1,5 +1,5 @@
 .profile {
-  figure {
+  article > figure {
     clip-path: url(#blobby);
     @media (min-width: 29rem) {
       inline-size: 20rem;
