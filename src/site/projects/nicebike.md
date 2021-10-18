@@ -4,7 +4,7 @@ description: Fresh website to showcase custom-built bicycles with an emphasis on
 img: https://images.ctfassets.net/cuehicrlqnvu/6qtQSpxRwd2kOkn0DT3YNT/103258554d089d5ab2e21e7e2b06be0a/nicebike-featured-light.jpg?h=630&w=1200&fit=fill&f=face
 slug: /projects/nicebike/
 layout: layouts/base.njk
-class: detail
+class: detail padding__top--m
 imgBlock1:
   [
     {

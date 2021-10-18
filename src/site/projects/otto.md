@@ -4,7 +4,7 @@ description: Video consultation application for connecting providers to patients
 img: https://images.ctfassets.net/cuehicrlqnvu/4J4i7bCxGu0rKWiWiGRb4o/f90b537a593c03a64a8f70592449a3a8/otto-featured-light.jpg?h=630&w=1200&fit=fill&f=face
 slug: /projects/Otto/
 layout: layouts/base.njk
-class: detail
+class: detail padding__top--m
 imgBlock1:
   [
     {

@@ -4,13 +4,14 @@
   "description": "The personal website of Jared Pendergraft",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve"
+    "dev": "eleventy --serve"
   },
   "author": "Jared Pendergraft <jaredpdesigns@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
+    "@jaredpdesigns/pasta": "^1.0.2",
     "html-minifier": "^4.0.0",
     "sass": "^1.29.0"
   }

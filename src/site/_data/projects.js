@@ -7,7 +7,6 @@ module.exports = [
     imgDark:
       "https://images.ctfassets.net/cuehicrlqnvu/6hkkEu62iXrFr9Emfq9IWI/74a8117cad0d57490758e13ced3390bc/hypothesis-feature-dark.jpg",
     slug: "hypothesis",
-    color: "#c2002d",
     external: "https://web.hypothes.is/",
     featured: true,
   },
@@ -20,7 +19,6 @@ module.exports = [
       "https://images.ctfassets.net/cuehicrlqnvu/7qQznfp1pwwV4qTp9PRNju/dcf560075bccb6617705987af3c44365/nicebike-featured-dark.jpg",
     slug: "nicebike",
     external: "https://ridenicebike.com",
-    color: "#47D230",
     featured: true,
   },
   {
@@ -31,8 +29,16 @@ module.exports = [
     imgDark:
       "https://images.ctfassets.net/cuehicrlqnvu/4x5uZDqfu4ItzyQggAxsSW/8719e38675f639ed4e9478402116a236/otto-featured-dark.jpg",
     slug: "otto",
-    color: "#FFA07A",
     featured: true,
+  },
+  {
+    name: "Pasta",
+    description:
+      "Pasta provides a great starting place for web projects. It combines light styling for common web elements, yummy.",
+    img: "https://images.ctfassets.net/cuehicrlqnvu/6ZPrjmp0mBBry5LQbbRxi7/e27ade0f0b0c57fed7d49621977939e4/pasta-feature-light.png",
+    imgDark:
+      "https://images.ctfassets.net/cuehicrlqnvu/3LeTafo0J5wEWNRjB8iBkX/98c7d9b13b5934beb98781b902112ac3/pasta-feature-dark.png",
+    external: "https://pasta.jaredpendergraft.com/",
   },
   {
     name: "Avery Mirabelle",
@@ -41,7 +47,6 @@ module.exports = [
     imgDark:
       "https://images.ctfassets.net/cuehicrlqnvu/7uDC1uQGpq8bkvP9pnFLee/123669f8180aa68abecb5e9aed85e157/avery-featured-dark.png",
     external: "https://averymirabelle.com",
-    color: "#FE95AC",
   },
   {
     name: "Ezra Oliver",
@@ -50,7 +55,6 @@ module.exports = [
     imgDark:
       "https://images.ctfassets.net/cuehicrlqnvu/4nNRuA2R2Nh2LO4w26ywh5/fbe710da0c896491526682e6f321a6c3/ezra-featured-dark.png",
     external: "https://ezrapendergraft.com",
-    color: "#008BD6",
   },
   {
     name: "These Kids Read",
@@ -59,6 +63,5 @@ module.exports = [
     imgDark:
       "https://images.ctfassets.net/cuehicrlqnvu/72EGY2qairooMZu8OaUOSN/2d8713200d294ef57afc62a7608c3214/tkr-feature-dark.png",
     external: "https://thesekidsread.jaredpendergraft.com",
-    color: "#00A396",
   },
 ];

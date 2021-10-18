@@ -4,7 +4,7 @@ description: Pattern library for the popular web-annotation tool that lets you a
 img: https://images.ctfassets.net/cuehicrlqnvu/qX6yRnD48X16Gf2qcFuKW/e69e79b7d131ed0b9d1e375d31ecffbc/hypothesis-feature-light.jpg?h=630&w=1200&fit=fill&f=face
 slug: /projects/hypothesis/
 layout: layouts/base.njk
-class: detail
+class: detail padding__top--m
 imgBlock1:
   [
     {

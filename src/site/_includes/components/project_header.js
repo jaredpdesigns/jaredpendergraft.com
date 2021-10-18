@@ -1,17 +1,24 @@
 module.exports = function (item) {
+  const Icon = require("./icon.js");
   return `
-<header class="project__header">
-<section class="project__header--inner">
-  <section>
-    <h1>${item.name}</h1>
-    <p>${item.description}</p>
+<header class="project__header margin__bottom--l padding__left--m padding__right--m width__xl">
+<section class="project__header--inner color__bg--highlight--ghost flow__grid flow__align--v-stretch flow__grid--columns-auto overflow__hidden radius__m">
+  <section class="flow__self--center oomph__v--l padding__all--m">
+    <h1 class="width__m">${item.name}</h1>
+    <p class="width__m">${item.description}</p>
     ${
       item.external
-        ? `<p><a href="${item.external}" title="Follow me on Dribbble" target="_blank" rel="noopener">View Project<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M15 0a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V3.414L1.707 15.707a1 1 0 1 1-1.414-1.414L12.586 2H8a1 1 0 1 1 0-2h7z"></path></svg></a></p>`
+        ? `<p class="width__m"><a class="flow__inline flow__align--v-center type__weight--semibold" href="${
+            item.external
+          }" title="View ${
+            item.name
+          } project details" target="_blank" rel="noopener">View Project${Icon(
+            "arrow-right"
+          )}</a></p>`
         : ""
-    }    
+    }
   </section>
-  <figure>
+  <figure class="border__top color__bg--contrast color__border--highlight--light">
     <picture>
       <source
         media="(min-width: 1em)"
@@ -26,6 +33,7 @@ module.exports = function (item) {
         srcset="${item.img}?h=800&w=1280  1024w"
         sizes="33.3vw" />
       <img
+        class="overflow__hidden radius__bl--m radius__br--m width__full"
         loading="lazy"
         src="${item.img}?h=200&w=320"
         srcset="${item.img}?h=400&w=640 2x"
@@ -48,6 +56,7 @@ module.exports = function (item) {
         srcset="${item.imgDark}?h=800&w=1280  1024w"
         sizes="33.3vw" />
       <img
+        class="overflow__hidden radius__bl--m radius__br--m width__full"
         loading="lazy"
         src="${item.imgDark}?h=200&w=320"
         srcset="${item.imgDark}?h=400&w=640 2x"

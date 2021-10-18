@@ -9,8 +9,6 @@ class: projects
 
 # Projects
 
-A selection of creative projects I’ve worked on.
-
 {% Grid %}
 {% for item in projects %}
   {% ProjectGrid item %}

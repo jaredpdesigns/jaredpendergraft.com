@@ -46,7 +46,7 @@ module.exports = function (item) {
   ];
   const filtered = images.filter((value) => value.name === item.img)[0];
   return `
-<section class="gallery__item">
+<section class="gallery__item border__all color__bg--highlight--ghost color__border--highlight--light oomph__v--m padding__all--l radius__m shadow">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="48"

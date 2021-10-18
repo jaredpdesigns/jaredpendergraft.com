@@ -1,5 +1,6 @@
 ---
 pagination:
+  addAllPagesToCollections: true
   data: clients
   alias: client
   size: 1
