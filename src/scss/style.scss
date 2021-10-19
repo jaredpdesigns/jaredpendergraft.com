@@ -4,15 +4,3 @@
 @import "pages";
 @import "components";
 @import "print";
-
-:root {
-  --type__family--primary: degular-text, sans-serif;
-  --type__family--secondary: obviously, sans-serif;
-  --type__family--secondary-narrow: obviously-narrow, sans-serif;
-  --type__family--tertiary: dico-mono, mono;
-  &[data-theme="dark"] {
-    --color__hue--base: 218, 100%, 100%;
-    --color__hue--contrast: 218, 16%, 12%;
-    --color__hue--contrast--extra: 218, 32%, 8%;
-  }
-}
