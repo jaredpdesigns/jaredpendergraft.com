@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaredpendergraft.com{{ slug }}">
     <meta name="twitter:card" content="photo">
-    <meta name="theme-color" content="hsla(158, 32%, 38%)">
+    <meta name="theme-color" content="hsl(158, 32%, 38%)">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" alternate>
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
@@ -33,7 +33,7 @@
     <script async defer src="{{ '/js/scripts.js' | url }}"></script>
   </head>
   <body class="color__bg--contrast flow__grid flow__align--v-start">
-    <header class="border__bottom color__border--highlight--light flow__grid padding__bottom--m padding__top--m">
+    <header class="border__bottom color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
       <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
         <a href="/" class="color__type--base--ish type__size--m-xl">
           <strong>Jared Pendergraft</strong>
@@ -45,12 +45,12 @@
         </section>
       </nav>
     </header>
-    <main class="{{ class }} flow__grid flow__align--v-start padding__bottom--xl padding__top--xl">
+    <main class="{{ class }} flow__grid flow__align--v-start padding__bottom--xl padding__top--xl width__full">
       <article class="flow__grid oomph__v--l">
         {{ content | safe }}
       </article>
     </main>
-    <footer class="border__top color__border--highlight--light flow__grid padding__bottom--m padding__top--m">
+    <footer class="border__top color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
       <section class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
         <p class="color__type--base--ish type__size--s-xl">© {% Year %} Jared Pendergraft</p>
         <nav class="color__type--base--ish oomph__h--s">
