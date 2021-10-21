@@ -25,6 +25,7 @@ body {
   main,
   article,
   > footer {
+    grid-column: 1/-1;
     grid-template-columns: inherit;
   }
 }
