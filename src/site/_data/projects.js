@@ -42,23 +42,23 @@ module.exports = [
   },
   {
     name: "Avery Mirabelle",
-    description: "Time capsule of videos from my daughter’s life so far.",
-    img: "https://images.ctfassets.net/cuehicrlqnvu/7p66jsgMIU5ZJy2Ar9RbWT/ae54991b8dfb5cc70eb1215bb7dee15e/avery-featured-light.png",
+    description: "Time capsule of videos and artwork from my daughter’s life, showcasing her creativity and attention to detail.",
+    img: "https://images.ctfassets.net/cuehicrlqnvu/7p66jsgMIU5ZJy2Ar9RbWT/9d1b3ca40d480324da6643b617407f75/averymirabelle.com_.png",
     imgDark:
-      "https://images.ctfassets.net/cuehicrlqnvu/7uDC1uQGpq8bkvP9pnFLee/123669f8180aa68abecb5e9aed85e157/avery-featured-dark.png",
+      "https://images.ctfassets.net/cuehicrlqnvu/7uDC1uQGpq8bkvP9pnFLee/61d5bf58119d41707be99a086aaa40b1/averymirabelle.com___1_.png",
     external: "https://averymirabelle.com",
   },
   {
     name: "Ezra Oliver",
-    description: "Time capsule of videos from my son’s life so far.",
-    img: "https://images.ctfassets.net/cuehicrlqnvu/3JwKEboLfF60Pg5nxb6cxc/0cd4ef99b1fc25561460d99ad999e706/ezra-featured-light.png",
+    description: "Time capsule of videos from my son’s life, showcasing his silliness and fearlessness.",
+    img: "https://images.ctfassets.net/cuehicrlqnvu/3JwKEboLfF60Pg5nxb6cxc/f435b8d28f824e38aed3f57d0c899d09/ezrapendergraft.com___1_.png",
     imgDark:
-      "https://images.ctfassets.net/cuehicrlqnvu/4nNRuA2R2Nh2LO4w26ywh5/fbe710da0c896491526682e6f321a6c3/ezra-featured-dark.png",
+      "https://images.ctfassets.net/cuehicrlqnvu/4nNRuA2R2Nh2LO4w26ywh5/a5466f934a913210a78b4fada2157ca6/ezrapendergraft.com_.png",
     external: "https://ezrapendergraft.com",
   },
   {
     name: "These Kids Read",
-    description: "A collection of great books our family reads together.",
+    description: "A collection of great picture books our family has read over the years. ",
     img: "https://images.ctfassets.net/cuehicrlqnvu/3fnKVQLBiDSfM0drKGK1gv/a14ad966128f902063fa998c3e3730a9/tkr-feature-light.png",
     imgDark:
       "https://images.ctfassets.net/cuehicrlqnvu/72EGY2qairooMZu8OaUOSN/2d8713200d294ef57afc62a7608c3214/tkr-feature-dark.png",
