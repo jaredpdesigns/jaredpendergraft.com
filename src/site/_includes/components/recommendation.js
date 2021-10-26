@@ -5,7 +5,7 @@ module.exports = function (item) {
     ${item.comment}
   </section>
   <footer class="border__top color__border--highlight--light margin__top--none padding__all--m">
-    <p class="color__type--base--semi">—<strong class="color__type--base--ish">${item.author}</strong></p>
+    <p class="color__type--base--semi">—&ThinSpace;<strong class="color__type--base--ish">${item.author}</strong></p>
   </footer>
 </blockquote>
 `;
