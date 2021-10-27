@@ -35,10 +35,10 @@
   <body class="color__bg--contrast flow__grid flow__align--v-start">
     <header class="border__bottom color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
       <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
-        <a href="/" class="color__type--base--ish type__size--m-xl">
+        <a href="/" class="color__type--base--ish type__family--secondary type__size--m-xl type__weight--bold">
           <strong>Jared Pendergraft</strong>
         </a>
-        <section class="color__type--base--ish flow__inline oomph__h--m type__size--s-xl type__weight--semibold">
+        <section class="color__type--base--ish flow__inline oomph__h--m type__size--m-xl type__weight--semibold">
           <a href="/" {% if page.url === '/' %} aria-current="page"{% endif %}>About</a>
           <a href="/projects/" {% if page.url.includes('projects') %} aria-current="page"{% endif %}>Projects</a>
           <a href="/hire/" {% if page.url.includes('hire') or page.url.includes('clients') %} aria-current="page"{% endif %}>Hire Me</a>
@@ -52,7 +52,7 @@
     </main>
     <footer class="border__top color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
       <section class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
-        <p class="color__type--base--ish type__size--s-xl">© {% Year %} Jared Pendergraft</p>
+        <p class="color__type--base--ish">© {% Year %} Jared Pendergraft</p>
         <nav class="color__type--base--ish oomph__h--s">
           <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?" title="Send me an email">
             {% Icon 'email' %}

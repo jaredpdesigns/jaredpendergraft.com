@@ -130,6 +130,10 @@
     grid-column: 1/-1;
   }
   .grid__item {
+    transition: transform 0.375s ease-in;
+    &:hover {
+      transform: scale(1.0125);
+    }
     &:focus-visible {
       box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
     }
