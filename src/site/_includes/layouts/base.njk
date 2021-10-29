@@ -19,17 +19,13 @@
     <meta name="theme-color" content="hsl(158, 32%, 38%)">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" alternate>
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preload" href="https://unpkg.com/@jaredpdesigns/pasta@latest/pasta.css" as="style">
+    <link rel="stylesheet" href="https://unpkg.com/@jaredpdesigns/pasta@latest/pasta.css">
     <link rel="preconnect" href="https://use.typekit.net"/>
-    <link
-      rel="preload"
-      href="https://use.typekit.net/vkr4fst.css"
-      as="style"
-/>
-    <link
-      rel="stylesheet"
-      href="https://use.typekit.net/vkr4fst.css"
-/>
+    <link rel="preload" href="https://use.typekit.net/vkr4fst.css" as="style"/>
+    <link rel="stylesheet" href="https://use.typekit.net/vkr4fst.css"/>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     <script async defer src="{{ '/js/scripts.js' | url }}"></script>
   </head>
   <body class="color__bg--contrast flow__grid flow__align--v-start">

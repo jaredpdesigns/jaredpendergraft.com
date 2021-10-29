@@ -55,7 +55,7 @@ module.exports = function (item) {
   />
 </picture>`
       : `<img
-        class="radius__s shadow"
+        class="border__all color__border--base--light radius__s shadow"
         loading="lazy"
         src="${item.img}"
         alt="${item.name} featured image"
