@@ -1,6 +1,6 @@
-const htmlmin = require("html-minifier");
-const sass = require("sass");
+const { minify } = require("terser");
 const fs = require("fs-extra");
+const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Markdown Support
@@ -9,7 +9,7 @@ const markdown = require("markdown-it")({
 });
 
 // Components
-const componentsDir = "src/site/_includes/components";
+const componentsDir = "src/_includes/components";
 const ClientGrid = require(`./${componentsDir}/client_grid.js`);
 const Gallery = require(`./${componentsDir}/gallery.js`);
 const Grid = require(`./${componentsDir}/grid.js`);
@@ -45,10 +45,8 @@ module.exports = (eleventyConfig) => {
 
   // Build stuff
   eleventyConfig.addPassthroughCopy({
-    "src/static": "/",
+    "static": "/",
   });
-  eleventyConfig.addWatchTarget("src/scss/");
-  eleventyConfig.addWatchTarget("src/site/_includes/components/");
 
   // Filters
   eleventyConfig.addFilter("featured", (arr) => {
@@ -61,18 +59,14 @@ module.exports = (eleventyConfig) => {
       return item.name === name;
     })[0];
   });
-
-  // Compile SCSS before a build
-  eleventyConfig.on("beforeBuild", () => {
-    let result = sass.renderSync({
-      file: "src/scss/style.scss",
-      sourceMap: false,
-      outputStyle: "compressed",
-    });
-    fs.ensureDirSync("dist/css/");
-    fs.writeFile("dist/css/style.css", result.css, (err) => {
-      if (err) throw err;
-    });
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      callback(null, code);
+    }
   });
 
   // 404 handling
@@ -104,7 +98,7 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: {
-      input: "src/site",
+      input: "src",
       output: "dist",
     },
     markdownTemplateEngine: "njk",

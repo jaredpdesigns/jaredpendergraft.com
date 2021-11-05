@@ -26,7 +26,12 @@
     <link rel="preload" href="https://use.typekit.net/vkr4fst.css" as="style"/>
     <link rel="stylesheet" href="https://use.typekit.net/vkr4fst.css"/>
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
-    <script async defer src="{{ '/js/scripts.js' | url }}"></script>
+    {% set js %}
+    {% include "_scripts.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
   </head>
   <body class="color__bg--contrast flow__grid flow__align--v-start">
     <header class="border__bottom color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">

@@ -59,8 +59,8 @@ module.exports = function (item) {
         loading="lazy"
         src="${item.img}"
         alt="${item.name} featured image"
-        height="108"
-        width="108"
+        height="72"
+        width="72"
       />`
   }
 <figcaption class="${

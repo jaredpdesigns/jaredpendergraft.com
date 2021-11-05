@@ -72,8 +72,10 @@
   }
   figure {
     @media (min-width: 29rem) {
-      grid-gap: var(--size__l);
       grid-template-columns: auto 1fr;
+    }
+    @media (min-width: 79rem) {
+      grid-gap: var(--size__l);
     }
   }
   &:focus-visible,
@@ -93,7 +95,7 @@
     --columnWidth: 100%;
     grid-column: 1/-1;
     padding-top: 0;
-    @media (min-width: 63rem) {
+    @media (min-width: 29rem) {
       --columnWidth: var(--width__s);
     }
     @media (min-width: 79rem) {
