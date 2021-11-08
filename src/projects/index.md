@@ -7,8 +7,6 @@ layout: layouts/base.njk
 class: projects
 ---
 
-# Projects
-
 {% Grid %}
 {% for item in projects %}
   {% ProjectGrid item %}

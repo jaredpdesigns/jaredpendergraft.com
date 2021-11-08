@@ -4,11 +4,11 @@ module.exports = function (item) {
     item.slug ? "" : 'target="_blank" rel="noopener"'
   } class="grid__item ${
     item.featured
-      ? "featured border__all color__bg--highlight--ghost color__border--highlight--light shadow"
-      : "side"
+      ? "featured color__bg--highlight--ghost"
+      : "side padding__all--m"
   } radius__m">
 <figure class="${
-    !item.featured ? "flow__grid flow__align--v-start flow__gap--m" : ""
+    !item.featured ? "flow__align--v-start flow__gap--m" : "flow__grid"
   }">
   ${
     item.featured
@@ -24,7 +24,7 @@ module.exports = function (item) {
     srcset="${item.img}?h=800&w=1280  1024w"
     sizes="33.3vw" />
   <img
-    class="radius__tl--m radius__tr--m width__full"
+    class="width__full"
     loading="lazy"
     src="${item.img}?h=200&w=320"
     srcset="${item.img}?h=400&w=640 2x"
@@ -45,7 +45,7 @@ module.exports = function (item) {
     srcset="${item.imgDark}?h=800&w=1280  1024w"
     sizes="33.3vw" />
   <img
-    class="radius__tl--m radius__tr--m width__full"
+    class="width__full"
     loading="lazy"
     src="${item.imgDark}?h=200&w=320"
     srcset="${item.imgDark}?h=400&w=640 2x"
@@ -65,11 +65,15 @@ module.exports = function (item) {
   }
 <figcaption class="${
     item.featured
-      ? "border__top color__bg--contrast color__border--highlight--light padding__bottom--l padding__left--l padding__right--l padding__top--m"
-      : ""
-  } oomph__v--s">
-  <h2>${item.name}</h2>
-  <p class="${item.featured ? "type__size--l-l" : ""}">${item.description}</p>
+      ? "flow__self--center oomph__v--l padding__bottom--l padding__left--l padding__right--l padding__top--m"
+      : "oomph__v--m padding__top--m"
+  }">
+  <h2 class="${
+    item.featured ? "color__type--highlight type__family--secondary type__size--xxl-xxl width__m" : ""
+  }">${item.name}</h2>
+  <p class="${item.featured ? "type__size--l-l width__m" : ""}">${
+    item.description
+  }</p>
 </figcaption>
   </figure>
 </a>

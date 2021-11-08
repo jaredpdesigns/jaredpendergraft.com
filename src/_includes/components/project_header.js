@@ -5,7 +5,7 @@ module.exports = function (item) {
 <section class="project__header--inner color__bg--highlight--ghost flow__grid flow__align--v-stretch flow__grid--columns-auto overflow__hidden radius__m">
   <section class="flow__self--center oomph__v--l padding__all--m">
     <h1 class="width__m">${item.name}</h1>
-    <p class="width__m">${item.description}</p>
+    <p class="type__size--l-l width__m">${item.description}</p>
     ${
       item.external
         ? `<p class="width__m"><a class="flow__inline flow__align--v-center type__weight--semibold" href="${

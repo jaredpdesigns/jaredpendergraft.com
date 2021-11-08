@@ -1,6 +1,6 @@
 module.exports = function (item) {
   return `
-<figure class="grid__item border__all color__bg--contrast color__border--highlight--light radius__m shadow">
+<figure class="grid__item">
   <img
     class="radius__m width__full"
     loading="lazy"
