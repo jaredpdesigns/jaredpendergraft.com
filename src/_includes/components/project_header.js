@@ -13,7 +13,7 @@ module.exports = function (item) {
           }" title="View ${
             item.name
           } project details" target="_blank" rel="noopener">View Project${Icon(
-            "arrow-right"
+            "external"
           )}</a></p>`
         : ""
     }

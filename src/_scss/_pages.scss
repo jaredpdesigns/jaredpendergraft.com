@@ -73,12 +73,12 @@
 
 .projects .featured figure {
   overflow: hidden;
-  @media(min-width: 29rem) {
+  @media (min-width: 29rem) {
     grid-template-columns: 1fr 1fr;
   }
   img {
     border-top-right-radius: var(--size__m);
-    @media(min-width: 1rem) and (max-width: 29rem) {
+    @media (max-width: 29rem) {
       img {
         border-bottom-left-radius: var(--size__m);
       }
@@ -136,6 +136,9 @@
     border-radius: var(--size__m);
     grid-column: 1/-1;
     justify-items: center;
+    @media (max-width: 29rem) {
+      max-width: calc(100vw - var(--size__xxl));
+    }
     @media (min-width: 29rem) {
       --columnWidth: var(--width__s);
     }
