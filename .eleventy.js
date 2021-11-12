@@ -59,6 +59,11 @@ module.exports = (eleventyConfig) => {
       return item.name === name;
     })[0];
   });
+  eleventyConfig.addFilter("projectHue", (arr, name) => {
+    return arr.filter((item) => {
+      return item.name === name;
+    })[0].hue;
+  });
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
     try {
       const minified = await minify(code);

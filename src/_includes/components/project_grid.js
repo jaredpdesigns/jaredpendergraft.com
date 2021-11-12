@@ -1,18 +1,19 @@
 module.exports = function (item) {
+  const Icon = require("./icon.js");
   return `
 <a href="${item.slug ? "/projects/" + item.slug : item.external}" ${
     item.slug ? "" : 'target="_blank" rel="noopener"'
   } class="grid__item ${
-    item.featured
-      ? "featured color__bg--highlight--ghost"
-      : "side padding__all--m"
-  } radius__m">
+    item.featured ? "featured border__all" : "side padding__all--m"
+  } radius__m" style="--brand: ${item.hue}">
 <figure class="${
-    !item.featured ? "flow__align--v-start flow__gap--m" : "flow__grid"
+    !item.featured
+      ? "flow__grid flow__align--v-start flow__gap--m"
+      : "flow__grid"
   }">
   ${
     item.featured
-      ? `<picture>
+      ? `<section class="padding__left--s padding__right--s padding__top--s"><picture>
   <source
     media="(min-width: 1em)"
     srcset="${item.img}?h=800&w=1280&fm=webp  1024w, ${item.img}?h=400&w=640&fm=webp 400w, ${item.img}?h=200&w=320&fm=webp 100w"
@@ -24,7 +25,7 @@ module.exports = function (item) {
     srcset="${item.img}?h=800&w=1280  1024w"
     sizes="33.3vw" />
   <img
-    class="width__full"
+    class="radius__tl--xs radius__tr--xs width__full"
     loading="lazy"
     src="${item.img}?h=200&w=320"
     srcset="${item.img}?h=400&w=640 2x"
@@ -45,7 +46,7 @@ module.exports = function (item) {
     srcset="${item.imgDark}?h=800&w=1280  1024w"
     sizes="33.3vw" />
   <img
-    class="width__full"
+    class="radius__tl--xs radius__tr--xs width__full"
     loading="lazy"
     src="${item.imgDark}?h=200&w=320"
     srcset="${item.imgDark}?h=400&w=640 2x"
@@ -53,7 +54,7 @@ module.exports = function (item) {
     height="200"
     width="320"
   />
-</picture>`
+</picture></section>`
       : `<img
         class="border__all color__border--base--light radius__s shadow"
         loading="lazy"
@@ -66,14 +67,21 @@ module.exports = function (item) {
 <figcaption class="${
     item.featured
       ? "flow__self--center oomph__v--l padding__bottom--l padding__left--l padding__right--l padding__top--m"
-      : "oomph__v--m padding__top--m"
+      : "oomph__v--m"
   }">
   <h2 class="${
-    item.featured ? "color__type--highlight type__family--secondary type__size--xxl-xxl width__m" : ""
-  }">${item.name}</h2>
+    item.featured ? "type__size--xxl-xxl width__m" : ""
+  } type__family--secondary">${item.name}</h2>
   <p class="${item.featured ? "type__size--l-l width__m" : ""}">${
     item.description
   }</p>
+  ${
+    item.featured
+      ? `<section class="width__m"><p class="project__link flow__inline flow__align--v-center type__weight--semibold">View Project${Icon(
+          "arrow-right"
+        )}</p></section>`
+      : ""
+  }
 </figcaption>
   </figure>
 </a>

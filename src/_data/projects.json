@@ -6,7 +6,8 @@
     "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/6hkkEu62iXrFr9Emfq9IWI/74a8117cad0d57490758e13ced3390bc/hypothesis-feature-dark.jpg",
     "slug": "hypothesis",
     "external": "https://web.hypothes.is/",
-    "featured": true
+    "featured": true,
+    "hue": "346, 100%, 38%"
   },
   {
     "name": "Nice Bike",
@@ -15,7 +16,8 @@
     "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/7qQznfp1pwwV4qTp9PRNju/dcf560075bccb6617705987af3c44365/nicebike-featured-dark.jpg",
     "slug": "nicebike",
     "external": "https://ridenicebike.com",
-    "featured": true
+    "featured": true,
+    "hue": "111, 64%, 51%"
   },
   {
     "name": "OTTO Health",
@@ -23,7 +25,8 @@
     "img": "https://images.ctfassets.net/cuehicrlqnvu/4J4i7bCxGu0rKWiWiGRb4o/f90b537a593c03a64a8f70592449a3a8/otto-featured-light.jpg",
     "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/4x5uZDqfu4ItzyQggAxsSW/8719e38675f639ed4e9478402116a236/otto-featured-dark.jpg",
     "slug": "otto",
-    "featured": true
+    "featured": true,
+    "hue": "17, 100%, 74%"
   },
   {
     "name": "Pasta",

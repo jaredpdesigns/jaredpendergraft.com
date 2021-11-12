@@ -13,24 +13,26 @@ imgBlock1:
       title: "Overview",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/7cv1mjLvWI7OcgkAyHglnd/ca850c9e83d33bb747e94106e7fb1309/nicebike-2-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/62QKXpOloQq8Quen5PJdhd/309b271a60f6071221dc0a89615cd9bc/nicebike-2-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/7cv1mjLvWI7OcgkAyHglnd/2309077312f5a24b0eaf76168505534d/nicebike-2-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/62QKXpOloQq8Quen5PJdhd/9106a5e8ac4b5292ad6edf4edbe27889/nicebike-2-dark.svg",
       title: "Overview",
     },
   ]
 imgBlock2:
   [
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/5vLKXWpiTxe5qlr4gctsNI/33c44c6752baaa4fa53b8d110684bc11/nicebike-3-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/4zdXZVq0YTdeln1vxAt9Ef/93854b988ecc4dcfe7b5c9e0793b9bae/nicebike-3-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/5vLKXWpiTxe5qlr4gctsNI/a898827c51ccbb5f052584efdf8b8fa4/nicebike-3-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/4zdXZVq0YTdeln1vxAt9Ef/d4f5613d3ac216c9be68dba582b08d35/nicebike-3-dark.svg",
       title: "Bike details",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/1Uy2subjxzfAnTQe7jyT4O/6354dfbf09965c5b8ba4b7aab56828f0/nicebike-4-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/1lhR89hL3rd0P8HrrcV229/94d9cffb60f018f2964947d445de698c/nicebike-4-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/1Uy2subjxzfAnTQe7jyT4O/2ad275f8129b22227ed0d0b3c0fea412/nicebike-4-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/1lhR89hL3rd0P8HrrcV229/79f4b9e6aa3a4635d9f4d4e1816ed0e4/nicebike-4-dark.svg",
       title: "Spec Details",
     },
   ]
+eleventyComputed:
+  style: "--brand: {{ projects |  projectHue('Nice Bike') }}"
 ---
 
 {% ProjectHeader projects |  filteredProject('Nice Bike') %}

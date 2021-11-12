@@ -8,42 +8,44 @@ class: detail padding__top--m
 imgBlock1:
   [
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/7452o2aWMSXGYXK2ZJyUah/1dc689e5f80609b86531a5e8032244ed/otto-1-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2MERhIhAeYJFcHHVzCi1JB/2ea5019bd8e1bbdb067ca85bb7c18942/otto-1-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/7452o2aWMSXGYXK2ZJyUah/928a24b2039e05666a377911a3e5df72/otto-1-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2MERhIhAeYJFcHHVzCi1JB/0699813e7429befa8658c24bbaf20b09/otto-1-dark.svg",
       title: "OTTO Health logotype and icons",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/5UMp0gplhHLep3UT8m3Bdd/e41d9f191ebaac4c80b4d4a440308224/otto-2-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/4or0Tr4uStyZu4UKGsNJgQ/8b50b2f39254f5fa3b7003fa8664ce36/otto-2-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/5UMp0gplhHLep3UT8m3Bdd/1ecee38bc3d1f7ef9eb156fca90c92f7/otto-2-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/4or0Tr4uStyZu4UKGsNJgQ/7e3cf7cbb7900bd76eae38e39d72d70d/otto-2-dark.svg",
       title: "Additional UI elements",
     },
   ]
 imgBlock2:
   [
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/3papMlAEGcgcOKC5S32k2g/ca1600ff22ccc573603ce688e69231b8/otto-3-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/5vWZJuxI7bBMtTsG9s429Y/3ca0e5d0d4b6ab9a8d0d4105cef52fce/otto-3-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/3papMlAEGcgcOKC5S32k2g/c9c4fd56c91aa88353f6ff43badd2a0e/otto-3-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/5vWZJuxI7bBMtTsG9s429Y/9acf08828d646e720d6ec94282cd260a/otto-3-dark.svg",
       title: "Patient call UI",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/e3RCPYmsiH1ZvvV524mgL/559cbb18f161813aab6dabbee1d82507/otto-4-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/3eC9mUJ9Tb9oj8sMoDSpS9/c51e6bb0f09c198fc1187119667a4205/otto-4-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/e3RCPYmsiH1ZvvV524mgL/01b5c3815ef8706fb35397bbb1ad3b21/otto-4-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/3eC9mUJ9Tb9oj8sMoDSpS9/3586915d1fc8324d60999247d67aedbb/otto-4-dark.svg",
       title: "Provider call UI",
     },
   ]
 imgBlock3:
   [
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/4wKHTQzR7IQOMdy2hccu02/3509ce0e282d93e4c1c372933a0ea2b9/otto-5-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/1piGKgYxalnuogVQd26tKQ/3dddf7235a8e22e71b37df655703aa2a/otto-5-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/4wKHTQzR7IQOMdy2hccu02/608ebb7aa3e440f7bb16315e4982e716/otto-5-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/1piGKgYxalnuogVQd26tKQ/146999235c0cbb186b8edc9662f7f27e/otto-5-dark.svg",
       title: "Appointment creation UI",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/g10b1uIUelwoSK6OgccO1/b8136d09490d671c309bf12d6f46e62c/otto-6-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/3YRCt1TQ6HXKqT9GiGIyDw/76aef73446a54041b7684ba714c179fb/otto-6-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/g10b1uIUelwoSK6OgccO1/a61033e381fc53a20e3e3d624d0a7d11/otto-6-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/3YRCt1TQ6HXKqT9GiGIyDw/07926a40e7c57042c0159f6244fc6911/otto-6-dark.svg",
       title: "Practice UI including scheduling",
     },
   ]
+eleventyComputed:
+  style: "--brand: {{ projects |  projectHue('OTTO Health') }}"
 ---
 
 {% ProjectHeader projects |  filteredProject('OTTO Health') %}

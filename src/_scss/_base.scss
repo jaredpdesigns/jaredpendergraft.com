@@ -75,6 +75,10 @@ body > header a[aria-current="page"] {
 
 h1 {
   color: var(--color__highlight);
+}
+
+h1,
+h3 {
   font-family: var(--type__family--secondary);
 }
 
@@ -83,6 +87,11 @@ h3,
 h4,
 h5 {
   color: var(--color__base--ish);
+}
+
+h2,
+h4,
+h5 {
   font-family: var(--type__family--secondary-narrow);
   font-weight: 600;
 }

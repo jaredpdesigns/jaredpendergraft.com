@@ -13,37 +13,39 @@ imgBlock1:
       title: "Hypothicons icon set",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/RUNxVZaK5lb9uQfebmORL/2e1e0e28b8efd520e73159d26e3aab29/hypothesis-2-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2L0dcNSRPprQlybFxTjkKV/457518569f9fd4ec17b088bbec44852d/hypothesis-2-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/RUNxVZaK5lb9uQfebmORL/e6cedb742ac1667b3f475d5c16fee533/hypothesis-2-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2L0dcNSRPprQlybFxTjkKV/33e4ccbad7f0d8ef3f825584f8f7dafe/hypothesis-2-dark.svg",
       title: "Color palette and main UI",
     },
   ]
 imgBlock2:
   [
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/4FNLPRtN2YQlJP8rmJEwxg/3bf21fc5f4727c3dfb172563ad23a295/hypothesis-3-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2AcOAJHHCvPQn0qvmPvnTZ/bb3a98c3b5a4ab0d1ac5ecd5104789a5/hypothesis-3-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/4FNLPRtN2YQlJP8rmJEwxg/d598ffa9f0acee3a4436c1bcfc76d506/hypothesis-3-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2AcOAJHHCvPQn0qvmPvnTZ/6022d764e2bd18e6735cd1639f84c38b/hypothesis-3-dark.svg",
       title: "Annotations on the web",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/4JnZXRX4xEa5HLgpnIVZm2/31a4d454265705f1ba326a5c02d86bba/hypothesis-4-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2vdErfXcsgKbVqiMznXzp4/4ce015dfc6a26d85a58e14f2c3cb06d4/hypothesis-4-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/4JnZXRX4xEa5HLgpnIVZm2/91bff02f1d234dd57ddcaf45d33b20d6/hypothesis-4-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/2vdErfXcsgKbVqiMznXzp4/66d69a08811caae6ff1a5f8be010a869/hypothesis-4-dark.svg",
       title: "Additional UI including search and group management",
     },
   ]
 imgBlock3:
   [
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/5yyv7PaUvq7oEJCaLEnRZM/a93409db1f6e896f03eb709cc4d441bc/hypothesis-5-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/7egVbKt234cMMeMponsIPp/d35e6207863663a576b40c954733e768/hypothesis-5-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/5yyv7PaUvq7oEJCaLEnRZM/1127fda1b11743f91023c00b1158d1a8/hypothesis-5-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/7egVbKt234cMMeMponsIPp/e6f34daf6b667d56c3a7ee4231c3a8b4/hypothesis-5-dark.svg",
       title: "Share and help dialog boxes",
     },
     {
-      img: "https://images.ctfassets.net/cuehicrlqnvu/2Quc5oEmTGCXVWBFyJPbIg/fcb59aed6585990d5e7414d71bc34041/hypothesis-6-light.svg",
-      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/4FVMO7ESJ6q0uAiHUDYoSj/503a0c99ab7581e441ddcc5ca8305302/hypothesis-6-dark.svg",
+      img: "https://images.ctfassets.net/cuehicrlqnvu/2Quc5oEmTGCXVWBFyJPbIg/46aa90ffd6f5b5bd4d7f2f68fa2efa32/hypothesis-6-light.svg",
+      imgDark: "https://images.ctfassets.net/cuehicrlqnvu/4FVMO7ESJ6q0uAiHUDYoSj/338cf2dcaf7634f4223e2c482f6e8054/hypothesis-6-dark.svg",
       title: "Additional annotation states",
     },
   ]
+eleventyComputed:
+  style: "--brand: {{ projects |  projectHue('Hypothesis') }}"
 ---
 
 {% ProjectHeader projects |  filteredProject('Hypothesis') %}
