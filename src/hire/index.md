@@ -19,10 +19,6 @@ I’m always interested in creative freelance opportunities—if you'd like to w
 
 While each project requires different approaches to problem-solving, here are a few examples of common ways I approach design challenges:
 
-<section id="process">
-{% Gallery %}
 {% for item in processes %}
   {% Process item %}
 {% endfor %}
-{% endGallery%}
-</section>

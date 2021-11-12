@@ -14,10 +14,6 @@
   font-family: var(--type__family--secondary-narrow);
 }
 
-html {
-  box-shadow: inset 0 0 0 var(--size__s) var(--color__highlight--light);
-}
-
 body {
   grid-template-columns: 1fr min(75ch, calc(100% - var(--size__l) * 2)) 1fr;
   grid-template-rows: auto 1fr auto;

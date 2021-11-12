@@ -112,6 +112,17 @@
         }
       }
     }
+    > section {
+      @media (max-width: 29rem) {
+        border-top: var(--size__xxs) solid hsla(var(--brand), 0.25);
+      }
+      @media (min-width: 29rem) {
+        padding: var(--size__l);
+        > * + * {
+          margin-top: var(--size__l);
+        }
+      }
+    }
   }
 }
 
@@ -119,5 +130,13 @@
   @media (min-width: 29rem) {
     margin-left: calc(var(--size__m) * -1);
     margin-right: calc(var(--size__m) * -1);
+  }
+}
+
+.process {
+  header {
+    @media (min-width: 29rem) {
+      grid-template-columns: auto 1fr;
+    }
   }
 }

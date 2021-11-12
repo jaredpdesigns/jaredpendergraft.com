@@ -72,18 +72,6 @@
   img {
     aspect-ratio: 1440 / 900;
   }
-  figcaption {
-    order: -1;
-    position: relative;
-  }
-}
-
-.profile .gallery__item {
-  figcaption {
-    [data-theme="dark"] & {
-      background-color: var(--color__contrast--extra);
-    }
-  }
 }
 
 .projects .featured {
@@ -121,6 +109,17 @@
       @media (min-width: 29rem) {
         border-top-left-radius: var(--size__s);
         border-top-right-radius: var(--size__s);
+      }
+    }
+  }
+  figcaption {
+    @media (max-width: 29rem) {
+      border-top: var(--size__xxs) solid hsla(var(--brand), 0.25);
+    }
+    @media (min-width: 29rem) {
+      padding: var(--size__l);
+      > * + * {
+        margin-top: var(--size__l);
       }
     }
   }
@@ -257,13 +256,6 @@
         }
       }
     }
-  }
-}
-
-.hire {
-  #process {
-    grid-column: 1/-1;
-    grid-template-columns: inherit;
   }
 }
 

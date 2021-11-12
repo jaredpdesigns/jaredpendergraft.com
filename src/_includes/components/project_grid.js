@@ -66,7 +66,7 @@ module.exports = function (item) {
   }
 <figcaption class="${
     item.featured
-      ? "flow__self--center oomph__v--l padding__bottom--l padding__left--l padding__right--l padding__top--m"
+      ? "flow__self--center oomph__v--m padding__all--m"
       : "oomph__v--m"
   }">
   <h2 class="${

@@ -3,22 +3,7 @@ module.exports = function (item) {
   return `
 <header class="project__header padding__left--m padding__right--m width__xl">
 <section class="project__header--inner border__all flow__grid flow__align--v-stretch flow__grid--columns-auto overflow__hidden radius__m">
-  <section class="flow__self--center oomph__v--l padding__all--m">
-    <h1 class="width__m">${item.name}</h1>
-    <p class="type__size--l-l width__m">${item.description}</p>
-    ${
-      item.external
-        ? `<p class="width__m"><a class="flow__inline flow__align--v-center type__weight--semibold" href="${
-            item.external
-          }" title="View ${
-            item.name
-          } project details" target="_blank" rel="noopener">View Site${Icon(
-            "external"
-          )}</a></p>`
-        : ""
-    }
-  </section>
-  <figure class="padding__left--s padding__right--s padding__top--s">
+<figure class="padding__left--s padding__right--s padding__top--s">
     <picture>
       <source
         media="(min-width: 1em)"
@@ -66,6 +51,21 @@ module.exports = function (item) {
       />
     </picture>
   </figure>
+  <section class="flow__self--center oomph__v--m padding__all--m">
+    <h1 class="width__m">${item.name}</h1>
+    <p class="type__size--l-l width__m">${item.description}</p>
+    ${
+      item.external
+        ? `<p class="width__m"><a class="flow__inline flow__align--v-center type__weight--semibold" href="${
+            item.external
+          }" title="View ${
+            item.name
+          } project details" target="_blank" rel="noopener">View Site${Icon(
+            "external"
+          )}</a></p>`
+        : ""
+    }
+  </section>
   </section>
 </header>
 `;

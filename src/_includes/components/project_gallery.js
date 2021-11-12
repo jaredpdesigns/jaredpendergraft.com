@@ -38,7 +38,7 @@ module.exports = function (item) {
     />
   </picture>
     </section>
-    <figcaption class="border__top padding__bottom--m padding__left--l padding__right--l padding__top--s radius__bl--s radius__br--s"><h3 class="color__type--base--ish">${item.name}</h3></figcaption>
+    <figcaption class="border__top padding__bottom--m padding__left--m padding__right--m padding__top--s radius__bl--s radius__br--s"><h3 class="color__type--base--ish">${item.name}</h3></figcaption>
   </figure>
 </a>
 `;

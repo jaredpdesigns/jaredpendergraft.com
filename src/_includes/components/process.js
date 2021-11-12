@@ -46,16 +46,17 @@ module.exports = function (item) {
   ];
   const filtered = images.filter((value) => value.name === item.img)[0];
   return `
-<section class="gallery__item border__all color__bg--highlight--ghost color__border--highlight--light oomph__v--m padding__all--l radius__m shadow">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 64 64"
-    aria-hidden="true"
-    focusable="false"
-    role="presentation"
-  >
+<section class="process border__all color__bg--highlight--ghost color__border--highlight--light oomph__v--m padding__all--l radius__m">
+  <header class="flow__grid flow__align--v-center flow__gap--m">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 64 64"
+      aria-hidden="true"
+      focusable="false"
+      role="presentation"
+    >
     <title>${filtered.name} icon</title>
     <g>
       <path fill="var(--color__contrast)" d="${filtered.white}" />
@@ -64,6 +65,7 @@ module.exports = function (item) {
     </g>
   </svg>
   <h3>${item.label}</h3>
+  </header>
   <p>${item.description}</p>
 </section>
 `;
