@@ -102,7 +102,7 @@ Currently • Remote
 ***
 ## Recommendations
 
-<section id="recommendations">
+<section class="cv__recommendations">
 {% Grid true%}
 {% for item in recommendations %}
 {% Recommendation item %}

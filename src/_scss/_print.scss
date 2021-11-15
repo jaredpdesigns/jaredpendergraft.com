@@ -7,7 +7,7 @@
     padding-top: 0;
     position: relative;
     nav {
-      > * {
+      > section {
         display: none !important;
       }
       &:after {
@@ -18,7 +18,7 @@
     }
   }
   body > footer {
-    display: none;
+    display: none !important;
   }
   main {
     padding: var(--size__l) 0;
@@ -30,7 +30,7 @@
     > h2 + *,
     > * + h3,
     > * + hr {
-      margin-top: var(--size__l);
+      margin-top: var(--size__l) !important;
     }
   }
   li + li,
@@ -46,5 +46,15 @@
     display: block;
     page-break-after: always;
     position: relative;
+  }
+  .cv__recommendations > .grid {
+    grid-template-columns: none;
+    grid-gap: calc(var(--size__xxxl) * 2);
+    blockquote {
+      box-shadow: none;
+      &:last-child {
+        margin-top: calc(var(--size__xxxl) * -1);
+      }
+    }
   }
 }

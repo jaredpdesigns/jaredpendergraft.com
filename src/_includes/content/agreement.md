@@ -19,7 +19,7 @@ Wailuku, HI 96793
 
 1. **Services.** Jared Pendergraft will provide services (the “Services”) to {{ client.client.name }} as specified in *Schedule A.* All design and development efforts will be done remotely unless otherwise stated.
 2. **Expenses.** {{ client.client.name }} will reimburse Jared Pendergraft for expenses incurred in providing the Services, but only if those expenses have been approved in advance and in writing.
-3. **Payment.** Unless otherwise specified in *Schedule A* , Jared Pendergraft will invoice {{ client.client.name }} upon completion of Services and for expenses. {{ client.client.name }} will pay the invoice within 7 days of receipt (the “Due Date”) if Jared Pendergraft performed the Services as required. {{ client.client.name }} agrees to pay Jared Pendergraft \${{ client.hourly }} per hour for additional services not outlined in *Schedule A* —additional tasks will not be undertaken without the explicit written approval of {{ client.client.name }}.
+3. **Payment.** Unless otherwise specified in *Schedule A* , Jared Pendergraft will invoice {{ client.client.name }} upon completion of Services and for expenses. {{ client.client.name }} will pay the invoice within 7 days of receipt (the “Due Date”) if Jared Pendergraft performed the Services as required. {{ client.client.name }} agrees to pay Jared Pendergraft {{ client.hourly | currency }} per hour for additional services not outlined in *Schedule A* —additional tasks will not be undertaken without the explicit written approval of {{ client.client.name }}.
 4. **Interest.** {{ client.client.name }} will pay Jared Pendergraft simple interest on all overdue payments at a rate of 5% per month. Interest is calculated from the date payment was due until the date payment, including accumulated interest, is made in full.
 5. **Term.** This Agreement will be in effect until the Services are completed, unless ended earlier as specified in *section 6*.
 6. **Termination by Consultant.** Jared Pendergraft may end this Agreement if:
@@ -73,7 +73,7 @@ Jared Pendergraft
 
 {{ client.description | safe }}
 
-*Please note there is a 25% deposit of **${{ (client.total * 0.25).toLocaleString("en-US") }}** required to begin this engagement.*
+*Please note there is a 25% deposit of **{{ (client.total * 0.25) | currency }}** required to begin this engagement.*
 
 ***
 

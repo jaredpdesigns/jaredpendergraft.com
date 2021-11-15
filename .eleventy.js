@@ -2,11 +2,8 @@ const { minify } = require("terser");
 const fs = require("fs-extra");
 const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
-// Markdown Support
-const markdown = require("markdown-it")({
-  html: true,
-});
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 // Components
 const componentsDir = "src/_includes/components";
@@ -45,7 +42,7 @@ module.exports = (eleventyConfig) => {
 
   // Build stuff
   eleventyConfig.addPassthroughCopy({
-    "static": "/",
+    static: "/",
   });
 
   // Filters
@@ -64,6 +61,23 @@ module.exports = (eleventyConfig) => {
       return item.name === name;
     })[0].hue;
   });
+  eleventyConfig.addFilter("currency", (value) => {
+    if (value) {
+      if (value.toString().includes(".")) {
+        return value.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+          minimumFractionDigits: 2,
+        });
+      } else {
+        return value.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+          minimumFractionDigits: 0,
+        });
+      }
+    }
+  });
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
     try {
       const minified = await minify(code);
@@ -73,6 +87,17 @@ module.exports = (eleventyConfig) => {
       callback(null, code);
     }
   });
+
+  // Markdown support
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(markdownItAnchor, {
+    renderHref: false,
+    tabIndex: false,
+  });
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   // 404 handling
   eleventyConfig.setBrowserSyncConfig({

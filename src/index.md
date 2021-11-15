@@ -15,7 +15,7 @@ I’m a multi-disciplinary designer focusing on the *intersection of design and 
 
 I approach design challenges holistically, building solutions from beginning to end with *extensibility and modularity* in mind. I enjoy building out designs to fully functional front-end code—bridging the gap between design and development seamlessly.
 
-View [projects](/projects/) I’ve worked on or learn more about my [creative process](/hire/#process).
+View [projects](/projects/) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 
 ***
 ## Featured Projects
