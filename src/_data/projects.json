@@ -1,14 +1,5 @@
 [
   {
-    "name": "Education Advanced",
-    "description": "Marketing site for my organization merging all of our EdTech products into a cohesive, consistent platform.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/XaLRF2KnYmNkY7LjfHdyr/99f13875a5ce12f36b96846830018be5/educationadvanced.png",
-    "slug": "educationadvanced",
-    "external": "https://educationadvanced.com/",
-    "featured": true,
-    "hue": "180deg 58% 67%"
-  },
-  {
     "name": "Hypothesis",
     "description": "Pattern library for the popular web-annotation tool that lets you annotate the web, with anyone, anywhere.",
     "img": "https://images.ctfassets.net/cuehicrlqnvu/qX6yRnD48X16Gf2qcFuKW/e69e79b7d131ed0b9d1e375d31ecffbc/hypothesis-feature-light.jpg",
