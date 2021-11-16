@@ -5,9 +5,11 @@
   --type__family--tertiary: dico-mono, mono;
   &[data-theme="dark"] {
     @media screen {
-      --color__hue--base: 218, 100%, 100%;
-      --color__hue--contrast: 218, 16%, 8%;
-      --color__hue--contrast--extra: 218, 32%, 4%;
+      --color__hue--base: 218deg 100% 100%;
+      --color__hue--contrast: 218deg 16% 12%;
+      --color__hue--contrast--extra: 218deg 32% 4%;
+      --shadow__color: var(--color__hue--contrast--extra);
+      --shadow__value: 0.75;
     }
   }
 }

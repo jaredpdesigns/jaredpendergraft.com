@@ -13,21 +13,22 @@
     grid-column: 2;
     position: relative;
     &:after {
+      --bg: var(--color__hue--contrast);
       background-image: linear-gradient(
         to left,
-        hsl(0, 100%, 100%) 0%,
-        hsla(0, 100%, 100%, 0.738) 19%,
-        hsla(0, 100%, 100%, 0.541) 34%,
-        hsla(0, 100%, 100%, 0.382) 47%,
-        hsla(0, 100%, 100%, 0.278) 56.5%,
-        hsla(0, 100%, 100%, 0.194) 65%,
-        hsla(0, 100%, 100%, 0.126) 73%,
-        hsla(0, 100%, 100%, 0.075) 80.2%,
-        hsla(0, 100%, 100%, 0.042) 86.1%,
-        hsla(0, 100%, 100%, 0.021) 91%,
-        hsla(0, 100%, 100%, 0.008) 95.2%,
-        hsla(0, 100%, 100%, 0.002) 98.2%,
-        hsla(0, 100%, 100%, 0) 100%
+        hsl(var(--bg)) 0%,
+        hsl(var(--bg) / 0.738) 19%,
+        hsl(var(--bg) / 0.541) 34%,
+        hsl(var(--bg) / 0.382) 47%,
+        hsl(var(--bg) / 0.278) 56.5%,
+        hsl(var(--bg) / 0.194) 65%,
+        hsl(var(--bg) / 0.126) 73%,
+        hsl(var(--bg) / 0.075) 80.2%,
+        hsl(var(--bg) / 0.042) 86.1%,
+        hsl(var(--bg) / 0.021) 91%,
+        hsl(var(--bg) / 0.008) 95.2%,
+        hsl(var(--bg) / 0.002) 98.2%,
+        hsl(var(--bg) / 0) 100%
       );
       content: "";
       display: block;
@@ -38,22 +39,7 @@
       align-self: stretch;
       z-index: 100;
       [data-theme="dark"] & {
-        background-image: linear-gradient(
-          to left,
-          hsl(218, 16%, 8%) 0%,
-          hsla(218, 16%, 8%, 0.738) 19%,
-          hsla(218, 16%, 8%, 0.541) 34%,
-          hsla(218, 16%, 8%, 0.382) 47%,
-          hsla(218, 16%, 8%, 0.278) 56.5%,
-          hsla(218, 16%, 8%, 0.194) 65%,
-          hsla(218, 16%, 8%, 0.126) 73%,
-          hsla(218, 16%, 8%, 0.075) 80.2%,
-          hsla(218, 16%, 8%, 0.042) 86.1%,
-          hsla(218, 16%, 8%, 0.021) 91%,
-          hsla(218, 16%, 8%, 0.008) 95.2%,
-          hsla(218, 16%, 8%, 0.002) 98.2%,
-          hsla(218, 16%, 8%, 0) 100%
-        );
+        --bg: 218deg 16% 8%;
       }
     }
   }
@@ -78,8 +64,8 @@
 .project__header {
   grid-column: 1/-1;
   &--inner {
-    background-color: hsla(var(--brand), 0.125);
-    border-color: hsla(var(--brand), 0.25);
+    background-color: hsl(var(--brand) / 0.125);
+    border-color: hsl(var(--brand) / 0.25);
     h1 {
       color: var(--color__base--ish);
     }
@@ -100,7 +86,7 @@
         picture:first-child {
           display: none;
         }
-        picture:nth-of-type(2) {
+        picture:last-child {
           display: block !important;
         }
       }
@@ -114,12 +100,12 @@
     }
     > section {
       @media (max-width: 29rem) {
-        border-top: var(--size__xxs) solid hsla(var(--brand), 0.25);
+        border-top: var(--size__xxs) solid hsl(var(--brand) / 0.25);
       }
       @media (min-width: 29rem) {
         padding: var(--size__l);
         > * + * {
-          margin-top: var(--size__l);
+          margin-top: var(--size__l) !important;
         }
       }
     }

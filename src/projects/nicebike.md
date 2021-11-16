@@ -1,8 +1,4 @@
 ---
-title: Nice Bike • Jared Pendergraft
-description: Fresh website to showcase custom-built bicycles with an emphasis on craft and details
-img: https://images.ctfassets.net/cuehicrlqnvu/6qtQSpxRwd2kOkn0DT3YNT/103258554d089d5ab2e21e7e2b06be0a/nicebike-featured-light.jpg?h=630&w=1200&fit=fill&f=face
-slug: /projects/nicebike/
 layout: layouts/base.njk
 class: detail padding__top--m
 imgBlock1:
@@ -32,7 +28,11 @@ imgBlock2:
     },
   ]
 eleventyComputed:
-  style: "--brand: {{ projects |  projectHue('Nice Bike') }}"
+  description: "{{ (projects | filteredProject('Nice Bike')).description }}"
+  img: "{{ (projects | filteredProject('Nice Bike')).img }}?h=630&w=1200&fit=fill&f=face"
+  slug: "/projects/{{ (projects | filteredProject('Nice Bike')).slug }}/"
+  style: "--brand: {{ (projects | filteredProject('Nice Bike')).hue }}"
+  title: "{{ (projects | filteredProject('Nice Bike')).name }} • Jared Pendergraft"
 ---
 
 {% ProjectHeader projects |  filteredProject('Nice Bike') %}

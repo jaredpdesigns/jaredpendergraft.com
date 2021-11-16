@@ -9,7 +9,7 @@ class: hire
 
 # Let’s Create Something Great Together
 
-I’m not currently looking for any full-time work but feel free to view my [résumé](/hire/me/) to get a little more information about my background.
+I’m currently serving as *Lead UI/UX Developer* at [Education Advanced](https://educationadvanced.com/), view my [résumé](/hire/me/) for more about my background.
 
 I’m always interested in creative freelance opportunities—if you'd like to work together send me an [email](mailto:hello@jaredpendergraft.com).
 

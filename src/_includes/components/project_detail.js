@@ -9,15 +9,19 @@ module.exports = function (item) {
     height="320"
     width="320"
   />
-  <img
-    class="width__full"
-    loading="lazy"
-    src="${item.imgDark}"
-    alt="${item.title}"
-    height="320"
-    width="320"
-    style="display: none"
-  />
+  ${
+    item.imgDark
+      ? `<img
+  class="width__full"
+  loading="lazy"
+  src="${item.imgDark}"
+  alt="${item.title}"
+  height="320"
+  width="320"
+  style="display: none"
+/>`
+      : ``
+  }
 </figure>
 `;
 };

@@ -27,29 +27,31 @@ module.exports = function (item) {
         width="320"
       />
     </picture>
-    <picture style="display: none">
-      <source
-        media="(min-width: 1em)"
-        srcset="${item.imgDark}?h=800&w=1280&fm=webp  1024w, ${
-    item.imgDark
-  }?h=400&w=640&fm=webp 400w, ${item.imgDark}?h=200&w=320&fm=webp 100w"
-        sizes="33.3vw"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 35em)"
-        srcset="${item.imgDark}?h=800&w=1280  1024w"
-        sizes="33.3vw" />
-      <img
-        class="overflow__hidden radius__tl--xs radius__tr--xs width__full"
-        loading="lazy"
-        src="${item.imgDark}?h=200&w=320"
-        srcset="${item.imgDark}?h=400&w=640 2x"
-        alt="${item.name} featured image"
-        height="200"
-        width="320"
-      />
-    </picture>
+    ${
+      item.imgDark
+        ? `<picture style="display: none">
+    <source
+      media="(min-width: 1em)"
+      srcset="${item.imgDark}?h=800&w=1280&fm=webp  1024w, ${item.imgDark}?h=400&w=640&fm=webp 400w, ${item.imgDark}?h=200&w=320&fm=webp 100w"
+      sizes="33.3vw"
+      type="image/webp"
+    />
+    <source
+      media="(min-width: 35em)"
+      srcset="${item.imgDark}?h=800&w=1280  1024w"
+      sizes="33.3vw" />
+    <img
+      class="overflow__hidden radius__tl--xs radius__tr--xs width__full"
+      loading="lazy"
+      src="${item.imgDark}?h=200&w=320"
+      srcset="${item.imgDark}?h=400&w=640 2x"
+      alt="${item.name} featured image"
+      height="200"
+      width="320"
+    />
+  </picture>`
+        : ``
+    }
   </figure>
   <section class="flow__self--center oomph__v--m padding__all--m">
     <h1 class="width__m">${item.name}</h1>
@@ -58,9 +60,9 @@ module.exports = function (item) {
       item.external
         ? `<p class="width__m"><a class="flow__inline flow__align--v-center type__weight--semibold" href="${
             item.external
-          }" title="View ${
+          }" title="Visit ${
             item.name
-          } project details" target="_blank" rel="noopener">View Site${Icon(
+          } website" target="_blank" rel="noopener">Visit Site${Icon(
             "external"
           )}</a></p>`
         : ""

@@ -56,11 +56,6 @@ module.exports = (eleventyConfig) => {
       return item.name === name;
     })[0];
   });
-  eleventyConfig.addFilter("projectHue", (arr, name) => {
-    return arr.filter((item) => {
-      return item.name === name;
-    })[0].hue;
-  });
   eleventyConfig.addFilter("currency", (value) => {
     if (value) {
       if (value.toString().includes(".")) {

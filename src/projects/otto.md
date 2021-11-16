@@ -45,7 +45,11 @@ imgBlock3:
     },
   ]
 eleventyComputed:
-  style: "--brand: {{ projects |  projectHue('OTTO Health') }}"
+  description: "{{ (projects | filteredProject('OTTO Health')).description }}"
+  img: "{{ (projects | filteredProject('OTTO Health')).img }}?h=630&w=1200&fit=fill&f=face"
+  slug: "/projects/{{ (projects | filteredProject('OTTO Health')).slug }}/"
+  style: "--brand: {{ (projects | filteredProject('OTTO Health')).hue }}"
+  title: "{{ (projects | filteredProject('OTTO Health')).name }} • Jared Pendergraft"
 ---
 
 {% ProjectHeader projects |  filteredProject('OTTO Health') %}

@@ -1,5 +1,5 @@
 ---
-title: Jared Pendergraft
+title: Featured Projects • Jared Pendergraft
 description: A selection of creative projects I’ve worked on
 img: https://jaredpendergraft.com/img/social-projects.jpg
 slug: /projects/

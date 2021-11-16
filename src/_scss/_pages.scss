@@ -10,9 +10,9 @@
     }
   }
   .gallery__item {
-    border-color: hsla(var(--brand), 0.25);
+    border-color: hsl(var(--brand) / 0.25);
     &:focus-visible {
-      box-shadow: 0 0 0 var(--size__xs) hsla(var(--brand), 0.375);
+      box-shadow: 0 0 0 var(--size__xs) hsl(var(--brand) / 0.375);
     }
     figure > section {
       background-color: hsl(var(--brand));
@@ -29,8 +29,8 @@
       }
     }
     figcaption {
-      background-color: hsla(var(--brand), 0.125);
-      border-color: hsla(var(--brand), 0.25);
+      background-color: hsl(var(--brand) / 0.125);
+      border-color: hsl(var(--brand) / 0.25);
     }
   }
 }
@@ -65,7 +65,7 @@
     picture:first-child {
       display: none;
     }
-    picture:nth-of-type(2) {
+    picture:last-child {
       display: block !important;
     }
   }
@@ -75,8 +75,8 @@
 }
 
 .projects .featured {
-  background-color: hsla(var(--brand), 0.125);
-  border-color: hsla(var(--brand), 0.25);
+  background-color: hsl(var(--brand) / 0.125);
+  border-color: hsl(var(--brand) / 0.25);
   .loaded & {
     transition: box-shadow 0.375s ease-in;
     .project__link {
@@ -86,11 +86,11 @@
   &:focus,
   &:hover {
     .project__link {
-      color: hsl(var(--brand));
+      color: var(--color__base--ish);
     }
   }
   &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xs) hsla(var(--brand), 0.375);
+    box-shadow: 0 0 0 var(--size__xs) hsl(var(--brand) / 0.375);
   }
   figure {
     overflow: hidden;
@@ -114,7 +114,7 @@
   }
   figcaption {
     @media (max-width: 29rem) {
-      border-top: var(--size__xxs) solid hsla(var(--brand), 0.25);
+      border-top: var(--size__xxs) solid hsl(var(--brand) / 0.25);
     }
     @media (min-width: 29rem) {
       padding: var(--size__l);
@@ -124,7 +124,7 @@
     }
   }
   .project__link {
-    border-bottom: var(--size__xxs) solid hsla(var(--brand), 0.25);
+    border-bottom: var(--size__xxs) solid hsl(var(--brand) / 0.25);
     svg {
       margin-left: var(--size__s);
       opacity: 0.5;
@@ -181,22 +181,22 @@
 
 .detail {
   p a {
-    border-color: hsla(var(--brand), 0.25);
+    border-color: hsl(var(--brand) / 0.25);
     &:focus,
     &:hover {
-      color: hsl(var(--brand));
+      color: var(--color__base--ish);
     }
     &:focus-visible {
-      background-color: hsla(var(--brand), 0.0625);
-      box-shadow: 0 0 0 var(--size__xs) hsla(var(--brand), 0.125);
+      background-color: hsl(var(--brand) / 0.0625);
+      box-shadow: 0 0 0 var(--size__xs) hsl(var(--brand) / 0.125);
     }
   }
   hr {
-    background-color: hsla(var(--brand), 0.25);
+    background-color: hsl(var(--brand) / 0.25);
   }
   .grid {
-    background-color: hsla(var(--brand), 0.125);
-    border: var(--size__xxs) solid hsla(var(--brand), 0.25);
+    background-color: hsl(var(--brand) / 0.125);
+    border: var(--size__xxs) solid hsl(var(--brand) / 0.25);
     border-radius: var(--size__m);
     grid-column: 1/-1;
     justify-items: center;
@@ -215,7 +215,7 @@
         img:first-child {
           display: none;
         }
-        img:nth-of-type(2) {
+        img:last-child {
           display: block !important;
         }
       }

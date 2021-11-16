@@ -1,8 +1,4 @@
 ---
-title: Hypothesis • Jared Pendergraft
-description: Pattern library for the popular web-annotation tool that lets you annotate the web, with anyone, anywhere
-img: https://images.ctfassets.net/cuehicrlqnvu/qX6yRnD48X16Gf2qcFuKW/e69e79b7d131ed0b9d1e375d31ecffbc/hypothesis-feature-light.jpg?h=630&w=1200&fit=fill&f=face
-slug: /projects/hypothesis/
 layout: layouts/base.njk
 class: detail padding__top--m
 imgBlock1:
@@ -45,7 +41,11 @@ imgBlock3:
     },
   ]
 eleventyComputed:
-  style: "--brand: {{ projects |  projectHue('Hypothesis') }}"
+  description: "{{ (projects | filteredProject('Hypothesis')).description }}"
+  img: "{{ (projects | filteredProject('Hypothesis')).img }}?h=630&w=1200&fit=fill&f=face"
+  slug: "/projects/{{ (projects | filteredProject('Hypothesis')).slug }}/"
+  style: "--brand: {{ (projects | filteredProject('Hypothesis')).hue }}"
+  title: "{{ (projects | filteredProject('Hypothesis')).name }} • Jared Pendergraft"
 ---
 
 {% ProjectHeader projects |  filteredProject('Hypothesis') %}
