@@ -70,7 +70,11 @@ body > footer {
 
 body > header a[aria-current="page"] {
   color: var(--color__base);
-  border-bottom: calc(var(--size__xs) / 2) solid var(--color__highlight--semi);
+  text-decoration-color: var(--color__highlight--mid);
+  text-decoration-thickness: calc(var(--size__xxs) * 2);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: var(--size__xs);
 }
 
 h1 {
@@ -103,6 +107,13 @@ nav button {
     background-color: var(--color__highlight--ghost);
     box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
   }
+}
+
+p a {
+  text-decoration-color: var(--color__highlight--mid);
+  text-decoration-thickness: calc(var(--size__xxs) * 2);
+  text-decoration-style: wavy;
+  text-underline-offset: var(--size__xs);
 }
 
 nav a,

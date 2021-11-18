@@ -124,7 +124,11 @@
     }
   }
   .project__link {
-    border-bottom: var(--size__xxs) solid hsl(var(--brand) / 0.25);
+    text-decoration-color: hsl(var(--brand) / 0.5);
+    text-decoration-thickness: calc(var(--size__xxs) * 2);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: var(--size__xs);
     svg {
       margin-left: var(--size__s);
       opacity: 0.5;
@@ -181,7 +185,7 @@
 
 .detail {
   p a {
-    border-color: hsl(var(--brand) / 0.25);
+    text-decoration-color: hsl(var(--brand) / 0.5);
     &:focus,
     &:hover {
       color: var(--color__base--ish);
