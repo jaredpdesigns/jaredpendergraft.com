@@ -20,6 +20,11 @@ function setTheme() {
   root.setAttribute("data-theme", localStorage.getItem("theme"));
 }
 
+function toggleColophon() {
+  let colophon = document.getElementsByTagName("dialog")[0];
+  colophon.toggleAttribute("open");
+}
+
 window.onload = () => {
   getTheme();
   root.classList.add("loaded");

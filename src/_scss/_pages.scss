@@ -124,6 +124,7 @@
     }
   }
   .project__link {
+    font-weight: 600;
     text-decoration-color: hsl(var(--brand) / 0.5);
     text-decoration-thickness: calc(var(--size__xxs) * 2);
     text-decoration-line: underline;
@@ -312,5 +313,60 @@
     font-size: var(--type__size--xl);
     line-height: clamp(2rem, var(--type__size--target), 2.5rem);
     margin-top: var(--size__m) !important;
+  }
+}
+
+.colophon {
+  --height: calc(100vh - var(--size__xxxl));
+  display: none;
+  grid-template-rows: auto 1fr;
+  left: 50%;
+  max-height: var(--height);
+  max-width: calc(100vw - var(--size__l));
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 100;
+  @media (min-width: 63rem) {
+    max-width: var(--width__l);
+  }
+  &[open] {
+    display: block;
+  }
+  a {
+    font-weight: 600;
+    text-decoration-color: var(--color__highlight--mid);
+    text-decoration-thickness: calc(var(--size__xxs) * 2);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: var(--size__xs);
+  }
+  button {
+    transition: color 0.375s ease-in;
+    &:focus,
+    &:hover {
+      color: var(--color__base--mid);
+    }
+    &:focus-visible {
+      box-shadow: inset 0 0 0 var(--size__xs) var(--color__highlight--semi);
+    }
+  }
+  > section {
+    max-height: calc(var(--height) - var(--size__xxl));
+    @media (min-width: 63rem) {
+      --columnWidth: 25rem;
+    }
+  }
+  > section section:first-child {
+    grid-column: 1/-1;
+    code {
+      font-size: var(--type__size--xs);
+      line-height: var(--type__linehight--xs);
+    }
+    > section {
+      --columnWidth: 15rem;
+      column-gap: var(--size__l);
+      row-gap: var(--size__s);
+    }
   }
 }

@@ -68,6 +68,10 @@ body > footer {
   }
 }
 
+body > header a {
+  font-weight: 600;
+}
+
 body > header a[aria-current="page"] {
   color: var(--color__base);
   text-decoration-color: var(--color__highlight--mid);
@@ -101,8 +105,9 @@ h5 {
 }
 
 p a,
+li a,
 nav a,
-nav button {
+footer button {
   &:focus-visible {
     background-color: var(--color__highlight--ghost);
     box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
@@ -110,6 +115,7 @@ nav button {
 }
 
 p a {
+  font-weight: 600;
   text-decoration-color: var(--color__highlight--mid);
   text-decoration-thickness: calc(var(--size__xxs) * 2);
   text-decoration-style: wavy;
@@ -117,7 +123,7 @@ p a {
 }
 
 nav a,
-nav button {
+footer button {
   transition: color 0.375s ease-in;
   &:focus,
   &:hover {

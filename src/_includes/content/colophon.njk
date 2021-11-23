@@ -1,0 +1,35 @@
+<section class="oomph__v--m">
+  <h4>Colors</h4>
+  {% set colors = ["base", "base--ish", "base--mid", "base--semi", "base--light", "base--ghost", "highlight", "highlight--ish", "highlight--mid", "highlight--semi", "highlight--light", "highlight--ghost", "contrast", "contrast--extra"] %}
+  <section class="flow__grid flow__align--v-start flow__grid--columns-auto">
+    {% for color in colors %}
+      <span class="flow__grid flow__align--h-start flow__align--v-center flow__direction--column flow__gap--xs">
+        <span class="border__all color__border--base--light color__bg--{{ color}} flow__inline flow__size--h-xl flow__size--w-xl margin__right--xs radius__all"></span>
+        <code>{{ color }}</code>
+      </span>
+    {% endfor %}
+  </section>
+</section>
+<section class="oomph__v--m">
+  <h4>Typography</h4>
+  <ul>
+    <li>
+      <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/degular">Degular</a> by OH no Type Company
+  </li>
+    <li>
+      <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/obviously">Obviously</a> by OH no Type Company
+  </li>
+    <li>
+      <a rel="noopener" target="_blank" href="https://www.boldmonday.com/typeface/dico/">Dico Mono</a> by Bold Monday
+  </li>
+  </ul>
+</section>
+<section class="oomph__v--m">
+  <h4>Tooling</h4>
+  <ul>
+    <li>Built using <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>
+    </li>
+    <li>Hosted on <a rel="noopener" target="_blank" href="https://www.netlify.com/">Netlify</a>
+    </li>
+  </ul>
+</section>
