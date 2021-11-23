@@ -68,7 +68,8 @@ body > footer {
   }
 }
 
-body > header a {
+body > header a,
+footer button {
   font-weight: 600;
 }
 
@@ -104,6 +105,10 @@ h5 {
   font-weight: 600;
 }
 
+p {
+  hyphens: auto;
+}
+
 p a,
 li a,
 nav a,
@@ -119,7 +124,6 @@ p a {
   text-decoration-color: var(--color__highlight--mid);
   text-decoration-thickness: calc(var(--size__xxs) * 2);
   text-decoration-style: wavy;
-  text-underline-offset: var(--size__xs);
 }
 
 nav a,
