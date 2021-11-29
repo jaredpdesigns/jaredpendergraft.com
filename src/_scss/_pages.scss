@@ -247,14 +247,15 @@
       > section > p {
         &:first-child:before,
         &:last-child:after {
-          color: var(--color__highlight--semi);
+          color: var(--color__highlight--mid);
+          font-family: var(--type__family--secondary);
           font-size: var(--type__size--xl);
-          font-weight: 600;
+          font-weight: 700;
           line-height: var(--type__lineheight--m);
         }
         &:first-child:before {
-          content: "”";
-          margin-left: calc(var(--size__s) * -1);
+          content: "“";
+          margin-left: calc((var(--size__s) + var(--size__xs)) * -1);
         }
         &:last-child:after {
           content: "”";

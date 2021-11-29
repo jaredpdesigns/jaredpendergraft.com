@@ -1,7 +1,6 @@
 :root {
   --type__family--primary: degular-text, sans-serif;
-  --type__family--secondary: obviously, sans-serif;
-  --type__family--secondary-narrow: obviously-narrow, sans-serif;
+  --type__family--secondary: swear-display, serif;
   --type__family--tertiary: dico-mono, mono;
   &[data-theme="dark"] {
     @media screen {
@@ -12,10 +11,6 @@
       --shadow__value: 0.75;
     }
   }
-}
-
-.type__family--secondary-narrow {
-  font-family: var(--type__family--secondary-narrow);
 }
 
 body {
@@ -68,8 +63,7 @@ body > footer {
   }
 }
 
-body > header a,
-footer button {
+body > header a {
   font-weight: 600;
 }
 
@@ -84,10 +78,15 @@ body > header a[aria-current="page"] {
 
 h1 {
   color: var(--color__highlight);
+  font-weight: 800;
+  @media (min-width: 79rem) {
+    font-size: var(--type__size--xxxxl);
+    line-height: var(--type__lineheight--xxxxl);
+  }
 }
 
 h1,
-h3 {
+h2 {
   font-family: var(--type__family--secondary);
 }
 
@@ -98,11 +97,11 @@ h5 {
   color: var(--color__base--ish);
 }
 
-h2,
+h3,
 h4,
-h5 {
-  font-family: var(--type__family--secondary-narrow);
-  font-weight: 600;
+h5,
+body > header > nav > a:first-child strong {
+  font-weight: 800;
 }
 
 p {
