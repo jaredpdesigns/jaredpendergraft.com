@@ -9,44 +9,55 @@ module.exports = function (item) {
     <section class="padding__left--s padding__right--s padding__top--s">
     <picture>
     <source
-      media="(min-width: 1em)"
-      srcset="${item.img}?h=400&w=640&fm=webp 400w, ${
+  type="image/avif"
+  srcset="${item.img}?h=200&w=320&fm=avif 320w, ${
     item.img
-  }?h=200&w=320&fm=webp 100w"
-      sizes="33.3vw"
-      type="image/webp"
-    />
-    <img
-      class="radius__tl--xs radius__tr--xs width__full"
-      loading="lazy"
-      decoding="async"
-      src="${item.img}?h=200&w=320"
-      srcset="${item.img}?h=400&w=640 2x"
-      alt="${item.name} featured image"
-      height="200"
-      width="320"
-    />
+  }?h=400&w=640&fm=avif 480w, ${item.img}?h=600&w=960&fm=avif 640w"
+  sizes="(max-width: 480px) 100vw, 480px"
+/>
+<source
+  type="image/webp"
+  srcset="${item.img}?h=200&w=320&fm=webp 320w, ${
+    item.img
+  }?h=400&w=640&fm=webp 480w, ${item.img}?h=600&w=960&fm=webp 640w"
+  sizes="(max-width: 480px) 100vw, 480px"
+/>
+<img
+  class="radius__tl--xs radius__tr--xs width__full"
+  srcset="${item.img}?h=200&w=320 320w, ${item.img}?h=400&w=640 480w, ${
+    item.img
+  }?h=600&w=960 640w"
+  sizes="(max-width: 480px) 100vw, 480px"
+  src="${item.img}?h=160&w=160"
+  alt="${item.name} featured image"
+  decoding="async"
+  height="200"
+  width="320"
+/>
   </picture>
   ${
     item.imgDark
-      ? `<picture style="display: none">
-  <source
-    media="(min-width: 1em)"
-    srcset="${item.imgDark}?h=400&w=640&fm=webp 400w, ${item.imgDark}?h=200&w=320&fm=webp 100w"
-    sizes="33.3vw"
-    type="image/webp"
-  />
-  <img
-    class="radius__tl--xs radius__tr--xs width__full"
-    loading="lazy"
-    decoding="async"
-    src="${item.imgDark}?h=200&w=320"
-    srcset="${item.imgDark}?h=400&w=640 2x"
-    alt="${item.name} featured image"
-    height="200"
-    width="320"
-  />
-</picture>`
+      ? `<picture style="display: none"><source
+      type="image/avif"
+      srcset="${item.imgDark}?h=200&w=320&fm=avif 320w, ${item.imgDark}?h=400&w=640&fm=avif 480w, ${item.imgDark}?h=600&w=960&fm=avif 640w"
+      sizes="(max-width: 480px) 100vw, 480px"
+    />
+    <source
+      type="image/webp"
+      srcset="${item.imgDark}?h=200&w=320&fm=webp 320w, ${item.imgDark}?h=400&w=640&fm=webp 480w, ${item.imgDark}?h=600&w=960&fm=webp 640w"
+      sizes="(max-width: 480px) 100vw, 480px"
+    />
+    <img
+      class="radius__tl--xs radius__tr--xs width__full"
+      srcset="${item.imgDark}?h=200&w=320 320w, ${item.imgDark}?h=400&w=640 480w, ${item.imgDark}?h=600&w=960 640w"
+      sizes="(max-width: 480px) 100vw, 480px"
+      src="${item.imgDark}?h=160&w=160"
+      alt="${item.name} featured image"
+      decoding="async"
+      height="200"
+      width="320"
+    />
+    </picture>`
       : ``
   }
 </section>

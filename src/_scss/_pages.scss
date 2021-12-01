@@ -50,6 +50,9 @@
         transition: color 0.375s ease-in;
       }
     }
+    h3 {
+      transform: translateY(calc(var(--size__xs) / 2));
+    }
   }
 }
 
@@ -121,6 +124,15 @@
       padding: var(--size__l);
       > * + * {
         margin-top: var(--size__l);
+      }
+    }
+    h2 {
+      font-size: var(--type__size--xxxl);
+      font-weight: 800;
+      line-height: var(--type__lineheight--xxxl);
+      @media (min-width: 79rem) {
+        font-size: var(--type__size--xxxxl);
+        line-height: var(--type__lineheight--xxxxl);
       }
     }
   }
