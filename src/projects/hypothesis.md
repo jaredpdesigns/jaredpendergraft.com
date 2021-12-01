@@ -43,7 +43,6 @@ imgBlock3:
 eleventyComputed:
   description: "{{ (projects | filteredProject('Hypothesis')).description }}"
   img: "{{ (projects | filteredProject('Hypothesis')).img }}?h=630&w=1200&fit=fill&f=face"
-  slug: "/projects/{{ (projects | filteredProject('Hypothesis')).slug }}/"
   style: "--brand: {{ (projects | filteredProject('Hypothesis')).hue }}"
   title: "{{ (projects | filteredProject('Hypothesis')).name }} • Jared Pendergraft"
 ---

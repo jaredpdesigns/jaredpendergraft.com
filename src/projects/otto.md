@@ -1,8 +1,4 @@
 ---
-title: OTTO Health • Jared Pendergraft
-description: Video consultation application for connecting providers to patients, practice administration and scheduling
-img: https://images.ctfassets.net/cuehicrlqnvu/4J4i7bCxGu0rKWiWiGRb4o/f90b537a593c03a64a8f70592449a3a8/otto-featured-light.jpg?h=630&w=1200&fit=fill&f=face
-slug: /projects/Otto/
 layout: layouts/base.njk
 class: detail padding__top--m
 imgBlock1:
@@ -47,7 +43,6 @@ imgBlock3:
 eleventyComputed:
   description: "{{ (projects | filteredProject('OTTO Health')).description }}"
   img: "{{ (projects | filteredProject('OTTO Health')).img }}?h=630&w=1200&fit=fill&f=face"
-  slug: "/projects/{{ (projects | filteredProject('OTTO Health')).slug }}/"
   style: "--brand: {{ (projects | filteredProject('OTTO Health')).hue }}"
   title: "{{ (projects | filteredProject('OTTO Health')).name }} • Jared Pendergraft"
 ---

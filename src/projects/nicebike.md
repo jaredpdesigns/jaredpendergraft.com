@@ -30,7 +30,6 @@ imgBlock2:
 eleventyComputed:
   description: "{{ (projects | filteredProject('Nice Bike')).description }}"
   img: "{{ (projects | filteredProject('Nice Bike')).img }}?h=630&w=1200&fit=fill&f=face"
-  slug: "/projects/{{ (projects | filteredProject('Nice Bike')).slug }}/"
   style: "--brand: {{ (projects | filteredProject('Nice Bike')).hue }}"
   title: "{{ (projects | filteredProject('Nice Bike')).name }} • Jared Pendergraft"
 ---

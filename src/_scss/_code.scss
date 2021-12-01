@@ -1,0 +1,35 @@
+.code article {
+  pre,
+  blockquote {
+    margin-left: calc(var(--size__m) * -1);
+    margin-right: calc(var(--size__m) * -1);
+  }
+}
+
+.hangingPunctuation article {
+  position: relative;
+  &:before {
+    border-left: var(--size__xxs) dashed var(--color__base--light);
+    content: "";
+    grid-column: 2;
+    display: block;
+    height: calc(100% + (var(--size__xl) * 2));
+    left: 0;
+    top: calc(var(--size__xl) * -1);
+    position: absolute;
+  }
+}
+.hung {
+  &__double {
+    text-indent: -0.75ch;
+    &--fancy {
+      text-indent: -0.75ch;
+    }
+  }
+  &__single {
+    text-indent: -0.375ch;
+    &--fancy {
+      text-indent: -0.375ch;
+    }
+  }
+}

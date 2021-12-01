@@ -39,8 +39,6 @@ article {
   > * {
     grid-column: 2;
   }
-  > * + h1,
-  > h1 + *,
   > * + h2,
   > h2 + *,
   > * + h3,
@@ -69,16 +67,17 @@ body > header a {
 
 body > header a[aria-current="page"] {
   color: var(--color__base);
-  text-decoration-color: var(--color__highlight--mid);
+  text-decoration-color: var(--color__highlight--semi);
   text-decoration-thickness: calc(var(--size__xxs) * 2);
   text-decoration-line: underline;
-  text-decoration-style: wavy;
   text-underline-offset: var(--size__xs);
 }
 
 h1 {
   color: var(--color__highlight);
+  font-size: var(--type__size--xxxl);
   font-weight: 800;
+  line-height: var(--type__lineheight--xxxl);
   @media (min-width: 79rem) {
     font-size: var(--type__size--xxxxl);
     line-height: var(--type__lineheight--xxxxl);
@@ -120,9 +119,8 @@ footer button {
 
 p a {
   font-weight: 600;
-  text-decoration-color: var(--color__highlight--mid);
+  text-decoration-color: var(--color__highlight--semi);
   text-decoration-thickness: calc(var(--size__xxs) * 2);
-  text-decoration-style: wavy;
 }
 
 nav a,
@@ -132,4 +130,11 @@ footer button {
   &:hover {
     color: var(--color__highlight);
   }
+}
+
+code,
+pre {
+  --color__primary: hsl(260deg 64% 75%);
+  --color__secondary: hsl(190deg 64% 75%);
+  --color__tertiary: hsl(158deg 90% 75%);
 }

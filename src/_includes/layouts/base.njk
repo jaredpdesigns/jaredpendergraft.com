@@ -14,11 +14,12 @@
     <meta property="og:site_name" content="Jared Pendergraft">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jaredpendergraft.com{{ slug }}">
+    <meta property="og:url" content="https://jaredpendergraft.com{{ page.url }}">
     <meta name="twitter:card" content="photo">
     <meta name="theme-color" content="hsl(158, 32%, 38%)">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" alternate>
+    <link rel="canonical" href="https://jaredpendergraft.com{{ page.url }}">
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="preload" href="https://unpkg.com/@jaredpdesigns/pasta@latest/pasta.css" as="style">
     <link rel="stylesheet" href="https://unpkg.com/@jaredpdesigns/pasta@latest/pasta.css">
@@ -26,12 +27,6 @@
     <link rel="preload" href="https://use.typekit.net/vkr4fst.css" as="style"/>
     <link rel="stylesheet" href="https://use.typekit.net/vkr4fst.css"/>
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
-    {% set js %}
-    {% include "_scripts.js" %}
-    {% endset %}
-    <script>
-      {{ js | jsmin | safe }}
-    </script>
   </head>
   <body class="color__bg--contrast flow__grid flow__align--v-start">
     <header class="border__bottom color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
@@ -42,11 +37,15 @@
         <section class="color__type--base--ish flow__inline flow__gap--m type__size--m-xl type__weight--semibold">
           <a href="/" {% if page.url === '/' %} aria-current="page"{% endif %}>About</a>
           <a href="/projects/" {% if page.url.includes('projects') %} aria-current="page"{% endif %}>Projects</a>
-          <a href="/hire/" {% if page.url.includes('hire') or page.url.includes('clients') %} aria-current="page"{% endif %}>Hire Me</a>
+          <a href="/code/" {% if (page.url.includes('code')) or (page.url.includes('tags')) %} aria-current="page"{% endif %}>Code</a>
+          <a href="/hire/" {% if page.url.includes('hire') or page.url.includes('clients') %} aria-current="page"{% endif %}>Hire</a>
         </section>
       </nav>
     </header>
-    <main class="{{ class }} flow__grid flow__align--v-start padding__bottom--xl padding__top--xl width__full" style="{{ style }}">
+    <main class="{{ class }} flow__grid flow__align--v-start padding__bottom--xl padding__top--xl width__full"{% if style %} style="{{ style }}{% endif %}">
+      {% if tags %}
+        {% Tags tags %}
+      {% endif %}
       <article class="flow__grid oomph__v--l">
         {{ content | safe }}
       </article>
@@ -55,39 +54,47 @@
       <header class="border__bottom color__border--base--light flow__flex flow__align--h-between flow__align--v-center">
         <p class="color__type--base--ish  flow__flex--grow  padding__left--l padding__right--m">
           <strong>Colophon</strong>
-
         </p>
         <button class="color__type--base--semi  flow__inline flow__align--h-center flow__align--v-center flow__flex--shrink-no flow__size--h-xxl flow__size--w-xxl radius__xs" onclick="toggleColophon()" title="Close website colophon">
           {% Icon 'cancel' %}
         </button>
-        <button></header>
-        <section class="flow__grid flow__align--v-start flow__grid--columns-auto flow__gap--l overflow__x--hidden overflow__y--auto padding__bottom--l padding__left--l padding__right--m padding__top--m">
-          {% include "content/colophon.njk" %}
-        </section>
-      </dialog>
-      <footer class="border__top color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
-        <section class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
-          <p class="color__type--base--ish flow__grid flow__align--v-center flow__direction--column flow__gap--m type__size--s-m">
-            <button class="flow__grid flow__align--v-center flow__direction--column flow__gap--xs flow__size--h-xl radius__xs" onclick="toggleColophon()" title="View website colophon">
-              {% Icon 'code' %}Colophon
+      </header>
+      <section class="flow__grid flow__align--v-start flow__grid--columns-auto flow__gap--l overflow__x--hidden overflow__y--auto padding__bottom--l padding__left--l padding__right--m padding__top--m">
+        {% include "content/colophon.njk" %}
+      </section>
+    </dialog>
+    <footer class="border__top color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
+      <section class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
+        <p class="color__type--base--ish flow__grid flow__align--v-center flow__direction--column flow__gap--m type__size--s-m">
+          <button class="flow__grid flow__align--v-center flow__direction--column flow__gap--xs flow__size--h-xl radius__xs" onclick="toggleColophon()" title="View website colophon">
+            {% Icon 'code' %}Colophon
           </button>
-            <span class="flow__grid flow__align--v-center flow__direction--column flow__gap--xs">{% Icon 'pineapple' %} Made in Hawaiʻi</span>
-          </p>
-          <nav class="color__type--base--ish flow__inline flow__gap--s">
-            <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?" title="Send me an email">
-              {% Icon 'email' %}
-            </a>
-            <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="https://twitter.com/jaredpdesigns" title="Follow me on Twitter" target="_blank" rel="noopener">
-              {% Icon 'twitter' %}
-            </a>
-            <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="https://dribbble.com/jaredpdesigns" title="Follow me on Dribbble" target="_blank" rel="noopener">
-              {% Icon 'dribbble' %}
-            </a>
-            <button class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" onclick="setTheme()" title="Toggle website theme">
-              {% Icon 'contrast' %}
-            </button>
-          </nav>
-        </section>
-      </footer>
-    </body>
-  </html>
+          <span class="flow__grid flow__align--v-center flow__direction--column flow__gap--xs">{% Icon 'pineapple' %} Made in Hawaiʻi</span>
+        </p>
+        <nav class="color__type--base--ish flow__inline flow__gap--s">
+          <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="mailto:hello@jaredpendergraft.com?subject=Hey Jared, love the site, how’s it going?" title="Send me an email">
+            {% Icon 'email' %}
+          </a>
+          <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="https://twitter.com/jaredpdesigns" title="Follow me on Twitter" target="_blank" rel="noopener">
+            {% Icon 'twitter' %}
+          </a>
+          <a class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" href="https://dribbble.com/jaredpdesigns" title="Follow me on Dribbble" target="_blank" rel="noopener">
+            {% Icon 'dribbble' %}
+          </a>
+          <button class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xl flow__size--w-xl radius__xs" onclick="setTheme()" title="Toggle website theme">
+            {% Icon 'contrast' %}
+          </button>
+        </nav>
+      </section>
+    </footer>
+  </body>
+  {% set js %}
+  {% include "_scripts.js" %}
+  {% if jsExtra %}
+    {% include jsExtra %}
+  {% endif %}
+  {% endset %}
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+</html>

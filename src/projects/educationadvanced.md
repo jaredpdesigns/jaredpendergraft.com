@@ -43,7 +43,6 @@ imgBlock3:
 eleventyComputed:
   description: "{{ (projects | filteredProject('Education Advanced')).description }}"
   img: "{{ (projects | filteredProject('Education Advanced')).img }}?h=630&w=1200&fit=fill&f=face"
-  slug: "/projects/{{ (projects | filteredProject('Education Advanced')).slug }}/"
   style: "--brand: {{ (projects | filteredProject('Education Advanced')).hue }}"
   title: "{{ (projects | filteredProject('Education Advanced')).name }} • Jared Pendergraft"
 ---

@@ -59,6 +59,9 @@
   @media (min-width: 89rem) {
     --columnWidth: 35rem;
   }
+  &__item {
+    max-width: 39rem;
+  }
 }
 
 .project__header {
@@ -125,4 +128,8 @@
       grid-template-columns: auto 1fr;
     }
   }
+}
+
+.tags {
+  grid-column: 2;
 }

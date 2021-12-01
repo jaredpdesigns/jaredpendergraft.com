@@ -20,6 +20,7 @@ module.exports = function (item) {
       <img
         class="overflow__hidden radius__tl--xs radius__tr--xs width__full"
         loading="lazy"
+        decoding="async"
         src="${item.img}?h=200&w=320"
         srcset="${item.img}?h=400&w=640 2x"
         alt="${item.name} featured image"
@@ -43,6 +44,7 @@ module.exports = function (item) {
     <img
       class="overflow__hidden radius__tl--xs radius__tr--xs width__full"
       loading="lazy"
+      decoding="async"
       src="${item.imgDark}?h=200&w=320"
       srcset="${item.imgDark}?h=400&w=640 2x"
       alt="${item.name} featured image"

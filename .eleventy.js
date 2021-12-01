@@ -7,7 +7,8 @@ const markdownItAnchor = require("markdown-it-anchor");
 
 // Components
 const componentsDir = "src/_includes/components";
-const ClientGrid = require(`./${componentsDir}/client_grid.js`);
+const Client = require(`./${componentsDir}/client_grid.js`);
+const Code = require(`./${componentsDir}/code_grid.js`);
 const Gallery = require(`./${componentsDir}/gallery.js`);
 const Grid = require(`./${componentsDir}/grid.js`);
 const Icon = require(`./${componentsDir}/icon.js`);
@@ -18,6 +19,7 @@ const ProjectGallery = require(`./${componentsDir}/project_gallery.js`);
 const ProjectGrid = require(`./${componentsDir}/project_grid.js`);
 const ProjectHeader = require(`./${componentsDir}/project_header.js`);
 const Recommendation = require(`./${componentsDir}/recommendation.js`);
+const Tags = require(`./${componentsDir}/tags.js`);
 
 module.exports = (eleventyConfig) => {
   // Shortcodes
@@ -25,7 +27,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("Markdown", (content) =>
     markdown.render(content)
   );
-  eleventyConfig.addShortcode("Client", ClientGrid);
+  eleventyConfig.addShortcode("Client", Client);
+  eleventyConfig.addShortcode("Code", Code);
   eleventyConfig.addShortcode("Icon", Icon);
   eleventyConfig.addShortcode("Process", Process);
   eleventyConfig.addShortcode("ProjectGallery", ProjectGallery);
@@ -34,6 +37,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("ProjectDetailCaption", ProjectDetailCaption);
   eleventyConfig.addShortcode("ProjectHeader", ProjectHeader);
   eleventyConfig.addShortcode("Recommendation", Recommendation);
+  eleventyConfig.addShortcode("Tags", Tags);
   eleventyConfig.addPairedShortcode("Gallery", Gallery);
   eleventyConfig.addPairedShortcode("Grid", Grid);
 

@@ -1,8 +1,9 @@
 .profile {
   article > figure {
     clip-path: url(#blobby);
-    @media (min-width: 29rem) {
-      inline-size: 20rem;
+    max-width: var(--width__xs);
+    @media (min-width: 79rem) {
+      max-width: var(--width__s);
     }
     img {
       aspect-ratio: 1/1;
@@ -128,7 +129,6 @@
     text-decoration-color: hsl(var(--brand) / 0.5);
     text-decoration-thickness: calc(var(--size__xxs) * 2);
     text-decoration-line: underline;
-    text-decoration-style: wavy;
     text-underline-offset: var(--size__xs);
     svg {
       margin-left: var(--size__s);
@@ -179,6 +179,7 @@
     &__item {
       &.featured {
         grid-column: 1/-1;
+        max-width: 100%;
       }
     }
   }
@@ -215,7 +216,7 @@
       --columnWidth: var(--width__m);
     }
     &__item {
-      max-width: 40rem;
+      max-width: 100%;
       [data-theme="dark"] & {
         img:first-child {
           display: none;
@@ -266,6 +267,21 @@
 }
 
 .clients {
+  .grid {
+    grid-column: 1/-1;
+  }
+  .grid__item {
+    transition: transform 0.375s ease-in;
+    &:hover {
+      transform: scale(1.0125);
+    }
+    &:focus-visible {
+      box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
+    }
+  }
+}
+
+.code {
   .grid {
     grid-column: 1/-1;
   }
@@ -336,10 +352,9 @@
   }
   a {
     font-weight: 600;
-    text-decoration-color: var(--color__highlight--mid);
+    text-decoration-color: var(--color__highlight--semi);
     text-decoration-thickness: calc(var(--size__xxs) * 2);
     text-decoration-line: underline;
-    text-decoration-style: wavy;
     text-underline-offset: var(--size__xs);
   }
   button {
