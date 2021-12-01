@@ -3,7 +3,7 @@
   <head>
     <title>{{ title }}</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="keywords" content="jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui">
     <meta name="author" content="Jared Pendergraft">
     <meta name="description" content="{{ description }}">
@@ -30,11 +30,11 @@
   </head>
   <body class="color__bg--contrast flow__grid flow__align--v-start">
     <header class="border__bottom color__border--highlight--light flow__grid padding__bottom--m padding__top--m width__full">
-      <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap">
-        <a href="/" class="color__type--base--ish type__size--m-xl type__weight--bold">
+      <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap type__size--m-xxxl">
+        <a href="/" class="color__type--base--ish">
           <strong>Jared Pendergraft</strong>
         </a>
-        <section class="color__type--base--ish flow__inline flow__gap--m type__size--m-xl type__weight--semibold">
+        <section class="color__type--base--ish flow__inline flow__gap--m type__weight--semibold">
           <a href="/" {% if page.url === '/' %} aria-current="page"{% endif %}>About</a>
           <a href="/projects/" {% if page.url.includes('projects') %} aria-current="page"{% endif %}>Projects</a>
           <a href="/code/" {% if (page.url.includes('code')) or (page.url.includes('tags')) %} aria-current="page"{% endif %}>Code</a>
@@ -42,7 +42,7 @@
         </section>
       </nav>
     </header>
-    <main class="{{ class }} flow__grid flow__align--v-start padding__bottom--xl padding__top--xl width__full"{% if style %} style="{{ style }}{% endif %}">
+    <main class="{{ class }} flow__grid flow__align--v-start notch padding__bottom--xl padding__top--xl width__full"{% if style %} style="{{ style }}{% endif %}">
       {% if tags %}
         {% Tags tags %}
       {% endif %}

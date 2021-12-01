@@ -69,6 +69,13 @@
   &--inner {
     background-color: hsl(var(--brand) / 0.125);
     border-color: hsl(var(--brand) / 0.25);
+    @media (min-width: 29rem) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media (min-width: 63rem) {
+      --columnCount: 2;
+    }
     h1 {
       color: var(--color__base--ish);
     }
@@ -102,13 +109,21 @@
       }
     }
     > section {
-      @media (max-width: 29rem) {
+      @media (max-width: 63rem) {
         border-top: var(--size__xxs) solid hsl(var(--brand) / 0.25);
       }
       @media (min-width: 29rem) {
         padding: var(--size__l);
         > * + * {
           margin-top: var(--size__l) !important;
+        }
+      }
+      @media (min-width: 63rem) {
+        > * {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: var(--width__m);
+          width: 100%;
         }
       }
     }

@@ -78,13 +78,13 @@ module.exports = function (item) {
       ? "flow__self--center oomph__v--m padding__all--m"
       : "oomph__v--m"
   }">
-  <h2 class="${item.featured ? "width__m" : ""}">${item.name}</h2>
-  <p class="${item.featured ? "type__size--l-l width__m" : ""}">${
+  <h2>${item.name}</h2>
+  <p class="${item.featured ? "type__size--l-l" : ""}">${
     item.description
   }</p>
   ${
     item.featured
-      ? `<section class="width__m"><p class="project__link flow__inline flow__align--v-center type__weight--semibold">View Project${Icon(
+      ? `<section><p class="project__link flow__inline flow__align--v-center type__weight--semibold">View Project${Icon(
           "arrow-right"
         )}</p></section>`
       : ""

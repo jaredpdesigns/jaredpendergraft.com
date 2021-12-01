@@ -2,7 +2,7 @@ module.exports = function (item) {
   const Icon = require("./icon.js");
   return `
 <header class="project__header padding__left--m padding__right--m width__xl">
-<section class="project__header--inner border__all flow__grid flow__align--v-stretch flow__grid--columns-auto overflow__hidden radius__m">
+<section class="project__header--inner border__all flow__grid flow__align--v-stretch flow__grid--columns-fixed overflow__hidden radius__m">
 <figure class="padding__left--s padding__right--s padding__top--s">
     <picture>
     <source
@@ -58,11 +58,11 @@ module.exports = function (item) {
     }
   </figure>
   <section class="flow__self--center oomph__v--m padding__all--m">
-    <h1 class="width__m">${item.name}</h1>
-    <p class="type__size--l-l width__m">${item.description}</p>
+    <h1>${item.name}</h1>
+    <p class="type__size--l-l">${item.description}</p>
     ${
       item.external
-        ? `<p class="width__m"><a class="flow__inline flow__align--v-center type__weight--semibold" href="${
+        ? `<p><a class="flow__inline flow__align--v-center type__weight--semibold" href="${
             item.external
           }" title="Visit ${
             item.name

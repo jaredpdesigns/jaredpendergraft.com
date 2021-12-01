@@ -4,6 +4,7 @@ module.exports = function (item) {
   <img
     class="width__full"
     loading="lazy"
+    decoding="async"
     src="${item.img}"
     alt="${item.title}"
     height="320"
@@ -14,6 +15,7 @@ module.exports = function (item) {
       ? `<img
   class="width__full"
   loading="lazy"
+  decoding="async"
   src="${item.imgDark}"
   alt="${item.title}"
   height="320"
