@@ -58,8 +58,8 @@ I’m looking for a creative position that offers challenges, collaboration, and
 Currently • Remote
 
 - Directs the user-experience and user-interface of multiple applications within the company.
-- Manages multiple design systems and provides thorough documentation and continous evolution of systems.
-- Builds static and interactive demos to test new ideas in mutiple environments.
+- Manages multiple design systems and provides thorough documentation and continuous evolution of systems.
+- Builds static and interactive demos to test new ideas in multiple environments.
 - Collaborates with Creative Director on multiple brand elements and creative projects.
 - Contributes to front-end development efforts for multiple applications within the company.
 
