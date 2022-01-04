@@ -1,5 +1,29 @@
 [
   {
+    "title": "Unicorn Battle T-Shirt Design & Logo Refresh",
+    "description": "<p>Jared Pendergraft was hired to design a “Unicorn Battle” t-shirt design featuring the Nice Bike unicorn and Blucifer. In addition, the unicorn was adapted for a new brand logo treatment.</p>",
+    "slug": "nice-bike-unicorn-battle-tshirt-design-and-logo-refresh",
+    "client": {
+      "name": "Nice Bike",
+      "street": "1875 S Broadway",
+      "city": "Denver",
+      "state": "CO",
+      "zip": 80210
+    },
+    "start": {
+      "month": "September",
+      "day": 1,
+      "year": 2021
+    },
+    "end": {
+      "month": "September",
+      "day": 17,
+      "year": 2021
+    },
+    "total": 300,
+    "type": "invoice"
+  },
+  {
     "title": "Wrappily General Site Upgrades",
     "description": "<p>Jared Pendergraft was hired to upgrade and make adjustments to the Shopify theme for Wrappily.</p>",
     "slug": "wrappily-general-site-upgrades",
