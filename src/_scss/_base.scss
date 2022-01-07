@@ -1,4 +1,7 @@
 :root {
+  --outline__offset: var(--size__xs);
+  --outline__size: calc(var(--size__xxs) * 2);
+  --outline__style: dotted;
   --type__family--primary: degular-text, sans-serif;
   --type__family--secondary: swear-display, serif;
   --type__family--tertiary: dico-mono, mono;
@@ -113,12 +116,9 @@ body > header > nav > a:first-child strong {
 }
 
 p a,
-li a,
-nav a,
-footer button {
+li a {
   &:focus-visible {
     background-color: var(--color__highlight--ghost);
-    box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
   }
 }
 

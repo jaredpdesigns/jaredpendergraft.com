@@ -11,10 +11,8 @@
     }
   }
   .gallery__item {
+    --outline__color: hsl(var(--brand) / 0.5);
     border-color: hsl(var(--brand) / 0.25);
-    &:focus-visible {
-      box-shadow: 0 0 0 var(--size__xs) hsl(var(--brand) / 0.375);
-    }
     figure > section {
       background-color: hsl(var(--brand));
       @media (min-width: 29rem) {
@@ -79,6 +77,7 @@
 }
 
 .projects .featured {
+  --outline__color: hsl(var(--brand) / 0.5);
   background-color: hsl(var(--brand) / 0.125);
   border-color: hsl(var(--brand) / 0.25);
   .loaded & {
@@ -92,9 +91,6 @@
     .project__link {
       color: var(--color__base--ish);
     }
-  }
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xs) hsl(var(--brand) / 0.375);
   }
   figure {
     overflow: hidden;
@@ -160,9 +156,6 @@
   .loaded & {
     transition: background-color 0.375s ease-in;
   }
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
-  }
   figure {
     @media (min-width: 29rem) {
       grid-template-columns: auto 1fr;
@@ -206,6 +199,7 @@
 
 .detail {
   p a {
+    --outline__color: hsl(var(--brand) / 0.5);
     text-decoration-color: hsl(var(--brand) / 0.5);
     &:focus,
     &:hover {
@@ -213,7 +207,6 @@
     }
     &:focus-visible {
       background-color: hsl(var(--brand) / 0.0625);
-      box-shadow: 0 0 0 var(--size__xs) hsl(var(--brand) / 0.125);
     }
   }
   hr {
@@ -294,9 +287,6 @@
     &:hover {
       transform: scale(1.0125);
     }
-    &:focus-visible {
-      box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
-    }
   }
 }
 
@@ -308,9 +298,6 @@
     transition: transform 0.375s ease-in;
     &:hover {
       transform: scale(1.0125);
-    }
-    &:focus-visible {
-      box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
     }
   }
 }
@@ -377,13 +364,14 @@
     text-underline-offset: var(--size__xs);
   }
   button {
+    --outline__offset: calc(var(--outline__size) * -1);
     transition: color 0.375s ease-in;
     &:focus,
     &:hover {
       color: var(--color__base--mid);
     }
     &:focus-visible {
-      box-shadow: inset 0 0 0 var(--size__xs) var(--color__highlight--semi);
+      background-color: var(--color__highlight--ghost);
     }
   }
   > section {
