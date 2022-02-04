@@ -2,6 +2,7 @@
   html {
     box-shadow: none;
     font-size: 75%;
+    print-color-adjust: exact;
   }
   body > header {
     padding-top: 0;
@@ -27,15 +28,20 @@
     > * + h1,
     > h1 + *,
     > * + h2,
-    > h2 + *,
-    > * + h3,
-    > * + hr {
+    > h2 + * {
+      margin-top: var(--size__m) !important;
+    }
+    > * + hr,
+    > * + h3 {
       margin-top: var(--size__l) !important;
+    }
+    h3 + p {
+      margin-top: 0 !important;
     }
   }
   li + li,
   ol ol {
-    margin-top: var(--size__m);
+    margin-top: 0 !important;
   }
 
   hr {
@@ -48,13 +54,34 @@
     position: relative;
   }
   .cv__recommendations > .grid {
-    grid-template-columns: none;
-    grid-gap: calc(var(--size__xxxl) * 2);
+    grid-gap: var(--size__xl);
+    grid-template-columns: 1fr min(75ch, calc(100% - var(--size__l) * 2)) 1fr;
+    margin-top: var(--size__xl);
     blockquote {
+      grid-column: 2;
       box-shadow: none;
-      &:last-child {
-        margin-top: calc(var(--size__xxxl) * -1);
+      &:first-child {
+        margin-bottom: calc(var(--size__xxxl) * 2);
       }
     }
+  }
+  #capabilities + ul,
+  #philosophies + ul,
+  #technologies + ul {
+    display: grid;
+    grid-column-gap: var(--size__xxxl);
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  #technologies + ul {
+    li:last-child {
+      grid-column: 1/-1;
+    }
+  }
+  #otto-health {
+    page-break-before: always;
+  }
+  .cv hr:nth-of-type(6) {
+    margin-top: calc(var(--size__xxxl) * 2) !important;
   }
 }
