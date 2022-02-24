@@ -55,12 +55,12 @@ I’m looking for a creative position that offers challenges, collaboration, and
 ### Education Advanced, Inc.
 
 *Director of UI/UX Development*\
-Currently • Remote
+2017–Currently • Remote
 
 - Directs the user-experience and user-interface of multiple applications within the company.
-- Manages multiple design systems and provides thorough documentation and continuous evolution of systems.
+- Manages complex design system for multiple products and provides thorough documentation that aids in the continuous evolution of the system.
+- Collaborates with multiple departments to deliver design solutions that support business goals.
 - Builds static and interactive demos to test new ideas in multiple environments.
-- Collaborates with Creative Director on multiple brand elements and creative projects.
 - Contributes to front-end development efforts for multiple applications within the company.
 
 ### OTTO Health
