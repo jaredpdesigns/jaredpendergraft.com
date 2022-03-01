@@ -26,7 +26,13 @@ function setTheme() {
 
 function toggleColophon() {
   let colophon = document.getElementsByTagName("dialog")[0];
+  colophon.addEventListener("keydown", (e) => {
+    if ((e.keyCode || e.which) === 27) {
+      colophon.removeAttribute("open");
+    }
+  });
   colophon.toggleAttribute("open");
+  colophon.focus();
 }
 
 window.onload = () => {

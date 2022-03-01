@@ -7,7 +7,17 @@
     }
     img {
       aspect-ratio: 1/1;
+      transform: scale(1.0125);
       width: 100%;
+      .loaded & {
+        animation: var(--animation);
+      }
+    }
+  }
+  article > * {
+    transform: translateY(calc(var(--size__m) * -1));
+    .loaded & {
+      animation: var(--animation);
     }
   }
   .gallery__item {
@@ -246,6 +256,24 @@
 }
 
 .cv {
+  article > {
+    h1,
+    p,
+    h2,
+    h3,
+    hr {
+      transform: translateY(calc(var(--size__m) * -1));
+      .loaded & {
+        animation: var(--animation);
+      }
+    }
+    ul {
+      transform: translateX(calc(var(--size__m) * -1));
+      .loaded & {
+        animation: var(--animation);
+      }
+    }
+  }
   h3 + p {
     margin-top: 0 !important;
   }
@@ -293,7 +321,22 @@
   }
 }
 
+.hire {
+  article > * {
+    transform: translateY(calc(var(--size__m) * -1));
+    .loaded & {
+      animation: var(--animation);
+    }
+  }
+}
+
 .code {
+  article {
+    transform: translateY(calc(var(--size__m) * -1));
+    .loaded & {
+      animation: var(--animation);
+    }
+  }
   .grid {
     grid-column: 1/-1;
   }
@@ -350,13 +393,15 @@
   max-height: var(--height);
   max-width: calc(100vw - var(--size__l));
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.9875);
   width: 100%;
   z-index: 100;
   @media (min-width: 63rem) {
     max-width: var(--width__l);
   }
   &[open] {
+    animation: var(--animation);
+    animation-name: slideIn;
     display: block;
   }
   a {

@@ -48,7 +48,11 @@
     flex: 1 0 auto;
     max-width: var(--size);
     scroll-snap-align: center; // This is what actually centers things
+    transform: translateX(calc(var(--size__m) * -1));
     width: 100%;
+    .loaded & {
+      animation: var(--animation);
+    }
   }
 }
 
@@ -61,11 +65,19 @@
   }
   &__item {
     max-width: 39rem;
+    transform: translateY(calc(var(--size__m) * -1));
+    .loaded & {
+      animation: var(--animation);
+    }
   }
 }
 
 .project__header {
   grid-column: 1/-1;
+  transform: translateY(calc(var(--size__m) * -1));
+  .loaded & {
+    animation: var(--animation);
+  }
   &--inner {
     background-color: hsl(var(--brand) / 0.125);
     border-color: hsl(var(--brand) / 0.25);
