@@ -11,9 +11,9 @@ profileImg: https://images.ctfassets.net/cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9f
 
 # Hello, It’s Nice to Meet You
 
-I’m a multi-disciplinary designer focusing on the *intersection of design and development*. I care deeply about how something works as much as its outward appearance and am always looking to *improve, optimize and scale my ideas*.
+I’m a multi-disciplinary designer focusing on the *intersection of design and development*—specifically *Design Systems* and how teams works together to build amazing products.
 
-I approach design challenges holistically, building solutions from beginning to end with *extensibility and modularity* in mind. I enjoy building out designs to fully functional front-end code—bridging the gap between design and development seamlessly.
+I care deeply about how something works as much as its outward appearance and am always looking to *improve, optimize and scale my ideas*. I approach design challenges holistically, building solutions from beginning to end with *extensibility and modularity* in mind.
 
 View [projects](/projects/) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 

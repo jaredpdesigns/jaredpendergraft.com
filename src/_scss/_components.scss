@@ -74,10 +74,6 @@
 
 .project__header {
   grid-column: 1/-1;
-  transform: translateY(calc(var(--size__m) * -1));
-  .loaded & {
-    animation: var(--animation);
-  }
   &--inner {
     background-color: hsl(var(--brand) / 0.125);
     border-color: hsl(var(--brand) / 0.25);
@@ -87,6 +83,19 @@
     }
     @media (min-width: 63rem) {
       --columnCount: 2;
+    }
+    h1,
+    p {
+      transform: translateY(calc(var(--size__m) * -1));
+      .loaded & {
+        animation: var(--animation);
+      }
+    }
+    p {
+      animation-delay: 0.125s;
+      &:nth-child(3) {
+        animation-delay: 0.1875s;
+      }
     }
     h1 {
       color: var(--color__base--ish);
@@ -114,9 +123,13 @@
       }
       img {
         aspect-ratio: 1400 / 900;
+        transform: scale(1.03125);
         @media (min-width: 29rem) {
           border-top-left-radius: var(--size__s);
           border-top-right-radius: var(--size__s);
+        }
+        .loaded & {
+          animation: var(--animation);
         }
       }
     }
@@ -150,6 +163,22 @@
 }
 
 .process {
+  transform: translateY(calc(var(--size__m) * -1));
+  .loaded & {
+    animation: var(--animation);
+  }
+  &:nth-of-type(2) {
+    animation-delay: 0.125s;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 0.25s;
+  }
+  &:nth-of-type(4) {
+    animation-delay: 0.375s;
+  }
+  &:nth-of-type(5) {
+    animation-delay: 0.5s;
+  }
   header {
     @media (min-width: 29rem) {
       grid-template-columns: auto 1fr;

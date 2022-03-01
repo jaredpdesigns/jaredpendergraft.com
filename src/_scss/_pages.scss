@@ -14,15 +14,22 @@
       }
     }
   }
-  article > * {
-    transform: translateY(calc(var(--size__m) * -1));
-    .loaded & {
-      animation: var(--animation);
-    }
+  article > p:nth-child(3) {
+    font-size: var(--type__size--l);
+    font-weight: 600;
   }
   .gallery__item {
     --outline__color: hsl(var(--brand) / 0.5);
     border-color: hsl(var(--brand) / 0.25);
+    &:nth-child(2) {
+      animation-delay: 0.125s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.25s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.375s;
+    }
     figure > section {
       background-color: hsl(var(--brand));
       @media (min-width: 29rem) {
@@ -139,6 +146,18 @@
         max-width: var(--width__m);
       }
     }
+    > * {
+      transform: translateY(calc(var(--size__m) * -1));
+      .loaded & {
+        animation: var(--animation);
+      }
+      &:nth-child(2) {
+        animation-delay: 0.125s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.1875s;
+      }
+    }
     h2 {
       font-size: var(--type__size--xxxl);
       font-weight: 800;
@@ -199,6 +218,15 @@
       --columnWidth: var(--width__m);
     }
     &__item {
+      &:nth-child(2) {
+        animation-delay: 0.125s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.25s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.375s;
+      }
       &.featured {
         grid-column: 1/-1;
         max-width: 100%;
@@ -239,6 +267,9 @@
     }
     &__item {
       max-width: 100%;
+      &:nth-child(2) {
+        animation-delay: 0.125s;
+      }
       [data-theme="dark"] & {
         img:first-child {
           display: none;
@@ -321,22 +352,7 @@
   }
 }
 
-.hire {
-  article > * {
-    transform: translateY(calc(var(--size__m) * -1));
-    .loaded & {
-      animation: var(--animation);
-    }
-  }
-}
-
 .code {
-  article {
-    transform: translateY(calc(var(--size__m) * -1));
-    .loaded & {
-      animation: var(--animation);
-    }
-  }
   .grid {
     grid-column: 1/-1;
   }
@@ -440,4 +456,8 @@
       row-gap: var(--size__s);
     }
   }
+}
+
+#my-creative-process {
+  scroll-margin: calc(var(--size__xxxl) * 2.5);
 }

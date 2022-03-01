@@ -79,9 +79,7 @@ module.exports = function (item) {
       : "oomph__v--m"
   }">
   <h2>${item.name}</h2>
-  <p class="${item.featured ? "type__size--l-l" : ""}">${
-    item.description
-  }</p>
+  <p class="${item.featured ? "type__size--l-l" : ""}">${item.description}</p>
   ${
     item.featured
       ? `<section><p class="project__link flow__inline flow__align--v-center type__weight--semibold">View Project${Icon(
