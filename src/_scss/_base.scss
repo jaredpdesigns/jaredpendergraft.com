@@ -1,5 +1,5 @@
 :root {
-  --animation: 0.5s in cubic-bezier(0.25, 0, 0.5, 1) forwards;
+  --animation: 0.75s defaultAnimation cubic-bezier(0.25, 0, 0.5, 1) forwards;
   --outline__offset: var(--size__xs);
   --outline__size: calc(var(--size__xxs) * 2);
   --outline__style: dotted;
@@ -158,14 +158,9 @@ pre .comment {
 }
 
 // Animations
-@keyframes in {
+@keyframes defaultAnimation {
   to {
-    transform: none;
-  }
-}
-
-@keyframes slideIn {
-  to {
-    transform: scale(1) translate(-50%, -50%);
+    opacity: var(--opacity, "1");
+    transform: var(--transform, "none");
   }
 }

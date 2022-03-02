@@ -45,14 +45,12 @@
   }
   &__item {
     --size: 50ch;
+    animation: var(--animation);
     flex: 1 0 auto;
     max-width: var(--size);
     scroll-snap-align: center; // This is what actually centers things
     transform: translateX(calc(var(--size__m) * -1));
     width: 100%;
-    .loaded & {
-      animation: var(--animation);
-    }
   }
 }
 
@@ -64,16 +62,17 @@
     --columnWidth: 35rem;
   }
   &__item {
+    animation: var(--animation);
     max-width: 39rem;
+    opacity: 0;
     transform: translateY(calc(var(--size__m) * -1));
-    .loaded & {
-      animation: var(--animation);
-    }
   }
 }
 
 .project__header {
+  animation: var(--animation);
   grid-column: 1/-1;
+  opacity: 0;
   &--inner {
     background-color: hsl(var(--brand) / 0.125);
     border-color: hsl(var(--brand) / 0.25);
@@ -86,10 +85,8 @@
     }
     h1,
     p {
+      animation: var(--animation);
       transform: translateY(calc(var(--size__m) * -1));
-      .loaded & {
-        animation: var(--animation);
-      }
     }
     p {
       animation-delay: 0.125s;
@@ -122,14 +119,13 @@
         }
       }
       img {
+        animation: var(--animation);
+        animation-delay: 0.125s;
         aspect-ratio: 1400 / 900;
         transform: scale(1.03125);
         @media (min-width: 29rem) {
           border-top-left-radius: var(--size__s);
           border-top-right-radius: var(--size__s);
-        }
-        .loaded & {
-          animation: var(--animation);
         }
       }
     }
@@ -163,10 +159,9 @@
 }
 
 .process {
+  animation: var(--animation);
+  opacity: 0;
   transform: translateY(calc(var(--size__m) * -1));
-  .loaded & {
-    animation: var(--animation);
-  }
   &:nth-of-type(2) {
     animation-delay: 0.125s;
   }
