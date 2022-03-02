@@ -145,6 +145,11 @@ pre {
   --color__tertiary: hsl(158deg 90% 75%);
 }
 
+pre .comment {
+  font-family: dico-mono-script, mono;
+  white-space: break-spaces;
+}
+
 .notch {
   @supports (padding: max(0px)) {
     padding-left: env(safe-area-inset-left);

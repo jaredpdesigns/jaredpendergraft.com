@@ -16,6 +16,8 @@ I love dark mode in projects and try and support it as often as I can. Forcing u
 
 ```js
 function getTheme() {
+	// First check if there is a preference already set
+  
   if (localStorage.getItem("theme") === null) {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("theme", "dark");
@@ -23,6 +25,8 @@ function getTheme() {
       localStorage.setItem("theme", "light");
     }
   }
+  // Adds an attribute to the root-level element in the page, in  this case the `html` tag
+  
   document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
 }
 ```
@@ -46,6 +50,8 @@ After implementing the data-attribute you can access this value in your CSS like
 After setting the theme by default it’s always a good idea to allow users to set their own preference if in fact they don’t want a dark theme experience. In my example, I would then append this function to a button click. Notice the <code>{% Icon 'contrast' %} icon</code> in the footer of this page.
 
 ```js
+// This function is attached a button’s `onclick` event
+
 function setTheme() {
   if (document.documentElement.getAttribute("data-theme") === "dark") {
     localStorage.setItem("theme", "light");

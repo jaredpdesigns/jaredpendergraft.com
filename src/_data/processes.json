@@ -1,27 +1,27 @@
 [
   {
-    "label": "Initial Discovery & Research",
-    "description": "Figure out what we’re building and what problems we’re trying to solve.",
+    "label": "Discovery & Research",
+    "description": "Identify what we’re building and see who else is doing awesome work in this space.",
     "img": "Research"
   },
   {
     "label": "Style & Tone",
-    "description": "Explore visual ideas and establish the voice of the project.",
+    "description": "Explore *our* version of a solution, how might it look and feel?",
     "img": "Style"
   },
   {
-    "label": "Present Ideas & Determine Constraints",
-    "description": "Finalize approval of visual direction and confirm what was designed can be built.",
+    "label": "Present Ideas",
+    "description": "Gather feedback, identify areas of improvement, and solidify shared vision.",
     "img": "Present"
   },
   {
-    "label": "Finalize Architecture & Build",
-    "description": "Confirm our design supports established content models and begin development.",
+    "label": "Identify Constraints",
+    "description": "Trim scope, limit features to clearest expression of the solution.",
     "img": "Build"
   },
   {
     "label": "Test, Optimize & Iterate",
-    "description": "Perform A/B testing when applicable to confirm assumptions, optimize content for best performance, and determine what can be improved in the next cycle.",
+    "description": "Did the solution perform as expected? What’s next? How can we make it better?",
     "img": "Iterate"
   }
 ]

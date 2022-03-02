@@ -14,9 +14,14 @@ tags:
 I’ve explored color in a lot of ways in different projects from static HEX values to SCSS-mixing `tint($colorValue, 25%)` to add values of white or black with functions:
 
 ```scss
+// Make a color darker by adding black
+
 @function shade($color, $percent) {
   @return mix(black, $color, $percent);
 }
+
+// Make a color lighter by adding white
+
 @function tint($color, $percent) {
   @return mix(white, $color, $percent);
 }
@@ -32,7 +37,7 @@ Recently, HSL has really taken off and I’m happy to report on a system I’m r
 
 The basic structure of making this system work is to define hues which we’ll eventually process into HSL strings using different opacity values. The biggest benefit to this system is that if you support dark mode in your projects you can easily flip the hue value without having to re-map  variables.
 
-```css
+```scss
 :root {
   --color__hue--base: 218deg 24% 24%;
   --color__hue--highlight: 158deg 32% 38%;
@@ -45,13 +50,19 @@ After you set-up your basic hues, it’s time to figure out how many _variations
 
 In my example I sort of do double-work by defining hue values for `contrast` and `contrast--extra` where I could simply create a standalone value for `--color__contrast` without also defining the hue, but my thought was always to leave those values open for opacity scales later.
 
-```css
+```scss
 :root {
   --color__hue--base: 218deg 24% 24%;
   --color__hue--highlight: 158deg 32% 38%;
   --color__hue--contrast: 218deg 100% 100%;
   --color__hue--contrast--extra: 218deg 48% 12%;
+  
+  // By wrapping the hue value in an HSL function, we are affirming the model is HSL
+  
   --color__base: hsl(var(--color__hue--base));
+  
+  // This also allows easy transparency, without modifying the core hue variable
+  
   --color__base--ish: hsl(var(--color__hue--base) / 0.75);
   --color__base--mid: hsl(var(--color__hue--base) / 0.625);
   --color__base--semi: hsl(var(--color__hue--base) / 0.25);
@@ -76,10 +87,11 @@ In my example I sort of do double-work by defining hue values for `contrast` and
 
 As noted earlier, one of the best parts of this system is [dark mode](/code/conditional-dark-mode) support is effortless by simply re-defining the hue values for a few values:
 
-```css
+```scss
 :root {
   @media (prefers-color-scheme: dark) {
-    --color__hue--base: 218deg 100% 100%; /* Bumping the lightness value to 100% effectively makes this white */
+    // Bumping the lightness value to 100% effectively makes this white
+    --color__hue--base: 218deg 100% 100%;
     --color__hue--contrast: 218deg 32% 12%;
     --color__hue--contrast--extra: 218deg 32% 8%;
   }

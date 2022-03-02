@@ -18,7 +18,11 @@ I love beautifully typeset books, where small details like dialog between charac
 With a small query to auto tag the elements you’d like to style, you can achieve this in a fairly straightforward manner:
 
 ```js
+// This could easily be a class if you’d prefer it to be more re-usable
+
 let els = document.getElementsByTagName("article")[0].children;
+
+// Targeting only the first character makes this effect look more consistent 
 
 for (let el of els) {
   switch (el.innerHTML.charAt(0)) {
@@ -43,6 +47,8 @@ Trying to keep the styling simple, I defaulted to indentation application for _n
 > **Note:** With my primary typeface, the indentation for both _fancy_ and _non-fancy_ quotes happens to be the same, but in my experiment with system typefaces they were not the same width.
 
 ```scss
+// All of these values are very subjective, and should be adjusted based on visual preference and typeface use
+
 .hung__double {
   text-indent: -0.75ch;
 }
