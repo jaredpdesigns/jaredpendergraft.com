@@ -49,7 +49,7 @@ eleventyComputed:
 
 {% ProjectHeader projects |  filteredProject('Education Advanced') %}
 
-For the last four years I’ve been leading the efforts in developing a design system for my organization as our _Lead UI/UX Developer_. It’s been a very rewarding experience and helped us mature as an organization in a scalable way as we develop the next iteration of our two flagship products [Cardonex](https://educationadvanced.com/products/cardonex/) and [TestHound](https://educationadvanced.com/products/testhound/).
+As the _Lead UI/UX Developer_ for Education Advanced I’ve been managing the efforts in developing a multi-product design system. It’s been a very rewarding experience and helped us mature as an organization in a scalable way as we develop the next iteration of our two flagship products [Cardonex](https://educationadvanced.com/products/cardonex/) and [TestHound](https://educationadvanced.com/products/testhound/).
 
 ---
 
