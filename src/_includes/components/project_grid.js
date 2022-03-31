@@ -4,15 +4,15 @@ module.exports = function (item) {
 <a href="${item.slug ? "/projects/" + item.slug + "/" : item.external}" ${
     item.slug ? "" : 'target="_blank" rel="noopener"'
   } class="grid__item ${
-    item.featured ? "featured border__all" : "side padding__all--m"
+    item.type === "featured" ? "featured border__all" : "side padding__all--m"
   } radius__m" style="--brand: ${item.hue}">
 <figure class="${
-    !item.featured
+    item.type === "side"
       ? "flow__grid flow__align--v-start flow__gap--m"
       : "flow__grid"
   }">
   ${
-    item.featured
+    item.type === "featured"
       ? `<section class="padding__left--s padding__right--s padding__top--s"><picture><source
       type="image/avif"
       srcset="${item.img}?h=200&w=320&fm=avif 320w, ${
@@ -74,14 +74,16 @@ module.exports = function (item) {
       />`
   }
 <figcaption class="${
-    item.featured
+    item.type === "featured"
       ? "flow__self--center oomph__v--m padding__all--m"
       : "oomph__v--m"
   }">
   <h2>${item.name}</h2>
-  <p class="${item.featured ? "type__size--l-l" : ""}">${item.description}</p>
+  <p class="${item.type === "featured" ? "type__size--l-l" : ""}">${
+    item.description
+  }</p>
   ${
-    item.featured
+    item.type === "featured"
       ? `<section><p class="project__link flow__inline flow__align--v-center type__weight--semibold">View Project${Icon(
           "arrow-right"
         )}</p></section>`

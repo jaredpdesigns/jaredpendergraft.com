@@ -49,10 +49,6 @@ eleventyComputed:
 
 {% ProjectHeader projects |  filteredProject('Education Advanced') %}
 
-As the _Lead UI/UX Developer_ for Education Advanced I’ve been managing the efforts in developing a multi-product design system. It’s been a very rewarding experience and helped us mature as an organization in a scalable way as we develop the next iteration of our two flagship products [Cardonex](https://educationadvanced.com/products/cardonex/) and [TestHound](https://educationadvanced.com/products/testhound/).
-
----
-
 ## Organize & Conquer
 
 When I first joined the team, we had separate marketing sites for each product, very different design vernacular between our products, and a small team—compounding the difficulties of _updating and improving_ the next iterations of our applications. After spending several cycles producing mock-ups for both applications and pursuing _separate but similar_ design systems it was decided we’d have a single marketing site for all our products and emphasize our products as being offerings of _Education Advanced_—not standalone products.

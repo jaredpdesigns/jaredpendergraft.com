@@ -157,6 +157,11 @@ pre .comment {
   }
 }
 
+.type__tranform--uppercase {
+  letter-spacing: var(--size__xxs);
+  text-transform: uppercase;
+}
+
 // Animations
 @keyframes defaultAnimation {
   to {

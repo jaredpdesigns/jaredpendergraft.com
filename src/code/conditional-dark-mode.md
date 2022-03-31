@@ -47,7 +47,7 @@ After implementing the data-attribute you can access this value in your CSS like
 
 ## Provide An Override
 
-After setting the theme by default it’s always a good idea to allow users to set their own preference if in fact they don’t want a dark theme experience. In my example, I would then append this function to a button click. Notice the <code>{% Icon 'contrast' %} icon</code> in the footer of this page.
+After setting the theme by default it’s always a good idea to allow users to set their own preference if in fact they don’t want a dark theme experience. In my example, I would then append this function to a button click. Notice the <code>{% Icon 'contrast' %}</code> icon in the footer of this page.
 
 ```js
 // This function is attached a button’s `onclick` event

@@ -1,65 +1,69 @@
 [
   {
     "name": "Education Advanced",
-    "description": "Marketing site for my organization merging all of our EdTech products into a cohesive, consistent platform.",
+    "description": "Brand development and marketing site which merges multiple EdTech products into a cohesive, consistent platform.",
     "img": "https://images.ctfassets.net/cuehicrlqnvu/XaLRF2KnYmNkY7LjfHdyr/99f13875a5ce12f36b96846830018be5/educationadvanced.png",
-    "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/14Nti90jNO9iBZEgdLy9Pn/0ddb75cb1775d9763d130ba6be05ac6b/educationadvance-dark.png",
     "slug": "educationadvanced",
     "external": "https://educationadvanced.com/",
-    "featured": true,
-    "hue": "180deg 58% 67%"
+    "type": "featured",
+    "hue": "180deg 58% 67%",
+    "role": ["UI/UX Design", "Front-End Development"]
   },
   {
     "name": "Hypothesis",
     "description": "Pattern library for the popular web-annotation tool that lets you annotate the web, with anyone, anywhere.",
     "img": "https://images.ctfassets.net/cuehicrlqnvu/qX6yRnD48X16Gf2qcFuKW/e69e79b7d131ed0b9d1e375d31ecffbc/hypothesis-feature-light.jpg",
-    "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/6hkkEu62iXrFr9Emfq9IWI/74a8117cad0d57490758e13ced3390bc/hypothesis-feature-dark.jpg",
     "slug": "hypothesis",
     "external": "https://web.hypothes.is/",
-    "featured": true,
-    "hue": "346deg 100% 38%"
+    "type": "featured",
+    "hue": "346deg 100% 38%",
+    "role": ["UI/UX Design"]
   },
   {
     "name": "Nice Bike",
     "description": "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",
     "img": "https://images.ctfassets.net/cuehicrlqnvu/6qtQSpxRwd2kOkn0DT3YNT/103258554d089d5ab2e21e7e2b06be0a/nicebike-featured-light.jpg",
-    "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/7qQznfp1pwwV4qTp9PRNju/dcf560075bccb6617705987af3c44365/nicebike-featured-dark.jpg",
     "slug": "nicebike",
     "external": "https://ridenicebike.com",
-    "featured": true,
-    "hue": "111deg 64% 51%"
+    "type": "featured",
+    "hue": "111deg 64% 51%",
+    "role": ["UI/UX Design", "Front-End Development"]
   },
   {
     "name": "OTTO Health",
     "description": "Video consultation application for connecting providers to patients, practice administration and scheduling.",
     "img": "https://images.ctfassets.net/cuehicrlqnvu/4J4i7bCxGu0rKWiWiGRb4o/f90b537a593c03a64a8f70592449a3a8/otto-featured-light.jpg",
-    "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/4x5uZDqfu4ItzyQggAxsSW/8719e38675f639ed4e9478402116a236/otto-featured-dark.jpg",
     "slug": "otto",
-    "featured": true,
-    "hue": "17deg 100% 74%"
+    "type": "featured",
+    "hue": "17deg 100% 74%",
+    "role": ["UI/UX Design", "Front-End Development"]
   },
   {
     "name": "Pasta",
     "description": "Pasta provides a great starting place for web projects. It combines light styling for common web elements, yummy.",
     "img": "/img/sides/pasta.svg",
-    "external": "https://pasta.jaredpendergraft.com/"
+    "external": "https://pasta.jaredpendergraft.com/",
+    "type": "side"
   },
   {
     "name": "Avery Mirabelle",
     "description": "Time capsule of videos and artwork from my daughter’s life, showcasing her creativity and attention to detail.",
     "img": "/img/sides/avery.svg",
-    "external": "https://averymirabelle.com"
+    "external": "https://averymirabelle.com",
+    "type": "side"
   },
   {
     "name": "Ezra Oliver",
     "description": "Time capsule of videos from my son’s life, showcasing his silliness and fearlessness.",
     "img": "/img/sides/ezra.svg",
-    "external": "https://ezrapendergraft.com"
+    "external": "https://ezrapendergraft.com",
+    "type": "side"
   },
   {
     "name": "These Kids Read",
     "description": "A collection of great picture books our family has read over the years. ",
     "img": "/img/sides/tkr.svg",
-    "external": "https://thesekidsread.jaredpendergraft.com"
+    "external": "https://thesekidsread.jaredpendergraft.com",
+    "type": "side"
   }
 ]

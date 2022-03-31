@@ -21,7 +21,7 @@ View [projects](/projects/) I’ve worked on or learn more about my [creative pr
 ## Featured Projects
 
 {% Gallery %}
-{% for item in projects | featured %}
+{% for item in projects | selected %}
   {% ProjectGallery item %}
 {% endfor %}
 {% endGallery%}

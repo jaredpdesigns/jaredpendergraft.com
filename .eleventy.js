@@ -18,6 +18,7 @@ const ProjectDetailCaption = require(`./${componentsDir}/project_detail_caption.
 const ProjectGallery = require(`./${componentsDir}/project_gallery.js`);
 const ProjectGrid = require(`./${componentsDir}/project_grid.js`);
 const ProjectHeader = require(`./${componentsDir}/project_header.js`);
+const ProjectSection = require(`./${componentsDir}/project_section.js`);
 const Recommendation = require(`./${componentsDir}/recommendation.js`);
 const Tags = require(`./${componentsDir}/tags.js`);
 
@@ -36,6 +37,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("ProjectDetail", ProjectDetail);
   eleventyConfig.addShortcode("ProjectDetailCaption", ProjectDetailCaption);
   eleventyConfig.addShortcode("ProjectHeader", ProjectHeader);
+  eleventyConfig.addShortcode("ProjectSection", ProjectSection);
   eleventyConfig.addShortcode("Recommendation", Recommendation);
   eleventyConfig.addShortcode("Tags", Tags);
   eleventyConfig.addPairedShortcode("Gallery", Gallery);
@@ -50,9 +52,9 @@ module.exports = (eleventyConfig) => {
   });
 
   // Filters
-  eleventyConfig.addFilter("featured", (arr) => {
+  eleventyConfig.addFilter("selected", (arr, type = "featured") => {
     return arr.filter((item) => {
-      return item.featured;
+      return item.type === type && !item.hidden;
     });
   });
   eleventyConfig.addFilter("filteredProject", (arr, name) => {

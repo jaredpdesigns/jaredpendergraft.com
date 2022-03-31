@@ -49,8 +49,15 @@
     flex: 1 0 auto;
     max-width: var(--size);
     scroll-snap-align: center; // This is what actually centers things
+    position: relative;
     transform: translateX(calc(var(--size__m) * -1));
     width: 100%;
+    p:first-child {
+      position: absolute;
+      right: var(--size__xs);
+      top: var(--size__xs);
+      z-index: 2;
+    }
   }
 }
 
@@ -135,9 +142,6 @@
       }
       @media (min-width: 29rem) {
         padding: var(--size__l);
-        > * + * {
-          margin-top: var(--size__l) !important;
-        }
       }
       @media (min-width: 63rem) {
         > * {
@@ -145,6 +149,11 @@
           margin-right: auto;
           max-width: var(--width__m);
           width: 100%;
+        }
+      }
+      @media (min-width: 79rem) {
+        > * + * {
+          margin-top: var(--size__l) !important;
         }
       }
     }
@@ -183,4 +192,8 @@
 
 .tags {
   grid-column: 2;
+}
+
+.project__section {
+  scroll-margin: calc(var(--size__xxxl) * 2.5);
 }
