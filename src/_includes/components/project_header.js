@@ -28,6 +28,7 @@ module.exports = function (item) {
     src="${item.img}?h=160&w=160"
     alt="${item.name} featured image"
     decoding="async"
+    fetchpriority="high"
     height="200"
     width="320"
   />

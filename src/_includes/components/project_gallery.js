@@ -31,6 +31,7 @@ module.exports = function (item) {
   src="${item.img}?h=160&w=160"
   alt="${item.name} featured image"
   decoding="async"
+  fetchpriority="low"
   height="200"
   width="320"
 />
@@ -54,6 +55,7 @@ module.exports = function (item) {
       src="${item.imgDark}?h=160&w=160"
       alt="${item.name} featured image"
       decoding="async"
+      fetchpriority="low"
       height="200"
       width="320"
     />
