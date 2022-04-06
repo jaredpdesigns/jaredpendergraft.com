@@ -85,17 +85,6 @@
       transform: scale(1.0125);
     }
   }
-  [data-theme="dark"] & {
-    picture:first-child {
-      display: none;
-    }
-    picture:last-child {
-      display: block !important;
-    }
-  }
-  img {
-    aspect-ratio: 1440 / 900;
-  }
 }
 
 .projects .featured {
@@ -121,16 +110,15 @@
     }
     > section {
       background-color: hsl(var(--brand));
-      @media (min-width: 29rem) {
-        padding-left: var(--size__m);
-        padding-right: var(--size__m);
-        padding-top: var(--size__m);
-      }
+      overflow: hidden;
     }
     img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       @media (min-width: 29rem) {
-        border-top-left-radius: var(--size__s);
-        border-top-right-radius: var(--size__s);
+        border-bottom-left-radius: var(--size__m);
+        border-top-right-radius: 0;
       }
     }
   }

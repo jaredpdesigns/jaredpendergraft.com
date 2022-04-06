@@ -10,6 +10,7 @@ module.exports = function (item) {
     alt="${item.title}"
     height="320"
     width="320"
+    style="aspect-ratio: 1/1;"
   />
   ${
     item.imgDark
@@ -22,7 +23,7 @@ module.exports = function (item) {
   alt="${item.title}"
   height="320"
   width="320"
-  style="display: none"
+  style="aspect-ratio: 1/1; display: none;"
 />`
       : ``
   }

@@ -2,7 +2,7 @@
   {
     "name": "Education Advanced",
     "description": "Brand development and marketing site which merges multiple EdTech products into a cohesive, consistent platform.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/XaLRF2KnYmNkY7LjfHdyr/99f13875a5ce12f36b96846830018be5/educationadvanced.png",
+    "img": "https://images.ctfassets.net/cuehicrlqnvu/3Qlx9RkOPcZDF7W9dCYR9r/a30a3b9c652053bcc3c319659ea4e843/eai--featured.jpg",
     "slug": "educationadvanced",
     "external": "https://educationadvanced.com/",
     "type": "featured",
@@ -10,9 +10,29 @@
     "role": ["UI/UX Design", "Front-End Development"]
   },
   {
+    "name": "Cardonex",
+    "description": "Master schedule building application that maximizes teaching staff utilization and deliver over 90% of students’ first-choice classes.",
+    "img": "https://images.ctfassets.net/cuehicrlqnvu/6Ob8YtztOp5XtVW0UsKUZi/ceabaf823e565d2d149f81e78414082d/cardonex--featured.jpg",
+    "slug": "cardonex",
+    "external": "https://educationadvanced.com/products/cardonex/",
+    "type": "featured",
+    "hue": "207deg 100% 40%",
+    "role": ["UI/UX Design"]
+  },
+  {
+    "name": "TestHound",
+    "description": "Application that helps educators plan and coordinate all their school assessments, while keeping track of student accommodations, and student testing history.",
+    "img": "https://images.ctfassets.net/cuehicrlqnvu/2Qb64megGPgvm7hMfaI5xA/2c561e367ac05c8e72b5a52488647f46/testhound--featured.jpg",
+    "slug": "testhound",
+    "external": "https://educationadvanced.com/products/testhound/",
+    "type": "featured",
+    "hue": "50deg 100% 50%",
+    "role": ["UI/UX Design"]
+  },
+  {
     "name": "Hypothesis",
     "description": "Pattern library for the popular web-annotation tool that lets you annotate the web, with anyone, anywhere.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/qX6yRnD48X16Gf2qcFuKW/e69e79b7d131ed0b9d1e375d31ecffbc/hypothesis-feature-light.jpg",
+    "img": "https://images.ctfassets.net/cuehicrlqnvu/5rTlga1dUvcKgN3IgfYRmM/085fad2b9467e9f934a757122e4e075b/hypothesis--featured.jpg",
     "slug": "hypothesis",
     "external": "https://web.hypothes.is/",
     "type": "featured",
@@ -22,17 +42,18 @@
   {
     "name": "Nice Bike",
     "description": "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/6qtQSpxRwd2kOkn0DT3YNT/103258554d089d5ab2e21e7e2b06be0a/nicebike-featured-light.jpg",
+    "img": "https://images.ctfassets.net/cuehicrlqnvu/1W3mErZiFw9qjhOFKAQg0q/d4c9694fa79fc69bfa3b8ffcb5af04a7/nicebike--featured.jpg",
     "slug": "nicebike",
     "external": "https://ridenicebike.com",
     "type": "featured",
     "hue": "111deg 64% 51%",
-    "role": ["UI/UX Design", "Front-End Development"]
+    "role": ["UI/UX Design", "Front-End Development"],
+    "hidden": true
   },
   {
     "name": "OTTO Health",
     "description": "Video consultation application for connecting providers to patients, practice administration and scheduling.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/4J4i7bCxGu0rKWiWiGRb4o/f90b537a593c03a64a8f70592449a3a8/otto-featured-light.jpg",
+    "img": "https://images.ctfassets.net/cuehicrlqnvu/18EA0Lk4iUM0jT6y4jghWf/6cc4a622379c5c7e7ead014721830241/otto--featured.jpg",
     "slug": "otto",
     "type": "featured",
     "hue": "17deg 100% 74%",

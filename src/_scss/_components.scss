@@ -112,27 +112,13 @@
     }
     figure {
       background-color: hsl(var(--brand));
-      @media (min-width: 29rem) {
-        padding-left: var(--size__m);
-        padding-right: var(--size__m);
-        padding-top: var(--size__m);
-      }
-      [data-theme="dark"] & {
-        picture:first-child {
-          display: none;
-        }
-        picture:last-child {
-          display: block !important;
-        }
-      }
       img {
-        animation: var(--animation);
-        animation-delay: 0.125s;
-        aspect-ratio: 1400 / 900;
-        transform: scale(1.03125);
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
         @media (min-width: 29rem) {
-          border-top-left-radius: var(--size__s);
-          border-top-right-radius: var(--size__s);
+          border-bottom-left-radius: var(--size__m);
+          border-top-right-radius: 0;
         }
       }
     }
@@ -154,6 +140,11 @@
       @media (min-width: 79rem) {
         > * + * {
           margin-top: var(--size__l) !important;
+        }
+      }
+      @media (min-width: 91rem) {
+        > * {
+          max-width: var(--width__ml);
         }
       }
     }

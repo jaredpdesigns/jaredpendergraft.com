@@ -3,34 +3,39 @@ module.exports = function (item) {
   return `
 <header class="project__header padding__left--m padding__right--m width__xxl">
 <section class="project__header--inner border__all flow__grid flow__align--v-stretch flow__grid--columns-fixed overflow__hidden radius__m">
-<figure class="flow__grid flow__align--v-end padding__left--s padding__right--s padding__top--s">
-    <picture>
+<figure class="flow__grid">
+  <picture>
     <source
     type="image/avif"
     srcset="${item.img}?h=200&w=320&fm=avif 320w, ${
     item.img
-  }?h=400&w=640&fm=avif 480w, ${item.img}?h=600&w=960&fm=avif 640w"
+  }?h=360&w=640&fm=avif 480w, ${item.img}?h=540&w=960&fm=avif 640w, ${
+    item.img
+  }?h=720&w=1280&fm=avif 800w"
     sizes="(max-width: 640px) 100vw, 640px"
   />
   <source
     type="image/webp"
     srcset="${item.img}?h=200&w=320&fm=webp 320w, ${
     item.img
-  }?h=400&w=640&fm=webp 480w, ${item.img}?h=600&w=960&fm=webp 640w"
+  }?h=360&w=640&fm=webp 480w, ${item.img}?h=540&w=960&fm=webp 640w, ${
+    item.img
+  }?h=720&w=1280&fm=webp 800w"
     sizes="(max-width: 640px) 100vw, 640px"
   />
   <img
-    class="radius__tl--xs radius__tr--xs width__full"
-    srcset="${item.img}?h=200&w=320 320w, ${item.img}?h=400&w=640 480w, ${
+    class="radius__tl--m radius__tr--m width__full"
+    srcset="${item.img}?h=200&w=320 320w, ${item.img}?h=360&w=640 480w, ${
     item.img
-  }?h=600&w=960 640w"
+  }?h=540&w=960 640w, ${item.img}?h=720&w=1280 800w"
     sizes="(max-width: 640px) 100vw, 640px"
-    src="${item.img}?h=160&w=160"
+    src="${item.img}?h=80&w=160"
     alt="${item.name} featured image"
     decoding="async"
     fetchpriority="high"
-    height="200"
+    height="180"
     width="320"
+    style="aspect-ratio: 16/9;"
   />
     </picture>
   </figure>
