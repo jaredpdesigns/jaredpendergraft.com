@@ -15,7 +15,7 @@ I’m a multi-disciplinary designer focusing on the *intersection of design and 
 
 I care deeply about how something works as much as its outward appearance and am always looking to *improve, optimize and scale my ideas*. I approach design challenges holistically, building solutions from beginning to end with *extensibility and modularity* in mind.
 
-View [projects](/projects/) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
+> I’m currently serving as *Lead UI/UX Developer* at [Education Advanced](https://educationadvanced.com/). View [projects](/projects/) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 
 ***
 ## Featured Projects
