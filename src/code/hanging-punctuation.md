@@ -1,7 +1,7 @@
 ---
 title: Hanging Punctuation • Code • Jared Pendergraft
 description: Enabling hanging punctuation with Javascript and CSS
-img: https://jaredpendergraft.com/img/social.jpg
+img: https://jaredpendergraft.com/img/code/hanging-punctuation.svg
 layout: layouts/base.njk
 class: code hangingPunctuation
 jsExtra: code/hanging-punctuation.js
