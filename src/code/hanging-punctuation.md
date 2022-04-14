@@ -1,7 +1,7 @@
 ---
 title: Hanging Punctuation • Code • Jared Pendergraft
 description: Enabling hanging punctuation with Javascript and CSS
-img: https://jaredpendergraft.com/img/code/hanging-punctuation.svg
+img: https://jaredpendergraft.com/img/code/hanging-punctuation.jpg
 layout: layouts/base.njk
 class: code hangingPunctuation
 jsExtra: code/hanging-punctuation.js
@@ -22,7 +22,7 @@ With a small query to auto tag the elements you’d like to style, you can achie
 
 let els = document.getElementsByTagName("article")[0].children;
 
-// Targeting only the first character makes this effect look more consistent 
+// Targeting only the first character makes this effect look more consistent
 
 for (let el of els) {
   switch (el.innerHTML.charAt(0)) {

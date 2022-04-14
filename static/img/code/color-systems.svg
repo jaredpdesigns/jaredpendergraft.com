@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180">
-  <g fill="none" fill-rule="evenodd">
-    <rect width="320" height="90" y="90" fill="var(--color__base, #2F394C)" />
-    <rect width="320" height="90" fill="var(--color__highlight, #428069)" />
-    <rect width="80" height="90" x="80" fill="var(--color__contrast, #FFF)" fill-opacity=".25" />
-    <rect width="80" height="90" x="160" fill="var(--color__contrast, #FFF)" fill-opacity=".375" />
-    <rect width="80" height="90" x="240" fill="var(--color__contrast, #FFF)" fill-opacity=".75" />
-    <rect width="80" height="90" x="80" y="90" fill="var(--color__contrast, #FFF)" fill-opacity=".25" />
-    <rect width="80" height="90" x="160" y="90" fill="var(--color__contrast, #FFF)" fill-opacity=".375" />
-    <rect width="80" height="90" x="240" y="90" fill="var(--color__contrast, #FFF)" fill-opacity=".75" />
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><g fill="none" fill-rule="evenodd"><rect width="1200" height="630" fill="#FFF"/><rect width="1200" height="315" y="315" fill="#2F394C"/><rect width="1200" height="315" fill="#428069"/><rect width="300" height="315" x="300" fill="#FFF" fill-opacity=".25"/><rect width="300" height="315" x="600" fill="#FFF" fill-opacity=".375"/><rect width="300" height="315" x="900" fill="#FFF" fill-opacity=".75"/><rect width="300" height="315" x="300" y="315" fill="#FFF" fill-opacity=".25"/><rect width="300" height="315" x="600" y="315" fill="#FFF" fill-opacity=".375"/><rect width="300" height="315" x="900" y="315" fill="#FFF" fill-opacity=".75"/></g></svg>

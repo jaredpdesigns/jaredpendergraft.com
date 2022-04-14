@@ -1,7 +1,7 @@
 ---
 title: Conditional Dark Mode • Code • Jared Pendergraft
 description: A flexible approach to supporting dark mode in projects
-img: https://jaredpendergraft.com/img/code/conditional-dark-mode.svg
+img: https://jaredpendergraft.com/img/code/conditional-dark-mode.jpg
 layout: layouts/base.njk
 class: code darkMode
 tags:
@@ -17,7 +17,7 @@ I love dark mode in projects and try and support it as often as I can. Forcing u
 ```js
 function getTheme() {
 	// First check if there is a preference already set
-  
+
   if (localStorage.getItem("theme") === null) {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("theme", "dark");
@@ -26,7 +26,7 @@ function getTheme() {
     }
   }
   // Adds an attribute to the root-level element in the page, in  this case the `html` tag
-  
+
   document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
 }
 ```
@@ -66,6 +66,6 @@ function setTheme() {
 
 ## Remember Me
 
-If you noticed in the code above, in addition to attaching a new data-attribute to the root, we are also storing the user’s preference inside a `localStorage` item—making it easy for the user to navigate through the rest of the site without _losing_ the value the previously enabled. 
+If you noticed in the code above, in addition to attaching a new data-attribute to the root, we are also storing the user’s preference inside a `localStorage` item—making it easy for the user to navigate through the rest of the site without _losing_ the value the previously enabled.
 
 > **Note:** if you wanna be  _extra user friendly_ you could switch out `localStorage` for `sessionStorage` so that their preference sticks around even if they close the page.

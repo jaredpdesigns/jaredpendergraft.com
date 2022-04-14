@@ -1,7 +1,7 @@
 ---
 title: Color Systems • Code • Jared Pendergraft
 description: A simple approach to HSL color systems
-img: https://jaredpendergraft.com/img/code/color-systems.svg
+img: https://jaredpendergraft.com/img/code/color-systems.jpg
 layout: layouts/base.njk
 class: code colorSystems
 tags:
@@ -56,13 +56,13 @@ In my example I sort of do double-work by defining hue values for `contrast` and
   --color__hue--highlight: 158deg 32% 38%;
   --color__hue--contrast: 218deg 100% 100%;
   --color__hue--contrast--extra: 218deg 48% 12%;
-  
+
   // By wrapping the hue value in an HSL function, we are affirming the model is HSL
-  
+
   --color__base: hsl(var(--color__hue--base));
-  
+
   // This also allows easy transparency, without modifying the core hue variable
-  
+
   --color__base--ish: hsl(var(--color__hue--base) / 0.75);
   --color__base--mid: hsl(var(--color__hue--base) / 0.625);
   --color__base--semi: hsl(var(--color__hue--base) / 0.25);

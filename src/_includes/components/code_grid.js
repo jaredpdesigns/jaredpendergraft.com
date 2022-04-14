@@ -7,7 +7,7 @@ module.exports = function (item) {
   <span class="radius__tl--m radius__tr--m">
   <img class="radius__tl--m radius__tr--m" alt="${`Featured image for ${
     item.data.title.split(" • ")[0]
-  }`}" src="${`/img/code/${item.fileSlug}.svg`}" decoding="async" fetchpriority="high" height="180" width="320" style="aspect-ratio: 16/9; width: 100%"/>
+  }`}" src="${`/img/code/${item.fileSlug}.svg`}" decoding="async" fetchpriority="high" height="168" width="320" style="aspect-ratio: 1200/630; width: 100%"/>
   </span>
   <figcaption class="border__top color__border--base--light oomph__v--m padding__all--m">
   <h2>${item.data.title.split(" • ")[0]}</h2>
