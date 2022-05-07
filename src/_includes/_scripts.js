@@ -1,26 +1,26 @@
 function getTheme() {
-  if (localStorage.getItem("theme") === null) {
+  if (sessionStorage.getItem("theme") === null) {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      localStorage.setItem("theme", "dark");
+      sessionStorage.setItem("theme", "dark");
     } else {
-      localStorage.setItem("theme", "light");
+      sessionStorage.setItem("theme", "light");
     }
   }
   document.documentElement.setAttribute(
     "data-theme",
-    localStorage.getItem("theme")
+    sessionStorage.getItem("theme")
   );
 }
 
 function setTheme() {
   if (document.documentElement.getAttribute("data-theme") === "dark") {
-    localStorage.setItem("theme", "light");
+    sessionStorage.setItem("theme", "light");
   } else {
-    localStorage.setItem("theme", "dark");
+    sessionStorage.setItem("theme", "dark");
   }
   document.documentElement.setAttribute(
     "data-theme",
-    localStorage.getItem("theme")
+    sessionStorage.getItem("theme")
   );
 }
 
