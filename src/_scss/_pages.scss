@@ -1,7 +1,6 @@
 .profile {
   blockquote {
-    margin-left: calc(var(--size__s) * -1);
-    margin-right: calc(var(--size__s) * -1);
+    margin-inline: calc(var(--size__m) * -1);
   }
   article > figure {
     clip-path: url(#blobby);
@@ -312,6 +311,9 @@
       transform: translateY(calc(var(--size__m) * -1));
     }
     blockquote {
+      [data-theme="dark"] & {
+        background-color: var(--color__contrast--extra);
+      }
       &:first-child {
         grid-row: span 2;
       }
@@ -371,16 +373,14 @@
 
 .hire {
   blockquote {
-    margin-left: calc(var(--size__s) * -1);
-    margin-right: calc(var(--size__s) * -1);
+    margin-inline: calc(var(--size__m) * -1);
   }
 }
 
 .agreement,
 .invoice {
   blockquote {
-    margin-left: calc(var(--size__l) * -1);
-    padding-left: var(--size__l);
+    margin-inline: calc(var(--size__m) * -1);
   }
 }
 

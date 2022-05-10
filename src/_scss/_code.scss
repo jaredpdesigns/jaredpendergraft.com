@@ -1,8 +1,7 @@
 .code article {
   pre,
   blockquote {
-    margin-left: calc(var(--size__m) * -1);
-    margin-right: calc(var(--size__m) * -1);
+    margin-inline: calc(var(--size__m) * -1);
   }
 }
 

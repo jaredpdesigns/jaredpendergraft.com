@@ -1,6 +1,6 @@
 module.exports = function (item) {
   return `
-<blockquote class="padding__all--none radius__m shadow">
+<blockquote class="border__all color__border--base--light radius__m shadow">
   <section class="oomph__v--m padding__bottom--m padding__left--l padding__right--l padding__top--m">
     ${item.comment}
   </section>
