@@ -17,6 +17,11 @@
   }
 }
 
+:where(button) {
+  all: unset;
+  display: revert;
+}
+
 body {
   grid-template-columns: 1fr min(75ch, calc(100% - var(--size__l) * 2)) 1fr;
   grid-template-rows: auto 1fr auto;
