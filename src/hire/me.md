@@ -55,13 +55,13 @@ I’m looking for a creative position that offers challenges, collaboration, and
 ### Education Advanced, Inc.
 
 *Lead UI/UX Developer*\
-2017–Currently • Remote
+2017–2022 • Remote
 
-- Directs the user-experience and user-interface of multiple applications within the company.
-- Manages complex design system for multiple products and provides thorough documentation that aids in the continuous evolution of the system.
-- Collaborates with multiple departments to deliver design solutions that support business goals.
-- Builds static and interactive demos to test new ideas in multiple environments.
-- Contributes to front-end development efforts for multiple applications within the company.
+- Directed the user-experience and user-interface of multiple applications within the company.
+- Managed complex design system for multiple products and provided thorough documentation that aids in the continuous evolution of the system.
+- Collaborated with multiple departments to deliver design solutions that supported business goals.
+- Built static and interactive demos to test new ideas in multiple environments.
+- Contributed to front-end development efforts for multiple applications within the company.
 
 ### OTTO Health
 

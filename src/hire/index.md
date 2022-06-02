@@ -9,7 +9,7 @@ class: hire
 
 # Let’s Create Something Great Together
 
-> I’m currently serving as *Lead UI/UX Developer* at [Education Advanced](https://educationadvanced.com/), view my [résumé](/hire/me/) for more about my background.
+> I’m currently serving as *Front End Engineer* at [Follow Up Boss](https://followupboss.com/), view my [résumé](/hire/me/) for more about my background.
 > 
 > I’m always interested in creative freelance opportunities—if you'd like to work together send me an [email](mailto:hello@jaredpendergraft.com).
 
