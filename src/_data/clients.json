@@ -1,5 +1,29 @@
 [
   {
+    "title": "Holiday Sweatpants Design",
+    "description": "<p>Jared Pendergraft was hired to design a holiday sweatpants design which included a custom Dura Mater Athletic Club logo treatment as well as overall art direction for the project.</p>",
+    "slug": "nice-bike-holiday-sweatpants-design",
+    "client": {
+      "name": "Nice Bike",
+      "street": "1875 S Broadway",
+      "city": "Denver",
+      "state": "CO",
+      "zip": 80210
+    },
+    "start": {
+      "month": "December",
+      "day": 1,
+      "year": 2022
+    },
+    "end": {
+      "month": "December",
+      "day": 4,
+      "year": 2022
+    },
+    "total": 150,
+    "type": "invoice"
+  },
+  {
     "title": "Unicorn Battle T-Shirt Design & Logo Refresh",
     "description": "<p>Jared Pendergraft was hired to design a “Unicorn Battle” t-shirt design featuring the Nice Bike unicorn and Blucifer. In addition, the unicorn was adapted for a new brand logo treatment.</p>",
     "slug": "nice-bike-unicorn-battle-tshirt-design-and-logo-refresh",
