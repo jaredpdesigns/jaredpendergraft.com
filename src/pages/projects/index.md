@@ -25,11 +25,10 @@ Passion Projects
 
 <style>
   .projects article > p {
-    color: var(--color__base--mid);
-    font-family: var(--type__family--secondary);
+    color: var(--color__base--ish);
     font-size: var(--type__size--s--fluid);
-    font-variation-settings: 'wght' 500, 'wdth' 150;
-    font-weight: 500;
+    font-variation-settings: 'wght' 600;
+    font-weight: 600;
     letter-spacing: 0.0625rem;
     line-height: var(--type__lineheight--m--fluid);
     text-align: center;

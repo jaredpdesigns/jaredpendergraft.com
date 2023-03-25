@@ -7,7 +7,7 @@
   "scripts": {
     "build": "eleventy",
     "clean": "rm -rf _site",
-    "dev": "npm run clean && eleventy --serve --incremental"
+    "dev": "npm run clean && eleventy --serve"
   },
   "dependencies": {
     "@11ty/eleventy": "2.0.0",

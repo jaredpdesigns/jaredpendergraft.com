@@ -13,28 +13,17 @@
     <h4>Typography</h4>
     <ul>
       <li>
-        <a
-          rel="noopener"
-          target="_blank"
-          href="https://ohnotype.co/fonts/degular"
-          >Degular Text</a
-        >
+        <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/degular">Degular Variable</a>
         by OH no Type Company
       </li>
       <li>
-        <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/swear"
-          >Swear Display</a
-        >
+        <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/obviously">Obviously Variable</a>
         by OH no Type Company
       </li>
       <li>
-        <a
-          rel="noopener"
-          target="_blank"
-          href="https://www.boldmonday.com/typeface/dico/"
-          >Dico Mono</a
-        >
-        by Bold Monday
+        <a rel="noopener" target="_blank" href="https://processtypefoundry.com/fonts/coordinates/">Coordinates
+          Variable</a>
+        by Process Type Foundry
       </li>
     </ul>
   </section>
@@ -43,13 +32,12 @@
     <ul>
       <li>
         Built using
-        <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>
+        <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>—specifically <a rel="noopener"
+          target="_blank" href="https://www.11ty.dev/docs/languages/webc/">WebC</a>
       </li>
       <li>
         Hosted on
-        <a rel="noopener" target="_blank" href="https://www.netlify.com/"
-          >Netlify</a
-        >
+        <a rel="noopener" target="_blank" href="https://www.netlify.com/">Netlify</a>
       </li>
     </ul>
   </section>
