@@ -1,0 +1,54 @@
+<dialog
+  class="border__all color__bg--contrast color__border--base--light radius__s"
+  oncancel="toggleDialog()"
+  onclick="toggleDialog()"
+>
+  <section onclick="preventAutoClose(event)">
+    <header
+      class="border__bottom color__bg--contrast color__border--base--light flow__flex flow__align--h-between flow__align--v-center padding__m"
+    >
+      <h3 class="color__type--base--ish" @text="dialogtitle"></h3>
+      <button
+        class="button__tertiary flow__inline flow__align--inline-center flow__align--block-center flow__size--block-l flow__size--inline-l radius__all"
+        onclick="toggleDialog()"
+      >
+        <icon name="cancel" webc:nokeep></icon>
+      </button>
+    </header>
+    <article
+      class="flow__grid flow__align--block-start flow__gap--m flow__grid--columns-auto padding__m"
+    >
+      <slot></slot>
+    </article>
+  </section>
+</dialog>
+<script>
+  function preventAutoClose(e) {
+    e.stopPropagation();
+  }
+</script>
+<style>
+  dialog {
+    inline-size: calc(100% - var(--size__l));
+    margin: auto;
+    max-block-size: calc(100% - var(--size__l));
+    max-inline-size: var(--width__l);
+    position: fixed;
+  }
+
+  dialog > section > header {
+    inset-block-start: 0;
+    position: sticky;
+  }
+
+  @media (min-width: 40rem) {
+    dialog {
+      --column__width: var(--width__s);
+    }
+  }
+
+  dialog > section > article > *:first-child,
+  dialog > section > article > *:last-child {
+    grid-column: 1/-1;
+  }
+</style>

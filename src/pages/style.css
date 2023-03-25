@@ -1,0 +1,215 @@
+@layer pasta,
+project,
+page;
+
+@import url("https://unpkg.com/@jaredpdesigns/pasta") layer(pasta);
+
+@layer project {
+  :root {
+    --maxWidth: var(--width__l);
+    --outline__offset: var(--size__xs);
+    --outline__size: calc(var(--size__xxs) * 2);
+    --outline__style: dotted;
+    --type__family--primary: "degular-variable", sans-serif;
+    --type__family--secondary: "obviously-variable", sans-serif;
+    --type__family--tertiary: "coordinates-variable", mono;
+    --transition: cubic-bezier(0.5, -0.1, 0.1, 1.5);
+
+    @media (min-width: 120rem) {
+      --maxWidth: var(--width__l);
+    }
+  }
+
+  html {
+    font-variation-settings: 'opsz' 6;
+  }
+
+  body {
+    align-items: start;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-block-size: 100vh;
+
+    >header,
+    >footer {
+      >section {
+        inline-size: 100%;
+        max-inline-size: var(--maxWidth);
+        padding-inline-start: calc(var(--size__l) + env(safe-area-inset-left));
+        padding-inline-end: calc(var(--size__l) + env(safe-area-inset-right));
+      }
+    }
+
+    >header {
+      border-block-start-color: var(--color__highlight);
+      border-block-start-width: var(--size__xs);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+
+      @supports (backdrop-filter: blur(32px)) {
+        background-color: hsl(var(--color__hue--contrast) / 0.625);
+        backdrop-filter: blur(20px);
+      }
+
+      @supports not (backdrop-filter: blur(32px)) {
+        background-color: hsl(var(--color__hue--contrast) / 0.98);
+      }
+
+      a {
+        text-decoration: unset;
+
+        &[aria-current="page"] {
+          color: var(--color__base);
+          text-decoration-color: var(--color__highlight--semi);
+          text-decoration-thickness: calc(var(--size__xxs) * 2);
+          text-decoration-line: underline;
+          text-underline-offset: var(--size__xs);
+        }
+      }
+
+      nav>a:first-child strong {
+        font-weight: 600;
+        font-variation-settings: 'wght' 600, 'opsz' 72;
+      }
+    }
+
+    >footer {
+      button:focus-visible {
+        background-color: var(--color__highlight--ghost);
+        color: var(--color__highlight);
+      }
+    }
+
+    >main>article {
+      display: grid;
+      inline-size: 100%;
+      margin-inline: auto;
+      max-inline-size: var(--maxWidth);
+      padding-block: var(--size__l);
+      padding-inline-start: calc(var(--size__l) + env(safe-area-inset-left));
+      padding-inline-end: calc(var(--size__l) + env(safe-area-inset-right));
+
+      >* {
+        min-inline-size: 0;
+        scroll-margin-top: calc(var(--size__xxxl) * 2);
+
+        +* {
+          margin-block-start: var(--size__l);
+        }
+
+        +hr {
+          margin-block-start: var(--size__xxxl);
+        }
+      }
+
+      >p:empty {
+        display: none;
+      }
+    }
+  }
+
+  h1 {
+    font-size: var(--type__size--xxxl);
+    line-height: var(--type__lineheight--xxxl);
+
+    @media (min-width: 79rem) {
+      font-size: var(--type__size--xxxxl);
+      line-height: var(--type__lineheight--xxxxl);
+    }
+
+    &:not(*[class^="color__type"]) {
+      color: var(--color__highlight);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--type__family--secondary);
+    font-weight: 700;
+    font-variation-settings: 'wght' 700, 'opsz' 72;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    &:not(*[class^="color__type"]) {
+      color: var(--color__base--ish);
+    }
+  }
+
+  h3,
+  h4,
+  h5 {
+    font-weight: 600;
+    font-variation-settings: 'wght' 600;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-variation-settings: 'wght' 500, 'wdth' 75;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-variation-settings: 'wght' 600, 'wdth' 120;
+  }
+
+  code,
+  pre {
+    --color__primary: hsl(260, 64%, 75%);
+    --color__secondary: hsl(190, 64%, 75%);
+    --color__tertiary: hsl(158, 90%, 75%);
+  }
+
+  blockquote a:focus-visible {
+    background-color: var(--color__highlight--light);
+  }
+
+  .type__weight--semibold,
+  .button__secondary {
+    font-weight: 500;
+    font-variation-settings: 'wght' 500;
+  }
+
+  .button__secondary {
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+  }
+}
+
+@layer page {
+  .profile {
+    article>figure {
+      clip-path: url(#blobby);
+      margin-block-start: 0;
+      max-width: var(--width__xs);
+
+      @media (min-width: 79rem) {
+        max-width: var(--width__s);
+      }
+
+      img {
+        animation: var(--animation);
+        aspect-ratio: 1/1;
+        transform: scale(1.0125);
+        width: 100%;
+      }
+    }
+
+    article>h1+p {
+      font-weight: 600;
+      font-variation-settings: "wght" 600;
+    }
+  }
+
+  .me {
+    article>h3+p {
+      margin-block-start: var(--size__s);
+    }
+  }
+}

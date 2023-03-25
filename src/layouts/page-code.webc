@@ -1,0 +1,12 @@
+---
+layout: base.webc
+---
+
+<article>
+  <script webc:type="render" webc:is="template">
+    function() {
+      return `<nav class="flow__flex flow__align--block-center flow__gap--s">${this.tags.filter(tag => tag !== 'code').map(tag => `<a href="/code/tags/${tag.toLowerCase()}" style="text-decoration: unset"><code>${tag}</code></a>`).join('')}</nav>`;
+    }
+  </script>
+  <template @html="content" webc:nokeep></template>
+</article>

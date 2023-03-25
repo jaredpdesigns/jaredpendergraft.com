@@ -1,0 +1,20 @@
+---
+layout: root.webc
+---
+
+<site-header webc:nokeep></site-header>
+<main :class="page.fileSlug || pageClass">
+  <template @html="content" webc:nokeep></template>
+</main>
+<site-footer webc:nokeep></site-footer>
+<script>
+  function getTheme() {
+    if (sessionStorage.getItem("theme") !== null) {
+      document.documentElement.setAttribute(
+        "data-theme",
+        sessionStorage.getItem("theme")
+      );
+    }
+  }
+  getTheme();
+</script>

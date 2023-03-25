@@ -1,0 +1,43 @@
+<a :class="`project__tile ${small ? `project__tile--small`:``} border__all color__border--base--light color__type--base overflow__hidden radius__m shadow`"
+  :href="`/projects/${projectslug}`" :style="`${projectstyle}`">
+  <figure>
+    <span class="flow__block overflow__hidden">
+      <img class="flow__size--full radius__start-start--m radius__start-end--m"
+        :alt="`Featured image for ${projectname}`" :src="projectimg" decoding="async" fetchpriority="high"
+        loading="lazy" />
+    </span>
+    <figcaption
+      :class="`border__top color__border--base--light ${!small ? `color__bg--highlight--light oomph__block--m padding__l`:`oomph__block--s padding__m`}`">
+      <h3 @text="projectname" webc:if="small" class="color__type--base--ish"></h3>
+      <h1 @text="projectname" webc:if="!small" class="color__type--base--ish"></h1>
+      <p @text="projectdescription" webc:if="!small"></p>
+      <p class="button__secondary" webc:if="!small">
+        View Project <icon name="arrow-right" webc:nokeep></icon>
+      </p>
+    </figcaption>
+  </figure>
+</a>
+<style>
+  .project__tile {
+    background-color: var(--color__contrast--adaptive);
+    text-decoration: unset;
+  }
+
+  .project__tile:focus img,
+  .project__tile:hover img {
+    transform: scale(1.0625);
+  }
+
+  .project__tile span {
+    clip-path: inset(0 round var(--size__m) var(--size__m) 0 0);
+  }
+
+  .project__tile img {
+    aspect-ratio: 1200/630;
+    transition: transform 0.75s var(--transition);
+  }
+
+  .project__tile figcaption {
+    --color__highlight--light: hsl(var(--brand) / 0.125);
+  }
+</style>

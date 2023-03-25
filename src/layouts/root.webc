@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="color__bg--highlight" lang="en">
+  <head>
+    <title @html="title"></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Jared Pendergraft" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" :content="description" />
+    <meta
+      name="keywords"
+      content="jared pendergraft, jared pendergraft designs, design, website, graphic design hawaii, web design hawaii, graphic design maui, web design maui"
+    />
+    <meta name="theme-color" content="hsl(158, 32%, 38%)" />
+    <meta name="twitter:card" content="photo" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta property="og:description" :content="description" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image" :content="img" />
+    <meta property="og:site_name" content="Jared Pendergraft" />
+    <meta property="og:title" :content="title" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      :content="`https://jaredpendergraft.com${ page.url }`"
+    />
+    <link rel="canonical" :href="`https://jaredpendergraft.com${ page.url }`" />
+    <link rel="icon" href="favicon.ico" alternate />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://use.typekit.net" />
+    <link rel="preload" href="https://use.typekit.net/wqt4jel.css" as="style" />
+    <link
+      webc:keep
+      rel="stylesheet"
+      href="https://use.typekit.net/wqt4jel.css"
+    />
+    <link rel="stylesheet" href="/style.css" webc:raw />
+    <style webc:keep @html="getCSS(page.url)"></style>
+    <script webc:keep @html="getJS(page.url)"></script>
+  </head>
+  <body class="color__bg--contrast" @html="content"></body>
+</html>

@@ -1,0 +1,38 @@
+<blockquote class="reccommendation radius__m overflow__hidden styled">
+  <template @html="comment" webc:nokeep></template>
+  <footer class="border__top color__bg--base--ghost color__border--base--light">
+    <p class="color__type--base--semi padding__block--s padding__inline--s">
+      — <span class="color__type--base" @text="author"></span>
+    </p>
+  </footer>
+</blockquote>
+<style>
+  .reccommendation {
+    --color__bg: var(--color__contrast--adaptive);
+    --color__border: var(--color__base--light);
+    box-shadow: none;
+    padding-block-end: 0;
+    padding-inline: 0;
+  }
+  .reccommendation > p {
+    padding-inline: var(--size__l);
+  }
+  .reccommendation > p:first-child:before,
+  .reccommendation > p:last-of-type:after {
+    color: var(--color__highlight);
+    font-family: var(--type__family--secondary);
+    font-size: var(--type__size--xl--fluid);
+  }
+  .reccommendation > p:first-child:before {
+    content: "“";
+    margin-inline-start: -0.625ch;
+    margin-inline-end: 0.125ch;
+  }
+  .reccommendation > p:last-of-type:after {
+    content: "”";
+    margin-inline-start: 0.125ch;
+  }
+  .reccommendation footer p span {
+    font-weight: 600;
+  }
+</style>

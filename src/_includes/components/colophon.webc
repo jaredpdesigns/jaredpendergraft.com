@@ -1,0 +1,63 @@
+<custom-dialog dialogtitle="Colophon" webc:nokeep>
+  <section class="oomph__block--m">
+    <h4>Colors</h4>
+    <script webc:type="render" webc:is="template">
+      function() {
+        const colors = ["base", "base--ish", "base--mid", "base--semi", "base--light", "base--ghost", "highlight", "highlight--ish", "highlight--mid", "highlight--semi", "highlight--light", "highlight--ghost", "contrast", "contrast--extra"];
+        return `<section class="flow__grid flow__align--block-start flow__gap--m flow__grid--columns-auto" style="--column__width: var(--width__xs)">${colors.map(color => `<p class="flow__grid flow__align--inline-start flow__align--block-center flow__direction--column flow__gap--xs">
+        <span class="border__all color__border--base--light color__bg--${color} flow__inline flow__size--block-xl flow__size--inline-xl radius__all"></span><code>${color}</code></p>`).join('')}</section>`;
+      }
+    </script>
+  </section>
+  <section class="oomph__block--m">
+    <h4>Typography</h4>
+    <ul>
+      <li>
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://ohnotype.co/fonts/degular"
+          >Degular Text</a
+        >
+        by OH no Type Company
+      </li>
+      <li>
+        <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/swear"
+          >Swear Display</a
+        >
+        by OH no Type Company
+      </li>
+      <li>
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://www.boldmonday.com/typeface/dico/"
+          >Dico Mono</a
+        >
+        by Bold Monday
+      </li>
+    </ul>
+  </section>
+  <section class="oomph__block--m">
+    <h4>Tooling</h4>
+    <ul>
+      <li>
+        Built using
+        <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>
+      </li>
+      <li>
+        Hosted on
+        <a rel="noopener" target="_blank" href="https://www.netlify.com/"
+          >Netlify</a
+        >
+      </li>
+    </ul>
+  </section>
+  <p class="color__type--base--mid">
+    <script webc:type="render" webc:is="template">
+      function() {
+        return `&copy; ${new Date().getFullYear()} Jared Pendergraft`;
+      }
+    </script>
+  </p>
+</custom-dialog>

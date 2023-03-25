@@ -1,0 +1,41 @@
+<figure class="profile__img">
+  <picture>
+    <source
+      type="image/avif"
+      :srcset="`${src}?f=face&fit=fill&h=320&w=320&fm=avif 320w, ${src}?f=face&fit=fill&h=640&w=640&fm=avif 640w`"
+      sizes="(max-width: 320px) 100vw, 320px`"
+    />
+    <source
+      type="image/webp"
+      :srcset="`${src}?f=face&fit=fill&h=320&w=320&fm=webp 320w, ${src}?f=face&fit=fill&h=640&w=640&fm=webp 640w`"
+      sizes="(max-width: 320px) 100vw, 320px`"
+    />
+    <img
+      :srcset="`${src}?f=face&fit=fill&h=320&w=320 320w, ${src}?f=face&fit=fill&h=640&w=640 640w`"
+      sizes="(max-width: 320px) 100vw, 320px"
+      :src="`${src}?f=face&fit=fill&h=160&w=160`"
+      alt="My smiling face, greeting you"
+      decoding="async"
+      fetchpriority="high"
+      width="320"
+      height="320"
+    />
+  </picture>
+  <svg height="0" width="0" style="position: absolute">
+    <defs>
+      <clipPath id="blobby" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.104,0.936 c0.139,0.159,0.268,-0.026,0.431,-0.067 c0.163,-0.041,0.268,0.137,0.406,-0.021 c0.138,-0.158,0.021,-0.424,-0.184,-0.658 C0.551,-0.043,0.237,-0.064,0.057,0.141 c-0.18,0.205,0.119,0.269,0.147,0.437 C0.232,0.746,-0.035,0.777,0.104,0.936"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+</figure>
+<style>
+  .profile__img:hover img {
+    transform: scale(1.0625);
+  }
+  .profile__img img {
+    transition: transform 0.75s var(--transition);
+  }
+</style>
