@@ -45,7 +45,7 @@ eleventyComputed:
   description: "{{ (projects | filteredProject('OTTO Health')).description }}"
   project:
     name: "{{ (projects | filteredProject('OTTO Health')).name }}"
-    img: "{{ (projects | filteredProject('OTTO Health')).img }}?h=630&w=1200&fit=fill&f=face"
+    img: "{{ (projects | filteredProject('OTTO Health')).img }}"
     role: "{{ (projects | filteredProject('OTTO Health')).role }}"
     style: "--brand: {{ (projects | filteredProject('OTTO Health')).hue }}"
 ---

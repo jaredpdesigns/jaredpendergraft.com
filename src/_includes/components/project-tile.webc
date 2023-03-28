@@ -2,10 +2,9 @@
   :href="`/projects/${projectslug}`" :style="`${projectstyle}`">
   <figure>
     <span class="flow__block overflow__hidden">
-      <img class="flow__size--full radius__start-start--m radius__start-end--m"
-        :alt="`Featured image for ${projectname}`"
-        :src="`${!small ? `${projectimg}?h=540&w=960`:`${projectimg}?h=270&w=480`}`" decoding="async"
-        fetchpriority="high" height="180" width="320" />
+      <image-get class="flow__size--full radius__start-start--m radius__start-end--m"
+        :alt="`Featured image for ${projectname}`" :src="`${projectimg}`" height="180" width="320"
+        sizes="(max-width: 480px) 100vw, 480px" widths="320, 480, 640" :loading="`${small ? 'lazy':''}`"></image-get>
     </span>
     <figcaption
       :class="`border__top color__border--base--light ${!small ? `color__bg--highlight--light oomph__block--m padding__l`:`oomph__block--s padding__m`}`">

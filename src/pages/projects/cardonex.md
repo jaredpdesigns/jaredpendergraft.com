@@ -58,7 +58,7 @@ eleventyComputed:
   description: "{{ (projects | filteredProject('Cardonex')).description }}"
   project:
     name: "{{ (projects | filteredProject('Cardonex')).name }}"
-    img: "{{ (projects | filteredProject('Cardonex')).img }}?h=630&w=1200&fit=fill&f=face"
+    img: "{{ (projects | filteredProject('Cardonex')).img }}"
     external: "{{ (projects | filteredProject('Cardonex')).external }}"
     role: "{{ (projects | filteredProject('Cardonex')).role }}"
     style: "--brand: {{ (projects | filteredProject('Cardonex')).hue }}"

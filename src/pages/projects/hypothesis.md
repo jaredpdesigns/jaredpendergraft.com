@@ -45,7 +45,7 @@ eleventyComputed:
   description: "{{ (projects | filteredProject('Hypothesis')).description }}"
   project:
     name: "{{ (projects | filteredProject('Hypothesis')).name }}"
-    img: "{{ (projects | filteredProject('Hypothesis')).img }}?h=630&w=1200&fit=fill&f=face"
+    img: "{{ (projects | filteredProject('Hypothesis')).img }}"
     external: "{{ (projects | filteredProject('Hypothesis')).external }}"
     role: "{{ (projects | filteredProject('Hypothesis')).role }}"
     style: "--brand: {{ (projects | filteredProject('Hypothesis')).hue }}"

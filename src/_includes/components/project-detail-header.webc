@@ -1,8 +1,9 @@
 <header
   class="project__header border__all color__bg--highlight--light color__border--highlight--semi flow__grid flow__align--block-stretch radius__m">
-  <img :alt="`Featured image for ${project.name} case study`" :src="project.img"
-    class="radius__start-start--m radius__start-end--m" />
-  <section class="flow__grid flow__gap--l padding__l">
+  <image-get class="radius__start-start--m radius__start-end--m" :alt="`Featured image for ${project.name} case study`"
+    :src="`${project.img}`" height="180" width="320" sizes="(max-width: 640px) 100vw, 640px"
+    widths="320, 480, 640, 960"></image-get>
+  <section class="flow__grid flow__gap--l padding__block--l padding__inline--m">
     <h1 @text="project.name"></h1>
     <p @text="description" class="type__size--l-xl--fluid"></p>
     <script webc:type="render" webc:is="template" webc:if="project.role">
@@ -17,6 +18,10 @@
   </section>
 </header>
 <style>
+  .project__header {
+    margin-inline: calc(var(--size__m) * -1);
+  }
+
   .project__header>* {
     min-inline-size: 0;
   }
@@ -27,6 +32,7 @@
 
   .project__header img {
     aspect-ratio: 1200/630;
+    block-size: 100%;
     object-fit: cover;
     object-position: center;
   }
@@ -34,10 +40,6 @@
   .project__header>section {
     align-content: center;
     justify-items: start;
-  }
-
-  .project__header>* {
-    min-inline-size: 0;
   }
 
   .project__header a {
@@ -65,6 +67,10 @@
       aspect-ratio: unset;
       border-start-end-radius: 0;
       border-end-start-radius: var(--size__m);
+    }
+
+    .project__header>section {
+      padding-inline: var(--size__l);
     }
   }
 </style>

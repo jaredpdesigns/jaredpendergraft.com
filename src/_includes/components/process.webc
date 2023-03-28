@@ -1,6 +1,6 @@
 <script webc:type="render" webc:is="template">
-    function() {
-      const images = [
+  function() {
+    const images = [
       {
         name: "Research",
         white:
@@ -46,8 +46,8 @@
       },
     ];
     const filtered = images.find((value) => value.name === this.processimage);
-    return `<section class="process border__all color__bg--highlight--ghost color__border--highlight--light oomph__block--m padding__l radius__m">
-    <header class="flow__grid flow__align--v-center flow__gap--m">
+    return `<section class="process border__all color__bg--highlight--ghost color__border--highlight--light flow__grid flow__gap--m padding__l radius__m type__align--center">
+    <header class="flow__grid flow__gap--m">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
@@ -69,3 +69,9 @@
     <p>${this.processdescription}</p>
   </section>`}
 </script>
+<style>
+  .process header {
+    justify-items: center;
+    margin-block-start: calc((var(--size__xxl) + var(--size__s)) * -1);
+  }
+</style>

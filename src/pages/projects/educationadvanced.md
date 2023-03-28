@@ -45,7 +45,7 @@ eleventyComputed:
   description: "{{ (projects | filteredProject('Education Advanced')).description }}"
   project:
     name: "{{ (projects | filteredProject('Education Advanced')).name }}"
-    img: "{{ (projects | filteredProject('Education Advanced')).img }}?h=630&w=1200&fit=fill&f=face"
+    img: "{{ (projects | filteredProject('Education Advanced')).img }}"
     external: "{{ (projects | filteredProject('Education Advanced')).external }}"
     role: "{{ (projects | filteredProject('Education Advanced')).role }}"
     style: "--brand: {{ (projects | filteredProject('Education Advanced')).hue }}"

@@ -28,6 +28,10 @@ page;
     font-variation-settings: 'ital' 1, 'opsz' 14, 'wght' 400;
   }
 
+  strong {
+    font-variation-settings: 'opsz' 6, 'wght' 600;
+  }
+
   body {
     align-items: start;
     display: grid;
@@ -188,23 +192,6 @@ page;
 
 @layer page {
   .profile {
-    article>figure {
-      clip-path: url(#blobby);
-      margin-block-start: 0;
-      max-width: var(--width__xs);
-
-      @media (min-width: 79rem) {
-        max-width: var(--width__s);
-      }
-
-      img {
-        animation: var(--animation);
-        aspect-ratio: 1/1;
-        transform: scale(1.0125);
-        width: 100%;
-      }
-    }
-
     article>h1+p {
       font-weight: 600;
       font-variation-settings: 'opsz' 6, 'wght' 600;
