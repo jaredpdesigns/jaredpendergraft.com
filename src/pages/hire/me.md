@@ -108,11 +108,10 @@ _Graphic Designer_\
 
 ## Recommendations
 
-<script webc:type="render" webc:is="template">
-  function() {
-    return `<grid webc:nokeep>${this.recommendations.map(recommendation => `<recommendation author="${recommendation.author}" comment="${recommendation.comment}" webc:nokeep></recommendation>`).join("")}</grid>`;
-  }
-</script>
+<grid webc:nokee>
+  <recommendations :recommendations="this.recommendations" webc:nokeep>
+</grid>
+
 <style>
   .grid > *:first-child {
     grid-column: 1/-1;

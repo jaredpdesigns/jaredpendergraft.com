@@ -1,8 +1,9 @@
-<script webc:type="render" webc:is="template">
-  function() {
-    return `<section class="gallery flow__grid padding__block-end--l"><section class="gallery__wrap flow__flex flow__align--block-center flow__align--inline-start flow__gap--l">${this.projects.filter(project => project.type === 'featured').map(project => `<project-tile projectimg="${project.img}" projectname="${project.name}" projectslug="${project.slug}" small="true" webc:nokeep></project-tile>`).join("")}</section></section>`;
-  }
-</script>
+<section class="gallery flow__grid padding__block-end--l">
+  <section
+    class="gallery__wrap flow__flex flow__align--block-center flow__align--inline-start flow__gap--l padding__block-start--m">
+    <slot></slot>
+  </section>
+</section>
 <style>
   .gallery {
     grid-column: 1 / -1 !important;

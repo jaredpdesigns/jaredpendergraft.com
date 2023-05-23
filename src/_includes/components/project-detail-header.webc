@@ -5,14 +5,13 @@
   <section class="flow__grid flow__gap--l padding__l">
     <h1 @text="project.name"></h1>
     <p @text="description" class="type__size--l-xl--fluid"></p>
-    <script webc:type="render" webc:is="template" webc:if="project.role">
-      function() {
-        return `<p class="flow__flex flow__gap--s flow__flex--wrap">${this.project.role.split(',').map(role => `<code>${role}</code>`).join('')}</p>`;
-      }
-    </script>
+    <p class="flow__flex flow__gap--s flow__flex--wrap"><code webc:for="role of project.role.split(',')"
+        @text="role"></code></p>
     <p webc:if="project.external">
-      <a :href="project.external" target="_blank" rel="noopener" class="button__secondary">Visit site <icon
-          name="external" webc:nokeep size="12"></icon></a>
+      <a :href="project.external" target="_blank" rel="noopener" class="button__secondary">
+        <span class="flow__inline margin__block-start--xs">Visit site </span>
+        <icon name="external" webc:nokeep size="12"></icon>
+      </a>
     </p>
   </section>
 </header>

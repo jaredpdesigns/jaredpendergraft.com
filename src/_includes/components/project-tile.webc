@@ -1,5 +1,5 @@
 <a :class="`project__tile ${small ? `project__tile--small`:``} border__all color__border--base--light color__type--base overflow__hidden radius__m shadow`"
-  :href="`/projects/${projectslug}`" :style="`${projectstyle}`">
+  :href="`/projects/${projectslug}`" :style="`--brand: ${projecthue}`">
   <figure>
     <span class="flow__block overflow__hidden">
       <img class="flow__size--full radius__start-start--m radius__start-end--m"
@@ -12,13 +12,17 @@
       <h1 @text="projectname" webc:if="!small" class="color__type--base--ish"></h1>
       <p @text="projectdescription" webc:if="!small"></p>
       <p class="button__secondary" webc:if="!small">
-        View Project <icon name="arrow-right" webc:nokeep></icon>
+        <span class="flow__inline margin__block-start--xs">
+          View Project
+        </span>
+        <icon name="arrow-right" webc:nokeep></icon>
       </p>
     </figcaption>
   </figure>
 </a>
 <style>
   .project__tile {
+    --outline__color: hsl(var(--brand) / 0.25);
     background-color: var(--color__contrast--adaptive);
     text-decoration: unset;
   }

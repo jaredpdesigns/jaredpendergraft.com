@@ -20,7 +20,9 @@ I care deeply about how something works as much as its outward appearance and am
 
 ## Featured Projects
 
-<gallery webc:nokeep></gallery>
+<gallery webc:nokeep>
+  <project-tiles :projects="this.projects.filter(project => project.type === 'featured')" small="true" webc:nokeep>
+</gallery>
 
 <style>
   .profile article {

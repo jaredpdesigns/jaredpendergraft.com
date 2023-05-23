@@ -1,0 +1,3 @@
+<project-tile webc:for="project of projects" :projectdescription="project.description" :projecthue="project.hue"
+  :projectimg="project.img" :projectname="project.name" :projectslug="project.slug" :small="small"
+  webc:nokeep></project-tile>

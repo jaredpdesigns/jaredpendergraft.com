@@ -7,7 +7,7 @@ pageClass: hire
 layout: page.webc
 ---
 
-# Let’s Create Something *Great* Together
+# Let’s Create Something _Great_ Together
 
 > I’m currently serving as _Front End Engineer_ at [Follow Up Boss](https://followupboss.com/), view my [résumé](/hire/me/) for more about my background.
 >
@@ -19,8 +19,6 @@ layout: page.webc
 
 While each project requires different approaches to problem-solving, here are a few examples of common ways I approach design challenges:
 
-<script webc:type="render" webc:is="template">
-  function() {
-    return `<grid webc:nokeep>${this.processes.map(process => `<process processimage="${process.img}" processlabel="${process.label}" processdescription="${process.description}" webc:nokeep></process>`).join("")}</grid>`;
-  }
-</script>
+<grid webc:nokeep>
+  <processes :processes="this.processes" webc:nokeep></processes>
+</grid>

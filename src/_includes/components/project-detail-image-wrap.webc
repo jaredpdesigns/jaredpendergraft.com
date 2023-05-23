@@ -1,8 +1,7 @@
-<script webc:type="render" webc:is="template">
-  function() {
-    return `<section class="img__wrap grid">${this.images.map(image => `<project-detail-image image="${image.img}" imagedark="${image.imgDark}" imagetitle="${image.title}" webc:nokeep></project-detail-image>`).join("")}</section>`;
-  }
-</script>
+<section class="img__wrap grid">
+  <project-detail-image webc:for="image of images" :image="image.img" :imagedark="image.imgDark"
+    :imagetitle="image.title" webc:nokeep></project-detail-image>
+</section>
 <style>
   .img__wrap {
     display: grid;

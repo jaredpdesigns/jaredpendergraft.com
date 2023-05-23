@@ -9,19 +9,15 @@ layout: page.webc
 
 Case Studies
 
-<script webc:type="render" webc:is="template">
-  function() {
-    return `<grid webc:nokeep>${this.projects.filter(project => project.type === 'featured').map(project => `<project-tile projectdescription="${project.description}" projectimg="${project.img}" projectname="${project.name}" projectslug="${project.slug}" projectstyle="--brand: ${project.hue}" webc:nokeep></project-tile>`).join("")}</grid>`;
-  }
-</script>
+<grid webc:nokeep>
+  <project-tiles :projects="this.projects.filter(project => project.type === 'featured')" webc:nokeep>
+</grid>
 
 Passion Projects
 
-<script webc:type="render" webc:is="template">
-  function() {
-    return `<grid webc:nokeep>${this.projects.filter(project => project.type === 'side').map(project => `<project-tile-side projectdescription="${project.description}" projectimg="${project.img}" projectname="${project.name}" projectslug="${project.external}" webc:nokeep></project-tile-side>`).join("")}</grid>`;
-  }
-</script>
+<grid webc:nokeep>
+  <project-tiles-side :projects="this.projects.filter(project => project.type === 'side')" webc:nokeep>
+</grid>
 
 <style>
   .projects article > p {
