@@ -1,0 +1,36 @@
+<a class="project__tile--side color__type--base padding__m radius__m" :href="projectslug" target="_blank"
+  rel="nofollow">
+  <figure class="flow__grid flow__align--block-start flow__gap--l">
+    <span class="flow__block radius__m">
+      <img class="radius__m" :alt="`Featured image for ${projectname}`" :src="projectimg" decoding="async"
+        fetchpriority="high" loading="lazy" height="32" width="32" />
+    </span>
+    <figcaption class="oomph__block--s">
+      <h2 @text="projectname"></h2>
+      <p @text="projectdescription"></p>
+    </figcaption>
+  </figure>
+</a>
+<style>
+  .project__tile--side {
+    --size: calc(var(--size__xxxl) * 1.5);
+    text-decoration: unset;
+  }
+
+  .project__tile--side:focus,
+  .project__tile--side:hover {
+    background-color: var(--color__contrast--adaptive);
+  }
+
+  @media (min-width: 64rem) {
+    .project__tile--side figure {
+      grid-template-columns: var(--size) auto;
+    }
+  }
+
+  .project__tile--side img {
+    block-size: var(--size);
+    inline-size: var(--size);
+    aspect-ratio: 1/1;
+  }
+</style>

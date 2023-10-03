@@ -1,0 +1,13 @@
+---
+layout: base.webc
+---
+
+<article>
+  <nav class="flow__flex flow__align--block-center flow__gap--s">
+    <a webc:for="tag of tags.filter(tag => tag !== 'code')" :href="`/code/tags/${tag.toLowerCase()}`"
+      style="text-decoration: unset">
+      <code @text="tag"></code>
+    </a>
+  </nav>
+  <template @html="content" webc:nokeep></template>
+</article>

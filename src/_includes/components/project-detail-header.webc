@@ -1,0 +1,75 @@
+<header
+  class="project__header border__all color__bg--highlight--light color__border--highlight--semi flow__grid flow__align--block-stretch radius__m">
+  <image-get class="radius__start-start--m radius__start-end--m" :alt="`Featured image for ${project.name} case study`"
+    :src="`${project.img}`" height="180" width="320" sizes="(max-width: 640px) 100vw, 640px"
+    widths="320, 480, 640, 960"></image-get>
+  <section class="flow__grid flow__gap--l padding__block--l padding__inline--m">
+    <h1 @text="project.name"></h1>
+    <p @text="description" class="type__size--l-xl--fluid"></p>
+    <p class="flow__flex flow__gap--s flow__flex--wrap"><code webc:for="role of project.role.split(',')"
+        @text="role"></code></p>
+    <p webc:if="project.external">
+      <a :href="project.external" target="_blank" rel="noopener" class="button__secondary">
+        <span class="flow__inline margin__block-start--xs">Visit Site</span>
+        <icon name="external" webc:nokeep size="12"></icon>
+      </a>
+    </p>
+  </section>
+</header>
+<style>
+  .project__header {
+    margin-inline: calc(var(--size__m) * -1);
+  }
+
+  .project__header>* {
+    min-inline-size: 0;
+  }
+
+  .project__header h1 {
+    color: var(--color__base--ish);
+  }
+
+  .project__header img {
+    aspect-ratio: 1200/630;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project__header>section {
+    align-content: center;
+    justify-items: start;
+  }
+
+  .project__header a {
+    color: var(--color__base--ish);
+    text-decoration: none;
+  }
+
+  .project__header a:focus,
+  .project__header a:hover {
+    color: var(--color__base);
+  }
+
+  .project__header a:focus-visible {
+    background-color: var(--color__contrast--adaptive);
+  }
+
+  @media (min-width: 72rem) {
+    .project__header {
+      aspect-ratio: 1200/480;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      margin-inline: calc(var(--size__xxxl) * -2);
+    }
+
+    .project__header img {
+      aspect-ratio: unset;
+      border-start-end-radius: 0;
+      border-end-start-radius: var(--size__m);
+    }
+
+    .project__header>section {
+      padding-inline: var(--size__l);
+    }
+  }
+</style>

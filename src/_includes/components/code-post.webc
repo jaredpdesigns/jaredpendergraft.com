@@ -1,0 +1,41 @@
+<a class="code__tile border__all color__border--base--light color__type--base overflow__hidden radius__m"
+  :href="posthref" :title="`Read more about ${posttitle}`">
+  <span class="flow__block overflow__hidden">
+    <img class="flow__size--full radius__start-start--m radius__start-end--m"
+      :alt="`Featured image for ${posttitle} article`" :src="postimg" decoding="async" fetchpriority="high" height="168"
+      width="320" />
+  </span>
+  <section class="border__top color__border--base--light oomph__block--s padding__m">
+    <h2 @text="posttitle.split(' • ')[0]"></h2>
+    <p @text="postdescription"></p>
+  </section>
+  <p
+    class="border__top color__bg--base--ghost color__border--base--light flow__flex flow__gap--s flow__flex--wrap padding__block--s padding__inline--m">
+    <script webc:type="render" webc:is="template">
+      function() {
+        return this.posttags.split(',').filter(tag => tag !== 'code').map(tag => `<code>${tag}</code>`).join("");
+      }
+    </script>
+  </p>
+</a>
+<style>
+  .code__tile {
+    background-color: var(--color__contrast--adaptive);
+    text-decoration: unset;
+  }
+
+  .code__tile:focus img,
+  .code__tile:hover img {
+    transform: scale(1.0625);
+  }
+
+  .code__tile span {
+    clip-path: inset(0 round var(--size__m) var(--size__m) 0 0);
+  }
+
+  .code__tile img {
+    aspect-ratio: 1200/630;
+    inline-size: 100%;
+    transition: transform 0.75s var(--transition);
+  }
+</style>

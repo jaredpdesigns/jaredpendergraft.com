@@ -1,0 +1,27 @@
+<script webc:type="render" webc:is="template">
+  const Image = require("@11ty/eleventy-img");
+  module.exports = async function () {
+    const aspectRatio = this.height / this.width;
+    const meta = this.meta ? `&${this.meta}` : '';
+    const src = `https://images.ctfassets.net/${this.src}`;
+    let options = await Image(src, {
+      formats: ["avif", "jpeg", "webp"],
+      urlFormat: function ({ src, width, format }) {
+        return `${src}?h=${width * aspectRatio}&w=${width}&fm=${format.replace('jpeg', 'jpg')}${meta}`;
+      },
+      dryRun: true,
+      widths: this.widths ? this.widths.split(', ').map(i => Number(i)) : [null]
+    });
+
+    const response = Image.generateHTML(options, {
+      alt: this.alt,
+      class: this.class ? this.class : '',
+      loading: this.loading ? this.loading : '',
+      decoding: "async",
+      fetchpriority: "high",
+      sizes: this.sizes ? this.sizes : ''
+    });
+
+    return response;
+  }
+</script>

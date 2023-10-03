@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Education Advanced",
+    "description": "Brand development and marketing site which merges multiple EdTech products into a cohesive, consistent platform.",
+    "img": "cuehicrlqnvu/3Qlx9RkOPcZDF7W9dCYR9r/a30a3b9c652053bcc3c319659ea4e843/eai--featured.jpg",
+    "slug": "educationadvanced",
+    "external": "https://educationadvanced.com/",
+    "type": "featured",
+    "hue": "180deg 58% 67%",
+    "role": ["UI/UX Design", "Front-End Development"]
+  },
+  {
+    "name": "Cardonex",
+    "description": "Master schedule building application that maximizes teaching staff utilization and deliver over 90% of students’ first-choice classes.",
+    "img": "cuehicrlqnvu/6Ob8YtztOp5XtVW0UsKUZi/ceabaf823e565d2d149f81e78414082d/cardonex--featured.jpg",
+    "slug": "cardonex",
+    "external": "https://educationadvanced.com/products/cardonex/",
+    "type": "featured",
+    "hue": "207deg 100% 40%",
+    "role": ["UI/UX Design"]
+  },
+  {
+    "name": "TestHound",
+    "description": "Application that helps educators plan and coordinate all their school assessments, while keeping track of student accommodations, and student testing history.",
+    "img": "cuehicrlqnvu/2Qb64megGPgvm7hMfaI5xA/2c561e367ac05c8e72b5a52488647f46/testhound--featured.jpg",
+    "slug": "testhound",
+    "external": "https://educationadvanced.com/products/testhound/",
+    "type": "featured",
+    "hue": "50deg 100% 50%",
+    "role": ["UI/UX Design"]
+  },
+  {
+    "name": "Hypothesis",
+    "description": "Pattern library for the popular web-annotation tool that lets you annotate the web, with anyone, anywhere.",
+    "img": "cuehicrlqnvu/5rTlga1dUvcKgN3IgfYRmM/085fad2b9467e9f934a757122e4e075b/hypothesis--featured.jpg",
+    "slug": "hypothesis",
+    "external": "https://web.hypothes.is/",
+    "type": "featured",
+    "hue": "346deg 100% 38%",
+    "role": ["UI/UX Design"]
+  },
+  {
+    "name": "Nice Bike",
+    "description": "Fresh website to showcase custom-built bicycles with an emphasis on craft and details.",
+    "img": "cuehicrlqnvu/1W3mErZiFw9qjhOFKAQg0q/d4c9694fa79fc69bfa3b8ffcb5af04a7/nicebike--featured.jpg",
+    "slug": "nicebike",
+    "external": "https://ridenicebike.com",
+    "type": "featured",
+    "hue": "111deg 64% 51%",
+    "role": ["UI/UX Design", "Front-End Development"],
+    "hidden": true
+  },
+  {
+    "name": "OTTO Health",
+    "description": "Video consultation application for connecting providers to patients, practice administration and scheduling.",
+    "img": "cuehicrlqnvu/18EA0Lk4iUM0jT6y4jghWf/6cc4a622379c5c7e7ead014721830241/otto--featured.jpg",
+    "slug": "otto",
+    "type": "featured",
+    "hue": "17deg 100% 74%",
+    "role": ["UI/UX Design", "Front-End Development"]
+  },
+  {
+    "name": "Pasta",
+    "description": "Pasta provides a great starting place for web projects. It combines light styling for common web elements, yummy.",
+    "img": "/img/sides/pasta.svg",
+    "external": "https://pasta.jaredpendergraft.com/",
+    "type": "side"
+  },
+  {
+    "name": "Avery Mirabelle",
+    "description": "Time capsule of videos and artwork from my daughter’s life, showcasing her creativity and attention to detail.",
+    "img": "/img/sides/avery.svg",
+    "external": "https://averymirabelle.com",
+    "type": "side"
+  },
+  {
+    "name": "Ezra Oliver",
+    "description": "Time capsule of videos from my son’s life, showcasing his silliness and fearlessness.",
+    "img": "/img/sides/ezra.svg",
+    "external": "https://ezrapendergraft.com",
+    "type": "side"
+  },
+  {
+    "name": "These Kids Read",
+    "description": "A collection of great picture books our family has read over the years. ",
+    "img": "/img/sides/tkr.svg",
+    "external": "https://thesekidsread.jaredpendergraft.com",
+    "type": "side"
+  }
+]

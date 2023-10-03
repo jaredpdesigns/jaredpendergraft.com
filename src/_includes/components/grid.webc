@@ -1,0 +1,21 @@
+<section
+  class="grid flow__grid flow__align--block-start flow__grid--columns-auto flow__gap--l"
+>
+  <slot></slot>
+</section>
+<style>
+  .grid {
+    --fit__type: auto-fill;
+  }
+  @media (min-width: 40rem) {
+    .grid {
+      --column__width: var(--width__s);
+    }
+  }
+  @media (min-width: 75rem) {
+    .grid {
+      --column__width: var(--width__m);
+      margin-inline: calc(var(--size__xxxl) * -2);
+    }
+  }
+</style>
