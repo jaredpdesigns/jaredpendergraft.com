@@ -14,24 +14,28 @@
     padding-block-end: 0;
     padding-inline: 0;
   }
-  .reccommendation > p {
+
+  .reccommendation>p {
     padding-inline: var(--size__l);
   }
-  .reccommendation > p:first-child:before,
-  .reccommendation > p:last-of-type:after {
+
+  .reccommendation>p:first-child:before,
+  .reccommendation>p:last-of-type:after {
     color: var(--color__highlight);
-    font-family: var(--type__family--secondary);
     font-size: var(--type__size--xl--fluid);
   }
-  .reccommendation > p:first-child:before {
+
+  .reccommendation>p:first-child:before {
     content: "“";
     margin-inline-start: -0.625ch;
     margin-inline-end: 0.125ch;
   }
-  .reccommendation > p:last-of-type:after {
+
+  .reccommendation>p:last-of-type:after {
     content: "”";
     margin-inline-start: 0.125ch;
   }
+
   .reccommendation footer p span {
     font-weight: 600;
   }

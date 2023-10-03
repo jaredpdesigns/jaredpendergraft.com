@@ -28,10 +28,6 @@
         href="https://codepen.io/jaredpdesigns/pens/public" title="Follow me on CodePen" target="_blank" rel="noopener">
         <icon name="codepen" webc:nokeep></icon>
       </a>
-      <a class="flow__inline flow__align--inline-center flow__align--block-center flow__size--block-xl flow__size--inline-xl radius__xs"
-        href="https://dribbble.com/jaredpdesigns" title="Follow me on Dribbble" target="_blank" rel="noopener">
-        <icon name="dribbble" webc:nokeep></icon>
-      </a>
       <button
         class="button__tertiary flow__inline flow__align--inline-center flow__align--block-center flow__size--block-xl flow__size--inline-xl radius__xs"
         onclick="toggleTheme()" title="Toggle website theme">

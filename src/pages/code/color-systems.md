@@ -1,7 +1,7 @@
 ---
 title: Color Systems • Code • Jared Pendergraft
 description: A simple approach to HSL color systems
-img: https://jaredpendergraft.com/img/code/color-systems.jpg
+img: https://jaredpendergraft.com/img/code/color-systems.svg
 layout: page-code.webc
 pageClass: code colorSystems
 tags:

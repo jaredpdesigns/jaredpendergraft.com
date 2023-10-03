@@ -7,7 +7,7 @@ pageClass: hire
 layout: page.webc
 ---
 
-# Let’s Create Something _Great_ Together
+# Let’s Create _Something Great_ Together
 
 > I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/), view my [résumé](/hire/me/) for more about my background.
 >

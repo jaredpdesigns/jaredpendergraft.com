@@ -10,7 +10,7 @@
         @text="role"></code></p>
     <p webc:if="project.external">
       <a :href="project.external" target="_blank" rel="noopener" class="button__secondary">
-        <span class="flow__inline margin__block-start--xs">Visit site </span>
+        <span class="flow__inline margin__block-start--xs">Visit Site</span>
         <icon name="external" webc:nokeep size="12"></icon>
       </a>
     </p>

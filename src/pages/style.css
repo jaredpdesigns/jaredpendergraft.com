@@ -225,17 +225,23 @@ page;
   .profile {
     article>h1+p {
       font-weight: 600;
-      font-variation-settings: 'opsz' 6, 'wght' 600;
+      font-variation-settings: "wght" 600;
 
       em {
-        font-variation-settings: 'ital' 1, 'opsz' 6, 'wght' 600;
+        font-style: normal;
+        font-variation-settings: 'wght' 600, 'ital' 1;
+        font-variation-settings: 'opsz' 6, 'wght' 600;
+
+        em {
+          font-variation-settings: 'ital' 1, 'opsz' 6, 'wght' 600;
+        }
       }
     }
-  }
 
-  .me {
-    article>h3+p {
-      margin-block-start: var(--size__s);
+    .me {
+      article>h3+p {
+        margin-block-start: var(--size__s);
+      }
     }
   }
 }

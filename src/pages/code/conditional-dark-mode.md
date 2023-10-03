@@ -1,7 +1,7 @@
 ---
 title: Conditional Dark Mode • Code • Jared Pendergraft
 description: A flexible approach to supporting dark mode in projects
-img: https://jaredpendergraft.com/img/code/conditional-dark-mode.jpg
+img: https://jaredpendergraft.com/img/code/conditional-dark-mode.svg
 layout: page-code.webc
 pageClass: code darkMode
 tags:

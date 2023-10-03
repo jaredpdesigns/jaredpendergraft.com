@@ -8,8 +8,6 @@ layout: page.webc
 
 <profile-img webc:nokeep></profile-img>
 
-<!-- <profile-img webc:nokeep src="48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg"></profile-img> -->
-
 # Hello, It’s Nice to Meet You
 
 I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.
