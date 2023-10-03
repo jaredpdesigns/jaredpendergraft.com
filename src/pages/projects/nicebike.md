@@ -32,7 +32,7 @@ eleventyComputed:
   description: "{{ (projects | filteredProject('Nice Bike')).description }}"
   project:
     name: "{{ (projects | filteredProject('Nice Bike')).name }}"
-    img: "{{ (projects | filteredProject('Nice Bike')).img }}?h=630&w=1200&fit=fill&f=face"
+    img: "{{ (projects | filteredProject('Nice Bike')).img }}"
     external: "{{ (projects | filteredProject('Nice Bike')).external }}"
     role: "{{ (projects | filteredProject('Nice Bike')).role }}"
     style: "--brand: {{ (projects | filteredProject('Nice Bike')).hue }}"

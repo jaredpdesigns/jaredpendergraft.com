@@ -3,10 +3,10 @@
   <figure class="flow__grid flow__align--block-start flow__gap--l">
     <span class="flow__block radius__m">
       <img class="radius__m" :alt="`Featured image for ${projectname}`" :src="projectimg" decoding="async"
-        fetchpriority="high" loading="lazy" />
+        fetchpriority="high" loading="lazy" height="32" width="32" />
     </span>
     <figcaption class="oomph__block--s">
-      <h3 @text="projectname"></h3>
+      <h2 @text="projectname"></h2>
       <p @text="projectdescription"></p>
     </figcaption>
   </figure>

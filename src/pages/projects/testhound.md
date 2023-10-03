@@ -71,7 +71,7 @@ eleventyComputed:
   description: "{{ (projects | filteredProject('TestHound')).description }}"
   project:
     name: "{{ (projects | filteredProject('TestHound')).name }}"
-    img: "{{ (projects | filteredProject('TestHound')).img }}?h=630&w=1200&fit=fill&f=face"
+    img: "{{ (projects | filteredProject('TestHound')).img }}"
     external: "{{ (projects | filteredProject('TestHound')).external }}"
     role: "{{ (projects | filteredProject('TestHound')).role }}"
     style: "--brand: {{ (projects | filteredProject('TestHound')).hue }}"
