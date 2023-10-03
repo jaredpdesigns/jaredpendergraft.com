@@ -5,10 +5,10 @@
         <p><strong>Jared Pendergraft</strong></p>
       </a>
       <section class="color__type--base--ish flow__inline flow__gap--m type__size--m-xxl type__weight--semibold">
-        <a class="radius__xs" href="/">About</a>
-        <a class="radius__xs" href="/projects/">Projects</a>
-        <a class="radius__xs" href="/code/">Code</a>
-        <a class="radius__xs" href="/hire/">Hire</a>
+        <a class="radius__xs" href="/" :aria-current="url === '/' && 'page'">About</a>
+        <a class="radius__xs" href="/projects/" :aria-current="url.includes('projects') && 'page'">Projects</a>
+        <a class="radius__xs" href="/code/" :aria-current="url.includes('code') && 'page'">Code</a>
+        <a class="radius__xs" href="/hire/" :aria-current="url.includes('hire') && 'page'">Hire</a>
       </section>
     </nav>
   </section>

@@ -2,7 +2,7 @@
 layout: root.webc
 ---
 
-<site-header webc:nokeep></site-header>
+<site-header webc:nokeep :url="page.url"></site-header>
 <main :class="page.fileSlug || pageClass">
   <template @html="content" webc:nokeep></template>
 </main>

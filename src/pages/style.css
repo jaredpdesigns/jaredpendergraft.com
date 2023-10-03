@@ -1,6 +1,4 @@
-@layer pasta,
-project,
-page;
+@layer pasta, project, page;
 
 @import url("https://unpkg.com/@jaredpdesigns/pasta") layer(pasta);
 
@@ -66,6 +64,11 @@ page;
 
       a {
         text-decoration: unset;
+
+        &:focus-visible,
+        &:hover {
+          color: var(--color__base);
+        }
 
         &[aria-current="page"] {
           color: var(--color__base);

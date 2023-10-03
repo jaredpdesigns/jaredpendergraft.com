@@ -9,7 +9,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(pluginWebC, {
-    components: "src/_includes/**/*.webc",
+    components: "src/_includes/**/*.webc"
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -24,12 +24,11 @@ module.exports = function (eleventyConfig) {
         require("postcss-import"),
         require("postcss-nested"),
         require("postcss-each"),
-        require("autoprefixer"),
-        require("postcss-minify"),
+        require("autoprefixer")
       ]).process(inputContent);
 
       return async () => result.css;
-    },
+    }
   });
 
   // Filters
@@ -41,10 +40,10 @@ module.exports = function (eleventyConfig) {
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
-    linkify: true,
+    linkify: true
   }).use(markdownItAnchor, {
     renderHref: false,
-    tabIndex: false,
+    tabIndex: false
   });
 
   eleventyConfig.setLibrary("md", markdownLibrary);
@@ -60,8 +59,8 @@ module.exports = function (eleventyConfig) {
           res.write(content_404);
           res.end();
         });
-      },
-    },
+      }
+    }
   });
 
   // HTML minification
@@ -70,7 +69,7 @@ module.exports = function (eleventyConfig) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true,
+        collapseWhitespace: true
       });
       return minified;
     }
@@ -79,7 +78,7 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough static stuffs
   eleventyConfig.addPassthroughCopy({
-    static: "/",
+    static: "/"
   });
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
@@ -91,6 +90,6 @@ module.exports = function (eleventyConfig) {
       data: "../data",
       output: "dist"
     },
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
   };
 };
