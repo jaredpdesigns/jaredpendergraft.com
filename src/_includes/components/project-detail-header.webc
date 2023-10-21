@@ -5,7 +5,7 @@
     widths="320, 480, 640, 960"></image-get>
   <section class="flow__grid flow__gap--l padding__block--l padding__inline--m">
     <h1 @text="project.name"></h1>
-    <p @text="description" class="type__size--l-xl--fluid"></p>
+    <p webc:if="description" @text="description" class="type__size--l-xl--fluid"></p>
     <p class="flow__flex flow__gap--s flow__flex--wrap"><code webc:for="role of project.role.split(',')"
         @text="role"></code></p>
     <p webc:if="project.external">
@@ -30,7 +30,6 @@
   }
 
   .project__header img {
-    aspect-ratio: 1200/630;
     block-size: 100%;
     object-fit: cover;
     object-position: center;
@@ -57,13 +56,11 @@
 
   @media (min-width: 72rem) {
     .project__header {
-      aspect-ratio: 1200/480;
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       margin-inline: calc(var(--size__xxxl) * -2);
     }
 
     .project__header img {
-      aspect-ratio: unset;
       border-start-end-radius: 0;
       border-end-start-radius: var(--size__m);
     }
