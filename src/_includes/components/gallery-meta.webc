@@ -1,8 +1,8 @@
 <section class="gallery__meta border__all color__border--base--light radius__m">
   <header
-    class="border__bottom color__border--base--light flow__flex flow__align--inline-between flow__gap--s padding__block--m padding__inline--l">
+    class="border__bottom color__border--base--light flow__flex flow__align--inline-between flow__flex--wrap flow__gap--s padding__block--m padding__inline--l">
     <h3 @text="project.name"></h3>
-    <span class="flow__flex flow__align--block-center flow__gap--s">
+    <span class="flow__flex flow__align--block-center flow__flex--wrap flow__gap--s">
       <span
         class="color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__size--s-m"
         webc:for="role of project.role" @text="role"></span>

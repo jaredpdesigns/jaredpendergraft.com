@@ -46,7 +46,7 @@
       },
     ];
     const filtered = images.find((value) => value.name === this.processimage);
-    return `<blockquote class="process flow__grid flow__gap--l styled">
+    return `<blockquote class="process flow__grid flow__align--block-center flow__gap--m styled">
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
@@ -63,23 +63,33 @@
         <path fill="var(--color__highlight)" d="${filtered.green}" />
       </g>
     </svg>
-    <section class="flow__grid flow__gap--m">
-      <h3>${this.processlabel}</h3>
-      <p>${this.processdescription}</p>
-    </section>
+    <h3>${this.processlabel}</h3>
+    <p>${this.processdescription}</p>
   </blockquote>`}
 </script>
 
 <style>
   .process {
-    grid-template-columns: auto 1fr;
+    container-type: inline-size;
+    grid-template-columns: 4rem 1fr;
   }
 
-  .process>svg {
-    margin-block-start: calc(var(--size__s) * -1);
+  .process h3,
+  .process p {
+    margin-top: unset;
   }
 
-  .process>section {
-    margin-top: 0;
+  .process p {
+    grid-column: 1/-1;
+  }
+
+  @container (min-width: 40rem) {
+    .process {
+      column-gap: var(--size__l);
+    }
+
+    .process p {
+      grid-column: 2;
+    }
   }
 </style>
