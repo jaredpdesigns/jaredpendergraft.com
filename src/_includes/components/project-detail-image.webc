@@ -1,5 +1,0 @@
-<figure>
-  <img loading="lazy" decoding="async" fetchpriority="high" :src="image" :alt="imagetitle" height="320" width="320" />
-  <img loading="lazy" decoding="async" fetchpriority="low" :src="imagedark" :alt="imagetitle" height="320" width="320"
-    style="opacity: 0" webc:if="imagedark" />
-</figure>

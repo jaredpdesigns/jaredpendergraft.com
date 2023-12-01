@@ -1,18 +1,16 @@
-<blockquote class="reccommendation radius__m overflow__hidden styled">
+<blockquote class="reccommendation styled">
   <template @html="comment" webc:nokeep></template>
-  <footer class="border__top color__bg--base--ghost color__border--base--light">
-    <p class="color__type--base--semi padding__block--s padding__inline--s">
-      — <span class="color__type--base" @text="author"></span>
+  <footer class="color__bg--contrast radius__bl--m radius__br--m">
+    <p class="color__type--base--ish padding__block--s padding__inline--s">
+      — <span class="color__type--base type__weight--semibold" @text="author"></span>
     </p>
   </footer>
 </blockquote>
 <style>
   .reccommendation {
-    --color__bg: var(--color__contrast--adaptive);
-    --color__border: var(--color__base--light);
-    box-shadow: none;
-    padding-block-end: 0;
-    padding-inline: 0;
+    padding-block-start: var(--size__m);
+    padding-block-end: unset;
+    padding-inline: unset;
   }
 
   .reccommendation>p {
@@ -22,7 +20,9 @@
   .reccommendation>p:first-child:before,
   .reccommendation>p:last-of-type:after {
     color: var(--color__highlight);
+    display: inline-block;
     font-size: var(--type__size--xl--fluid);
+    transform: translateY(0.25ch);
   }
 
   .reccommendation>p:first-child:before {
@@ -34,9 +34,5 @@
   .reccommendation>p:last-of-type:after {
     content: "”";
     margin-inline-start: 0.125ch;
-  }
-
-  .reccommendation footer p span {
-    font-weight: 600;
   }
 </style>

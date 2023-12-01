@@ -1,0 +1,6 @@
+<section class="gallery__images flow__grid padding__block-end--l">
+  <section
+    class="gallery__images--wrap flow__flex flow__align--block-center flow__align--inline-start flow__gap--m padding__block-start--m">
+    <slot></slot>
+  </section>
+</section>

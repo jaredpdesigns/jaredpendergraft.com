@@ -1,52 +1,64 @@
-<custom-dialog dialogtitle="Colophon" webc:nokeep>
-  <section class="oomph__block--m">
-    <h4>Colors</h4>
-    <section class="flow__grid flow__align--block-start flow__gap--m flow__grid--columns-auto"
-      style="--column__width: var(--width__xs)">
-      <p webc:for="color of ['base', 'base--ish', 'base--mid', 'base--semi', 'base--light', 'base--ghost', 'highlight', 'highlight--ish', 'highlight--mid', 'highlight--semi', 'highlight--light', 'highlight--ghost', 'contrast', 'contrast--extra']"
-        class="flow__grid flow__align--inline-start flow__align--block-center flow__direction--column flow__gap--xs">
-        <span
-          :class="`border__all color__border--base--light color__bg--${color} flow__inline flow__size--block-xl flow__size--inline-xl radius__all`"></span><code
-          @text="color"></code>
-      </p>
-    </section>
+<dialog class="border__all color__bg--contrast color__border--base--light radius__s" oncancel="toggleDialog()"
+  onclick="toggleDialog()">
+  <section onclick="preventAutoClose(event)">
+    <header
+      class="border__bottom color__bg--contrast color__border--base--light flow__flex flow__align--h-between flow__align--v-center padding__m">
+      <h3 class="color__type--base--ish margin__inline-start--m">Colophon</h3>
+      <button
+        class="button__tertiary flow__inline flow__align--inline-center flow__align--block-center flow__size--block-l flow__size--inline-l radius__all"
+        onclick="toggleDialog()">
+        <icon name="cancel" webc:nokeep></icon>
+      </button>
+    </header>
+    <article class="padding__l">
+      <ul class="styled">
+        <li>
+          Styled with
+          <a rel="noopener" target="_blank" href="https://pasta.jaredpendergraft.com"
+            class="flow__inline flow__align--block-center flow__gap--s">Pasta<icon name="external" webc:nokeep></icon>
+          </a>
+        </li>
+        <li>
+          Type is set in <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/degular">Degular Variable</a>
+          by <em>OH no Type Company</em>
+        </li>
+        <li>
+          Built using
+          <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>
+          and <a rel="noopener" target="_blank" href="https://www.11ty.dev/docs/languages/webc/">WebC</a> and hosted on
+          <a rel="noopener" target="_blank" href="https://www.netlify.com/">Netlify</a>
+        </li>
+      </ul>
+    </article>
+    <footer class="border__block-start color__border--base--light">
+      <section
+        class="color__type--base--mid flow__flex flow__align--block-center flow__flex--wrap flow__gap--l padding__block--m padding__inline--l">
+        <p @text="`&copy; ${new Date().getFullYear()} Jared Pendergraft`">
+        </p>
+        <p class="flow__inline flow__align--block-center flow__gap--s">
+          <icon name="pineapple" webc:nokeep></icon>
+          Made in Hawaiʻi
+        </p>
+      </section>
+    </footer>
   </section>
-  <section class="oomph__block--m">
-    <h4>Typography</h4>
-    <ul>
-      <li>
-        <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/degular">Degular Variable</a>
-        by OH no Type Company
-      </li>
-      <li>
-        <a rel="noopener" target="_blank" href="https://ohnotype.co/fonts/obviously">Obviously Variable</a>
-        by OH no Type Company
-      </li>
-      <li>
-        <a rel="noopener" target="_blank" href="https://processtypefoundry.com/fonts/coordinates/">Coordinates
-          Variable</a>
-        by Process Type Foundry
-      </li>
-    </ul>
-  </section>
-  <section class="oomph__block--m">
-    <h4>Tooling</h4>
-    <ul>
-      <li>
-        Built using
-        <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>
-        and <a rel="noopener" target="_blank" href="https://www.11ty.dev/docs/languages/webc/">WebC</a>
-      </li>
-      <li>
-        Styled with
-        <a rel="noopener" target="_blank" href="https://pasta.jaredpendergraft.com">Pasta</a>
-      </li>
-      <li>
-        Hosted on
-        <a rel="noopener" target="_blank" href="https://www.netlify.com/">Netlify</a>
-      </li>
-    </ul>
-  </section>
-  <p class="color__type--base--mid" @text="`&copy; ${new Date().getFullYear()} Jared Pendergraft`">
-  </p>
-</custom-dialog>
+</dialog>
+<script>
+  function preventAutoClose(e) {
+    e.stopPropagation();
+  }
+</script>
+<style>
+  dialog {
+    inline-size: calc(100% - var(--size__l));
+    margin: auto;
+    max-block-size: calc(100% - var(--size__l));
+    max-inline-size: var(--width__l);
+    position: fixed;
+  }
+
+  dialog>section>header {
+    inset-block-start: 0;
+    position: sticky;
+  }
+</style>

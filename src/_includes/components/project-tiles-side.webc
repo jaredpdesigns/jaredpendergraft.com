@@ -1,2 +1,0 @@
-<project-tile-side webc:for="project of projects" :projectdescription="project.description" :projectimg="project.img"
-  :projectname="project.name" :projectslug="project.external" webc:nokeep></project-tile-side>

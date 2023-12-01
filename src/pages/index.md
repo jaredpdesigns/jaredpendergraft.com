@@ -1,37 +1,36 @@
 ---
 title: Jared Pendergraft
 description: The personal website of Jared Pendergraft
-img: https://jaredpendergraft.com/img/social.jpg
 pageClass: profile
 layout: page.webc
 ---
 
-<profile-img webc:nokeep></profile-img>
+<profile-wrap webc:nokeep>
 
 # Hello, It’s Nice to Meet You
 
-I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.
+**I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.**
 
 I care deeply about how something works as much as its outward appearance and am always looking to **improve, optimize and scale my ideas**. I approach design challenges holistically, building solutions from beginning to end with **extensibility and modularity** in mind.
 
-> I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/). View [projects](/projects/) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
+</profile-wrap>
+
+> I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/)—building the best real estate CRM on the market. View [projects](/#projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 
 ---
 
-## Featured Projects
+## Projects
 
-<gallery webc:nokeep>
-  <project-tiles :projects="this.projects.filter(project => project.type === 'featured')" small="true" webc:nokeep>
-</gallery>
+<gallery webc:for="project of this.projects.filter(project => project.type === 'featured')" :project="project" webc:nokeep></gallery>
 
 <style>
   .profile article {
-    margin-inline: 0;
-    max-inline-size: 100%;
     grid-template-columns: minmax(calc(var(--size__l) + env(safe-area-inset-left)), 1fr) minmax(0, var(--maxWidth)) minmax(calc(var(--size__l) + env(safe-area-inset-left)), 1fr);
+    max-inline-size: unset;
     padding-inline: 0;
   }
-  .profile article > * {
+
+  .profile article > *:not(.gallery) {
     grid-column: 2;
   }
 </style>

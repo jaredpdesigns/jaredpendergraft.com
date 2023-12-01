@@ -1,15 +1,66 @@
 <header class="border__block-end border__block-start color__border--base--light">
   <section class="flow__block margin__inline--auto padding__block--m">
     <nav class="flow__flex flow__align--inline-between flow__align--block-center flow__flex--wrap">
-      <a href="/" title="Return to Profile" class="color__type--base--ish radius__xs type__family--secondary">
+      <a href="/" title="Return to Profile" class="color__type--base--ish radius__xs">
         <p><strong>Jared Pendergraft</strong></p>
       </a>
-      <section class="color__type--base--ish flow__inline flow__gap--m type__size--m-xxl type__weight--semibold">
-        <a class="radius__xs" href="/" :aria-current="url === '/' && 'page'">About</a>
-        <a class="radius__xs" href="/projects/" :aria-current="url.includes('projects') && 'page'">Projects</a>
-        <a class="radius__xs" href="/code/" :aria-current="url.includes('code') && 'page'">Code</a>
-        <a class="radius__xs" href="/hire/" :aria-current="url.includes('hire') && 'page'">Hire</a>
+      <section class="color__type--base--ish flow__inline flow__align--block-center flow__gap--m type__size--m-xxl">
+        <section class="flow__inline flow__gap--l type__weight--semibold">
+          <a class="radius__xs" href="/" :aria-current="url === '/' && 'page'">About</a>
+          <a class="radius__xs" href="/hire/" :aria-current="url.includes('hire') && 'page'">Hire</a>
+        </section>
+        <section class="flow__inline">
+          <button
+            class="button__tertiary flow__inline flow__align--block-center flow__gap--s flow__size--block-xl flow__size--inline-xl radius__xs"
+            onclick="toggleTheme()" title="Toggle website theme">
+            <icon name="contrast" webc:nokeep></icon>
+          </button>
+          <button
+            class="button__tertiary flow__inline flow__align--block-center flow__gap--s flow__size--block-xl flow__size--inline-xl radius__xs"
+            onclick="toggleDialog()" title="View website colophon">
+            <icon name="code" webc:nokeep></icon>
+          </button>
+        </section>
       </section>
     </nav>
   </section>
+  <colophon webc:nokeep></colophon>
 </header>
+
+<script>
+  function toggleTheme() {
+    if (sessionStorage.getItem("theme") === null) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        sessionStorage.setItem("theme", "dark");
+      } else {
+        sessionStorage.setItem("theme", "light");
+      }
+      document.documentElement.setAttribute(
+        "data-theme",
+        sessionStorage.getItem("theme")
+      );
+    }
+    if (document.documentElement.getAttribute("data-theme") === "dark") {
+      sessionStorage.setItem("theme", "light");
+    } else {
+      sessionStorage.setItem("theme", "dark");
+    }
+    document.documentElement.setAttribute(
+      "data-theme",
+      sessionStorage.getItem("theme")
+    );
+  }
+  function toggleDialog() {
+    const body = document.querySelector("body");
+    const dialog = document.querySelector("dialog");
+    const dialogIsOpen = dialog.hasAttribute("open");
+
+    if (dialogIsOpen) {
+      dialog.close();
+      body.removeAttribute("style");
+    } else {
+      dialog.showModal();
+      body.style.overflow = "hidden";
+    }
+  }
+</script>

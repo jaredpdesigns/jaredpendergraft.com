@@ -1,2 +1,0 @@
-<recommendation webc:for="recommendation of recommendations" :author="recommendation.author"
-  :comment="recommendation.comment" webc:nokeep></recommendation>

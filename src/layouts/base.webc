@@ -6,7 +6,6 @@ layout: root.webc
 <main :class="page.fileSlug || pageClass">
   <template @html="content" webc:nokeep></template>
 </main>
-<site-footer webc:nokeep></site-footer>
 <script>
   function getTheme() {
     if (sessionStorage.getItem("theme") !== null) {

@@ -1,39 +1,6 @@
-<section class="gallery flow__grid padding__block-end--l">
-  <section
-    class="gallery__wrap flow__flex flow__align--block-center flow__align--inline-start flow__gap--l padding__block-start--m">
-    <slot></slot>
-  </section>
+<section class="gallery flow__grid">
+  <gallery-meta :project="project" webc:nokeep></gallery-meta>
+  <gallery-images webc:nokeep>
+    <gallery-item :color="project.hue" :images="project.images" :slug="project.slug"></gallery-item>
+  </gallery-images>
 </section>
-<style>
-  .gallery {
-    grid-column: 1 / -1 !important;
-    grid-template-columns: inherit;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .gallery::-webkit-scrollbar {
-    display: none;
-    inline-size: 0 !important;
-  }
-
-  .gallery__wrap {
-    grid-column: 2;
-  }
-
-  .gallery__wrap:after {
-    content: "";
-    display: block;
-    padding: var(--size__xs);
-  }
-
-  .gallery__wrap>* {
-    flex: 1 0 auto;
-    inline-size: 50ch;
-    max-inline-size: 100%;
-    position: relative;
-    scroll-snap-align: center;
-  }
-</style>

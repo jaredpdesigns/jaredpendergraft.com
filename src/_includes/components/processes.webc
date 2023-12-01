@@ -1,2 +1,0 @@
-<process webc:for="process of processes" :processimage="process.img" :processlabel="process.label"
-  :processdescription="process.description" webc:nokeep></process>

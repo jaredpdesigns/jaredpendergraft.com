@@ -5,11 +5,13 @@
     const meta = this.meta ? `&${this.meta}` : '';
     const src = `https://images.ctfassets.net/${this.src}`;
     let options = await Image(src, {
-      formats: ["avif", "jpeg", "webp"],
+      formats: ["avif", "webp", "svg"],
       urlFormat: function ({ src, width, format }) {
-        return `${src}?h=${width * aspectRatio}&w=${width}&fm=${format.replace('jpeg', 'jpg')}${meta}`;
+        return `${src}?h=${width * aspectRatio}&w=${width}${format !== 'svg' ? `&fm=${format.replace('jpeg', 'jpg')}` : ''
+          }${meta}`;
       },
       dryRun: true,
+      svgShortCircuit: true,
       widths: this.widths ? this.widths.split(', ').map(i => Number(i)) : [null]
     });
 

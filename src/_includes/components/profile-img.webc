@@ -1,7 +1,7 @@
 <figure class="profile__img">
   <image-get alt="My smiling face"
     src="cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg" meta="f=face&fit=fill"
-    height="320" width="320" sizes="(max-width: 320px) 100vw, 320px" widths="320, 640"></image-get>
+    height="427" width="320" sizes="(max-width: 320px) 100vw, 320px" widths="320, 640"></image-get>
   <svg height="0" width="0" style="position: absolute">
     <defs>
       <clipPath id="blobby" clipPathUnits="objectBoundingBox">
@@ -13,15 +13,9 @@
 </figure>
 <style>
   .profile__img {
+    aspect-ratio: 640/854;
     clip-path: url(#blobby);
-    margin-block-start: 0;
     max-inline-size: var(--width__xs);
-  }
-
-  @media (min-width: 79rem) {
-    .profile__img {
-      max-inline-size: var(--width__s);
-    }
   }
 
   .profile__img:hover img {

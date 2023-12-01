@@ -1,0 +1,21 @@
+<section class="profile__wrap">
+  <span class="flow__grid">
+    <profile-img webc:nokeep></profile-img>
+    <span class="flow__grid flow__gap--l padding__block-start--l">
+      <slot></slot>
+    </span>
+  </span>
+</section>
+
+<style>
+  .profile__wrap {
+    container-type: inline-size;
+  }
+
+  @container (min-width: 40rem) {
+    .profile__wrap>span {
+      column-gap: var(--size__l);
+      grid-template-columns: auto 1fr;
+    }
+  }
+</style>

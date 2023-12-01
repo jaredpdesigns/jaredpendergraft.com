@@ -46,9 +46,8 @@
       },
     ];
     const filtered = images.find((value) => value.name === this.processimage);
-    return `<section class="process border__all color__bg--highlight--ghost color__border--highlight--light flow__grid flow__gap--m padding__l radius__m type__align--center">
-    <header class="flow__grid flow__gap--m">
-      <svg
+    return `<blockquote class="process flow__grid flow__gap--l styled">
+    <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
         height="48"
@@ -59,19 +58,28 @@
       >
       <title>${filtered.name} icon</title>
       <g>
-        <path fill="var(--color__contrast--adaptive)" d="${filtered.white}" />
+        <path fill="var(--color__contrast)" d="${filtered.white}" />
         <path fill="var(--color__base)" d="${filtered.black}" />
         <path fill="var(--color__highlight)" d="${filtered.green}" />
       </g>
     </svg>
-    <h3>${this.processlabel}</h3>
-    </header>
-    <p>${this.processdescription}</p>
-  </section>`}
+    <section class="flow__grid flow__gap--m">
+      <h3>${this.processlabel}</h3>
+      <p>${this.processdescription}</p>
+    </section>
+  </blockquote>`}
 </script>
+
 <style>
-  .process header {
-    justify-items: center;
-    margin-block-start: calc((var(--size__xxl) + var(--size__s)) * -1);
+  .process {
+    grid-template-columns: auto 1fr;
+  }
+
+  .process>svg {
+    margin-block-start: calc(var(--size__s) * -1);
+  }
+
+  .process>section {
+    margin-top: 0;
   }
 </style>

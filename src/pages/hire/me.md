@@ -1,7 +1,6 @@
 ---
 title: Résumé • Jared Pendergraft
 description: The résumé of Jared Pendergraft
-img: https://jaredpendergraft.com/img/social-resume.jpg
 slug: /hire/me/
 pageClass: cv
 layout: page.webc
@@ -112,12 +111,5 @@ _Graphic Designer_\
 
 ## Recommendations
 
-<grid webc:nokeep>
-  <recommendations :recommendations="this.recommendations" webc:nokeep>
-</grid>
-
-<style>
-  .grid > *:first-child {
-    grid-column: 1/-1;
-  }
-</style>
+<recommendation webc:for="recommendation of this.recommendations" :author="recommendation.author"
+  :comment="recommendation.comment" webc:nokeep></recommendation>

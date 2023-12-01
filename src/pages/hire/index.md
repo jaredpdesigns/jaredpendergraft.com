@@ -1,17 +1,14 @@
 ---
 title: Hire Me • Jared Pendergraft
 description: Let’s create something great together!
-img: https://jaredpendergraft.com/img/social-hire.jpg
 slug: /hire/
 pageClass: hire
 layout: page.webc
 ---
 
-# Let’s Create _Something Great_ Together
+# Let’s Create Something Great Together
 
-> I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/), view my [résumé](/hire/me/) for more about my background.
->
-> I’m always interested in creative freelance opportunities—if you'd like to work together send me an [email](mailto:hello@jaredpendergraft.com).
+> I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/), view my [résumé](/hire/me/) for more about my background. I’m always interested in creative freelance opportunities—if you'd like to work together send me an [email](mailto:hello@jaredpendergraft.com).
 
 ---
 
@@ -19,6 +16,5 @@ layout: page.webc
 
 While each project requires different approaches to problem-solving, here are a few examples of common ways I approach design challenges:
 
-<grid webc:nokeep>
-  <processes :processes="this.processes" webc:nokeep></processes>
-</grid>
+<process webc:for="process of this.processes" :processimage="process.img" :processlabel="process.label"
+  :processdescription="process.description" webc:nokeep></process>
