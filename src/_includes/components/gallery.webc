@@ -1,6 +1,6 @@
 <section class="gallery flow__grid">
   <gallery-meta :project="project" webc:nokeep></gallery-meta>
   <gallery-images webc:nokeep>
-    <gallery-item :color="project.hue" :images="project.images" :slug="project.slug"></gallery-item>
+    <gallery-item :color="project.hue" :images="project.images" :slug="project.slug" webc:nokeep></gallery-item>
   </gallery-images>
 </section>

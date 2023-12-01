@@ -245,6 +245,11 @@
             margin-block-end: 3.75rem;
           }
 
+          input {
+            block-size: 100%;
+            inline-size: 100%;
+          }
+
           img {
 
             &:first-of-type {

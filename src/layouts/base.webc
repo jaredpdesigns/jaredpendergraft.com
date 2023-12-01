@@ -7,13 +7,22 @@ layout: root.webc
   <template @html="content" webc:nokeep></template>
 </main>
 <script>
-  function getTheme() {
-    if (sessionStorage.getItem("theme") !== null) {
-      document.documentElement.setAttribute(
-        "data-theme",
-        sessionStorage.getItem("theme")
-      );
+  const getTheme = (fn) => {
+    if (!window.matchMedia) {
+      return;
     }
+
+    const query = window.matchMedia('(prefers-color-scheme: dark)');
+
+    fn(query.matches);
+
+    query.addEventListener('change', (event) => fn(event.matches));
   }
-  getTheme();
+
+  getTheme((isDark) => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      sessionStorage.getItem("theme") ? sessionStorage.getItem("theme") : (isDark ? 'dark' : 'light')
+    )
+  })
 </script>

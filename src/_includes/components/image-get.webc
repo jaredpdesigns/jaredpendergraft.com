@@ -17,11 +17,11 @@
 
     const response = Image.generateHTML(options, {
       alt: this.alt,
-      class: this.class ? this.class : '',
-      loading: this.loading ? this.loading : '',
+      class: this.class ? this.class : undefined,
+      loading: this.loading ? this.loading : undefined,
       decoding: "async",
       fetchpriority: "high",
-      sizes: this.sizes ? this.sizes : ''
+      sizes: this.sizes ? this.sizes : undefined
     });
 
     return response;

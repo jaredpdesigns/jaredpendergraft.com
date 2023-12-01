@@ -21,7 +21,7 @@ I care deeply about how something works as much as its outward appearance and am
 
 ## Projects
 
-<gallery webc:for="project of this.projects.filter(project => project.type === 'featured')" :project="project" webc:nokeep></gallery>
+<gallery webc:for="(project,index) of this.projects.filter(project => project.type === 'featured')" :project="project" webc:nokeep></gallery>
 
 <style>
   .profile article {
