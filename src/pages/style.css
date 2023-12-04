@@ -40,7 +40,7 @@
     >header {
       border-block-start-color: var(--color__highlight);
       border-block-start-width: var(--size__xs);
-      padding-block-start: env(safe-area-inset-left);
+      padding-block-start: env(safe-area-inset-top);
       position: sticky;
       top: 0;
       z-index: 1;
