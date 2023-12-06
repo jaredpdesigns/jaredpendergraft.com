@@ -209,6 +209,19 @@
   }
 
   .gallery {
+    --overlay:
+      color-mix(in srgb, var(--color__set--contrast), transparent 100%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 80%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 75%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 62.5%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 50%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 38%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 25%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 12%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 10%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 5%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 2%),
+      color-mix(in srgb, var(--color__set--contrast), transparent 0%);
     grid-template-columns: inherit;
     grid-column: 1/-1;
 
@@ -225,7 +238,21 @@
       grid-template-columns: inherit;
       overflow-x: scroll;
       overscroll-behavior-x: contain;
+      position: relative;
+      scroll-snap-type: x mandatory;
       scrollbar-width: none;
+
+      &:before {
+        background-image: linear-gradient(to left, var(--overlay));
+        block-size: 100%;
+        content: "";
+        display: block;
+        inline-size: var(--size__m);
+        padding: var(--size__s);
+        position: sticky;
+        inset-inline-start: 0;
+        z-index: 2;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -235,11 +262,18 @@
       &--wrap {
         grid-column: 2;
         margin-inline-start: var(--bleed);
+        scroll-snap-align: center;
 
         &:after {
+          background-image: linear-gradient(to right, var(--overlay));
+          block-size: 100%;
           content: "";
           display: block;
+          inline-size: var(--size__m);
           padding: var(--size__s);
+          position: sticky;
+          inset-inline-end: 0;
+          z-index: 2;
         }
 
         &>* {
@@ -247,6 +281,8 @@
           inline-size: 50ch;
           max-inline-size: 100%;
           position: relative;
+          scroll-margin-inline-start: var(--size__m);
+          scroll-snap-align: start;
         }
 
         label {
