@@ -67,29 +67,3 @@
     <p>${this.processdescription}</p>
   </blockquote>`}
 </script>
-
-<style>
-  .process {
-    container-type: inline-size;
-    grid-template-columns: 4rem 1fr;
-  }
-
-  .process h3,
-  .process p {
-    margin-top: unset;
-  }
-
-  .process p {
-    grid-column: 1/-1;
-  }
-
-  @container (min-width: 40rem) {
-    .process {
-      column-gap: var(--size__l);
-    }
-
-    .process p {
-      grid-column: 2;
-    }
-  }
-</style>

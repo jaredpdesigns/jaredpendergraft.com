@@ -1,38 +1,8 @@
 <blockquote class="reccommendation styled">
   <template @html="comment" webc:nokeep></template>
-  <footer class="color__bg--contrast radius__bl--m radius__br--m">
-    <p class="color__type--base--ish padding__block--s padding__inline--s">
+  <footer class="color__bg--contrast padding__block--s padding__inline--l radius__bl--l radius__br--l">
+    <p class="color__type--highlight--mid">
       — <span class="color__type--base type__weight--semibold" @text="author"></span>
     </p>
   </footer>
 </blockquote>
-<style>
-  .reccommendation {
-    padding-block-start: var(--size__m);
-    padding-block-end: unset;
-    padding-inline: unset;
-  }
-
-  .reccommendation>p {
-    padding-inline: var(--size__l);
-  }
-
-  .reccommendation>p:first-child:before,
-  .reccommendation>p:last-of-type:after {
-    color: var(--color__highlight);
-    display: inline-block;
-    font-size: var(--type__size--xl--fluid);
-    transform: translateY(0.25ch);
-  }
-
-  .reccommendation>p:first-child:before {
-    content: "“";
-    margin-inline-start: -0.625ch;
-    margin-inline-end: 0.125ch;
-  }
-
-  .reccommendation>p:last-of-type:after {
-    content: "”";
-    margin-inline-start: 0.125ch;
-  }
-</style>

@@ -11,21 +11,3 @@
     </defs>
   </svg>
 </figure>
-<style>
-  .profile__img {
-    aspect-ratio: 640/854;
-    clip-path: url(#blobby);
-    max-inline-size: var(--width__xs);
-  }
-
-  .profile__img:hover img {
-    transform: scale(1.0625);
-  }
-
-  .profile__img img {
-    animation: var(--animation);
-    inline-size: 100%;
-    transform: scale(1.0125);
-    transition: transform 0.75s var(--transition);
-  }
-</style>

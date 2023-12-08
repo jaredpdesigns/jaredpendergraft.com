@@ -1,4 +1,4 @@
-<section class="gallery__meta border__all color__border--base--light radius__m">
+<section class="gallery__meta border__all color__border--base--light radius__l">
   <header
     class="border__bottom color__border--base--light flow__flex flow__align--inline-between flow__flex--wrap flow__gap--s padding__block--m padding__inline--l">
     <h3 @text="project.name"></h3>

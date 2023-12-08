@@ -1,4 +1,4 @@
-@layer pasta, project, page;
+@layer pasta, project, page, components;
 
 @import url("https://unpkg.com/@jaredpdesigns/pasta") layer(pasta);
 
@@ -80,6 +80,7 @@
             text-decoration-thickness: calc(var(--size__xxs) * 2);
             text-decoration-line: underline;
             text-underline-offset: var(--size__xs);
+            text-decoration-style: wavy;
           }
         }
 
@@ -190,22 +191,53 @@
   }
 
   blockquote {
-    border-radius: var(--size__m);
+    --color__border: var(--color__highlight--light);
+    border-radius: var(--size__l);
     box-shadow: none;
     margin-inline: var(--bleed);
     padding: var(--size__l);
 
     p a {
+      text-decoration-color: var(--color__highlight--mid);
 
       &:hover,
       &:focus-visible {
         background-color: var(--color__contrast);
+        text-decoration-color: var(--color__highlight--mid);
       }
     }
   }
 
   a {
     border-radius: var(--size__xs);
+    text-decoration-style: wavy;
+  }
+}
+
+@layer page {
+  .profile article {
+    grid-template-columns: minmax(calc(var(--size__l) + env(safe-area-inset-left)), 1fr) minmax(0, var(--maxWidth)) minmax(calc(var(--size__l) + env(safe-area-inset-left)), 1fr);
+    max-inline-size: unset;
+    padding-inline: 0;
+
+    >*:not(.gallery) {
+      grid-column: 2;
+    }
+  }
+}
+
+@layer components {
+  .colophon {
+    inline-size: calc(100% - var(--size__l));
+    margin: auto;
+    max-block-size: calc(100% - var(--size__l));
+    max-inline-size: var(--maxWidth);
+    position: fixed;
+
+    >section>header {
+      inset-block-start: 0;
+      position: sticky;
+    }
   }
 
   .gallery {
@@ -319,6 +351,86 @@
             margin-block-start: 3.75rem;
           }
         }
+      }
+    }
+  }
+
+  .process {
+    container-type: inline-size;
+    grid-template-columns: 4rem 1fr;
+
+    @container (min-width: 40rem) {
+      column-gap: var(--size__l);
+    }
+
+    h3,
+    p {
+      margin-top: unset;
+    }
+
+    p {
+      grid-column: 1/-1;
+
+      @container (min-width: 40rem) {
+        grid-column: 2;
+      }
+    }
+
+  }
+
+  .profile__img {
+    aspect-ratio: 640/854;
+    clip-path: url(#blobby);
+    max-inline-size: var(--width__xs);
+
+    &:hover img {
+      transform: scale(1.0625);
+    }
+
+    img {
+      animation: var(--animation);
+      inline-size: 100%;
+      transform: scale(1.0125);
+      transition: transform 0.75s var(--transition);
+    }
+  }
+
+  .profile__wrap {
+    container-type: inline-size;
+
+    @container (min-width: 40rem) {
+      >span {
+        column-gap: var(--size__l);
+        grid-template-columns: auto 1fr;
+      }
+    }
+  }
+
+  .reccommendation {
+    padding-block-start: var(--size__m);
+    padding-block-end: unset;
+    padding-inline: unset;
+
+    >p {
+      padding-inline: var(--size__l);
+
+      &:first-child:before,
+      &:last-of-type:after {
+        color: var(--color__highlight);
+        display: inline-block;
+        font-size: var(--type__size--xl--fluid);
+        transform: translateY(0.25ch);
+      }
+
+      &:first-child:before {
+        content: "“";
+        margin-inline-start: -0.625ch;
+        margin-inline-end: 0.125ch;
+      }
+
+      &:last-of-type:after {
+        content: "”";
+        margin-inline-start: 0.125ch;
       }
     }
   }

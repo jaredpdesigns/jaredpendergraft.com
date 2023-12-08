@@ -6,16 +6,3 @@
     </span>
   </span>
 </section>
-
-<style>
-  .profile__wrap {
-    container-type: inline-size;
-  }
-
-  @container (min-width: 40rem) {
-    .profile__wrap>span {
-      column-gap: var(--size__l);
-      grid-template-columns: auto 1fr;
-    }
-  }
-</style>

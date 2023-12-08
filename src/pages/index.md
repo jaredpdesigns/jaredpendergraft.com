@@ -22,15 +22,3 @@ I care deeply about how something works as much as its outward appearance and am
 ## Projects
 
 <gallery webc:for="(project,index) of this.projects.filter(project => project.type === 'featured')" :project="project" webc:nokeep></gallery>
-
-<style>
-  .profile article {
-    grid-template-columns: minmax(calc(var(--size__l) + env(safe-area-inset-left)), 1fr) minmax(0, var(--maxWidth)) minmax(calc(var(--size__l) + env(safe-area-inset-left)), 1fr);
-    max-inline-size: unset;
-    padding-inline: 0;
-  }
-
-  .profile article > *:not(.gallery) {
-    grid-column: 2;
-  }
-</style>

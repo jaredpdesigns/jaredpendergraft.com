@@ -1,4 +1,4 @@
-<dialog class="border__all color__bg--contrast color__border--base--light radius__s" oncancel="toggleDialog()"
+<dialog class="colophon border__all color__bg--contrast color__border--base--light radius__s" oncancel="toggleDialog()"
   onclick="toggleDialog()">
   <section onclick="preventAutoClose(event)">
     <header
@@ -48,17 +48,3 @@
     e.stopPropagation();
   }
 </script>
-<style>
-  dialog {
-    inline-size: calc(100% - var(--size__l));
-    margin: auto;
-    max-block-size: calc(100% - var(--size__l));
-    max-inline-size: var(--maxWidth);
-    position: fixed;
-  }
-
-  dialog>section>header {
-    inset-block-start: 0;
-    position: sticky;
-  }
-</style>
