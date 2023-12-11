@@ -24,6 +24,7 @@
   body {
     align-items: start;
     display: grid;
+    font-variation-settings: 'opsz' 6;
     grid-template-rows: auto 1fr auto;
     min-block-size: 100vh;
 
@@ -133,7 +134,7 @@
 
   em {
     font-style: normal;
-    font-variation-settings: 'ital' 1, 'wght' 400;
+    font-variation-settings: 'opsz' 6, 'ital' 1, 'wght' 400;
   }
 
   strong,
@@ -143,17 +144,28 @@
   h4,
   h5 {
     font-weight: 600;
-    font-variation-settings: 'opsz' 8, 'wght' 600;
+    font-variation-settings: 'opsz' 6, 'wght' 600;
 
     em {
-      font-variation-settings: 'opsz' 8, 'wght' 600, 'ital' 1;
+      font-variation-settings: 'opsz' 6, 'wght' 600, 'ital' 1;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-variation-settings: 'opsz' 12, 'wght' 600;
+
+    em {
+      font-variation-settings: 'opsz' 12, 'wght' 600, 'ital' 1;
     }
   }
 
   h1 {
     font-size: var(--type__size--xxxl);
     font-weight: 700;
-    font-variation-settings: 'opsz' 12, 'wght' 700;
+    font-variation-settings: 'opsz' 48, 'wght' 700;
     line-height: var(--type__lineheight--xxxl);
 
     @media (min-width: 79rem) {
@@ -162,7 +174,7 @@
     }
 
     em {
-      font-variation-settings: 'opsz' 12, 'wght' 700, 'ital' 1;
+      font-variation-settings: 'opsz' 48, 'wght' 700, 'ital' 1;
     }
 
     &:not(*[class^="color__type"]) {

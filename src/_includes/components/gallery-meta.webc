@@ -9,7 +9,7 @@
     </span>
   </header>
   <section class="padding__l">
-    <p @text="project.description"></p>
+    <p class="type__size--l-xl--fluid" @text="project.description"></p>
   </section>
   <footer class="border__top color__border--base--light padding__block--m padding__inline--l">
     <p><a :href="project.external" rel="noopener" target="_blank"
