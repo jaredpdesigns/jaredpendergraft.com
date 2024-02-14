@@ -51,13 +51,13 @@ _Bachelor of Arts in Graphic Design & Video Production_\
 
 ## Experience
 
-### Follow Up Boss
+### Follow Up Boss <span class="acquired color__bg--contrast--extra flow__inline padding__block--xs padding__inline--s radius__xs type__size--xs-s">🏠 Acquired by Zillow</span>
 
 _Front End Engineer_\
 2022–Currently • Remote
 
 - Works on a variety of feature-level changes to our core product, working within small teams to ship quickly and maximize usability and engagement.
-- Manages our internal design system [Forge](https://forge.reclients.com), which we are continually improving upon and integrating into our core product.
+- Manages our internal design system [Forge](https://forge.followupboss.com), which we are continually improving upon and integrating into our core product.
 - Bridges the gap between product and engineering by collaborating closely and continually iterating on deliverables based on feedback cycles.
 
 ### Education Advanced, Inc.

@@ -165,7 +165,7 @@
   h1 {
     font-size: var(--type__size--xxxl);
     font-weight: 700;
-    font-variation-settings: 'opsz' 48, 'wght' 700;
+    font-variation-settings: 'opsz' 24, 'wght' 700;
     line-height: var(--type__lineheight--xxxl);
 
     @media (min-width: 79rem) {
@@ -174,7 +174,7 @@
     }
 
     em {
-      font-variation-settings: 'opsz' 48, 'wght' 700, 'ital' 1;
+      font-variation-settings: 'opsz' 24, 'wght' 700, 'ital' 1;
     }
 
     &:not(*[class^="color__type"]) {
@@ -222,6 +222,7 @@
 
   a {
     border-radius: var(--size__xs);
+    display: inline-flex;
     text-decoration-style: wavy;
   }
 }
@@ -236,6 +237,14 @@
       grid-column: 2;
     }
   }
+
+  .acquired {
+    --size: var(--size__xs);
+    color: white;
+    mask: linear-gradient(#000 0 0) 50%/calc(100% - (var(--size__xxs) * 2)) calc(100% - (var(--size__xxs) * 2)) no-repeat,
+      radial-gradient(farthest-side, #000 98%, #0000) 0 0/var(--size__xs) var(--size__xs) round;
+    transform: translateY(calc((var(--size__xxs) * 2) * -1));
+  }
 }
 
 @layer components {
@@ -243,12 +252,16 @@
     inline-size: calc(100% - var(--size__l));
     margin: auto;
     max-block-size: calc(100% - var(--size__l));
-    max-inline-size: var(--maxWidth);
+    max-inline-size: 40rem;
     position: fixed;
 
     >section>header {
       inset-block-start: 0;
       position: sticky;
+    }
+
+    footer p:last-child svg {
+      transform: translateY(calc((var(--size__xxs) * 2) * -1));
     }
   }
 
