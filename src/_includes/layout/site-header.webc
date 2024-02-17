@@ -2,7 +2,7 @@
   <section class="flow__block margin__inline--auto padding__block--m">
     <nav class="flow__flex flow__align--inline-center flow__align--block-center flow__flex--wrap">
       <a href="/" title="Return to Profile" class="color__type--base--ish radius__xs type__align--center">
-        <p><strong>Jared Pendergraft</strong></p>
+        <p class="type__align--center"><strong>Jared Pendergraft</strong></p>
       </a>
       <section class="color__type--base--ish flow__inline flow__align--block-center flow__gap--m type__size--m-xxl">
         <section class="flow__inline flow__gap--l type__weight--semibold">
