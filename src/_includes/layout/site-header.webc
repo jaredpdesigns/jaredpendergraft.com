@@ -7,7 +7,8 @@
       <section class="color__type--base--ish flow__inline flow__align--block-center flow__gap--m type__size--m-xxl">
         <section class="flow__inline flow__gap--l type__weight--semibold">
           <a class="radius__xs" href="/" :aria-current="url === '/' && 'page'">About</a>
-          <a class="radius__xs" href="/hire/" :aria-current="url.includes('hire') && 'page'">Hire</a>
+          <a class="radius__xs" href="/hire/"
+            :aria-current="(url.includes('hire') || url.includes('clients')) && 'page'">Hire</a>
         </section>
         <section class="flow__inline">
           <button
