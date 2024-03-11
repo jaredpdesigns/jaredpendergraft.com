@@ -1,0 +1,5 @@
+<div class="border__all color__border--base--light radius__l padding__l">
+  <h2 @text="item.title"></h2>
+  <p @text="item.client.name"><span @text="item.type"></span></p>
+  <p><a :href="`/clients/${item.type}/${item.slug}/`">View</a></p>
+</div>

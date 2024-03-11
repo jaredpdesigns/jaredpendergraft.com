@@ -7,7 +7,7 @@
     let options = await Image(src, {
       formats: ["avif", "webp", "svg"],
       urlFormat: function ({ src, width, format }) {
-        return `${src}?h=${width * aspectRatio}&w=${width}${format !== 'svg' ? `&fm=${format.replace('jpeg', 'jpg')}` : ''
+        return `${src}?h=${Math.round(width * aspectRatio)}&w=${width}${format !== 'svg' ? `&fm=${format.replace('jpeg', 'jpg')}` : ''
           }${meta}`;
       },
       dryRun: true,

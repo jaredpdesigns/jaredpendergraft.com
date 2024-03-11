@@ -464,3 +464,52 @@
     }
   }
 }
+
+@media print {
+  html {
+    font-size: 80%;
+  }
+
+  body>header {
+    padding-top: 0;
+    position: relative;
+
+    nav section:last-child {
+      >* {
+        display: none;
+      }
+
+      &:after {
+        content: "jaredpdesigns@gmail.com • 503-474-7437";
+        display: inline-flex;
+        font-size: var(--type__size--s);
+      }
+    }
+  }
+
+  main {
+    padding: var(--size__l) 0;
+  }
+
+  article {
+
+    >*+h1,
+    >h1+*,
+    >*+h2,
+    >h2+*,
+    >*+h3,
+    >*+hr {
+      margin-top: var(--size__l);
+    }
+  }
+
+  li+li,
+  ol ol {
+    margin-top: var(--size__m);
+  }
+
+  hr {
+    display: inline-block;
+    border-top: var(--size__xs) solid var(--color__highlight--semi);
+  }
+}

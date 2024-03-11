@@ -5,4 +5,4 @@
       <slot></slot>
     </span>
   </span>
-</section>
+</section>;
