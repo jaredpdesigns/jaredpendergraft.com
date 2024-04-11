@@ -1,5 +1,29 @@
 [
   {
+    "title": "Nice Bike 2024 Jersey Design",
+    "description": "<p>Jared Pendergraft was hired to design the 2024 shop jersey featuring a Q*bert-like pixelated unicorn.</p>",
+    "slug": "nice-bike-2024-jersey-design",
+    "client": {
+      "name": "Nice Bike",
+      "street": "4314 S Broadway",
+      "city": "Englewood",
+      "state": "CO",
+      "zip": 80113
+    },
+    "start": {
+      "month": "March",
+      "day": 21,
+      "year": 2024
+    },
+    "end": {
+      "month": "April",
+      "day": 11,
+      "year": 2024
+    },
+    "total": 400,
+    "type": "invoice"
+  },
+  {
     "title": "Website Design & Development",
     "description": "<p>Design and development of All Star Ink website.</p><p><strong>Features include:</strong></p><ul><li>Device-agnostic design</li><li>Optimized code for speed and ease of updating</li><li>Detached CMS for editing all content of the site</li></ul>",
     "slug": "all-star-ink-website-design-and-development",

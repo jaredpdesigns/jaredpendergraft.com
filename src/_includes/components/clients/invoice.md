@@ -6,6 +6,8 @@
 {{ client.client.street }} \
 {{ client.client.city }}, {{ client.client.state }} {{ client.client.zip }}
 
+{{ client.description | safe }}
+
 ---
 
 ## Final Invoice Amount
