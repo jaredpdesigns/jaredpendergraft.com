@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
         require("postcss-nested"),
         require("postcss-each"),
         require("autoprefixer")
-      ]).process(inputContent);
+      ]).process(inputContent, { from: undefined, to: undefined });
 
       return async () => result.css;
     }
