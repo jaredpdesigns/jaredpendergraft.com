@@ -452,13 +452,13 @@
       }
 
       &:first-child:before {
-        content: "“";
+        content: open-quote;
         margin-inline-start: -0.625ch;
         margin-inline-end: 0.125ch;
       }
 
       &:last-of-type:after {
-        content: "”";
+        content: close-quote;
         margin-inline-start: 0.125ch;
       }
     }

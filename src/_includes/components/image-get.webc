@@ -19,7 +19,7 @@
       alt: this.alt,
       loading: this.loading ? this.loading : 'eager',
       decoding: "async",
-      fetchpriority: "high",
+      fetchpriority: this.fetchpriority ? this.fetchpriority : "low",
       sizes: this.sizes
     });
 

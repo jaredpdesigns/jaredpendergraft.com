@@ -1,5 +1,5 @@
 <figure class="profile__img">
-  <image-get alt="My smiling face"
+  <image-get alt="My smiling face" fetchPriority="high"
     src="cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg" meta="f=face&fit=fill"
     height="320" width="240" sizes="(min-width: 36em) 33.3vw,
     100vw" widths="320, 640"></image-get>
