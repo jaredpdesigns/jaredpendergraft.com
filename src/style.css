@@ -1,4 +1,4 @@
-@layer pasta, project, page, components;
+@layer pasta, project, page, typography, components;
 
 @import url("https://unpkg.com/@jaredpdesigns/pasta") layer(pasta);
 
@@ -8,7 +8,9 @@
     --outline__offset: var(--size__xs);
     --outline__size: calc(var(--size__xxs) * 2);
     --outline__style: dotted;
-    --type__family--primary: "degular-variable", sans-serif;
+    --type__family--primary: sole-sans-variable, sans-serif;
+    --type__family--secondary: sole-serif-small-variable, serif;
+    --type__family--secondary-titles: sole-serif-titling-variable, serif;
     --transition: cubic-bezier(0.5, -0.1, 0.1, 1.5);
     --bleed: 0;
 
@@ -24,7 +26,6 @@
   body {
     align-items: start;
     display: grid;
-    font-variation-settings: 'opsz' 6;
     grid-template-rows: auto 1fr auto;
     min-block-size: 100vh;
 
@@ -135,50 +136,43 @@
       }
     }
   }
+}
 
-  em {
+@layer typography {
+  body {
+    font-feature-settings: "ss01";
+    font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings: 'opsz' 6, 'ital' 1, 'wght' 400;
+    font-variation-settings: 'wght' 300, 'wdth' 100;
   }
 
-  strong,
   h1,
   h2,
-  h3,
+  h4,
+  h5 {
+    font-family: var(--type__family--secondary-titles);
+  }
+
+  h2,
   h4,
   h5 {
     font-weight: 600;
-    font-variation-settings: 'opsz' 6, 'wght' 600;
-
-    em {
-      font-variation-settings: 'opsz' 6, 'wght' 600, 'ital' 1;
-    }
+    font-variation-settings: 'wght' 600, 'opsz' 400;
   }
 
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-variation-settings: 'opsz' 12, 'wght' 600;
-
-    em {
-      font-variation-settings: 'opsz' 12, 'wght' 600, 'ital' 1;
-    }
+  h3 {
+    font-variation-settings: 'wght' 600, 'wdth' 100;
   }
 
   h1 {
     font-size: var(--type__size--xxxl);
     font-weight: 700;
-    font-variation-settings: 'opsz' 24, 'wght' 700;
+    font-variation-settings: 'wght' 700, 'opsz' 400;
     line-height: var(--type__lineheight--xxxl);
 
     @media (min-width: 79rem) {
       font-size: var(--type__size--xxxxl);
       line-height: var(--type__lineheight--xxxxl);
-    }
-
-    em {
-      font-variation-settings: 'opsz' 24, 'wght' 700, 'ital' 1;
     }
 
     &:not(*[class^="color__type"]) {
@@ -193,6 +187,10 @@
     &:not(*[class^="color__type"]) {
       color: var(--color__base--ish);
     }
+  }
+
+  strong {
+    font-variation-settings: 'wght' 500, 'wdth' 100;
   }
 
   code,
@@ -239,6 +237,15 @@
 
     >*:not(.gallery) {
       grid-column: 2;
+    }
+  }
+
+  .hire article {
+    column-gap: calc((var(--bleed) * 3) * -1);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    >*:not(.process) {
+      grid-column: 1/-1;
     }
   }
 
@@ -441,6 +448,7 @@
     padding-inline: unset;
 
     >p {
+      font-family: var(--type__family--secondary);
       padding-inline: var(--size__l);
 
       &:first-child:before,

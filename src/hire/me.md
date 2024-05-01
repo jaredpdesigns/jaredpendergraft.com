@@ -8,7 +8,7 @@ layout: page.webc
 
 # Résumé
 
-I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.
+**I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.**
 
 I’m looking for a creative position that offers challenges, collaboration, and an ability to work on projects that impact the world positively.
 
@@ -51,7 +51,7 @@ _Bachelor of Arts in Graphic Design & Video Production_\
 
 ## Experience
 
-### Follow Up Boss <span class="acquired color__bg--contrast--extra flow__inline padding__block--xs padding__inline--s radius__xs type__size--xs-s">🏠 Acquired by Zillow</span>
+### Zillow
 
 _Front End Engineer_\
 2022–Currently • Remote
@@ -59,6 +59,7 @@ _Front End Engineer_\
 - Works on a variety of feature-level changes to our core product, working within small teams to ship quickly and maximize usability and engagement.
 - Manages our internal design system [Forge](https://forge.followupboss.com), which we are continually improving upon and integrating into our core product.
 - Bridges the gap between product and engineering by collaborating closely and continually iterating on deliverables based on feedback cycles.
+- Via _Follow Up Boss_ acquisition in January of 2024.
 
 ### Education Advanced, Inc.
 

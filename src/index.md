@@ -15,7 +15,7 @@ I care deeply about how something works as much as its outward appearance and am
 
 </profile-wrap>
 
-> I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/) <span class="acquired color__bg--contrast--extra flow__inline padding__block--xs padding__inline--s radius__xs type__size--xs-s">🏠 Acquired by Zillow</span>—building the best real estate CRM on the market. View [projects](/#projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
+> I’m currently serving as **Front End Engineer** at [Follow Up Boss](https://followupboss.com/) <span class="acquired color__bg--contrast--extra flow__inline padding__block--xs padding__inline--s radius__xs type__size--xs-s">Acquired by Zillow</span>—building the best real estate CRM on the market. View [projects](/#projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 
 ---
 
