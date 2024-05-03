@@ -1,0 +1,8 @@
+<a rel="noopener" target="_blank" :href="project.external"
+  class="color__bg--base--ghost flow__grid flow__gap--m padding__m radius__l">
+  <img class="radius__m" :alt="`Icon for ${project.name}`" :src="project.img" height="64" width="64" />
+  <section class="flow__grid flow__gap--s">
+    <h3 @text="project.name"></h3>
+    <p @text="project.description"></p>
+  </section>
+</a>

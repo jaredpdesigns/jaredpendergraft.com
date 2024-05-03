@@ -35,9 +35,9 @@
     <footer class="border__block-start color__border--base--light">
       <section
         class="color__type--base--mid flow__flex flow__align--block-center flow__flex--wrap flow__gap--column-l padding__block--m padding__inline--l">
-        <p @text="`&copy; ${new Date().getFullYear()} Jared Pendergraft`">
+        <p class="type__size--s-m" @text="`&copy; ${new Date().getFullYear()} Jared Pendergraft`">
         </p>
-        <p class="flow__inline flow__align--block-center flow__gap--s">
+        <p class="flow__inline flow__align--block-center flow__gap--s type__size--s-m">
           <icon name="pineapple" webc:nokeep></icon>
           Made in Hawaiʻi
         </p>

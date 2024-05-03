@@ -25,20 +25,12 @@
     grid-template-rows: auto 1fr auto;
     min-block-size: 100vh;
 
-    >header,
-    >footer {
-      >section {
-        inline-size: 100%;
-        max-inline-size: var(--maxWidth);
-        padding-inline-start: calc(var(--size__l) + env(safe-area-inset-left));
-        padding-inline-end: calc(var(--size__l) + env(safe-area-inset-right));
-      }
-    }
-
     >header {
       border-block-start-color: var(--color__highlight);
       border-block-start-width: var(--size__xs);
       padding-block-start: env(safe-area-inset-top);
+      padding-inline-start: calc(var(--size__l) + env(safe-area-inset-left));
+      padding-inline-end: calc(var(--size__l) + env(safe-area-inset-right));
       position: sticky;
       top: 0;
       z-index: 1;
@@ -51,6 +43,11 @@
       @supports not (backdrop-filter: blur(32px)) {
         background-color: color-mix(in srgb, var(--color__set--contrast), transparent 2%);
         ;
+      }
+
+      >section {
+        inline-size: 100%;
+        max-inline-size: var(--maxWidth);
       }
 
       nav {
@@ -165,7 +162,6 @@
 
   h1 {
     font-size: var(--type__size--xxxl);
-    font-weight: 700;
     font-variation-settings: 'wght' 700, 'opsz' 400;
     line-height: var(--type__lineheight--xxxl);
 
@@ -189,7 +185,10 @@
   }
 
   strong {
-    font-variation-settings: 'wght' 500, 'wdth' 100;
+    @supports (font-variation-settings: 'wght' 500, 'wdth' 100) {
+      font-weight: normal;
+      font-variation-settings: 'wght' 500, 'wdth' 100;
+    }
   }
 
   code,
@@ -204,7 +203,8 @@
   }
 
   blockquote {
-    --color__border: var(--color__highlight--light);
+    --color__bg: var(--color__base--ghost);
+    --color__border: transparent;
     border-radius: var(--size__l);
     box-shadow: none;
     margin-inline: var(--bleed);
@@ -221,7 +221,8 @@
     }
   }
 
-  a {
+  a:not([class]),
+  .gallery__meta a {
     border-radius: var(--size__xs);
     display: inline-flex;
     font-variation-settings: 'wght' 500, 'wdth' 100;
@@ -392,6 +393,25 @@
     }
   }
 
+  .gallery-sides {
+    --column__width: 320px;
+
+    a {
+      color: var(--color__base);
+      text-decoration: unset;
+      transition: 0.375s var(--transition);
+      transition-property: transform;
+
+      @media(min-width: 600px) {
+        grid-template-columns: auto 1fr;
+      }
+
+      &:hover {
+        transform: scale(1.00625);
+      }
+    }
+  }
+
   .process {
     container-type: inline-size;
     grid-template-columns: 4rem 1fr;
@@ -444,6 +464,7 @@
   }
 
   .reccommendation {
+    --color__border: var(--color__base--light);
     padding-block-start: var(--size__m);
     padding-block-end: unset;
     padding-inline: unset;

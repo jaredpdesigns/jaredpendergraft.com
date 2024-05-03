@@ -156,6 +156,13 @@
     ]
   },
   {
+    "name": "Photos",
+    "description": "Photos from my trips around the world with my family.",
+    "img": "/img/sides/photos.svg",
+    "external": "https://photos.jaredpendergraft.com/",
+    "type": "side"
+  },
+  {
     "name": "Pasta",
     "description": "Pasta provides a great starting place for web projects. It combines light styling for common web elements, yummy.",
     "img": "/img/sides/pasta.svg",
@@ -164,14 +171,14 @@
   },
   {
     "name": "Avery Mirabelle",
-    "description": "Time capsule of videos and artwork from my daughter’s life, showcasing her creativity and attention to detail.",
+    "description": "Videos from my daughter’s life, showcasing her creativity and attention to detail.",
     "img": "/img/sides/avery.svg",
     "external": "https://averymirabelle.com",
     "type": "side"
   },
   {
     "name": "Ezra Oliver",
-    "description": "Time capsule of videos from my son’s life, showcasing his silliness and fearlessness.",
+    "description": "Videos from my son’s life, showcasing his silliness and fearlessness.",
     "img": "/img/sides/ezra.svg",
     "external": "https://ezrapendergraft.com",
     "type": "side"

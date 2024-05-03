@@ -51,7 +51,7 @@ _Bachelor of Arts in Graphic Design & Video Production_\
 
 ## Experience
 
-### Zillow
+### Zillow\*
 
 _Front End Engineer_\
 2022–Currently • Remote
@@ -59,7 +59,7 @@ _Front End Engineer_\
 - Works on a variety of feature-level changes to our core product, working within small teams to ship quickly and maximize usability and engagement.
 - Manages our internal design system [Forge](https://forge.followupboss.com), which we are continually improving upon and integrating into our core product.
 - Bridges the gap between product and engineering by collaborating closely and continually iterating on deliverables based on feedback cycles.
-- Via _Follow Up Boss_ acquisition in January of 2024.
+- \*Via _Follow Up Boss_ acquisition in December, 2023.
 
 ### Education Advanced, Inc.
 

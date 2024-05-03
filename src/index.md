@@ -22,3 +22,11 @@ I care deeply about how something works as much as its outward appearance and am
 ## Projects
 
 <gallery webc:for="(project,index) of this.projects.filter(project => project.type === 'featured')" :project="project" webc:nokeep></gallery>
+
+---
+
+## Side Projects
+
+<section class="gallery-sides flow__align--block-start flow__grid flow__grid--columns-auto flow__gap--m">
+<gallery-item-side webc:for="(project,index) of this.projects.filter(project => project.type === 'side')" :project="project" webc:nokeep></gallery-item-side>
+</section>
