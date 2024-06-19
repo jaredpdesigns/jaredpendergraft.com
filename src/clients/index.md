@@ -2,7 +2,7 @@
 title: Clients • Jared Pendergraft
 description: Portal for hosting client files, agreements and invoices
 slug: /clients/
-layout: page.webc
+layout: base.webc
 pageClass: clients
 ---
 

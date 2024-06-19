@@ -3,7 +3,7 @@ title: Résumé • Jared Pendergraft
 description: The résumé of Jared Pendergraft
 slug: /hire/me/
 pageClass: cv
-layout: page.webc
+layout: base.webc
 ---
 
 # Résumé

@@ -3,7 +3,7 @@ title: Hire Me • Jared Pendergraft
 description: Let’s create something great together!
 slug: /hire/
 pageClass: hire
-layout: page.webc
+layout: base.webc
 ---
 
 # Let’s Create Something Great Together

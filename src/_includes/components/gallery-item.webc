@@ -3,10 +3,10 @@
   :style="`--color__highlight--semi: color-mix(in oklab, hsl(${color}) 25%, var(--color__set--contrast)); --color__highlight--mid: color-mix(in oklab, hsl(${color}) 50%, var(--color__set--contrast));`">
   <input :checked="index === 0 ? true:false" type="radio" :name="slug" />
   <span class="color__bg--highlight--semi padding__m radius__l">
-    <image-get :alt="image.title" :src="image.img" class="radius__l" height="320" width="320" loading="lazy"
+    <image-get :alt="image.title" :src="image.img" class="radius__l width__full" height="320" width="320" loading="lazy"
       sizes="(max-width: 320px) 100vw, 320px" widths="320, 640"></image-get>
-    <image-get :alt="`Dark theme variant of ${image.title}`" :src="image.imgDark" class="radius__l" height="320"
-      width="320" loading="lazy" sizes="(max-width: 320px) 100vw, 320px" widths="320, 640"></image-get>
+    <image-get :alt="`Dark theme variant of ${image.title}`" :src="image.imgDark" class="radius__l width__full"
+      height="320" width="320" loading="lazy" sizes="(max-width: 320px) 100vw, 320px" widths="320, 640"></image-get>
   </span>
   <p class="color__bg--contrast color__type--base--ish padding__m radius__bl--l radius__br--l type__family--secondary">
     <em @text="image.title"></em>

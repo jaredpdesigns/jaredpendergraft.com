@@ -4,6 +4,7 @@
 
 @layer project {
   :root {
+    --gutter: calc(var(--size__l) + env(safe-area-inset-left));
     --maxWidth: var(--width__l);
     --outline__offset: var(--size__xs);
     --outline__size: calc(var(--size__xxs) * 2);
@@ -29,8 +30,7 @@
       border-block-start-color: var(--color__highlight);
       border-block-start-width: var(--size__xs);
       padding-block-start: env(safe-area-inset-top);
-      padding-inline-start: calc(var(--size__l) + env(safe-area-inset-left));
-      padding-inline-end: calc(var(--size__l) + env(safe-area-inset-right));
+      padding-inline: var(--gutter);
       position: sticky;
       top: 0;
       z-index: 1;
@@ -47,6 +47,7 @@
 
       >section {
         inline-size: 100%;
+        margin-inline: auto;
         max-inline-size: var(--maxWidth);
       }
 
@@ -106,10 +107,9 @@
       display: grid;
       inline-size: 100%;
       margin-inline: auto;
-      max-inline-size: var(--maxWidth);
+      max-inline-size: calc(var(--maxWidth) + (var(--gutter) * 2));
       padding-block: var(--size__l);
-      padding-inline-start: calc(var(--size__l) + env(safe-area-inset-left));
-      padding-inline-end: calc(var(--size__l) + env(safe-area-inset-right));
+      padding-inline: var(--gutter);
 
       @media(min-width: 60rem) {
         padding-block: var(--size__xxxl);
@@ -256,6 +256,14 @@
 
     .process {
       min-inline-size: 0;
+    }
+  }
+
+  .cv article {
+
+    >p,
+    >ul li {
+      max-inline-size: 65ch;
     }
   }
 }
@@ -410,6 +418,10 @@
         transform: scale(1.00625);
       }
     }
+
+    svg {
+      border-radius: var(--size__m);
+    }
   }
 
   .process {
@@ -465,12 +477,14 @@
 
   .reccommendation {
     --color__border: var(--color__base--light);
+    max-inline-size: fit-content;
     padding-block-start: var(--size__m);
     padding-block-end: unset;
     padding-inline: unset;
 
     >p {
       font-family: var(--type__family--secondary);
+      max-inline-size: 65ch;
       padding-inline: var(--size__l);
 
       &:first-child:before,

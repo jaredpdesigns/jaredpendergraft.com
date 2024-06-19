@@ -4,7 +4,7 @@ eleventyComputed:
   description: "Details about “{{ client.title }}” project"
   slug: "/clients/{{ client.type }}/{{ client.slug }}"
   class: "{{ client.type }}"
-layout: page.webc
+layout: base.webc
 ---
 
 {% if client.type === 'invoice' %}

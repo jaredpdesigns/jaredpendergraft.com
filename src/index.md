@@ -2,7 +2,7 @@
 title: Jared Pendergraft
 description: The personal website of Jared Pendergraft
 pageClass: profile
-layout: page.webc
+layout: base.webc
 ---
 
 <profile-wrap webc:nokeep>
