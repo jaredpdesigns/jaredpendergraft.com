@@ -100,7 +100,7 @@
     }
 
     >main {
-      overflow: hidden;
+      overflow: clip;
     }
 
     >main>article {
@@ -364,6 +364,21 @@
         }
 
         label {
+          @media (prefers-reduced-motion: no-preference) {
+            @supports (animation-timeline: view()) {
+              @keyframes reveal {
+                from {
+                  opacity: 0;
+                  scale: .90;
+                }
+              }
+
+              animation: reveal linear both;
+              animation-timeline: view(inline);
+              animation-range: 25vh 75vh;
+            }
+          }
+
           >* {
             grid-area: 1 / 1;
           }
