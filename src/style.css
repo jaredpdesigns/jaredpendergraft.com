@@ -379,6 +379,11 @@
             }
           }
 
+          &:focus-within {
+            opacity: 1;
+            scale: 1;
+          }
+
           >* {
             grid-area: 1 / 1;
           }
