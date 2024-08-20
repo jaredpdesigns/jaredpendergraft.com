@@ -16,5 +16,6 @@ layout: base.webc
 
 While each project requires different approaches to problem-solving, here are a few examples of common ways I approach design challenges:
 
-<process webc:for="process of this.processes" :processimage="process.img" :processlabel="process.label"
-  :processdescription="process.description" webc:nokeep></process>
+<section class="process__wrap flow__grid">
+  <process webc:for="process of this.processes" :processimage="process.img" :processlabel="process.label" :processdescription="process.description" webc:nokeep></process>
+</section>
