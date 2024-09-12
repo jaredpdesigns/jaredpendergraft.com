@@ -1,0 +1,13 @@
+---
+layout: base.webc
+---
+
+<nav>
+  <p class="color__type--base-ish">
+    <a class="flow__inline flow__align--block-center flow__gap--s" href="/interfaces">
+      <icon name="arrow-left" webc:nokeep></icon>
+      All Elements
+    </a>
+  </p>
+</nav>
+<template @html="content" webc:nokeep></template>

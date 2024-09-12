@@ -1,0 +1,10 @@
+<script webc:type="render" webc:is="template">
+  module.exports = function () {
+    const getComponent = () => {
+      if (this.component === 'Segmented Controller') {
+        return `<demo-segmented-controller webc:nokeep></demo-segmented-controller>`
+      }
+    }
+    return getComponent();
+  }
+</script>

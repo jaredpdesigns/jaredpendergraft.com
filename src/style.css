@@ -527,6 +527,22 @@
       }
     }
   }
+
+  .interfaces {
+    article {
+      >* {
+        min-inline-size: 0;
+      }
+
+      h1 {
+        grid-column: 1/-1;
+      }
+
+      a {
+        text-decoration: unset;
+      }
+    }
+  }
 }
 
 @media print {

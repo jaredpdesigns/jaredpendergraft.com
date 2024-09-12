@@ -1,0 +1,54 @@
+<fieldset
+  class="segmentedController color__bg--base--light flow__inline flow__align--block-center padding__xxs radius__xs">
+  <label webc:for="(item,index) of items" :for="item.toLowerCase()"
+    class="color__type--base--mid flow__align--block-center">
+    <input type="radio" :id="item.toLowerCase()" :name="name" :value="item" :checked="index === 0" class="radius__xs">
+    <span class="flow__inline flow__align--block-center flow__align--inline-center padding__inline--m"
+      @text="item"></span>
+  </label>
+</fieldset>
+
+<style>
+  .segmentedController {
+    --element__height: var(--size__l);
+    block-size: calc(var(--element__height) + (var(--size__xxs) * 2));
+
+    label {
+      block-size: var(--element__height);
+      cursor: pointer;
+      display: grid;
+      justify-items: stretch;
+      min-inline-size: var(--min__size, 0);
+
+      >* {
+        grid-area: 1/1;
+      }
+
+      >input {
+        --outline__offset: calc(var(--size__xs) * -1);
+        appearance: none;
+        block-size: var(--element__height);
+      }
+
+      >span {
+        block-size: calc(var(--size__l) - (var(--size__s)));
+        border-left: 0.0625rem solid var(--color__base--semi);
+      }
+
+      &:has(input:checked) {
+        background-color: var(--color__contrast--adaptive);
+        border-radius: var(--size__xs);
+        box-shadow: var(--shadow);
+        color: var(--color__base);
+      }
+
+      &:has(input:checked),
+      &:has(input:checked)+*,
+      &:first-child {
+        >span {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+</style>

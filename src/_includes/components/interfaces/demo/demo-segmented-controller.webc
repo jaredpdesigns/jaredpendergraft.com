@@ -1,0 +1,24 @@
+<theme-wrap webc:nokeep>
+  <segmented-controller :items="['Coffee', 'Tea', 'Kombucha']" name="drink" webc:nokeep></segmented-controller>
+</theme-wrap>
+
+<script>
+  const querySegmentedControllers = () => {
+    const segmentedControllers = document.querySelectorAll(
+      ".segmentedController"
+    );
+    segmentedControllers.forEach((segmentedController) => {
+      const labels = segmentedController.querySelectorAll("label");
+      const labelWidths = [...labels].map((label) =>
+        Number(label.getBoundingClientRect().width)
+      );
+      const largestLabelWidthAsRem =
+        Math.round(Math.max(...labelWidths)) / 16 + "rem";
+      segmentedController.style = `--min__size: ${largestLabelWidthAsRem}`;
+    });
+  }
+
+  window.onload = () => {
+    querySegmentedControllers();
+  };
+</script>
