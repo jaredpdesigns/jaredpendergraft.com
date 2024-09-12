@@ -19,16 +19,16 @@
           </a>
         </li>
         <li>
-          Type is set in <a rel="noopener" target="_blank" href="https://www.c-a-s-t.com/typefaces/sole-sans/">Sole
-            Sans</a> & <a rel="noopener" target="_blank" href="https://www.c-a-s-t.com/typefaces/sole-serif/">Sole
+          Type is set in <a rel="noopener" target="_blank" href="https://www.c-a-s-t.com/typefaces/sole-sans">Sole
+            Sans</a> & <a rel="noopener" target="_blank" href="https://www.c-a-s-t.com/typefaces/sole-serif">Sole
             Serif</a>
           by <em>Cast Type Foundry</em>
         </li>
         <li>
           Built using
-          <a rel="noopener" target="_blank" href="https://www.11ty.dev/">11ty</a>
-          and <a rel="noopener" target="_blank" href="https://www.11ty.dev/docs/languages/webc/">WebC</a> and hosted on
-          <a rel="noopener" target="_blank" href="https://www.netlify.com/">Netlify</a>
+          <a rel="noopener" target="_blank" href="https://www.11ty.dev">11ty</a>
+          and <a rel="noopener" target="_blank" href="https://www.11ty.dev/docs/languages/webc">WebC</a> and hosted on
+          <a rel="noopener" target="_blank" href="https://www.netlify.com">Netlify</a>
         </li>
       </ul>
     </article>
