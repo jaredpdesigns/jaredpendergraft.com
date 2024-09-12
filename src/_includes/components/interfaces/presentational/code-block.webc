@@ -55,7 +55,7 @@
         border-color: transparent;
         display: grid;
         justify-items: stretch;
-        overflow: hidden;
+        position: relative;
 
         >* {
           grid-area: 1/1;
@@ -70,6 +70,17 @@
 
         &:has(input:checked) {
           border-color: var(--color__base--light);
+
+          &:before {
+            --size: var(--size__xxs);
+            background-color: var(--color__contrast);
+            block-size: var(--size);
+            content: '';
+            display: block;
+            inset-block-end: calc(var(--size) * -1);
+            inset-inline: 0;
+            position: absolute;
+          }
         }
       }
     }
