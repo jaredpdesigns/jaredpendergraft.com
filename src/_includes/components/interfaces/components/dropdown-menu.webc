@@ -1,0 +1,72 @@
+<section class="flow__inline position__relative">
+  <details class="dropdownMenu dropdownMenuSelections">
+    <summary
+      class="border__all color__bg--contrast color__border--base--light flow__inline flow__align--block-center flow__gap--s padding__inline--m radius__s">
+      <span class="type__size--m-l--fluid" @text="label"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    </summary>
+    <section
+      class="border__all color__bg--contrast--adaptive color__border--base--light flow__grid overflow__hidden position__absolute radius__s shadow">
+      <button webc:for="(item, index) of items"
+        :class="`${index === 0 && 'selected'} border__bottom color__border--base--light flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m`">
+        <span class="type__size--m-l--fluid" @text="item"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg>
+      </button>
+    </section>
+  </details>
+</section>
+<style>
+  .dropdownMenu {
+    --elementHeight: var(--size__xl);
+
+    >summary {
+      block-size: var(--elementHeight);
+      cursor: pointer;
+      user-select: none;
+
+      svg {
+        color: var(--color__base--mid);
+      }
+    }
+
+    &[open]>summary {
+      border-color: var(--color__base--semi);
+    }
+
+    svg {
+      block-size: 1.625cap;
+      stroke-width: 3;
+    }
+
+    >section {
+      --block-end: calc(var(--size__xs) * -1);
+      --inline-start: 50%;
+      inline-size: 12.5rem;
+      transform: translate(-50%, 100%);
+
+      >* {
+        --outline__offset: calc(var(--size__xs) * -1);
+        background: unset;
+        block-size: var(--elementHeight);
+        border-left: unset;
+        border-right: unset;
+        border-top: unset;
+        text-align: unset;
+        transition: background-color 0.375s ease-in;
+
+        &:focus,
+        &:hover {
+          background-color: var(--color__highlight--ghost);
+        }
+
+        &:last-child {
+          border-bottom: unset;
+        }
+      }
+    }
+  }
+</style>

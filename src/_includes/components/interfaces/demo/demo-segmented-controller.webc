@@ -1,6 +1,4 @@
-<theme-wrap webc:nokeep>
-  <segmented-controller :items="['Coffee', 'Tea', 'Kombucha']" name="drink" webc:nokeep></segmented-controller>
-</theme-wrap>
+<segmented-controller :items="['Coffee', 'Tea', 'Kombucha']" name="drink" webc:nokeep></segmented-controller>
 
 <script>
   const querySegmentedControllers = () => {

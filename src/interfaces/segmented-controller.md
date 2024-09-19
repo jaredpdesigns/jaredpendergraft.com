@@ -11,9 +11,9 @@ tags:
 
 <code-block webc:nokeep>
 
-<section class="border__all color__border--base--light radius__s">
+<theme-wrap webc:nokeep>
   <get-component component="Segmented Controller" webc:nokeep></get-component>
-</section>
+</theme-wrap>
 
 ```html
 <fieldset
@@ -32,7 +32,7 @@ tags:
       class="radius__xs"
     />
     <span
-      class="flow__inline flow__align--block-center flow__align--inline-center padding__inline--m"
+      class="flow__inline flow__align--block-center flow__align--inline-center padding__inline--m type__size--m-l--fluid"
       >Coffee</span
     >
   </label>
@@ -74,7 +74,7 @@ tags:
 ```css
 .segmentedController {
   /* Height control */
-  --element__height: var(--size__l);
+  --element__height: var(--size__xl);
 
   /* Fixes height accommodating for border */
   block-size: calc(var(--element__height) + (var(--size__xxs) * 2));
@@ -99,7 +99,7 @@ tags:
     }
 
     > span {
-      block-size: calc(var(--size__l) - (var(--size__s)));
+      block-size: calc(var(--element__height) - (var(--size__s)));
       border-left: 0.0625rem solid var(--color__base--semi);
     }
 
@@ -121,22 +121,6 @@ tags:
   }
 }
 ```
-
-</code-block>
-
-## Maybe a Radio Button?
-
-It's an interesting idea to utilize a radio to represent one of a possible number of options. Philsophically a `segmentedController` is really a radiogroup, so why not utilize the features of a radio button to limit users to choose only one possible item at a time?
-
-In this exploration I opted to use the pattern of a `label` holding both an `input` and a `span` (to represent the label). Each item in the `fieldset` represent a single possible choice. It's also a plus to be able to utilze the “I can click anywhere” on the label to trigger a selection.
-
-> **Tip:** Another really cool feature of using radio buttons is native focus-trapping (in Chrome at least), where if you `focus` into the first radio button, then use either the left/right or up/down arrow keys, you can cycle through the selection options.
-
-Using the wonderful “grid pile” technique, we can stack the `input` and `span` on top of eachother, keeping the `focus` functionality of the `input` without it having to _look_ like an input.
-
-## Setting a Minimum Width
-
-With an example like above, it’s a little weird if the word “tea” was only as wide as the word, sometimes it feels better to set a minimum width for items so things feel balanced, I opted to utilize JavaScript for this using the following technique:
 
 ```js
 const querySegmentedControllers = () => {
@@ -161,3 +145,54 @@ const querySegmentedControllers = () => {
   });
 };
 ```
+
+</code-block>
+
+## Highlights
+
+It's an interesting idea to utilize a radio button to represent one of a possible number of options. Philsophically a `segmentedController` is really a `radiogroup`, so why not utilize the features of a radio button to limit users to choose only one possible item at a time?
+
+In this exploration I opted to use the pattern of a `label` holding both an `input` and a `span` (to represent the label). Each item in the `fieldset` represent a single possible choice. It's also a plus to be able to utilze the “I can click anywhere” on the label to trigger a selection.
+
+> **Tip:** Another really cool feature of using radio buttons is native focus-trapping (in Chrome at least), where if you `focus` into the first radio button, then use either the left/right or up/down arrow keys, you can cycle through the selection options.
+
+Using the wonderful “grid pile” technique, we can stack the `input` and `span` on top of eachother, keeping the `focus` functionality of the `input` without it having to _look_ like an input.
+
+```css
+label {
+  > * {
+    grid-area: 1/1;
+  }
+
+  > input {
+    appearance: none;
+  }
+}
+```
+
+## Setting a Minimum Width
+
+In this demo, it would be a little weird if the word “tea” was only as wide as the word, sometimes it feels better to set a minimum width for items so things feel balanced, I opted to utilize JavaScript for this. By querying all of the labels, we can then measure their widths and return the widest one using `Math.round`:
+
+```js
+// Find all the labels
+const labels = segmentedController.querySelectorAll("label");
+// Measure their widths
+const labelWidths = [...labels].map((label) =>
+  Number(label.getBoundingClientRect().width)
+);
+// Find largest width, round it, and convert it to REMs
+const largestLabelWidthAsRem =
+  Math.round(Math.max(...labelWidths)) / 16 + "rem";
+
+// Lastly apply the value as a CSS variable for the component to consume
+segmentedController.style = `--min__size: ${largestLabelWidthAsRem}`;
+```
+
+## Alternates
+
+<theme-wrap webc:nokeep>
+  <segmented-controller-alt-1 webc:nokeep></segmented-controller-alt-1>
+</theme-wrap>
+
+You could easily create a version of this component that behaved more like other common UI elements like a text-alignment selection, using only icons.

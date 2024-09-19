@@ -1,9 +1,10 @@
 <section class="codeBlock flow__grid">
   <nav class="flow__inline">
-    <label webc:for="(item, index) of ['Demo', 'HTML', 'CSS']"
+    <label webc:for="(item, index) of ['Demo', 'HTML', 'CSS', 'JS']"
       class="border__left border__top border__right radius__tl--xs radius__tr--xs" for="demo">
       <input type="radio" :id="item.toLowerCase()" name="demo" :value="item" :checked="index === 0">
-      <span class="flow__inline flow__align--block-center flow__align--inline-center padding__inline--s type__size--s-m"
+      <span
+        class="color__type--base--mid flow__inline flow__align--block-center flow__align--inline-center padding__inline--s type__family--tertiary type__size--s-m"
         @text="item"></span>
     </label>
   </nav>
@@ -21,7 +22,8 @@
     }
 
     &:has(#html:checked),
-    &:has(#css:checked) {
+    &:has(#css:checked),
+    &:has(#js:checked) {
       >section {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -41,6 +43,12 @@
     }
 
     &:has(#css:checked) {
+      pre:nth-of-type(2) {
+        display: block;
+      }
+    }
+
+    &:has(#js:checked) {
       pre:last-of-type {
         display: block;
       }
@@ -70,6 +78,10 @@
 
         &:has(input:checked) {
           border-color: var(--color__base--light);
+
+          span {
+            color: var(--color__base);
+          }
 
           &:before {
             --size: var(--size__xxs);
