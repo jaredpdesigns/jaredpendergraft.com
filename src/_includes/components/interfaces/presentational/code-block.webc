@@ -73,6 +73,7 @@
           --outline__offset: calc(var(--size__xs) * -1);
           appearance: none;
           cursor: pointer;
+          opacity: 0;
           position: relative;
         }
 

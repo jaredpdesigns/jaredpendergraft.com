@@ -82,7 +82,6 @@ tags:
 
   label {
     block-size: var(--element__height);
-    cursor: pointer;
     display: grid;
     justify-items: stretch;
     /* If `--min__size` is defined use that, otherwise set it to 0 */
@@ -90,6 +89,7 @@ tags:
 
     /* Grid pile FTW! */
     > * {
+      cursor: pointer;
       grid-area: 1/1;
     }
 
@@ -107,7 +107,6 @@ tags:
     &:has(input:checked) {
       background-color: var(--color__contrast--adaptive);
       border-radius: var(--size__xs);
-      box-shadow: var(--shadow);
       color: var(--color__base);
     }
 

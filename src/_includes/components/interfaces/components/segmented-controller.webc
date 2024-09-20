@@ -22,12 +22,12 @@
 
     label {
       block-size: var(--element__height);
-      cursor: pointer;
       display: grid;
       justify-items: stretch;
       min-inline-size: var(--min__size, 0);
 
       >* {
+        cursor: pointer;
         grid-area: 1/1;
       }
 
@@ -35,6 +35,7 @@
         --outline__offset: calc(var(--size__xs) * -1);
         appearance: none;
         block-size: var(--element__height);
+        opacity: 0;
       }
 
       >span {
@@ -45,7 +46,6 @@
       &:has(input:checked) {
         background-color: var(--color__contrast--adaptive);
         border-radius: var(--size__s);
-        box-shadow: var(--shadow);
         color: var(--color__base);
       }
 
