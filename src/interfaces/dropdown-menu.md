@@ -17,11 +17,13 @@ tags:
 </theme-wrap>
 
 ```html
-<details class="dropdownMenu position__relative">
+<details
+  class="dropdownMenu dropdownMenuSelections flow__inline position__relative"
+>
   <summary
     class="border__all color__bg--contrast color__border--base--light flow__inline flow__align--block-center flow__gap--s padding__inline--m radius__s"
   >
-    <span class="type__size--m-l--fluid">Sort Items</span>
+    <span class="type__size--m-l--fluid">Toppings</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -39,9 +41,9 @@ tags:
     class="border__all color__bg--contrast--adaptive color__border--base--light flow__grid overflow__hidden position__absolute radius__s shadow"
   >
     <button
-      class="selected border__bottom color__border--base--light flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m"
+      class="selected border__bottom color__border--base--light color__type--base flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m"
     >
-      <span class="type__size--m-l--fluid">Ascending</span>
+      <span class="type__size--m-l--fluid">Cherries</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -56,9 +58,9 @@ tags:
       </svg>
     </button>
     <button
-      class="false border__bottom color__border--base--light flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m"
+      class="border__bottom color__border--base--light color__type--base flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m"
     >
-      <span class="type__size--m-l--fluid">Descending</span>
+      <span class="type__size--m-l--fluid">Sprinkles</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -73,9 +75,9 @@ tags:
       </svg>
     </button>
     <button
-      class="false border__bottom color__border--base--light flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m"
+      class="border__bottom color__border--base--light color__type--base flow__flex flow__align--block-center flow__align--inline-between flow__gap--s padding__inline--m"
     >
-      <span class="type__size--m-l--fluid">Something Else</span>
+      <span class="type__size--m-l--fluid">Whip Cream</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -242,7 +244,7 @@ const queryDropdownMenuSelections = () => {
 
 ## Highlights
 
-For this demo I utilized the `details` element primarily because you get the open/close paradigm of this type of control for free without having to manage state via Javascript. I also love the association that this is basically an accordion type of element. I also used the great [Heroicons](https://heroicons.com/) library for the two icons used.
+For this demo I utilized the `details` element primarily because you get the open/close paradigm of this type of control for free without having to manage state via Javascript. I also love the association that this is basically an accordion type of element. I also used the great [Heroicons](https://heroicons.com/) library for the icons throughout the demos.
 
 I also find it really interesting that with this type of control you can put _whatever_ you want inside the menu and the overall behavior is maintained. For example, in this demo we are utilizing buttons to represent menu items and listening for a `click` event to make the SVG visible. You could easily reach a `checkbox` or `radio` or just as easily turn it into a link of anchor tags to provide a nav menu.
 
@@ -345,10 +347,10 @@ dropdownMenu.addEventListener("toggle", (e) => {
   <dropdown-menu-alt-1 webc:nokeep></dropdown-menu-alt-1>
 </theme-wrap>
 
-Here’s an example of a list of lists presented inside a Dropdown Menu.
+Here’s an example of a list of links presented inside a Dropdown Menu.
 
 <theme-wrap webc:nokeep>
-  <dropdown-menu-alt-2 label="Item 1" :items="['Item 1', 'Item 2', 'Item 3']" webc:nokeep></dropdown-menu-alt-2>
+  <dropdown-menu-alt-2 label="Ascending" :items="['Ascending', 'Descending']" webc:nokeep></dropdown-menu-alt-2>
 </theme-wrap>
 
 Here’s a more straight forward implementation of the initial demo, but behaves more like a `select` (i.e. making a single selection closes the menu).

@@ -1,4 +1,4 @@
-<dropdown-menu label="Sort Items" :items="['Ascending', 'Descending', 'Something Else']" webc:nokeep></dropdown-menu>
+<dropdown-menu label="Toppings" :items="['Cherries', 'Sprinkles', 'Whip Cream']" webc:nokeep></dropdown-menu>
 
 <script>
   const queryDropdownMenus = () => {
@@ -49,15 +49,12 @@
   };
 
   const queryDropdownMenuSelections = () => {
-    const dropdownMenus = document.querySelectorAll(".dropdownMenuSelections");
+    const dropdownMenus = document.querySelectorAll(".dropdownMenuSelections, .dropdownMenuSelect");
     dropdownMenus.forEach((dropdownMenu) => {
       const dropdownMenuButtons = dropdownMenu.querySelectorAll("button");
 
       dropdownMenuButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
-          [...dropdownMenuButtons]
-            .filter((item) => item !== e.currentTarget)
-            .map((item) => item.classList.remove("selected"));
           e.currentTarget.classList.toggle("selected");
         });
       });
@@ -71,10 +68,17 @@
       const dropdownMenuButtons = dropdownMenu.querySelectorAll("button");
       dropdownMenuButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
+          // Update the selection label
           const label = dropdownMenuSummary.querySelector("span");
-          e.currentTarget.classList.toggle("selected");
-          dropdownMenu.removeAttribute("open");
           label.textContent = e.currentTarget.firstChild.innerHTML;
+
+          // Remove all other `.selected` classes
+          [...dropdownMenuButtons]
+            .filter((item) => item !== e.currentTarget)
+            .map((item) => item.classList.remove("selected"));
+
+          // Close the dropdown
+          dropdownMenu.removeAttribute("open");
         });
       });
     });
@@ -88,17 +92,25 @@
 </script>
 
 <style>
-  .dropdownMenuSelections {
+  .dropdownMenuSelections,
+  .dropdownMenuSelect {
     >section {
       svg {
         color: var(--color__highlight);
         opacity: 0;
-        transition: opacity 0.1875s ease-in;
-      }
-
-      .selected svg {
-        opacity: 1;
       }
     }
+  }
+
+  .dropdownMenuSelections {
+    >section {
+      svg {
+        transition: opacity 0.1875s ease-in;
+      }
+    }
+  }
+
+  .dropdownMenu .selected svg {
+    opacity: 1;
   }
 </style>
