@@ -222,18 +222,42 @@ const queryDropdownMenus = () => {
 };
 
 const queryDropdownMenuSelections = () => {
-  const dropdownMenus = document.querySelectorAll(".dropdownMenuSelections");
+  const dropdownMenus = document.querySelectorAll(
+    ".dropdownMenuSelections, .dropdownMenuSelect"
+  );
   dropdownMenus.forEach((dropdownMenu) => {
+    const dropdownMenuButtons = dropdownMenu.querySelectorAll("button");
+
+    // Toggles the clicked button to have the `.selected` class
+    dropdownMenuButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.currentTarget.classList.toggle("selected");
+      });
+    });
+  });
+};
+
+// This function is is you want to implement a single selection
+const queryDropdownMenuSelect = () => {
+  const dropdownMenus = document.querySelectorAll(".dropdownMenuSelect");
+
+  dropdownMenus.forEach((dropdownMenu) => {
+    const dropdownMenuSummary = dropdownMenu.querySelector("summary");
     const dropdownMenuButtons = dropdownMenu.querySelectorAll("button");
 
     dropdownMenuButtons.forEach((button) => {
       button.addEventListener("click", (e) => {
-        // Remove selection from all the other buttons
+        // Update the selection label
+        const label = dropdownMenuSummary.querySelector("span");
+        label.textContent = e.currentTarget.firstChild.innerHTML;
+
+        // Remove all other `.selected` classes
         [...dropdownMenuButtons]
           .filter((item) => item !== e.currentTarget)
           .map((item) => item.classList.remove("selected"));
-        // Only apply it to my current selection
-        e.currentTarget.classList.toggle("selected");
+
+        // Close the dropdown
+        dropdownMenu.removeAttribute("open");
       });
     });
   });

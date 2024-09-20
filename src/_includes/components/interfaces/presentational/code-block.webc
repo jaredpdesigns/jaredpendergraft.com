@@ -4,7 +4,7 @@
       class="border__left border__top border__right radius__tl--xs radius__tr--xs" for="demo">
       <input type="radio" :id="item.toLowerCase()" name="demo" :value="item" :checked="index === 0">
       <span
-        class="color__type--base--mid flow__inline flow__align--block-center flow__align--inline-center padding__inline--s type__family--tertiary type__size--s-m"
+        class="color__type--base--mid flow__inline flow__align--block-center flow__align--inline-center padding__inline--m type__family--tertiary type__size--s-m"
         @text="item"></span>
     </label>
   </nav>
@@ -24,7 +24,7 @@
     &:has(#html:checked),
     &:has(#css:checked),
     &:has(#js:checked) {
-      >section {
+      >figure {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
