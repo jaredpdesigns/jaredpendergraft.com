@@ -2,6 +2,7 @@
 title: Segmented Controller • Interfaces • Jared Pendergraft
 component: Segmented Controller
 description: An exploration of a segmented controller element
+social: https://jaredpendergraft.com/img/interfaces/segmented-controller.jpg
 layout: interfaces.webc
 tags:
   - interface

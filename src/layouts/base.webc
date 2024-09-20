@@ -9,7 +9,7 @@ layout: root.webc
         <p class="type__align--center"><strong>Jared Pendergraft</strong></p>
       </a>
       <section class="color__type--base--ish flow__inline flow__align--block-center flow__gap--m type__size--m-xxl">
-        <section class="flow__inline flow__gap--l type__weight--semibold">
+        <section class="flow__inline flow__gap--m type__weight--semibold">
           <a class="radius__xs" href="/" :aria-current="page.url === '/' && 'page'">About</a>
           <a class="radius__xs" href="/interfaces/"
             :aria-current="page.url.includes('interfaces') && 'page'">Interfaces</a>

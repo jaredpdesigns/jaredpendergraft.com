@@ -540,6 +540,7 @@
       }
 
       a {
+        min-inline-size: 0;
         text-decoration: unset;
       }
     }
@@ -552,6 +553,7 @@
   }
 
   body>header {
+    overflow: hidden;
     padding-top: 0;
     position: relative;
 

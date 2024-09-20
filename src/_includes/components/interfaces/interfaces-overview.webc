@@ -1,7 +1,7 @@
 <section class="flow__grid flow__grid--columns-auto flow__gap--m">
   <a class="border__all color__border--base--light radius__s" webc:for="interface of interfaces"
     :href="interface.page.url">
-    <get-component :component="interface.data.component" webc:nokeep></get-component>
+    <get-component-image :component="interface.data.component" webc:nokeep></get-component-image>
     <footer class="border__block-start color__border--base--light flow__flex flow__align--inline-center padding__m">
       <h3 class="type__align--center" @text="interface.data.component"></h3>
     </footer>

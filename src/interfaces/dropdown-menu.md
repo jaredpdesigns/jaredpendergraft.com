@@ -2,6 +2,7 @@
 title: Dropdown Menu • Interfaces • Jared Pendergraft
 component: Dropdown Menu
 description: An exploration of a dropdown menu element
+social: https://jaredpendergraft.com/img/interfaces/dropdown-menu.jpg
 layout: interfaces.webc
 tags:
   - interface

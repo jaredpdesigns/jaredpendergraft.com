@@ -47,7 +47,7 @@
 
     svg {
       block-size: 1.625cap;
-      stroke-width: 3;
+      stroke-width: 2;
       user-select: none;
     }
   }
