@@ -20,6 +20,12 @@
   </label>
 </fieldset>
 
+<script>
+  window.onload = () => {
+    feather.replace({ height: '1.625cap', width: '1.625cap' });
+  };
+</script>
+
 <style>
   .segmentedControllerIconsOnly {
     label {

@@ -18,6 +18,5 @@
 
   window.onload = () => {
     querySegmentedControllers();
-    feather.replace({ height: '1.625cap', width: '1.625cap' });
   };
 </script>

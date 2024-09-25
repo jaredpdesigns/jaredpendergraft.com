@@ -1,10 +1,12 @@
-<div class="border__all color__border--base--light radius__l padding__l">
-  <section class="flow__flex flow__align--block-center flow__gap--m flow__flex--wrap">
-    <h2 @text="item.title"></h2>
-    <span
-      class="color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__size--s-m"
-      @text="item.type"></span>
-  </section>
-  <p @text="item.client.name"></p>
-  <p><a :href="`/clients/${item.type}/${item.slug}/`">View</a></p>
+<div>
+  <a :href="`/clients/${item.type}/${item.slug}/`"
+    class="border__all color__border--base--light flow__grid flow__gap--m radius__l padding__l">
+    <section class="flow__flex flow__align--block-center flow__align--inline-between flow__gap--m flow__flex--wrap">
+      <h2 @text="item.title"></h2>
+      <span
+        class="color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
+        @text="item.type"></span>
+    </section>
+    <p @text="item.client.name"></p>
+  </a>
 </div>

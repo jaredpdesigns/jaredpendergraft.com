@@ -8,4 +8,4 @@ pageClass: clients
 
 # Client Projects
 
-<client webc:for="client of this.clients" :item="client"></client>
+<client webc:for="client of this.clients" :item="client" webc:nokeep></client>

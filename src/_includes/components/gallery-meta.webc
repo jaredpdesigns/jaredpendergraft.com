@@ -4,7 +4,7 @@
     <h3 @text="project.name"></h3>
     <span class="flow__flex flow__align--block-center flow__flex--wrap flow__gap--s">
       <span
-        class="color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__size--s-m"
+        class="color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
         webc:for="role of project.role" @text="role"></span>
     </span>
   </header>

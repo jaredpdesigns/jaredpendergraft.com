@@ -1,5 +1,5 @@
 <section class="codeBlock flow__grid">
-  <nav class="flow__inline">
+  <nav class="flow__inline flow__align--block-stretch flow__align--inline-stretch">
     <label webc:for="(item, index) of ['Demo', 'HTML', 'CSS', 'JS']"
       class="border__left border__top border__right radius__tl--xs radius__tr--xs" for="demo">
       <input type="radio" :id="item.toLowerCase()" name="demo" :value="item" :checked="index === 0">
@@ -72,9 +72,12 @@
         input {
           --outline__offset: calc(var(--size__xs) * -1);
           appearance: none;
+          block-size: 100%;
           cursor: pointer;
+          inline-size: 100%;
           opacity: 0;
           position: relative;
+          z-index: 2;
         }
 
         &:has(input:checked) {

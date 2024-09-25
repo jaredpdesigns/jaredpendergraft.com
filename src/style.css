@@ -221,6 +221,26 @@
     text-decoration-style: wavy;
     text-decoration-skip-ink: none;
   }
+
+  ul li {
+    padding-inline-start: 0.625cap;
+    position: relative;
+
+    &::marker {
+      content: '';
+    }
+
+    &:before {
+      color: var(--color__highlight);
+      content: '※';
+      display: inline-block;
+      font-family: var(--type__family--tertiary);
+      font-weight: normal;
+      position: absolute;
+      inset-block-start: -0.1875cap;
+      inset-inline-start: -0.875cap;
+    }
+  }
 }
 
 @layer page {
@@ -257,6 +277,13 @@
     >p,
     >ul li {
       max-inline-size: 65ch;
+    }
+  }
+
+  .clients article {
+
+    a {
+      text-decoration: none;
     }
   }
 }
@@ -497,7 +524,6 @@
 
     >p {
       font-family: var(--type__family--secondary);
-      font-style: italic;
       font-weight: 300;
       max-inline-size: 65ch;
       padding-inline: var(--size__l);
@@ -506,8 +532,9 @@
       &:last-of-type:after {
         color: var(--color__highlight);
         display: inline-block;
-        font-size: var(--type__size--xl--fluid);
-        transform: translateY(0.25ch);
+        font-size: var(--type__size--xxxl--fluid);
+        line-height: var(--type__lineheight--l--fluid);
+        transform: translateY(0.5ch);
       }
 
       &:first-child:before {
