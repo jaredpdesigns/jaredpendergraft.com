@@ -1,6 +1,6 @@
 ---
 title: Interfaces • Jared Pendergraft
-description: Experminds in UI
+description: Experiments in UI
 slug: /interfaces/
 layout: base.webc
 ---

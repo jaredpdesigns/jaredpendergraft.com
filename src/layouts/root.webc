@@ -34,6 +34,9 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="preconnect" href="https://use.typekit.net" />
   <link rel="preconnect" href="https://p.typekit.net" />
+  <link rel="preconnect"
+    webc:if="page.url.includes('interfaces') && page.url.split('/').filter(i => i).length === 2 ? true:false"
+    href="https://unpkg.com/" />
   <link webc:keep rel="preload" href="https://use.typekit.net/wqr8sqa.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'" rel="stylesheet">
   <noscript webc:keep>
@@ -42,6 +45,10 @@
   <link rel="stylesheet" href="/style.css" webc:raw />
   <style webc:keep @html="getCSS(page.url)"></style>
   <script webc:keep @html="getJS(page.url)"></script>
+  <script webc:keep
+    webc:if="page.url.includes('interfaces') && page.url.split('/').filter(i => i).length === 2 ? true:false"
+    src="https://unpkg.com/feather-icons"></script>
+  </meta>
 </head>
 
 <body class="color__bg--contrast" @html="content"></body>
