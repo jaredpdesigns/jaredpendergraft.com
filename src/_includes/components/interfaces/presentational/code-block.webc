@@ -8,8 +8,41 @@
         @text="item"></span>
     </label>
   </nav>
-  <slot></slot>
+  <section class="content__holder flow__grid">
+    <slot></slot>
+    <button class="copyButton button__secondary color__type--base--mid" onclick="copyCode()">
+      <icon name="copy" web:nokeep></icon>
+    </button>
+  </section>
 </section>
+
+<script>
+  const copyCode = () => {
+    const codeBlock = document.querySelector('.codeBlock');
+    const checkedInput = codeBlock.querySelector('input:checked');
+    const copyButton = codeBlock.querySelector('.copyButton');
+    const preLookup = () => {
+      if (checkedInput.getAttribute('id') === 'html') {
+        return codeBlock.querySelector('.language-html')?.textContent;
+      }
+      if (checkedInput.getAttribute('id') === 'css') {
+        return codeBlock.querySelector('.language-css')?.textContent;
+      }
+      if (checkedInput.getAttribute('id') === 'js') {
+        return codeBlock.querySelector('.language-js')?.textContent;
+      }
+      return null;
+    }
+    if (preLookup()) {
+      navigator.clipboard.writeText(preLookup());
+      copyButton.classList.toggle('copied');
+
+      setTimeout(() => {
+        copyButton.classList.toggle('copied');
+      }, 375);
+    }
+  }
+</script>
 
 <style>
   .codeBlock {
@@ -24,7 +57,7 @@
     &:has(#html:checked),
     &:has(#css:checked),
     &:has(#js:checked) {
-      >figure {
+      >section>figure {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
@@ -36,21 +69,70 @@
       display: none;
     }
 
+    &:has(#html:checked, #css:checked, #js:checked) {
+      .content__holder>button {
+        display: inline-flex;
+      }
+    }
+
     &:has(#html:checked) {
-      pre:first-of-type {
+      pre.language-html {
         display: block;
       }
     }
 
     &:has(#css:checked) {
-      pre:nth-of-type(2) {
+      pre.language-css {
         display: block;
       }
     }
 
     &:has(#js:checked) {
-      pre:last-of-type {
+      pre.language-js {
         display: block;
+      }
+    }
+
+    .content__holder {
+      >* {
+        min-inline-size: 0;
+      }
+
+      >pre {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      >button {
+        --control__padding--block: 0;
+        --control__padding--inline: 0;
+        --header__offset: 108px;
+        block-size: var(--size__l);
+        display: none;
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: end;
+        inline-size: var(--size__l);
+        inset-block-start: calc(var(--header__offset) + var(--size__s));
+        margin-block-start: var(--size__s);
+        margin-inline-end: var(--size__s);
+        order: 1;
+        position: sticky;
+
+        @media (min-width: 640px) {
+          --header__offset: 76px;
+        }
+
+        &.copied {
+          animation: emphasize 0.375s linear infinite;
+          animation-fill-mode: both;
+          animation-direction: alternate-reverse;
+        }
+
+        &:focus,
+        &:hover {
+          color: var(--color__base);
+        }
       }
     }
 
@@ -99,6 +181,12 @@
           }
         }
       }
+    }
+  }
+
+  @keyframes emphasize {
+    to {
+      scale: 1.0625;
     }
   }
 </style>
