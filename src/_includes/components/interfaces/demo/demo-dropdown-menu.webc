@@ -55,6 +55,7 @@
 
       dropdownMenuButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
+          console.log(e);
           e.currentTarget.classList.toggle("selected");
         });
       });
@@ -70,7 +71,7 @@
         button.addEventListener("click", (e) => {
           // Update the selection label
           const label = dropdownMenuSummary.querySelector("span");
-          label.textContent = e.currentTarget.firstChild.innerHTML;
+          label.textContent = e.srcElement.innerText;
 
           // Remove all other `.selected` classes
           [...dropdownMenuButtons]

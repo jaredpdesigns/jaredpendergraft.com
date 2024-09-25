@@ -150,9 +150,9 @@ const querySegmentedControllers = () => {
 
 ## Highlights
 
-It's an interesting idea to utilize a radio button to represent one of a possible number of options. Philsophically a `segmentedController` is really a `radiogroup`, so why not utilize the features of a radio button to limit users to choose only one possible item at a time?
+It’s an interesting idea to utilize a radio button to represent one of a possible number of options. Philsophically a `segmentedController` is really a `radiogroup`, so why not utilize the features of a radio button to limit users to choose only one possible item at a time?
 
-In this exploration I opted to use the pattern of a `label` holding both an `input` and a `span` (to represent the label). Each item in the `fieldset` represent a single possible choice. It's also a plus to be able to utilze the “I can click anywhere” on the label to trigger a selection.
+In this exploration I opted to use the pattern of a `label` holding both an `input` and a `span` (to represent the label). Each item in the `fieldset` represent a single possible choice. It’s also a plus to be able to utilze the “I can click anywhere” on the label to trigger a selection.
 
 > **Tip:** Another really cool feature of using radio buttons is native focus-trapping (in Chrome at least), where if you `focus` into the first radio button, then use either the left/right or up/down arrow keys, you can cycle through the selection options.
 

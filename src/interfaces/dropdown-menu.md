@@ -249,7 +249,7 @@ const queryDropdownMenuSelect = () => {
       button.addEventListener("click", (e) => {
         // Update the selection label
         const label = dropdownMenuSummary.querySelector("span");
-        label.textContent = e.currentTarget.firstChild.innerHTML;
+        label.textContent = e.srcElement.innerText;
 
         // Remove all other `.selected` classes
         [...dropdownMenuButtons]
@@ -268,7 +268,7 @@ const queryDropdownMenuSelect = () => {
 
 ## Highlights
 
-For this demo I utilized the `details` element primarily because you get the open/close paradigm of this type of control for free without having to manage state via Javascript. I also love the association that this is basically an accordion type of element. I also used the great [Heroicons](https://heroicons.com/) library for the icons throughout the demos.
+For this demo I utilized the `details` element primarily because you get the open/close paradigm of this type of control for free without having to manage state via Javascript. I also love the association that this is basically an accordion type of element. I’m also using the great [Feather](https://feathericons.com/) library for the icons throughout the demos.
 
 I also find it really interesting that with this type of control you can put _whatever_ you want inside the menu and the overall behavior is maintained. For example, in this demo we are utilizing buttons to represent menu items and listening for a `click` event to make the SVG visible. You could easily reach a `checkbox` or `radio` or just as easily turn it into a link of anchor tags to provide a nav menu.
 
