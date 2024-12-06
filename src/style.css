@@ -26,14 +26,24 @@
     grid-template-rows: auto 1fr auto;
     min-block-size: 100vh;
 
+    >header,
+    >footer {
+      padding-inline: var(--gutter);
+
+      >section {
+        inline-size: 100%;
+        margin-inline: auto;
+        max-inline-size: var(--maxWidth);
+      }
+    }
+
     >header {
       border-block-start-color: var(--color__highlight);
       border-block-start-width: var(--size__xs);
       padding-block-start: env(safe-area-inset-top);
-      padding-inline: var(--gutter);
       position: sticky;
       top: 0;
-      z-index: 1;
+      z-index: 3;
 
       @supports (backdrop-filter: blur(32px)) {
         background-color: color-mix(in srgb, var(--color__set--contrast), transparent 25%);
@@ -43,12 +53,6 @@
       @supports not (backdrop-filter: blur(32px)) {
         background-color: color-mix(in srgb, var(--color__set--contrast), transparent 2%);
         ;
-      }
-
-      >section {
-        inline-size: 100%;
-        margin-inline: auto;
-        max-inline-size: var(--maxWidth);
       }
 
       nav {
@@ -100,9 +104,19 @@
       }
     }
 
+    >footer {
+      inset-block: 0;
+      position: sticky;
+      z-index: 1;
+    }
+
     >main {
+      background-color: var(--color__contrast);
       block-size: 100%;
+      border-bottom-left-radius: var(--size__l);
+      border-bottom-right-radius: var(--size__l);
       overflow: clip;
+      z-index: 2;
     }
 
     >main>article {
@@ -286,23 +300,6 @@
 }
 
 @layer components {
-  .colophon {
-    inline-size: calc(100% - var(--size__l));
-    margin: auto;
-    max-block-size: calc(100% - var(--size__l));
-    max-inline-size: 40rem;
-    position: fixed;
-
-    >section>header {
-      inset-block-start: 0;
-      position: sticky;
-    }
-
-    footer p:last-child svg {
-      transform: translateY(calc((var(--size__xxs) * 2) * -1));
-    }
-  }
-
   .gallery {
     --overlay:
       color-mix(in srgb, var(--color__set--contrast), transparent 100%),
@@ -514,7 +511,6 @@
 
   .reccommendation {
     --color__border: var(--color__base--light);
-    max-inline-size: fit-content;
     padding-block-start: var(--size__m);
     padding-block-end: unset;
     padding-inline: unset;
@@ -522,7 +518,6 @@
     >p {
       font-family: var(--type__family--secondary);
       font-weight: 300;
-      max-inline-size: 65ch;
       padding-inline: var(--size__l);
 
       &:first-child:before,

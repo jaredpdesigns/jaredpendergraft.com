@@ -51,6 +51,6 @@
   </meta>
 </head>
 
-<body class="color__bg--contrast" @html="content"></body>
+<body class="color__bg--base--ghost" @html="content"></body>
 
 </html>

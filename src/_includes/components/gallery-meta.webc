@@ -13,7 +13,8 @@
   </section>
   <footer class="border__top color__border--base--light padding__block--m padding__inline--l">
     <p><a :href="project.external" rel="noopener" target="_blank"
-        class="flow__inline flow__align--block-center flow__gap--s">View Project <icon name="external" webc:nokeep>
+        class="flow__inline flow__align--block-center flow__gap--s">View Project <icon name="external" size="10"
+          webc:nokeep>
         </icon>
       </a></p>
   </footer>

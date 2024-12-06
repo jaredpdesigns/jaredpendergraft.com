@@ -22,22 +22,47 @@ layout: root.webc
             onclick="toggleTheme()" title="Toggle website theme">
             <icon name="contrast" webc:nokeep></icon>
           </button>
-          <button
-            class="button__tertiary flow__inline flow__align--block-center flow__gap--s flow__size--block-xl flow__size--inline-xl radius__xs"
-            onclick="toggleDialog()" title="View website colophon">
-            <icon name="code" webc:nokeep></icon>
-          </button>
         </section>
       </section>
     </nav>
   </section>
-  <colophon webc:nokeep></colophon>
 </header>
 <main :class="pageClass || page.fileSlug">
   <article>
     <template @html="content" webc:nokeep></template>
   </article>
 </main>
+<footer id="footer" class="padding__block--l">
+  <section class="flow__grid flow__gap--l">
+    <ul class="styled">
+      <li>
+        Styled with
+        <a rel="noopener" target="_blank" href="https://pasta.jaredpendergraft.com">Pasta
+        </a>
+      </li>
+      <li>
+        Type is set in <a rel="noopener" target="_blank" href="https://connary.com/articulat.html">Articulat</a> & <a
+          rel="noopener" target="_blank" href="https://connary.com/argent.html">Argent</a> & <a rel="noopener"
+          target="_blank" href="https://connary.com/cartograph.html">Cartograph</a>
+        by <em>Connary Fagen</em>
+      </li>
+      <li>
+        Built using
+        <a rel="noopener" target="_blank" href="https://www.11ty.dev">11ty</a>
+        and <a rel="noopener" target="_blank" href="https://www.11ty.dev/docs/languages/webc">WebC</a> and hosted on
+        <a rel="noopener" target="_blank" href="https://www.netlify.com">Netlify</a>
+      </li>
+    </ul>
+    <section class="color__type--base--mid flow__flex flow__align--block-center flow__flex--wrap flow__gap--column-l">
+      <p class="type__size--s-m" @text="`&copy; ${new Date().getFullYear()} Jared Pendergraft`">
+      </p>
+      <p class="flow__inline flow__align--block-center flow__gap--s type__size--s-m">
+        <icon name="pineapple" webc:nokeep></icon>
+        Made in Hawaiʻi
+      </p>
+    </section>
+  </section>
+</footer>
 <script>
   const getTheme = (fn) => {
     if (!window.matchMedia) {
@@ -73,19 +98,6 @@ layout: root.webc
       sessionStorage.getItem("theme")
     );
   }
-  function toggleDialog() {
-    const body = document.querySelector("body");
-    const dialog = document.querySelector("dialog");
-    const dialogIsOpen = dialog.hasAttribute("open");
-
-    if (dialogIsOpen) {
-      dialog.close();
-      body.removeAttribute("style");
-    } else {
-      dialog.showModal();
-      body.style.overflow = "hidden";
-    }
-  }
 
   getTheme((isDark) => {
     document.documentElement.setAttribute(
@@ -93,4 +105,12 @@ layout: root.webc
       sessionStorage.getItem("theme") ? sessionStorage.getItem("theme") : (isDark ? 'dark' : 'light')
     )
   })
+
+  window.onload = () => {
+    footer.addEventListener("focusin", (event) => {
+      footer.scrollIntoView({
+        behavior: 'smooth'
+      })
+    });
+  }
 </script>
