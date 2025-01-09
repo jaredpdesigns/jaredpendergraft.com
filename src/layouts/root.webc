@@ -45,9 +45,6 @@
   <link rel="stylesheet" href="/style.css" webc:raw />
   <style webc:keep @html="getCSS(page.url)"></style>
   <script webc:keep @html="getJS(page.url)"></script>
-  <script webc:keep
-    webc:if="page.url.includes('interfaces') && page.url.split('/').filter(i => i).length === 2 ? true:false"
-    src="https://unpkg.com/feather-icons"></script>
   </meta>
 </head>
 

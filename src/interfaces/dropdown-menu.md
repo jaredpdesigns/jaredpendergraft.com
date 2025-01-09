@@ -276,7 +276,7 @@ I was recently reminded of the awesomeness of the `cap` unit for sizing SVGs for
 
 ```css
 svg {
-  block-size: 1.625cap;
+  block-size: 16;
   stroke-width: 3;
 }
 ```

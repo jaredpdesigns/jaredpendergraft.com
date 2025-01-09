@@ -3,28 +3,41 @@
   <label for="left" class="color__type--base--mid flow__align--block-center type__size--m-l--fluid">
     <input type="radio" id="left" name="alignment" value="left" checked class="radius__s">
     <span class="flow__inline flow__align--block-center flow__align--inline-center">
-      <span data-feather="align-left"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-align-left">
+        <line x1="17" y1="10" x2="3" y2="10"></line>
+        <line x1="21" y1="6" x2="3" y2="6"></line>
+        <line x1="21" y1="14" x2="3" y2="14"></line>
+        <line x1="17" y1="18" x2="3" y2="18"></line>
+      </svg>
     </span>
   </label>
   <label for="center" class="color__type--base--mid flow__align--block-center type__size--m-l--fluid">
     <input type="radio" id="center" name="alignment" value="center" class="radius__s">
     <span class="flow__inline flow__align--block-center flow__align--inline-center">
-      <span data-feather="align-center"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="10" x2="6" y2="10"></line>
+        <line x1="21" y1="6" x2="3" y2="6"></line>
+        <line x1="21" y1="14" x2="3" y2="14"></line>
+        <line x1="18" y1="18" x2="6" y2="18"></line>
+      </svg>
     </span>
   </label>
   <label for="right" class="color__type--base--mid flow__align--block-center type__size--m-l--fluid">
     <input type="radio" id="right" name="alignment" value="right" class="radius__s">
     <span class="flow__inline flow__align--block-center flow__align--inline-center">
-      <span data-feather="align-right"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="21" y1="10" x2="7" y2="10"></line>
+        <line x1="21" y1="6" x2="3" y2="6"></line>
+        <line x1="21" y1="14" x2="3" y2="14"></line>
+        <line x1="21" y1="18" x2="7" y2="18"></line>
+      </svg>
     </span>
   </label>
 </fieldset>
-
-<script>
-  window.onload = () => {
-    feather.replace({ height: '1.625cap', width: '1.625cap' });
-  };
-</script>
 
 <style>
   .segmentedControllerIconsOnly {

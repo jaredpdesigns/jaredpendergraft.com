@@ -1,7 +1,15 @@
 <details class="dropdownMenu dropdownMenuLinks flow__inline position__relative">
   <summary
     class="border__all color__bg--contrast color__border--base--light flow__inline flow__align--block-center flow__align--inline-center flow__gap--s radius__s">
-    <span data-feather="list" stroke-width="3"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"></line>
+      <line x1="8" y1="12" x2="21" y2="12"></line>
+      <line x1="8" y1="18" x2="21" y2="18"></line>
+      <line x1="3" y1="6" x2="3.01" y2="6"></line>
+      <line x1="3" y1="12" x2="3.01" y2="12"></line>
+      <line x1="3" y1="18" x2="3.01" y2="18"></line>
+    </svg>
   </summary>
   <section
     class="border__all color__bg--contrast--adaptive color__border--base--light flow__grid overflow__hidden position__absolute radius__s shadow">
