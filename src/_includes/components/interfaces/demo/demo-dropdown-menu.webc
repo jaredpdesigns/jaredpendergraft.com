@@ -84,11 +84,11 @@
     });
   };
 
-  window.onload = () => {
+  window.addEventListener('load', () => {
     queryDropdownMenus();
     queryDropdownMenuSelections();
     queryDropdownMenuSelect();
-  };
+  });
 </script>
 
 <style>

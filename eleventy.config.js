@@ -5,11 +5,25 @@ const markdownItAnchor = require("markdown-it-anchor");
 const pluginWebC = require("@11ty/eleventy-plugin-webc");
 const postcss = require("postcss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(pluginWebC, {
     components: "src/_includes/**/*.webc"
+  });
+
+  eleventyConfig.addPlugin(eleventyImagePlugin, {
+    formats: ["avif", "webp"],
+    sizes: "(min-width: 36em) 33.3vw, 100vw",
+    widths: [320, 640],
+    dryRun: true,
+    htmlOptions: {
+      imgAttributes: {
+        decoding: "async",
+        fetchPriority: "high"
+      }
+    }
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);

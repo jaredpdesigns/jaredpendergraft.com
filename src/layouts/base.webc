@@ -106,11 +106,11 @@ layout: root.webc
     )
   })
 
-  window.onload = () => {
+  window.addEventListener('load', () => {
     footer.addEventListener("focusin", (event) => {
       footer.scrollIntoView({
         behavior: 'smooth'
       })
     });
-  }
+  });
 </script>

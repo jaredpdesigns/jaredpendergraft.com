@@ -13,7 +13,7 @@ tags:
 <code-block webc:nokeep>
 
 <theme-wrap webc:nokeep>
-  <get-component component="Segmented Controller" webc:nokeep></get-component>
+  <demo-segmented-controller webc:nokeep></demo-segmented-controller>
 </theme-wrap>
 
 ```html

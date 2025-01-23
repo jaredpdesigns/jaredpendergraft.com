@@ -13,7 +13,7 @@ tags:
 <code-block webc:nokeep>
 
 <theme-wrap webc:nokeep>
-  <get-component component="Dropdown Menu" webc:nokeep></get-component>
+  <demo-dropdown-menu webc:nokeep></demo-dropdown-menu>
 </theme-wrap>
 
 ```html
