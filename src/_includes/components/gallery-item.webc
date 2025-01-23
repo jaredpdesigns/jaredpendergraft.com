@@ -3,8 +3,8 @@
   :style="`--color__highlight--semi: color-mix(in oklab, hsl(${color}) 25%, var(--color__set--contrast)); --color__highlight--mid: color-mix(in oklab, hsl(${color}) 50%, var(--color__set--contrast));`">
   <input :checked="index === 0 ? true:false" type="radio" :name="slug" />
   <span class="color__bg--highlight--semi padding__m radius__l">
-    <img :alt="image.title" :src="image.img" class="radius__l width__full" width="320" loading="lazy" />
-    <img :alt="`Dark theme variant of ${image.title}`" :src="image.imgDark" class="radius__l width__full" width="320"
+    <img :alt="image.title" :src="image.img" class="radius__l width__full" width="640" loading="lazy" />
+    <img :alt="`Dark theme variant of ${image.title}`" :src="image.imgDark" class="radius__l width__full" width="640"
       loading="lazy" />
   </span>
   <p class="color__bg--contrast color__type--base--ish padding__m radius__bl--l radius__br--l" @text="image.title"></p>

@@ -1,19 +1,23 @@
-const fs = require("fs-extra");
-const htmlmin = require("html-minifier");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const pluginWebC = require("@11ty/eleventy-plugin-webc");
-const postcss = require("postcss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { eleventyImagePlugin } = require("@11ty/eleventy-img");
+import fs from "fs-extra";
+import htmlmin from "html-minifier";
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import pluginWebC from "@11ty/eleventy-plugin-webc";
+import postcss from "postcss";
+import postcssImport from "postcss-import";
+import postcssNested from "postcss-nested";
+import postcssEach from "postcss-each";
+import autoprefixer from "autoprefixer";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(pluginWebC, {
     components: "src/_includes/**/*.webc"
   });
 
-  eleventyConfig.addPlugin(eleventyImagePlugin, {
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["avif", "webp"],
     sizes: "(min-width: 36em) 33.3vw, 100vw",
     widths: [320, 640],
@@ -35,10 +39,10 @@ module.exports = function (eleventyConfig) {
     outputFileExtension: "css",
     compile: async function (inputContent) {
       const result = await postcss([
-        require("postcss-import"),
-        require("postcss-nested"),
-        require("postcss-each"),
-        require("autoprefixer")
+        postcssImport,
+        postcssNested,
+        postcssEach,
+        autoprefixer
       ]).process(inputContent, { from: undefined, to: undefined });
 
       return async () => result.css;
@@ -106,4 +110,4 @@ module.exports = function (eleventyConfig) {
     },
     markdownTemplateEngine: "njk"
   };
-};
+}

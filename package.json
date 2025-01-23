@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "jpd",
   "version": "5.0.0",
   "description": "The personal website of Jared Pendergraft",

@@ -1,5 +1,5 @@
 <script webc:type="render" webc:is="template">
-  module.exports = function () {
+  export default function () {
     const images = [
       {
         name: "Research",
