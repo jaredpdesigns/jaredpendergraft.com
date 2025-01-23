@@ -384,7 +384,7 @@
               @keyframes reveal {
                 from {
                   filter: blur(8px);
-                  opacity: 0.125;
+                  opacity: 0.25;
                   scale: .90;
                 }
               }
@@ -413,16 +413,16 @@
             inline-size: 100%;
           }
 
-          picture {
+          img {
 
             &:first-of-type {
-              [data-theme="dark"] & img {
+              [data-theme="dark"] & {
                 display: none;
               }
             }
 
             &:last-of-type {
-              [data-theme="light"] & img {
+              [data-theme="light"] & {
                 display: none;
               }
             }

@@ -18,16 +18,20 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["avif", "webp"],
+    formats: ["avif", "webp", "svg"],
     sizes: "(min-width: 36em) 33.3vw, 100vw",
     widths: [320, 640],
     dryRun: true,
+    svgShortCircuit: true,
     htmlOptions: {
       imgAttributes: {
+        loading: "lazy",
         decoding: "async",
         fetchPriority: "high"
       }
-    }
+    },
+    urlFormat: ({ src, width, format }) =>
+      `${src}${format !== "svg" ? `?fm=${format}&w=${width}` : ""}`
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);

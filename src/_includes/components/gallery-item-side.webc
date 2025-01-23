@@ -1,6 +1,6 @@
 <a rel="noopener" target="_blank" :href="project.external"
   class="color__bg--base--ghost flow__grid flow__gap--m padding__m radius__l">
-  <img-svg :alt="`${project.name} icon`" :src="project.img" loading="lazy" webc:nokeep></img-svg>
+  <img-svg :alt="`${project.name} icon`" :src="project.img" webc:nokeep></img-svg>
   <section class="flow__grid flow__gap--s">
     <h3 @text="project.name"></h3>
     <p @text="project.description"></p>
