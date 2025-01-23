@@ -383,14 +383,15 @@
             @supports (animation-timeline: view()) {
               @keyframes reveal {
                 from {
-                  opacity: 0;
+                  filter: blur(8px);
+                  opacity: 0.125;
                   scale: .90;
                 }
               }
 
               animation: reveal linear both;
               animation-timeline: view(inline);
-              animation-range: 25vh 75vh;
+              animation-range: 25vh 50vh;
             }
           }
 
@@ -412,16 +413,16 @@
             inline-size: 100%;
           }
 
-          img {
+          picture {
 
             &:first-of-type {
-              [data-theme="dark"] & {
+              [data-theme="dark"] & img {
                 display: none;
               }
             }
 
             &:last-of-type {
-              [data-theme="light"] & {
+              [data-theme="light"] & img {
                 display: none;
               }
             }
