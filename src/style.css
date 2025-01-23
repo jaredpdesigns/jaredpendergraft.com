@@ -379,7 +379,7 @@
         }
 
         label {
-          @media (prefers-reduced-motion: no-preference) {
+          @media (prefers-reduced-motion: no-preference) and (min-width: 640px) {
             @supports (animation-timeline: view()) {
               @keyframes reveal {
                 from {
@@ -413,16 +413,16 @@
             inline-size: 100%;
           }
 
-          img {
+          picture {
 
             &:first-of-type {
-              [data-theme="dark"] & {
+              [data-theme="dark"] & img {
                 display: none;
               }
             }
 
             &:last-of-type {
-              [data-theme="light"] & {
+              [data-theme="light"] & img {
                 display: none;
               }
             }

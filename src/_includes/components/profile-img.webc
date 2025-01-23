@@ -1,7 +1,7 @@
 <figure class="profile__img">
   <img alt="My smiling face" fetchPriority="high" loading="eager"
     src="https://images.ctfassets.net/cuehicrlqnvu/48OC0pyrFD6iWSokRiz3Zs/f9fb4d4df16062af7a4eb885b1abc08e/profile-big.jpg"
-    width="480" />
+    eleventy:widths="240,480" />
   <svg height="0" width="0" style="position: absolute">
     <defs>
       <clipPath id="blobby" clipPathUnits="objectBoundingBox">

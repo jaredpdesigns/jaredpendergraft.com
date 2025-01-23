@@ -18,16 +18,15 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["avif", "webp", "svg"],
-    sizes: "(min-width: 36em) 33.3vw, 100vw",
+    formats: ["avif", "webp"],
     widths: [320, 640],
     dryRun: true,
-    svgShortCircuit: true,
     htmlOptions: {
       imgAttributes: {
-        loading: "lazy",
         decoding: "async",
-        fetchPriority: "high"
+        fetchPriority: "high",
+        loading: "lazy",
+        sizes: "(min-width: 36em) 33.3vw, 100vw"
       }
     },
     urlFormat: ({ src, width, format }) =>
