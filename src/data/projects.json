@@ -156,17 +156,17 @@
     ]
   },
   {
-    "name": "Photos",
-    "description": "Photos from my trips around the world with my family.",
-    "img": "sides/photos.svg",
-    "external": "https://photos.jaredpendergraft.com/",
-    "type": "side"
-  },
-  {
     "name": "Pasta",
     "description": "Pasta provides a great starting place for web projects. It combines light styling for common web elements, yummy.",
     "img": "sides/pasta.svg",
     "external": "https://pasta.jaredpendergraft.com/",
+    "type": "side"
+  },
+  {
+    "name": "Photos",
+    "description": "Photos from my trips around the world with my family.",
+    "img": "sides/photos.svg",
+    "external": "https://photos.jaredpendergraft.com/",
     "type": "side"
   },
   {

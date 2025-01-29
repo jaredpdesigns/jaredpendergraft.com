@@ -15,13 +15,7 @@ I care deeply about how something works as much as its outward appearance and am
 
 </profile-wrap>
 
-> I’m currently serving as **Front End Engineer** at **Zillow** on the _Follow Up Boss_ team, building the best real estate CRM on the market. View [projects](/#projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
-
----
-
-## Projects
-
-<gallery webc:for="(project,index) of this.projects.filter(project => project.type === 'featured')" :project="project" webc:nokeep></gallery>
+> I’m currently serving as **Front End Engineer** at **Zillow** on the _Follow Up Boss_ team, building the best real estate CRM on the market. View [projects](/#side-projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 
 ---
 
