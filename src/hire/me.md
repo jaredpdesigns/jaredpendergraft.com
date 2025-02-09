@@ -51,9 +51,9 @@ _Bachelor of Arts in Graphic Design & Video Production_\
 
 ## Experience
 
-### Zillow\*
+### Zillow
 
-_Front End Engineer_\
+_Senior Software Development Engineer_\
 2022–Currently • Remote
 
 - Works on a variety of feature-level changes to our core product, working within small teams to ship quickly and maximize usability and engagement.
