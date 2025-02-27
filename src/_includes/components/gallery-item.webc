@@ -1,6 +1,6 @@
 <label class="gallery__item border__all color__bg--highlight--semi color__border--highlight--semi flow__grid radius__l"
   webc:for="(image, index) of images"
-  :style="`--color__highlight--semi: color-mix(in oklab, hsl(${color}) 25%, var(--color__set--contrast)); --color__highlight--mid: color-mix(in oklab, hsl(${color}) 50%, var(--color__set--contrast));`">
+  :style="`--color__highlight--semi: color-mix(in oklab, hsl(${color}) 25%, var(--color__contrast)); --color__highlight--mid: color-mix(in oklab, hsl(${color}) 50%, var(--color__contrast));`">
   <input :checked="index === 0 ? true:false" type="radio" :name="slug" />
   <span class="color__bg--highlight--semi padding__m radius__l">
     <img :alt="image.title" :src="image.img" class="radius__l width__full" />

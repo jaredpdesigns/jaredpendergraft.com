@@ -46,12 +46,12 @@
       z-index: 3;
 
       @supports (backdrop-filter: blur(32px)) {
-        background-color: color-mix(in srgb, var(--color__set--contrast), transparent 25%);
+        background-color: color-mix(in srgb, var(--color__contrast), transparent 25%);
         backdrop-filter: blur(32px);
       }
 
       @supports not (backdrop-filter: blur(32px)) {
-        background-color: color-mix(in srgb, var(--color__set--contrast), transparent 2%);
+        background-color: color-mix(in srgb, var(--color__contrast), transparent 2%);
         ;
       }
 
@@ -334,18 +334,18 @@
 @layer components {
   .gallery {
     --overlay:
-      color-mix(in srgb, var(--color__set--contrast), transparent 100%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 80%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 75%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 62.5%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 50%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 38%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 25%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 12%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 10%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 5%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 2%),
-      color-mix(in srgb, var(--color__set--contrast), transparent 0%);
+      color-mix(in srgb, var(--color__contrast), transparent 100%),
+      color-mix(in srgb, var(--color__contrast), transparent 80%),
+      color-mix(in srgb, var(--color__contrast), transparent 75%),
+      color-mix(in srgb, var(--color__contrast), transparent 62.5%),
+      color-mix(in srgb, var(--color__contrast), transparent 50%),
+      color-mix(in srgb, var(--color__contrast), transparent 38%),
+      color-mix(in srgb, var(--color__contrast), transparent 25%),
+      color-mix(in srgb, var(--color__contrast), transparent 12%),
+      color-mix(in srgb, var(--color__contrast), transparent 10%),
+      color-mix(in srgb, var(--color__contrast), transparent 5%),
+      color-mix(in srgb, var(--color__contrast), transparent 2%),
+      color-mix(in srgb, var(--color__contrast), transparent 0%);
     grid-template-columns: inherit;
     grid-column: 1/-1;
 
