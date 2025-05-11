@@ -339,8 +339,15 @@
       max-inline-size: var(--width__s);
     }
 
-    h3 {
-      margin-inline-start: -0.75ch;
+    h3 span {
+      &:before {
+        content: "“";
+        margin-inline-start: -0.75ch;
+      }
+
+      &:after {
+        content: "”";
+      }
     }
   }
 
