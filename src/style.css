@@ -101,6 +101,12 @@
             background-color: var(--color__highlight--ghost);
           }
         }
+
+        >section>section {
+          @media (min-width: 45rem) {
+            gap: var(--size__l);
+          }
+        }
       }
     }
 
@@ -332,6 +338,10 @@
     &__wrap {
       @container (min-width: 40rem) {
         grid-template-columns: var(--width__s) 1fr;
+
+        figcaption {
+          padding: var(--size__l);
+        }
       }
     }
 
