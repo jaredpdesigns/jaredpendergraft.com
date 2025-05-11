@@ -37,6 +37,7 @@
   <link rel="preconnect"
     webc:if="page.url.includes('interfaces') && page.url.split('/').filter(i => i).length === 2 ? true:false"
     href="https://unpkg.com/" />
+  <link rel="preconnect" webc:if="page.url.includes('albums')" href="https://is1-ssl.mzstatic.com" />
   <link webc:keep rel="preload" href="https://use.typekit.net/wqr8sqa.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'" rel="stylesheet">
   <noscript webc:keep>

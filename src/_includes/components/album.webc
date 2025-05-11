@@ -1,0 +1,70 @@
+<section class="album">
+  <figure class="album__wrap flow__grid flow__gap--l">
+    <img :alt="`Cover art for ${album.album} by ${album.artist}`" class="radius__s shadow" :src="album.cover" />
+    <figcaption>
+      <h3 class="color__type--base">
+        “<span @text="album.album"></span>”
+      </h3>
+      <p class="color__type--base--ish">
+        by <span @text="album.artist"></span>
+      </p>
+      <p class="margin__block--m">
+        <a :href="album.link" rel="noopener" target="_blank"
+          class="flow__inline flow__align--block-center flow__gap--s">Add to Your Library <icon name="external"
+            size="10" webc:nokeep>
+          </icon>
+        </a>
+      </p>
+    </figcaption>
+  </figure>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Find all images within album sections
+    const albumImages = document.querySelectorAll('.album img');
+
+    albumImages.forEach(img => {
+      // Store original shadow for later reset
+      let originalShadow;
+
+      // Set initial transform
+      img.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+      img.style.transformStyle = 'preserve-3d';
+      img.style.cursor = 'pointer';
+
+      // Track mouse position
+      img.addEventListener('mousemove', e => {
+        const rect = img.getBoundingClientRect();
+
+        // Calculate mouse position from -1 to 1
+        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+
+        // Store original shadow on first hover if not already stored
+        if (!originalShadow) {
+          // Get computed shadow
+          originalShadow = window.getComputedStyle(img).boxShadow;
+        }
+
+        // Apply transform directly
+        img.style.transform = `perspective(800px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg)`;
+
+        // Apply enhanced shadow - make it twice as pronounced
+        img.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.2)';
+      });
+
+      // Reset on mouse leave
+      img.addEventListener('mouseleave', () => {
+        img.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg)';
+
+        // Reset to original shadow
+        if (originalShadow) {
+          img.style.boxShadow = originalShadow;
+        } else {
+          img.style.boxShadow = '';
+        }
+      });
+    });
+  });
+</script>

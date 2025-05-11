@@ -325,6 +325,25 @@
 }
 
 @layer components {
+  .album {
+    container-type: inline-size;
+    text-decoration: none;
+
+    &__wrap {
+      @container (min-width: 40rem) {
+        grid-template-columns: var(--width__s) 1fr;
+      }
+    }
+
+    img {
+      max-inline-size: var(--width__s);
+    }
+
+    h3 {
+      margin-inline-start: -0.75ch;
+    }
+  }
+
   .gallery {
     --overlay:
       color-mix(in srgb, var(--color__contrast), transparent 100%),

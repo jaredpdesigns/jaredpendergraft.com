@@ -13,6 +13,7 @@ layout: root.webc
           <a class="radius__xs" href="/" :aria-current="page.url === '/' && 'page'">About</a>
           <a class="radius__xs" href="/interfaces/"
             :aria-current="page.url.includes('interfaces') && 'page'">Interfaces</a>
+          <a class="radius__xs" href="/albums/" :aria-current="page.url.includes('albums') && 'page'">Albums</a>
           <a class="radius__xs" href="/hire/"
             :aria-current="(page.url.includes('hire') || page.url.includes('clients')) && 'page'">Hire</a>
         </section>
