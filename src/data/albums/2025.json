@@ -3,150 +3,200 @@
     "album": "A Study of Losses",
     "artist": "Beirut",
     "link": "https://music.apple.com/us/album/a-study-of-losses/1781068670?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/68/f9/5d/68f95d84-e675-1179-9da9-1b070c733f36/50659.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/68/f9/5d/68f95d84-e675-1179-9da9-1b070c733f36/50659.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1781068670"
   },
   {
     "album": "If You Only Knew - EP",
     "artist": "Blackwater Holylight",
     "link": "https://music.apple.com/us/album/if-you-only-knew-ep/1789410468?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ad/82/4a/ad824aca-3f29-f6f1-a739-a007d8f2238e/51521.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ad/82/4a/ad824aca-3f29-f6f1-a739-a007d8f2238e/51521.jpg/640x640bb.jpg",
+    "genre": "Rock",
+    "itunesId": "1789410468"
   },
   {
     "album": "If You Asked For A Picture",
     "artist": "Blondshell",
     "link": "https://music.apple.com/us/album/if-you-asked-for-a-picture/1779137502?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2d/76/03/2d760366-f2e8-c487-f4df-08e9885c874c/0720841305408_Cover.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2d/76/03/2d760366-f2e8-c487-f4df-08e9885c874c/0720841305408_Cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1779137502"
   },
   {
     "album": "SABLE, fABLE",
     "artist": "Bon Iver",
     "link": "https://music.apple.com/us/album/sable-fable/1791161215?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/95/21/449521a9-3e07-9a15-02be-d1412884e240/51719.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/95/21/449521a9-3e07-9a15-02be-d1412884e240/51719.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1791161215"
   },
   {
     "album": "Honeybee",
     "artist": "BØRNS",
     "link": "https://music.apple.com/us/album/honeybee/1784096438?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/73/7f/e0/737fe041-980d-e9c4-c380-f08150eedfd4/artwork.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/73/7f/e0/737fe041-980d-e9c4-c380-f08150eedfd4/artwork.jpg/640x640bb.jpg",
+    "genre": "Pop",
+    "itunesId": "1784096438"
   },
   {
     "album": "The Scholars",
     "artist": "Car Seat Headrest",
     "link": "https://music.apple.com/us/album/the-scholars/1796212327?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/22/a4/d122a466-7ed1-2fcf-5a9c-6acfb5a3c0aa/191401213271.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/22/a4/d122a466-7ed1-2fcf-5a9c-6acfb5a3c0aa/191401213271.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1796212327"
   },
   {
     "album": "Dead Channel Sky",
     "artist": "clipping.",
     "link": "https://music.apple.com/us/album/dead-channel-sky/1776992430?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c4/b3/40/c4b340b8-2928-5792-c9ec-a1630446fe80/098787157567.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c4/b3/40/c4b340b8-2928-5792-c9ec-a1630446fe80/098787157567.png/640x640bb.jpg",
+    "genre": "Hip-Hop/Rap",
+    "itunesId": "1776992430"
   },
   {
     "album": "The Father of Make Believe",
     "artist": "Coheed and Cambria",
     "link": "https://music.apple.com/us/album/the-father-of-make-believe/1776734584?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d3/0f/8e/d30f8ee7-d4b3-8027-d9a3-b0b41a8ad85c/00198704213359_Cover.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d3/0f/8e/d30f8ee7-d4b3-8027-d9a3-b0b41a8ad85c/00198704213359_Cover.jpg/640x640bb.jpg",
+    "genre": "Hard Rock",
+    "itunesId": "1776734584"
   },
   {
     "album": "Lonely People With Power",
     "artist": "Deafheaven",
     "link": "https://music.apple.com/us/album/lonely-people-with-power/1792077173?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fc/82/6a/fc826a19-49f2-025e-ba21-43789ec44a8b/075679623966.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fc/82/6a/fc826a19-49f2-025e-ba21-43789ec44a8b/075679623966.jpg/640x640bb.jpg",
+    "genre": "Metal",
+    "itunesId": "1792077173"
   },
   {
     "album": "DÍA",
     "artist": "Ela Minus",
     "link": "https://music.apple.com/us/album/d%C3%ADa/1743438405?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/61/e8/ed/61e8ed84-89fa-eed0-8acd-7fd0349703b0/887828050468.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/61/e8/ed/61e8ed84-89fa-eed0-8acd-7fd0349703b0/887828050468.png/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": "1743438405"
   },
   {
     "album": "Lucius",
     "artist": "Lucius",
     "link": "https://music.apple.com/us/album/lucius/1790502494",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b5/5e/45/b55e456b-5a28-26db-0cdf-f6e83e19293f/24CRGIM46458.rgb.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b5/5e/45/b55e456b-5a28-26db-0cdf-f6e83e19293f/24CRGIM46458.rgb.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1790502494"
   },
   {
     "album": "Forever Is A Feeling",
     "artist": "Lucy Dacus",
     "link": "https://music.apple.com/us/album/forever-is-a-feeling/1787193107?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d6/05/38/d60538d1-a39e-cc54-f7db-a30645136486/24UM1IM40022.rgb.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d6/05/38/d60538d1-a39e-cc54-f7db-a30645136486/24UM1IM40022.rgb.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1787193107"
   },
   {
     "album": "Lucro sucio; Los ojos del vacio",
     "artist": "The Mars Volta",
     "link": "https://music.apple.com/us/album/lucro-sucio-los-ojos-del-vacio/1804740901?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/e0/df/56e0df15-91bb-f699-9f87-c4f225b25eb1/4250795609353.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/e0/df/56e0df15-91bb-f699-9f87-c4f225b25eb1/4250795609353.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1804740901"
   },
   {
     "album": "The Bad Fire",
     "artist": "Mogwai",
     "link": "https://music.apple.com/us/album/the-bad-fire/1772756309?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/5b/97/865b9728-82db-87f8-8354-f18ed8b5b03e/48966.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/86/5b/97/865b9728-82db-87f8-8354-f18ed8b5b03e/48966.jpg/640x640bb.jpg",
+    "genre": "Indie Rock",
+    "itunesId": "1772756309"
   },
   {
     "album": "Sinister Grift",
     "artist": "Panda Bear",
     "link": "https://music.apple.com/us/album/sinister-grift/1761198973?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/73/9d/ea/739dea25-6e3b-743e-fea3-605899b21ed3/887828053360.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/73/9d/ea/739dea25-6e3b-743e-fea3-605899b21ed3/887828053360.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1761198973"
   },
   {
     "album": "Glory",
     "artist": "Perfume Genius",
     "link": "https://music.apple.com/us/album/glory/1786362148?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/82/d5/2b82d50c-e3c2-3881-260c-8e94f36d6ef6/191401210577.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/82/d5/2b82d50c-e3c2-3881-260c-8e94f36d6ef6/191401210577.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1786362148"
   },
   {
     "album": "True Electric",
     "artist": "Röyksopp",
     "link": "https://music.apple.com/us/album/true-electric/1793126735?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c1/a2/2a/c1a22a4d-716d-3746-6826-e1f8be37b8ff/5061041450624_cover.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c1/a2/2a/c1a22a4d-716d-3746-6826-e1f8be37b8ff/5061041450624_cover.jpg/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": "1793126735"
   },
   {
     "album": "SAGES - Single",
     "artist": "SAGES, Ólafur Arnalds & Loreen",
     "link": "https://music.apple.com/us/album/sages-single/1797071398?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/98/b2/07/98b20736-2628-1708-bfea-5d50c9fe30c4/25UMGIM41269.rgb.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/98/b2/07/98b20736-2628-1708-bfea-5d50c9fe30c4/25UMGIM41269.rgb.jpg/640x640bb.jpg",
+    "genre": "Pop",
+    "itunesId": "1797071398"
   },
   {
     "album": "Saint Motel & the Symphony in the Sky",
     "artist": "Saint Motel",
     "link": "https://music.apple.com/us/album/saint-motel-the-symphony-in-the-sky/1790744905?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/72/4c/53/724c539e-1b29-5f54-39bb-2aa0a56f9bfa/075679627452.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/72/4c/53/724c539e-1b29-5f54-39bb-2aa0a56f9bfa/075679627452.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1790744905"
   },
   {
     "album": "Bunky Becky Birthday Boy",
     "artist": "Sleigh Bells",
     "link": "https://music.apple.com/us/album/bunky-becky-birthday-boy/1795574689?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/39/d9/1d39d978-a442-e1a4-6bcf-f39d015c0321/810090096476.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/39/d9/1d39d978-a442-e1a4-6bcf-f39d015c0321/810090096476.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1795574689"
   },
   {
     "album": "Face Down in the Garden",
     "artist": "Tennis",
     "link": "https://music.apple.com/us/album/face-down-in-the-garden/1806382614?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/01/af/ce/01afce8d-1eef-af4e-450e-059da8ab9614/198715254341.png/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/01/af/ce/01afce8d-1eef-af4e-450e-059da8ab9614/198715254341.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": "1806382614"
   },
   {
     "album": "The Place After This One",
     "artist": "Underoath",
     "link": "https://music.apple.com/us/album/the-place-after-this-one/1789174149?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/46/37/7846379b-ed27-98b5-eafb-67668a639ab6/25950.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/46/37/7846379b-ed27-98b5-eafb-67668a639ab6/25950.jpg/640x640bb.jpg",
+    "genre": "Metal",
+    "itunesId": "1789174149"
   },
   {
     "album": "Under A Familiar Sun",
     "artist": "The Vernon Spring",
     "link": "https://music.apple.com/us/album/under-a-familiar-sun/1784561111?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/c2/d4/2bc2d442-83c1-a5fc-9752-d04609f1fadc/50899.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/c2/d4/2bc2d442-83c1-a5fc-9752-d04609f1fadc/50899.jpg/640x640bb.jpg",
+    "genre": "Jazz",
+    "itunesId": "1784561111"
   },
   {
     "album": "Hurry Up Tomorrow",
     "artist": "The Weeknd",
     "link": "https://music.apple.com/us/album/hurry-up-tomorrow/1793654348",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3d/0d/06/3d0d06e6-cfd4-8f69-4a42-52b7cf33fb24/25UMGIM09490.rgb.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3d/0d/06/3d0d06e6-cfd4-8f69-4a42-52b7cf33fb24/25UMGIM09490.rgb.jpg/640x640bb.jpg",
+    "genre": "R&B/Soul",
+    "itunesId": "1793654348"
   },
   {
     "album": "Two Lives",
     "artist": "Wet",
     "link": "https://music.apple.com/us/album/two-lives/1799070988?uo=4",
-    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/1d/1d/e51d1d30-7f83-3f80-39fa-88ae04722d3f/889845965800.jpg/640x640bb.jpg"
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/1d/1d/e51d1d30-7f83-3f80-39fa-88ae04722d3f/889845965800.jpg/640x640bb.jpg",
+    "genre": "Indie Pop",
+    "itunesId": "1799070988"
   }
 ]

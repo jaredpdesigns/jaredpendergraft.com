@@ -359,6 +359,10 @@
         content: "”";
       }
     }
+
+    .genre {
+      margin-inline-start: calc(var(--size__s) * -1);
+    }
   }
 
   .gallery {

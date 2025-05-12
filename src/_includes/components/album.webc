@@ -8,6 +8,11 @@
       <p class="color__type--base--ish">
         by <span @text="album.artist"></span>
       </p>
+      <p>
+        <span
+          class="genre color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
+          @text="album.genre"></span>
+      </p>
       <p class="margin__block--m">
         <a :href="album.link" rel="noopener" target="_blank"
           class="flow__inline flow__align--block-center flow__gap--s">Add to Your Library <icon name="external"

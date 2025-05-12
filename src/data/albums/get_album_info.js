@@ -11,14 +11,14 @@ const __dirname = path.dirname(__filename);
 
 // Directory constants
 const INPUT_DIR = path.join(__dirname, "_input");
-const OUTPUT_DIR = path.join(__dirname); // Changed from "_output" to use root albums directory
+const OUTPUT_DIR = path.join(__dirname);
 
 // Configuration
 const CONFIG = {
-  ENFORCE_TARGET_YEAR: false, // Set to true to only accept albums released in the target year
-  INTERACTIVE_MODE: true, // Set to false to disable all interactive prompts
+  ENFORCE_TARGET_YEAR: false,
+  INTERACTIVE_MODE: true,
   COUNTRY: "US",
-  SEARCH_LIMIT: 10 // Increased from 5 to 10 for better chances of finding correct matches
+  SEARCH_LIMIT: 10
 };
 
 // Variables
@@ -110,13 +110,52 @@ function sleep(ms) {
 }
 
 /**
+ * Normalize text for comparison
+ * @param {string} text - Text to normalize
+ * @returns {string} - Normalized text
+ */
+const normalizeText = (text) => {
+  if (!text) return "";
+  return text
+    .toLowerCase()
+    .replace(/[''']/g, "'") // normalize apostrophes
+    .replace(/[&]/g, "and") // normalize ampersands
+    .replace(/[^a-zA-Z0-9' ]/g, "") // remove all other special chars
+    .replace(/\s+/g, " ") // normalize spaces
+    .trim();
+};
+
+// Use this for iTunes API search queries
+const normalizeForSearch = (text) => {
+  if (!text) return "";
+  return text
+    .replace(/[''']/g, "'")
+    .replace(/[&]/g, "and")
+    .replace(/[^a-zA-Z0-9'\s]/g, "") // Only allow letters, numbers, apostrophes and spaces
+    .trim()
+    .replace(/\s+/g, "+"); // Replace spaces with + for API
+};
+
+/**
  * Process a single album file
  * @param {string} inputFilePath - Path to the input file
  * @returns {Promise<boolean>} - Success status
  */
 async function processAlbumFile(inputFilePath) {
-  // Output file will have same name in the root albums directory
   const outputFilename = path.join(OUTPUT_DIR, path.basename(inputFilePath));
+
+  // Load existing data if the output file already exists
+  let existingData = [];
+  if (fs.existsSync(outputFilename)) {
+    try {
+      const existingFileContent = fs.readFileSync(outputFilename, "utf8");
+      existingData = JSON.parse(existingFileContent);
+    } catch (error) {
+      console.error(
+        `Error reading existing file '${outputFilename}': ${error.message}`
+      );
+    }
+  }
 
   // Extract year from filename (e.g., "2024.json" -> "2024")
   const filenameYear = path.basename(inputFilePath, ".json");
@@ -132,7 +171,6 @@ async function processAlbumFile(inputFilePath) {
     console.log(`Processing albums from year: ${year}`);
   }
 
-  // Load album list
   const albumList = loadAlbumListFromFile(inputFilePath);
   if (!albumList) return false;
 
@@ -142,8 +180,14 @@ async function processAlbumFile(inputFilePath) {
     } albums...`
   );
 
-  const allAlbumData = [];
+  const allAlbumData = [...existingData];
   const baseUrl = "https://itunes.apple.com/search";
+
+  const isCompleteEntry = (entry) => {
+    return (
+      entry.album && entry.artist && entry.link && entry.cover && entry.genre
+    );
+  };
 
   for (let i = 0; i < albumList.length; i++) {
     const item = albumList[i];
@@ -151,391 +195,202 @@ async function processAlbumFile(inputFilePath) {
     const artistNameQuery = item.artist;
     let processedSuccessfully = false;
 
-    try {
-      // Build request URL with query parameters
-      const queryParams = new URLSearchParams({
-        term: `${artistNameQuery} ${albumTitleQuery}`,
-        media: "music",
-        entity: "album",
-        country: CONFIG.COUNTRY,
-        limit: CONFIG.SEARCH_LIMIT.toString()
+    // Extract iTunes ID from link if it exists in input
+    let inputItunesId;
+    if (item.link) {
+      const match = item.link.match(/\/album\/[^/]+\/(\d+)\?/);
+      if (match && match[1]) {
+        inputItunesId = match[1];
+      }
+    }
+
+    // First check if we already have this album by iTunes ID
+    const existingEntryById =
+      inputItunesId &&
+      allAlbumData.find((entry) => entry.itunesId === inputItunesId);
+
+    // If no ID match, try text matching as fallback
+    const existingEntryByText =
+      !existingEntryById &&
+      allAlbumData.find((entry) => {
+        const normalizedEntry = {
+          album: normalizeText(entry.album),
+          artist: normalizeText(entry.artist)
+        };
+        const normalizedQuery = {
+          album: normalizeText(albumTitleQuery),
+          artist: normalizeText(artistNameQuery)
+        };
+        return (
+          normalizedEntry.album === normalizedQuery.album &&
+          normalizedEntry.artist === normalizedQuery.artist
+        );
       });
 
-      // Separate artist-only search if the first one fails
-      let shouldTryArtistOnlySearch = true;
+    // If we found a match either way, skip this entry
+    if (existingEntryById || existingEntryByText) {
+      const matchType = existingEntryById ? "iTunes ID" : "text matching";
+      console.log(
+        `  Skipping existing entry for "${albumTitleQuery}" by "${artistNameQuery}" (matched by ${matchType})`
+      );
+      processedSuccessfully = true;
+      continue;
+    }
 
-      // Make the API request using native fetch
-      const response = await fetch(baseUrl + "?" + queryParams.toString());
+    try {
+      // First try searching for artist only to avoid issues with special characters
+      const searchTerm = encodeURIComponent(
+        normalizeForSearch(artistNameQuery)
+      );
+      const searchUrl = `${baseUrl}?term=${searchTerm}&media=music&entity=album,song&country=${CONFIG.COUNTRY}&limit=${CONFIG.SEARCH_LIMIT}`;
+
+      // Log the search URL for debugging
+      console.log(`  Searching iTunes API: ${searchUrl}`);
+
+      const response = await fetch(searchUrl);
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
       const data = await response.json();
-
       let foundAlbum = null;
+      let foundGenre = null;
 
       if (data.resultCount > 0) {
-        // Debug log for first album to help diagnose the issue
-        if (i === 0) {
-          console.log(
-            `\n  Debug: Found ${data.resultCount} raw results for the first album.`
-          );
-          console.log(`  Query: "${artistNameQuery} ${albumTitleQuery}"`);
-        }
-
-        // Search for the best match
-        const candidates = [];
-
-        for (const result of data.results) {
+        const candidates = data.results.map((result) => {
           const apiArtistName = (result.artistName || "").toLowerCase();
-          const apiAlbumName = (result.collectionName || "").toLowerCase();
-          const queryArtistLower = artistNameQuery.toLowerCase();
-          const queryAlbumLower = albumTitleQuery.toLowerCase();
+          const apiAlbumName = (
+            result.collectionName ||
+            result.trackName ||
+            ""
+          ).toLowerCase();
           const releaseDate = result.releaseDate
             ? new Date(result.releaseDate)
             : null;
+          const releaseDateStr = releaseDate
+            ? releaseDate.toISOString().split("T")[0]
+            : "unknown";
+          const releaseYear = releaseDate
+            ? releaseDate.getFullYear()
+            : "unknown";
           const isTargetYearRelease =
             releaseDate && year
               ? releaseDate.getFullYear().toString() === year
               : false;
 
-          // Calculate a match score
           let matchScore = 0;
-
-          // Exact artist match
-          if (apiArtistName === queryArtistLower) {
+          if (apiArtistName === artistNameQuery.toLowerCase())
             matchScore += 100;
-          } else if (apiArtistName.includes(queryArtistLower)) {
-            matchScore += 50;
-          } else if (queryArtistLower.includes(apiArtistName)) {
-            matchScore += 30; // Added case where query contains the API artist name
-          }
+          if (apiAlbumName === albumTitleQuery.toLowerCase()) matchScore += 100;
+          if (isTargetYearRelease) matchScore += 75;
 
-          // Exact album match
-          if (apiAlbumName === queryAlbumLower) {
-            matchScore += 100;
-          } else if (apiAlbumName.includes(queryAlbumLower)) {
-            matchScore += 50;
-          } else if (queryAlbumLower.includes(apiAlbumName)) {
-            matchScore += 30; // Added case where query contains the API album name
-          }
-
-          // Bonus for matching year release
-          if (isTargetYearRelease) {
-            matchScore += 75;
-          }
-
-          candidates.push({
-            result,
-            matchScore,
-            isTargetYearRelease
-          });
-        }
-
-        // Sort by match score (highest first)
-        candidates.sort((a, b) => b.matchScore - a.matchScore);
-
-        // Interactive mode - determine if we should ask the user
-        if (candidates.length > 0) {
-          // Check if top match has a low score (less than 100) or if we have multiple good matches
-          const bestMatch = candidates[0];
-          const shouldPromptUser =
-            CONFIG.INTERACTIVE_MODE &&
-            (bestMatch.matchScore < 75 || // Reduced from 100 to 75 for more tolerance
-              (candidates.length > 1 && candidates[1].matchScore > 75)); // Multiple good matches
-
-          if (shouldPromptUser) {
-            console.log(
-              `\n  Found ${candidates.length} potential matches for '${albumTitleQuery}' by '${artistNameQuery}':`
-            );
-
-            // Show top 3 matches
-            const showCount = Math.min(3, candidates.length);
-            for (let j = 0; j < showCount; j++) {
-              const candidate = candidates[j];
-              const releaseDateStr = candidate.result.releaseDate
-                ? new Date(candidate.result.releaseDate)
-                    .toISOString()
-                    .split("T")[0]
-                : "unknown";
-              console.log(
-                `    ${j + 1}. '${candidate.result.collectionName}' by '${
-                  candidate.result.artistName
-                }' (${releaseDateStr})`
-              );
-            }
-
-            // Ask user to choose
-            const choice = await askQuestion(
-              "  Select the correct album (1-" +
-                showCount +
-                "), or 'n' for none of these: "
-            );
-
-            if (choice.toLowerCase() === "n") {
-              // User rejected all suggestions
-              console.log("  All suggestions rejected.");
-
-              // Ask if user wants to enter details manually
-              const manualEntry = await askQuestion(
-                "  Would you like to enter album details manually? (y/n): "
-              );
-
-              if (manualEntry.toLowerCase() === "y") {
-                // Allow manual entry
-                const manualArtist = await askQuestion(
-                  "  Enter correct artist name: "
-                );
-                const manualAlbum = await askQuestion(
-                  "  Enter correct album title: "
-                );
-                const manualLink = await askQuestion(
-                  "  Enter Apple Music link (or press Enter to skip): "
-                );
-                const manualCover = await askQuestion(
-                  "  Enter album cover URL (or press Enter to skip): "
-                );
-
-                if (manualArtist && manualAlbum) {
-                  allAlbumData.push({
-                    album: manualAlbum,
-                    artist: manualArtist,
-                    link: manualLink || "",
-                    cover: manualCover || ""
-                  });
-                  processedSuccessfully = true;
-                  console.log("  Manual entry added successfully.");
-                }
-              }
-
-              continue;
-            } else {
-              // Parse user choice
-              const selectedIndex = parseInt(choice, 10) - 1;
-              if (selectedIndex >= 0 && selectedIndex < showCount) {
-                foundAlbum = candidates[selectedIndex].result;
-              } else {
-                // Default to best match if invalid choice
-                foundAlbum = bestMatch.result;
-              }
-            }
-          } else {
-            // Confidence is high enough, use best match
-            foundAlbum = bestMatch.result;
-          }
-        }
-      }
-
-      // If no matches found, try artist-only search as fallback
-      if (!foundAlbum && shouldTryArtistOnlySearch) {
-        console.log(
-          `\n  Trying artist-only search for '${artistNameQuery}'...`
-        );
-
-        const artistOnlyParams = new URLSearchParams({
-          term: artistNameQuery,
-          media: "music",
-          entity: "album",
-          country: CONFIG.COUNTRY,
-          limit: CONFIG.SEARCH_LIMIT.toString()
+          return { result, matchScore, releaseDateStr, releaseYear };
         });
 
-        const artistOnlyUrl = `${baseUrl}?${artistOnlyParams.toString()}`;
-        const artistOnlyResponse = await fetch(artistOnlyUrl);
+        candidates.sort((a, b) => b.matchScore - a.matchScore);
 
-        if (artistOnlyResponse.ok) {
-          const artistData = await artistOnlyResponse.json();
+        // Try to find an exact match first
+        foundAlbum =
+          candidates.find(
+            (c) =>
+              c.result.artistName.toLowerCase() ===
+                artistNameQuery.toLowerCase() &&
+              (c.result.collectionName?.toLowerCase() ===
+                albumTitleQuery.toLowerCase() ||
+                c.result.trackName?.toLowerCase() ===
+                  albumTitleQuery.toLowerCase())
+          )?.result || candidates[0]?.result;
 
-          if (artistData.resultCount > 0) {
-            console.log(
-              `  Found ${artistData.resultCount} albums by '${artistNameQuery}'.`
-            );
-
-            // Now search for album title match
-            for (const result of artistData.results) {
-              const apiAlbumName = (result.collectionName || "").toLowerCase();
-              const queryAlbumLower = albumTitleQuery.toLowerCase();
-
-              if (
-                apiAlbumName.includes(queryAlbumLower) ||
-                queryAlbumLower.includes(apiAlbumName) ||
-                apiAlbumName
-                  .replace(/[^\w\s]/g, "")
-                  .includes(queryAlbumLower.replace(/[^\w\s]/g, ""))
-              ) {
-                foundAlbum = result;
-                console.log(
-                  `  Found match: '${result.collectionName}' by '${result.artistName}'`
-                );
-                break;
-              }
-            }
-          }
+        if (foundAlbum) {
+          // Try to get genre from various fields
+          foundGenre =
+            foundAlbum.primaryGenreName ||
+            candidates.find((c) => c.result.primaryGenreName)?.result
+              .primaryGenreName;
         }
-
-        // Add a delay to avoid rate limiting
-        await sleep(1000);
-      }
-
-      // If no matches found, ask user if they want to enter details manually
-      if (!foundAlbum) {
-        console.log(
-          `\n  No matches found for '${albumTitleQuery}' by '${artistNameQuery}'.`
-        );
-
-        // Debug output to help diagnose the issue
-        if (i === 0 && data.resultCount > 0) {
-          console.log(
-            `  Debug: Found ${data.resultCount} results, but none matched our criteria.`
-          );
-          console.log(`  Showing first result details for debugging:`);
-          if (data.results[0]) {
-            console.log(`    - Artist: ${data.results[0].artistName}`);
-            console.log(`    - Album: ${data.results[0].collectionName}`);
-            console.log(
-              `    - Release Date: ${data.results[0].releaseDate || "unknown"}`
-            );
-          }
-        }
-
-        // Ask if user wants to enter details manually
-        if (CONFIG.INTERACTIVE_MODE) {
-          const manualEntry = await askQuestion(
-            "  Would you like to enter album details manually? (y/n): "
-          );
-
-          if (manualEntry.toLowerCase() === "y") {
-            // Allow manual entry
-            const manualArtist = await askQuestion(
-              "  Enter correct artist name: "
-            );
-            const manualAlbum = await askQuestion(
-              "  Enter correct album title: "
-            );
-            const manualLink = await askQuestion(
-              "  Enter Apple Music link (or press Enter to skip): "
-            );
-            const manualCover = await askQuestion(
-              "  Enter album cover URL (or press Enter to skip): "
-            );
-
-            if (manualArtist && manualAlbum) {
-              allAlbumData.push({
-                album: manualAlbum,
-                artist: manualArtist,
-                link: manualLink || "",
-                cover: manualCover || ""
-              });
-              processedSuccessfully = true;
-              console.log("  Manual entry added successfully.");
-            }
-          }
-        }
-
-        continue;
-      }
-
-      if (foundAlbum) {
-        const title = foundAlbum.collectionName;
-        const artist = foundAlbum.artistName;
-        const appleMusicLink = foundAlbum.collectionViewUrl;
-        let artworkUrl = null;
-
-        // Extract release date information
-        const releaseDate = foundAlbum.releaseDate
-          ? new Date(foundAlbum.releaseDate)
-          : null;
-        const releaseDateStr = releaseDate
-          ? releaseDate.toISOString().split("T")[0]
-          : "unknown";
-        const releaseYear = releaseDate
-          ? releaseDate.getFullYear().toString()
-          : "unknown";
 
         // Log detailed match information
         console.log(
           `  Match details for '${albumTitleQuery}' by '${artistNameQuery}':`
         );
-        console.log(`    → Found: '${title}' by '${artist}'`);
-        console.log(`    → Release date: ${releaseDateStr} (${releaseYear})`);
+        console.log(
+          `    → Found: '${
+            foundAlbum.collectionName || foundAlbum.trackName
+          }' by '${foundAlbum.artistName}'`
+        );
+        console.log(
+          `    → Release date: ${candidates[0].releaseDateStr} (${candidates[0].releaseYear})`
+        );
+        console.log(
+          `    → Genre: ${foundAlbum.primaryGenreName || "Alternative"}`
+        );
 
-        // Check if we should enforce the target year
-        if (CONFIG.ENFORCE_TARGET_YEAR && year && releaseYear !== year) {
-          console.log(
-            `    → Skipping: Release year ${releaseYear} doesn't match target year ${year}`
-          );
-          continue;
-        }
+        // If we still don't have a genre, try searching by artist only
+        if (!foundGenre && foundAlbum) {
+          const artistParams = new URLSearchParams({
+            term: encodeURIComponent(normalizeForSearch(artistNameQuery)),
+            media: "music",
+            entity: "musicArtist,song",
+            attribute: "artistTerm",
+            country: CONFIG.COUNTRY,
+            limit: "1"
+          });
 
-        // Ask for confirmation if the album title or artist differs significantly
-        if (
-          CONFIG.INTERACTIVE_MODE &&
-          (title.toLowerCase() !== albumTitleQuery.toLowerCase() ||
-            artist.toLowerCase() !== artistNameQuery.toLowerCase())
-        ) {
-          const confirm = await askQuestion(
-            "  Is this the correct album? (y/n, default=y): "
-          );
-          if (confirm.toLowerCase() === "n") {
-            // User rejected the match, ask if they want to enter details manually
-            const manualEntry = await askQuestion(
-              "  Would you like to enter album details manually? (y/n): "
-            );
+          // Log the artist search URL for debugging
+          const artistSearchUrl = `${baseUrl}?${artistParams.toString()}`;
+          console.log(`  Searching iTunes API for artist: ${artistSearchUrl}`);
 
-            if (manualEntry.toLowerCase() === "y") {
-              // Allow manual entry
-              const manualArtist = await askQuestion(
-                "  Enter correct artist name: "
-              );
-              const manualAlbum = await askQuestion(
-                "  Enter correct album title: "
-              );
-              const manualLink = await askQuestion(
-                "  Enter Apple Music link (or press Enter to skip): "
-              );
-              const manualCover = await askQuestion(
-                "  Enter album cover URL (or press Enter to skip): "
-              );
-
-              if (manualArtist && manualAlbum) {
-                allAlbumData.push({
-                  album: manualAlbum,
-                  artist: manualArtist,
-                  link: manualLink || "",
-                  cover: manualCover || ""
-                });
-                processedSuccessfully = true;
-                console.log("  Manual entry added successfully.");
-              }
+          const artistResponse = await fetch(artistSearchUrl);
+          if (artistResponse.ok) {
+            const artistData = await artistResponse.json();
+            if (artistData.resultCount > 0) {
+              foundGenre = artistData.results[0].primaryGenreName;
             }
-
-            continue;
           }
+          await sleep(1000); // Add delay for the additional API call
         }
+      }
 
-        if (foundAlbum.artworkUrl600) {
-          artworkUrl = foundAlbum.artworkUrl600;
-        } else if (foundAlbum.artworkUrl100) {
-          artworkUrl = foundAlbum.artworkUrl100;
-          // Try to get 640x640 from 100x100
+      if (foundAlbum) {
+        const title = foundAlbum.collectionName || foundAlbum.trackName;
+        const artist = foundAlbum.artistName;
+        const appleMusicLink = foundAlbum.collectionViewUrl;
+        let artworkUrl = foundAlbum.artworkUrl600 || foundAlbum.artworkUrl100;
+
+        if (artworkUrl) {
           artworkUrl = artworkUrl
             .replace("100x100bb.jpg", "640x640bb.jpg")
             .replace("100x100bb", "640x640bb");
         }
 
         if (title && artist && appleMusicLink && artworkUrl) {
-          allAlbumData.push({
+          const albumEntry = {
             album: title,
             artist: artist,
             link: appleMusicLink,
-            cover: artworkUrl
-          });
+            cover: artworkUrl,
+            itunesId: foundAlbum.collectionId
+          };
+
+          // If iTunes provides a genre, use it directly
+          if (foundAlbum.primaryGenreName) {
+            albumEntry.genre = foundAlbum.primaryGenreName;
+          } else {
+            // Only prompt for genre if iTunes doesn't provide one
+            const manualGenre = await askQuestion(
+              "  No genre found. Enter genre (press Enter to skip): "
+            );
+            if (manualGenre) {
+              albumEntry.genre = manualGenre;
+            }
+          }
+
+          allAlbumData.push(albumEntry);
           processedSuccessfully = true;
         }
       }
     } catch (error) {
-      // Error will be reported in the finally block
       console.error(`  Error processing album: ${error.message}`);
     } finally {
       if (processedSuccessfully) {
@@ -550,33 +405,62 @@ async function processAlbumFile(inputFilePath) {
             albumList.length
           } ('${albumTitleQuery}') not processed fully or encountered an error.`
         );
+
+        const manualEntry = await askQuestion(
+          "  Would you like to manually enter album details? (y/n): "
+        );
+        if (manualEntry.toLowerCase() === "y") {
+          // Allow manual entry
+          const manualArtist = await askQuestion(
+            "  Enter correct artist name: "
+          );
+          const manualAlbum = await askQuestion(
+            "  Enter correct album title: "
+          );
+          const manualLink = await askQuestion(
+            "  Enter Apple Music link (or press Enter to skip): "
+          );
+          const manualCover = await askQuestion(
+            "  Enter album cover URL (or press Enter to skip): "
+          );
+          const manualGenre = await askQuestion(
+            "  Enter genre (or press Enter to skip): "
+          );
+
+          if (manualArtist && manualAlbum) {
+            const albumEntry = {
+              album: manualAlbum,
+              artist: manualArtist,
+              link: manualLink || "",
+              cover: manualCover || ""
+            };
+            if (manualGenre) {
+              albumEntry.genre = manualGenre;
+            }
+            allAlbumData.push(albumEntry);
+            processedSuccessfully = true;
+            console.log("  Manual entry added successfully.");
+          }
+        }
       }
+
+      await sleep(1000);
     }
 
-    // Add a delay to avoid rate limiting
-    await sleep(1000);
-  }
-
-  if (allAlbumData.length > 0) {
+    // Always write the file as we might have cleaned up unknown genres
     fs.writeFileSync(
       outputFilename,
       JSON.stringify(allAlbumData, null, 4),
       "utf8"
     );
-    console.log(
-      `Processing complete for ${path.basename(inputFilePath)}. ${
-        allAlbumData.length
-      } albums saved to ${outputFilename}`
-    );
-    return true;
-  } else {
-    console.log(
-      `No album data was processed successfully from ${path.basename(
-        inputFilePath
-      )}.`
-    );
-    return false;
   }
+
+  console.log(
+    `Processing complete for ${path.basename(
+      inputFilePath
+    )}. File updated with cleaned genres.`
+  );
+  return true;
 }
 
 /**

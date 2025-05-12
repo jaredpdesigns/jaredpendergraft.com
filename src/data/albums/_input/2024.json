@@ -1,32 +1,98 @@
 [
-  { "album": "Five Dice, All Threes", "artist": "Bright Eyes" },
-  { "album": "Honey", "artist": "Caribou" },
-  { "album": "Songs of a Lost World", "artist": "The Cure" },
   {
-    "album": "As it Ever Was, So It Will Be Again",
+    "album": "Five Dice, All Threes",
+    "artist": "Bright Eyes"
+  },
+  {
+    "album": "Honey",
+    "artist": "Caribou"
+  },
+  {
+    "album": "Songs of a Lost World",
+    "artist": "The Cure"
+  },
+  {
+    "album": "As It Ever Was, So It Will Be Again",
     "artist": "The Decemberists"
   },
-  { "album": "Mahashmashana", "artist": "Father John Misty" },
-  { "album": "Romance", "artist": "Fontaines D.C." },
-  { "album": "Foxing", "artist": "Foxing" },
-  { "album": "ten days", "artist": "Fred again.." },
-  { "album": "People Who Aren't There Anymore", "artist": "Future Islands" },
-  { "album": "I Love You So F***ing Much", "artist": "Glass Animals" },
-  { "album": "TANGK", "artist": "IDLES" },
-  { "album": "In Waves", "artist": "Jamie xx" },
-  { "album": "Harmonics", "artist": "Joe Goddard" },
-  { "album": "Hyperdrama", "artist": "Justice" },
+  {
+    "album": "Mahashmashana",
+    "artist": "Father John Misty"
+  },
+  {
+    "album": "Romance",
+    "artist": "Fontaines D.C."
+  },
+  {
+    "album": "Foxing",
+    "artist": "Foxing"
+  },
+  {
+    "album": "ten days",
+    "artist": "Fred again.."
+  },
+  {
+    "album": "People Who Aren't There Anymore",
+    "artist": "Future Islands"
+  },
+  {
+    "album": "I Love You So F***ing Much",
+    "artist": "Glass Animals"
+  },
+  {
+    "album": "TANGK",
+    "artist": "IDLES"
+  },
+  {
+    "album": "In Waves",
+    "artist": "Jamie xx"
+  },
+  {
+    "album": "Harmonics",
+    "artist": "Joe Goddard"
+  },
+  {
+    "album": "Hyperdrama",
+    "artist": "Justice"
+  },
   {
     "album": "Time Will Wait for No One But I'll Wait for You",
     "artist": "Local Natives"
   },
-  { "album": "Fantasy", "artist": "M83" },
-  { "album": "Imaginal Disk", "artist": "Magdalena Bay" },
-  { "album": "Night Palace", "artist": "Mount Eerie" },
-  { "album": "The Last Goodbye Tour Live", "artist": "ODEZA" },
-  { "album": "Letter to Self", "artist": "SPRINTS" },
-  { "album": "All Born Screaming", "artist": "St. Vincent" },
-  { "album": "Spiral In a Straight Line", "artist": "Touché Amoré" },
-  { "album": "Only God Was Above Us", "artist": "Vampire Weekend" },
-  { "album": "Model", "artist": "Wallows" }
+  {
+    "album": "Fantasy",
+    "artist": "M83"
+  },
+  {
+    "album": "Imaginal Disk",
+    "artist": "Magdalena Bay"
+  },
+  {
+    "album": "Night Palace",
+    "artist": "Mount Eerie"
+  },
+  {
+    "album": "The Last Goodbye Tour Live",
+    "artist": "ODESZA"
+  },
+  {
+    "album": "Letter to Self",
+    "artist": "SPRINTS"
+  },
+  {
+    "album": "All Born Screaming",
+    "artist": "St. Vincent"
+  },
+  {
+    "album": "Spiral in a Straight Line",
+    "artist": "Touché Amoré"
+  },
+  {
+    "album": "Only God Was Above Us",
+    "artist": "Vampire Weekend"
+  },
+  {
+    "album": "Model",
+    "artist": "Wallows"
+  }
 ]
