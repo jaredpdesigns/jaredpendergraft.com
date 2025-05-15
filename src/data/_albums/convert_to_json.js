@@ -4,33 +4,78 @@ import fs from "fs";
 import path from "path";
 import readline from "readline";
 import { fileURLToPath } from "url";
+import config from "./config.js";
 
 // Create __dirname equivalent in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Directory constants
-const INPUT_DIR = path.join(__dirname, "_input");
-const ARTIST_WHITELIST_FILE = path.join(__dirname, "artist_whitelist.json");
+// Parse command line arguments
+function parseArgs() {
+  const args = process.argv.slice(2);
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+
+    if (arg === "--file" || arg === "-f") {
+      if (i + 1 < args.length) {
+        return {
+          mode: "file",
+          filePath: args[i + 1]
+        };
+      }
+    } else if (arg === "--no-skip-duplicates") {
+      config.SKIP_DUPLICATES = false;
+    } else if (arg === "--non-interactive" || arg === "-n") {
+      config.CHECK_INTERACTIVE = false;
+    } else if (arg === "--help" || arg === "-h") {
+      showHelp();
+      process.exit(0);
+    }
+  }
+
+  return { mode: "interactive" };
+}
+
+// Show help information
+function showHelp() {
+  console.log(`
+Convert Apple Music playlist text to JSON format
+
+Usage:
+  node convert_to_json.js [options]
+
+Options:
+  --file, -f <path>       Read input from file instead of interactive mode
+  --no-skip-duplicates    Don't skip entries that already exist in output files
+  --non-interactive, -n   Don't interactively confirm uncertain parsing
+  --help, -h              Show this help message
+
+Examples:
+  node convert_to_json.js                     # Interactive mode
+  node convert_to_json.js -f input.txt        # Process from file
+  node convert_to_json.js -f input.txt -n     # Process file non-interactively
+  `);
+}
 
 // Variables
 let rl;
 let artistWhitelist = {};
+let existingEntries = [];
 
 /**
  * Initialize the script
  */
 function initialize() {
   // Create input directory if it doesn't exist
-  if (!fs.existsSync(INPUT_DIR)) {
-    fs.mkdirSync(INPUT_DIR, { recursive: true });
+  if (!fs.existsSync(config.INPUT_DIR)) {
+    fs.mkdirSync(config.INPUT_DIR, { recursive: true });
   }
 
   // Load artist whitelist (or create empty if doesn't exist)
   try {
-    if (fs.existsSync(ARTIST_WHITELIST_FILE)) {
+    if (fs.existsSync(config.ARTIST_WHITELIST_FILE)) {
       artistWhitelist = JSON.parse(
-        fs.readFileSync(ARTIST_WHITELIST_FILE, "utf8")
+        fs.readFileSync(config.ARTIST_WHITELIST_FILE, "utf8")
       );
       console.log(
         `Loaded ${
@@ -44,6 +89,25 @@ function initialize() {
       error.message
     );
     artistWhitelist = {};
+  }
+
+  // Load existing entries from output to avoid duplicates
+  if (config.SKIP_DUPLICATES && fs.existsSync(config.OUTPUT_DIR)) {
+    try {
+      const files = fs.readdirSync(config.OUTPUT_DIR);
+      for (const file of files) {
+        if (file.endsWith(".json")) {
+          const filePath = path.join(config.OUTPUT_DIR, file);
+          const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+          existingEntries = [...existingEntries, ...data];
+        }
+      }
+      console.log(
+        `Loaded ${existingEntries.length} existing albums for duplicate detection.`
+      );
+    } catch (error) {
+      console.error(`Error loading existing entries: ${error.message}`);
+    }
   }
 
   // Set up readline interface
@@ -65,7 +129,7 @@ function initReadline() {
  */
 function saveArtistWhitelist() {
   fs.writeFileSync(
-    ARTIST_WHITELIST_FILE,
+    config.ARTIST_WHITELIST_FILE,
     JSON.stringify(artistWhitelist, null, 2),
     "utf8"
   );
@@ -114,6 +178,39 @@ function checkArtistWhitelist(firstWord) {
 }
 
 /**
+ * Check if an album entry already exists in our output files
+ * @param {Object} entry - The album entry to check
+ * @returns {boolean} - Whether the entry exists
+ */
+function isDuplicateEntry(entry) {
+  if (!config.SKIP_DUPLICATES || existingEntries.length === 0) {
+    return false;
+  }
+
+  // Normalize for comparison
+  const normalizeText = (text) => {
+    if (!text) return "";
+    return text
+      .toLowerCase()
+      .replace(/[''']/g, "'")
+      .replace(/[&]/g, "and")
+      .replace(/[^a-zA-Z0-9' ]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  };
+
+  const normalizedAlbum = normalizeText(entry.album);
+  const normalizedArtist = normalizeText(entry.artist);
+
+  return existingEntries.some((existing) => {
+    return (
+      normalizeText(existing.album) === normalizedAlbum &&
+      normalizeText(existing.artist) === normalizedArtist
+    );
+  });
+}
+
+/**
  * Convert pasted Apple Music text to JSON format
  * @param {string} text - The pasted text from Apple Music
  */
@@ -126,6 +223,7 @@ async function convertTextToJson(text) {
 
   const albums = [];
   let artistsCorrected = 0;
+  let duplicatesSkipped = 0;
 
   for (let i = startIndex; i < lines.length; i++) {
     const line = lines[i].trim();
@@ -151,7 +249,16 @@ async function convertTextToJson(text) {
       let artist = parts[0];
       let album = parts.slice(1, -2).join(" ");
 
-      albums.push({ album, artist });
+      const entry = { album, artist };
+
+      // Check for duplicates
+      if (isDuplicateEntry(entry)) {
+        console.log(`Skipping duplicate: "${album}" by "${artist}"`);
+        duplicatesSkipped++;
+        continue;
+      }
+
+      albums.push(entry);
       continue;
     }
 
@@ -192,17 +299,29 @@ async function convertTextToJson(text) {
       album = parts.slice(artistEndIndex + 1, numItemsIndex).join(" ");
     }
 
-    // Only prompt for confirmation if the parsing seems uncertain and we don't have a whitelist match
-    let shouldPrompt = false;
+    // Create the entry object
+    const entry = { album, artist };
+
+    // Check for duplicates
+    if (isDuplicateEntry(entry)) {
+      console.log(`Skipping duplicate: "${album}" by "${artist}"`);
+      duplicatesSkipped++;
+      continue;
+    }
+
+    // Only prompt for confirmation if the parsing seems uncertain and interactive mode is enabled
+    let shouldPrompt = config.CHECK_INTERACTIVE;
 
     // No need to prompt if we used a whitelisted artist
-    if (!knownArtist) {
+    if (!knownArtist && shouldPrompt) {
       // Heuristics to determine if this parsing might be wrong:
       // 1. Very short album titles (1 word) are suspicious
       if (album.split(" ").length <= 1) shouldPrompt = true;
+      else shouldPrompt = false;
 
       // 2. Artist names that are very long (more than 4 words) might be wrong
       if (artist.split(" ").length > 4) shouldPrompt = true;
+      else if (!shouldPrompt) shouldPrompt = false;
 
       // 3. Album titles that begin with words often found in artist names
       const suspiciousAlbumStarts = [
@@ -215,9 +334,12 @@ async function convertTextToJson(text) {
       ];
       const albumFirstWord = album.split(" ")[0].toLowerCase();
       if (suspiciousAlbumStarts.includes(albumFirstWord)) shouldPrompt = true;
+      else if (!shouldPrompt) shouldPrompt = false;
+    } else {
+      shouldPrompt = false;
     }
 
-    // Only show confirmation prompt if any of our heuristics were triggered
+    // Only show confirmation prompt if any of our heuristics were triggered and interactive mode is on
     if (shouldPrompt) {
       console.log(`\nLine: ${line}`);
       console.log(`Parsed: Artist='${artist}', Album='${album}'`);
@@ -239,10 +361,14 @@ async function convertTextToJson(text) {
         console.log(
           `Added '${parts[0]}' → '${correctedArtist}' to artist whitelist`
         );
+
+        // Update the entry with corrected values
+        entry.artist = artist;
+        entry.album = album;
       }
     }
 
-    albums.push({ album, artist });
+    albums.push(entry);
   }
 
   // Save whitelist if we added new artists
@@ -251,19 +377,25 @@ async function convertTextToJson(text) {
   }
 
   // Prompt for year
-  const currentYear = new Date().getFullYear();
+  const currentYear = config.getCurrentYear();
   const yearInput = await askQuestion(
     `\nEnter year for the output file (default: ${currentYear}): `
   );
   const year = yearInput || currentYear;
 
   // Create output file path
-  const outputFile = path.join(INPUT_DIR, `${year}.json`);
+  const outputFile = path.join(config.INPUT_DIR, `${year}.json`);
+
+  // Sort albums alphabetically by artist
+  albums.sort((a, b) => a.artist.localeCompare(b.artist));
 
   // Write the output file
   fs.writeFileSync(outputFile, JSON.stringify(albums, null, 2), "utf8");
 
   console.log(`\nProcessed ${albums.length} albums and saved to ${outputFile}`);
+  if (duplicatesSkipped > 0) {
+    console.log(`Skipped ${duplicatesSkipped} duplicate entries`);
+  }
   console.log(`You can now run: node get_album_info.js`);
 
   return albums;
@@ -283,36 +415,59 @@ function askQuestion(question) {
 }
 
 /**
+ * Process input from a file rather than interactive input
+ * @param {string} filePath - Path to the input file
+ */
+async function processFile(filePath) {
+  try {
+    console.log(`Reading from file: ${filePath}`);
+    const text = fs.readFileSync(filePath, "utf8");
+    await convertTextToJson(text);
+    rl.close();
+  } catch (error) {
+    console.error(`Error processing file: ${error.message}`);
+    process.exit(1);
+  }
+}
+
+/**
  * Main function to collect user input and process it
  */
 async function main() {
+  // Parse command line arguments
+  const args = parseArgs();
+
   // Initialize everything
   initialize();
 
-  console.log(
-    "Paste your Apple Music playlist text below (press Enter twice when done):"
-  );
+  if (args.mode === "file") {
+    await processFile(args.filePath);
+  } else {
+    console.log(
+      "Paste your Apple Music playlist text below (press Enter twice when done):"
+    );
 
-  const lines = [];
-  let lastLineEmpty = false;
+    const lines = [];
+    let lastLineEmpty = false;
 
-  rl.on("line", (line) => {
-    if (!line && lines.length > 0 && !lastLineEmpty) {
-      lastLineEmpty = true;
-      return;
-    }
+    rl.on("line", (line) => {
+      if (!line && lines.length > 0 && !lastLineEmpty) {
+        lastLineEmpty = true;
+        return;
+      }
 
-    if (lastLineEmpty && !line) {
-      // Double empty line signals end of input
-      const text = lines.join("\n");
-      convertTextToJson(text).then(() => {
-        rl.close();
-      });
-    } else {
-      lastLineEmpty = !line;
-      lines.push(line);
-    }
-  });
+      if (lastLineEmpty && !line) {
+        // Double empty line signals end of input
+        const text = lines.join("\n");
+        convertTextToJson(text).then(() => {
+          rl.close();
+        });
+      } else {
+        lastLineEmpty = !line;
+        lines.push(line);
+      }
+    });
+  }
 }
 
 // Only run the script if it's being executed directly

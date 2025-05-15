@@ -20,8 +20,8 @@
     "artist": "BØRNS"
   },
   {
-    "album": "Headrest The Scholars",
-    "artist": "Car Seat"
+    "album": "The Scholars",
+    "artist": "Car Seat Headrest"
   },
   {
     "album": "Dead Channel Sky",
@@ -32,8 +32,8 @@
     "artist": "Coheed and Cambria"
   },
   {
-    "album": "People With Power",
-    "artist": "Deafheaven Lonely"
+    "album": "Lonely People With Power",
+    "artist": "Deafheaven"
   },
   {
     "album": "DÍA",
@@ -46,6 +46,10 @@
   {
     "album": "Forever Is A Feeling",
     "artist": "Lucy Dacus"
+  },
+  {
+    "album": "Tall Tales",
+    "artist": "Mark Pritchard & Thom Yorke"
   },
   {
     "album": "Lucro sucio; Los ojos del vacio",
@@ -80,16 +84,16 @@
     "artist": "Sleigh Bells"
   },
   {
-    "album": "Down in the Garden",
-    "artist": "Tennis Face"
+    "album": "Face Down in the Garden",
+    "artist": "Tennis"
   },
   {
-    "album": "After This One",
-    "artist": "Underoath The Place"
+    "album": "The Place After This One",
+    "artist": "Underoath"
   },
   {
-    "album": "Spring Under A Familiar Sun",
-    "artist": "The Vernon"
+    "album": "Under A Familiar Sun",
+    "artist": "The Vernon Spring"
   },
   {
     "album": "Hurry Up Tomorrow",
