@@ -20,3 +20,9 @@ layout: base.webc
 ## 2024
 
 <album webc:for="(album, index) of this.albums['2024']" :album="album" webc:nokeep></album>
+
+---
+
+## 2023
+
+<album webc:for="(album, index) of this.albums['2023']" :album="album" webc:nokeep></album>

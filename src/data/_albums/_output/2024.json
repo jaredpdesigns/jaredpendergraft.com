@@ -1,194 +1,306 @@
 [
-    {
-        "album": "Five Dice, All Threes",
-        "artist": "Bright Eyes",
-        "link": "https://music.apple.com/us/album/five-dice-all-threes/1750048157?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/15/b0/28/15b02826-4f1f-8ff8-c96f-6cb9ff618de6/46520.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1750048157
-    },
-    {
-        "album": "Honey",
-        "artist": "Caribou",
-        "link": "https://music.apple.com/us/album/honey/1742019690?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6f/d0/c5/6fd0c513-ad4d-462c-f0b9-fd8bd74fd523/1749.jpg/640x640bb.jpg",
-        "genre": "Electronic",
-        "itunesId": 1742019690
-    },
-    {
-        "album": "Songs Of A Lost World",
-        "artist": "The Cure",
-        "link": "https://music.apple.com/us/album/songs-of-a-lost-world/1768728131?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5b/25/d9/5b25d98e-3734-a7fd-c198-69ffd088d10f/24UMGIM94240.rgb.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1768728131
-    },
-    {
-        "album": "As It Ever Was, So It Will Be Again",
-        "artist": "The Decemberists",
-        "link": "https://music.apple.com/us/album/as-it-ever-was-so-it-will-be-again/1733117575?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c7/26/96/c72696bc-a169-2d09-bac8-c3f2d95615c0/198391285974.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1733117575
-    },
-    {
-        "album": "Mahashmashana",
-        "artist": "Father John Misty",
-        "link": "https://music.apple.com/us/album/mahashmashana/1760456744?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/b9/94/e5b994a7-fc83-0c5e-89db-ba03e1681a92/098787166668.png/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1760456744
-    },
-    {
-        "album": "Romance",
-        "artist": "Fontaines D.C.",
-        "link": "https://music.apple.com/us/album/romance/1737990072?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4d/3a/76/4d3a7621-8b56-56a3-829f-545dde0b2b6a/191404143674.png/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1737990072
-    },
-    {
-        "album": "Foxing",
-        "artist": "Foxing",
-        "link": "https://music.apple.com/us/album/foxing/1753479114?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/82/4d/f7/824df761-7e5e-33dc-e991-9f0efa3cf165/8721093381839.png/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1753479114
-    },
-    {
-        "album": "ten days",
-        "artist": "Fred again..",
-        "link": "https://music.apple.com/us/album/ten-days/1760178389?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/bb/00/6b/bb006b8e-2d17-7f1c-cedc-f76a70b3af1f/5021732456847.jpg/640x640bb.jpg",
-        "genre": "Electronic",
-        "itunesId": 1760178389
-    },
-    {
-        "album": "People Who Aren't There Anymore",
-        "artist": "Future Islands",
-        "link": "https://music.apple.com/us/album/people-who-arent-there-anymore/1710447164?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7f/eb/70/7feb70b4-e352-cc3c-e64c-44c74d5ddcb8/191400062177.png/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1710447164
-    },
-    {
-        "album": "I Love You So F***ing Much",
-        "artist": "Glass Animals",
-        "link": "https://music.apple.com/us/album/i-love-you-so-f-ing-much/1738435901?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cd/57/49/cd574928-97af-234b-2099-539262e163ce/24UMGIM27646.rgb.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1738435901
-    },
-    {
-        "album": "TANGK",
-        "artist": "IDLES",
-        "link": "https://music.apple.com/us/album/tangk/1783174952?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/ec/1f/92ec1fb4-74e6-05cd-8cfa-ff7fee67cd14/0720841304104_Cover.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1783174952
-    },
-    {
-        "album": "In Waves",
-        "artist": "Jamie xx",
-        "link": "https://music.apple.com/us/album/in-waves/1746750796?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2d/4b/8b/2d4b8b01-d65f-b926-117d-51526878461d/889030035677.png/640x640bb.jpg",
-        "genre": "Electronic",
-        "itunesId": 1746750796
-    },
-    {
-        "album": "Harmonics",
-        "artist": "Joe Goddard",
-        "link": "https://music.apple.com/us/album/harmonics/1735737051?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c6/2c/16/c62c16a5-bb56-9de0-c5c0-5924fd193850/887828043767.png/640x640bb.jpg",
-        "genre": "Dance",
-        "itunesId": 1735737051
-    },
-    {
-        "album": "Hyperdrama",
-        "artist": "Justice",
-        "link": "https://music.apple.com/us/album/hyperdrama/1724935208?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/6c/30/d16c300f-c26c-89f1-9207-23b71c5e6584/5056556135845_cover.jpg/640x640bb.jpg",
-        "genre": "Electronic",
-        "itunesId": 1724935208
-    },
-    {
-        "album": "Time Will Wait For No One But I'll Wait For You",
-        "artist": "Local Natives",
-        "link": "https://music.apple.com/us/album/time-will-wait-for-no-one-but-ill-wait-for-you/1779831526?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7c/4a/22/7c4a223a-dc87-72f0-4ade-f27bdf84544b/24CRGIM46175.rgb.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1779831526
-    },
-    {
-        "album": "Fantasy",
-        "artist": "M83",
-        "link": "https://music.apple.com/us/album/fantasy/1658645075?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a1/9e/38/a19e382c-0824-63f7-8e71-270ef0e992fe/724596110256.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1658645075
-    },
-    {
-        "album": "Imaginal Disk",
-        "artist": "Magdalena Bay",
-        "link": "https://music.apple.com/us/album/imaginal-disk/1751414757?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8f/e3/6c/8fe36c7a-d280-2d0e-8e67-4ee0fd4523cd/810090095448.png/640x640bb.jpg",
-        "genre": "Indie Pop",
-        "itunesId": 1751414757
-    },
-    {
-        "album": "Night Palace",
-        "artist": "Mount Eerie",
-        "link": "https://music.apple.com/us/album/night-palace/1764954656?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/cd/98/a3cd98f9-cf82-f7f7-5874-b3fdb427f16c/85218091910.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1764954656
-    },
-    {
-        "album": "The Last Goodbye Tour Live",
-        "artist": "ODESZA",
-        "link": "https://music.apple.com/us/album/the-last-goodbye-tour-live/1738514997?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/33/43/353343d0-17bb-4057-7fce-7de88ce622e4/5054429193510.png/640x640bb.jpg",
-        "genre": "Electronic",
-        "itunesId": 1738514997
-    },
-    {
-        "album": "Letter to Self",
-        "artist": "SPRINTS",
-        "link": "https://music.apple.com/us/album/letter-to-self/1720005072?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ca/92/ff/ca92ffee-87b5-2505-f9e9-5c1e08282ea8/4250506847272_cover.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1720005072
-    },
-    {
-        "album": "All Born Screaming",
-        "artist": "St. Vincent",
-        "link": "https://music.apple.com/us/album/all-born-screaming/1729549170?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6d/00/8c/6d008c01-074d-e2af-c691-943a155e4a60/00196922832147_Cover.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1729549170
-    },
-    {
-        "album": "Spiral In A Straight Line",
-        "artist": "Touché Amoré",
-        "link": "https://music.apple.com/us/album/spiral-in-a-straight-line/1756575884?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/20/14/c02014c8-3dd6-7a02-d2a7-c73cf707d5a4/4099964093261.jpg/640x640bb.jpg",
-        "genre": "Hard Rock",
-        "itunesId": 1756575884
-    },
-    {
-        "album": "Only God Was Above Us",
-        "artist": "Vampire Weekend",
-        "link": "https://music.apple.com/us/album/only-god-was-above-us/1728945682?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f9/9f/ed/f99fed7a-3b13-3531-3db6-fac34e1d1c7c/196871790307.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1728945682
-    },
-    {
-        "album": "Model",
-        "artist": "Wallows",
-        "link": "https://music.apple.com/us/album/model/1734187714?uo=4",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ae/37/a2/ae37a289-6b57-f0a0-d57b-decd92cad6b6/075679652515.jpg/640x640bb.jpg",
-        "genre": "Alternative",
-        "itunesId": 1734187714
-    }
+  {
+    "album": "Five Dice, All Threes",
+    "artist": "Bright Eyes",
+    "link": "https://music.apple.com/us/album/five-dice-all-threes/1750048157?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/15/b0/28/15b02826-4f1f-8ff8-c96f-6cb9ff618de6/46520.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1750048157
+  },
+  {
+    "album": "Honey",
+    "artist": "Caribou",
+    "link": "https://music.apple.com/us/album/honey/1742019690?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6f/d0/c5/6fd0c513-ad4d-462c-f0b9-fd8bd74fd523/1749.jpg/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1742019690
+  },
+  {
+    "album": "Brat and it’s completely different but also still brat",
+    "artist": "Charli xcx",
+    "link": "https://music.apple.com/us/album/brat-and-its-completely-different-but-also-still-brat/1773518270?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/21/3b/e2213b51-6d62-8ef0-b19a-d78ec0f873d8/075679626998.jpg/640x640bb.jpg",
+    "genre": "Dance",
+    "itunesId": 1773518270
+  },
+  {
+    "album": "Bando Stone and The New World",
+    "artist": "Childish Gambino",
+    "link": "https://music.apple.com/us/album/bando-stone-and-the-new-world/1757678472?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/d3/37/3cd3376c-55f6-26ea-1dad-5d26b9391a45/196872224030.jpg/640x640bb.jpg",
+    "genre": "Pop",
+    "itunesId": 1757678472
+  },
+  {
+    "album": "Adult Contemporary",
+    "artist": "Chromeo",
+    "link": "https://music.apple.com/us/album/adult-contemporary/1708568607?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e8/d9/6f/e8d96f8f-9d6c-8109-a5f8-a15388dc3c40/4050538987799.jpg/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1708568607
+  },
+  {
+    "album": "To the Ghosts",
+    "artist": "Cults",
+    "link": "https://music.apple.com/us/album/to-the-ghosts/1744955364?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/bc/70/82/bc7082e8-0c6c-4f67-de2b-fb9f0118f103/196922966422_Cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1744955364
+  },
+  {
+    "album": "Songs Of A Lost World",
+    "artist": "The Cure",
+    "link": "https://music.apple.com/us/album/songs-of-a-lost-world/1768728131?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5b/25/d9/5b25d98e-3734-a7fd-c198-69ffd088d10f/24UMGIM94240.rgb.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1768728131
+  },
+  {
+    "album": "As It Ever Was, So It Will Be Again",
+    "artist": "The Decemberists",
+    "link": "https://music.apple.com/us/album/as-it-ever-was-so-it-will-be-again/1733117575?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c7/26/96/c72696bc-a169-2d09-bac8-c3f2d95615c0/198391285974.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1733117575
+  },
+  {
+    "album": "Mahashmashana",
+    "artist": "Father John Misty",
+    "link": "https://music.apple.com/us/album/mahashmashana/1760456744?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/b9/94/e5b994a7-fc83-0c5e-89db-ba03e1681a92/098787166668.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1760456744
+  },
+  {
+    "album": "Romance",
+    "artist": "Fontaines D.C.",
+    "link": "https://music.apple.com/us/album/romance/1737990072?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4d/3a/76/4d3a7621-8b56-56a3-829f-545dde0b2b6a/191404143674.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1737990072
+  },
+  {
+    "album": "Foxing",
+    "artist": "Foxing",
+    "link": "https://music.apple.com/us/album/foxing/1753479114?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/82/4d/f7/824df761-7e5e-33dc-e991-9f0efa3cf165/8721093381839.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1753479114
+  },
+  {
+    "album": "ten days",
+    "artist": "Fred again..",
+    "link": "https://music.apple.com/us/album/ten-days/1760178389?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/bb/00/6b/bb006b8e-2d17-7f1c-cedc-f76a70b3af1f/5021732456847.jpg/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1760178389
+  },
+  {
+    "album": "People Who Aren’t There Anymore",
+    "artist": "Future Islands",
+    "link": "https://music.apple.com/us/album/people-who-arent-there-anymore/1710447164?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7f/eb/70/7feb70b4-e352-cc3c-e64c-44c74d5ddcb8/191400062177.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1710447164
+  },
+  {
+    "album": "The New Sound",
+    "artist": "Geordie Greep",
+    "link": "https://music.apple.com/us/album/the-new-sound/1752102463?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/80/a4/d6/80a4d66f-b8ca-ce9b-b3ad-63fe44a19704/191402049978.png/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1752102463
+  },
+  {
+    "album": "Speaking Across Time",
+    "artist": "Gilligan Moss",
+    "link": "https://music.apple.com/us/album/speaking-across-time/1746751535?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ce/28/f3/ce28f346-1307-1c71-dea5-c2c961e48748/5054429194975.png/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1746751535
+  },
+  {
+    "album": "I Love You So F***ing Much",
+    "artist": "Glass Animals",
+    "link": "https://music.apple.com/us/album/i-love-you-so-f-ing-much/1738435901?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cd/57/49/cd574928-97af-234b-2099-539262e163ce/24UMGIM27646.rgb.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1738435901
+  },
+  {
+    "album": "Romanticism",
+    "artist": "Hana Vu",
+    "link": "https://music.apple.com/us/album/romanticism/1726216204?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e1/ff/8e/e1ff8ee1-36dd-95a3-48fb-a9eb0219f158/43983.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1726216204
+  },
+  {
+    "album": "GLOOM DIVISION",
+    "artist": "I DONT KNOW HOW BUT THEY FOUND ME",
+    "link": "https://music.apple.com/us/album/gloom-division/1706419494?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d9/7e/e8/d97ee811-c7a9-c244-d6d9-5783e2a371e7/23CRGIM36756.rgb.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1706419494
+  },
+  {
+    "album": "TANGK",
+    "artist": "IDLES",
+    "link": "https://music.apple.com/us/album/tangk/1783174952?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/ec/1f/92ec1fb4-74e6-05cd-8cfa-ff7fee67cd14/0720841304104_Cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1783174952
+  },
+  {
+    "album": "No Name",
+    "artist": "Jack White",
+    "link": "https://music.apple.com/us/album/no-name/1760057427?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1c/e2/9e/1ce29ea2-4ceb-e775-9b4f-1191ea6155ab/810074424233.jpg/640x640bb.jpg",
+    "genre": "Rock",
+    "itunesId": 1760057427
+  },
+  {
+    "album": "In Waves",
+    "artist": "Jamie xx",
+    "link": "https://music.apple.com/us/album/in-waves/1746750796?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2d/4b/8b/2d4b8b01-d65f-b926-117d-51526878461d/889030035677.png/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1746750796
+  },
+  {
+    "album": "Harmonics",
+    "artist": "Joe Goddard",
+    "link": "https://music.apple.com/us/album/harmonics/1735737051?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c6/2c/16/c62c16a5-bb56-9de0-c5c0-5924fd193850/887828043767.png/640x640bb.jpg",
+    "genre": "Dance",
+    "itunesId": 1735737051
+  },
+  {
+    "album": "Hyperdrama",
+    "artist": "Justice",
+    "link": "https://music.apple.com/us/album/hyperdrama/1724935208?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/6c/30/d16c300f-c26c-89f1-9207-23b71c5e6584/5056556135845_cover.jpg/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1724935208
+  },
+  {
+    "album": "Kantos",
+    "artist": "Kishi Bashi",
+    "link": "https://music.apple.com/us/album/kantos/1741359423?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/61/af/e4/61afe45c-9790-1f95-390e-a4abfceeccb4/45647.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1741359423
+  },
+  {
+    "album": "Pulsar",
+    "artist": "L'Impératrice",
+    "link": "https://music.apple.com/us/album/pulsar/1736766809?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/19/47/fc/1947fcd3-c0de-53ec-4bfb-f64ff4eeb80d/3663729305145_cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1736766809
+  },
+  {
+    "album": "Time Will Wait For No One But I'll Wait For You",
+    "artist": "Local Natives",
+    "link": "https://music.apple.com/us/album/time-will-wait-for-no-one-but-ill-wait-for-you/1779831526?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7c/4a/22/7c4a223a-dc87-72f0-4ade-f27bdf84544b/24CRGIM46175.rgb.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1779831526
+  },
+  {
+    "album": "All Hell",
+    "artist": "Los Campesinos!",
+    "link": "https://music.apple.com/us/album/all-hell/1746087937?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b4/66/6e/b4666ec4-bbb1-2c77-7228-42e8997f98dc/859787526377_cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1746087937
+  },
+  {
+    "album": "Fantasy (Deluxe)",
+    "artist": "M83",
+    "link": "https://music.apple.com/us/album/fantasy-deluxe/1736775520?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/94/57/af/9457afa5-da8e-5e7e-bbdb-80a4f08a760b/602465328257.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1736775520
+  },
+  {
+    "album": "Imaginal Disk",
+    "artist": "Magdalena Bay",
+    "link": "https://music.apple.com/us/album/imaginal-disk/1751414757?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8f/e3/6c/8fe36c7a-d280-2d0e-8e67-4ee0fd4523cd/810090095448.png/640x640bb.jpg",
+    "genre": "Indie Pop",
+    "itunesId": 1751414757
+  },
+  {
+    "album": "Night Palace",
+    "artist": "Mount Eerie",
+    "link": "https://music.apple.com/us/album/night-palace/1764954656?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/cd/98/a3cd98f9-cf82-f7f7-5874-b3fdb427f16c/85218091910.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1764954656
+  },
+  {
+    "album": "The Last Goodbye Tour Live",
+    "artist": "ODESZA",
+    "link": "https://music.apple.com/us/album/the-last-goodbye-tour-live/1738514997?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/33/43/353343d0-17bb-4057-7fce-7de88ce622e4/5054429193510.png/640x640bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1738514997
+  },
+  {
+    "album": "Feeling Not Found",
+    "artist": "Origami Angel",
+    "link": "https://music.apple.com/us/album/feeling-not-found/1753733028?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c6/57/37/c6573769-732c-55a4-2d33-8b55b15b2fc3/198588291221.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1753733028
+  },
+  {
+    "album": "Letter to Self",
+    "artist": "SPRINTS",
+    "link": "https://music.apple.com/us/album/letter-to-self/1720005072?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ca/92/ff/ca92ffee-87b5-2505-f9e9-5c1e08282ea8/4250506847272_cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1720005072
+  },
+  {
+    "album": "All Born Screaming",
+    "artist": "St. Vincent",
+    "link": "https://music.apple.com/us/album/all-born-screaming/1729549170?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6d/00/8c/6d008c01-074d-e2af-c691-943a155e4a60/00196922832147_Cover.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1729549170
+  },
+  {
+    "album": "Spiral In A Straight Line",
+    "artist": "Touché Amoré",
+    "link": "https://music.apple.com/us/album/spiral-in-a-straight-line/1756575884?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/20/14/c02014c8-3dd6-7a02-d2a7-c73cf707d5a4/4099964093261.jpg/640x640bb.jpg",
+    "genre": "Hard Rock",
+    "itunesId": 1756575884
+  },
+  {
+    "album": "CHROMAKOPIA",
+    "artist": "Tyler, The Creator",
+    "link": "https://music.apple.com/us/album/chromakopia/1776500452?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/bd/e9/7dbde97e-b97d-8cc3-0203-218b687408a9/196872555059.jpg/640x640bb.jpg",
+    "genre": "Hip-Hop/Rap",
+    "itunesId": 1776500452
+  },
+  {
+    "album": "Only God Was Above Us",
+    "artist": "Vampire Weekend",
+    "link": "https://music.apple.com/us/album/only-god-was-above-us/1728945682?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f9/9f/ed/f99fed7a-3b13-3531-3db6-fac34e1d1c7c/196871790307.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1728945682
+  },
+  {
+    "album": "Model",
+    "artist": "Wallows",
+    "link": "https://music.apple.com/us/album/model/1734187714?uo=4",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ae/37/a2/ae37a289-6b57-f0a0-d57b-decd92cad6b6/075679652515.jpg/640x640bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1734187714
+  }
 ]
