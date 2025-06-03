@@ -15,7 +15,7 @@ I care deeply about how something works as much as its outward appearance and am
 
 </profile-wrap>
 
-> I’m currently serving as **Senior Software Development Engineer** at **Zillow** on the _Follow Up Boss_ team, building the best real estate CRM on the market. View [projects](/#side-projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
+> I’m currently serving as **Senior Software Development Engineer** at **Zillow** on the _Design Foundations_ team. View [projects](/#side-projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
 
 ---
 
