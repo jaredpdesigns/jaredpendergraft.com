@@ -2,7 +2,7 @@
 layout: root.webc
 ---
 
-<header class="border__block-end border__block-start color__border--base--light">
+<header class="border__block-end color__border--saffron--light">
   <section class="flow__block margin__inline--auto padding__block--m">
     <nav class="flow__flex flow__align--inline-center flow__align--block-center flow__flex--wrap">
       <a href="/" title="Return to Profile" class="color__type--base--ish radius__xs type__align--center">
