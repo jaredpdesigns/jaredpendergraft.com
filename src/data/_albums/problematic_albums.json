@@ -1,0 +1,40 @@
+{
+  "specialCases": [
+    {
+      "album": "Honey",
+      "artist": "Caribou",
+      "blockedMatches": [
+        { "album": "Honey", "artist": "Robyn" },
+        { "album": "Honey", "artist": "Mariah Carey" }
+      ]
+    },
+    {
+      "album": "Romance",
+      "artist": "Fontaines D.C.",
+      "blockedMatches": [{ "album": "Romance", "artist": "Camila Cabello" }]
+    },
+    {
+      "album": "Fantasy",
+      "artist": "M83",
+      "blockedMatches": [
+        { "album": "FINAL FANTASY", "artist": "SQUARE ENIX" },
+        { "album": "Final Fantasy", "artist": "SQUARE ENIX MUSIC" },
+        { "album": "FINAL FANTASY VII REBIRTH", "artist": "Square Enix Music" }
+      ]
+    },
+    {
+      "album": "Love Lines",
+      "artist": "LP",
+      "blockedMatches": [{ "album": "Lovelines", "artist": "Carpenters" }]
+    },
+    {
+      "album": "ÁTTA",
+      "artist": "Sigur Rós",
+      "blockedMatches": [
+        { "album": "Top of the South", "artist": "T.T.A & JEREMAI" },
+        { "album": "Top of the South", "artist": "T.T.A" },
+        { "album": "Top of the South", "artist": "JEREMAI" }
+      ]
+    }
+  ]
+}

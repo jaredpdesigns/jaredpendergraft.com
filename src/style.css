@@ -550,7 +550,7 @@
 
   .profile__img {
     aspect-ratio: 640/854;
-    clip-path: url(#blobby);
+    clip-path: shape(from 10.42% 93.65%, curve by 43.05% -6.71% with 13.88% 15.91%/26.77% -2.6%, curve by 40.55% -2.1% with 16.28% -4.1%/26.77% 13.71%, curve by -18.38% -65.85% with 13.78% -15.81%/2.1% -42.43%, curve to 5.72% 14.09% with 55.07% -4.33%/23.7% -6.43%, curve by 14.68% 43.74% with -17.98% 20.52%/11.89% 26.92%, curve to 10.42% 93.65% with 23.2% 74.63%/-3.47% 77.74%);
     max-inline-size: var(--width__xs);
 
     &:hover img {
