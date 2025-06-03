@@ -1,5 +1,5 @@
 <figure class="profile__img">
   <img alt="My smiling face" fetchPriority="high" loading="eager"
-    src="https://images.ctfassets.net/cuehicrlqnvu/4iTUxvZ8oMug63CMyHmnLy/706c88927eb30837119d2fe837dc7596/profile-2025.jpg"
+    src="https://images.ctfassets.net/cuehicrlqnvu/4iTUxvZ8oMug63CMyHmnLy/1a771c0e0948d0b4124653dfaafa7551/profile-2025.jpg"
     eleventy:widths="240,480" />
 </figure>
