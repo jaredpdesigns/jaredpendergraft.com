@@ -19,6 +19,11 @@
       --bleed: calc(var(--size__l) * -1);
     }
 
+    @media screen and (prefers-color-scheme: dark) {
+      --color__saffron--ghost: var(--color__base--ghost);
+      --color__saffron--light: var(--color__base--light);
+    }
+
     &[data-theme="dark"] {
       --color__saffron--ghost: var(--color__base--ghost);
       --color__saffron--light: var(--color__base--light);

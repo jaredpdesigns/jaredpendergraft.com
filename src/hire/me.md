@@ -6,15 +6,102 @@ pageClass: cv
 layout: base.webc
 ---
 
-# Résumé
+# About Me
 
-**I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.**
+**I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams work together to build amazing products.**
 
-I’m looking for a creative position that offers challenges, collaboration, and an ability to work on projects that impact the world positively.
+I specialize in building modular, scalable UI frameworks and empowering teams with systems thinking, clean implementation, and accessibility best practices. I’m looking for a creative position that offers challenges, collaboration, and an opportunity to work on products that positively impact the world.
 
 ---
 
-## Capabilities
+## Technologies
+
+- **Languages & Web:** HTML, CSS/SCSS, JavaScript, TypeScript
+- **Frameworks & Libraries:** React, Vue, Blazor, SwiftUI
+- **Design Systems:** Constellation, Forge, Storybook, Design Tokens
+- **Tooling:** Git, CI/CD, Lighthouse, accessibility testing tools
+- **Design & Content:** Figma, Contentful, Jekyll, Shopify, Wordpress
+
+---
+
+## Experience
+
+### Zillow
+
+**Senior Software Development Engineer (Level P4)**
+_Jan 2025–Present • Remote_
+
+- **As of June 2025**, transitioned to the **Design Foundations** team, responsible for Zillow’s centralized design system, **Constellation**. Focused on building scalable, accessible, and performant UI solutions that empower product teams across Zillow Group.
+- Contributed to design system architecture, adoption tooling, accessibility standards, and performance optimizations that impact millions of users and dozens of teams.
+- Collaborated with cross-functional teams to advance web performance, developer experience, and front-end quality across platforms.
+- Previously supported the **Follow Up Boss** product team within Zillow post-acquisition, leading enhancements to the **Forge** design system and helping align product development with Zillow's design principles and quality standards.
+
+**Software Development Engineer (Level P3)**
+_Jan 2024–Jan 2025 • Remote_
+
+- Continued work on the Follow Up Boss product inside Zillow after the December 2023 acquisition.
+- Led efforts to modernize and scale Forge, streamlining design-developer workflows and maintaining high standards for accessibility and usability.
+- Collaborated with product and engineering teams to integrate Forge into feature work, improve developer velocity, and ensure consistency in UX delivery.
+
+**Front-End Engineer** – _Follow Up Boss (Acquired by Zillow)_
+_Jun 2022–Dec 2023 • Remote_
+
+- Designed and implemented the Forge design system from the ground up, enabling a shared language between design and engineering.
+- Built and maintained core UI libraries and documentation to improve product velocity and consistency.
+- Acted as a bridge between product, design, and engineering—helping to scale the front-end team’s capabilities ahead of Zillow’s acquisition.
+
+### Education Advanced, Inc.
+
+_Lead UI/UX Developer_
+2017–2022 • Remote
+
+- Directed the user experience and interface design across multiple SaaS products, aligning design decisions with business goals and product strategy.
+- Developed and scaled a unified design system supporting multiple applications, complete with detailed documentation to drive adoption and consistency.
+- Delivered high-fidelity prototypes and interactive demos to validate design ideas and facilitate stakeholder alignment.
+- Collaborated across engineering, product, and leadership to continuously evolve the UI architecture and component library.
+- Contributed front-end code for production features using modern JavaScript frameworks.
+
+### OTTO Health
+
+_Designer & Front-End Developer_
+2017 • Remote
+
+- Rebuilt the company’s core design system to support a complete product overhaul.
+- Improved overall application consistency by aligning UI patterns and reducing visual and functional debt.
+- Developed custom React components and layouts, delivering a modular front-end foundation used across the application.
+- Worked closely with engineering to refine and implement design specs using CSS and semantic HTML.
+
+### Kontur Labs
+
+_Creative Director & Front-End Developer_
+2013–2017 • Maui, HI
+
+- Led creative direction and design execution across web and mobile projects, from pitch through launch.
+- Collaborated on UI/UX strategy and translated concepts into functional designs and production-ready code.
+- Consulted on semantic, scalable front-end architectures for enterprise SaaS products.
+- Oversaw project delivery pipelines and guided junior developers and designers through implementation and refinement.
+
+### Kaiser Permanente
+
+_Graphic Designer_
+2009–2013 • Portland, OR
+
+- Produced national- and regional-level visual materials while maintaining brand consistency across campaigns.
+- Managed print production workflows including pre-press file preparation, plate ordering, and press approvals.
+- Created assets ranging from patient materials to promotional posters, working across internal departments and vendors.
+
+### Education Northwest
+
+_Graphic Designer_
+2007–2009 • Portland, OR
+
+- Designed print and digital materials for federally funded education programs and policy rollouts.
+- Built templates and processes to standardize visual output across education departments.
+- Managed all creative assets and served as primary point of contact for external production vendors.
+
+---
+
+## Core Principles
 
 - I’m a thorough thinker who approaches design challenges holistically—I build solutions from beginning to end with extensibility and modularity in mind.
 - I care deeply about how something works as much as its outward appearance—I love to tinker and am always looking to improve, optimize and scale my ideas.
@@ -23,94 +110,15 @@ I’m looking for a creative position that offers challenges, collaboration, and
 
 ---
 
-## Philosophies
-
-- **Responsive Web Design:** screens are everywhere, web things should scale and squish and transform to meet the challenges of modern day devices.
-- **User Experience:** screens must be intuitive and a joy to use, the interfaces and experiences should reflect this above all else.
-- **Branding & Identity:** brands are built around how they look, how they speak, and how they make you feel—hopefully all three.
-- **Project Management:** every project consists of many moving parts, each piece must be overseen and nurtured to contribute to a successful whole.
-
----
-
-## Technologies
-
-- **Fundamentals:** CSS, HTML, JavaScript, Prototyping, User Research
-- **Content Management:** Contentful, Jekyll, Shopify, Wordpress
-- **Frameworks:** Blazor, React, Vue, Swift UI
-
----
-
 ## Education
 
 ### Pacific University
 
-_Bachelor of Arts in Graphic Design & Video Production_\
+_Bachelor of Arts in Graphic Design & Video Production_
 2007 • Forest Grove, OR
-
----
-
-## Experience
-
-### Zillow
-
-_Senior Software Development Engineer_\
-2022–Currently • Remote
-
-- Works on a variety of feature-level changes to our core product, working within small teams to ship quickly and maximize usability and engagement.
-- Manages our internal design system [Forge](https://forge.followupboss.com), which we are continually improving upon and integrating into our core product.
-- Bridges the gap between product and engineering by collaborating closely and continually iterating on deliverables based on feedback cycles.
-- \*Via _Follow Up Boss_ acquisition in December, 2023.
-
-### Education Advanced, Inc.
-
-_Lead UI/UX Developer_\
-2017–2022 • Remote
-
-- Directed the user-experience and user-interface of multiple applications within the company.
-- Managed complex design system for multiple products and provided thorough documentation that aids in the continuous evolution of the system.
-- Collaborated with multiple departments to deliver design solutions that supported business goals.
-- Built static and interactive demos to test new ideas in multiple environments.
-- Contributed to front-end development efforts for multiple applications within the company.
-
-### OTTO Health
-
-_Designer & Front-End Developer_\
-2017 • Remote
-
-- Developed a robust design system to support complete application redesign.
-- Improved application UI/UX focusing on consistency between views and a holistic user experience.
-- Collaborated with a team of developers on all aspects of the front-end of the application including development of React components and views as well as the CSS of the application.
-
-### Kontur Labs
-
-_Creative Director & Front-End Developer_\
-2013–2017 • Maui, HI
-
-- Managed and oversaw all creative projects including websites and iOS/Android applications.
-- Collaborated on UI/UX, finalized designs and built out production-level CSS/HTML.
-- Consulted on large-scale SaaS projects, offering semantic CSS/HTML recommendations.
-
-### Kaiser Permanente
-
-_Graphic Designer_\
-2009–2013 • Portland, OR
-
-- Created and maintained collateral for Kaiser Permanente on a national level and while designing within Kaiser Permanente’s brand guidelines.
-- Artwork imposition for offset press, plate ordering and press-checks, as well as providing final approval before artwork was printed.
-- Examples of projects produced include: facility posters and banners, patient forms, promotional materials, direct-mail pieces and package design.
-
-### Education Northwest
-
-_Graphic Designer_\
-2007–2009 • Portland, OR
-
-- Designed and prepared educational materials for education coordinators who implemented government-sponsored education plans across the country.
-- Established a process for materials development and enforced brand and identity guidelines for all pieces.
-- Managed the completion of all creative projects and worked with outside vendors to produce final materials.
 
 ---
 
 ## Recommendations
 
-<recommendation webc:for="recommendation of this.recommendations" :author="recommendation.author"
-  :comment="recommendation.comment" webc:nokeep></recommendation>
+<recommendation webc:for="recommendation of this.recommendations" :author="recommendation.author" :comment="recommendation.comment" webc:nokeep></recommendation>

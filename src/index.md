@@ -9,13 +9,13 @@ layout: base.webc
 
 # Hello, It’s Nice to Meet You
 
-**I’m a multi-disciplinary designer focusing on the _intersection of design and development_—specifically _Design Systems_ and how teams works together to build amazing products.**
+**I’m a multi-disciplinary designer and developer working at the _intersection of design and development_—with a deep focus on _Design Systems_ and how teams build products together at scale.**
 
-I care deeply about how something works as much as its outward appearance and am always looking to **improve, optimize and scale my ideas**. I approach design challenges holistically, building solutions from beginning to end with **extensibility and modularity** in mind.
+I care just as much about how something works as how it looks, and I’m always exploring ways to **improve, optimize, and scale design through thoughtful engineering**. I approach challenges holistically—crafting systems and experiences that are **modular, extensible, and built to evolve**.
 
 </profile-wrap>
 
-> I’m currently serving as **Senior Software Development Engineer** at **Zillow** on the _Design Foundations_ team. View [projects](/#side-projects) I’ve worked on or learn more about my [creative process](/hire/#my-creative-process).
+> I’m currently a **Senior Software Development Engineer** at **Zillow**, working on the _Design Foundations_ team that supports **Constellation**, the company’s centralized design system. View my [projects](/#side-projects) or explore my [creative process](/hire/#my-creative-process).
 
 ---
 
