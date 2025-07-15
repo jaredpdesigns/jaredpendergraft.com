@@ -8,7 +8,8 @@
   "scripts": {
     "build": "eleventy",
     "clean": "rm -rf _site",
-    "dev": "npm run clean && eleventy --serve"
+    "dev": "npm run clean && eleventy --serve",
+    "albums": "cd src/data/_albums && node get_album_info.js"
   },
   "dependencies": {
     "@11ty/eleventy": "3.0.0",

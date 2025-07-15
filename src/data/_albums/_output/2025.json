@@ -1,5 +1,13 @@
 [
   {
+    "album": "Pink Elephant",
+    "artist": "Arcade Fire",
+    "link": "https://music.apple.com/us/album/1801683602",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/08/dd/f7/08ddf748-8c27-c083-bebd-f610d33c1b27/196872846362.jpg/600x600bb.jpg",
+    "genre": "Rock",
+    "itunesId": 1801683602
+  },
+  {
     "album": "A Study of Losses",
     "artist": "Beirut",
     "link": "https://music.apple.com/us/album/a-study-of-losses/1781068670?uo=4",
@@ -64,6 +72,14 @@
     "itunesId": 1776734584
   },
   {
+    "album": "It's Summer, I Love You, and I'm Surrounded by Snow",
+    "artist": "Dead Gowns",
+    "link": "https://music.apple.com/us/album/1771533549",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/4e/e4/214ee40a-234f-07f3-dc73-c0b43382dd86/198622780315_cover.jpg/600x600bb.jpg",
+    "genre": "Alternative Folk",
+    "itunesId": 1771533549
+  },
+  {
     "album": "Lonely People With Power",
     "artist": "Deafheaven",
     "link": "https://music.apple.com/us/album/lonely-people-with-power/1792077173?uo=4",
@@ -72,12 +88,36 @@
     "itunesId": 1792077173
   },
   {
+    "album": "Dan's Boogie",
+    "artist": "Destroyer",
+    "link": "https://music.apple.com/us/album/1783642496",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/51/3a/2c/513a2c33-f8a1-f1cb-076e-8fd5bc7dcc3d/1802.jpg/600x600bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1783642496
+  },
+  {
     "album": "DÍA",
     "artist": "Ela Minus",
     "link": "https://music.apple.com/us/album/d%C3%ADa/1743438405?uo=4",
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/61/e8/ed/61e8ed84-89fa-eed0-8acd-7fd0349703b0/887828050468.png/640x640bb.jpg",
     "genre": "Electronic",
     "itunesId": 1743438405
+  },
+  {
+    "album": "Goodbye Small Head",
+    "artist": "Ezra Furman",
+    "link": "https://music.apple.com/us/album/1791844896",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f0/13/ee/f013eee1-647c-833a-5ae4-0955f4b3dce2/cover.jpg/600x600bb.jpg",
+    "genre": "Indie Rock",
+    "itunesId": 1791844896
+  },
+  {
+    "album": "Virgin",
+    "artist": "Lorde",
+    "link": "https://music.apple.com/us/album/1810905299",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/72/3c/07/723c07a7-4ff6-b052-927d-6997fff13676/25UMGIM60545.rgb.jpg/600x600bb.jpg",
+    "genre": "Pop",
+    "itunesId": 1810905299
   },
   {
     "album": "Lucius",
@@ -110,6 +150,14 @@
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/e0/df/56e0df15-91bb-f699-9f87-c4f225b25eb1/4250795609353.jpg/640x640bb.jpg",
     "genre": "Alternative",
     "itunesId": 1804740901
+  },
+  {
+    "album": "VOLUME 2",
+    "artist": "Mercy",
+    "link": "https://music.apple.com/us/album/1793839900",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/17/d9/f1/17d9f150-23e7-81b8-6f73-f7d88b1cad7b/52255.jpg/600x600bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1793839900
   },
   {
     "album": "The Bad Fire",
@@ -160,6 +208,14 @@
     "itunesId": 1790744905
   },
   {
+    "album": "Blood On the Silver Screen",
+    "artist": "SASAMI",
+    "link": "https://music.apple.com/us/album/1765309413",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/59/ad/4b59ad6e-3977-2f82-82a2-059bb4b40169/887828053568.png/600x600bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1765309413
+  },
+  {
     "album": "Bunky Becky Birthday Boy",
     "artist": "Sleigh Bells",
     "link": "https://music.apple.com/us/album/bunky-becky-birthday-boy/1795574689?uo=4",
@@ -174,6 +230,22 @@
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/01/af/ce/01afce8d-1eef-af4e-450e-059da8ab9614/198715254341.png/640x640bb.jpg",
     "genre": "Alternative",
     "itunesId": 1806382614
+  },
+  {
+    "album": "Fairyland Codex",
+    "artist": "Tropical Fuck Storm",
+    "link": "https://music.apple.com/us/album/1793336908",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f4/cc/50/f4cc503c-e67d-b96d-5f9c-a1b10d83f7e0/809236003096_cover.jpg/600x600bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1793336908
+  },
+  {
+    "album": "Never Enough",
+    "artist": "Turnstile",
+    "link": "https://music.apple.com/us/album/1805820903",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/1c/28/d11c28a8-0e83-41c3-afc7-b873dd7be188/075679614896.jpg/600x600bb.jpg",
+    "genre": "Rock",
+    "itunesId": 1805820903
   },
   {
     "album": "The Place After This One",
@@ -206,5 +278,13 @@
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/1d/1d/e51d1d30-7f83-3f80-39fa-88ae04722d3f/889845965800.jpg/640x640bb.jpg",
     "genre": "Indie Pop",
     "itunesId": 1799070988
+  },
+  {
+    "album": "Rarely Do I Dream",
+    "artist": "Youth Lagoon",
+    "link": "https://music.apple.com/us/album/1777296174",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7a/70/c9/7a70c90a-386f-8bae-0c0e-ddfa5b8935d6/198846747200.jpg/600x600bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1777296174
   }
 ]
