@@ -2,7 +2,7 @@
   {
     "name": "Education Advanced",
     "description": "Brand development and marketing site which merges multiple EdTech products into a cohesive, consistent platform.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/3Qlx9RkOPcZDF7W9dCYR9r/a30a3b9c652053bcc3c319659ea4e843/eai--featured.jpg",
+    "img": "https://projects.jaredpendergraft.com/eai--featured.jpg",
     "slug": "educationadvanced",
     "external": "https://educationadvanced.com/",
     "type": "featured",
@@ -10,33 +10,33 @@
     "role": ["UI/UX Design", "Front-End Development"],
     "images": [
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/1XCMNEb84pc8IUe6qXvu6y/793e360c201bbc5adc7d0728a26f7f17/eai-1.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/1NEhS687PhuC5M1Bjat3ne/22bb59681d2bc2769df366ee74360f84/eai-1-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/eai-1.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/eai-1-dark.svg",
         "title": "Primary brand elements"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/6OjwgxwRqUgIPyXAEg312i/b4feb108a1071bd6a8eb3730bcd2809e/eai-2.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/42CrqRMJDVZxPKK6tKoo6o/4184e4bce94400a5fe371a3cf02341e2/eai-2-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/eai-2.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/eai-2-dark.svg",
         "title": "TestHound product elements"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/ZfAqV7XR99w4WqMUUVv63/bf9b16a54b75663f2e021dc9582d091e/eai-3.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/4ghNsm5w3kQvivtAGfxLsR/29d6c75325c480c37ae5638cd850f302/eai-3-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/eai-3.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/eai-3-dark.svg",
         "title": "Testimonial and blog elements"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/0NFMW0jDobnLBp5cw0ucJ/420461607bb90911a5bf53cb962850ce/eai-4.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/01liN2TxBPH53G6uryxjjP/5a1bc33970694b17880c685defa0a180/eai-4-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/eai-4.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/eai-4-dark.svg",
         "title": "Why EAI elements + event info"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/yduK6G6MwDIQplWDQ1iOv/34dffa0bc5bfa7b94ec15074239d9723/eai-5.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/zBRxphXLq7JMxb6GBej9k/977b2fe08d3d751db09d4f549c816d90/eai-5-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/eai-5.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/eai-5-dark.svg",
         "title": "Profile page elements"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/70GrFdp8SDWfjSRN50AQu5/8cccb2f12edff1455f6a02d929f9eeec/eai-6.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/3d6Vy8r7v1vZnPZo2iFUP3/1727aa6d3da66dc8dac98018f5a0e488/eai-6-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/eai-6.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/eai-6-dark.svg",
         "title": "Email signature tool elements"
       }
     ]
@@ -44,7 +44,7 @@
   {
     "name": "Cardonex",
     "description": "Master schedule building application that maximizes teaching staff utilization and deliver over 90% of students’ first-choice classes.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/6Ob8YtztOp5XtVW0UsKUZi/ceabaf823e565d2d149f81e78414082d/cardonex--featured.jpg",
+    "img": "https://projects.jaredpendergraft.com/cardonex--featured.jpg",
     "slug": "cardonex",
     "external": "https://educationadvanced.com/products/cardonex/",
     "type": "featured",
@@ -52,43 +52,43 @@
     "role": ["UI/UX Design"],
     "images": [
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/2oNtTJ5yMhTsc0x7rSMHOc/53a08b1b022853e262f70ee879720450/cx-1.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/6EajJezGLPw9sU1hlmLAce/d91ff0aa9a12373c0974173953d068e6/cx-1-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-1.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-1-dark.svg",
         "title": "Logo revamp & color palette"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/3kq7S128W3vKNfBXMilYtw/013c79ee49ff551cdece133075227a5f/cx-2.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/3HZ5fQbruAoq8tKbqXrfc9/7d5494607652d1d80ca8ba277ae53669/cx-2-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-2.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-2-dark.svg",
         "title": "Onboarding steps"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/42ch0XKQ2ED6iP0JFujCpG/ed6ae6f50d7e143861203d7b5b781a8c/cx-3.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/2SPEN8NeVOmZ3CTy8i07e1/43eafe416589667c5dbce7a4fdf0ad9e/cx-3-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-3.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-3-dark.svg",
         "title": "Teacher assignments overview"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/1OaNEjiUrnsUVYPoghD7AY/baa905575fda31f41b9b48633e45b0e1/cx-4.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/5ROU3yIV05dXnO7xwAZAec/b60649dd0168a4756d0c89d097965ae4/cx-4-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-4.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-4-dark.svg",
         "title": "Course size designations"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/5k0b4MCFCpXUgSIvByhSg0/1df982c455e12ddb51af0f1ae7343d51/cx-5.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/3TAPHepvb6RVZWbsKuwNiI/efe4a6a4f35afcb84daedcc5625ad7e6/cx-5-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-5.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-5-dark.svg",
         "title": "Staffing plan overview"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/7BhtfcdRaEiyQyDNlJr0Ht/1bcf30aaa04632f712134574e8624601/cx-6.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/4DBRDGHNOAqr6UR3jYnNnb/b864bce7c6bc22848a6067f9f666f05f/cx-6-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-6.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-6-dark.svg",
         "title": "Teacher section adjustments"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/BkgSsuimX9gaVwrnRtcQ8/e87c6a2e8d59a075bc89ef49c824f67b/cx-7.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/Op2vS959F6z63ZqsWKxea/318c6d12e1820d855dc97a0caf12c41b/cx-7-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-7.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-7-dark.svg",
         "title": "Chip configuration interaction"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/2brA27m3k1eqXXrxVouoxW/75edbbfac330d34579d3548cdfb12df3/cx-8.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/1Y14gwkuJLl81dh2G2QJxH/4a17a12c3f48a41c06e4b6cb597fabb3/cx-8-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/cx-8.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/cx-8-dark.svg",
         "title": "Scheduler chip drag-and-drop"
       }
     ]
@@ -96,7 +96,7 @@
   {
     "name": "TestHound",
     "description": "Application that helps educators plan and coordinate all their school assessments, while keeping track of student accommodations, and student testing history.",
-    "img": "https://images.ctfassets.net/cuehicrlqnvu/2Qb64megGPgvm7hMfaI5xA/2c561e367ac05c8e72b5a52488647f46/testhound--featured.jpg",
+    "img": "https://projects.jaredpendergraft.com/testhound--featured.jpg",
     "slug": "testhound",
     "external": "https://educationadvanced.com/products/testhound/",
     "type": "featured",
@@ -104,53 +104,53 @@
     "role": ["UI/UX Design"],
     "images": [
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/48vXjpT9HHgsgDZQXR3hjo/31a77d3d234ca057b688f0bad18fe87d/th-1.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/5KFJuzeMt6nfDL0lBW7f12/54c75c7fa2015ffb5de8b4899cada7e3/th-1-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-1.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-1-dark.svg",
         "title": "Logo revamp & color palette"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/1hj6eyu7imRgd6AkHRHofI/b35d38e7ccca4af69c7a081f5e0ac053/th-2.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/FnHK0WHYy8SlFxhau3cZE/8c8932d17153c0aa79319e2857698054/th-2-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-2.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-2-dark.svg",
         "title": "Accommodation mapping interface"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/6CLTjQb1ovJ5oZuAKhvB0Z/595e6c5f22d2bd24d8da248186b94639/th-3.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/5VBb2ENCojYmb46pLxnr88/4fc8ad02817e67dd76a9f19d6ecc2081/th-3-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-3.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-3-dark.svg",
         "title": "Global system updates"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/6nv5qeG2t3nFc19zPXRhAc/9eff3c1f6823a918f453c47786bbcace/th-4.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/6JKq3CybZPHZYgfE7IZTq0/774fe331c18f4c69c2be1ed6082add3d/th-4-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-4.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-4-dark.svg",
         "title": "Student profile details"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/1jd9BAzUtZ22STmFvkb8s7/658a66db8fadaf511719d550d1dd1028/th-5.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/56qsEPgryQlwU9n123yEGq/c5ffb761a88bfad880acad75d4d8af31/th-5-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-5.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-5-dark.svg",
         "title": "Student profile accommodations"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/7jQcWf8TFl1AaOHdIFEoGV/604890e085046f56dfb491658ae50f6a/th-6.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/3e8qaF7PxMJB40eClSKN56/0d4a5fddcdc264a96ca96de7ec48aeec/th-6-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-6.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-6-dark.svg",
         "title": "Schedule configuration"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/23pQ0exV0bNzRwpnBLzALn/4067335fbd93ca6adb5d968695836678/th-7.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/4v5gFbEhlRvcMzhlQI7qGs/3ac785c019c9cc005189e53fe07b9eb1/th-7-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-7.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-7-dark.svg",
         "title": "Test filtering"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/5C3xn19zdDiT72hUUXxaCz/572c0a8bbb52e1ae5e81256d29150401/th-8.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/Zy4nTN4WFDKTMfLUOsgQW/f7c9f45e21dbf01c109639f31c62db61/th-8-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-8.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-8-dark.svg",
         "title": "Student selection inside a test"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/6hcZrkcwQbCwzVlzleOwFX/7b58f086698521e90809dadcae79c752/th-9.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/3qVq1sgpAkCbcHzsv5rYg/3fe7122e0c01897a66378a4b204fff3f/th-9-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-9.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-9-dark.svg",
         "title": "Test materials management"
       },
       {
-        "img": "https://images.ctfassets.net/cuehicrlqnvu/1qo3pTiNFbWzeFcxnu8c4g/1fe27074242195fb4f4e554773e9e4e1/th-10.svg",
-        "imgDark": "https://images.ctfassets.net/cuehicrlqnvu/3ryl4Vs0BjrwxiMq666Bna/b7d7b7946c20203df2feb3231daa97ee/th-10-dark.svg",
+        "img": "https://projects.jaredpendergraft.com/th-10.svg",
+        "imgDark": "https://projects.jaredpendergraft.com/th-10-dark.svg",
         "title": "Test reports administration"
       }
     ]
@@ -158,35 +158,35 @@
   {
     "name": "Pasta",
     "description": "Pasta provides a great starting place for web projects. It combines light styling for common web elements, yummy.",
-    "img": "sides/pasta.svg",
+    "img": "svgs/sides/pasta.svg",
     "external": "https://pasta.jaredpendergraft.com/",
     "type": "side"
   },
   {
     "name": "Photos",
     "description": "Photos from my trips around the world with my family.",
-    "img": "sides/photos.svg",
+    "img": "svgs/sides/photos.svg",
     "external": "https://photos.jaredpendergraft.com/",
     "type": "side"
   },
   {
     "name": "Avery Mirabelle",
     "description": "Videos from my daughter’s life, showcasing her creativity and attention to detail.",
-    "img": "sides/avery.svg",
+    "img": "svgs/sides/avery.svg",
     "external": "https://averymirabelle.com",
     "type": "side"
   },
   {
     "name": "Ezra Oliver",
     "description": "Videos from my son’s life, showcasing his silliness and fearlessness.",
-    "img": "sides/ezra.svg",
+    "img": "svgs/sides/ezra.svg",
     "external": "https://ezrapendergraft.com",
     "type": "side"
   },
   {
     "name": "These Kids Read",
     "description": "A collection of great picture books our family has read over the years. ",
-    "img": "sides/tkr.svg",
+    "img": "svgs/sides/tkr.svg",
     "external": "https://thesekidsread.jaredpendergraft.com",
     "type": "side"
   }

@@ -480,7 +480,7 @@
 
               animation: reveal linear both;
               animation-timeline: view(inline);
-              animation-range: 25vh 50vh;
+              animation-range: 0vh 40vh;
             }
           }
 

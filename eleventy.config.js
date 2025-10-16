@@ -18,9 +18,14 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["avif", "webp"],
+    statsOnly: true,
+    cacheOptions: {
+      duration: "90d",
+      directory: ".cache/eleventy-img",
+      removeUrlQueryParams: false
+    },
+    formats: ["avif", "webp", "jpeg"],
     widths: [320, 640],
-    dryRun: true,
     htmlOptions: {
       imgAttributes: {
         decoding: "async",
@@ -29,8 +34,32 @@ export default function (eleventyConfig) {
         sizes: "(min-width: 36em) 33.3vw, 100vw"
       }
     },
-    urlFormat: ({ src, width, format }) =>
-      `${src}${format !== "svg" ? `?fm=${format}&w=${width}` : ""}`
+    urlFormat: ({ src, width, format }) => {
+      /*
+       * Skip transformation for SVGs - always return original URL
+       * SVG is a vector format and shouldn't be converted to raster formats
+       */
+      if (src.endsWith(".svg")) {
+        return src;
+      }
+
+      /*
+       * Use Cloudflare's image resizing service for R2-hosted images
+       * Skip transformation for non-R2 images
+       */
+      if (!src.startsWith("https://projects.jaredpendergraft.com/")) {
+        return src;
+      }
+
+      const params = [`w=${width}`, `f=${format}`, "q=auto", "metadata=none"];
+
+      const finalUrl = src.replace(
+        /^https:\/\/([^\/]+)/,
+        `$&/cdn-cgi/image/${params.join(",")}`
+      );
+
+      return finalUrl;
+    }
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);
