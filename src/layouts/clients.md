@@ -3,7 +3,7 @@ eleventyComputed:
   title: "{{ client.title }} • Jared Pendergraft"
   description: "Details about “{{ client.title }}” project"
   slug: "/clients/{{ client.type }}/{{ client.slug }}"
-  class: "{{ client.type }}"
+  pageClass: "{{ client.type }}"
 layout: base.webc
 ---
 

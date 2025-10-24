@@ -191,6 +191,10 @@
     letter-spacing: -0.03125rem;
   }
 
+  h4 {
+    text-transform: uppercase;
+  }
+
   h2,
   h3,
   h4,
@@ -639,6 +643,11 @@
 }
 
 @media print {
+
+  :root {
+    --maxWidth: var(--width__xl);
+  }
+
   html {
     font-size: 80%;
   }
@@ -662,6 +671,7 @@
   }
 
   main {
+    overflow: unset;
     padding: var(--size__l) 0;
   }
 
@@ -685,5 +695,14 @@
   hr {
     display: inline-block;
     border-top: var(--size__xs) solid var(--color__highlight--semi);
+  }
+
+  blockquote {
+    padding: unset;
+  }
+
+  .agreement #signatures+hr,
+  .agreement hr:last-of-type {
+    page-break-before: always;
   }
 }

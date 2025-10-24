@@ -57,9 +57,9 @@ Agreement as of the date first written above.
 
 **Consultant’s Signature**
 
-{% include 'components/clients/signature.svg' %}
-
 Jared Pendergraft
+
+{% include 'components/clients/signature.svg' %}
 
 **Client’s Signature**
 
