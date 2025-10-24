@@ -49,6 +49,6 @@
   </meta>
 </head>
 
-<body class="color__bg--base--ghost" @html="content"></body>
+<body class="color__bg--saffron--ghost" @html="content"></body>
 
 </html>

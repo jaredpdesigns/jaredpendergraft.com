@@ -1,5 +1,9 @@
 [
   {
+    "album": "Pink Elephant",
+    "artist": "Arcade Fire"
+  },
+  {
     "album": "A Study of Losses",
     "artist": "Beirut"
   },
@@ -32,12 +36,28 @@
     "artist": "Coheed and Cambria"
   },
   {
+    "album": "It's Summer, I Love You, and I'm Surrounded by Snow",
+    "artist": "Dead Gowns"
+  },
+  {
     "album": "Lonely People With Power",
     "artist": "Deafheaven"
   },
   {
+    "album": "Dan's Boogie",
+    "artist": "Destroyer"
+  },
+  {
     "album": "DÍA",
     "artist": "Ela Minus"
+  },
+  {
+    "album": "Goodbye Small Head",
+    "artist": "Ezra Furman"
+  },
+  {
+    "album": "Virgin",
+    "artist": "Lorde"
   },
   {
     "album": "Lucius",
@@ -54,6 +74,10 @@
   {
     "album": "Lucro sucio; Los ojos del vacio",
     "artist": "The Mars Volta"
+  },
+  {
+    "album": "VOLUME 2",
+    "artist": "Mercy"
   },
   {
     "album": "The Bad Fire",
@@ -80,12 +104,24 @@
     "artist": "Saint Motel"
   },
   {
+    "album": "Blood On the Silver Screen",
+    "artist": "SASAMI"
+  },
+  {
     "album": "Bunky Becky Birthday Boy",
     "artist": "Sleigh Bells"
   },
   {
     "album": "Face Down in the Garden",
     "artist": "Tennis"
+  },
+  {
+    "album": "Fairland Codex",
+    "artist": "Tropical Fuck Storm"
+  },
+  {
+    "album": "Never Enough",
+    "artist": "Turnstile"
   },
   {
     "album": "The Place After This One",
@@ -102,5 +138,9 @@
   {
     "album": "Two Lives",
     "artist": "Wet"
+  },
+  {
+    "album": "Rarely Do I Dream",
+    "artist": "Youth Lagoon"
   }
 ]

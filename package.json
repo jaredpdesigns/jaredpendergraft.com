@@ -8,7 +8,8 @@
   "scripts": {
     "build": "eleventy",
     "clean": "rm -rf _site",
-    "dev": "npm run clean && eleventy --serve"
+    "dev": "npm run clean && eleventy --serve",
+    "albums": "cd src/data/_albums && node get_album_info.js"
   },
   "dependencies": {
     "@11ty/eleventy": "3.0.0",
@@ -26,5 +27,9 @@
     "postcss-import": "^16.1.0",
     "postcss-minify": "^1.1.0",
     "postcss-nested": "^7.0.2"
-  }
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2"
+  },
+  "packageManager": "yarn@4.2.2"
 }

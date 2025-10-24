@@ -2,7 +2,7 @@
 layout: root.webc
 ---
 
-<header class="border__block-end border__block-start color__border--base--light">
+<header class="border__block-end color__border--saffron--light">
   <section class="flow__block margin__inline--auto padding__block--m">
     <nav class="flow__flex flow__align--inline-center flow__align--block-center flow__flex--wrap">
       <a href="/" title="Return to Profile" class="color__type--base--ish radius__xs type__align--center">
@@ -51,7 +51,7 @@ layout: root.webc
         Built using
         <a rel="noopener" target="_blank" href="https://www.11ty.dev">11ty</a>
         and <a rel="noopener" target="_blank" href="https://www.11ty.dev/docs/languages/webc">WebC</a> and hosted on
-        <a rel="noopener" target="_blank" href="https://www.netlify.com">Netlify</a>
+        <a rel="noopener" target="_blank" href="https://www.cloudflare.com">Cloudflare</a>
       </li>
     </ul>
     <section class="color__type--base--mid flow__flex flow__align--block-center flow__flex--wrap flow__gap--column-l">

@@ -2,7 +2,8 @@ dist/
 node_modules/
 .DS_Store
 .env
-.yarn
-# Local Netlify folder
-.netlify
-.yarn/install-state.gz
+*.gz
+.wrangler
+.pnp.cjs
+.pnp.loader.mjs
+.cache

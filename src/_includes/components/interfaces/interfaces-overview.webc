@@ -3,7 +3,7 @@
     webc:for="interface of interfaces" :href="interface.page.url">
     <figure class="overflow__hidden">
       <img-svg :alt="`${interface.data.component} featured image`"
-        :src="`interfaces/${interface.data.component.toLowerCase().replace(' ', '-')}.svg`" webc:nokeep></img-svg>
+        :src="`svgs/interfaces/${interface.data.component.toLowerCase().replace(' ', '-')}.svg`" webc:nokeep></img-svg>
     </figure>
     <footer class="border__block-start color__border--base--light flow__flex flow__align--inline-center padding__m">
       <h3 class="type__align--center" @text="interface.data.component"></h3>

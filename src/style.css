@@ -18,6 +18,16 @@
     @media (min-width: 60rem) {
       --bleed: calc(var(--size__l) * -1);
     }
+
+    @media screen and (prefers-color-scheme: dark) {
+      --color__saffron--ghost: var(--color__base--ghost);
+      --color__saffron--light: var(--color__base--light);
+    }
+
+    &[data-theme="dark"] {
+      --color__saffron--ghost: var(--color__base--ghost);
+      --color__saffron--light: var(--color__base--light);
+    }
   }
 
   body {
@@ -118,6 +128,7 @@
 
     >main {
       background-color: var(--color__contrast);
+      border-block-end: var(--size__xxs) solid var(--color__saffron--light);
       block-size: 100%;
       border-bottom-left-radius: var(--size__l);
       border-bottom-right-radius: var(--size__l);
@@ -213,8 +224,8 @@
   }
 
   blockquote {
-    --color__bg: var(--color__base--ghost);
-    --color__border: transparent;
+    --color__bg: var(--color__saffron--ghost);
+    --color__border: var(--color__saffron--light);
     border-radius: var(--size__l);
     box-shadow: none;
     margin-inline: var(--bleed);
@@ -368,6 +379,19 @@
     .genre {
       margin-inline-start: calc(var(--size__s) * -1);
     }
+
+    a {
+      svg {
+        color: var(--color__base--mid);
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          color: var(--color__base--ish)
+        }
+      }
+    }
   }
 
   .gallery {
@@ -460,7 +484,7 @@
 
               animation: reveal linear both;
               animation-timeline: view(inline);
-              animation-range: 25vh 50vh;
+              animation-range: 0vh 40vh;
             }
           }
 
@@ -559,6 +583,10 @@
 
     &:hover img {
       transform: scale(1.0625);
+
+      [data-theme="dark"] & {
+        filter: brightness(1) grayscale(0);
+      }
     }
 
     img {
@@ -581,7 +609,6 @@
   }
 
   .reccommendation {
-    --color__border: var(--color__base--light);
     padding-block-start: var(--size__m);
     padding-block-end: unset;
     padding-inline: unset;

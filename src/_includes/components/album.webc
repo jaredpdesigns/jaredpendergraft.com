@@ -1,6 +1,6 @@
 <section class="album">
   <figure class="album__wrap flow__grid flow__gap--l">
-    <img :alt="`Cover art for “${album.album}” by ${album.artist}`" class="color__bg--base--ghost radius__s shadow"
+    <img :alt="`Cover art for “${album.album}” by ${album.artist}`" class="color__bg--saffron--ghost radius__s shadow"
       :src="album.cover" />
     <figcaption>
       <h3 class="color__type--base">
@@ -11,7 +11,7 @@
       </p>
       <p>
         <span
-          class="genre color__bg--base--ghost color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
+          class="genre border__all color__bg--saffron--ghost color__border--saffron--light color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
           @text="album.genre"></span>
       </p>
       <p class="margin__block--m">

@@ -1536,10 +1536,13 @@ async function main(inputFilePath = null) {
   }
 }
 
-// Run the main function with command line arguments
-const inputFile = process.argv.slice(2).find((arg) => !arg.startsWith("-"));
-main(inputFile).catch((error) => {
-  console.error(`Unhandled error: ${error.message}`);
-  console.error(error.stack);
-  process.exit(1);
-});
+// Only run the script if it's being executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  // Run the main function with command line arguments
+  const inputFile = process.argv.slice(2).find((arg) => !arg.startsWith("-"));
+  main(inputFile).catch((error) => {
+    console.error(`Unhandled error: ${error.message}`);
+    console.error(error.stack);
+    process.exit(1);
+  });
+}
