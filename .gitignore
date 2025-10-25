@@ -6,4 +6,3 @@ node_modules/
 .wrangler
 .pnp.cjs
 .pnp.loader.mjs
-.cache
