@@ -128,13 +128,30 @@
 
     >main {
       background-color: var(--color__contrast);
-      border-block-end: var(--size__xxs) solid var(--color__saffron--light);
       block-size: 100%;
+      border-block-end: var(--size__xxs) solid var(--color__saffron--light);
       border-bottom-left-radius: var(--size__l);
       border-bottom-right-radius: var(--size__l);
+      inline-size: 100%;
+      margin-inline: auto;
+      max-inline-size: 100%;
       overflow: clip;
       transform: translate3d(0, 0, 0);
       z-index: 2;
+
+      @media (prefers-reduced-motion: no-preference) {
+        @supports (animation-timeline: scroll()) {
+          @keyframes shrinkWidth {
+            to {
+              max-inline-size: calc(100% - var(--gutter));
+            }
+          }
+
+          animation: shrinkWidth linear both;
+          animation-range: 90% 100%;
+          animation-timeline: scroll(root block);
+        }
+      }
     }
 
     >main>article {
