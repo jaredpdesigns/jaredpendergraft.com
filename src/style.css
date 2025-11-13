@@ -139,7 +139,7 @@
       transform: translate3d(0, 0, 0);
       z-index: 2;
 
-      @media (prefers-reduced-motion: no-preference) {
+      @media (prefers-reduced-motion: no-preference) and (min-width: 60rem) {
         @supports (animation-timeline: scroll()) {
           @keyframes shrinkWidth {
             to {
