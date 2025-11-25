@@ -16,6 +16,14 @@
     "itunesId": 1821842705
   },
   {
+    "album": "Loner",
+    "artist": "Barry Can't Swim",
+    "link": "https://music.apple.com/us/album/1798245645",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4d/6f/3b/4d6f3b76-ee77-d2e2-a332-075d9aa494c2/5054429203578.png/600x600bb.jpg",
+    "genre": "Electronic",
+    "itunesId": 1798245645
+  },
+  {
     "album": "A Study of Losses",
     "artist": "Beirut",
     "link": "https://music.apple.com/us/album/a-study-of-losses/1781068670?uo=4",
@@ -374,6 +382,14 @@
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f5/a2/4f/f5a24f67-78fe-da41-29bf-f3f0c24bd933/196873088709.jpg/600x600bb.jpg",
     "genre": "Alternative",
     "itunesId": 1812904249
+  },
+  {
+    "album": "Dreams of Being Dust",
+    "artist": "The World Is A Beautiful Place & I Am No Longer Afraid to Die",
+    "link": "https://music.apple.com/us/album/1819074470",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fb/49/71/fb497100-f600-239c-1c52-adb9be6bfc54/0045778799169.png/600x600bb.jpg",
+    "genre": "Alternative",
+    "itunesId": 1819074470
   },
   {
     "album": "Rarely Do I Dream",

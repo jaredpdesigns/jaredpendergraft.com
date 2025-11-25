@@ -4,135 +4,52 @@ import fs from "fs";
 import path from "path";
 import readline from "readline";
 import { fileURLToPath } from "url";
-import config from "./config.js";
 
-// Create __dirname equivalent in ESM
+/* Create __dirname equivalent in ESM */
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// App-specific configuration
+/* Directory paths */
+const INPUT_DIR = path.join(__dirname, "_input");
+const OUTPUT_DIR = path.join(__dirname, "_output");
+
+/* App-specific configuration */
 const APP_CONFIG = {
-  ENFORCE_TARGET_YEAR: false,
-  INTERACTIVE_MODE: true,
   COUNTRY: "US",
   SEARCH_LIMIT: 10,
-  VERIFY_MODE: false, // Only check for matches, don't add new entries
-  VERBOSE: false, // Control detailed logging output
-  SELECTION_MODE: false, // Allow selecting from multiple search results
-  HYBRID_MODE: true // Try automatic matching first, fallback to selection
+  VERBOSE: false
 };
 
-// Path to problematic albums JSON file
-const PROBLEMATIC_ALBUMS_FILE = path.join(__dirname, "problematic_albums.json");
-
-// Store loaded problematic albums
-let problematicAlbums = { specialCases: [] };
-
-// Parse command line arguments
+/* Parse command line arguments */
 function parseArgs() {
   const args = process.argv.slice(2);
   for (const arg of args) {
-    if (arg === "--non-interactive" || arg === "-n") {
-      APP_CONFIG.INTERACTIVE_MODE = false;
-      console.log("Running in non-interactive mode");
-    }
-    if (arg === "--verify" || arg === "-v") {
-      APP_CONFIG.VERIFY_MODE = true;
-      console.log("Running in verification mode (just checking for matches)");
-    }
     if (arg === "--verbose" || arg === "-d") {
       APP_CONFIG.VERBOSE = true;
       console.log("Running with verbose debugging output");
     }
-    if (arg === "--selection" || arg === "-s") {
-      APP_CONFIG.SELECTION_MODE = true;
-      console.log("Running in selection mode (choose from search results)");
-    }
-    if (arg === "--hybrid" || arg === "-h") {
-      APP_CONFIG.HYBRID_MODE = true;
-      console.log(
-        "Running in hybrid mode (auto-match first, fallback to selection)"
-      );
-    }
   }
 }
 
-// Variables
+/* Variables */
 let rl;
 
 /**
  * Initialize the script
  */
 function initialize() {
-  // Parse command line arguments
   parseArgs();
 
-  // Create directories if they don't exist
-  if (!fs.existsSync(config.INPUT_DIR)) {
-    fs.mkdirSync(config.INPUT_DIR, { recursive: true });
+  /* Create directories if they don't exist */
+  if (!fs.existsSync(INPUT_DIR)) {
+    fs.mkdirSync(INPUT_DIR, { recursive: true });
   }
 
-  if (!fs.existsSync(config.OUTPUT_DIR)) {
-    fs.mkdirSync(config.OUTPUT_DIR, { recursive: true });
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
 
-  // Load problematic albums list
-  loadProblematicAlbums();
-
-  // Initialize readline
   initReadline();
-}
-
-/**
- * Load problematic albums from JSON file
- */
-function loadProblematicAlbums() {
-  try {
-    if (fs.existsSync(PROBLEMATIC_ALBUMS_FILE)) {
-      problematicAlbums = JSON.parse(
-        fs.readFileSync(PROBLEMATIC_ALBUMS_FILE, "utf8")
-      );
-      console.log(
-        `Loaded ${problematicAlbums.specialCases.length} problematic album cases`
-      );
-    } else {
-      console.log("No problematic_albums.json file found, using empty list");
-      problematicAlbums = { specialCases: [] };
-    }
-  } catch (error) {
-    console.error(`Error loading problematic albums: ${error.message}`);
-    problematicAlbums = { specialCases: [] };
-  }
-}
-
-/**
- * Check if an album is in the problematic list
- * @param {string} albumTitle - Album title to check
- * @param {string} artistName - Artist name to check
- * @returns {boolean} - Whether the album is problematic
- */
-function isProblematicAlbum(albumTitle, artistName) {
-  if (!albumTitle || !artistName) return false;
-
-  return problematicAlbums.specialCases.some(
-    (entry) => entry.album === albumTitle && entry.artist === artistName
-  );
-}
-
-/**
- * Get blocked matches for a problematic album
- * @param {string} albumTitle - Album title to check
- * @param {string} artistName - Artist name to check
- * @returns {Array} - Array of blocked matches or empty array if none
- */
-function getBlockedMatches(albumTitle, artistName) {
-  if (!albumTitle || !artistName) return [];
-
-  const problematicEntry = problematicAlbums.specialCases.find(
-    (entry) => entry.album === albumTitle && entry.artist === artistName
-  );
-
-  return problematicEntry ? problematicEntry.blockedMatches : [];
 }
 
 /**
@@ -152,6 +69,10 @@ function initReadline() {
  */
 function askQuestion(question) {
   return new Promise((resolve) => {
+    /* Ensure readline is initialized */
+    if (!rl || rl.closed) {
+      initReadline();
+    }
     rl.question(question, (answer) => {
       resolve(answer);
     });
@@ -498,138 +419,65 @@ function normalizePropertyOrder(entry) {
 }
 
 /**
- * Display search results and let the user select one
- * @param {Array} results - Array of iTunes search results
- * @param {string} albumTitle - Original album title query
- * @param {string} artistName - Original artist name query
+ * Check if an entry is already successfully matched in output
+ * Uses EXACT matching only - "Album" and "Album II" are different albums
+ * @param {string} albumTitle - Album title to check
+ * @param {string} artistName - Artist name to check
  * @param {Array} existingData - Existing albums from the output file
- * @returns {Object|null} - Selected album or null if no selection
+ * @returns {Object|null} - Existing entry if found, null otherwise
  */
-async function selectFromResults(
-  results,
-  albumTitle,
-  artistName,
-  existingData = []
-) {
-  // First check if this album already exists in the output file by flexible matching
-  if (existingData && existingData.length > 0) {
-    const normalizedAlbum = normalizeText(albumTitle);
-    const normalizedArtist = normalizeText(artistName);
+function findExistingEntry(albumTitle, artistName, existingData) {
+  if (!existingData || existingData.length === 0) return null;
 
-    const existingEntry = existingData.find((entry) => {
-      // Try exact normalized match
-      const exactMatch =
-        normalizeText(entry.album) === normalizedAlbum &&
-        normalizeText(entry.artist) === normalizedArtist;
+  const normalizedAlbum = normalizeText(albumTitle);
+  const normalizedArtist = normalizeText(artistName);
 
-      // Try advanced matching
-      const advancedMatch =
-        !exactMatch &&
-        advancedTextMatch(entry.artist, artistName) &&
-        advancedTextMatch(entry.album, albumTitle);
+  const existingEntry = existingData.find((entry) => {
+    /* Check if entry has valid data (was successfully matched) */
+    if (!entry.link || !entry.itunesId) return false;
 
-      return exactMatch || advancedMatch;
-    });
+    /* Require exact match - no fuzzy matching for checking existing entries */
+    return (
+      normalizeText(entry.album) === normalizedAlbum &&
+      normalizeText(entry.artist) === normalizedArtist
+    );
+  });
 
-    if (existingEntry) {
-      console.log(
-        `  Skipping: "${albumTitle}" by "${artistName}" (already in output file)`
-      );
-      return existingEntry;
-    }
-  }
-
-  if (!results || results.length === 0) {
-    console.log("  No results found to select from.");
-    return await handleManualUrlEntry(albumTitle, artistName);
-  }
-
-  console.log(`\n  Search results for "${albumTitle}" by "${artistName}":`);
-  console.log("  ----------------------------------------------------");
-
-  // Display each result with relevant info
-  for (let i = 0; i < results.length; i++) {
-    const result = results[i];
-    const releaseDate = result.releaseDate
-      ? new Date(result.releaseDate).getFullYear()
-      : "N/A";
-    const albumName = result.collectionName || result.trackName || "Unknown";
-    const artist = result.artistName || "Unknown";
-    const genre = result.primaryGenreName || "Unknown";
-
-    console.log(`  ${i + 1}. Album: "${albumName}"`);
-    console.log(`     Artist: "${artist}"`);
-    console.log(`     Year: ${releaseDate}`);
-    console.log(`     Genre: ${genre}`);
-    console.log(`     iTunes ID: ${result.collectionId || "N/A"}`);
-    console.log("  ----------------------------------------------------");
-  }
-
-  console.log("  0. None of these / Enter Apple Music URL manually");
-
-  let selection = await askQuestion("  Enter number of correct album: ");
-  const selectionNum = parseInt(selection, 10);
-
-  if (
-    isNaN(selectionNum) ||
-    selectionNum < 0 ||
-    selectionNum > results.length
-  ) {
-    console.log("  Invalid selection, skipping this album.");
-    return null;
-  }
-
-  if (selectionNum === 0) {
-    console.log("  No matching album selected.");
-    // Pass the first result as the rejected match
-    return await handleManualUrlEntry(albumTitle, artistName, results[0]);
-  }
-
-  return results[selectionNum - 1];
+  return existingEntry || null;
 }
 
 /**
  * Handle manual Apple Music URL entry and lookup
  * @param {string} albumTitle - Original album title
  * @param {string} artistName - Original artist name
- * @param {Object|null} automaticMatch - The automatic match that was rejected (if applicable)
  * @returns {Object|null} - Album details or null if failed
  */
-async function handleManualUrlEntry(
-  albumTitle,
-  artistName,
-  automaticMatch = null
-) {
-  const response = await askQuestion(
-    "  Would you like to enter an Apple Music URL for this album? (y/n): "
-  );
+async function handleManualUrlEntry(albumTitle, artistName) {
+  console.log(`  No automatic match found for "${albumTitle}" by "${artistName}"`);
 
-  if (response.toLowerCase() !== "y") {
+  const url = await askQuestion("  Enter Apple Music URL (or press Enter to skip): ");
+
+  if (!url || !url.trim()) {
     console.log("  Skipping this album.");
     return null;
   }
 
-  // Add this album to problematic albums list since it required manual intervention
-  saveProblematicAlbum(albumTitle, artistName, automaticMatch);
-
-  const url = await askQuestion("  Enter Apple Music URL: ");
-  if (!url || !url.includes("music.apple.com")) {
+  if (!url.includes("music.apple.com")) {
     console.log("  Invalid Apple Music URL. Skipping this album.");
     return null;
   }
 
-  // Extract iTunes ID from URL
-  let itunesId = null;
+  /* Extract iTunes ID from URL */
   const match = url.match(/\/album\/[^/]+\/(\d+)(?:\?|$)/);
-  if (match && match[1]) {
-    itunesId = normalizeItunesId(match[1]);
-    console.log(`  Extracted iTunes ID: ${itunesId}`);
-  } else {
+  if (!match || !match[1]) {
     console.log("  Could not extract iTunes ID from URL. Skipping this album.");
     return null;
   }
 
-  // Use iTunes lookup API to get album details
+  const itunesId = normalizeItunesId(match[1]);
+  console.log(`  Extracted iTunes ID: ${itunesId}`);
+
+  /* Use iTunes lookup API to get album details */
   const lookupUrl = `https://itunes.apple.com/lookup?id=${itunesId}&entity=album`;
 
   if (APP_CONFIG.VERBOSE) {
@@ -669,7 +517,6 @@ async function handleManualUrlEntry(
 function isGenericAlbumTitle(albumTitle) {
   if (!albumTitle) return false;
 
-  // List of common/generic album titles that need stricter artist matching
   const genericTitles = [
     "honey",
     "romance",
@@ -705,63 +552,21 @@ function isGenericAlbumTitle(albumTitle) {
     "night"
   ];
 
-  // Normalized album title for comparison
   const normalizedTitle = albumTitle.toLowerCase().trim();
 
-  // Check for exact matches with generic titles
   if (genericTitles.includes(normalizedTitle)) return true;
 
-  // Check for titles containing "soundtrack" or "OST"
   if (
     normalizedTitle.includes("soundtrack") ||
     normalizedTitle.includes(" ost")
   )
     return true;
 
-  // Check for single word titles (often generic)
   if (
     normalizedTitle.split(/\s+/).length === 1 &&
     normalizedTitle.length < 10
   ) {
     return true;
-  }
-
-  return false;
-}
-
-/**
- * Check if a match is in the blacklist for a specific input
- * @param {string} inputAlbumTitle - Original album title
- * @param {string} inputArtistName - Original artist name
- * @param {string} resultTitle - Result album title
- * @param {string} resultArtist - Result artist name
- * @returns {boolean} - Whether the match is blacklisted
- */
-function isBlacklistedMatch(
-  inputAlbumTitle,
-  inputArtistName,
-  resultTitle,
-  resultArtist
-) {
-  // Use the new problematic albums system
-  const blockedMatches = getBlockedMatches(inputAlbumTitle, inputArtistName);
-
-  if (blockedMatches.length > 0) {
-    for (const blockedMatch of blockedMatches) {
-      if (
-        resultTitle.includes(blockedMatch.album) ||
-        blockedMatch.album.includes(resultTitle) ||
-        resultArtist.includes(blockedMatch.artist) ||
-        blockedMatch.artist.includes(resultArtist)
-      ) {
-        if (APP_CONFIG.VERBOSE) {
-          console.log(
-            `  Blacklist match found: "${resultTitle}" by "${resultArtist}" is blacklisted for "${inputAlbumTitle}" by "${inputArtistName}"`
-          );
-        }
-        return true;
-      }
-    }
   }
 
   return false;
@@ -777,22 +582,17 @@ function isBlacklistedMatch(
 function findBestMatch(results, albumTitle, artistName) {
   if (!results || results.length === 0) return null;
 
-  // Normalize inputs for comparison (basic normalization for initial filtering)
   const normalizedTitle = normalizeText(albumTitle);
   const normalizedArtist = normalizeText(artistName);
 
-  // Advanced normalized inputs (for better matching with edge cases)
   const advNormalizedTitle = advancedNormalizeText(albumTitle, true);
   const advNormalizedArtist = advancedNormalizeText(artistName, true);
 
-  // Increase strictness for very short titles or artist names (more prone to false matches)
   const isShortTitle = normalizedTitle.length <= 5;
   const isShortArtist = normalizedArtist.length <= 3;
-
-  // Check if album title is generic/common and requires stricter artist matching
   const isGenericTitle = isGenericAlbumTitle(albumTitle);
 
-  // For very short titles or artists, require exact matches
+  /* For very short titles or artists, require exact matches */
   if (isShortTitle || isShortArtist) {
     const exactMatch = results.find((result) => {
       const resultTitle = normalizeText(
@@ -805,20 +605,15 @@ function findBestMatch(results, albumTitle, artistName) {
       );
     });
 
-    if (exactMatch) {
-      if (APP_CONFIG.VERBOSE) {
-        console.log(
-          `  Found exact match for short title/artist: "${exactMatch.collectionName}" by "${exactMatch.artistName}"`
-        );
-      }
-      return exactMatch;
+    if (exactMatch && APP_CONFIG.VERBOSE) {
+      console.log(
+        `  Found exact match for short title/artist: "${exactMatch.collectionName}" by "${exactMatch.artistName}"`
+      );
     }
-
-    // For very short titles/artists, if no exact match, return null
-    return null;
+    return exactMatch || null;
   }
 
-  // First, look for exact match on both album title and artist
+  /* Look for exact match on both album title and artist */
   const exactMatch = results.find((result) => {
     const resultTitle = normalizeText(
       result.collectionName || result.trackName || ""
@@ -837,7 +632,7 @@ function findBestMatch(results, albumTitle, artistName) {
     return exactMatch;
   }
 
-  // Look for exact match with advanced normalization (handles editions, etc.)
+  /* Look for exact match with advanced normalization */
   const advExactMatch = results.find((result) => {
     const resultTitle = advancedNormalizeText(
       result.collectionName || result.trackName || "",
@@ -859,57 +654,33 @@ function findBestMatch(results, albumTitle, artistName) {
     return advExactMatch;
   }
 
-  // Calculate match scores for all results
+  /* Calculate match scores for all results */
   const scoredResults = results.map((result) => {
     const resultTitle = result.collectionName || result.trackName || "";
     const resultArtist = result.artistName || "";
 
-    // Calculate match scores
     const titleScore = calculateMatchScore(resultTitle, albumTitle);
     const artistScore = calculateMatchScore(resultArtist, artistName);
 
-    // Check if this is one of our known problematic albums
-    const isProblemAlbum = isProblematicAlbum(albumTitle, artistName);
-
-    // For known problematic albums, check if the artist matches exactly
-    const isExactArtistMatch = resultArtist
-      .toLowerCase()
-      .includes(artistName.toLowerCase());
-
-    // For generic/common album titles, increase the artist score weight significantly
-    // to avoid matching different artists with common album names
+    /* For generic/common album titles, increase the artist score weight */
     let artistWeight = isGenericTitle ? 0.85 : 0.6;
     let titleWeight = isGenericTitle ? 0.15 : 0.4;
 
-    // For very common titles like "Honey", "Romance", etc., weight artist match even more heavily
     if (normalizedTitle.length <= 6 && isGenericTitle) {
       artistWeight = 0.9;
       titleWeight = 0.1;
     }
 
-    // For problematic albums, use extreme weights to prioritize artist match
-    if (isProblemAlbum) {
-      artistWeight = 0.95;
-      titleWeight = 0.05;
-
-      // If this isn't an exact artist match for problematic albums, severely penalize the score
-      if (!isExactArtistMatch) {
-        artistScore *= 0.3;
-      }
-    }
-
-    // For soundtrack titles, especially ensure the correct specific version
+    /* For soundtrack titles, balance title and artist equally */
     if (
       normalizedTitle.includes("soundtrack") ||
       albumTitle.includes("FINAL FANTASY") ||
       albumTitle.includes("OST")
     ) {
-      // For soundtracks, exact title match is more important to get the right version
       titleWeight = 0.5;
       artistWeight = 0.5;
     }
 
-    // Combined score with weights
     const combinedScore = titleScore * titleWeight + artistScore * artistWeight;
 
     return {
@@ -917,46 +688,29 @@ function findBestMatch(results, albumTitle, artistName) {
       titleScore,
       artistScore,
       combinedScore,
-      isGenericTitle,
-      isProblemAlbum,
-      isExactArtistMatch
+      isGenericTitle
     };
   });
 
-  // Sort by combined score
-  scoredResults.sort((a, b) => {
-    // For problematic albums, prioritize exact artist matches above all else
-    if (a.isProblemAlbum && b.isProblemAlbum) {
-      if (a.isExactArtistMatch && !b.isExactArtistMatch) return -1;
-      if (!a.isExactArtistMatch && b.isExactArtistMatch) return 1;
-    }
+  scoredResults.sort((a, b) => b.combinedScore - a.combinedScore);
 
-    // Then sort by combined score
-    return b.combinedScore - a.combinedScore;
-  });
-
-  // Get the best match if it exceeds our thresholds
   const bestMatch = scoredResults[0];
 
   if (bestMatch) {
-    // For generic titles, require higher combined score and specifically a high artist score
     let requiredCombinedScore = isGenericTitle ? 0.85 : 0.8;
     let requiredArtistScore = isGenericTitle ? 0.7 : 0.5;
 
-    // For very common short titles, be even more strict
     if (normalizedTitle.length <= 6 && isGenericTitle) {
       requiredCombinedScore = 0.9;
       requiredArtistScore = 0.8;
     }
 
-    // For soundtrack titles, require high title score to ensure correct version
     if (
       normalizedTitle.includes("soundtrack") ||
       albumTitle.includes("FINAL FANTASY") ||
       albumTitle.includes("OST")
     ) {
       requiredCombinedScore = 0.85;
-      // Require a reasonable title match for soundtracks to get the right version
       if (bestMatch.titleScore < 0.7) {
         if (APP_CONFIG.VERBOSE) {
           console.log(
@@ -984,15 +738,11 @@ function findBestMatch(results, albumTitle, artistName) {
             2
           )}, combined=${bestMatch.combinedScore.toFixed(2)}`
         );
-        if (isGenericTitle) {
-          console.log(`  Applied stricter matching for generic album title`);
-        }
       }
       return bestMatch.result;
     }
   }
 
-  // If no good match found, return null
   return null;
 }
 
@@ -1009,26 +759,7 @@ function validateMatch(match, inputAlbumTitle, inputArtistName) {
   const resultTitle = match.collectionName || match.trackName || "";
   const resultArtist = match.artistName || "";
 
-  // Debug for known problematic cases
-  if (isProblematicAlbum(inputAlbumTitle, inputArtistName)) {
-    console.log(
-      `  VALIDATION CHECK for problematic case: "${resultTitle}" by "${resultArtist}" against "${inputAlbumTitle}" by "${inputArtistName}"`
-    );
-  }
-
-  // Check explicit blacklist first - highest priority rejection
-  if (
-    isBlacklistedMatch(
-      inputAlbumTitle,
-      inputArtistName,
-      resultTitle,
-      resultArtist
-    )
-  ) {
-    return null;
-  }
-
-  // Calculate match percentages for validation
+  /* Calculate match percentages for validation */
   const titleMatchScore = calculateMatchScore(resultTitle, inputAlbumTitle);
   const artistMatchScore = calculateMatchScore(resultArtist, inputArtistName);
 
@@ -1137,14 +868,7 @@ function calculateMatchScore(text1, text2) {
 async function searchForAlbum(albumTitle, artistName) {
   const baseUrl = "https://itunes.apple.com/search";
 
-  // Log specific problematic search combinations
-  if (isProblematicAlbum(albumTitle, artistName)) {
-    console.log(
-      `  WARNING: Handling known problematic case: "${albumTitle}" by "${artistName}"`
-    );
-  }
-
-  // Special case handling for albums with non-Latin characters like "ÁTTA"
+  /* Special case handling for albums with non-Latin characters like "ÁTTA" */
   let searchTerm = albumTitle;
   if (albumTitle === "ÁTTA") {
     searchTerm = "atta sigur ros"; // Explicit search term override
@@ -1179,19 +903,10 @@ async function searchForAlbum(albumTitle, artistName) {
     searchTerm = `${searchTerm} ${artistName}`;
   }
 
-  // Normalize for iTunes API
+  /* Normalize for iTunes API */
   const normalizedSearchTerm = normalizeForSearch(searchTerm);
 
-  // If not handling a special case, combine album and artist for more specific search
-  let query = `term=${normalizedSearchTerm}`;
-
-  // Add country and limit parameters
-  query += `&country=${APP_CONFIG.COUNTRY}&limit=${APP_CONFIG.SEARCH_LIMIT}&media=music&entity=album`;
-
-  // If enforcing target year, add year to query
-  if (APP_CONFIG.ENFORCE_TARGET_YEAR && targetYear) {
-    query += `&attribute=releaseYearTerm&releaseYearTerm=${targetYear}`;
-  }
+  const query = `term=${normalizedSearchTerm}&country=${APP_CONFIG.COUNTRY}&limit=${APP_CONFIG.SEARCH_LIMIT}&media=music&entity=album`;
 
   const searchUrl = `${baseUrl}?${query}`;
 
@@ -1227,73 +942,6 @@ async function searchForAlbum(albumTitle, artistName) {
   }
 }
 
-/**
- * Save problematic album to the problematic_albums.json file
- * @param {string} albumTitle - Album title to add
- * @param {string} artistName - Artist name to add
- * @param {Object|null} automaticMatch - The automatic match that was rejected (if applicable)
- * @returns {boolean} - Whether the save was successful
- */
-function saveProblematicAlbum(albumTitle, artistName, automaticMatch = null) {
-  if (!albumTitle || !artistName) return false;
-
-  // Check if this album is already in problematic albums list
-  if (isProblematicAlbum(albumTitle, artistName)) {
-    if (APP_CONFIG.VERBOSE) {
-      console.log(
-        `  Album "${albumTitle}" by "${artistName}" is already in problematic albums list`
-      );
-    }
-    return true;
-  }
-
-  try {
-    // Create a new entry
-    const newEntry = {
-      album: albumTitle,
-      artist: artistName,
-      blockedMatches: []
-    };
-
-    // If we have an automatic match that was rejected, add it to blockedMatches
-    if (automaticMatch) {
-      const resultTitle =
-        automaticMatch.collectionName || automaticMatch.trackName || "";
-      const resultArtist = automaticMatch.artistName || "";
-
-      if (resultTitle && resultArtist) {
-        newEntry.blockedMatches.push({
-          album: resultTitle,
-          artist: resultArtist
-        });
-
-        if (APP_CONFIG.VERBOSE) {
-          console.log(
-            `  Adding blocked match: "${resultTitle}" by "${resultArtist}"`
-          );
-        }
-      }
-    }
-
-    // Add new entry to problematic albums
-    problematicAlbums.specialCases.push(newEntry);
-
-    // Save to file
-    fs.writeFileSync(
-      PROBLEMATIC_ALBUMS_FILE,
-      JSON.stringify(problematicAlbums, null, 2),
-      "utf8"
-    );
-
-    console.log(
-      `  Added "${albumTitle}" by "${artistName}" to problematic albums list`
-    );
-    return true;
-  } catch (error) {
-    console.error(`  Error saving problematic album: ${error.message}`);
-    return false;
-  }
-}
 
 /**
  * Check if album is already in the list (duplicate detection)
@@ -1346,7 +994,7 @@ function saveProcessedData(year, data) {
     });
 
     // Save to file
-    const outputPath = path.join(config.OUTPUT_DIR, `${year}.json`);
+    const outputPath = path.join(OUTPUT_DIR, `${year}.json`);
     fs.writeFileSync(outputPath, JSON.stringify(uniqueData, null, 2), "utf8");
     console.log(`Saved ${uniqueData.length} albums to ${outputPath}`);
     return true;
@@ -1371,7 +1019,7 @@ async function main(inputFilePath = null) {
     if (inputFilePath) {
       const fullPath = path.isAbsolute(inputFilePath)
         ? inputFilePath
-        : path.join(config.INPUT_DIR, inputFilePath);
+        : path.join(INPUT_DIR, inputFilePath);
 
       if (fs.existsSync(fullPath)) {
         files.push(fullPath);
@@ -1382,9 +1030,9 @@ async function main(inputFilePath = null) {
     } else {
       // Otherwise, get all JSON files in the input directory
       files = fs
-        .readdirSync(config.INPUT_DIR)
+        .readdirSync(INPUT_DIR)
         .filter((file) => file.endsWith(".json"))
-        .map((file) => path.join(config.INPUT_DIR, file));
+        .map((file) => path.join(INPUT_DIR, file));
     }
 
     // Process each file
@@ -1405,11 +1053,11 @@ async function main(inputFilePath = null) {
       // Create output array
       const outputData = [];
 
-      // Load existing data if available
+      /* Load existing data if available */
       let existingData = [];
-      const outputFile = path.join(config.OUTPUT_DIR, `${year}.json`);
+      const outputFile = path.join(OUTPUT_DIR, `${year}.json`);
 
-      if (fs.existsSync(outputFile) && !APP_CONFIG.VERIFY_MODE) {
+      if (fs.existsSync(outputFile)) {
         try {
           existingData = JSON.parse(fs.readFileSync(outputFile, "utf8"));
           console.log(
@@ -1420,64 +1068,31 @@ async function main(inputFilePath = null) {
         }
       }
 
-      // Process each album
+      /* Process each album */
       for (const album of albums) {
         const { album: albumTitle, artist: artistName } = album;
 
         console.log(`\nProcessing "${albumTitle}" by "${artistName}"`);
 
-        // Check if this is in the existing data with flexible matching
-        if (existingData.length > 0) {
-          const existingEntry = existingData.find(
-            (entry) =>
-              advancedTextMatch(entry.album, albumTitle) &&
-              advancedTextMatch(entry.artist, artistName)
-          );
+        /* Check if this entry already exists in output with valid data */
+        const existingEntry = findExistingEntry(albumTitle, artistName, existingData);
 
-          if (existingEntry) {
-            console.log(`  Found existing entry, reusing it`);
-            outputData.push(existingEntry);
-            continue;
-          }
+        if (existingEntry) {
+          console.log(`  Already matched successfully, reusing existing entry`);
+          outputData.push(existingEntry);
+          continue;
         }
 
-        let result = null;
+        /* Try automatic matching */
+        console.log(`  Trying automatic matching...`);
+        let result = await searchForAlbum(albumTitle, artistName);
 
-        // Try automatic matching first in hybrid mode
-        if (APP_CONFIG.HYBRID_MODE) {
-          console.log(`  Trying automatic matching...`);
-          result = await searchForAlbum(albumTitle, artistName);
-
-          if (result) {
-            console.log(
-              `  Automatic match found: "${result.collectionName}" by "${result.artistName}"`
-            );
-          } else {
-            console.log(
-              `  No automatic match found, falling back to selection mode`
-            );
-          }
+        /* If automatic matching failed, prompt for manual URL entry */
+        if (!result) {
+          result = await handleManualUrlEntry(albumTitle, artistName);
         }
 
-        // If automatic matching failed or in selection mode, search and select
-        if (!result && (APP_CONFIG.SELECTION_MODE || APP_CONFIG.HYBRID_MODE)) {
-          const searchResult = await fetch(
-            `https://itunes.apple.com/search?term=${encodeURIComponent(
-              albumTitle + " " + artistName
-            )}&country=${APP_CONFIG.COUNTRY}&limit=${
-              APP_CONFIG.SEARCH_LIMIT
-            }&media=music&entity=album`
-          );
-          const data = await searchResult.json();
-          result = await selectFromResults(
-            data.results,
-            albumTitle,
-            artistName,
-            existingData
-          );
-        }
-
-        // If we found a result, process it
+        /* If we found a result, process it */
         if (result) {
           const processedAlbum = {
             album: albumTitle,
@@ -1488,18 +1103,18 @@ async function main(inputFilePath = null) {
               : ""
           };
 
-          // Add genre if available
+          /* Add genre if available */
           if (result.primaryGenreName) {
             processedAlbum.genre = result.primaryGenreName;
           }
 
-          // Add iTunes ID
+          /* Add iTunes ID */
           processedAlbum.itunesId = result.collectionId;
 
-          // Normalize property order
+          /* Normalize property order */
           const orderedAlbum = normalizePropertyOrder(processedAlbum);
 
-          // Add to output if not a duplicate
+          /* Add to output if not a duplicate */
           if (!isDuplicate(orderedAlbum, outputData)) {
             outputData.push(orderedAlbum);
             console.log(`  Added album to output data`);
@@ -1508,22 +1123,16 @@ async function main(inputFilePath = null) {
           }
         } else {
           console.log(
-            `  No match found for "${albumTitle}" by "${artistName}"`
+            `  Skipped "${albumTitle}" by "${artistName}"`
           );
         }
 
-        // Add a short delay between API requests to avoid rate limiting
+        /* Add a short delay between API requests to avoid rate limiting */
         await sleep(500);
       }
 
-      // Save the processed data
-      if (!APP_CONFIG.VERIFY_MODE) {
-        saveProcessedData(year, outputData);
-      } else {
-        console.log(
-          `Verify mode: would have saved ${outputData.length} albums to ${outputFile}`
-        );
-      }
+      /* Save the processed data */
+      saveProcessedData(year, outputData);
     }
   } catch (error) {
     console.error(`Error in main function: ${error.message}`);
