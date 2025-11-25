@@ -10,6 +10,7 @@ import postcssEach from "postcss-each";
 import autoprefixer from "autoprefixer";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { execSync } from "child_process";
 
 export default function (eleventyConfig) {
   // Plugins
@@ -81,9 +82,28 @@ export default function (eleventyConfig) {
     }
   });
 
+  // Global data - Git commit hash for cache busting
+  eleventyConfig.addGlobalData("gitHash", () => {
+    try {
+      return execSync("git rev-parse --short HEAD").toString().trim();
+    } catch (e) {
+      // Fallback to timestamp if git is not available
+      return Date.now().toString();
+    }
+  });
+
   // Filters
   eleventyConfig.addFilter("filteredProject", (arr, value) => {
     return arr.find((project) => project.name === value);
+  });
+
+  eleventyConfig.addFilter("cacheBust", (url) => {
+    try {
+      const gitHash = execSync("git rev-parse --short HEAD").toString().trim();
+      return `${url}?v=${gitHash}`;
+    } catch (e) {
+      return `${url}?v=${Date.now()}`;
+    }
   });
 
   // Markdown support

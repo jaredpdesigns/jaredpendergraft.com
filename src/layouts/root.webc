@@ -43,7 +43,7 @@
   <noscript webc:keep>
     <link href="https://use.typekit.net/wqr8sqa.css" rel="stylesheet">
   </noscript>
-  <link rel="stylesheet" href="/style.css" webc:raw />
+  <link rel="stylesheet" webc:keep :href="`/style.css?v=${gitHash}`" />
   <style webc:keep @html="getCSS(page.url)"></style>
   <script webc:keep @html="getJS(page.url)"></script>
   </meta>

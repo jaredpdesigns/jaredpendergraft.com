@@ -396,10 +396,14 @@
             }
           }
 
-          animation: albumStack linear both;
-          animation-timeline: view();
+          view-timeline: --album-timeline;
+          view-timeline-axis: block;
+          view-timeline-inset: 5rem 0rem;
+          animation-name: albumStack;
+          animation-timing-function: linear;
+          animation-fill-mode: both;
+          animation-timeline: --album-timeline;
           animation-range: entry 0% exit 100%;
-          view-timeline-inset: 5rem 0;
         }
       }
     }
