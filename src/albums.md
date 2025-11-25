@@ -1,28 +1,24 @@
 ---
+pagination:
+  data: albumYears
+  size: 1
+  alias: yearData
+permalink: "albums/{% if pagination.pageNumber == 0 %}index.html{% else %}{{ yearData.year }}/{% endif %}"
 title: Jared Pendergraft
-description: My favorite albums over the years
+description: My favorite albums from {{ yearData.year }}
 pageClass: albums
 layout: base.webc
 ---
 
 # Favorite Albums
 
-> Whether in the “code-zone” or listening on a quiet morning, music is an important part of my every day. Here’s a list of some of my favorite albums over the years.
+<nav webc:if="pagination.pages.length > 1">
+  <section class="flow__inline flow__gap--m type__size--m-l--fluid type__weight--semibold">
+    <a webc:for="(pageYear, pageIndex) of albumYears" class="radius__xs"
+      :href="pageIndex === 0 ? '/albums/' : `/albums/${pageYear.year}/`"
+      :aria-current="yearData.year === pageYear.year && 'page'"
+      @text="pageYear.year"></a>
+  </section>
+</nav>
 
----
-
-## 2025
-
-<album webc:for="(album, index) of this.albums['2025']" :album="album" webc:nokeep></album>
-
----
-
-## 2024
-
-<album webc:for="(album, index) of this.albums['2024']" :album="album" webc:nokeep></album>
-
----
-
-## 2023
-
-<album webc:for="(album, index) of this.albums['2023']" :album="album" webc:nokeep></album>
+<album webc:for="(album, index) of yearData.albums" :album="album" webc:nokeep></album>

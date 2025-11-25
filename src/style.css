@@ -80,25 +80,6 @@
           }
         }
 
-        a {
-          text-decoration: unset;
-
-          &:focus-visible,
-          &:hover {
-            color: var(--color__base);
-          }
-
-          &[aria-current="page"] {
-            color: var(--color__base);
-            text-decoration-color: var(--color__highlight--semi);
-            text-decoration-thickness: calc(var(--size__xxs) * 2);
-            text-decoration-line: underline;
-            text-underline-offset: var(--size__xs);
-            text-decoration-style: wavy;
-            text-decoration-skip-ink: none;
-          }
-        }
-
         button {
 
           &:hover,
@@ -284,6 +265,25 @@
       inset-inline-start: -0.875cap;
     }
   }
+
+  nav a {
+    text-decoration: unset;
+
+    &:focus-visible,
+    &:hover {
+      color: var(--color__base);
+    }
+
+    &[aria-current="page"] {
+      color: var(--color__base);
+      text-decoration-color: var(--color__highlight--semi);
+      text-decoration-thickness: calc(var(--size__xxs) * 2);
+      text-decoration-line: underline;
+      text-underline-offset: var(--size__xs);
+      text-decoration-style: wavy;
+      text-decoration-skip-ink: none;
+    }
+  }
 }
 
 @layer page {
@@ -380,6 +380,28 @@
     img {
       aspect-ratio: 1/1;
       max-inline-size: var(--width__s);
+
+      @media (prefers-reduced-motion: no-preference) and (min-width: 40rem) {
+        @supports (animation-timeline: view()) {
+          @keyframes albumStack {
+
+            entry 0%,
+            exit 100% {
+              scale: 0.875;
+            }
+
+            entry 100%,
+            exit 0% {
+              scale: 1;
+            }
+          }
+
+          animation: albumStack linear both;
+          animation-timeline: view();
+          animation-range: entry 0% exit 100%;
+          view-timeline-inset: 5rem 0;
+        }
+      }
     }
 
     h3 span {
@@ -398,6 +420,8 @@
     }
 
     a {
+      text-decoration: none;
+
       svg {
         color: var(--color__base--mid);
       }
@@ -405,7 +429,7 @@
       &:hover,
       &:focus {
         svg {
-          color: var(--color__base--ish)
+          color: var(--color__highlight)
         }
       }
     }

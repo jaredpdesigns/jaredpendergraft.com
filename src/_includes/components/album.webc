@@ -16,7 +16,7 @@
       </p>
       <p class="margin__block--m">
         <a :href="album.link" rel="noopener" target="_blank"
-          class="flow__inline flow__align--block-center flow__gap--s">
+          class="flow__inline flow__align--block-center flow__gap--s radius__xs">
           <icon name="add" webc:nokeep>
           </icon> Add to Your Library
         </a>
