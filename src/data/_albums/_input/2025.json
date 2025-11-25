@@ -4,8 +4,20 @@
     "artist": "Arcade Fire"
   },
   {
+    "album": "Unfurl",
+    "artist": "Asaf Avidan"
+  },
+  {
+    "album": "Loner",
+    "artist": "Barry Can't Swim"
+  },
+  {
     "album": "A Study of Losses",
     "artist": "Beirut"
+  },
+  {
+    "album": "Double Infinity",
+    "artist": "Big Thief"
   },
   {
     "album": "If You Only Knew - EP",
@@ -56,6 +68,18 @@
     "artist": "Ezra Furman"
   },
   {
+    "album": "Getting Killed",
+    "artist": "Geese"
+  },
+  {
+    "album": "Die In Love",
+    "artist": "Greet Death"
+  },
+  {
+    "album": "I quit",
+    "artist": "HAIM"
+  },
+  {
     "album": "Virgin",
     "artist": "Lorde"
   },
@@ -84,12 +108,24 @@
     "artist": "Mogwai"
   },
   {
+    "album": "All is Love and Pain in the Mouse Parade",
+    "artist": "Of Monsters and Men"
+  },
+  {
+    "album": "A Dawning",
+    "artist": "Ólafur Arnalds & Talos"
+  },
+  {
     "album": "Sinister Grift",
     "artist": "Panda Bear"
   },
   {
     "album": "Glory",
     "artist": "Perfume Genius"
+  },
+  {
+    "album": "Racing Mount Pleasant",
+    "artist": "Racing Mount Pleasant"
   },
   {
     "album": "True Electric",
@@ -112,8 +148,16 @@
     "artist": "Sleigh Bells"
   },
   {
+    "album": "Deadbeat",
+    "artist": "Tame Impala"
+  },
+  {
     "album": "Face Down in the Garden",
     "artist": "Tennis"
+  },
+  {
+    "album": "Horizons / West",
+    "artist": "Thrice"
   },
   {
     "album": "Fairland Codex",
@@ -122,6 +166,10 @@
   {
     "album": "Never Enough",
     "artist": "Turnstile"
+  },
+  {
+    "album": "DON'T TAP THE GLASS",
+    "artist": "Tyler the Creator"
   },
   {
     "album": "The Place After This One",
@@ -138,6 +186,14 @@
   {
     "album": "Two Lives",
     "artist": "Wet"
+  },
+  {
+    "album": "The Clearing",
+    "artist": "Wolf Alice"
+  },
+  {
+    "album": "Dreams of Being Dust",
+    "artist": "The World Is A Beautiful Place & I Am No Longer Afraid to Die"
   },
   {
     "album": "Rarely Do I Dream",

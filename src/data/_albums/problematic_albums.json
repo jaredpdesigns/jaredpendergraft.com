@@ -84,6 +84,31 @@
           "artist": "Cricet"
         }
       ]
+    },
+    {
+      "album": "Getting Killed",
+      "artist": "Geese",
+      "blockedMatches": []
+    },
+    {
+      "album": "Die In Love",
+      "artist": "Greet Death",
+      "blockedMatches": []
+    },
+    {
+      "album": "I quit",
+      "artist": "HAIM",
+      "blockedMatches": []
+    },
+    {
+      "album": "Deadbeat",
+      "artist": "Tame Impala",
+      "blockedMatches": []
+    },
+    {
+      "album": "The Clearing",
+      "artist": "Wolf Alice",
+      "blockedMatches": []
     }
   ]
 }
