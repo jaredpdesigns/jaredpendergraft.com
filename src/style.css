@@ -10,7 +10,7 @@
     --outline__size: calc(var(--size__xxs) * 2);
     --outline__style: dotted;
     --type__family--primary: articulat-cf, sans-serif;
-    --type__family--secondary: argent-cf, serif;
+    --type__family--secondary: greycliff-cf, sans-serif;
     --type__family--tertiary: cartograph-cf, monospace;
     --transition: cubic-bezier(0.5, -0.1, 0.1, 1.5);
     --bleed: 0;
@@ -659,8 +659,6 @@
     padding-inline: unset;
 
     >p {
-      font-family: var(--type__family--secondary);
-      font-weight: 300;
       padding-inline: var(--size__l);
 
       &:first-child:before,
