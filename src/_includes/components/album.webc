@@ -1,7 +1,8 @@
 <section class="album">
   <figure class="album__wrap flow__grid flow__gap--l">
     <img :alt="`Cover art for “${album.name}” by ${album.artistName}`"
-      class="color__bg--saffron--ghost radius__s shadow" :src="album.artwork" />
+      class="color__bg--saffron--ghost radius__s shadow" :src="album.artwork" eleventy:formats="webp,jpeg"
+      loading="eager" />
     <figcaption>
       <h3 class="color__type--base">
         <span @text="album.name"></span>

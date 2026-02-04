@@ -1,6 +1,4 @@
-@layer pasta, project, page, typography, components;
-
-@import url("https://unpkg.com/@jaredpdesigns/pasta") layer(pasta);
+@layer project, page, typography, components;
 
 @layer project {
   :root {

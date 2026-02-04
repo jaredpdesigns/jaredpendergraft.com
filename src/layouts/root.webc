@@ -34,13 +34,14 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="preconnect" href="https://use.typekit.net" />
   <link rel="preconnect" href="https://p.typekit.net" />
-  <link rel="preconnect"
-    webc:if="page.url.includes('interfaces') && page.url.split('/').filter(i => i).length === 2 ? true:false"
-    href="https://unpkg.com/" />
+  <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" webc:if="page.url.includes('albums')" href="https://is1-ssl.mzstatic.com" />
+  <link webc:keep rel="preload" href="https://unpkg.com/@jaredpdesigns/pasta" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" rel="stylesheet">
   <link webc:keep rel="preload" href="https://use.typekit.net/wqr8sqa.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'" rel="stylesheet">
   <noscript webc:keep>
+    <link href="https://unpkg.com/@jaredpdesigns/pasta" rel="stylesheet">
     <link href="https://use.typekit.net/wqr8sqa.css" rel="stylesheet">
   </noscript>
   <link rel="stylesheet" webc:keep :href="`/style.css?v=${gitHash}`" />
