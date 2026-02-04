@@ -1,0 +1,222 @@
+[
+  {
+    "artistName": "Alicia Walter",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/65/53/e1/6553e12d-976b-7738-2066-f4ab8b385b69/11520.jpg/600x600bb.jpg",
+    "dateAdded": "2021-09-21T16:59:50Z",
+    "genre": "Pop",
+    "id": 1568360025,
+    "name": "I Am Alicia",
+    "releaseDate": "2021-06-22",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1568360025"
+  },
+  {
+    "artistName": "Angel Olsen",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/96/ed/b6/96edb614-ed5f-9a5b-9994-9b6c43d2e22d/18277.jpg/600x600bb.jpg",
+    "dateAdded": "2021-08-20T08:19:16Z",
+    "genre": "Alternative",
+    "id": 1571969982,
+    "name": "Aisles - EP",
+    "releaseDate": "2021-08-20",
+    "trackCount": 5,
+    "url": "https://music.apple.com/us/album/1571969982"
+  },
+  {
+    "artistName": "Bo Burnham",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e5/ca/3c/e5ca3c2a-2d8d-baab-08db-bea3b564235b/196922058011_Cover.jpg/600x600bb.jpg",
+    "dateAdded": "2021-06-10T17:28:53Z",
+    "genre": "Comedy",
+    "id": 1626303827,
+    "name": "INSIDE (DELUXE)",
+    "releaseDate": "2021-06-10",
+    "trackCount": 46,
+    "url": "https://music.apple.com/us/album/1626303827"
+  },
+  {
+    "artistName": "Brutalligators",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2d/d2/68/2dd268d4-678d-3da1-2727-8623f21514f7/BSR121_This_house_is_too_small_-_Brutalligators.jpg/600x600bb.jpg",
+    "dateAdded": "2021-11-12T19:35:41Z",
+    "genre": "Punk",
+    "id": 1577784259,
+    "name": "This House Is Too Big, This House Is Too Small",
+    "releaseDate": "2021-11-05",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1577784259"
+  },
+  {
+    "artistName": "Deafheaven",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9d/92/99/9d9299a2-5cde-89d5-b90a-e4ce0bf2c4bb/113934.jpg/600x600bb.jpg",
+    "dateAdded": "2021-08-20T04:13:59Z",
+    "genre": "Rock",
+    "id": 1808545829,
+    "name": "Infinite Granite",
+    "releaseDate": "2021-08-20",
+    "trackCount": 9,
+    "url": "https://music.apple.com/us/album/1808545829"
+  },
+  {
+    "artistName": "DJ Seinfeld",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/06/f5/88/06f5888f-b992-a571-5508-e4f61cd8b902/5054429148763.png/600x600bb.jpg",
+    "dateAdded": "2021-09-03T04:45:33Z",
+    "genre": "Electronic",
+    "id": 1565509309,
+    "name": "Mirrors",
+    "releaseDate": "2021-09-03",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1565509309"
+  },
+  {
+    "artistName": "Foxing",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ec/2b/25/ec2b2534-9b59-391f-b7cd-a6b07c7066b4/1110.jpg/600x600bb.jpg",
+    "dateAdded": "2021-08-06T04:47:58Z",
+    "genre": "Rock",
+    "id": 1565271849,
+    "name": "Draw Down the Moon",
+    "releaseDate": "2021-08-06",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1565271849"
+  },
+  {
+    "artistName": "Gilligan Moss",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/65/d4/0f/65d40fcd-89b4-5b2d-103d-c97f0c265e92/5054429153415.png/600x600bb.jpg",
+    "dateAdded": "2021-12-09T01:02:40Z",
+    "genre": "Electronic",
+    "id": 1586994238,
+    "name": "Gilligan Moss (Deluxe Edition)",
+    "releaseDate": "2021-04-09",
+    "trackCount": 21,
+    "url": "https://music.apple.com/us/album/1586994238"
+  },
+  {
+    "artistName": "Iceage",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0f/53/db/0f53dbd2-84cd-0aab-792a-97d80c403e2c/184923132366_cover.jpg/600x600bb.jpg",
+    "dateAdded": "2023-01-19T07:58:50Z",
+    "genre": "Rock",
+    "id": 1775768349,
+    "name": "Seek Shelter (Special Edition)",
+    "releaseDate": "2021-03-23",
+    "trackCount": 12,
+    "url": "https://music.apple.com/us/album/1775768349"
+  },
+  {
+    "artistName": "James Blake",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/df/20/91/df209199-e346-b88e-b0b4-0cb42f639a2a/21UMGIM64692.rgb.jpg/600x600bb.jpg",
+    "dateAdded": "2021-10-11T20:03:16Z",
+    "genre": "Alternative",
+    "id": 1588420070,
+    "name": "Friends That Break Your Heart (Bonus)",
+    "releaseDate": "2021-09-12",
+    "trackCount": 13,
+    "url": "https://music.apple.com/us/album/1588420070"
+  },
+  {
+    "artistName": "Japanese Breakfast",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/93/8b/8b/938b8b5d-1022-414f-995e-a25608fc68c3/17251.jpg/600x600bb.jpg",
+    "dateAdded": "2021-06-04T05:25:38Z",
+    "genre": "Alternative",
+    "id": 1553364590,
+    "name": "Jubilee",
+    "releaseDate": "2021-06-04",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1553364590"
+  },
+  {
+    "artistName": "Jungle",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/ef/f5/1aeff531-e697-3c07-7eaf-d209563888ad/5056167160984_1.jpg/600x600bb.jpg",
+    "dateAdded": "2021-06-04T05:27:51Z",
+    "genre": "Electronic",
+    "id": 1555318008,
+    "name": "Loving In Stereo",
+    "releaseDate": "2021-03-25",
+    "trackCount": 14,
+    "url": "https://music.apple.com/us/album/1555318008"
+  },
+  {
+    "artistName": "Little Simz",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/08/14/88/0814883a-444f-6447-3eec-6753eb129d5e/5056167162674_1.jpg/600x600bb.jpg",
+    "dateAdded": "2021-09-10T19:03:14Z",
+    "genre": "Hip-Hop/Rap",
+    "id": 1561184260,
+    "name": "Sometimes I Might Be Introvert",
+    "releaseDate": "2021-04-21",
+    "trackCount": 19,
+    "url": "https://music.apple.com/us/album/1561184260"
+  },
+  {
+    "artistName": "Magdalena Bay",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/cc/63/18/cc63183f-a3b2-a433-50a2-dc923339d021/196006633820.jpg/600x600bb.jpg",
+    "dateAdded": "2021-10-08T04:07:10Z",
+    "genre": "Indie Pop",
+    "id": 1570541671,
+    "name": "Mercurial World",
+    "releaseDate": "2021-10-08",
+    "trackCount": 14,
+    "url": "https://music.apple.com/us/album/1570541671"
+  },
+  {
+    "artistName": "Mogwai",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/47/65/25/47652598-f2b0-31a7-3519-01ac723735e4/cover.jpg/600x600bb.jpg",
+    "dateAdded": "2021-02-19T05:23:40Z",
+    "genre": "Alternative",
+    "id": 1535007801,
+    "name": "As the Love Continues",
+    "releaseDate": "2021-02-19",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1535007801"
+  },
+  {
+    "artistName": "Rostam",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ce/a3/04/cea3041e-ea51-e118-38a7-17f41dff0663/17991.jpg/600x600bb.jpg",
+    "dateAdded": "2021-06-18T06:11:11Z",
+    "genre": "Alternative",
+    "id": 1571378689,
+    "name": "Changephobia (Expanded Edition)",
+    "releaseDate": "2021-02-02",
+    "trackCount": 13,
+    "url": "https://music.apple.com/us/album/1571378689"
+  },
+  {
+    "artistName": "Sleigh Bells",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c8/a0/2b/c8a02bbf-57bf-8f6e-7be0-74ef3f5a1d7e/858275063028.png/600x600bb.jpg",
+    "dateAdded": "2021-09-10T04:49:03Z",
+    "genre": "Alternative",
+    "id": 1575621666,
+    "name": "Texis",
+    "releaseDate": "2021-09-10",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1575621666"
+  },
+  {
+    "artistName": "St. Vincent",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/82/9b/5c/829b5c80-1339-2e88-4ec0-22714c38fc26/20CRGIM25029.rgb.jpg/600x600bb.jpg",
+    "dateAdded": "2021-05-14T05:58:36Z",
+    "genre": "Alternative",
+    "id": 1552955481,
+    "name": "Daddy's Home",
+    "releaseDate": "2021-03-06",
+    "trackCount": 14,
+    "url": "https://music.apple.com/us/album/1552955481"
+  },
+  {
+    "artistName": "Thrice",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/11/6f/e7/116fe788-6bec-3a46-f928-9d23ce88c212/0045778781966.png/600x600bb.jpg",
+    "dateAdded": "2021-09-17T04:39:43Z",
+    "genre": "Rock",
+    "id": 1572431958,
+    "name": "Horizons / East",
+    "releaseDate": "2021-09-17",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1572431958"
+  },
+  {
+    "artistName": "Underoath",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f4/ad/8f/f4ad8f78-463d-73df-9e33-09632deddd34/21CRGIM29151.rgb.jpg/600x600bb.jpg",
+    "dateAdded": "2022-01-14T05:07:52Z",
+    "genre": "Metal",
+    "id": 1576451556,
+    "name": "Voyeurist",
+    "releaseDate": "2021-08-03",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1576451556"
+  }
+]

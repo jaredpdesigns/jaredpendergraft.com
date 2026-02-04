@@ -1,0 +1,46 @@
+[
+  {
+    "artistName": "Joyce Manor",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/f2/be/30f2be95-3c41-e308-d189-40e12166f8ce/0045778805761.png/600x600bb.jpg",
+    "dateAdded": "2026-01-31T03:23:20Z",
+    "genre": "Alternative",
+    "id": 1839918836,
+    "name": "I Used to Go to This Bar",
+    "releaseDate": "2026-01-08",
+    "trackCount": 9,
+    "url": "https://music.apple.com/us/album/1839918836"
+  },
+  {
+    "artistName": "Labrinth",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3d/17/78/3d1778f6-3520-cf12-d691-17c7d6c02efc/196873800042.jpg/600x600bb.jpg",
+    "dateAdded": "2026-01-30T05:18:40Z",
+    "genre": "Pop",
+    "id": 1853069628,
+    "name": "COSMIC OPERA ACT I",
+    "releaseDate": "2026-01-30",
+    "trackCount": 12,
+    "url": "https://music.apple.com/us/album/1853069628"
+  },
+  {
+    "artistName": "Sault",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/15/f6/33/15f633a4-8272-ea1b-caae-31c7d8efa641/859728229206_cover.jpg/600x600bb.jpg",
+    "dateAdded": "2026-01-31T03:21:21Z",
+    "genre": "R&B/Soul",
+    "id": 1867311494,
+    "name": "Chapter 1",
+    "releaseDate": "2026-01-09",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1867311494"
+  },
+  {
+    "artistName": "The Format",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b6/09/55/b6095540-c391-e816-a8e9-8922b63e7fd3/00198704737619_Cover.jpg/600x600bb.jpg",
+    "dateAdded": "2026-01-23T05:03:49Z",
+    "genre": "Alternative",
+    "id": 1840399886,
+    "name": "Boycott Heaven",
+    "releaseDate": "2026-01-23",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1840399886"
+  }
+]

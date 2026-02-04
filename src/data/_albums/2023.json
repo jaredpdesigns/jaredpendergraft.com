@@ -1,0 +1,200 @@
+[
+  {
+    "artistName": "Atreyu",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3f/a0/d2/3fa0d25c-e777-f73e-01de-c05b12dfe555/5401148003086_cover.jpg/600x600bb.jpg",
+    "dateAdded": "2024-01-09T07:45:49Z",
+    "genre": "Rock",
+    "id": 1708056704,
+    "name": "The Beautiful Dark of Life",
+    "releaseDate": "2023-04-14",
+    "trackCount": 15,
+    "url": "https://music.apple.com/us/album/1708056704"
+  },
+  {
+    "artistName": "Beach House",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/11/0d/3e110de7-8e17-6031-4353-041ebe9c71a7/098787154566.png/600x600bb.jpg",
+    "dateAdded": "2023-04-28T04:33:36Z",
+    "genre": "Alternative",
+    "id": 1677217316,
+    "name": "Become - EP",
+    "releaseDate": "2023-04-22",
+    "trackCount": 5,
+    "url": "https://music.apple.com/us/album/1677217316"
+  },
+  {
+    "artistName": "boygenius",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ad/fc/81/adfc819e-00b2-3cb5-deb2-931a5b6da3fa/22UM1IM44998.rgb.jpg/600x600bb.jpg",
+    "dateAdded": "2023-03-31T07:54:54Z",
+    "genre": "Alternative",
+    "id": 1666138312,
+    "name": "the record",
+    "releaseDate": "2023-03-31",
+    "trackCount": 12,
+    "url": "https://music.apple.com/us/album/1666138312"
+  },
+  {
+    "artistName": "Charli xcx",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/76/4f/01/764f0135-7c46-3d4c-b0d6-6387f4dc036d/075679630414.jpg/600x600bb.jpg",
+    "dateAdded": "2024-10-11T06:18:12Z",
+    "genre": "Dance",
+    "id": 1767862943,
+    "name": "Brat and it’s completely different but also still brat",
+    "releaseDate": "2023-10-17",
+    "trackCount": 34,
+    "url": "https://music.apple.com/us/album/1767862943"
+  },
+  {
+    "artistName": "Cherry Glazerr",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/57/20/11/5720112e-4295-cae1-2145-2766a7eb82f1/40014.jpg/600x600bb.jpg",
+    "dateAdded": "2023-11-30T23:46:21Z",
+    "genre": "Alternative",
+    "id": 1693885183,
+    "name": "I Don't Want You Anymore",
+    "releaseDate": "2023-09-29",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1693885183"
+  },
+  {
+    "artistName": "Chromeo",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e8/d9/6f/e8d96f8f-9d6c-8109-a5f8-a15388dc3c40/4050538987799.jpg/600x600bb.jpg",
+    "dateAdded": "2024-02-16T05:27:25Z",
+    "genre": "Electronic",
+    "id": 1708568607,
+    "name": "Adult Contemporary",
+    "releaseDate": "2023-06-30",
+    "trackCount": 14,
+    "url": "https://music.apple.com/us/album/1708568607"
+  },
+  {
+    "artistName": "Donna Missal",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/47/1c/42/471c42b6-7101-6622-eba0-f7f5874efaae/197338738054.jpg/600x600bb.jpg",
+    "dateAdded": "2025-05-19T20:24:53Z",
+    "genre": "Alternative",
+    "id": 1686976426,
+    "name": "Revel",
+    "releaseDate": "2023-03-24",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1686976426"
+  },
+  {
+    "artistName": "Geese",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d8/9a/c1/d89ac16c-b578-7698-1b7b-f18ff9a5eea9/5400863192808_Cover.jpg/600x600bb.jpg",
+    "dateAdded": "2025-01-02T21:37:54Z",
+    "genre": "Alternative",
+    "id": 1822502596,
+    "name": "3D Country",
+    "releaseDate": "2023-06-23",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1822502596"
+  },
+  {
+    "artistName": "Islands",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8b/64/d2/8b64d2fd-6087-e1ad-5621-9825cbd88e23/97853.jpg/600x600bb.jpg",
+    "dateAdded": "2023-08-25T05:05:46Z",
+    "genre": "Rock",
+    "id": 1692994522,
+    "name": "And That's Why Dolphins Lost Their Legs",
+    "releaseDate": "2023-06-13",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1692994522"
+  },
+  {
+    "artistName": "James Blake",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ac/df/31/acdf31ba-ed8c-36c8-55fa-4fea81cf8395/23UMGIM73095.rgb.jpg/600x600bb.jpg",
+    "dateAdded": "2023-09-08T04:19:12Z",
+    "genre": "Electronic",
+    "id": 1694554543,
+    "name": "Playing Robots Into Heaven",
+    "releaseDate": "2023-09-08",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1694554543"
+  },
+  {
+    "artistName": "Jungle",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d4/7d/e5/d47de508-312e-fbb2-8b5a-78b92645d778/197188308315.jpg/600x600bb.jpg",
+    "dateAdded": "2023-08-11T04:12:33Z",
+    "genre": "Dance",
+    "id": 1676151993,
+    "name": "Volcano",
+    "releaseDate": "2023-08-11",
+    "trackCount": 14,
+    "url": "https://music.apple.com/us/album/1676151993"
+  },
+  {
+    "artistName": "Local Natives",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f1/6e/50/f16e50c6-cfcd-cb5a-8fb9-8a3f42908b61/24CRGIM46175.rgb.jpg/600x600bb.jpg",
+    "dateAdded": "2024-12-06T06:13:47Z",
+    "genre": "Alternative",
+    "id": 1779831526,
+    "name": "Time Will Wait For No One But I'll Wait For You",
+    "releaseDate": "2023-07-07",
+    "trackCount": 30,
+    "url": "https://music.apple.com/us/album/1779831526"
+  },
+  {
+    "artistName": "Mitski",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8f/4b/40/8f4b4044-d02b-dc25-7d01-7d9d225fdce4/40240.jpg/600x600bb.jpg",
+    "dateAdded": "2023-08-24T17:03:36Z",
+    "genre": "Alternative",
+    "id": 1697335341,
+    "name": "The Land Is Inhospitable and So Are We",
+    "releaseDate": "2023-07-31",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1697335341"
+  },
+  {
+    "artistName": "Romy",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/57/b4/ea/57b4ea8d-85da-0a6a-49f5-a7d932ab6e9f/889030032072.png/600x600bb.jpg",
+    "dateAdded": "2023-07-11T05:05:54Z",
+    "genre": "Dance",
+    "id": 1688051982,
+    "name": "Mid Air",
+    "releaseDate": "2023-06-07",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1688051982"
+  },
+  {
+    "artistName": "Saint Motel",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/72/4c/53/724c539e-1b29-5f54-39bb-2aa0a56f9bfa/075679627452.jpg/600x600bb.jpg",
+    "dateAdded": "2025-02-14T05:36:51Z",
+    "genre": "Alternative",
+    "id": 1790744905,
+    "name": "Saint Motel & the Symphony in the Sky",
+    "releaseDate": "2023-08-04",
+    "trackCount": 12,
+    "url": "https://music.apple.com/us/album/1790744905"
+  },
+  {
+    "artistName": "Sigur Rós",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f0/ec/d2/f0ecd2d3-6dd0-dda8-2a16-0b74c0a5260f/4050538920437.jpg/600x600bb.jpg",
+    "dateAdded": "2025-05-19T23:15:57Z",
+    "genre": "Alternative",
+    "id": 1688702511,
+    "name": "ÁTTA",
+    "releaseDate": "2023-06-16",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1688702511"
+  },
+  {
+    "artistName": "Sufjan Stevens",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/80/e9/61/80e96151-6e40-6daf-bdc6-33dbb65510e6/40697.jpg/600x600bb.jpg",
+    "dateAdded": "2023-10-06T04:12:57Z",
+    "genre": "Alternative",
+    "id": 1700723922,
+    "name": "Javelin",
+    "releaseDate": "2023-10-06",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1700723922"
+  },
+  {
+    "artistName": "Tennis",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/bc/7d/9b/bc7d9b4b-8a2b-bc89-d462-03fbb9c2990f/197187247981.png/600x600bb.jpg",
+    "dateAdded": "2023-08-31T18:19:01Z",
+    "genre": "Alternative",
+    "id": 1844681326,
+    "name": "Pollen",
+    "releaseDate": "2023-02-07",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1844681326"
+  }
+]

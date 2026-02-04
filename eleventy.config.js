@@ -45,6 +45,22 @@ export default function (eleventyConfig) {
       }
 
       /*
+       * Apple Music artwork URLs (600x600 format)
+       * Replace 600x600 with requested width and adjust extension for format
+       * Apple only supports .webp and .jpg (no avif)
+       */
+      if (src.includes("mzstatic.com/image/thumb/")) {
+        let url = src.replace(/600x600/, `${width}x${width}`);
+
+        if (format === "webp") {
+          url = url.replace(/\.jpg$/, ".webp");
+        }
+        /* avif and other formats fall back to jpg (no change needed) */
+
+        return url;
+      }
+
+      /*
        * Use Cloudflare's image resizing service for R2-hosted images
        * Skip transformation for non-R2 images
        */

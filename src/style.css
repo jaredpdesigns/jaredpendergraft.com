@@ -426,7 +426,12 @@
       }
     }
 
-    .genre {
+    .artist {
+      text-wrap: balance;
+    }
+
+    .meta {
+      margin-block-start: var(--size__m);
       margin-inline-start: calc(var(--size__s) * -1);
     }
 
