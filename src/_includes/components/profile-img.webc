@@ -1,4 +1,4 @@
 <figure class="profile__img">
   <img alt="My smiling face" fetchPriority="high" loading="eager"
-    src="https://projects.jaredpendergraft.com/profile-2025.jpg" sizes="240px" eleventy:widths="240,480,720" />
+    src="https://projects.jaredpendergraft.com/profile-2025.jpg" sizes="240px" eleventy:widths="240,480" />
 </figure>
