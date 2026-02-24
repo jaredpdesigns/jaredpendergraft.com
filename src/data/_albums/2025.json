@@ -1,11 +1,36 @@
 [
   {
+    "artistName": "AFI",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/23/07/61/230761ec-71ed-aa01-0526-6b1dcd0535b8/55837.jpg/600x600bb.jpg",
+    "dateAdded": "2025-10-03T04:11:00Z",
+    "genre": "Indie Rock",
+    "id": 1824013544,
+    "name": "Silver Bleeds the Black Sun...",
+    "playCount": 2,
+    "releaseDate": "2025-10-03",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1824013544"
+  },
+  {
+    "artistName": "Amorphis",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/ea/d5/3cead550-8280-ebe1-c2fc-6c270295389f/4251981706597.jpg/600x600bb.jpg",
+    "dateAdded": "2025-09-26T04:12:20Z",
+    "genre": "Metal",
+    "id": 1812925047,
+    "name": "Borderland",
+    "playCount": 6,
+    "releaseDate": "2025-09-24",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1812925047"
+  },
+  {
     "artistName": "Arcade Fire",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/08/dd/f7/08ddf748-8c27-c083-bebd-f610d33c1b27/196872846362.jpg/600x600bb.jpg",
     "dateAdded": "2025-05-09T04:16:31Z",
     "genre": "Rock",
     "id": 1801683602,
     "name": "Pink Elephant",
+    "playCount": 2,
     "releaseDate": "2025-05-09",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1801683602"
@@ -17,6 +42,7 @@
     "genre": "Alternative",
     "id": 1821842705,
     "name": "Unfurl",
+    "playCount": 4,
     "releaseDate": "2025-10-10",
     "trackCount": 8,
     "url": "https://music.apple.com/us/album/1821842705"
@@ -28,6 +54,7 @@
     "genre": "Electronic",
     "id": 1798245645,
     "name": "Loner",
+    "playCount": 7,
     "releaseDate": "2025-03-10",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1798245645"
@@ -39,6 +66,7 @@
     "genre": "Alternative",
     "id": 1781068670,
     "name": "A Study of Losses",
+    "playCount": 4,
     "releaseDate": "2025-04-18",
     "trackCount": 18,
     "url": "https://music.apple.com/us/album/1781068670"
@@ -50,6 +78,7 @@
     "genre": "Alternative",
     "id": 1813848690,
     "name": "Double Infinity",
+    "playCount": 2,
     "releaseDate": "2025-06-03",
     "trackCount": 9,
     "url": "https://music.apple.com/us/album/1813848690"
@@ -61,6 +90,7 @@
     "genre": "Rock",
     "id": 1789410468,
     "name": "If You Only Knew - EP",
+    "playCount": 1,
     "releaseDate": "2025-04-18",
     "trackCount": 4,
     "url": "https://music.apple.com/us/album/1789410468"
@@ -72,6 +102,7 @@
     "genre": "Alternative",
     "id": 1779137502,
     "name": "If You Asked For A Picture",
+    "playCount": 3,
     "releaseDate": "2025-05-02",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1779137502"
@@ -83,6 +114,7 @@
     "genre": "Pop",
     "id": 1784096438,
     "name": "Honeybee",
+    "playCount": 3,
     "releaseDate": "2025-01-17",
     "trackCount": 7,
     "url": "https://music.apple.com/us/album/1784096438"
@@ -94,6 +126,7 @@
     "genre": "Alternative",
     "id": 1796212327,
     "name": "The Scholars",
+    "playCount": 3,
     "releaseDate": "2025-05-02",
     "trackCount": 9,
     "url": "https://music.apple.com/us/album/1796212327"
@@ -105,6 +138,7 @@
     "genre": "Electronic",
     "id": 1839200694,
     "name": "Honey",
+    "playCount": 6,
     "releaseDate": "2025-08-28",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1839200694"
@@ -116,6 +150,7 @@
     "genre": "Hip-Hop/Rap",
     "id": 1776992430,
     "name": "Dead Channel Sky",
+    "playCount": 1,
     "releaseDate": "2025-03-14",
     "trackCount": 20,
     "url": "https://music.apple.com/us/album/1776992430"
@@ -127,6 +162,7 @@
     "genre": "Alternative",
     "id": 1776734584,
     "name": "The Father of Make Believe",
+    "playCount": 6,
     "releaseDate": "2025-03-14",
     "trackCount": 14,
     "url": "https://music.apple.com/us/album/1776734584"
@@ -138,6 +174,7 @@
     "genre": "Metal",
     "id": 1792077173,
     "name": "Lonely People With Power",
+    "playCount": 9,
     "releaseDate": "2025-03-28",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1792077173"
@@ -149,6 +186,7 @@
     "genre": "Alternative",
     "id": 1839207466,
     "name": "Dan's Boogie",
+    "playCount": 2,
     "releaseDate": "2025-03-28",
     "trackCount": 9,
     "url": "https://music.apple.com/us/album/1839207466"
@@ -160,6 +198,7 @@
     "genre": "Electronic",
     "id": 1743438405,
     "name": "DÍA",
+    "playCount": 4,
     "releaseDate": "2025-01-17",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1743438405"
@@ -171,6 +210,7 @@
     "genre": "Indie Rock",
     "id": 1791844896,
     "name": "Goodbye Small Head",
+    "playCount": 5,
     "releaseDate": "2025-05-16",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1791844896"
@@ -182,6 +222,7 @@
     "genre": "Alternative",
     "id": 1833586446,
     "name": "Everybody Scream",
+    "playCount": 3,
     "releaseDate": "2025-08-20",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1833586446"
@@ -193,6 +234,7 @@
     "genre": "Alternative",
     "id": 1818548779,
     "name": "Getting Killed",
+    "playCount": 3,
     "releaseDate": "2025-07-29",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1818548779"
@@ -204,6 +246,7 @@
     "genre": "Alternative",
     "id": 1804151130,
     "name": "Die In Love",
+    "playCount": 4,
     "releaseDate": "2025-06-27",
     "trackCount": 9,
     "url": "https://music.apple.com/us/album/1804151130"
@@ -226,6 +269,7 @@
     "genre": "Pop",
     "id": 1810905299,
     "name": "Virgin",
+    "playCount": 2,
     "releaseDate": "2025-06-20",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1810905299"
@@ -237,6 +281,7 @@
     "genre": "Alternative",
     "id": 1790502494,
     "name": "Lucius",
+    "playCount": 2,
     "releaseDate": "2025-05-02",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1790502494"
@@ -248,6 +293,7 @@
     "genre": "Alternative",
     "id": 1787193107,
     "name": "Forever Is A Feeling",
+    "playCount": 2,
     "releaseDate": "2025-03-28",
     "trackCount": 13,
     "url": "https://music.apple.com/us/album/1787193107"
@@ -259,6 +305,7 @@
     "genre": "Electronic",
     "id": 1781311112,
     "name": "Tall Tales",
+    "playCount": 2,
     "releaseDate": "2025-05-09",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1781311112"
@@ -270,6 +317,7 @@
     "genre": "Alternative",
     "id": 1829048637,
     "name": "All is Love and Pain in the Mouse Parade",
+    "playCount": 5,
     "releaseDate": "2025-08-07",
     "trackCount": 13,
     "url": "https://music.apple.com/us/album/1829048637"
@@ -281,6 +329,7 @@
     "genre": "Pop",
     "id": 1811135351,
     "name": "A Dawning",
+    "playCount": 2,
     "releaseDate": "2025-07-11",
     "trackCount": 8,
     "url": "https://music.apple.com/us/album/1811135351"
@@ -292,6 +341,7 @@
     "genre": "Alternative",
     "id": 1761198973,
     "name": "Sinister Grift",
+    "playCount": 6,
     "releaseDate": "2025-02-28",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1761198973"
@@ -303,6 +353,7 @@
     "genre": "Alternative",
     "id": 1786362148,
     "name": "Glory",
+    "playCount": 6,
     "releaseDate": "2025-01-15",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1786362148"
@@ -314,6 +365,7 @@
     "genre": "Alternative",
     "id": 1825816559,
     "name": "Racing Mount Pleasant",
+    "playCount": 1,
     "releaseDate": "2025-07-11",
     "trackCount": 13,
     "url": "https://music.apple.com/us/album/1825816559"
@@ -325,6 +377,7 @@
     "genre": "Electronic",
     "id": 1793126735,
     "name": "True Electric",
+    "playCount": 2,
     "releaseDate": "2025-04-11",
     "trackCount": 19,
     "url": "https://music.apple.com/us/album/1793126735"
@@ -336,6 +389,7 @@
     "genre": "Pop",
     "id": 1797071398,
     "name": "SAGES - Single",
+    "playCount": 3,
     "releaseDate": "2025-03-21",
     "trackCount": 3,
     "url": "https://music.apple.com/us/album/1797071398"
@@ -347,6 +401,7 @@
     "genre": "Alternative",
     "id": 1839438978,
     "name": "Afterglow",
+    "playCount": 3,
     "releaseDate": "2025-10-10",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1839438978"
@@ -358,6 +413,7 @@
     "genre": "Alternative",
     "id": 1765309413,
     "name": "Blood On the Silver Screen",
+    "playCount": 2,
     "releaseDate": "2025-03-07",
     "trackCount": 13,
     "url": "https://music.apple.com/us/album/1765309413"
@@ -369,6 +425,7 @@
     "genre": "Metal",
     "id": 1800532611,
     "name": "Even In Arcadia",
+    "playCount": 9,
     "releaseDate": "2025-05-09",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1800532611"
@@ -380,6 +437,7 @@
     "genre": "Alternative",
     "id": 1795574689,
     "name": "Bunky Becky Birthday Boy",
+    "playCount": 5,
     "releaseDate": "2025-04-04",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1795574689"
@@ -391,6 +449,7 @@
     "genre": "Alternative",
     "id": 1836226516,
     "name": "Deadbeat",
+    "playCount": 5,
     "releaseDate": "2025-10-17",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1836226516"
@@ -401,9 +460,22 @@
     "dateAdded": "2025-04-25T05:40:15Z",
     "genre": "Alternative",
     "name": "Face Down in the Garden",
+    "playCount": 4,
     "releaseDate": "2025-04-25",
     "trackCount": 10,
     "url": ""
+  },
+  {
+    "artistName": "The Armed",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/b9/0b/7fb90b21-328b-3a40-f3eb-61b3ce8ca803/114330.jpg/600x600bb.jpg",
+    "dateAdded": "2025-08-07T20:26:23Z",
+    "genre": "Rock",
+    "id": 1809236820,
+    "name": "THE FUTURE IS HERE AND EVERYTHING NEEDS TO BE DESTROYED",
+    "playCount": 1,
+    "releaseDate": "2025-05-21",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1809236820"
   },
   {
     "artistName": "The Mars Volta",
@@ -412,6 +484,7 @@
     "genre": "Alternative",
     "id": 1804740901,
     "name": "Lucro sucio; Los ojos del vacio",
+    "playCount": 4,
     "releaseDate": "2025-04-11",
     "trackCount": 18,
     "url": "https://music.apple.com/us/album/1804740901"
@@ -423,6 +496,7 @@
     "genre": "Jazz",
     "id": 1784561111,
     "name": "Under A Familiar Sun",
+    "playCount": 1,
     "releaseDate": "2025-01-15",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1784561111"
@@ -434,6 +508,7 @@
     "genre": "R&B/Soul",
     "id": 1793654348,
     "name": "Hurry Up Tomorrow",
+    "playCount": 2,
     "releaseDate": "2025-01-31",
     "trackCount": 22,
     "url": "https://music.apple.com/us/album/1793654348"
@@ -445,6 +520,7 @@
     "genre": "Alternative",
     "id": 1819074470,
     "name": "Dreams of Being Dust",
+    "playCount": 5,
     "releaseDate": "2025-08-22",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1819074470"
@@ -456,9 +532,22 @@
     "genre": "Rock",
     "id": 1824418122,
     "name": "Horizons / West",
+    "playCount": 5,
     "releaseDate": "2025-10-03",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1824418122"
+  },
+  {
+    "artistName": "Thursday",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d4/31/f4/d431f442-1df7-4778-7eaf-19d964e21822/198715069297.png/600x600bb.jpg",
+    "dateAdded": "2025-01-01T17:57:47Z",
+    "genre": "Rock",
+    "id": 1786153381,
+    "name": "Taking Inventory of a Frozen Lake - Single",
+    "playCount": 9,
+    "releaseDate": "2025-01-01",
+    "trackCount": 3,
+    "url": "https://music.apple.com/us/album/1786153381"
   },
   {
     "artistName": "Tropical Fuck Storm",
@@ -467,6 +556,7 @@
     "genre": "Alternative",
     "id": 1793336908,
     "name": "Fairyland Codex",
+    "playCount": 4,
     "releaseDate": "2025-06-20",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1793336908"
@@ -478,6 +568,7 @@
     "genre": "Indie Pop",
     "id": 1799070988,
     "name": "Two Lives",
+    "playCount": 2,
     "releaseDate": "2025-01-24",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1799070988"
@@ -489,6 +580,7 @@
     "genre": "Alternative",
     "id": 1812904249,
     "name": "The Clearing",
+    "playCount": 4,
     "releaseDate": "2025-08-22",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1812904249"
@@ -500,6 +592,7 @@
     "genre": "Alternative",
     "id": 1777296174,
     "name": "Rarely Do I Dream",
+    "playCount": 1,
     "releaseDate": "2025-02-21",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1777296174"

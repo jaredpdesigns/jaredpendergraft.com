@@ -1,7 +1,6 @@
-<nav webc:if="albums.length > 1">
-  <section class="flow__inline flow__gap--m type__size--m-l--fluid type__weight--semibold">
-    <a webc:for="(pageYear, index) of albums" class="radius__xs"
-      :href="index === 0 ? '/albums/' : `/albums/${pageYear.year}/`"
-      :aria-current="currentYear === pageYear.year && 'page'" @text="pageYear.year"></a>
-  </section>
+<nav webc:if="albums.length > 1"
+  class="flow__inline flow__gap--m flow__flex--wrap type__size--m-l--fluid type__weight--semibold">
+  <a webc:for="(pageYear, index) of albums" class="radius__xs"
+    :href="index === 0 ? '/albums/' : `/albums/${pageYear.year}/`"
+    :aria-current="currentYear === pageYear.year && 'page'" @text="pageYear.year"></a>
 </nav>

@@ -1,11 +1,24 @@
 [
   {
+    "artistName": "Chet Faker",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/43/bb/e3/43bbe3fa-920a-4119-9bdf-26ce35781286/4099964177046.jpg/600x600bb.jpg",
+    "dateAdded": "2026-01-25T00:27:20Z",
+    "genre": "Electronic",
+    "id": 1846189472,
+    "name": "A Love For Strangers",
+    "playCount": 1,
+    "releaseDate": "2026-02-13",
+    "trackCount": 12,
+    "url": "https://music.apple.com/us/album/1846189472"
+  },
+  {
     "artistName": "Joyce Manor",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/f2/be/30f2be95-3c41-e308-d189-40e12166f8ce/0045778805761.png/600x600bb.jpg",
     "dateAdded": "2026-01-31T03:23:20Z",
     "genre": "Alternative",
     "id": 1839918836,
     "name": "I Used to Go to This Bar",
+    "playCount": 2,
     "releaseDate": "2026-01-08",
     "trackCount": 9,
     "url": "https://music.apple.com/us/album/1839918836"
@@ -17,9 +30,22 @@
     "genre": "Pop",
     "id": 1853069628,
     "name": "COSMIC OPERA ACT I",
+    "playCount": 2,
     "releaseDate": "2026-01-30",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1853069628"
+  },
+  {
+    "artistName": "Ratboys",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f5/5f/1a/f55f1a6e-fa52-d1c2-206e-93ab0d318268/3328.jpg/600x600bb.jpg",
+    "dateAdded": "2026-02-06T05:39:15Z",
+    "genre": "Alternative",
+    "id": 1844710034,
+    "name": "Singin’ to an Empty Chair",
+    "playCount": 1,
+    "releaseDate": "2026-02-06",
+    "trackCount": 11,
+    "url": "https://music.apple.com/us/album/1844710034"
   },
   {
     "artistName": "Sault",
@@ -28,6 +54,7 @@
     "genre": "R&B/Soul",
     "id": 1867311494,
     "name": "Chapter 1",
+    "playCount": 2,
     "releaseDate": "2026-01-09",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1867311494"
@@ -39,6 +66,7 @@
     "genre": "Alternative",
     "id": 1840399886,
     "name": "Boycott Heaven",
+    "playCount": 3,
     "releaseDate": "2026-01-23",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1840399886"

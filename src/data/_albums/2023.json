@@ -6,6 +6,7 @@
     "genre": "Rock",
     "id": 1708056704,
     "name": "The Beautiful Dark of Life",
+    "playCount": 5,
     "releaseDate": "2023-04-14",
     "trackCount": 15,
     "url": "https://music.apple.com/us/album/1708056704"
@@ -17,6 +18,7 @@
     "genre": "Alternative",
     "id": 1677217316,
     "name": "Become - EP",
+    "playCount": 9,
     "releaseDate": "2023-04-22",
     "trackCount": 5,
     "url": "https://music.apple.com/us/album/1677217316"
@@ -28,6 +30,7 @@
     "genre": "Alternative",
     "id": 1666138312,
     "name": "the record",
+    "playCount": 4,
     "releaseDate": "2023-03-31",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1666138312"
@@ -39,6 +42,7 @@
     "genre": "Dance",
     "id": 1767862943,
     "name": "Brat and it’s completely different but also still brat",
+    "playCount": 4,
     "releaseDate": "2023-10-17",
     "trackCount": 34,
     "url": "https://music.apple.com/us/album/1767862943"
@@ -50,6 +54,7 @@
     "genre": "Alternative",
     "id": 1693885183,
     "name": "I Don't Want You Anymore",
+    "playCount": 5,
     "releaseDate": "2023-09-29",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1693885183"
@@ -61,6 +66,7 @@
     "genre": "Electronic",
     "id": 1708568607,
     "name": "Adult Contemporary",
+    "playCount": 4,
     "releaseDate": "2023-06-30",
     "trackCount": 14,
     "url": "https://music.apple.com/us/album/1708568607"
@@ -72,6 +78,7 @@
     "genre": "Alternative",
     "id": 1686976426,
     "name": "Revel",
+    "playCount": 1,
     "releaseDate": "2023-03-24",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1686976426"
@@ -83,6 +90,7 @@
     "genre": "Alternative",
     "id": 1822502596,
     "name": "3D Country",
+    "playCount": 2,
     "releaseDate": "2023-06-23",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1822502596"
@@ -94,6 +102,7 @@
     "genre": "Rock",
     "id": 1692994522,
     "name": "And That's Why Dolphins Lost Their Legs",
+    "playCount": 3,
     "releaseDate": "2023-06-13",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1692994522"
@@ -105,6 +114,7 @@
     "genre": "Electronic",
     "id": 1694554543,
     "name": "Playing Robots Into Heaven",
+    "playCount": 6,
     "releaseDate": "2023-09-08",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1694554543"
@@ -116,6 +126,7 @@
     "genre": "Dance",
     "id": 1676151993,
     "name": "Volcano",
+    "playCount": 3,
     "releaseDate": "2023-08-11",
     "trackCount": 14,
     "url": "https://music.apple.com/us/album/1676151993"
@@ -138,9 +149,22 @@
     "genre": "Alternative",
     "id": 1697335341,
     "name": "The Land Is Inhospitable and So Are We",
+    "playCount": 4,
     "releaseDate": "2023-07-31",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1697335341"
+  },
+  {
+    "artistName": "Nation of Language",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/42/3b/f5/423bf5e2-d5d0-4645-f707-124c8e6483ec/5400863134334_cover.jpg/600x600bb.jpg",
+    "dateAdded": "2023-10-01T23:03:05Z",
+    "genre": "Alternative",
+    "id": 1680897071,
+    "name": "Strange Disciple",
+    "playCount": 3,
+    "releaseDate": "2023-04-13",
+    "trackCount": 10,
+    "url": "https://music.apple.com/us/album/1680897071"
   },
   {
     "artistName": "Romy",
@@ -149,6 +173,7 @@
     "genre": "Dance",
     "id": 1688051982,
     "name": "Mid Air",
+    "playCount": 8,
     "releaseDate": "2023-06-07",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1688051982"
@@ -160,6 +185,7 @@
     "genre": "Alternative",
     "id": 1790744905,
     "name": "Saint Motel & the Symphony in the Sky",
+    "playCount": 3,
     "releaseDate": "2023-08-04",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1790744905"
@@ -171,6 +197,7 @@
     "genre": "Alternative",
     "id": 1688702511,
     "name": "ÁTTA",
+    "playCount": 4,
     "releaseDate": "2023-06-16",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1688702511"
@@ -182,6 +209,7 @@
     "genre": "Alternative",
     "id": 1700723922,
     "name": "Javelin",
+    "playCount": 12,
     "releaseDate": "2023-10-06",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1700723922"
@@ -193,6 +221,7 @@
     "genre": "Alternative",
     "id": 1844681326,
     "name": "Pollen",
+    "playCount": 1,
     "releaseDate": "2023-02-07",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1844681326"

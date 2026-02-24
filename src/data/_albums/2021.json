@@ -6,6 +6,7 @@
     "genre": "Pop",
     "id": 1568360025,
     "name": "I Am Alicia",
+    "playCount": 3,
     "releaseDate": "2021-06-22",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1568360025"
@@ -17,6 +18,7 @@
     "genre": "Alternative",
     "id": 1571969982,
     "name": "Aisles - EP",
+    "playCount": 3,
     "releaseDate": "2021-08-20",
     "trackCount": 5,
     "url": "https://music.apple.com/us/album/1571969982"
@@ -39,6 +41,7 @@
     "genre": "Punk",
     "id": 1577784259,
     "name": "This House Is Too Big, This House Is Too Small",
+    "playCount": 2,
     "releaseDate": "2021-11-05",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1577784259"
@@ -50,6 +53,7 @@
     "genre": "Rock",
     "id": 1808545829,
     "name": "Infinite Granite",
+    "playCount": 18,
     "releaseDate": "2021-08-20",
     "trackCount": 9,
     "url": "https://music.apple.com/us/album/1808545829"
@@ -61,6 +65,7 @@
     "genre": "Electronic",
     "id": 1565509309,
     "name": "Mirrors",
+    "playCount": 5,
     "releaseDate": "2021-09-03",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1565509309"
@@ -72,9 +77,46 @@
     "genre": "Rock",
     "id": 1565271849,
     "name": "Draw Down the Moon",
+    "playCount": 6,
     "releaseDate": "2021-08-06",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1565271849"
+  },
+  {
+    "artistName": "Fred again..",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2c/b7/4f/2cb74fc9-7c37-a56e-2b57-7c284f224695/190295058562.jpg/600x600bb.jpg",
+    "dateAdded": "2022-11-30T21:09:11Z",
+    "genre": "Electronic",
+    "id": 1560355896,
+    "name": "Actual Life (April 14 - December 17 2020)",
+    "playCount": 4,
+    "releaseDate": "2021-04-16",
+    "trackCount": 17,
+    "url": "https://music.apple.com/us/album/1560355896"
+  },
+  {
+    "artistName": "Fred again..",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/33/63/70/336370d7-e9d8-dad9-a8ec-2e21680366c6/190296363337.jpg/600x600bb.jpg",
+    "dateAdded": "2022-11-30T21:09:22Z",
+    "genre": "Electronic",
+    "id": 1594208592,
+    "name": "Actual Life 2 (February 2 - October 15 2021)",
+    "playCount": 2,
+    "releaseDate": "2021-11-19",
+    "trackCount": 16,
+    "url": "https://music.apple.com/us/album/1594208592"
+  },
+  {
+    "artistName": "Fred again..",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b0/9c/b7/b09cb72c-cca9-5d66-bc9d-a9b5e5f86b22/5054197236389.jpg/600x600bb.jpg",
+    "dateAdded": "2022-11-30T21:09:26Z",
+    "genre": "Electronic",
+    "id": 1640463893,
+    "name": "Actual Life 3 (January 1 - September 9 2022)",
+    "playCount": 14,
+    "releaseDate": "2021-04-15",
+    "trackCount": 13,
+    "url": "https://music.apple.com/us/album/1640463893"
   },
   {
     "artistName": "Gilligan Moss",
@@ -83,6 +125,7 @@
     "genre": "Electronic",
     "id": 1586994238,
     "name": "Gilligan Moss (Deluxe Edition)",
+    "playCount": 4,
     "releaseDate": "2021-04-09",
     "trackCount": 21,
     "url": "https://music.apple.com/us/album/1586994238"
@@ -94,6 +137,7 @@
     "genre": "Rock",
     "id": 1775768349,
     "name": "Seek Shelter (Special Edition)",
+    "playCount": 2,
     "releaseDate": "2021-03-23",
     "trackCount": 12,
     "url": "https://music.apple.com/us/album/1775768349"
@@ -105,6 +149,7 @@
     "genre": "Alternative",
     "id": 1588420070,
     "name": "Friends That Break Your Heart (Bonus)",
+    "playCount": 4,
     "releaseDate": "2021-09-12",
     "trackCount": 13,
     "url": "https://music.apple.com/us/album/1588420070"
@@ -116,6 +161,7 @@
     "genre": "Alternative",
     "id": 1553364590,
     "name": "Jubilee",
+    "playCount": 6,
     "releaseDate": "2021-06-04",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1553364590"
@@ -127,6 +173,7 @@
     "genre": "Electronic",
     "id": 1555318008,
     "name": "Loving In Stereo",
+    "playCount": 8,
     "releaseDate": "2021-03-25",
     "trackCount": 14,
     "url": "https://music.apple.com/us/album/1555318008"
@@ -138,6 +185,7 @@
     "genre": "Hip-Hop/Rap",
     "id": 1561184260,
     "name": "Sometimes I Might Be Introvert",
+    "playCount": 5,
     "releaseDate": "2021-04-21",
     "trackCount": 19,
     "url": "https://music.apple.com/us/album/1561184260"
@@ -149,6 +197,7 @@
     "genre": "Indie Pop",
     "id": 1570541671,
     "name": "Mercurial World",
+    "playCount": 4,
     "releaseDate": "2021-10-08",
     "trackCount": 14,
     "url": "https://music.apple.com/us/album/1570541671"
@@ -160,6 +209,7 @@
     "genre": "Alternative",
     "id": 1535007801,
     "name": "As the Love Continues",
+    "playCount": 13,
     "releaseDate": "2021-02-19",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1535007801"
@@ -171,6 +221,7 @@
     "genre": "Alternative",
     "id": 1571378689,
     "name": "Changephobia (Expanded Edition)",
+    "playCount": 2,
     "releaseDate": "2021-02-02",
     "trackCount": 13,
     "url": "https://music.apple.com/us/album/1571378689"
@@ -182,6 +233,7 @@
     "genre": "Alternative",
     "id": 1575621666,
     "name": "Texis",
+    "playCount": 9,
     "releaseDate": "2021-09-10",
     "trackCount": 11,
     "url": "https://music.apple.com/us/album/1575621666"
@@ -193,6 +245,7 @@
     "genre": "Alternative",
     "id": 1552955481,
     "name": "Daddy's Home",
+    "playCount": 4,
     "releaseDate": "2021-03-06",
     "trackCount": 14,
     "url": "https://music.apple.com/us/album/1552955481"
@@ -204,6 +257,7 @@
     "genre": "Rock",
     "id": 1572431958,
     "name": "Horizons / East",
+    "playCount": 8,
     "releaseDate": "2021-09-17",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1572431958"
@@ -215,6 +269,7 @@
     "genre": "Metal",
     "id": 1576451556,
     "name": "Voyeurist",
+    "playCount": 7,
     "releaseDate": "2021-08-03",
     "trackCount": 10,
     "url": "https://music.apple.com/us/album/1576451556"
