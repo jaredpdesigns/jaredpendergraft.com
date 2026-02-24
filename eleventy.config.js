@@ -28,6 +28,7 @@ export default function (eleventyConfig) {
     formats: ["avif", "webp", "jpeg"],
     widths: [320, 640],
     htmlOptions: {
+      fallback: "smallest",
       imgAttributes: {
         decoding: "async",
         fetchPriority: "high",
