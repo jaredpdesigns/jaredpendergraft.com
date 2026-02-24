@@ -92,7 +92,10 @@ export default function (eleventyConfig) {
         postcssNested,
         postcssEach,
         autoprefixer
-      ]).process(inputContent, { from: undefined, to: undefined });
+      ]).process(inputContent, {
+        from: this.inputPath,
+        to: undefined
+      });
 
       return async () => result.css;
     }
