@@ -1,5 +1,29 @@
 [
   {
+    "title": "Nice Bike 2026 Jersey Design",
+    "description": "<p>Jared Pendergraft was hired to design the 2026 shop jersey featuring a snakecorn with stylized tire tread.</p>",
+    "slug": "nice-bike-2026-jersey-design",
+    "client": {
+      "name": "Nice Bike",
+      "street": "4314 S Broadway",
+      "city": "Englewood",
+      "state": "CO",
+      "zip": 80113
+    },
+    "start": {
+      "month": "April",
+      "day": 9,
+      "year": 2026
+    },
+    "end": {
+      "month": "May",
+      "day": 2,
+      "year": 2026
+    },
+    "total": 412,
+    "type": "invoice"
+  },
+  {
     "title": "Nice Bike 2024 Jersey Design",
     "description": "<p>Jared Pendergraft was hired to design the 2024 shop jersey featuring a Q*bert-like pixelated unicorn.</p>",
     "slug": "nice-bike-2024-jersey-design",
