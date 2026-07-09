@@ -1,7 +1,14 @@
 <script webc:type="render" webc:is="template">
+  const path = require("path");
   const Image = require("@11ty/eleventy-img");
   module.exports = async function () {
-    let options = await Image(this.src, {
+    let src = this.src;
+
+    if (!src.match(/^https?:\/\//)) {
+      src = path.resolve("src", src);
+    }
+
+    let options = await Image(src, {
       formats: ['svg'],
       dryRun: true,
     });
