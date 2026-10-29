@@ -391,32 +391,38 @@
     }
 
     &__close {
-      justify-self: end;
-      aspect-ratio: 1/1;
+      block-size: var(--size__l);
       border-radius: 50%;
-      position: absolute;
-      inset-inline-end: calc(var(--size__s) * -1);
-      inset-block-start: calc(var(--size__s) * -1);
+      inline-size: var(--size__l);
+      justify-self: end;
       padding: var(--size__xs);
+      grid-column: 2;
     }
 
     &__details {
       backdrop-filter: blur(1rem);
       background: color-mix(in srgb, var(--color__contrast), transparent 5%);
-      block-size: 100%;
+      block-size: 100vh;
       border: 0;
       container-type: inline-size;
       display: none;
-      inline-size: 100%;
+      inline-size: 100vw;
       inset: 0;
+      margin: 0;
+      max-block-size: none;
+      max-inline-size: none;
+      padding: var(--gutter);
       position: fixed;
 
       &::backdrop {
         background: color-mix(in srgb, var(--color__contrast), transparent 20%);
         backdrop-filter: blur(0.25rem);
+        block-size: 100dvh;
+        inline-size: 100%;
       }
 
       &:modal {
+        align-content: center;
         align-items: center;
         background: transparent;
         display: grid;
@@ -424,16 +430,27 @@
       }
 
       &--content {
-        position: relative;
+        block-size: auto;
+        max-block-size: calc(100dvh - (var(--size__l) * 2));
+        min-block-size: 0;
+        overflow: auto;
+        padding-block-start: var(--size__m);
 
         @container (min-width: 40rem) {
           gap: var(--size__l);
           grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto 1fr;
+          row-gap: var(--size__s);
           inline-size: 100%;
           max-inline-size: var(--width__l);
-          padding-block: var(--size__xxl);
+          padding-block-end: var(--size__l);
+
+          nav {
+            grid-column: span 2;
+          }
 
           picture {
+            grid-row: 2;
             margin-inline: auto;
           }
 
@@ -445,8 +462,11 @@
     }
 
     &__meta {
-
       justify-items: start;
+
+      @container (min-width: 40rem) {
+        grid-row: 2;
+      }
 
       h2 span {
         &:before {

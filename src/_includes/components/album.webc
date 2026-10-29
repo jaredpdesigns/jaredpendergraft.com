@@ -6,13 +6,15 @@
       loading="eager" />
   </button>
 
-  <dialog :id="`album-${album.id}`" class="album__details padding__m" :aria-labelledby="`album-title-${album.id}`">
+  <dialog :id="`album-${album.id}`" class="album__details" :aria-labelledby="`album-title-${album.id}`">
     <section
-      class="album__details--content color__bg--contrast padding__m shadow flow__grid flow__gap--m flow__align--block-center radius__m">
-      <button class="album__close button__secondary flow__inline flow__align--block-center flow__align--inline-center"
-        data-dialog-close autofocus title="Close album details">
-        <icon name="cancel" size="24" webc:nokeep></icon>
-      </button>
+      class="album__details--content color__bg--contrast shadow flow__grid flow__gap--s flow__align--block-center padding__m radius__m">
+      <nav class="flow__flex flow__align--block-center flow__align--inline-end">
+        <button class="album__close button__secondary flow__inline flow__align--block-center flow__align--inline-center"
+          data-dialog-close autofocus title="Close album details">
+          <icon name="cancel" size="24" webc:nokeep></icon>
+        </button>
+      </nav>
       <img :alt="`Cover art for “${album.name}” by ${album.artistName}`"
         class="color__bg--saffron--ghost radius__s shadow" :src="album.artwork" eleventy:formats="webp,jpeg"
         loading="lazy" />
