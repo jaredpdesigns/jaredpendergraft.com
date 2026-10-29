@@ -25,7 +25,7 @@
         <h3 class="artist color__type--base--ish">
           by <span @text="album.artistName"></span>
         </h3>
-        <p class="meta flow__flex flow__gap--s">
+        <p class="meta flow__flex flow__gap--s flow__flex--wrap flow__align--block-center">
           <span
             class="border__all color__bg--saffron--ghost color__border--saffron--light color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
             webc:if="album.releaseDateFormatted" @text="album.releaseDateFormatted"></span>

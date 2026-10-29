@@ -395,6 +395,7 @@
       border-radius: 50%;
       inline-size: var(--size__l);
       justify-self: end;
+      margin-block-end: var(--size__s);
       padding: var(--size__xs);
       grid-column: 2;
     }
@@ -409,10 +410,12 @@
       inline-size: 100vw;
       inset: 0;
       margin: 0;
-      max-block-size: none;
-      max-inline-size: none;
-      padding: var(--gutter);
+      max-block-size: 100dvh;
+      max-inline-size: 100dvw;
+      padding-block: var(--size__l);
+      padding-inline: var(--gutter);
       position: fixed;
+      touch-action: pan-y;
 
       &::backdrop {
         background: color-mix(in srgb, var(--color__contrast), transparent 20%);
@@ -435,22 +438,27 @@
         min-block-size: 0;
         overflow: auto;
         padding-block-start: var(--size__m);
+        position: relative;
 
         @container (min-width: 40rem) {
           gap: var(--size__l);
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto 1fr;
+          grid-template-rows: 1fr;
           row-gap: var(--size__s);
           inline-size: 100%;
           max-inline-size: var(--width__l);
-          padding-block-end: var(--size__l);
+          padding: var(--size__l);
 
           nav {
-            grid-column: span 2;
+            align-self: start;
+            position: sticky;
+            grid-column: 2;
+            grid-row: 1;
           }
 
           picture {
-            grid-row: 2;
+            grid-column: 1;
+            grid-row: 1;
             margin-inline: auto;
           }
 
@@ -465,7 +473,8 @@
       justify-items: start;
 
       @container (min-width: 40rem) {
-        grid-row: 2;
+        grid-column: 2;
+        grid-row: 1;
       }
 
       h2 span {

@@ -54,12 +54,7 @@ layout: base.webc
     }
   });
 
-  document.addEventListener('keydown', (event) => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey) {
-      return;
-    }
-
-    const currentDialog = document.querySelector('.album__details:modal');
+  function navigateAlbumDialog(currentDialog, direction) {
     const currentAlbum = currentDialog?.closest('.album');
     const albumGrid = currentAlbum?.parentElement;
 
@@ -74,7 +69,6 @@ layout: base.webc
       return;
     }
 
-    const direction = event.key === 'ArrowRight' ? 1 : -1;
     const nextIndex = (currentIndex + direction + albumCards.length) % albumCards.length;
     const nextDialog = albumCards[nextIndex].querySelector('.album__details');
 
@@ -82,9 +76,73 @@ layout: base.webc
       return;
     }
 
-    event.preventDefault();
     currentDialog.close();
     lockDocumentScroll();
     nextDialog.showModal();
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey) {
+      return;
+    }
+
+    const currentDialog = document.querySelector('.album__details:modal');
+    const direction = event.key === 'ArrowRight' ? 1 : -1;
+    if (!currentDialog) {
+      return;
+    }
+
+    event.preventDefault();
+    navigateAlbumDialog(currentDialog, direction);
+  });
+
+  let albumSwipeStart;
+
+  document.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'touch') {
+      return;
+    }
+
+    const dialog = event.target.closest?.('.album__details:modal');
+
+    if (!dialog || event.target.closest?.('a, button, input, select, textarea')) {
+      albumSwipeStart = undefined;
+      return;
+    }
+
+    albumSwipeStart = {
+      dialog,
+      pointerId: event.pointerId,
+      x: event.clientX,
+      y: event.clientY
+    };
+  });
+
+  document.addEventListener('pointerup', (event) => {
+    if (!albumSwipeStart || event.pointerId !== albumSwipeStart.pointerId) {
+      return;
+    }
+
+    const { dialog, x, y } = albumSwipeStart;
+    albumSwipeStart = undefined;
+
+    if (document.querySelector('.album__details:modal') !== dialog) {
+      return;
+    }
+
+    const deltaX = event.clientX - x;
+    const deltaY = event.clientY - y;
+
+    if (Math.abs(deltaX) < 60 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) {
+      return;
+    }
+
+    navigateAlbumDialog(dialog, deltaX < 0 ? 1 : -1);
+  });
+
+  document.addEventListener('pointercancel', (event) => {
+    if (event.pointerId === albumSwipeStart?.pointerId) {
+      albumSwipeStart = undefined;
+    }
   });
 </script>
