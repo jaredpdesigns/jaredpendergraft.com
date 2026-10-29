@@ -371,81 +371,119 @@
 
 @layer components {
   .album {
-    container-type: inline-size;
     text-decoration: none;
 
-    &__wrap {
-      @container (min-width: 40rem) {
-        grid-template-columns: var(--width__s) 1fr;
+    &__cover {
+      background: none;
+      border: 0;
+      border-radius: var(--size__s);
+      cursor: pointer;
+      inline-size: 100%;
+      padding: 0;
 
-        figcaption {
-          padding: var(--size__l);
-        }
+      img {
+        aspect-ratio: 1/1;
+        display: block;
+        inline-size: 100%;
+        max-inline-size: var(--width__s);
+        object-fit: cover;
       }
     }
 
-    img {
+    &__close {
+      justify-self: end;
       aspect-ratio: 1/1;
-      max-inline-size: var(--width__s);
+      border-radius: 50%;
+      position: absolute;
+      inset-inline-end: calc(var(--size__s) * -1);
+      inset-block-start: calc(var(--size__s) * -1);
+      padding: var(--size__xs);
+    }
 
-      @media (prefers-reduced-motion: no-preference) and (min-width: 40rem) {
-        @supports (animation-timeline: view()) {
-          @keyframes albumStack {
+    &__details {
+      backdrop-filter: blur(1rem);
+      background: color-mix(in srgb, var(--color__contrast), transparent 5%);
+      block-size: 100%;
+      border: 0;
+      container-type: inline-size;
+      display: none;
+      inline-size: 100%;
+      inset: 0;
+      position: fixed;
 
-            entry 0%,
-            exit 100% {
-              scale: 0.875;
-            }
+      &::backdrop {
+        background: color-mix(in srgb, var(--color__contrast), transparent 20%);
+        backdrop-filter: blur(0.25rem);
+      }
 
-            entry 100%,
-            exit 0% {
-              scale: 1;
-            }
+      &:modal {
+        align-items: center;
+        background: transparent;
+        display: grid;
+        justify-items: center;
+      }
+
+      &--content {
+        position: relative;
+
+        @container (min-width: 40rem) {
+          gap: var(--size__l);
+          grid-template-columns: 1fr 1fr;
+          inline-size: 100%;
+          max-inline-size: var(--width__l);
+          padding-block: var(--size__xxl);
+
+          picture {
+            margin-inline: auto;
           }
 
-          view-timeline: --album-timeline;
-          view-timeline-axis: block;
-          view-timeline-inset: 5rem 0rem;
-          animation-name: albumStack;
-          animation-timing-function: linear;
-          animation-fill-mode: both;
-          animation-timeline: --album-timeline;
-          animation-range: entry 0% exit 100%;
+          figcaption {
+            padding: var(--size__l);
+          }
         }
       }
     }
 
-    h3 span {
-      &:before {
-        content: "“";
+    &__meta {
+
+      justify-items: start;
+
+      h2 span {
+        &:before {
+          content: "“";
+          margin-inline-start: -0.75ch;
+        }
+
+        &:after {
+          content: "”";
+        }
+      }
+
+      .artist {
+        font-family: var(--type__family--primary);
+        font-weight: unset;
+        margin-block-start: calc(var(--size__s) * -1);
+        margin-block-end: var(--size__s);
+        text-wrap: balance;
+      }
+
+      .meta {
+        margin-inline-start: calc(var(--size__s) * -1);
+      }
+
+      a {
         margin-inline-start: -0.75ch;
-      }
+        text-decoration: none;
 
-      &:after {
-        content: "”";
-      }
-    }
-
-    .artist {
-      text-wrap: balance;
-    }
-
-    .meta {
-      margin-block-start: var(--size__m);
-      margin-inline-start: calc(var(--size__s) * -1);
-    }
-
-    a {
-      text-decoration: none;
-
-      svg {
-        color: var(--color__base--mid);
-      }
-
-      &:hover,
-      &:focus {
         svg {
-          color: var(--color__highlight)
+          color: var(--color__base--mid);
+        }
+
+        &:hover,
+        &:focus {
+          svg {
+            color: var(--color__highlight)
+          }
         }
       }
     }

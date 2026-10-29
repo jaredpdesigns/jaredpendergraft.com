@@ -1,79 +1,72 @@
 <section class="album">
-  <figure class="album__wrap flow__grid flow__gap--l">
+  <button class="album__cover" :data-dialog-target="`album-${album.id}`" aria-haspopup="dialog"
+    :aria-label="`View details for “${album.name}” by ${album.artistName}`">
     <img :alt="`Cover art for “${album.name}” by ${album.artistName}`"
       class="color__bg--saffron--ghost radius__s shadow" :src="album.artwork" eleventy:formats="webp,jpeg"
       loading="eager" />
-    <figcaption>
-      <h3 class="color__type--base">
-        <span @text="album.name"></span>
-      </h3>
-      <p class="artist color__type--base--ish">
-        by <span @text="album.artistName"></span>
-      </p>
-      <p class="meta flow__flex flow__align--block-center flow__gap--s">
-        <span
-          class="border__all color__bg--saffron--ghost color__border--saffron--light color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
-          webc:if="album.releaseDateFormatted" @text="album.releaseDateFormatted"></span>
-        <span
-          class="border__all color__bg--saffron--ghost color__border--saffron--light color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
-          @text="album.genre"></span>
-      </p>
-      <p class="margin__block--m">
+  </button>
+
+  <dialog :id="`album-${album.id}`" class="album__details padding__m" :aria-labelledby="`album-title-${album.id}`">
+    <section
+      class="album__details--content color__bg--contrast padding__m shadow flow__grid flow__gap--m flow__align--block-center radius__m">
+      <button class="album__close button__secondary flow__inline flow__align--block-center flow__align--inline-center"
+        data-dialog-close autofocus title="Close album details">
+        <icon name="cancel" size="24" webc:nokeep></icon>
+      </button>
+      <img :alt="`Cover art for “${album.name}” by ${album.artistName}`"
+        class="color__bg--saffron--ghost radius__s shadow" :src="album.artwork" eleventy:formats="webp,jpeg"
+        loading="lazy" />
+      <div class="album__meta flow__grid flow__gap--m padding__m">
+        <h2 :id="`album-title-${album.id}`" class="color__type--base">
+          <span @text="album.name"></span>
+        </h2>
+        <h3 class="artist color__type--base--ish">
+          by <span @text="album.artistName"></span>
+        </h3>
+        <p class="meta flow__flex flow__gap--s">
+          <span
+            class="border__all color__bg--saffron--ghost color__border--saffron--light color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
+            webc:if="album.releaseDateFormatted" @text="album.releaseDateFormatted"></span>
+          <span
+            class="border__all color__bg--saffron--ghost color__border--saffron--light color__type--base--ish flow__inline padding__inline--s radius__xs type__family--tertiary type__size--s-m"
+            @text="album.genre"></span>
+        </p>
         <a :href="album.url" rel="noopener" target="_blank"
-          class="flow__inline flow__align--block-center flow__gap--s radius__xs">
-          <icon name="add" webc:nokeep>
-          </icon> Add to Your Library
+          class="flow__inline flow__align--block-center flow__gap--s padding__s radius__xs type__size--m-l--fluid">
+          <icon name="add" webc:nokeep></icon> Add to Your Library
         </a>
-      </p>
-    </figcaption>
-  </figure>
+      </div>
+    </section>
+  </dialog>
 </section>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Find all images within album sections
-    const albumImages = document.querySelectorAll('.album img');
+    // Only the grid cover is interactive; modal artwork stays still.
+    const albumCovers = document.querySelectorAll('.album__cover img');
 
-    albumImages.forEach(img => {
-      // Store original shadow for later reset
+    albumCovers.forEach(img => {
       let originalShadow;
 
-      // Set initial transform
       img.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
       img.style.transformStyle = 'preserve-3d';
-      img.style.cursor = 'pointer';
 
-      // Track mouse position
       img.addEventListener('mousemove', e => {
         const rect = img.getBoundingClientRect();
-
-        // Calculate mouse position from -1 to 1
         const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
         const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
 
-        // Store original shadow on first hover if not already stored
         if (!originalShadow) {
-          // Get computed shadow
           originalShadow = window.getComputedStyle(img).boxShadow;
         }
 
-        // Apply transform directly
         img.style.transform = `perspective(800px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg)`;
-
-        // Apply enhanced shadow - make it twice as pronounced
         img.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.2)';
       });
 
-      // Reset on mouse leave
       img.addEventListener('mouseleave', () => {
         img.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg)';
-
-        // Reset to original shadow
-        if (originalShadow) {
-          img.style.boxShadow = originalShadow;
-        } else {
-          img.style.boxShadow = '';
-        }
+        img.style.boxShadow = originalShadow || '';
       });
     });
   });

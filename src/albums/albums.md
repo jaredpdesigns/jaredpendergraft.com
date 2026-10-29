@@ -7,11 +7,13 @@ permalink: "albums/{{ yearData.year }}/"
 title: Jared Pendergraft
 description: My favorite albums from {{ yearData.year }}
 pageClass: albums
-layout: base.webc
+layout: albums.webc
 ---
 
 # Favorite Albums
 
 <albums-nav :albums="albums" :current-year="yearData.year" webc:nokeep></albums-nav>
 
+<section class="albums flow__align--block-start flow__grid flow__grid--columns-auto flow__gap--m">
 <album webc:for="(album, index) of yearData.albums" :album="album" webc:nokeep></album>
+</section>

@@ -13,13 +13,18 @@ const __dirname = path.dirname(__filename);
 const ALBUMS_DIR = path.join(__dirname, "_albums");
 
 /*
- * Format release date as "January 30"
+ * Format release date as "January 30, 2026"
  */
 function formatReleaseDate(dateString) {
   if (!dateString) return null;
   const [year, month, day] = dateString.split("-");
-  const date = new Date(year, month - 1, day);
-  return date.toLocaleDateString("en-US", { month: "long", day: "numeric" });
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
 }
 
 /*

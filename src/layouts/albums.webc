@@ -1,0 +1,90 @@
+---
+layout: base.webc
+---
+
+<template @html="content" webc:nokeep></template>
+
+<script>
+  let previousDocumentOverflow;
+
+  function lockDocumentScroll() {
+    if (previousDocumentOverflow === undefined) {
+      previousDocumentOverflow = document.documentElement.style.overflow;
+    }
+
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  function unlockDocumentScroll() {
+    if (document.querySelector('dialog:modal')) {
+      return;
+    }
+
+    document.documentElement.style.overflow = previousDocumentOverflow ?? '';
+    previousDocumentOverflow = undefined;
+  }
+
+  document.addEventListener('close', unlockDocumentScroll, true);
+
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest?.('[data-dialog-target]');
+
+    if (trigger) {
+      const dialog = document.getElementById(trigger.dataset.dialogTarget);
+
+      if (dialog && !dialog.open) {
+        lockDocumentScroll();
+        dialog.showModal();
+      }
+
+      return;
+    }
+
+    const closeButton = event.target.closest?.('[data-dialog-close]');
+
+    if (closeButton) {
+      closeButton.closest('dialog')?.close();
+      return;
+    }
+
+    const dialog = event.target.closest?.('dialog[aria-labelledby]');
+
+    if (dialog && event.target === dialog && dialog.matches(':modal')) {
+      dialog.close();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey) {
+      return;
+    }
+
+    const currentDialog = document.querySelector('.album__details:modal');
+    const currentAlbum = currentDialog?.closest('.album');
+    const albumGrid = currentAlbum?.parentElement;
+
+    if (!currentDialog || !currentAlbum || !albumGrid) {
+      return;
+    }
+
+    const albumCards = [...albumGrid.querySelectorAll(':scope > .album')];
+    const currentIndex = albumCards.indexOf(currentAlbum);
+
+    if (currentIndex < 0 || albumCards.length < 2) {
+      return;
+    }
+
+    const direction = event.key === 'ArrowRight' ? 1 : -1;
+    const nextIndex = (currentIndex + direction + albumCards.length) % albumCards.length;
+    const nextDialog = albumCards[nextIndex].querySelector('.album__details');
+
+    if (!nextDialog) {
+      return;
+    }
+
+    event.preventDefault();
+    currentDialog.close();
+    lockDocumentScroll();
+    nextDialog.showModal();
+  });
+</script>
